@@ -1,0 +1,245 @@
+{
+  "meta": {
+    "date": "2026-09-15T15:42:33",
+    "server_command": [
+      "C:\\Users\\smily\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
+      "-m",
+      "artificial_memory.mcp"
+    ],
+    "session_model": "two separate server processes sharing one SQLite db"
+  },
+  "checks": {
+    "mcp_connection": true,
+    "remember": true,
+    "cross_session_recall": true,
+    "trace": true,
+    "timeline": true,
+    "explain": true,
+    "expand": true,
+    "inspect": true
+  },
+  "observations": {
+    "stored_memory_ids": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "recall_missing_markers": [],
+    "trace_keys": [
+      "exact_source_message",
+      "memory_id",
+      "memory_ir",
+      "provenance_chain",
+      "source_conversation",
+      "source_messages"
+    ],
+    "traced_memory_id": 3,
+    "timeline_events": [
+      {
+        "date": "2026-09-15",
+        "head": "Real-agent E2E session: the Artificial Memory architecture facts were recorded o"
+      }
+    ],
+    "explain_reasoning_head": "Recalled 4 memories in immediate mode. Used adaptive resolution: RAW. Avg relevance: 0.82",
+    "expand_content_head": "The Artificial Memory project ships deterministic system benchmarks, Ollama LLM benchmarks, and an MCP smoke test so results stay reproducible.",
+    "inspect_keys": [
+      "exact_source_message",
+      "memory_id",
+      "memory_ir",
+      "provenance_chain",
+      "source_conversation",
+      "source_messages"
+    ]
+  },
+  "session_log": [
+    {
+      "event": "session_start",
+      "session": 1,
+      "note": "remember facts, then process exits",
+      "at": "2026-09-15T15:41:53"
+    },
+    {
+      "event": "tool_call",
+      "tool": "memory_remember",
+      "args": {
+        "content": "Artificial Memory is an open-source project that provides persistent memory for AI agents across sessions.",
+        "topic": "E2E/real-agent",
+        "memory_type": "semantic"
+      },
+      "is_error": false,
+      "response_bytes": 1753,
+      "latency_ms": 25.8,
+      "response_head": "{\"identity\": {\"memory_id\": 1, \"version\": 5, \"content_hash\": \"4826ca9321ad1e4e\"}, \"type\": \"semantic\", \"resolution\": 3, \"semantic_content\": {\"content\": \"Artificial Memory is an open-source project that provides persistent memory for AI agents across sessions.\", \"structured_data\": null}, \"source\": {\"so",
+      "at": "2026-09-15T15:42:13"
+    },
+    {
+      "event": "tool_call",
+      "tool": "memory_remember",
+      "args": {
+        "content": "Artificial Memory's current architecture uses a Python runtime facade backed by SQLite storage, FAISS vector retrieval, progressive compression of memories, and MCP integration for agent access.",
+        "topic": "E2E/real-agent",
+        "memory_type": "semantic"
+      },
+      "is_error": false,
+      "response_bytes": 1841,
+      "latency_ms": 9.1,
+      "response_head": "{\"identity\": {\"memory_id\": 2, \"version\": 5, \"content_hash\": \"860606ab2cf209b5\"}, \"type\": \"semantic\", \"resolution\": 3, \"semantic_content\": {\"content\": \"Artificial Memory's current architecture uses a Python runtime facade backed by SQLite storage, FAISS vector retrieval, progressive compression of me",
+      "at": "2026-09-15T15:42:13"
+    },
+    {
+      "event": "tool_call",
+      "tool": "memory_remember",
+      "args": {
+        "content": "The Artificial Memory project ships deterministic system benchmarks, Ollama LLM benchmarks, and an MCP smoke test so results stay reproducible.",
+        "topic": "E2E/real-agent",
+        "memory_type": "semantic"
+      },
+      "is_error": false,
+      "response_bytes": 1776,
+      "latency_ms": 10.0,
+      "response_head": "{\"identity\": {\"memory_id\": 3, \"version\": 5, \"content_hash\": \"8d29a356ed7feae0\"}, \"type\": \"semantic\", \"resolution\": 3, \"semantic_content\": {\"content\": \"The Artificial Memory project ships deterministic system benchmarks, Ollama LLM benchmarks, and an MCP smoke test so results stay reproducible.\", \"st",
+      "at": "2026-09-15T15:42:13"
+    },
+    {
+      "event": "tool_call",
+      "tool": "memory_remember",
+      "args": {
+        "content": "Real-agent E2E session: the Artificial Memory architecture facts were recorded on this date.",
+        "topic": "E2E/real-agent",
+        "memory_type": "timeline"
+      },
+      "is_error": false,
+      "response_bytes": 1739,
+      "latency_ms": 9.0,
+      "response_head": "{\"identity\": {\"memory_id\": 4, \"version\": 5, \"content_hash\": \"c2165462a19037f0\"}, \"type\": \"timeline\", \"resolution\": 3, \"semantic_content\": {\"content\": \"Real-agent E2E session: the Artificial Memory architecture facts were recorded on this date.\", \"structured_data\": null}, \"source\": {\"source\": {\"conve",
+      "at": "2026-09-15T15:42:13"
+    },
+    {
+      "event": "session_end",
+      "session": 1,
+      "note": "server process terminated",
+      "at": "2026-09-15T15:42:14"
+    },
+    {
+      "event": "session_start",
+      "session": 2,
+      "note": "fresh process, persisted database",
+      "at": "2026-09-15T15:42:16"
+    },
+    {
+      "event": "tool_call",
+      "tool": "memory_recall",
+      "args": {
+        "query": "What is the Artificial Memory project and what does it do?",
+        "topic": "E2E/real-agent",
+        "level": 2,
+        "max_tokens": 600
+      },
+      "is_error": false,
+      "response_bytes": 8746,
+      "latency_ms": 28.5,
+      "response_head": "{\"query\": \"What is the Artificial Memory project and what does it do?\", \"level\": 2, \"memories_retrieved\": 4, \"tokens\": 176, \"memories\": [{\"identity\": {\"memory_id\": 3, \"version\": 5, \"content_hash\": \"8d29a356ed7feae0\"}, \"type\": \"semantic\", \"resolution\": 3, \"semantic_content\": {\"content\": \"The Artifici",
+      "at": "2026-09-15T15:42:32"
+    },
+    {
+      "event": "tool_call",
+      "tool": "memory_recall",
+      "args": {
+        "query": "What is the architecture of the Artificial Memory project?",
+        "topic": "E2E/real-agent",
+        "level": 2,
+        "max_tokens": 600
+      },
+      "is_error": false,
+      "response_bytes": 8746,
+      "latency_ms": 14.8,
+      "response_head": "{\"query\": \"What is the architecture of the Artificial Memory project?\", \"level\": 2, \"memories_retrieved\": 4, \"tokens\": 176, \"memories\": [{\"identity\": {\"memory_id\": 4, \"version\": 5, \"content_hash\": \"c2165462a19037f0\"}, \"type\": \"timeline\", \"resolution\": 3, \"semantic_content\": {\"content\": \"Real-agent E",
+      "at": "2026-09-15T15:42:32"
+    },
+    {
+      "event": "tool_call",
+      "tool": "memory_recall",
+      "args": {
+        "query": "What benchmarks or tests does the Artificial Memory project have?",
+        "topic": "E2E/real-agent",
+        "level": 2,
+        "max_tokens": 600
+      },
+      "is_error": false,
+      "response_bytes": 8764,
+      "latency_ms": 15.0,
+      "response_head": "{\"query\": \"What benchmarks or tests does the Artificial Memory project have?\", \"level\": 2, \"memories_retrieved\": 4, \"tokens\": 176, \"memories\": [{\"identity\": {\"memory_id\": 3, \"version\": 5, \"content_hash\": \"8d29a356ed7feae0\"}, \"type\": \"semantic\", \"resolution\": 3, \"semantic_content\": {\"content\": \"The A",
+      "at": "2026-09-15T15:42:32"
+    },
+    {
+      "event": "tool_call",
+      "tool": "memory_trace",
+      "args": {
+        "memory_id": 3
+      },
+      "is_error": false,
+      "response_bytes": 7295,
+      "latency_ms": 8.1,
+      "response_head": "{\"memory_id\": 3, \"memory_ir\": {\"identity\": {\"memory_id\": 3, \"version\": 5, \"content_hash\": \"8d29a356ed7feae0\"}, \"type\": \"semantic\", \"resolution\": 3, \"semantic_content\": {\"content\": \"The Artificial Memory project ships deterministic system benchmarks, Ollama LLM benchmarks, and an MCP smoke test so re",
+      "at": "2026-09-15T15:42:32"
+    },
+    {
+      "event": "tool_call",
+      "tool": "memory_timeline",
+      "args": {
+        "topic": "E2E/real-agent",
+        "limit": 20
+      },
+      "is_error": false,
+      "response_bytes": 186,
+      "latency_ms": 7.1,
+      "response_head": "{\"topic\": \"E2E/real-agent\", \"events\": [{\"date\": \"2026-09-15\", \"content\": \"Real-agent E2E session: the Artificial Memory architecture facts were recorded on this date.\", \"memory_id\": 4}]}",
+      "at": "2026-09-15T15:42:32"
+    },
+    {
+      "event": "tool_call",
+      "tool": "memory_explain",
+      "args": {
+        "query": "What is the architecture of the Artificial Memory project?",
+        "topic": "E2E/real-agent"
+      },
+      "is_error": false,
+      "response_bytes": 812,
+      "latency_ms": 8.5,
+      "response_head": "{\"query\": \"What is the architecture of the Artificial Memory project?\", \"mode\": \"immediate\", \"resolution\": \"RAW\", \"confidence\": 1.0, \"memories_retrieved\": 4, \"reasoning\": \"Recalled 4 memories in immediate mode. Used adaptive resolution: RAW. Avg relevance: 0.82\", \"adaptations\": [{\"memory_id\": 4, \"mo",
+      "at": "2026-09-15T15:42:32"
+    },
+    {
+      "event": "tool_call",
+      "tool": "memory_expand",
+      "args": {
+        "memory_id": 3,
+        "target_resolution": 0
+      },
+      "is_error": false,
+      "response_bytes": 1801,
+      "latency_ms": 27.8,
+      "response_head": "{\"identity\": {\"memory_id\": 3, \"version\": 5, \"content_hash\": \"8d29a356ed7feae0\"}, \"type\": \"semantic\", \"resolution\": 0, \"semantic_content\": {\"content\": \"The Artificial Memory project ships deterministic system benchmarks, Ollama LLM benchmarks, and an MCP smoke test so results stay reproducible.\", \"st",
+      "at": "2026-09-15T15:42:32"
+    },
+    {
+      "event": "tool_call",
+      "tool": "memory_inspect",
+      "args": {
+        "memory_id": 3
+      },
+      "is_error": false,
+      "response_bytes": 7295,
+      "latency_ms": 8.2,
+      "response_head": "{\"memory_id\": 3, \"memory_ir\": {\"identity\": {\"memory_id\": 3, \"version\": 5, \"content_hash\": \"8d29a356ed7feae0\"}, \"type\": \"semantic\", \"resolution\": 3, \"semantic_content\": {\"content\": \"The Artificial Memory project ships deterministic system benchmarks, Ollama LLM benchmarks, and an MCP smoke test so re",
+      "at": "2026-09-15T15:42:32"
+    },
+    {
+      "event": "session_end",
+      "session": 2,
+      "at": "2026-09-15T15:42:33"
+    }
+  ],
+  "first_error": null
+}

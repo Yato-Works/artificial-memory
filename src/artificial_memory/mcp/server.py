@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import json
 from dataclasses import asdict, is_dataclass
+from enum import Enum
 from typing import Any
 
 try:
@@ -27,20 +28,42 @@ from artificial_memory.runtime.facade import (
 )
 
 
+def _jsonable(obj: Any) -> Any:
+    """Recursively convert arbitrary runtime objects to JSON-safe values.
+
+    Tool responses mix dataclasses (facade results), pydantic models
+    (MemoryIR / ContextIR), enums, and datetimes. ``json.dumps(default=str)``
+    alone falls back to repr() strings for the pydantic objects nested inside
+    dataclass fields, which makes ids unreadable for agents - so we walk the
+    structure explicitly.
+    """
+    if obj is None or isinstance(obj, (str, int, float, bool)):
+        return obj
+    if isinstance(obj, Enum):
+        return obj.value
+    if isinstance(obj, dict):
+        return {str(k): _jsonable(v) for k, v in obj.items()}
+    if isinstance(obj, (list, tuple, set)):
+        return [_jsonable(v) for v in obj]
+    if is_dataclass(obj) and not isinstance(obj, type):
+        return _jsonable(asdict(obj))
+    if hasattr(obj, "model_dump"):
+        try:
+            return _jsonable(obj.model_dump(mode="json"))
+        except Exception:  # pragma: no cover - model_dump edge cases
+            pass
+    if hasattr(obj, "__dict__") and not isinstance(obj, type):
+        return _jsonable(vars(obj))
+    return str(obj)
+
+
 def _serialize(result: Any) -> str:
     """Best-effort JSON serialization for MCP tool responses."""
     if result is None:
         return "null"
-    if is_dataclass(result) and not isinstance(result, type):
-        result = asdict(result)
-    if hasattr(result, "model_dump"):
-        try:
-            result = result.model_dump(mode="json")
-        except Exception:
-            pass
     try:
-        return json.dumps(result, default=str, ensure_ascii=False)
-    except TypeError:
+        return json.dumps(_jsonable(result), ensure_ascii=False)
+    except (TypeError, ValueError):
         return str(result)
 
 
