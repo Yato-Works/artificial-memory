@@ -35,10 +35,33 @@ class LLMProvider(ABC):
 class OllamaProvider(LLMProvider):
     """Ollama local LLM provider."""
 
-    def __init__(self, base_url: str = "http://localhost:11434", model: str = "llama3.1"):
+    def __init__(
+        self,
+        base_url: str = "http://localhost:11434",
+        model: str = "llama3.1",
+        think: bool | None = None,
+    ):
         self.base_url = base_url.rstrip('/')
         self.model = model
+        # For thinking models (qwen3, deepseek-r1, ...) Ollama puts the chain
+        # of thought in a separate field and leaves ``content`` empty unless
+        # thinking is explicitly disabled. None = don't send the flag.
+        self.think = think
         self.client = httpx.AsyncClient(timeout=120.0)
+
+    def _payload(self, messages: list[dict[str, str]], temperature: float, max_tokens: int) -> dict:
+        payload: dict = {
+            "model": self.model,
+            "messages": messages,
+            "options": {
+                "temperature": temperature,
+                "num_predict": max_tokens,
+            },
+        }
+        if self.think is not None:
+            payload["think"] = self.think
+        return payload
+
 
     async def _generate_stream(
         self,
@@ -47,15 +70,8 @@ class OllamaProvider(LLMProvider):
         max_tokens: int = 4000,
     ) -> AsyncGenerator[str, None]:
         """Streaming generation."""
-        payload = {
-            "model": self.model,
-            "messages": messages,
-            "stream": True,
-            "options": {
-                "temperature": temperature,
-                "num_predict": max_tokens,
-            }
-        }
+        payload = self._payload(messages, temperature, max_tokens)
+        payload["stream"] = True
 
         async with self.client.stream("POST", f"{self.base_url}/api/chat", json=payload) as response:
             async for line in response.aiter_lines():
@@ -74,15 +90,8 @@ class OllamaProvider(LLMProvider):
         max_tokens: int = 4000,
     ) -> str:
         """Non-streaming generation."""
-        payload = {
-            "model": self.model,
-            "messages": messages,
-            "stream": False,
-            "options": {
-                "temperature": temperature,
-                "num_predict": max_tokens,
-            }
-        }
+        payload = self._payload(messages, temperature, max_tokens)
+        payload["stream"] = False
 
         response = await self.client.post(f"{self.base_url}/api/chat", json=payload)
         response.raise_for_status()

@@ -78,6 +78,22 @@ Two synthetic datasets are benchmarked deliberately:
 The gap between them quantifies how resolution/hybrid recall degrades under
 homogeneous content — exactly the failure mode we want to keep visible.
 
+### End-to-end QA with local LLMs (Ollama)
+
+Same synthetic facts (20 questions), answered by small local models under
+three conditions. The facts (project codenames + tech choices) are
+unknowable without memory, so "no memory" measures the model's baseline.
+Run: `python scripts/run_llm_benchmark.py --questions 20` (temperature 0).
+
+| Model | No memory | Full-context injection | **AM recall (600-token budget)** |
+|---|---|---|---|
+| qwen2.5:1.5b | 0% | 90% @ 1141 tok | **100% @ 382 tok** |
+| qwen3:4b | 5% | 100% @ 1141 tok | **100% @ 382 tok** |
+
+Adaptive recall matches or beats full-context injection while using **~66%
+fewer prompt tokens** — the Context Runtime does the filtering the raw
+context window otherwise absorbs.
+
 ### Installation
 ```bash
 git clone https://github.com/your-org/artificial-memory

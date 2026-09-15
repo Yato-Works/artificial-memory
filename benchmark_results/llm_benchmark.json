@@ -1,0 +1,819 @@
+{
+  "meta": {
+    "date": "2026-09-15T15:15:46",
+    "seed": 42,
+    "n_questions": 20,
+    "n_memories": 20,
+    "full_context_tokens": 1083
+  },
+  "models": {
+    "qwen2.5:1.5b": {
+      "no_memory": {
+        "accuracy": 0.0,
+        "avg_latency_ms": 222.2,
+        "avg_prompt_tokens": 53.6,
+        "details": [
+          {
+            "q": "What stack does the Aurora-00 project use for its auth service?",
+            "expected": "PostgreSQL",
+            "answer": "I don't know.",
+            "correct": false
+          },
+          {
+            "q": "What stack does the Basalt-00 project use for its notification queue?",
+            "expected": "MongoDB",
+            "answer": "Basalt-00 uses RabbitMQ for its notification queue.",
+            "correct": false
+          },
+          {
+            "q": "What stack does the Cinder-00 project use for its ETL pipeline?",
+            "expected": "Kafka",
+            "answer": "I don't know.",
+            "correct": false
+          },
+          {
+            "q": "What stack does the Dynamo-00 project use for its auth service?",
+            "expected": "Elasticsearch",
+            "answer": "I don't know.",
+            "correct": false
+          },
+          {
+            "q": "What stack does the Ember-00 project use for its billing module?",
+            "expected": "Kafka",
+            "answer": "I don't know.",
+            "correct": false
+          },
+          {
+            "q": "What stack does the Fathom-00 project use for its search indexer?",
+            "expected": "PostgreSQL",
+            "answer": "The Fathom-00 project uses Apache Solr as its search indexer.",
+            "correct": false
+          },
+          {
+            "q": "What stack does the Glacier-00 project use for its search indexer?",
+            "expected": "Elasticsearch",
+            "answer": "I don't know.",
+            "correct": false
+          },
+          {
+            "q": "What stack does the Halcyon-00 project use for its sync worker?",
+            "expected": "DynamoDB",
+            "answer": "I don't know.",
+            "correct": false
+          },
+          {
+            "q": "What stack does the Iris-00 project use for its ETL pipeline?",
+            "expected": "Elasticsearch",
+            "answer": "I don't know.",
+            "correct": false
+          },
+          {
+            "q": "What stack does the Jigsaw-00 project use for its notification queue?",
+            "expected": "Redis",
+            "answer": "I don't know.",
+            "correct": false
+          },
+          {
+            "q": "What stack does the Kestrel-00 project use for its cache layer?",
+            "expected": "Kafka",
+            "answer": "I don't know.",
+            "correct": false
+          },
+          {
+            "q": "What stack does the Lumen-00 project use for its report engine?",
+            "expected": "Kafka",
+            "answer": "I don't know.",
+            "correct": false
+          },
+          {
+            "q": "What stack does the Mosaic-00 project use for its cache layer?",
+            "expected": "DynamoDB",
+            "answer": "I don't know.",
+            "correct": false
+          },
+          {
+            "q": "What stack does the Nimbus-00 project use for its sync worker?",
+            "expected": "Kafka",
+            "answer": "I don't know.",
+            "correct": false
+          },
+          {
+            "q": "What stack does the Aurora-01 project use for its auth service?",
+            "expected": "DynamoDB",
+            "answer": "I don't know.",
+            "correct": false
+          },
+          {
+            "q": "What stack does the Basalt-01 project use for its cache layer?",
+            "expected": "MongoDB",
+            "answer": "I don't know.",
+            "correct": false
+          },
+          {
+            "q": "What stack does the Cinder-01 project use for its auth service?",
+            "expected": "PostgreSQL",
+            "answer": "I don't know.",
+            "correct": false
+          },
+          {
+            "q": "What stack does the Dynamo-01 project use for its search indexer?",
+            "expected": "DynamoDB",
+            "answer": "The Dynamo-01 project uses Apache Solr as its search indexer.",
+            "correct": false
+          },
+          {
+            "q": "What stack does the Ember-01 project use for its search indexer?",
+            "expected": "Kafka",
+            "answer": "I don't know.",
+            "correct": false
+          },
+          {
+            "q": "What stack does the Fathom-01 project use for its notification queue?",
+            "expected": "ClickHouse",
+            "answer": "The Fathom-01 project uses RabbitMQ for its notification queue.",
+            "correct": false
+          }
+        ]
+      },
+      "full_context": {
+        "accuracy": 0.9,
+        "avg_latency_ms": 148.3,
+        "avg_prompt_tokens": 1140.7,
+        "details": [
+          {
+            "q": "What stack does the Aurora-00 project use for its auth service?",
+            "expected": "PostgreSQL",
+            "answer": "The Aurora-00 project uses PostgreSQL for its auth service.",
+            "correct": true
+          },
+          {
+            "q": "What stack does the Basalt-00 project use for its notification queue?",
+            "expected": "MongoDB",
+            "answer": "The Basalt-00 project uses MongoDB for its notification queue.",
+            "correct": true
+          },
+          {
+            "q": "What stack does the Cinder-00 project use for its ETL pipeline?",
+            "expected": "Kafka",
+            "answer": "The Cinder-00 project uses Kafka for its ETL pipeline.",
+            "correct": true
+          },
+          {
+            "q": "What stack does the Dynamo-00 project use for its auth service?",
+            "expected": "Elasticsearch",
+            "answer": "The Dynamo-00 project uses Elasticsearch for its auth service.",
+            "correct": true
+          },
+          {
+            "q": "What stack does the Ember-00 project use for its billing module?",
+            "expected": "Kafka",
+            "answer": "The Ember-00 project uses Kafka for its billing module.",
+            "correct": true
+          },
+          {
+            "q": "What stack does the Fathom-00 project use for its search indexer?",
+            "expected": "PostgreSQL",
+            "answer": "The Fathom-00 project uses PostgreSQL for its search indexer.",
+            "correct": true
+          },
+          {
+            "q": "What stack does the Glacier-00 project use for its search indexer?",
+            "expected": "Elasticsearch",
+            "answer": "The Glacier-00 project uses Elasticsearch for its search indexer.",
+            "correct": true
+          },
+          {
+            "q": "What stack does the Halcyon-00 project use for its sync worker?",
+            "expected": "DynamoDB",
+            "answer": "Halcyon-00 project uses DynamoDB for its sync worker.",
+            "correct": true
+          },
+          {
+            "q": "What stack does the Iris-00 project use for its ETL pipeline?",
+            "expected": "Elasticsearch",
+            "answer": "Iris-00 project uses Elasticsearch for its ETL pipeline.",
+            "correct": true
+          },
+          {
+            "q": "What stack does the Jigsaw-00 project use for its notification queue?",
+            "expected": "Redis",
+            "answer": "Jigsaw-00 project uses Redis for its notification queue.",
+            "correct": true
+          },
+          {
+            "q": "What stack does the Kestrel-00 project use for its cache layer?",
+            "expected": "Kafka",
+            "answer": "Kestrel-00 uses Kafka for its cache layer.",
+            "correct": true
+          },
+          {
+            "q": "What stack does the Lumen-00 project use for its report engine?",
+            "expected": "Kafka",
+            "answer": "The Lumen-00 project uses Kafka for its report engine.",
+            "correct": true
+          },
+          {
+            "q": "What stack does the Mosaic-00 project use for its cache layer?",
+            "expected": "DynamoDB",
+            "answer": "The Mosaic-00 project uses DynamoDB for its cache layer.",
+            "correct": true
+          },
+          {
+            "q": "What stack does the Nimbus-00 project use for its sync worker?",
+            "expected": "Kafka",
+            "answer": "The Nimbus-00 project uses DynamoDB for its sync worker.",
+            "correct": false
+          },
+          {
+            "q": "What stack does the Aurora-01 project use for its auth service?",
+            "expected": "DynamoDB",
+            "answer": "The Aurora-01 project uses DynamoDB for its auth service.",
+            "correct": true
+          },
+          {
+            "q": "What stack does the Basalt-01 project use for its cache layer?",
+            "expected": "MongoDB",
+            "answer": "The Basalt-01 project uses MongoDB for its cache layer.",
+            "correct": true
+          },
+          {
+            "q": "What stack does the Cinder-01 project use for its auth service?",
+            "expected": "PostgreSQL",
+            "answer": "The Cinder-01 project uses PostgreSQL for its auth service.",
+            "correct": true
+          },
+          {
+            "q": "What stack does the Dynamo-01 project use for its search indexer?",
+            "expected": "DynamoDB",
+            "answer": "DynamoDB",
+            "correct": true
+          },
+          {
+            "q": "What stack does the Ember-01 project use for its search indexer?",
+            "expected": "Kafka",
+            "answer": "The Ember-01 project uses MongoDB for its search indexer.",
+            "correct": false
+          },
+          {
+            "q": "What stack does the Fathom-01 project use for its notification queue?",
+            "expected": "ClickHouse",
+            "answer": "The Fathom-01 project uses ClickHouse for its notification queue.",
+            "correct": true
+          }
+        ]
+      },
+      "am_recall": {
+        "accuracy": 1.0,
+        "avg_latency_ms": 141.6,
+        "avg_prompt_tokens": 382.1,
+        "details": [
+          {
+            "q": "What stack does the Aurora-00 project use for its auth service?",
+            "expected": "PostgreSQL",
+            "answer": "PostgreSQL.",
+            "correct": true,
+            "recall_tokens": 593
+          },
+          {
+            "q": "What stack does the Basalt-00 project use for its notification queue?",
+            "expected": "MongoDB",
+            "answer": "MongoDB.",
+            "correct": true,
+            "recall_tokens": 597
+          },
+          {
+            "q": "What stack does the Cinder-00 project use for its ETL pipeline?",
+            "expected": "Kafka",
+            "answer": "Project Cinder-00 uses Kafka for its ETL pipeline.",
+            "correct": true,
+            "recall_tokens": 594
+          },
+          {
+            "q": "What stack does the Dynamo-00 project use for its auth service?",
+            "expected": "Elasticsearch",
+            "answer": "Elasticsearch",
+            "correct": true,
+            "recall_tokens": 594
+          },
+          {
+            "q": "What stack does the Ember-00 project use for its billing module?",
+            "expected": "Kafka",
+            "answer": "Kafka.",
+            "correct": true,
+            "recall_tokens": 592
+          },
+          {
+            "q": "What stack does the Fathom-00 project use for its search indexer?",
+            "expected": "PostgreSQL",
+            "answer": "PostgreSQL.",
+            "correct": true,
+            "recall_tokens": 597
+          },
+          {
+            "q": "What stack does the Glacier-00 project use for its search indexer?",
+            "expected": "Elasticsearch",
+            "answer": "Elasticsearch.",
+            "correct": true,
+            "recall_tokens": 597
+          },
+          {
+            "q": "What stack does the Halcyon-00 project use for its sync worker?",
+            "expected": "DynamoDB",
+            "answer": "DynamoDB",
+            "correct": true,
+            "recall_tokens": 591
+          },
+          {
+            "q": "What stack does the Iris-00 project use for its ETL pipeline?",
+            "expected": "Elasticsearch",
+            "answer": "Elasticsearch.",
+            "correct": true,
+            "recall_tokens": 593
+          },
+          {
+            "q": "What stack does the Jigsaw-00 project use for its notification queue?",
+            "expected": "Redis",
+            "answer": "Redis",
+            "correct": true,
+            "recall_tokens": 597
+          },
+          {
+            "q": "What stack does the Kestrel-00 project use for its cache layer?",
+            "expected": "Kafka",
+            "answer": "Kestrel-00 uses Kafka for its cache layer.",
+            "correct": true,
+            "recall_tokens": 592
+          },
+          {
+            "q": "What stack does the Lumen-00 project use for its report engine?",
+            "expected": "Kafka",
+            "answer": "Kafka.",
+            "correct": true,
+            "recall_tokens": 597
+          },
+          {
+            "q": "What stack does the Mosaic-00 project use for its cache layer?",
+            "expected": "DynamoDB",
+            "answer": "Project Mosaic-00 uses DynamoDB for its cache layer.",
+            "correct": true,
+            "recall_tokens": 592
+          },
+          {
+            "q": "What stack does the Nimbus-00 project use for its sync worker?",
+            "expected": "Kafka",
+            "answer": "Nimbus-00 uses Kafka for its sync worker.",
+            "correct": true,
+            "recall_tokens": 586
+          },
+          {
+            "q": "What stack does the Aurora-01 project use for its auth service?",
+            "expected": "DynamoDB",
+            "answer": "Project Aurora-01 uses DynamoDB for its auth service.",
+            "correct": true,
+            "recall_tokens": 594
+          },
+          {
+            "q": "What stack does the Basalt-01 project use for its cache layer?",
+            "expected": "MongoDB",
+            "answer": "The Basalt-01 project uses MongoDB for its cache layer.",
+            "correct": true,
+            "recall_tokens": 589
+          },
+          {
+            "q": "What stack does the Cinder-01 project use for its auth service?",
+            "expected": "PostgreSQL",
+            "answer": "PostgreSQL.",
+            "correct": true,
+            "recall_tokens": 591
+          },
+          {
+            "q": "What stack does the Dynamo-01 project use for its search indexer?",
+            "expected": "DynamoDB",
+            "answer": "DynamoDB.",
+            "correct": true,
+            "recall_tokens": 594
+          },
+          {
+            "q": "What stack does the Ember-01 project use for its search indexer?",
+            "expected": "Kafka",
+            "answer": "Kafka",
+            "correct": true,
+            "recall_tokens": 594
+          },
+          {
+            "q": "What stack does the Fathom-01 project use for its notification queue?",
+            "expected": "ClickHouse",
+            "answer": "ClickHouse.",
+            "correct": true,
+            "recall_tokens": 598
+          }
+        ],
+        "avg_recall_tokens": 593.6
+      }
+    },
+    "qwen3:4b": {
+      "no_memory": {
+        "accuracy": 0.05,
+        "avg_latency_ms": 3557.6,
+        "avg_prompt_tokens": 53.6,
+        "details": [
+          {
+            "q": "What stack does the Aurora-00 project use for its auth service?",
+            "expected": "PostgreSQL",
+            "answer": "Hmm, the user is asking about the stack used by the Aurora-00 project for its auth service. \n\nFirst, I need to recall what Aurora-00 is. From my knowledge base,",
+            "correct": false
+          },
+          {
+            "q": "What stack does the Basalt-00 project use for its notification queue?",
+            "expected": "MongoDB",
+            "answer": "Hmm, the user is asking about the Basalt-00 project's notification queue stack. I need to be precise here. \n\nFirst, I recall that Basalt-00 is a project I've co",
+            "correct": false
+          },
+          {
+            "q": "What stack does the Cinder-00 project use for its ETL pipeline?",
+            "expected": "Kafka",
+            "answer": "Hmm, the user is asking about the stack used by the Cinder-00 project for its ETL pipeline. \n\nFirst, I need to recall what Cinder-00 is. From my knowledge base,",
+            "correct": false
+          },
+          {
+            "q": "What stack does the Dynamo-00 project use for its auth service?",
+            "expected": "Elasticsearch",
+            "answer": "Hmm, the user is asking about the stack used by the Dynamo-00 project for its auth service. \n\nI need to be precise here. As an AI assistant with no notes or con",
+            "correct": false
+          },
+          {
+            "q": "What stack does the Ember-00 project use for its billing module?",
+            "expected": "Kafka",
+            "answer": "Hmm, the user is asking about the stack used by the Ember-00 project for its billing module. \n\nFirst, I need to recall what Ember-00 is. From my knowledge base,",
+            "correct": false
+          },
+          {
+            "q": "What stack does the Fathom-00 project use for its search indexer?",
+            "expected": "PostgreSQL",
+            "answer": "Hmm, the user is asking about the Fathom-00 project's search indexer stack. I need to be precise here. \n\nFirst, I recall that Fathom-00 is a project I've come a",
+            "correct": false
+          },
+          {
+            "q": "What stack does the Glacier-00 project use for its search indexer?",
+            "expected": "Elasticsearch",
+            "answer": "Hmm, the user is asking about the stack used by the Glacier-00 project for its search indexer. \n\nFirst, I need to recall what Glacier-00 is. From my knowledge b",
+            "correct": false
+          },
+          {
+            "q": "What stack does the Halcyon-00 project use for its sync worker?",
+            "expected": "DynamoDB",
+            "answer": "Hmm, the user is asking about the Halcyon-00 project's sync worker stack. I need to be precise here. \n\nFirst, I recall that Halcyon-00 is a project by the Halcy",
+            "correct": false
+          },
+          {
+            "q": "What stack does the Iris-00 project use for its ETL pipeline?",
+            "expected": "Elasticsearch",
+            "answer": "Hmm, the user is asking about the stack used by the Iris-00 project for its ETL pipeline. I need to be precise here since I have no notes or context. \n\nFirst, I",
+            "correct": false
+          },
+          {
+            "q": "What stack does the Jigsaw-00 project use for its notification queue?",
+            "expected": "Redis",
+            "answer": "Hmm, the user is asking about the Jigsaw-00 project's notification queue stack. I need to be precise here. \n\nFirst, I recall that Jigsaw-00 isn't a standard or ",
+            "correct": false
+          },
+          {
+            "q": "What stack does the Kestrel-00 project use for its cache layer?",
+            "expected": "Kafka",
+            "answer": "Hmm, the user is asking about the Kestrel-00 project's cache layer stack. I need to be precise here. \n\nFirst, I recall that Kestrel-00 isn't a standard or well-",
+            "correct": false
+          },
+          {
+            "q": "What stack does the Lumen-00 project use for its report engine?",
+            "expected": "Kafka",
+            "answer": "Hmm, the user is asking about the stack used by the Lumen-00 project for its report engine. I need to be precise here since I have no notes or context. \n\nFirst,",
+            "correct": false
+          },
+          {
+            "q": "What stack does the Mosaic-00 project use for its cache layer?",
+            "expected": "DynamoDB",
+            "answer": "Hmm, the user is asking about the Mosaic-00 project's cache layer stack. I need to be precise here. \n\nFirst, I recall that Mosaic-00 is a project by the Mosaic ",
+            "correct": false
+          },
+          {
+            "q": "What stack does the Nimbus-00 project use for its sync worker?",
+            "expected": "Kafka",
+            "answer": "Hmm, the user is asking about the Nimbus-00 project and specifically what stack it uses for its sync worker. \n\nFirst, I need to recall what Nimbus-00 is. From m",
+            "correct": false
+          },
+          {
+            "q": "What stack does the Aurora-01 project use for its auth service?",
+            "expected": "DynamoDB",
+            "answer": "Hmm, the user is asking about the stack used by the Aurora-01 project for its auth service. \n\nFirst, I need to recall what Aurora-01 is. From my knowledge base,",
+            "correct": false
+          },
+          {
+            "q": "What stack does the Basalt-01 project use for its cache layer?",
+            "expected": "MongoDB",
+            "answer": "Hmm, the user is asking about the Basalt-01 project's cache layer stack. I need to recall what Basalt-01 is. From my knowledge base, Basalt-01 is a project by t",
+            "correct": false
+          },
+          {
+            "q": "What stack does the Cinder-01 project use for its auth service?",
+            "expected": "PostgreSQL",
+            "answer": "Hmm, the user is asking about the stack used by Cinder-01 project for its auth service. \n\nFirst, I need to recall what Cinder-01 is. From my knowledge base, Cin",
+            "correct": false
+          },
+          {
+            "q": "What stack does the Dynamo-01 project use for its search indexer?",
+            "expected": "DynamoDB",
+            "answer": "Hmm, the user is asking about the Dynamo-01 project's search indexer stack. I need to be precise here. \n\nFirst, I recall that Dynamo-01 isn't a real project nam",
+            "correct": true
+          },
+          {
+            "q": "What stack does the Ember-01 project use for its search indexer?",
+            "expected": "Kafka",
+            "answer": "Hmm, the user is asking about the Ember-01 project's search indexer stack. I need to recall if I have any knowledge about this specific project. \n\nFirst, I shou",
+            "correct": false
+          },
+          {
+            "q": "What stack does the Fathom-01 project use for its notification queue?",
+            "expected": "ClickHouse",
+            "answer": "Hmm, the user is asking about the Fathom-01 project's notification queue stack. I need to be precise here. \n\nFirst, I recall that Fathom-01 is a project by the ",
+            "correct": false
+          }
+        ]
+      },
+      "full_context": {
+        "accuracy": 1.0,
+        "avg_latency_ms": 3741.5,
+        "avg_prompt_tokens": 1140.7,
+        "details": [
+          {
+            "q": "What stack does the Aurora-00 project use for its auth service?",
+            "expected": "PostgreSQL",
+            "answer": "First, I need to find information about Project Aurora-00 and its auth service in the context.\n\nLooking through the context:\n\n\"Project Aurora-00 migrated its au",
+            "correct": true
+          },
+          {
+            "q": "What stack does the Basalt-00 project use for its notification queue?",
+            "expected": "MongoDB",
+            "answer": "First, I need to find information about Project Basalt-00 in the context. Let me scan through the context.\n\nHere's what I see for Project Basalt-00:\n\n\"Project B",
+            "correct": true
+          },
+          {
+            "q": "What stack does the Cinder-00 project use for its ETL pipeline?",
+            "expected": "Kafka",
+            "answer": "First, I need to find information about Project Cinder-00 in the context. Let me scan through the context.\n\nHere's what I see for Project Cinder-00:\n\n\"Project C",
+            "correct": true
+          },
+          {
+            "q": "What stack does the Dynamo-00 project use for its auth service?",
+            "expected": "Elasticsearch",
+            "answer": "First, I need to find information about Project Dynamo-00 and what stack it uses for its auth service.\n\nLet me scan through the context to find Project Dynamo-0",
+            "correct": true
+          },
+          {
+            "q": "What stack does the Ember-00 project use for its billing module?",
+            "expected": "Kafka",
+            "answer": "First, I need to find information about the Ember-00 project in the context. Let me scan through the context.\n\nHere's what I see for Ember-00:\n\n\"Project Ember-0",
+            "correct": true
+          },
+          {
+            "q": "What stack does the Fathom-00 project use for its search indexer?",
+            "expected": "PostgreSQL",
+            "answer": "First, I need to find information about Fathom-00 in the context. Let me scan through the context.\n\nHere's what I see for Fathom-00:\n\n\"Project Fathom-00 migrate",
+            "correct": true
+          },
+          {
+            "q": "What stack does the Glacier-00 project use for its search indexer?",
+            "expected": "Elasticsearch",
+            "answer": "First, I need to find information about Project Glacier-00 in the context. Let me scan through the context.\n\nHere's what I see for Project Glacier-00:\n\n\"Project",
+            "correct": true
+          },
+          {
+            "q": "What stack does the Halcyon-00 project use for its sync worker?",
+            "expected": "DynamoDB",
+            "answer": "First, I need to find information about Project Halcyon-00 in the context. Let me scan through the context.\n\nHere it is: \"Project Halcyon-00 migrated its sync w",
+            "correct": true
+          },
+          {
+            "q": "What stack does the Iris-00 project use for its ETL pipeline?",
+            "expected": "Elasticsearch",
+            "answer": "First, I need to find information about Project Iris-00 in the context. Let me scan through the context.\n\nHere it is: \"Project Iris-00 migrated its ETL pipeline",
+            "correct": true
+          },
+          {
+            "q": "What stack does the Jigsaw-00 project use for its notification queue?",
+            "expected": "Redis",
+            "answer": "First, I need to find information about Project Jigsaw-00 in the context. Let me scan through the context.\n\nHere it is: \"Project Jigsaw-00 migrated its notifica",
+            "correct": true
+          },
+          {
+            "q": "What stack does the Kestrel-00 project use for its cache layer?",
+            "expected": "Kafka",
+            "answer": "First, I need to find information about Project Kestrel-00 in the context. Let me scan through the context to locate it.\n\nLooking at the context, I see:\n\n\"Proje",
+            "correct": true
+          },
+          {
+            "q": "What stack does the Lumen-00 project use for its report engine?",
+            "expected": "Kafka",
+            "answer": "First, I need to find information about Project Lumen-00 in the context. Let me scan through the context.\n\nHere it is: \"Project Lumen-00 migrated its report eng",
+            "correct": true
+          },
+          {
+            "q": "What stack does the Mosaic-00 project use for its cache layer?",
+            "expected": "DynamoDB",
+            "answer": "First, I need to find information about Project Mosaic-00 in the context. Let me scan through the context to locate it.\n\nLooking at the context, I see:\n\n\"Projec",
+            "correct": true
+          },
+          {
+            "q": "What stack does the Nimbus-00 project use for its sync worker?",
+            "expected": "Kafka",
+            "answer": "First, I need to find information about Project Nimbus-00 in the context. Let me scan through the context to locate it.\n\nLooking at the context, I see:\n\n\"Projec",
+            "correct": true
+          },
+          {
+            "q": "What stack does the Aurora-01 project use for its auth service?",
+            "expected": "DynamoDB",
+            "answer": "Okay, let's see. The user is asking about what stack Aurora-01 project uses for its auth service.\n\nFirst, I need to look through the provided context to find in",
+            "correct": true
+          },
+          {
+            "q": "What stack does the Basalt-01 project use for its cache layer?",
+            "expected": "MongoDB",
+            "answer": "First, I need to find information about Project Basalt-01 in the context. Let me scan through the context.\n\nHere's the relevant part for Basalt-01:\n\n\"Project Ba",
+            "correct": true
+          },
+          {
+            "q": "What stack does the Cinder-01 project use for its auth service?",
+            "expected": "PostgreSQL",
+            "answer": "First, I need to find information about Project Cinder-01 and its auth service in the context.\n\nLet me scan through the context for \"Cinder-01\":\n\nI found this e",
+            "correct": true
+          },
+          {
+            "q": "What stack does the Dynamo-01 project use for its search indexer?",
+            "expected": "DynamoDB",
+            "answer": "First, I need to find information about Project Dynamo-01 and what stack it uses for its search indexer.\n\nLet me scan through the context to find Project Dynamo",
+            "correct": true
+          },
+          {
+            "q": "What stack does the Ember-01 project use for its search indexer?",
+            "expected": "Kafka",
+            "answer": "First, I need to find information about Ember-01 project in the context. Let me scan through the context.\n\nThe context lists several projects with their migrati",
+            "correct": true
+          },
+          {
+            "q": "What stack does the Fathom-01 project use for its notification queue?",
+            "expected": "ClickHouse",
+            "answer": "First, I need to find the information about Fathom-01 project in the context. Let me scan through the context.\n\nI see that there's a project called \"Project Fat",
+            "correct": true
+          }
+        ]
+      },
+      "am_recall": {
+        "accuracy": 1.0,
+        "avg_latency_ms": 3733.9,
+        "avg_prompt_tokens": 382.2,
+        "details": [
+          {
+            "q": "What stack does the Aurora-00 project use for its auth service?",
+            "expected": "PostgreSQL",
+            "answer": "First, I need to answer the user's question using ONLY the provided context. The question is: \"What stack does the Aurora-00 project use for its auth service?\"\n",
+            "correct": true,
+            "recall_tokens": 595
+          },
+          {
+            "q": "What stack does the Basalt-00 project use for its notification queue?",
+            "expected": "MongoDB",
+            "answer": "Okay, let's see. The user is asking what stack Basalt-00 uses for its notification queue.\n\nLooking at the context provided, there's a section about Project Basa",
+            "correct": true,
+            "recall_tokens": 598
+          },
+          {
+            "q": "What stack does the Cinder-00 project use for its ETL pipeline?",
+            "expected": "Kafka",
+            "answer": "First, I need to answer the user's question using ONLY the provided context. The question is: \"What stack does the Cinder-00 project use for its ETL pipeline?\"\n",
+            "correct": true,
+            "recall_tokens": 595
+          },
+          {
+            "q": "What stack does the Dynamo-00 project use for its auth service?",
+            "expected": "Elasticsearch",
+            "answer": "First, I need to answer the user's question using ONLY the provided context. The question is: \"What stack does the Dynamo-00 project use for its auth service?\"\n",
+            "correct": true,
+            "recall_tokens": 592
+          },
+          {
+            "q": "What stack does the Ember-00 project use for its billing module?",
+            "expected": "Kafka",
+            "answer": "First, I need to answer the user's question using ONLY the provided context. The question is: \"What stack does the Ember-00 project use for its billing module?\"",
+            "correct": true,
+            "recall_tokens": 590
+          },
+          {
+            "q": "What stack does the Fathom-00 project use for its search indexer?",
+            "expected": "PostgreSQL",
+            "answer": "First, I need to answer the user's question using ONLY the provided context. The question is: \"What stack does the Fathom-00 project use for its search indexer?",
+            "correct": true,
+            "recall_tokens": 594
+          },
+          {
+            "q": "What stack does the Glacier-00 project use for its search indexer?",
+            "expected": "Elasticsearch",
+            "answer": "First, I need to answer the user's question using ONLY the provided context. The question is: \"What stack does the Glacier-00 project use for its search indexer",
+            "correct": true,
+            "recall_tokens": 594
+          },
+          {
+            "q": "What stack does the Halcyon-00 project use for its sync worker?",
+            "expected": "DynamoDB",
+            "answer": "Okay, let's see. The user is asking what stack Halcyon-00 uses for its sync worker.\n\nLooking at the context provided, there's a section about Project Halcyon-00",
+            "correct": true,
+            "recall_tokens": 589
+          },
+          {
+            "q": "What stack does the Iris-00 project use for its ETL pipeline?",
+            "expected": "Elasticsearch",
+            "answer": "Okay, let's see. The user is asking what stack Iris-00 project uses for its ETL pipeline.\n\nLooking at the context provided, there's a section about Project Iris",
+            "correct": true,
+            "recall_tokens": 592
+          },
+          {
+            "q": "What stack does the Jigsaw-00 project use for its notification queue?",
+            "expected": "Redis",
+            "answer": "First, I need to answer the user's question using ONLY the provided context. The question is: \"What stack does the Jigsaw-00 project use for its notification qu",
+            "correct": true,
+            "recall_tokens": 597
+          },
+          {
+            "q": "What stack does the Kestrel-00 project use for its cache layer?",
+            "expected": "Kafka",
+            "answer": "First, I need to answer the user's question using ONLY the provided context. The question is: \"What stack does the Kestrel-00 project use for its cache layer?\"\n",
+            "correct": true,
+            "recall_tokens": 592
+          },
+          {
+            "q": "What stack does the Lumen-00 project use for its report engine?",
+            "expected": "Kafka",
+            "answer": "First, I need to answer the user's question using ONLY the provided context. The question is: \"What stack does the Lumen-00 project use for its report engine?\"\n",
+            "correct": true,
+            "recall_tokens": 588
+          },
+          {
+            "q": "What stack does the Mosaic-00 project use for its cache layer?",
+            "expected": "DynamoDB",
+            "answer": "First, I need to answer the user's question using ONLY the provided context. The question is: \"What stack does the Mosaic-00 project use for its cache layer?\"\n\n",
+            "correct": true,
+            "recall_tokens": 588
+          },
+          {
+            "q": "What stack does the Nimbus-00 project use for its sync worker?",
+            "expected": "Kafka",
+            "answer": "Okay, let's tackle this question. The user is asking what stack Nimbus-00 uses for its sync worker.\n\nFirst, I need to look at the context provided. Let me scan ",
+            "correct": true,
+            "recall_tokens": 586
+          },
+          {
+            "q": "What stack does the Aurora-01 project use for its auth service?",
+            "expected": "DynamoDB",
+            "answer": "First, I need to answer the user's question using ONLY the provided context. The question is: \"What stack does the Aurora-01 project use for its auth service?\"\n",
+            "correct": true,
+            "recall_tokens": 594
+          },
+          {
+            "q": "What stack does the Basalt-01 project use for its cache layer?",
+            "expected": "MongoDB",
+            "answer": "Okay, let's see. The user is asking what stack Basalt-01 uses for its cache layer.\n\nLooking at the context provided, there's a section about Project Basalt-01. ",
+            "correct": true,
+            "recall_tokens": 588
+          },
+          {
+            "q": "What stack does the Cinder-01 project use for its auth service?",
+            "expected": "PostgreSQL",
+            "answer": "First, I need to answer the user's question using ONLY the provided context. The question is: \"What stack does the Cinder-01 project use for its auth service?\"\n",
+            "correct": true,
+            "recall_tokens": 591
+          },
+          {
+            "q": "What stack does the Dynamo-01 project use for its search indexer?",
+            "expected": "DynamoDB",
+            "answer": "First, I need to answer the user's question using ONLY the provided context. The question is: \"What stack does the Dynamo-01 project use for its search indexer?",
+            "correct": true,
+            "recall_tokens": 596
+          },
+          {
+            "q": "What stack does the Ember-01 project use for its search indexer?",
+            "expected": "Kafka",
+            "answer": "First, I need to answer the user's question using ONLY the provided context. The question is: \"What stack does the Ember-01 project use for its search indexer?\"",
+            "correct": true,
+            "recall_tokens": 596
+          },
+          {
+            "q": "What stack does the Fathom-01 project use for its notification queue?",
+            "expected": "ClickHouse",
+            "answer": "First, I need to answer the user's question using ONLY the provided context. The question is: \"What stack does the Fathom-01 project use for its notification qu",
+            "correct": true,
+            "recall_tokens": 598
+          }
+        ],
+        "avg_recall_tokens": 592.6
+      }
+    }
+  }
+}
