@@ -358,36 +358,29 @@ class ArtificialMemoryRuntime:
         self.confidence_engine = ConfidenceEngine(self.store, self.recall_engine)
         self.style_engine = StyleEngine(self.store)
         self.human_recall_engine = HumanRecallEngine(self.store, self.recall_engine)
+        self.vector_search_engine: Any = None
         if self.config.use_postgres:
             try:
                 from artificial_memory.memory.pgvector_search import create_pgvector_search_engine
                 from artificial_memory.storage.postgres_store import PostgresMemoryStore
                 if isinstance(self.store, PostgresMemoryStore):
                     self.vector_search_engine = create_pgvector_search_engine(self.store)
-                else:
-                    from artificial_memory.memory.vector_search import (
-                        VectorSearchEngine as FAISSVectorSearchEngine,
-                    )
-                    self.vector_search_engine = FAISSVectorSearchEngine(
-                        self.store, model_name=self.config.embedding_model,
-                        index_path=Path(self.config.vector_index_path)
-                    )
-            except ImportError:
+            except Exception:
+                pass
+
+        if self.vector_search_engine is None:
+            try:
                 from artificial_memory.memory.vector_search import (
                     VectorSearchEngine as FAISSVectorSearchEngine,
                 )
                 self.vector_search_engine = FAISSVectorSearchEngine(
-                    self.store, model_name=self.config.embedding_model,
-                    index_path=Path(self.config.vector_index_path)
+                    self.store,
+                    model_name=self.config.embedding_model,
+                    index_path=Path(self.config.vector_index_path),
                 )
-        else:
-            from artificial_memory.memory.vector_search import (
-                VectorSearchEngine as FAISSVectorSearchEngine,
-            )
-            self.vector_search_engine = FAISSVectorSearchEngine(
-                self.store, model_name=self.config.embedding_model,
-                index_path=Path(self.config.vector_index_path)
-            )
+            except Exception:
+                from artificial_memory.memory.null_search import NullVectorSearchEngine
+                self.vector_search_engine = NullVectorSearchEngine(self.store)
 
         # IR components
         self.ir_compiler = create_ir_compiler()
