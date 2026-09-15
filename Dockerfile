@@ -40,8 +40,9 @@ COPY --chown=appuser:appuser pyproject.toml ./
 COPY --chown=appuser:appuser static/ ./static/
 COPY --chown=appuser:appuser scripts/ ./scripts/
 
-# Create runtime data directories
-RUN mkdir -p /app/memory_files /app/data && chown -R appuser:appuser /app/memory_files /app/data
+# Create runtime data directories and ensure appuser owns /app
+RUN mkdir -p /app/memory_files /app/data /app/audit_logs /app/am_benchmarks /app/ablation_results /app/redteam_results /app/experiment_runs \
+    && chown -R appuser:appuser /app
 
 # Switch to non-root user
 USER appuser

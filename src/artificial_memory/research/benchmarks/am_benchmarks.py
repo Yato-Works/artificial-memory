@@ -87,7 +87,13 @@ class AMBenchmarkSuite:
         self.dependency_graph = dependency_graph
         self.adaptive_recall = adaptive_recall
         self.output_dir = Path(output_dir)
-        self.output_dir.mkdir(parents=True, exist_ok=True)
+        try:
+            self.output_dir.mkdir(parents=True, exist_ok=True)
+        except OSError:
+            import tempfile
+
+            self.output_dir = Path(tempfile.gettempdir()) / "am_benchmarks"
+            self.output_dir.mkdir(parents=True, exist_ok=True)
 
         self.cases: dict[str, BenchmarkCase] = {}
         self.results: list[BenchmarkResult] = []

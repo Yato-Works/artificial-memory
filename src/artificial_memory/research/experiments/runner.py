@@ -112,7 +112,13 @@ class ExperimentRunner:
         default_timeout: int = 3600,
     ):
         self.output_dir = Path(output_dir)
-        self.output_dir.mkdir(parents=True, exist_ok=True)
+        try:
+            self.output_dir.mkdir(parents=True, exist_ok=True)
+        except OSError:
+            import tempfile
+
+            self.output_dir = Path(tempfile.gettempdir()) / "experiment_runs"
+            self.output_dir.mkdir(parents=True, exist_ok=True)
         self.default_timeout = default_timeout
         self.runs: list[ExperimentRun] = []
         self.runner_registry: dict[str, type] = {}

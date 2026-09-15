@@ -86,7 +86,13 @@ class AblationFramework:
         self.compressor = compressor
         self.default_seed = default_seed
         self.output_dir = Path(output_dir)
-        self.output_dir.mkdir(parents=True, exist_ok=True)
+        try:
+            self.output_dir.mkdir(parents=True, exist_ok=True)
+        except OSError:
+            import tempfile
+
+            self.output_dir = Path(tempfile.gettempdir()) / "ablation_results"
+            self.output_dir.mkdir(parents=True, exist_ok=True)
 
         self.experiments: dict[str, AblationConfig] = {}
         self.results: dict[str, AblationExperimentResult] = {}

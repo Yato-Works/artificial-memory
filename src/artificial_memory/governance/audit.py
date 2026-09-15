@@ -117,7 +117,13 @@ class AuditLogger:
     ):
         self.store = store
         self.output_dir = Path(output_dir)
-        self.output_dir.mkdir(parents=True, exist_ok=True)
+        try:
+            self.output_dir.mkdir(parents=True, exist_ok=True)
+        except OSError:
+            import tempfile
+
+            self.output_dir = Path(tempfile.gettempdir()) / "audit_logs"
+            self.output_dir.mkdir(parents=True, exist_ok=True)
         self.max_file_size_bytes = max_file_size_mb * 1024 * 1024
         self.max_files = max_files
         self.compression_enabled = compression_enabled
