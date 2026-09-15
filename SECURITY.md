@@ -12,7 +12,7 @@ Please report security vulnerabilities responsibly:
 
 1. **Do NOT open a public GitHub issue** for security vulnerabilities.
 2. Open a private security advisory via GitHub:
-   <https://github.com/<org>/artificial_memory/security/advisories/new>
+   <https://github.com/Yato-Works/artificial-memory/security/advisories/new>
 3. Include: description, affected components, reproduction steps, and
    suggested mitigation if available.
 

@@ -53,3 +53,17 @@ metrics/
 .vscode/
 *.swp
 *.swo
+
+# Internal planning, scratch notes, and design docs
+docs/planning/
+*.plan.txt
+*.memo.md
+notes/
+scratch/
+
+# Local research and benchmark run outputs
+ablation_results/
+am_benchmarks/
+experiment_runs/
+redteam_results/
+

@@ -7,8 +7,8 @@ explains how to set up, develop, test, and submit changes.
 
 ```bash
 # Clone & install (Python 3.11+)
-git clone <repository-url>
-cd artificial_memory
+git clone https://github.com/Yato-Works/artificial-memory.git
+cd artificial-memory
 python -m venv .venv
 .venv\Scripts\activate        # Windows
 source .venv/bin/activate     # Linux/macOS

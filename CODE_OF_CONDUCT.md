@@ -51,7 +51,7 @@ when an individual is officially representing the community in public spaces.
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
 reported to the community leaders responsible for enforcement via GitHub
-(https://github.com/<org>/artificial_memory) through a private contact or
+(https://github.com/Yato-Works/artificial-memory) through a private contact or
 security advisory. All complaints will be reviewed and investigated promptly
 and fairly.
 

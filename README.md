@@ -2,6 +2,8 @@
 
 > **Forget by compression. Recall by resolution. Reason with provenance.**
 
+[English](README.md) | [日本語](README.ja.md)
+
 A **Cognitive Memory Runtime for Persistent AI Systems** that implements human-like memory with progressive compression, adaptive recall, temporal reasoning, and full provenance tracking.
 
 ## Vision
@@ -133,7 +135,7 @@ Registration instructions for Cline / Claude Desktop / Hermes:
 
 ### Installation
 ```bash
-git clone https://github.com/your-org/artificial-memory
+git clone https://github.com/Yato-Works/artificial-memory.git
 cd artificial-memory
 pip install -e ".[web,llm,vector]"
 ```
@@ -637,16 +639,21 @@ Core principles:
 - [ ] Integration tests with kind/k3s
 - [ ] Production hardening (network policies, pod disruption budgets, priority classes)
 
+## 🌟 Showcase & Adopters
+
+Are you using Artificial Memory in your project, startup, enterprise, or research?  
+We would love to feature you! Please check out [SHOWCASE.md](SHOWCASE.md) or submit a [Showcase Issue](https://github.com/Yato-Works/artificial-memory/issues/new?template=showcase.yml) (anonymous submissions welcome!).
+
 ## Citation
 
 If you use this in research, please cite:
 
-```
+```bibtex
 @software{artificial-memory,
   title = {Artificial Memory / Context Runtime},
   subtitle = {A Cognitive Memory Runtime for Persistent AI Systems},
-  author = {Your Name},
-  year = {2024},
-  url = {https://github.com/your-org/artificial-memory}
+  author = {Yato-Works},
+  year = {2026},
+  url = {https://github.com/Yato-Works/artificial-memory}
 }
 ```

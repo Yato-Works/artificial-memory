@@ -1,0 +1,69 @@
+name: Showcase Submission
+description: Tell us how you or your company are using Artificial Memory!
+title: "[Showcase]: "
+labels: ["showcase"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for using Artificial Memory!
+        Filling out this form helps us understand real-world usage and add your project to our [Showcase](https://github.com/Yato-Works/artificial-memory/blob/main/SHOWCASE.md).
+        *(企業名非公開・匿名希望の登録も大歓迎です！)*
+
+  - type: input
+    id: organization
+    attributes:
+      label: Organization / Project Name
+      description: Your company, team, or project name (or "Anonymous / Confidential Enterprise")
+      placeholder: "e.g., Acme Corp / MyAutonomousAgent / Confidential Enterprise"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: What type of entity is this?
+      options:
+        - Enterprise / Company
+        - Startup
+        - Personal / Side Project
+        - Research / Academic
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use Case & Description
+      description: How do you use Artificial Memory? (e.g., agent long-term memory, customer support, multi-agent context)
+      placeholder: "We use Artificial Memory to store and adaptively recall episodic memories in our coding assistant..."
+    validations:
+      required: true
+
+  - type: input
+    id: website
+    attributes:
+      label: Project URL / Website
+      description: Link to your company, project, or GitHub repo (optional)
+      placeholder: "https://example.com"
+    validations:
+      required: false
+
+  - type: input
+    id: version
+    attributes:
+      label: Artificial Memory Version
+      description: What version are you using?
+      placeholder: "0.1.0"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Permissions
+      options:
+        - label: I agree to have this project/use-case listed in the Artificial Memory SHOWCASE.md
+          required: true
