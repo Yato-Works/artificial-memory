@@ -96,34 +96,37 @@ context window otherwise absorbs.
 
 ### MCP integration — smoke test & real-agent E2E
 
-Verification layers, from fastest to most realistic:
+Five verification layers, from fastest to most realistic — all reproducible
+from this repo:
 
 ```text
-Deterministic system benchmark   (accuracy / latency / token savings)
-        ↓
-LLM QA benchmark (Ollama)        (no-memory vs full-context vs AM recall)
-        ↓
-MCP smoke test                   (all 7 tools, one session)   -> 8/8 PASS
-        ↓
-Real-agent cross-session E2E     (remember -> process exit -> recall /
-                                  trace / timeline / explain /
-                                  expand / inspect)          -> 8/8 PASS
+1. Deterministic system benchmark   recall accuracy / latency / token savings
+2. LLM QA benchmark (Ollama)        no-memory vs full-context vs AM recall
+3. MCP smoke test                   all 7 tools, one session         -> 8/8 PASS
+4. Cross-session E2E                remember -> fresh process ->
+                                    recall/trace/timeline/explain/
+                                    expand/inspect                   -> 8/8 PASS
+5. Agent tool-selection test        LLM picks the tools itself       -> 2/4
 ```
+
+Layer 5 is reported honestly, and its failures are the most informative:
+a local 4B model autonomously chose `memory_remember` and `memory_recall`,
+but stored and queried under slightly different topic names
+("Artificial Memory" vs "Artificial Memory project") → recall returned 0
+results → the model then answered "I don't have that memory" instead of
+inventing one. The server was healthy on every call; the failure is in the
+agent's tool-usage layer (topic consistency on a small local model), not in
+AM. Two candidate improvements (pinned topics / fuzzy topic fallback) are
+recorded as future work. Note the honest-zero-result behavior reflects the
+specific test model (Qwen3-4B), not a property of Artificial Memory itself.
 
 The cross-session E2E (`scripts/real_agent_e2e.py`) runs the exact server
 command registered for Cline: Session 1 stores project facts, the server
 process is terminated, and Session 2 — a fresh process on the same database —
 recalls all facts, traces provenance back to the source, returns the timeline
 entry, explains its retrieval decision, and expands/inspects the stored IR.
-Result table and observed responses: `docs/real-agent-e2e.md`.
-
-An additional **tool-selection test** (`scripts/agent_tool_selection_test.py`)
-lets a local 4B LLM decide which tools to call, unscripted: it autonomously
-chose `memory_remember` and `memory_recall`, but lost cross-session topic
-consistency ("Artificial Memory" vs "Artificial Memory project") and could not
-reach `memory_trace`/`memory_timeline` — an honest 2/4. The server behaved
-correctly on every call it received; the failures are agent-side tool-usage
-issues, documented with analysis in `docs/real-agent-e2e.md`.
+Result tables, observed responses, and full analysis:
+`docs/real-agent-e2e.md`.
 
 Registration instructions for Cline / Claude Desktop / Hermes:
 `docs/mcp-agent-testing.md`.

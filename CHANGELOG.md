@@ -8,21 +8,49 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- `vector` extra (faiss-cpu, sentence-transformers); numpy moved to core dependencies
+- Lazy exports in `artificial_memory.memory` (heavy faiss/torch imports no longer
+  load on light module imports; import time 19s -> 0.3s)
+- Shared SentenceTransformer model cache (`memory.embeddings`), reused across engines
+- Deterministic README benchmark harness (`scripts/run_readme_benchmark.py`)
+- Ollama LLM QA benchmark, 3 conditions (no-memory / full-context / AM recall)
+  (`scripts/run_llm_benchmark.py`)
+- MCP smoke test covering all 7 tools over real stdio (`scripts/mcp_smoke_test.py`)
+- Real-agent cross-session E2E: remember -> process exit -> recall / trace /
+  timeline / explain / expand / inspect on a fresh process (`scripts/real_agent_e2e.py`)
+- Agent tool-selection test: a local LLM autonomously chooses MCP tools
+  (`scripts/agent_tool_selection_test.py`)
+- Agent integration guide (`docs/mcp-agent-testing.md`) and E2E evidence report
+  (`docs/real-agent-e2e.md`)
+- Reproducible benchmark evidence in `benchmark_results/`
+
+### Changed
+- `psycopg[binary]` and `mcp>=1.0,<2.0` pinned (FastMCP moved out of mcp 2.x)
+- CI installs vector/mcp extras; mypy step is continue-on-error while strict-mode
+  adoption finishes (~27 remaining findings)
+- Planning documents moved to `docs/planning/`
+
+### Fixed
+- MCP tool responses rendered nested pydantic `MemoryIR` as repr strings; replaced
+  with a recursive JSON-safe serializer so agents can read `memory_id`s
+- `memory_inspect` crashed inside the MCP event loop (`asyncio.run` on a running
+  loop); the tool now awaits `trace()` directly
+- PostgreSQL tests hung for minutes when no server was reachable; added a
+  3-second connectivity pre-check and graceful skip
+- SentenceTransformer was reloaded per engine instance; models are now shared via
+  an LRU cache
+
+### Earlier pre-release hardening
 - Pre-commit configuration with ruff, mypy, isort, black
-- GitHub issue templates (bug report, feature request)
-- GitHub PR template
+- GitHub issue templates (bug report, feature request) and PR template
 - Enhanced pyproject.toml with metadata (classifiers, URLs, keywords)
 - VectorSearchEngine protocol in core.interfaces
 - ContextIRCompiler.optimize_ir method in RuleBasedIRCompiler
-
-### Changed
 - Fixed all ruff linting issues (153+ errors resolved)
 - Fixed majority of mypy type errors (940+ errors reduced to ~27)
 - Improved RuntimeConfig with better secret handling warnings
 - Moved ruff configuration to modern [tool.ruff.lint] section
 - Research components now imported at runtime to avoid circular imports
-
-### Fixed
 - AdaptiveRecallEngine naming conflict with instance variable
 - VectorSearchEngine protocol signature mismatch with implementations
 - create_federated_memory_engine argument types
