@@ -1,7 +1,5 @@
-version: '3.8'
-
 # Local development with Kubernetes (kind/k3s)
-# Usage: docker-compose -f docker-compose.kind.yml up -d
+# Usage: docker compose -f docker-compose.kind.yml up -d
 
 services:
   # kind cluster (runs in Docker)

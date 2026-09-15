@@ -6,6 +6,7 @@ from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
 from typing import Any
+from urllib.parse import unquote, urlparse
 
 from pgvector.psycopg import register_vector
 from psycopg.rows import dict_row
@@ -50,14 +51,32 @@ class PostgresConfig:
     def dsn(self) -> str:
         return f"postgresql://{self.user}:{self.password}@{self.host}:{self.port}/{self.database}"
 
+    @classmethod
+    def from_url(
+        cls,
+        url: str,
+        min_connections: int = 2,
+        max_connections: int = 10,
+    ) -> PostgresConfig:
+        """Parse database URL into PostgresConfig."""
+        parsed = urlparse(url)
+        return cls(
+            host=parsed.hostname or "localhost",
+            port=parsed.port or 5432,
+            database=parsed.path.lstrip("/") or "artificial_memory",
+            user=unquote(parsed.username) if parsed.username else "postgres",
+            password=unquote(parsed.password) if parsed.password else "postgres",
+            min_connections=min_connections,
+            max_connections=max_connections,
+        )
+
 
 class PostgresMemoryStore:
     """PostgreSQL/pgvector implementation of MemoryStore."""
 
     def __init__(self, config: PostgresConfig | str, pool: ConnectionPool | None = None):
         if isinstance(config, str):
-            self.config = PostgresConfig()
-            self.config.dsn = config
+            self.config = PostgresConfig.from_url(config)
         else:
             self.config = config
 
@@ -878,7 +897,7 @@ class PostgresMemoryStore:
 
 
 def create_postgres_store(
-    host: str = "localhost",
+    host_or_url: str = "localhost",
     port: int = 5432,
     database: str = "artificial_memory",
     user: str = "postgres",
@@ -886,14 +905,25 @@ def create_postgres_store(
     min_connections: int = 2,
     max_connections: int = 10,
 ) -> PostgresMemoryStore:
-    """Factory function to create a PostgreSQL memory store."""
-    config = PostgresConfig(
-        host=host,
-        port=port,
-        database=database,
-        user=user,
-        password=password,
-        min_connections=min_connections,
-        max_connections=max_connections,
-    )
+    """Factory function to create a PostgreSQL memory store.
+
+    Accepts either a full database URL (e.g. postgresql://user:pass@host:port/dbname)
+    or individual connection parameters.
+    """
+    if host_or_url.startswith("postgresql://") or host_or_url.startswith("postgres://"):
+        config = PostgresConfig.from_url(
+            host_or_url,
+            min_connections=min_connections,
+            max_connections=max_connections,
+        )
+    else:
+        config = PostgresConfig(
+            host=host_or_url,
+            port=port,
+            database=database,
+            user=user,
+            password=password,
+            min_connections=min_connections,
+            max_connections=max_connections,
+        )
     return PostgresMemoryStore(config)
