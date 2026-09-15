@@ -16,8 +16,10 @@ services:
       - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/artificial_memory
       - USE_POSTGRES=true
     depends_on:
-      - ollama
-      - postgres
+      postgres:
+        condition: service_healthy
+      ollama:
+        condition: service_started
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "python", "-c", "import sys; sys.path.insert(0, 'src'); from artificial_memory.storage.postgres_store import PostgresMemoryStore; s = PostgresMemoryStore('postgresql://postgres:postgres@postgres:5432/artificial_memory'); exit(0 if s.health_check() else 1)"]
