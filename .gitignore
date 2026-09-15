@@ -38,11 +38,11 @@ htmlcov/
 *.db
 *.sqlite
 *.sqlite3
-memory.db
-vector_index/
-audit_logs/
-memory_files/
-metrics/
+/memory.db
+/vector_index/
+/audit_logs/
+/memory_files/
+/metrics/
 
 # Environment
 .env
