@@ -130,7 +130,10 @@ def create_mcp_server(
     @mcp.tool()
     async def memory_inspect(memory_id: int) -> str:
         """Inspect a memory's full state: IR, provenance chain, versions."""
-        result = am.inspect(memory_id)
+        # NOTE: use the async trace() directly. facade.inspect() calls
+        # asyncio.run() internally, which raises "cannot be called from a
+        # running event loop" inside the MCP server.
+        result = await am.trace(memory_id)
         return _serialize(result)
 
     return mcp

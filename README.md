@@ -57,6 +57,27 @@ Artificial Memory is not merely a "better RAG" — it is a **general-purpose cog
 
 ## Quick Start
 
+## Benchmarks
+
+Measured with `python scripts/run_readme_benchmark.py --memories 120 --queries 50 --seed 42`
+(Python 3.11 on Windows 10, Intel i7-11700; embeddings: all-MiniLM-L6-v2, FAISS IndexFlatIP).
+Reproduce on your machine — numbers below are from the dev workstation, not a benchmark lab.
+
+| Metric | Diverse domains | Stress (near-duplicate) |
+|---|---|---|
+| Semantic recall accuracy@1 (vector / hybrid) | **66.7% / 79.2%** | 29.2% / 41.7% |
+| Semantic recall accuracy@5 (vector / hybrid) | **100% / 100%** | 57.5% / 72.5% |
+| Recall latency p50 / p95 | 27 / 32 ms | 26 / 28 ms |
+| Token savings vs full-context injection | **69.6%** | 70.9% |
+| Vector index build (120 memories) | ~1.2 s | ~1.6 s |
+| Remember throughput | ~530 writes/s | ~550 writes/s |
+
+Two synthetic datasets are benchmarked deliberately:
+**"diverse"** — memories from distinct domains (realistic retrieval setup);
+**"stress"** — 120 near-identical templates that differ only in entity/tech (adversarial).
+The gap between them quantifies how resolution/hybrid recall degrades under
+homogeneous content — exactly the failure mode we want to keep visible.
+
 ### Installation
 ```bash
 git clone https://github.com/your-org/artificial-memory

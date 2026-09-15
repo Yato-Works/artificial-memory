@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "date": "2026-09-15T14:47:21",
+    "seed": 42,
+    "n_memories": 120,
+    "n_queries": 50,
+    "runtime_init_and_model_load_s": 16.32,
+    "python": "3.11.15",
+    "platform": "Windows 10",
+    "cpu": "Intel64 Family 6 Model 167 Stepping 1, GenuineIntel"
+  },
+  "metrics": {
+    "stress_remember_throughput_writes_per_s": 551.45,
+    "stress_vector_index_build_ms": 1635.48,
+    "stress_recall_accuracy_at_1": 0.2917,
+    "stress_recall_accuracy_at_5": 0.575,
+    "stress_hybrid_accuracy_at_1": 0.4167,
+    "stress_hybrid_accuracy_at_5": 0.725,
+    "stress_recall_latency_p50_ms": 25.83,
+    "stress_recall_latency_p95_ms": 27.81,
+    "stress_full_context_tokens": 8540,
+    "stress_am_avg_recall_tokens": 2488.6,
+    "stress_token_savings_ratio": 0.7086,
+    "stress_compression_savings_light": 0.0,
+    "stress_compression_savings_semantic": 0.5481,
+    "diverse_remember_throughput_writes_per_s": 531.57,
+    "diverse_vector_index_build_ms": 1190.72,
+    "diverse_recall_accuracy_at_1": 0.6667,
+    "diverse_recall_accuracy_at_5": 1.0,
+    "diverse_hybrid_accuracy_at_1": 0.7917,
+    "diverse_hybrid_accuracy_at_5": 1.0,
+    "diverse_recall_latency_p50_ms": 27.21,
+    "diverse_recall_latency_p95_ms": 31.78,
+    "diverse_full_context_tokens": 6505,
+    "diverse_am_avg_recall_tokens": 1977.4,
+    "diverse_token_savings_ratio": 0.696,
+    "diverse_compression_savings_light": 0.0,
+    "diverse_compression_savings_semantic": -0.1661
+  }
+}

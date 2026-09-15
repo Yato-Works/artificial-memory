@@ -90,7 +90,7 @@ operator = [
     "pyyaml>=6.0",
 ]
 mcp = [
-    "mcp>=1.0",
+    "mcp>=1.0,<2.0",
 ]
 nli = [
     "transformers>=4.40",
