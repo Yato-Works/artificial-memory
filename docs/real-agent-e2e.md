@@ -68,6 +68,37 @@ FAISS, compression, MCP, benchmark) were found in cross-session recall output.
   `memory_expand` / `memory_inspect` workflows. Fixed with a recursive
   JSON-safe converter (`_jsonable`) in `src/artificial_memory/mcp/server.py`.
 
+## Agent Tool-Selection Layer (local LLM as the agent brain)
+
+`scripts/agent_tool_selection_test.py` goes one step further than scripted
+calls: a local LLM (qwen3:4b, temperature 0) receives the real tool schemas
+from the running MCP server and **decides itself** which tool to call; the
+script only executes whatever the LLM chooses.
+
+| Test | Expected | Result |
+|---|---|---|
+| Session 1: "Remember this project profile" | LLM calls `memory_remember` | **PASS** (memory_id=1 stored) |
+| Session 2: "Do you remember what we said about the project?" | LLM calls `memory_recall` | **PASS** (tool chosen autonomously) |
+| Session 2: "Where did that information come from?" | LLM calls `memory_trace` | **FAIL** — no memory to trace (see below) |
+| Session 2: "When did we save it?" | LLM calls `memory_timeline` | **FAIL** — same cause |
+
+**Overall: 2/4 PASS** — and the failures are the most instructive part:
+
+- The MCP server was healthy throughout (every call that reached it returned
+  a valid response). The failures are entirely in the **agent's tool-usage
+  layer**: the 4B model stored the fact under topic `"Artificial Memory"` but
+  queried `"Artificial Memory project"` → 0 hits → it correctly answered
+  "I don't have that memory" instead of hallucinating, but had nothing to
+  trace or timeline.
+- A small local model could not maintain topic-name consistency even with an
+  explicit instruction, and occasionally emitted malformed tool calls
+  (`tool: null`). Larger agent models (what Cline actually drives) are
+  expected to fare better; this remains unverified in the Cline UI.
+- Practical takeaway for agent integrations: either pin the topic explicitly
+  in prompts, or have the runtime fall back to fuzzy/recency-based topic
+  matching when recall returns 0 (candidate for a future AM improvement, not
+  implemented in this release).
+
 ## Limitations
 
 - "Session" = separate server process + separate MCP connection sharing one

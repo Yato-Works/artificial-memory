@@ -117,6 +117,14 @@ recalls all facts, traces provenance back to the source, returns the timeline
 entry, explains its retrieval decision, and expands/inspects the stored IR.
 Result table and observed responses: `docs/real-agent-e2e.md`.
 
+An additional **tool-selection test** (`scripts/agent_tool_selection_test.py`)
+lets a local 4B LLM decide which tools to call, unscripted: it autonomously
+chose `memory_remember` and `memory_recall`, but lost cross-session topic
+consistency ("Artificial Memory" vs "Artificial Memory project") and could not
+reach `memory_trace`/`memory_timeline` — an honest 2/4. The server behaved
+correctly on every call it received; the failures are agent-side tool-usage
+issues, documented with analysis in `docs/real-agent-e2e.md`.
+
 Registration instructions for Cline / Claude Desktop / Hermes:
 `docs/mcp-agent-testing.md`.
 

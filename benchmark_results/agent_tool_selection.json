@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "date": "2026-09-15T16:14:58",
+    "model": "qwen3:4b",
+    "note": "tool selection decided by the LLM; script executes only chosen tools",
+    "registered_command": [
+      "C:\\Users\\smily\\AppData\\Local\\hermes\\hermes-agent\\venv\\Scripts\\python.exe",
+      "-m",
+      "artificial_memory.mcp"
+    ]
+  },
+  "checks": {
+    "s1_autonomous_remember": true,
+    "s2_autonomous_recall": true,
+    "s2_autonomous_trace": false,
+    "s2_autonomous_timeline": false
+  },
+  "transcript": [
+    {
+      "tool_chosen": "memory_remember",
+      "arguments": {
+        "content": "An open-source project using SQLite for storage, FAISS for vector retrieval, MCP for agent integration, and it ships LLM benchmarks.",
+        "topic": "Artificial Memory"
+      }
+    },
+    {
+      "tool_result_head": "{\"identity\": {\"memory_id\": 1, \"version\": 5, \"content_hash\": \"41fba7042960ef95\"}, \"type\": \"semantic\", \"resolution\": 3, \"semantic_content\": {\"content\": \"An open-source project using SQLite for storage, "
+    },
+    {
+      "llm_answer": "Project profile for Artificial Memory has been stored in memory with ID 1."
+    },
+    {
+      "tool_chosen": null,
+      "arguments": {}
+    },
+    {
+      "tool_result_head": "tool call failed: ValidationError: 1 validation error for CallToolRequestParams\nname\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further informat"
+    },
+    {
+      "tool_chosen": "memory_recall",
+      "arguments": {
+        "query": "what does it use?",
+        "topic": "Artificial Memory project"
+      }
+    },
+    {
+      "tool_result_head": "{\"query\": \"what does it use?\", \"level\": 2, \"memories_retrieved\": 0, \"tokens\": 0, \"memories\": [], \"context_ir\": {\"query\": \"what does it use?\", \"budget\": {\"high\": 2000, \"medium\": 1400, \"low\": 600}, \"par"
+    },
+    {
+      "tool_chosen": null,
+      "arguments": {}
+    },
+    {
+      "tool_result_head": "tool call failed: ValidationError: 1 validation error for CallToolRequestParams\nname\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further informat"
+    },
+    {
+      "llm_answer": "[tool memory_recall executed, result head]: {\"query\": \"what does it use?\", \"level\": 2, \"memories_retrieved\": 0, \"tokens\": 0, \"memories\": [], \"context_ir\": {\"query\": \"what does it use?\", \"budget\": {\"high\": 2000, \"medium\": 1400, \"low\": 600}, \"parts\": [], \"stats\": {\"raw_tokens\": 0, \"effective_tokens\": 0, \"compression_ratio\": 0.0, \"parts_count\": 0, \"selected_parts\": 0, \"tier_distribution\": {}, \"priority_distribution\": {}, \"truncated_parts\": 0, \"budget_allocation\": {\"high\": 2000, \"medium\": 1400, \"low\": 600}}, \"provenance\": {\"parts_provenance\": [], \"total_memories_considered\": 0, \"total_memories_selected\": 0, \"expansion_decisions\": []}, \"temp\n\n[tool None executed, result head]: tool call failed: ValidationError: 1 validation error for CallToolRequestParams\nname\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type\n\n[tool memory_recall executed, result head]: {\"query\": \"what does it use?\", \"level\": 2, \"memories_retrieved\": 0, \"tokens\": 0, \"memories\": [], \"context_ir\": {\"query\": \"what does it use?\", \"budget\": {\"high\": 2000, \"medium\": 1400, \"low\": 600}, \"parts\": [], \"stats\": {\"raw_tokens\": 0, \"effective_tokens\": 0, \"compression_ratio\": 0.0, \"parts_count\": 0, \"selected_parts\": 0, \"tier_distribution\": {}, \"priority_distribution\": {}, \"truncated_parts\": 0, \"budget_allocation\": {\"high\": 2000, \"medium\": 1400, \"low\": 600}}, \"provenance\": {\"parts_provenance\": [], \"total_memories_considered\": 0, \"total_memories_selected\": 0, \"expansion_decisions\": []}, \"temp\n\n[tool None executed, result head]: tool call failed: ValidationError: 1 validation error for CallToolRequestParams\nname\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type\n\n[tool memory_recall executed, result head]: {\"query\": \"what does it use?\", \"level\": 2, \"memories_retrieved\": 0, \"tokens\": 0, \"memories\": [], \"context_ir\": {\"query\": \"what does it use?\", \"budget\": {\"high\": 2000, \"medium\": 1400, \"low\": 600}, \"parts\": [], \"stats\": {\"raw_tokens\": 0, \"effective_tokens\": 0, \"compression_ratio\": 0.0, \"parts_count\": 0, \"selected_parts\": 0, \"tier_distribution\": {}, \"priority_distribution\": {}, \"truncated_parts\": 0, \"budget_allocation\": {\"high\": 2000, \"medium\": 1400, \"low\": 600}}, \"provenance\": {\"parts_provenance\": [], \"total_memories_considered\": 0, \"total_memories_selected\": 0, \"expansion_decisions\":"
+    },
+    {
+      "llm_answer": "Okay, let's see. The user is asking where the information about the Artificial Memory project came from and wants to see the source.\n\nFirst, I need to check what tools are available. The user previously asked about the Artificial Memory project and what it uses. The memory_recall tool was tried but returned 0 memories. Then they tried to get the source.\n\nThe user now says, \"Where did that information come from? Show the source.\" So they want to know the provenance of the information that was recalled. But in the previous attempts, memory_recall returned 0 memories, so there's no information to trace.\n\nWait, the error messages show that the tool calls for memory_recall were failing because the input was None. But the user is now asking for the source. Maybe they want to trace the memory that was retrieved, but since there were no memories retrieved (memories_retrieved: 0), there's nothing to trace.\n\nThe available tools include memory_trace, which traces a memory back to its source. But since there are no memories retrieved, memory_trace can't be used here. The user might be confused because the previous recall didn't find any memories.\n\nWait, the user's question is about where the information came from. But in the previous interaction, the system tried to recall but found 0 memories. So there's no information stored under the topic \"Artificial Memory project\" with the query \"what does it use?\".\n\nSo the answer should be that there's no memory for that topic, hence no source. But the user might have intended to refer to a different topic. The topic rule says to use the project name exactly as the user stated. The user said \"Artificial Memory project\", so the topic is \"Artificial Memory project\".\n\nWait, the memory_recall was called with topic \"Artificial Memory project\" and query \"what does it use?\" but it returned 0 memories. So the answer is that there's no information stored for that topic.\n\nBut the user is asking where the information came from, implying that there was some information. However, the system's response shows that no memories were retrieved. So the answer is that there's no memory for that topic, hence no source.\n\nAlternatively, maybe the user made a typo in the topic name. The topic rule says to use the project name exactly as the user stated. The user said \"Artificial Memory project\", so the topic is \"Artificial Memory project\".\n\nBut the memory_recall tool returned 0 memories. So the answer is that there's no information stored for that topic.\n\nWait, the user's current question is \"Where did that information come from? Show the source.\" But \"that information\" refers to the previous attempt where the system tried to recall but found nothing. So the answer is that there's no information stored, hence no source.\n\nSo the response should be a short answer saying that there's no memory for the Artificial Memory project topic.\n\nBut the user might have intended to ask about a different project. However, the instructions say to use the topic exactly as the user stated. So the answer is that no memories were found for the topic \"Artificial Memory project\".\n\nTherefore, the answer is: \"No memories found for the 'Artificial Memory project' topic. There's no information stored about what it uses.\"\n\nBut the user wants to see the source. Since there's no memory, there's no source.\n\nWait, the tool memory_trace requires a memory_id, but since there are no memories, we can't trace. So the answer is that there's no memory, hence no source.\n\nSo the answer should be: \"No information stored for the 'Artificial Memory project' topic. The system has no records of what it uses.\"\n\nBut the user might have meant a different project name. However, the topic rule says to use exactly as stated. So the answer is as above.\n\nI think the correct response here is to state that"
+    },
+    {
+      "llm_answer": "No memory entries found for the 'Artificial Memory project' topic. There are no saved records of what it uses."
+    }
+  ]
+}
