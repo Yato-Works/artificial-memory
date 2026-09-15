@@ -97,11 +97,18 @@ class PostgresMemoryStore:
     def _init_db(self) -> None:
         """Initialize database schema if needed."""
         with self._pool.connection() as conn:
-            # Check if tables exist
             cursor = conn.execute(
-                "SELECT EXISTS (SELECT 1 FROM information_schema.tables WHERE table_name = 'projects')"
+                "SELECT EXISTS (SELECT 1 FROM information_schema.tables WHERE table_name = 'projects') AS exists"
             )
-            if not cursor.fetchone()[0]:
+            row = cursor.fetchone()
+            if not row:
+                tables_exist = False
+            elif isinstance(row, dict):
+                tables_exist = bool(row.get("exists", next(iter(row.values())) if row else False))
+            else:
+                tables_exist = bool(row[0])
+
+            if not tables_exist:
                 self._apply_schema()
 
             # Register pgvector adapter
