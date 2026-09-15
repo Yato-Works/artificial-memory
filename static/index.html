@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artificial Memory / Context Runtime</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f5; color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        header { background: #1a1a2e; color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+        h1 { margin: 0; font-size: 1.5rem; }
+        .subtitle { opacity: 0.8; font-size: 0.9rem; margin-top: 5px; }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .card { background: white; border-radius: 8px; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .card h3 { margin-bottom: 15px; color: #1a1a2e; border-bottom: 2px solid #1a1a2e; padding-bottom: 10px; }
+        
+        .btn { background: #1a1a2e; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-size: 0.9rem; margin: 5px; transition: background 0.2s; }
+        .btn:hover { background: #16213e; }
+        .btn.secondary { background: #6c757d; }
+        .btn.secondary:hover { background: #5a6268; }
+        .btn.success { background: #28a745; }
+        .btn.success:hover { background: #218838; }
+        
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: 500; }
+        input, select, textarea { width: 100%; padding: 8px 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 0.9rem; }
+        textarea { min-height: 100px; resize: vertical; }
+        
+        .result { background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 4px; padding: 15px; margin-top: 15px; max-height: 400px; overflow: auto; font-family: monospace; font-size: 0.85rem; white-space: pre-wrap; }
+        .error { background: #f8d7da; color: #721c24; border-color: #f5c6cb; }
+        .success { background: #d4edda; color: #155724; border-color: #c3e6cb; }
+        
+        .tabs { display: flex; border-bottom: 2px solid #e9ecef; margin-bottom: 20px; }
+        .tab { padding: 10px 20px; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; }
+        .tab.active { border-bottom-color: #1a1a2e; color: #1a1a2e; font-weight: 500; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        
+        .log-entry { padding: 5px 10px; font-family: monospace; font-size: 0.8rem; border-bottom: 1px solid #eee; }
+        .log-entry:last-child { border-bottom: none; }
+        .log-timestamp { color: #6c757d; }
+        .log-type { font-weight: bold; color: #1a1a2e; }
+        
+        .memory-item { padding: 10px; border-bottom: 1px solid #eee; }
+        .memory-type { font-size: 0.75rem; background: #1a1a2e; color: white; padding: 2px 6px; border-radius: 3px; margin-right: 8px; }
+        .memory-resolution { font-size: 0.7rem; background: #6c757d; color: white; padding: 2px 4px; border-radius: 3px; }
+        
+        .confidence-bar { height: 8px; background: #e9ecef; border-radius: 4px; overflow: hidden; margin: 5px 0; }
+        .confidence-fill { height: 100%; background: linear-gradient(90deg, #dc3545, #ffc107, #28a745); transition: width 0.3s; }
+        
+        .websocket-log { max-height: 300px; overflow-y: auto; background: #1a1a2e; color: #0f0; padding: 10px; border-radius: 4px; font-family: monospace; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧠 Artificial Memory / Context Runtime</h1>
+            <div class="subtitle">Cognitive Runtime for LLMs - v1.0 API Dashboard</div>
+        </header>
+
+        <div class="tabs">
+            <div class="tab active" onclick="showTab('conversation')">💬 Conversation</div>
+            <div class="tab" onclick="showTab('memory')">🧠 Memory</div>
+            <div class="tab" onclick="showTab('recall')">🔍 Recall</div>
+            <div class="tab" onclick="showTab('context')">📋 Context</div>
+            <div class="tab" onclick="showTab('consolidation')">📦 Consolidation</div>
+            <div class="tab" onclick="showTab('associations')">🔗 Associations</div>
+            <div class="tab" onclick="showTab('confidence')">📊 Confidence</div>
+            <div class="tab" onclick="showTab('temporal')">⏰ Temporal</div>
+            <div class="tab" onclick="showTab('style')">🎨 Style</div>
+            <div class="tab" onclick="showTab('human')">🤖 Human Recall</div>
+            <div class="tab" onclick="showTab('metrics')">📈 Metrics</div>
+            <div class="tab" onclick="showTab('websocket')">🔌 WebSocket</div>
+        </div>
+
+        <!-- Conversation Tab -->
+        <div id="tab-conversation" class="tab-content active">
+            <div class="grid">
+                <div class="card">
+                    <h3>Start Conversation</h3>
+                    <div class="form-group">
+                        <label>Topic Path</label>
+                        <input type="text" id="conv-topic" placeholder="Projects/MyProject/Architecture" value="Projects/Test/Architecture">
+                    </div>
+                    <div class="form-group">
+                        <label>Project</label>
+                        <input type="text" id="conv-project" placeholder="default" value="default">
+                    </div>
+                    <div class="form-group">
+                        <label>Title</label>
+                        <input type="text" id="conv-title" placeholder="Optional title">
+                    </div>
+                    <button class="btn" onclick="startConversation()">Start Conversation</button>
+                    <div id="conv-result" class="result" style="display:none;"></div>
+                </div>
+                
+                <div class="card">
+                    <h3>Add Message</h3>
+                    <div class="form-group">
+                        <label>Role</label>
+                        <select id="msg-role">
+                            <option value="user">👤 User</option>
+                            <option value="assistant">🤖 Assistant</option>
+                            <option value="system">⚙️ System</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Content</label>
+                        <textarea id="msg-content" placeholder="Message content..."></textarea>
+                    </div>
+                    <button class="btn" onclick="addMessage()">Add Message</button>
+                    <div id="msg-result" class="result" style="display:none;"></div>
+                </div>
+                
+                <div class="card">
+                    <h3>End Conversation</h3>
+                    <button class="btn success" onclick="endConversation()">End & Compile Memories</button>
+                    <div id="end-result" class="result" style="display:none;"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Memory Tab -->
+        <div id="tab-memory" class="tab-content">
+            <div class="card">
+                <h3>Current Memories</h3>
+                <div class="form-group">
+                    <label>Topic Path</label>
+                    <input type="text" id="mem-topic" placeholder="Projects/Test/Architecture" value="Projects/Test/Architecture">
+                </div>
+                <button class="btn" onclick="loadMemory()">Load Memories</button>
+                <div id="mem-result" class="result" style="display:none;"></div>
+            </div>
+            
+            <div class="card">
+                <h3>Expand Memory Resolution</h3>
+                <div class="form-group">
+                    <label>Memory ID</label>
+                    <input type="number" id="expand-id" placeholder="1">
+                </div>
+                <div class="form-group">
+                    <label>Target Resolution</label>
+                    <select id="expand-res">
+                        <option value="0">RAW (0)</option>
+                        <option value="1">LIGHT (1)</option>
+                        <option value="2">EPISODE (2)</option>
+                        <option value="3">SEMANTIC (3)</option>
+                        <option value="4">LONG_TERM (4)</option>
+                        <option value="5">DEEP_LONG_TERM (5)</option>
+                    </select>
+                </div>
+                <button class="btn" onclick="expandMemory()">Expand</button>
+                <div id="expand-result" class="result" style="display:none;"></div>
+            </div>
+        </div>
+
+        <!-- Recall Tab -->
+        <div id="tab-recall" class="tab-content">
+            <div class="card">
+                <h3>Standard Recall</h3>
+                <div class="form-group">
+                    <label>Query</label>
+                    <input type="text" id="recall-query" placeholder="architecture decision">
+                </div>
+                <div class="form-group">
+                    <label>Topic Path</label>
+                    <input type="text" id="recall-topic" placeholder="Projects/Test/Architecture" value="Projects/Test/Architecture">
+                </div>
+                <div class="form-group">
+                    <label>Recall Level</label>
+                    <select id="recall-level">
+                        <option value="0">0 - Current Only</option>
+                        <option value="1">1 - Long-term Summary</option>
+                        <option value="2" selected>2 - Episode</option>
+                        <option value="3">3 - Light Compression</option>
+                        <option value="4">4 - Raw</option>
+                    </select>
+                </div>
+                <button class="btn" onclick="doRecall()">Recall</button>
+                <div id="recall-result" class="result" style="display:none;"></div>
+            </div>
+        </div>
+
+        <!-- Context Tab -->
+        <div id="tab-context" class="tab-content">
+            <div class="card">
+                <h3>Build Context</h3>
+                <div class="form-group">
+                    <label>Query</label>
+                    <input type="text" id="ctx-query" placeholder="current architecture">
+                </div>
+                <div class="form-group">
+                    <label>Topic Path</label>
+                    <input type="text" id="ctx-topic" placeholder="Projects/Test/Architecture" value="Projects/Test/Architecture">
+                </div>
+                <div class="form-group">
+                    <label>Max Tokens</label>
+                    <input type="number" id="ctx-tokens" value="8000">
+                </div>
+                <button class="btn" onclick="buildContext()">Build Context</button>
+                <div id="ctx-result" class="result" style="display:none;"></div>
+            </div>
+        </div>
+
+        <!-- Consolidation Tab -->
+        <div id="tab-consolidation" class="tab-content">
+            <div class="grid">
+                <div class="card">
+                    <h3>Consolidation Status</h3>
+                    <button class="btn" onclick="getConsolidationStatus()">Refresh Status</button>
+                    <div id="consol-status" class="result" style="display:none;"></div>
+                </div>
+                <div class="card">
+                    <h3>Run Consolidation</h3>
+                    <div class="form-group">
+                        <label>Topic Path (optional)</label>
+                        <input type="text" id="consol-topic" placeholder="Projects/Test/Architecture">
+                    </div>
+                    <button class="btn" onclick="runConsolidation()">Run Consolidation</button>
+                    <div id="consol-result" class="result" style="display:none;"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Associations Tab -->
+        <div id="tab-associations" class="tab-content">
+            <div class="card">
+                <h3>Analyze & Create Associations</h3>
+                <div class="form-group">
+                    <label>Topic Path</label>
+                    <input type="text" id="assoc-topic" placeholder="Projects/Test/Architecture" value="Projects/Test/Architecture">
+                </div>
+                <button class="btn" onclick="analyzeAssociations()">Analyze & Create</button>
+                <div id="assoc-create-result" class="result" style="display:none;"></div>
+            </div>
+            
+            <div class="card">
+                <h3>View Associations</h3>
+                <div class="form-group">
+                    <label>Memory ID</label>
+                    <input type="number" id="assoc-mem-id" placeholder="1">
+                </div>
+                <div class="form-group">
+                    <label>Min Strength</label>
+                    <input type="number" id="assoc-min-strength" value="0.3" step="0.1">
+                </div>
+                <div class="form-group">
+                    <label>Depth</label>
+                    <input type="number" id="assoc-depth" value="2" min="1" max="5">
+                </div>
+                <button class="btn" onclick="viewAssociations()">View Associations</button>
+                <div id="assoc-view-result" class="result" style="display:none;"></div>
+            </div>
+            
+            <div class="card">
+                <h3>Find Association Path</h3>
+                <div class="form-group">
+                    <label>Source Memory ID</label>
+                    <input type="number" id="path-src" placeholder="1">
+                </div>
+                <div class="form-group">
+                    <label>Target Memory ID</label>
+                    <input type="number" id="path-dst" placeholder="2">
+                </div>
+                <div class="form-group">
+                    <label>Max Depth</label>
+                    <input type="number" id="path-depth" value="3" min="1" max="10">
+                </div>
+                <button class="btn" onclick="findPath()">Find Path</button>
+                <div id="path-result" class="result" style="display:none;"></div>
+            </div>
+        </div>
+
+        <!-- Confidence Tab -->
+        <div id="tab-confidence" class="tab-content">
+            <div class="grid">
+                <div class="card">
+                    <h3>Query Confidence</h3>
+                    <div class="form-group">
+                        <label>Query</label>
+                        <input type="text" id="conf-query" placeholder="architecture decision">
+                    </div>
+                    <div class="form-group">
+                        <label>Topic Path</label>
+                        <input type="text" id="conf-topic" placeholder="Projects/Test/Architecture" value="Projects/Test/Architecture">
+                    </div>
+                    <div class="form-group">
+                        <label>Recall Level</label>
+                        <select id="conf-level">
+                            <option value="0">0 - Current Only</option>
+                            <option value="1">1 - Long-term Summary</option>
+                            <option value="2" selected>2 - Episode</option>
+                            <option value="3">3 - Light Compression</option>
+                            <option value="4">4 - Raw</option>
+                        </select>
+                    </div>
+                    <button class="btn" onclick="checkConfidence()">Check Confidence</button>
+                    <div id="conf-result" class="result" style="display:none;"></div>
+                </div>
+                
+                <div class="card">
+                    <h3>Memory Confidence</h3>
+                    <div class="form-group">
+                        <label>Memory ID</label>
+                        <input type="number" id="mem-conf-id" placeholder="1">
+                    </div>
+                    <button class="btn" onclick="checkMemConfidence()">Check</button>
+                    <div id="mem-conf-result" class="result" style="display:none;"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Temporal Tab -->
+        <div id="tab-temporal" class="tab-content">
+            <div class="grid">
+                <div class="card">
+                    <h3>Temporal State</h3>
+                    <div class="form-group">
+                        <label>Topic Path</label>
+                        <input type="text" id="temp-topic" placeholder="Projects/Test/Architecture" value="Projects/Test/Architecture">
+                    </div>
+                    <div class="form-group">
+                        <label>Timestamp (ISO, optional)</label>
+                        <input type="text" id="temp-time" placeholder="2026-09-07T12:00:00">
+                    </div>
+                    <label><input type="checkbox" id="temp-archived"> Include Archived</label>
+                    <button class="btn" onclick="getTemporalState()">Get State</button>
+                    <div id="temp-state-result" class="result" style="display:none;"></div>
+                </div>
+                
+                <div class="card">
+                    <h3>Temporal Changes</h3>
+                    <div class="form-group">
+                        <label>Topic Path</label>
+                        <input type="text" id="tempc-topic" placeholder="Projects/Test/Architecture" value="Projects/Test/Architecture">
+                    </div>
+                    <div class="form-group">
+                        <label>Start (ISO)</label>
+                        <input type="text" id="tempc-start" placeholder="2026-09-07T00:00:00">
+                    </div>
+                    <div class="form-group">
+                        <label>End (ISO)</label>
+                        <input type="text" id="tempc-end" placeholder="2026-09-07T23:59:59">
+                    </div>
+                    <button class="btn" onclick="getTemporalChanges()">Get Changes</button>
+                    <div id="tempc-result" class="result" style="display:none;"></div>
+                </div>
+                
+                <div class="card">
+                    <h3>Temporal Timeline</h3>
+                    <div class="form-group">
+                        <label>Topic Path</label>
+                        <input type="text" id="temptl-topic" placeholder="Projects/Test/Architecture" value="Projects/Test/Architecture">
+                    </div>
+                    <button class="btn" onclick="getTemporalTimeline()">Get Timeline</button>
+                    <div id="temptl-result" class="result" style="display:none;"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Style Tab -->
+        <div id="tab-style" class="tab-content">
+            <div class="grid">
+                <div class="card">
+                    <h3>Style Profile</h3>
+                    <div class="form-group">
+                        <label>Topic Path (optional)</label>
+                        <input type="text" id="style-topic" placeholder="Projects/Test/Architecture">
+                    </div>
+                    <button class="btn" onclick="getStyleProfile()">Get Profile</button>
+                    <div id="style-result" class="result" style="display:none;"></div>
+                </div>
+                
+                <div class="card">
+                    <h3>Reconstruct with Style</h3>
+                    <div class="form-group">
+                        <label>Memory ID</label>
+                        <input type="number" id="style-mem-id" placeholder="1">
+                    </div>
+                    <div class="form-group">
+                        <label>Target Style</label>
+                        <select id="style-target">
+                            <option value="combined">Combined</option>
+                            <option value="user">User</option>
+                            <option value="assistant">Assistant</option>
+                        </select>
+                    </div>
+                    <button class="btn" onclick="reconstructStyle()">Reconstruct</button>
+                    <div id="style-recon-result" class="result" style="display:none;"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Human Recall Tab -->
+        <div id="tab-human" class="tab-content">
+            <div class="card">
+                <h3>Human-like Recall</h3>
+                <div class="form-group">
+                    <label>Query</label>
+                    <input type="text" id="human-query" placeholder="architecture decision">
+                </div>
+                <div class="form-group">
+                    <label>Topic Path</label>
+                    <input type="text" id="human-topic" placeholder="Projects/Test/Architecture" value="Projects/Test/Architecture">
+                </div>
+                <div class="form-group">
+                    <label>Max Tokens</label>
+                    <input type="number" id="human-tokens" value="4000">
+                </div>
+                <button class="btn success" onclick="humanRecall()">🤖 Human Recall</button>
+                <div id="human-result" class="result" style="display:none;"></div>
+            </div>
+            
+            <div class="card">
+                <h3>Recall Explanation</h3>
+                <div class="form-group">
+                    <label>Query</label>
+                    <input type="text" id="explain-query" placeholder="architecture decision">
+                </div>
+                <div class="form-group">
+                    <label>Topic Path</label>
+                    <input type="text" id="explain-topic" placeholder="Projects/Test/Architecture" value="Projects/Test/Architecture">
+                </div>
+                <button class="btn" onclick="explainRecall()">Explain</button>
+                <div id="explain-result" class="result" style="display:none;"></div>
+            </div>
+        </div>
+
+        <!-- Metrics Tab -->
+        <div id="tab-metrics" class="tab-content">
+            <div class="card">
+                <h3>System Metrics</h3>
+                <button class="btn" onclick="loadMetrics()">Load Metrics</button>
+                <button class="btn secondary" onclick="exportMetrics()">Export All</button>
+                <div id="metrics-result" class="result" style="display:none;"></div>
+            </div>
+        </div>
+
+        <!-- WebSocket Tab -->
+        <div id="tab-websocket" class="tab-content">
+            <div class="card">
+                <h3>WebSocket Connection</h3>
+                <button class="btn" onclick="connectWS()">Connect</button>
+                <button class="btn secondary" onclick="disconnectWS()">Disconnect</button>
+                <div class="form-group">
+                    <label>Send Message</label>
+                    <input type="text" id="ws-message" placeholder='{"type": "test", "data": "hello"}'>
+                </div>
+                <button class="btn" onclick="sendWS()">Send</button>
+                <div class="websocket-log" id="ws-log"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = '';
+        let ws = null;
+
+        function showTab(tabName) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.tab').forEach(el => el.classList.remove('active'));
+            document.getElementById('tab-' + tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        async function api(path, options = {}) {
+            const res = await fetch(API_BASE + path, {
+                method: options.method || 'GET',
+                headers: { 'Content-Type': 'application/json', ...options.headers },
+                body: options.body ? JSON.stringify(options.body) : undefined
+            });
+            const data = await res.json();
+            if (!res.ok) throw new Error(data.detail || 'API error');
+            return data;
+        }
+
+        function showResult(id, data, isError = false) {
+            const el = document.getElementById(id);
+            el.style.display = 'block';
+            el.className = 'result' + (isError ? ' error' : '');
+            el.textContent = JSON.stringify(data, null, 2);
+        }
+
+        function getVal(id) { return document.getElementById(id).value; }
+        function getNum(id) { return parseInt(getVal(id)); }
+
+        // Conversation
+        async function startConversation() {
+            try {
+                const data = await api('/conversations/start', {
+                    method: 'POST',
+                    body: { topic_path: getVal('conv-topic'), project: getVal('conv-project'), title: getVal('conv-title') }
+                });
+                showResult('conv-result', data);
+                loadMemory();
+            } catch (e) { showResult('conv-result', {error: e.message}, true); }
+        }
+
+        async function addMessage() {
+            try {
+                const data = await api('/conversations/1/messages', {
+                    method: 'POST',
+                    body: { role: getVal('msg-role'), content: getVal('msg-content') }
+                });
+                showResult('msg-result', data);
+                loadMemory();
+            } catch (e) { showResult('msg-result', {error: e.message}, true); }
+        }
+
+        async function endConversation() {
+            try {
+                const data = await api('/conversations/1/end', { method: 'POST' });
+                showResult('end-result', data);
+                loadMemory();
+            } catch (e) { showResult('end-result', {error: e.message}, true); }
+        }
+
+        // Memory
+        async function loadMemory() {
+            try {
+                const data = await api('/memory?topic_path=' + encodeURIComponent(getVal('mem-topic')));
+                showResult('mem-result', data);
+            } catch (e) { showResult('mem-result', {error: e.message}, true); }
+        }
+
+        async function expandMemory() {
+            try {
+                const data = await api('/memory/' + getNum('expand-id') + '/expand', {
+                    method: 'POST',
+                    body: { target_resolution: getNum('expand-res') }
+                });
+                showResult('expand-result', data);
+            } catch (e) { showResult('expand-result', {error: e.message}, true); }
+        }
+
+        // Recall
+        async function doRecall() {
+            try {
+                const data = await api('/recall', {
+                    method: 'POST',
+                    body: { query: getVal('recall-query'), topic_path: getVal('recall-topic'), level: getNum('recall-level') }
+                });
+                showResult('recall-result', data);
+            } catch (e) { showResult('recall-result', {error: e.message}, true); }
+        }
+
+        // Context
+        async function buildContext() {
+            try {
+                const data = await api('/context', {
+                    method: 'POST',
+                    body: { query: getVal('ctx-query'), topic_path: getVal('ctx-topic'), max_tokens: getNum('ctx-tokens') }
+                });
+                showResult('ctx-result', data);
+            } catch (e) { showResult('ctx-result', {error: e.message}, true); }
+        }
+
+        // Consolidation
+        async function getConsolidationStatus() {
+            try {
+                const data = await api('/consolidation/status');
+                showResult('consol-status', data);
+            } catch (e) { showResult('consol-status', {error: e.message}, true); }
+        }
+
+        async function runConsolidation() {
+            try {
+                const topic = getVal('consol-topic');
+                const data = await api('/consolidate', {
+                    method: 'POST',
+                    body: topic ? { topic_path: topic } : {}
+                });
+                showResult('consol-result', data);
+            } catch (e) { showResult('consol-result', {error: e.message}, true); }
+        }
+
+        // Associations
+        async function analyzeAssociations() {
+            try {
+                const data = await api('/associations/analyze', {
+                    method: 'POST',
+                    body: { topic_path: getVal('assoc-topic') }
+                });
+                showResult('assoc-create-result', data);
+            } catch (e) { showResult('assoc-create-result', {error: e.message}, true); }
+        }
+
+        async function viewAssociations() {
+            try {
+                const data = await api('/associations/' + getNum('assoc-mem-id') + 
+                    '?min_strength=' + getVal('assoc-min-strength') + '&depth=' + getNum('assoc-depth'));
+                showResult('assoc-view-result', data);
+            } catch (e) { showResult('assoc-view-result', {error: e.message}, true); }
+        }
+
+        async function findPath() {
+            try {
+                const data = await api('/associations/path/' + getNum('path-src') + '/' + getNum('path-dst') +
+                    '?max_depth=' + getNum('path-depth'));
+                showResult('path-result', data);
+            } catch (e) { showResult('path-result', {error: e.message}, true); }
+        }
+
+        // Confidence
+        async function checkConfidence() {
+            try {
+                const data = await api('/confidence', {
+                    method: 'POST',
+                    body: { query: getVal('conf-query'), topic_path: getVal('conf-topic'), level: getNum('conf-level') }
+                });
+                showResult('conf-result', data);
+            } catch (e) { showResult('conf-result', {error: e.message}, true); }
+        }
+
+        async function checkMemConfidence() {
+            try {
+                const data = await api('/confidence/memory/' + getNum('mem-conf-id'));
+                showResult('mem-conf-result', data);
+            } catch (e) { showResult('mem-conf-result', {error: e.message}, true); }
+        }
+
+        // Temporal
+        async function getTemporalState() {
+            try {
+                const data = await api('/temporal/state', {
+                    method: 'POST',
+                    body: { topic_path: getVal('temp-topic'), timestamp: getVal('temp-time') || undefined, include_archived: document.getElementById('temp-archived').checked }
+                });
+                showResult('temp-state-result', data);
+            } catch (e) { showResult('temp-state-result', {error: e.message}, true); }
+        }
+
+        async function getTemporalChanges() {
+            try {
+                const data = await api('/temporal/changes', {
+                    method: 'POST',
+                    body: { topic_path: getVal('tempc-topic'), start: getVal('tempc-start'), end: getVal('tempc-end') }
+                });
+                showResult('tempc-result', data);
+            } catch (e) { showResult('tempc-result', {error: e.message}, true); }
+        }
+
+        async function getTemporalTimeline() {
+            try {
+                const data = await api('/temporal/timeline', {
+                    method: 'POST',
+                    body: { topic_path: getVal('temptl-topic') }
+                });
+                showResult('temptl-result', data);
+            } catch (e) { showResult('temptl-result', {error: e.message}, true); }
+        }
+
+        // Style
+        async function getStyleProfile() {
+            try {
+                const topic = getVal('style-topic');
+                const data = await api('/style/profile', {
+                    method: 'POST',
+                    body: topic ? { topic_path: topic } : {}
+                });
+                showResult('style-result', data);
+            } catch (e) { showResult('style-result', {error: e.message}, true); }
+        }
+
+        async function reconstructStyle() {
+            try {
+                const data = await api('/style/reconstruct', {
+                    method: 'POST',
+                    body: { memory_id: getNum('style-mem-id'), target_style: getVal('style-target') }
+                });
+                showResult('style-recon-result', data);
+            } catch (e) { showResult('style-recon-result', {error: e.message}, true); }
+        }
+
+        // Human Recall
+        async function humanRecall() {
+            try {
+                const data = await api('/recall/human', {
+                    method: 'POST',
+                    body: { query: getVal('human-query'), topic_path: getVal('human-topic'), max_tokens: parseInt(getVal('human-tokens')) }
+                });
+                showResult('human-result', data);
+            } catch (e) { showResult('human-result', {error: e.message}, true); }
+        }
+
+        async function explainRecall() {
+            try {
+                const data = await api('/recall/explain?query=' + encodeURIComponent(getVal('explain-query')) + '&topic_path=' + encodeURIComponent(getVal('explain-topic')));
+                showResult('explain-result', data);
+            } catch (e) { showResult('explain-result', {error: e.message}, true); }
+        }
+
+        // Metrics
+        async function loadMetrics() {
+            try {
+                const data = await api('/metrics');
+                showResult('metrics-result', data);
+            } catch (e) { showResult('metrics-result', {error: e.message}, true); }
+        }
+
+        async function exportMetrics() {
+            try {
+                const data = await api('/metrics/export');
+                showResult('metrics-result', data);
+            } catch (e) { showResult('metrics-result', {error: e.message}, true); }
+        }
+
+        // WebSocket
+        function connectWS() {
+            if (ws) ws.close();
+            ws = new WebSocket('ws://' + location.host + '/ws');
+            ws.onopen = () => logWS('Connected');
+            ws.onmessage = (e) => logWS('Received: ' + e.data);
+            ws.onclose = () => logWS('Disconnected');
+            ws.onerror = (e) => logWS('Error: ' + e);
+        }
+
+        function disconnectWS() { if (ws) ws.close(); ws = null; }
+        
+        function sendWS() {
+            if (ws && ws.readyState === WebSocket.OPEN) {
+                try {
+                    const msg = JSON.parse(getVal('ws-message'));
+                    ws.send(JSON.stringify(msg));
+                    logWS('Sent: ' + JSON.stringify(msg));
+                } catch (e) { logWS('Invalid JSON: ' + e.message); }
+            }
+        }
+
+        function logWS(msg) {
+            const el = document.getElementById('ws-log');
+            const entry = document.createElement('div');
+            entry.className = 'log-entry';
+            entry.innerHTML = '<span class="log-timestamp">[' + new Date().toLocaleTimeString() + ']</span> ' + msg;
+            el.appendChild(entry);
+            el.scrollTop = el.scrollHeight;
+        }
+
+        // Load initial data
+        loadMemory();
+        getConsolidationStatus();
+    </script>
+</body>
+</html>

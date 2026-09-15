@@ -1,0 +1,159 @@
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: memorystores.memory.artificialmemory.dev
+  labels:
+    app.kubernetes.io/name: artificial-memory-operator
+    app.kubernetes.io/version: "0.1.0"
+spec:
+  group: memory.artificialmemory.dev
+  versions:
+    - name: v1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            spec:
+              type: object
+              required:
+                - backend
+              properties:
+                backend:
+                  type: string
+                  enum: ["postgres", "sqlite"]
+                  default: "postgres"
+                  description: Storage backend type
+                postgres:
+                  type: object
+                  required:
+                    - host
+                    - port
+                    - database
+                  properties:
+                    host:
+                      type: string
+                    port:
+                      type: integer
+                      default: 5432
+                    database:
+                      type: string
+                    secretRef:
+                      type: string
+                      description: Secret containing PostgreSQL credentials
+                    sslMode:
+                      type: string
+                      enum: ["disable", "require", "verify-ca", "verify-full"]
+                      default: "require"
+                    poolSize:
+                      type: integer
+                      minimum: 1
+                      maximum: 100
+                      default: 10
+                    maxOverflow:
+                      type: integer
+                      minimum: 0
+                      maximum: 50
+                      default: 5
+                sqlite:
+                  type: object
+                  properties:
+                    path:
+                      type: string
+                      default: "/data/memory.db"
+                resources:
+                  type: object
+                  properties:
+                    requests:
+                      type: object
+                      properties:
+                        memory:
+                          type: string
+                          default: "256Mi"
+                        cpu:
+                          type: string
+                          default: "100m"
+                    limits:
+                      type: object
+                      properties:
+                        memory:
+                          type: string
+                          default: "1Gi"
+                        cpu:
+                          type: string
+                          default: "500m"
+                backup:
+                  type: object
+                  properties:
+                    enabled:
+                      type: boolean
+                      default: true
+                    schedule:
+                      type: string
+                      default: "0 2 * * *"
+                      description: Cron schedule for backups
+                    retentionDays:
+                      type: integer
+                      default: 30
+                    storageClass:
+                      type: string
+                      description: Storage class for backup PVC
+            status:
+              type: object
+              properties:
+                phase:
+                  type: string
+                  enum: ["Pending", "Ready", "Degraded", "Failed"]
+                conditions:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      type:
+                        type: string
+                      status:
+                        type: string
+                        enum: ["True", "False", "Unknown"]
+                      reason:
+                        type: string
+                      message:
+                        type: string
+                      lastTransitionTime:
+                        type: string
+                        format: date-time
+                connectionInfo:
+                  type: object
+                  properties:
+                    host:
+                      type: string
+                    port:
+                      type: integer
+                    database:
+                      type: string
+                lastBackupTime:
+                  type: string
+                  format: date-time
+                size:
+                  type: string
+                  description: Database size
+  scope: Namespaced
+  names:
+    plural: memorystores
+    singular: memorystore
+    kind: MemoryStore
+    shortNames:
+      - ms
+  additionalPrinterColumns:
+    - name: Phase
+      type: string
+      jsonPath: .status.phase
+    - name: Backend
+      type: string
+      jsonPath: .spec.backend
+    - name: Host
+      type: string
+      jsonPath: .status.connectionInfo.host
+    - name: Age
+      type: date
+      jsonPath: .metadata.creationTimestamp

@@ -1,0 +1,130 @@
+[project]
+name = "artificial-memory"
+version = "0.1.0"
+description = "Artificial Memory / Context Runtime - Cognitive Runtime for LLMs"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [
+    {name = "Artificial Memory Project", email = "artificial-memory@example.com"}
+]
+maintainers = [
+    {name = "Artificial Memory Project", email = "artificial-memory@example.com"}
+]
+keywords = [
+    "memory",
+    "cognitive",
+    "llm",
+    "ai",
+    "rag",
+    "context",
+    "vector-search",
+    "temporal",
+    "federated",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "sqlite-utils>=3.37",
+    "tiktoken>=0.7",
+    "pyyaml>=6.0",
+    "click>=8.1",
+    "rich>=13.7",
+    "pydantic>=2.7",
+    "pydantic-settings>=2.3",
+    "fastapi>=0.110",
+    "uvicorn>=0.29",
+    "websockets>=12.0",
+    "httpx>=0.27",
+    "python-multipart>=0.0.9",
+    "jinja2>=3.1",
+    "aiofiles>=24.0",
+    "psycopg[binary]>=3.1",
+    "psycopg-pool>=3.1",
+    "pgvector>=0.2",
+    "numpy>=1.24",
+]
+urls = {Homepage = "https://github.com/artificial-memory/artificial-memory", Repository = "https://github.com/artificial-memory/artificial-memory", Issues = "https://github.com/artificial-memory/artificial-memory/issues", Documentation = "https://artificial-memory.readthedocs.io"}
+
+[project.scripts]
+am = "artificial_memory.cli.main:cli"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.2",
+    "pytest-asyncio>=0.23",
+    "pytest-cov>=5.0",
+    "ruff>=0.4",
+    "mypy>=1.10",
+    "pre-commit>=3.7",
+]
+llm = [
+    "ollama>=0.3",
+    "openai>=1.30",
+]
+vector = [
+    "faiss-cpu>=1.7",
+    "sentence-transformers>=2.2",
+]
+web = [
+    "fastapi>=0.110",
+    "uvicorn>=0.29",
+    "websockets>=12.0",
+    "httpx>=0.27",
+    "python-multipart>=0.0.9",
+    "jinja2>=3.1",
+    "aiofiles>=24.0",
+]
+operator = [
+    "kopf>=1.37",
+    "kubernetes>=30.0",
+    "pyyaml>=6.0",
+]
+mcp = [
+    "mcp>=1.0",
+]
+nli = [
+    "transformers>=4.40",
+    "torch>=2.2",
+]
+
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+select = ["E", "F", "I", "UP", "W"]
+ignore = ["E501"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "W"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+strict = true
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.pre-commit]
+# Pre-commit configuration is in .pre-commit-config.yaml

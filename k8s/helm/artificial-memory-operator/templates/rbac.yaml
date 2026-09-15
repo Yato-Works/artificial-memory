@@ -1,0 +1,81 @@
+{{- if .Values.operator.enabled }}
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: {{ .Values.operator.serviceAccount.name }}
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app.kubernetes.io/name: {{ include "artificial-memory-operator.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+    app.kubernetes.io/component: operator
+---
+{{- if .Values.operator.rbac.create }}
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: {{ .Values.operator.serviceAccount.name }}
+  labels:
+    app.kubernetes.io/name: {{ include "artificial-memory-operator.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+rules:
+  # CRD management
+  - apiGroups: ["apiextensions.k8s.io"]
+    resources: ["customresourcedefinitions"]
+    verbs: ["create", "get", "list", "watch", "update", "patch", "delete"]
+  # ArtificialMemoryCluster
+  - apiGroups: ["memory.artificialmemory.dev"]
+    resources: ["artificialmemoryclusters", "artificialmemoryclusters/status", "artificialmemoryclusters/finalizers"]
+    verbs: ["create", "get", "list", "watch", "update", "patch", "delete"]
+  # MemoryStore
+  - apiGroups: ["memory.artificialmemory.dev"]
+    resources: ["memorystores", "memorystores/status", "memorystores/finalizers"]
+    verbs: ["create", "get", "list", "watch", "update", "patch", "delete"]
+  # MemoryWorker
+  - apiGroups: ["memory.artificialmemory.dev"]
+    resources: ["memoryworkers", "memoryworkers/status", "memoryworkers/finalizers"]
+    verbs: ["create", "get", "list", "watch", "update", "patch", "delete"]
+  # RecallWorker
+  - apiGroups: ["memory.artificialmemory.dev"]
+    resources: ["recallworkers", "recallworkers/status", "recallworkers/finalizers"]
+    verbs: ["create", "get", "list", "watch", "update", "patch", "delete"]
+  # VectorIndex
+  - apiGroups: ["memory.artificialmemory.dev"]
+    resources: ["vectorindexes", "vectorindexes/status", "vectorindexes/finalizers"]
+    verbs: ["create", "get", "list", "watch", "update", "patch", "delete"]
+  # Core resources
+  - apiGroups: [""]
+    resources: ["pods", "services", "configmaps", "secrets", "persistentvolumeclaims", "events"]
+    verbs: ["create", "get", "list", "watch", "update", "patch", "delete"]
+  # Apps resources
+  - apiGroups: ["apps"]
+    resources: ["deployments", "deployments/scale", "replicasets", "statefulsets"]
+    verbs: ["create", "get", "list", "watch", "update", "patch", "delete"]
+  # Autoscaling
+  - apiGroups: ["autoscaling"]
+    resources: ["horizontalpodautoscalers"]
+    verbs: ["create", "get", "list", "watch", "update", "patch", "delete"]
+  # Coordination
+  - apiGroups: ["coordination.k8s.io"]
+    resources: ["leases"]
+    verbs: ["create", "get", "list", "watch", "update", "patch", "delete"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: {{ .Values.operator.serviceAccount.name }}
+  labels:
+    app.kubernetes.io/name: {{ include "artificial-memory-operator.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+subjects:
+  - kind: ServiceAccount
+    name: {{ .Values.operator.serviceAccount.name }}
+    namespace: {{ .Release.Namespace }}
+roleRef:
+  kind: ClusterRole
+  name: {{ .Values.operator.serviceAccount.name }}
+  apiGroup: rbac.authorization.k8s.io
+---
+{{- end }}
+{{- end }}

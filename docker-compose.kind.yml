@@ -1,0 +1,128 @@
+version: '3.8'
+
+# Local development with Kubernetes (kind/k3s)
+# Usage: docker-compose -f docker-compose.kind.yml up -d
+
+services:
+  # kind cluster (runs in Docker)
+  kind:
+    image: kindest/node:v1.29.2
+    container_name: artificial-memory-kind
+    privileged: true
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./k8s:/k8s:ro
+      - ./k8s/crds:/crds:ro
+    command: ["/usr/local/bin/entrypoint", "/sbin/init"]
+    environment:
+      - KIND_EXPERIMENTAL_PROVIDER=podman
+    tmpfs:
+      - /run
+      - /run/lock
+    cgroupns: host
+    network_mode: host
+    restart: unless-stopped
+
+  # Alternative: k3s (lighter weight)
+  # k3s:
+  #   image: rancher/k3s:v1.29.2-k3s1
+  #   container_name: artificial-memory-k3s
+  #   privileged: true
+  #   volumes:
+  #     - /var/run/docker.sock:/var/run/docker.sock
+  #     - ./k8s:/k8s:ro
+  #   command: ["server", "--disable=traefik", "--disable=servicelb"]
+  #   environment:
+  #     - K3S_KUBECONFIG_OUTPUT=/output/kubeconfig.yaml
+  #     - K3S_KUBECONFIG_MODE=666
+  #   tmpfs:
+  #     - /run
+  #     - /run/lock
+  #   network_mode: host
+  #   restart: unless-stopped
+
+  # Operator (runs inside kind/k3s via kubectl)
+  operator:
+    build:
+      context: .
+      dockerfile: k8s/operator/Dockerfile
+    container_name: artificial-memory-operator
+    depends_on:
+      - kind
+    volumes:
+      - ./k8s:/k8s:ro
+      - ~/.kube:/root/.kube:ro
+    environment:
+      - KUBECONFIG=/root/.kube/config
+      - OPERATOR_NAMESPACE=artificial-memory
+    command: >
+      sh -c "
+        until kubectl cluster-info; do sleep 5; done &&
+        kubectl apply -f /k8s/crds/ &&
+        helm upgrade --install artificial-memory-operator /k8s/helm/artificial-memory-operator -n artificial-memory --create-namespace &&
+        python -m k8s.operator
+      "
+    restart: unless-stopped
+
+  # PostgreSQL for local testing (outside kind)
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: artificial-memory-postgres-local
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=artificial_memory
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./scripts/schema_postgres.sql:/docker-entrypoint-initdb.d/schema_postgres.sql
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d artificial_memory"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Ollama for local LLM
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama-local
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:11434/api/tags"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Local API server (for testing outside Kubernetes)
+  artificial-memory:
+    build: .
+    container_name: artificial-memory-local
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+      - ./memory_files:/app/memory_files
+      - ./static:/app/static
+    environment:
+      - OLLAMA_BASE_URL=http://ollama-local:11434
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/artificial_memory
+      - USE_POSTGRES=true
+    depends_on:
+      - ollama
+      - postgres
+    restart: unless-stopped
+
+volumes:
+  ollama_data:
+  postgres_data:
+
+networks:
+  default:
+    name: artificial-memory-kind-network

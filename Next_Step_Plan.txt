@@ -1,0 +1,1343 @@
+Artificial Memory — Future Direction & Research Architecture
+
+A Cognitive Memory Runtime for Persistent AI Systems
+
+Artificial Memory is a research-oriented open-source memory runtime for LLMs and agent systems.
+Its central idea is:
+
+Forgetting is not deletion. Forgetting is resolution reduction.
+
+Memory is progressively compressed, selectively recalled, temporally managed, provenance-tracked,
+confidence-aware, and reconstructed into an optimized context when needed.
+
+1. Project Vision
+
+Artificial Memory should not become merely a "better RAG".
+
+The long-term goal is to build a general-purpose cognitive memory runtime capable of managing
+persistent AI memory throughout its lifecycle.
+
+The system should eventually support:
+
+progressive memory compression
+
+adaptive-resolution recall
+
+context optimization
+
+temporal reasoning
+
+provenance and auditability
+
+contradiction detection and belief management
+
+memory evolution
+
+memory integrity checking and self-healing
+
+memory dependency analysis
+
+counterfactual memory analysis
+
+secure multi-agent/federated memory
+
+enterprise governance
+
+distributed deployment
+
+Kubernetes-native operation
+
+The project should remain useful as an OSS library/runtime while also becoming credible as
+research infrastructure and a future enterprise-grade platform.
+
+2. Core Research Thesis
+
+Artificial Memory is built around five central ideas.
+
+2.1 Progressive Memory
+
+Memory should not be binary:
+
+remembered / forgotten
+
+Instead:
+
+RAW
+ ↓
+LIGHT
+ ↓
+EPISODE
+ ↓
+SEMANTIC
+ ↓
+LONG_TERM
+ ↓
+DEEP_LONG_TERM
+
+Loss of detail is represented as resolution reduction, not immediate deletion.
+
+2.2 Progressive Recall
+
+The runtime should not always retrieve the most detailed form of a memory.
+
+Instead:
+
+query
+ ↓
+candidate memories
+ ↓
+cheap / low-resolution evaluation
+ ↓
+importance + relevance + confidence + temporal checks
+ ↓
+expand only when required
+
+The objective is to spend context tokens where they provide the most utility.
+
+2.3 Context as an Intermediate Representation
+
+Memory should not be passed directly from storage to an LLM.
+
+Artificial Memory should construct a dedicated Context IR:
+
+Memory
+  ↓
+Recall
+  ↓
+Prioritization
+  ↓
+Resolution Expansion
+  ↓
+Budget Allocation
+  ↓
+Context IR
+  ↓
+LLM / Agent
+
+This turns context construction into a first-class runtime problem.
+
+2.4 Provenance as a First-Class Property
+
+Every memory should remain traceable:
+
+Answer
+ ↓
+Context Package
+ ↓
+Recall Decision
+ ↓
+Memory Version
+ ↓
+Compression Event
+ ↓
+Original Memory
+ ↓
+Original Conversation
+ ↓
+Original Message
+
+A memory should never become an unexplainable opaque fact.
+
+2.5 Memory as an Evolving Object
+
+A memory is not immutable.
+
+It may be:
+
+created
+→ accessed
+→ compressed
+→ expanded
+→ contradicted
+→ revised
+→ consolidated
+→ archived
+→ recompiled
+
+Artificial Memory should therefore model memory evolution, not just storage.
+
+3. Architectural Direction
+
+The current architecture should evolve toward the following structure.
+
++====================================================================+
+|                         ARTIFICIAL MEMORY                          |
+|          Cognitive Memory Runtime for Persistent AI Systems       |
++====================================================================+
+                                |
+          +---------------------+----------------------+
+          |                     |                      |
+       Interfaces            Runtime               Research
+          |                     |                      |
+   CLI / REST / WS / UI    Recall Runtime       Benchmarks
+                           Context Runtime      Experiments
+                           Memory Runtime       Ablation
+          |                     |                Robustness
+          +---------------------+----------------------+
+                                |
+                         Memory Compiler
+                                |
+                         +------+------+
+                         |             |
+                      Memory IR     Context IR
+                         |             |
+          +--------------+-------------+----------------+
+          |              |              |                |
+      Compression    Temporal       Provenance       Semantics
+          |              |              |                |
+          +--------------+--------------+----------------+
+                                |
+                       Memory Evolution Layer
+                                |
+       +----------------+-------+--------+----------------+
+       |                |                |                |
+  Consolidation   Conflict/Belief    Healing        Dependency
+       |                |                |                |
+       +----------------+----------------+----------------+
+                                |
+                         Storage / Index
+                  SQLite / Vector / Files / pgvector
+                                |
+                    Distributed / Enterprise Layer
+                                |
+                 Federation / Security / Kubernetes
+
+The architecture should remain modular.
+Research components should not be tightly coupled to the storage backend.
+
+4. Memory Compiler
+
+The existing memory/compiler.py should evolve into a genuine compiler pipeline.
+
+4.1 Compiler Pipeline
+
+Conversation
+    ↓
+Lexical / structural analysis
+    ↓
+Semantic extraction
+    ↓
+Fact / decision / intent extraction
+    ↓
+Episode construction
+    ↓
+Temporal linking
+    ↓
+Provenance linking
+    ↓
+Memory classification
+    ↓
+Compression
+    ↓
+Memory IR
+    ↓
+Optimization
+    ↓
+Persistent Memory
+
+The compiler should eventually support deterministic and LLM-assisted stages.
+
+5. Memory IR
+
+A formal intermediate representation should be introduced.
+
+Example conceptual model:
+
+MemoryIR
+├── identity
+├── type
+├── resolution
+├── semantic_content
+├── source
+├── temporal_scope
+├── confidence
+├── dependencies
+├── relations
+├── compression_history
+├── access_history
+└── lifecycle_state
+
+Memory IR becomes the stable abstraction between:
+
+ingestion
+
+compression
+
+retrieval
+
+storage
+
+evolution
+
+debugging
+
+experimentation
+
+This is one of the most important architectural additions.
+
+6. Memory Evolution Engine
+
+Introduce a dedicated evolution layer.
+
+A memory should be allowed to change without losing historical versions.
+
+Memory A
+   ↓
+new evidence
+   ↓
+re-evaluation
+   ↓
+updated Memory B
+
+The previous version must remain available through provenance.
+
+Required capabilities
+
+consolidation
+
+revision
+
+merging
+
+splitting
+
+confidence updates
+
+semantic updates
+
+temporal updates
+
+relation updates
+
+version creation
+
+7. Contradiction Detection & Belief Management
+
+Artificial Memory should explicitly represent contradictions.
+
+Example:
+
+Memory A:
+"Database is SQLite"
+
+Memory B:
+"Database is PostgreSQL"
+
+Rather than silently overwriting either memory:
+
+A ── CONTRADICTS ──> B
+
+The runtime evaluates:
+
+source reliability
+
+temporal validity
+
+recency
+
+confidence
+
+provenance
+
+dependent evidence
+
+Then maintains a current belief state while preserving historical memories.
+
+The distinction should be:
+
+Memory = recorded evidence
+Belief = current system interpretation
+
+This is a major conceptual extension.
+
+8. Temporal Memory & Time Travel
+
+Temporal memory should be promoted from a helper subsystem to a core capability.
+
+The runtime should be able to reconstruct:
+
+What did the system know at time T?
+
+and eventually:
+
+What did the system believe at time T?
+
+and:
+
+What context would have been constructed at time T?
+
+Conceptual API:
+
+temporal.state(timestamp)
+temporal.memories(timestamp)
+temporal.beliefs(timestamp)
+temporal.context(timestamp, query)
+
+This creates Memory Time Travel and enables historical debugging and auditing.
+
+9. Memory Debugger
+
+Build an observability/debugging layer specifically for memory decisions.
+
+For a generated answer, users should be able to inspect:
+
+Answer
+ ├─ Context Package
+ │   ├─ Memory #12
+ │   ├─ Memory #91
+ │   └─ Memory #203
+ │
+ ├─ Expanded Memories
+ ├─ Rejected Memories
+ ├─ Temporal conflicts
+ ├─ Confidence decisions
+ ├─ Budget decisions
+ └─ Provenance
+
+The debugger should explain:
+
+why a memory was selected
+
+why a memory was rejected
+
+why resolution was expanded
+
+why resolution was not expanded
+
+which conflicts influenced the result
+
+which memories materially affected the context
+
+This should remain a system-level explanation, not an attempt to expose hidden model chain-of-thought.
+
+10. Memory Garbage Collection & Lifecycle
+
+The existing lifecycle model should evolve into a policy-driven Memory Garbage Collector.
+
+Possible states:
+
+HOT
+ ↓
+WARM
+ ↓
+COLD
+ ↓
+ARCHIVED
+ ↓
+DEEP_ARCHIVED
+
+Lifecycle decisions should consider more than age:
+
+importance
+
+access frequency
+
+recency
+
+confidence
+
+dependency count
+
+contradiction state
+
+future relevance
+
+provenance requirements
+
+The guiding principle remains:
+
+Cold does not mean disposable.
+
+Archival should preserve the ability to restore or reconstruct the memory.
+
+11. Memory Integrity & Self-Healing
+
+Introduce a Memory Integrity subsystem.
+
+When compression or transformation occurs, the runtime should be able to evaluate whether important information was preserved.
+
+Potential metrics:
+
+Semantic Preservation Score
+Temporal Consistency Score
+Provenance Integrity Score
+Compression Quality Score
+Contradiction Consistency Score
+
+If corruption or problematic compression is detected:
+
+Suspicious Memory
+      ↓
+Trace source
+      ↓
+Re-expand
+      ↓
+Recompile
+      ↓
+Validate
+      ↓
+Create new version
+
+This becomes Memory Healing.
+
+12. Adaptive Compression
+
+Compression should eventually become memory-specific rather than universally fixed.
+
+Different memory classes should preserve different information.
+
+Example:
+
+Decision memory
+  preserve:
+    - decision
+    - reason
+    - constraints
+
+Conversation-style memory
+  preserve:
+    - tone
+    - linguistic patterns
+
+Temporal event
+  preserve:
+    - timestamp
+    - event
+    - state transition
+
+The system should support compression policies that explicitly define preservation priorities.
+
+13. Adaptive Context Allocation
+
+Context Builder should evolve from simple priority tiers into a utility-based allocator.
+
+For each candidate memory:
+
+utility(memory) / token_cost(memory)
+
+should become a conceptual optimization target.
+
+The allocator decides:
+
+Memory A → 1200 tokens
+Memory B → 400 tokens
+Memory C → 80 tokens
+Memory D → not included
+
+The goal is:
+
+maximize useful context under a finite token budget.
+
+This turns Context Runtime into a genuine optimization problem.
+
+14. Memory Dependency Graph
+
+Associations should evolve into a stronger dependency model.
+
+Example:
+
+Decision A
+   ↓
+Implementation B
+   ↓
+Bug C
+   ↓
+Decision D
+
+The runtime should answer:
+
+What memories depend on this memory?
+
+and eventually:
+
+What would be affected if this memory changed?
+
+This enables:
+
+Memory Impact Analysis
+
+decision dependency tracking
+
+invalidation propagation
+
+consistency checks
+
+15. Counterfactual Recall
+
+Introduce a research-oriented counterfactual engine.
+
+Questions:
+
+What changes if memory X is removed?
+
+What changes if memory X is trusted more?
+
+What changes if memory X is considered stale?
+
+What context would have been produced without memory X?
+
+This enables measurement of memory influence, not merely memory relevance.
+
+A future metric can be:
+
+Memory Influence Score
+
+based on measured changes in context and downstream decisions.
+
+16. Robustness / Memory Red-Team
+
+Create a dedicated adversarial test suite.
+
+Test categories:
+
+contradictory memories
+
+stale memories
+
+false memories
+
+misleading associations
+
+temporal confusion
+
+source contamination
+
+compression-induced information loss
+
+high-confidence incorrect evidence
+
+poisoned context
+
+irrelevant but highly similar memories
+
+The objective is to measure whether the runtime remains reliable under memory failure.
+
+17. Federated / Multi-Agent Memory
+
+Long-term architecture should allow multiple agents to exchange memory selectively.
+
+Agent A
+  │
+  ├─ Local Memory
+  │
+  └──── Memory Exchange ────┐
+                             │
+  ┌──── Memory Exchange ────┘
+  │
+Agent B
+
+Memory sharing should be policy-driven.
+
+A shared memory package should contain concepts such as:
+
+scope
+
+trust
+
+provenance
+
+source
+
+expiration
+
+confidence
+
+access policy
+
+The system should never require all agents to share all memory.
+
+18. Enterprise Governance
+
+Enterprise support should be an architectural layer, not a redesign.
+
+Potential capabilities:
+
+Memory Classification
+PUBLIC / INTERNAL / CONFIDENTIAL / RESTRICTED
+
+and:
+
+read permission
+expand permission
+modify permission
+archive permission
+audit permission
+
+Additional enterprise features:
+
+authentication
+
+API keys
+
+audit logs
+
+tenant isolation
+
+observability
+
+policy enforcement
+
+retention policies
+
+deployment controls
+
+The goal is to make the open-source core useful while leaving room for enterprise-grade operational tooling.
+
+19. Research Framework
+
+The existing experiments/framework.py should be expanded into a first-class research framework.
+
+Experiments should include:
+
+Memory Quality
+
+recall accuracy
+
+semantic preservation
+
+temporal consistency
+
+contradiction resolution
+
+Efficiency
+
+token consumption
+
+latency
+
+memory storage size
+
+index cost
+
+expansion frequency
+
+Runtime Quality
+
+context relevance
+
+context completeness
+
+downstream answer quality
+
+unnecessary retrieval rate
+
+Robustness
+
+stale-memory resistance
+
+contradiction resistance
+
+false-memory resistance
+
+compression failure recovery
+
+Interpretability
+
+provenance completeness
+
+recall explanation correctness
+
+decision traceability
+
+20. Ablation Studies
+
+Artificial Memory should not only report total-system performance.
+
+Each major mechanism should be testable independently.
+
+Examples:
+
+Full Artificial Memory
+
+- without progressive compression
+- without temporal reasoning
+- without confidence
+- without provenance
+- without adaptive recall
+- without memory evolution
+- without dependency graph
+- without healing
+
+The objective is to show which architectural mechanisms actually contribute value.
+
+21. Benchmark Strategy
+
+Benchmarking is the final validation layer, not the identity of the project.
+
+Comparisons should eventually include:
+
+Raw Conversation
+Traditional Summary
+Vector RAG
+Fixed-Resolution Memory
+Artificial Memory
+
+Possible dimensions:
+
+Recall Accuracy
+Token Cost
+Latency
+Temporal Accuracy
+Semantic Preservation
+Context Relevance
+Robustness
+Provenance Completeness
+
+All reported numbers must be produced by reproducible experiments.
+
+No hand-picked results should be used as proof.
+
+22. Storage Architecture
+
+Keep the storage abstraction backend-independent.
+
+Initial:
+
+SQLite
+FAISS
+File System
+
+Future:
+
+PostgreSQL
+pgvector
+Object Storage
+Distributed Index
+
+The runtime should depend on storage interfaces rather than directly on a specific database.
+
+23. Interfaces
+
+The existing interfaces remain valuable:
+
+CLI
+REST API
+WebSocket
+Web UI
+Python API
+
+However, the canonical public API should eventually become the Runtime facade.
+
+Conceptual API:
+
+runtime.chat(...)
+runtime.remember(...)
+runtime.recall(...)
+runtime.expand(...)
+runtime.trace(...)
+runtime.explain(...)
+runtime.timeline(...)
+runtime.inspect(...)
+
+The user should not need to understand the internal architecture to use the system.
+
+24. Public Package Architecture
+
+Suggested package structure:
+
+artificial_memory/
+├── core/
+│   ├── models.py
+│   ├── memory_ir.py
+│   ├── context_ir.py
+│   └── policies.py
+│
+├── compiler/
+│   ├── pipeline.py
+│   ├── semantic.py
+│   ├── temporal.py
+│   └── optimizer.py
+│
+├── memory/
+│   ├── compression.py
+│   ├── consolidation.py
+│   ├── evolution.py
+│   ├── integrity.py
+│   ├── healing.py
+│   └── dependency.py
+│
+├── recall/
+│   ├── engine.py
+│   ├── human_recall.py
+│   ├── adaptive.py
+│   └── counterfactual.py
+│
+├── context/
+│   ├── builder.py
+│   ├── allocator.py
+│   └── optimizer.py
+│
+├── temporal/
+│   ├── state.py
+│   └── timeline.py
+│
+├── provenance/
+│   ├── tracker.py
+│   └── audit.py
+│
+├── governance/
+│   ├── permissions.py
+│   ├── policy.py
+│   └── tenancy.py
+│
+├── federation/
+│   ├── exchange.py
+│   └── trust.py
+│
+├── llm/
+│   └── manager.py
+│
+├── storage/
+│   ├── sqlite.py
+│   ├── vector.py
+│   └── interfaces.py
+│
+├── research/
+│   ├── experiments/
+│   ├── benchmarks/
+│   ├── ablation/
+│   └── redteam/
+│
+└── interfaces/
+    ├── cli/
+    ├── api/
+    └── websocket/
+
+This is a target architecture.
+The project should migrate incrementally rather than perform one giant rewrite.
+
+25. Development Roadmap
+
+Phase 1 — Foundation Stabilization
+
+Goal:
+
+Make the current implementation coherent and reliable.
+
+Tasks:
+
+stabilize Memory models
+
+formalize ResolutionLevel
+
+formalize provenance
+
+formalize lifecycle
+
+establish storage interfaces
+
+establish Memory IR
+
+establish Context IR
+
+add integration tests
+
+eliminate duplicated responsibilities
+
+define runtime-facing public API
+
+Phase 2 — Memory Compiler
+
+Goal:
+
+Turn message/conversation ingestion into a real compiler pipeline.
+
+Tasks:
+
+compiler stages
+
+Memory IR
+
+deterministic extraction
+
+LLM-assisted extraction
+
+semantic validation
+
+compression policies
+
+provenance attachment
+
+compiler diagnostics
+
+Phase 3 — Advanced Memory Runtime
+
+Goal:
+
+Make memory adaptive and self-aware.
+
+Tasks:
+
+adaptive recall
+
+utility-based context allocation
+
+memory evolution
+
+contradiction detection
+
+belief state
+
+dependency graph
+
+counterfactual recall
+
+Phase 4 — Memory Integrity
+
+Goal:
+
+Make memory resilient to degradation.
+
+Tasks:
+
+integrity metrics
+
+semantic preservation tests
+
+stale-memory detection
+
+compression validation
+
+memory healing
+
+automatic recompilation
+
+Phase 5 — Temporal & Debugging Research
+
+Goal:
+
+Make the runtime inspectable and historically reconstructable.
+
+Tasks:
+
+Memory Time Travel
+
+historical belief reconstruction
+
+context reconstruction
+
+memory debugger
+
+decision traces
+
+impact analysis
+
+Phase 6 — Research Platform
+
+Goal:
+
+Make claims reproducible.
+
+Tasks:
+
+benchmark harness
+
+ablation framework
+
+red-team suite
+
+dataset format
+
+experiment manifests
+
+deterministic experiment runs
+
+result export
+
+reproducibility documentation
+
+Phase 7 — Multi-Agent & Enterprise
+
+Goal:
+
+Demonstrate real-world scalability.
+
+Tasks:
+
+federated memory
+
+memory exchange
+
+trust policies
+
+tenant isolation
+
+governance
+
+audit
+
+retention policies
+
+observability
+
+Phase 8 — Distributed Runtime
+
+Goal:
+
+Move beyond single-process/local operation.
+
+Tasks:
+
+PostgreSQL / pgvector
+
+distributed vector indexing
+
+object storage
+
+worker architecture
+
+horizontal scaling
+
+queue-based compilation
+
+distributed consolidation
+
+Phase 9 — Kubernetes
+
+Goal:
+
+Make Artificial Memory deployable as a cloud-native cognitive runtime.
+
+The project should ultimately provide a Kubernetes Operator.
+
+Example target:
+
+ArtificialMemoryCluster
+ArtificialMemoryNode
+MemoryStore
+MemoryWorker
+RecallWorker
+ConsolidationWorker
+VectorIndex
+
+The Operator should eventually manage:
+
+deployment
+
+scaling
+
+storage
+
+configuration
+
+upgrades
+
+health checks
+
+worker scheduling
+
+memory migration
+
+vector index lifecycle
+
+observability
+
+Example conceptual resource:
+
+apiVersion: memory.artificialmemory.dev/v1
+kind: ArtificialMemoryCluster
+
+spec:
+  replicas: 3
+
+  storage:
+    backend: postgres
+    vector: pgvector
+
+  runtime:
+    recallWorkers: 4
+    consolidationWorkers: 2
+
+  policy:
+    compression: adaptive
+    retention: policy-driven
+
+The Kubernetes Operator is a final-stage goal, not an early optimization.
+
+It should only be introduced after the core runtime and distributed architecture are proven.
+
+26. What Not to Do
+
+Do not turn the project into a pile of unrelated AI features.
+
+Avoid adding features simply because they sound impressive.
+
+Every subsystem should answer at least one of:
+
+Does it improve memory quality?
+Does it improve recall?
+Does it improve context efficiency?
+Does it improve explainability?
+Does it improve robustness?
+Does it improve operational reliability?
+Does it enable distributed/enterprise use?
+
+If not, it should not become part of the core.
+
+27. Open Source Strategy
+
+Artificial Memory should remain genuinely useful as OSS.
+
+Core philosophy:
+
+Individuals / students / researchers
+            ↓
+          Free
+            ↓
+      Open Source Core
+
+Potential future enterprise model:
+
+Enterprise
+    ↓
+commercial support / hosted service / enterprise tooling
+    ↓
+revenue
+
+The exact license and commercial structure should be decided separately and deliberately.
+
+The important principle is:
+
+The open-source project must remain valuable on its own.
+
+Commercialization must add operational and enterprise value, not intentionally cripple the OSS version.
+
+28. What "Success" Looks Like
+
+Artificial Memory should eventually be recognizable in three different ways.
+
+As OSS
+
+"This is a serious open-source memory runtime for LLMs."
+
+As research
+
+"This project studies progressive memory, adaptive recall, temporal consistency, and context optimization."
+
+As infrastructure
+
+"This can become a production memory layer for long-lived AI systems."
+
+The project should be strong in all three dimensions.
+
+29. Final Product Concept
+
+The final conceptual stack is:
+
+                         Persistent AI System
+                                  │
+                                  ▼
+                       +----------------------+
+                       | Artificial Memory    |
+                       | Cognitive Runtime    |
+                       +----------------------+
+                                  │
+            +---------------------+---------------------+
+            │                     │                     │
+      Memory Compiler       Memory Evolution       Runtime
+            │                     │                     │
+        Memory IR            Belief System        Recall
+        Compression          Contradictions       Context
+        Provenance            Healing              Allocation
+        Temporal              Dependencies         Explanation
+            │                     │                     │
+            +---------------------+---------------------+
+                                  │
+                           Storage / Index
+                                  │
+                       +----------+----------+
+                       │                     │
+                  Local Runtime        Distributed Runtime
+                                             │
+                                      Federation / Cloud
+                                             │
+                                      Kubernetes Operator
+
+30. The Core Statement
+
+Artificial Memory should ultimately aim to demonstrate:
+
+Persistent AI does not need infinite context.
+
+It needs a memory system capable of deciding:
+
+what to preserve
+
+what to compress
+
+what to recall
+
+at what resolution to recall it
+
+how trustworthy it is
+
+when it was true
+
+why it was remembered
+
+what changed
+
+what it conflicts with
+
+what depends on it
+
+and how to reconstruct the right context when needed.
+
+That is the research direction.
+
+That is the product direction.
+
+And that is the reason Artificial Memory can grow from an OSS project into a genuine Cognitive Runtime.
+
+31. Immediate Next Actions
+
+Do not start Kubernetes yet.
+
+The next implementation target should be:
+
+1. Memory IR
+2. Context IR
+3. Runtime Facade
+4. Memory Compiler pipeline
+5. Memory Evolution
+6. Contradiction / Belief system
+7. Memory Integrity / Healing
+8. Adaptive Context Allocation
+9. Memory Debugger / Time Travel
+10. Research + Benchmark framework
+
+After those are stable:
+
+11. Federation
+12. Governance
+13. Distributed storage/runtime
+14. Kubernetes Operator
+
+The guiding principle is:
+
+First make the memory model extraordinary.
+Then make the runtime reliable.
+Then make it measurable.
+Then make it distributed.
+Then make it enterprise-ready.
+Finally, make it Kubernetes-native.
+
+32. Project Positioning
+
+Recommended project title:
+
+Artificial Memory
+
+Subtitle:
+
+A Cognitive Memory Runtime for Persistent AI Systems
+
+Core statement:
+
+Forget by compression. Recall by resolution. Reason with provenance.
+
+This keeps the original ambitious name.
+
+At this point, the name is not too large for the project.
+
+The architecture should grow until the name is justified.

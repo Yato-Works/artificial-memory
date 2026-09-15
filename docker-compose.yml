@@ -1,0 +1,68 @@
+version: '3.8'
+
+services:
+  artificial-memory:
+    build: .
+    container_name: artificial-memory
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+      - ./memory_files:/app/memory_files
+      - ./static:/app/static
+    environment:
+      - OLLAMA_BASE_URL=http://ollama:11434
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/artificial_memory
+      - USE_POSTGRES=true
+    depends_on:
+      - ollama
+      - postgres
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import sys; sys.path.insert(0, 'src'); from artificial_memory.storage.postgres_store import PostgresMemoryStore; s = PostgresMemoryStore('postgresql://postgres:postgres@postgres:5432/artificial_memory'); exit(0 if s.health_check() else 1)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:11434/api/tags"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: artificial-memory-postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=artificial_memory
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./scripts/schema_postgres.sql:/docker-entrypoint-initdb.d/schema_postgres.sql
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d artificial_memory"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  ollama_data:
+  postgres_data:
+
+networks:
+  default:
+    name: artificial-memory-network

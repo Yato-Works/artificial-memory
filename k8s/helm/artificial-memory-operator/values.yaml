@@ -1,0 +1,181 @@
+# Default values for artificial-memory-operator
+# This is a YAML-formatted file.
+
+# Operator deployment configuration
+operator:
+  enabled: true
+  replicaCount: 1
+  image:
+    repository: artificial-memory-operator
+    tag: latest
+    pullPolicy: IfNotPresent
+  resources:
+    requests:
+      cpu: 100m
+      memory: 128Mi
+    limits:
+      cpu: 500m
+      memory: 512Mi
+  serviceAccount:
+    create: true
+    name: artificial-memory-operator
+  rbac:
+    create: true
+  logging:
+    level: info
+    format: json
+
+# CRD installation
+crds:
+  install: true
+  keep: false  # Set to true to keep CRDs on uninstall
+
+# ArtificialMemoryCluster default configuration
+cluster:
+  enabled: true
+  name: artificial-memory
+  namespace: artificial-memory
+  replicas: 3
+  storage:
+    backend: postgres
+    vector: pgvector
+    postgres:
+      host: postgres
+      port: 5432
+      database: artificial_memory
+      secretRef: artificial-memory-postgres-secret
+    resources:
+      requests:
+        memory: 512Mi
+        cpu: 250m
+      limits:
+        memory: 2Gi
+        cpu: 1000m
+  runtime:
+    recallWorkers: 4
+    consolidationWorkers: 2
+    compilerWorkers: 2
+    resources:
+      requests:
+        memory: 256Mi
+        cpu: 100m
+      limits:
+        memory: 1Gi
+        cpu: 500m
+  policy:
+    compression: adaptive
+    retention: policy-driven
+    governance: enabled
+  image:
+    repository: artificial-memory
+    tag: latest
+    pullPolicy: IfNotPresent
+  config:
+    OLLAMA_BASE_URL: "http://ollama:11434"
+    USE_POSTGRES: "true"
+
+# PostgreSQL (using CloudNativePG or external)
+postgresql:
+  enabled: true
+  # Use CloudNativePG operator for managed PostgreSQL
+  cnpg:
+    enabled: true
+    clusterName: artificial-memory-postgres
+    instances: 3
+    storageSize: 20Gi
+    resources:
+      requests:
+        memory: 512Mi
+        cpu: 250m
+      limits:
+        memory: 2Gi
+        cpu: 1000m
+    bootstrap:
+      initdb:
+        database: artificial_memory
+        owner: postgres
+    postgresql:
+      parameters:
+        max_connections: "200"
+        shared_buffers: "256MB"
+        effective_cache_size: "1GB"
+        maintenance_work_mem: "128MB"
+        work_mem: "16MB"
+    backup:
+      retentionPolicy: "30d"
+      schedule: "0 2 * * *"
+      storage:
+        storageClass: standard
+        size: 20Gi
+
+  # External PostgreSQL (if not using CNPG)
+  external:
+    enabled: false
+    host: ""
+    port: 5432
+    database: artificial_memory
+    secretRef: ""
+
+# Ollama for local LLM
+ollama:
+  enabled: true
+  image:
+    repository: ollama/ollama
+    tag: latest
+    pullPolicy: IfNotPresent
+  resources:
+    requests:
+      memory: 2Gi
+      cpu: 1000m
+    limits:
+      memory: 8Gi
+      cpu: 4000m
+  persistence:
+    enabled: true
+    size: 20Gi
+    storageClass: standard
+  models:
+    - llama3.2:3b
+    - nomic-embed-text
+
+# Monitoring
+monitoring:
+  enabled: true
+  serviceMonitor:
+    enabled: true
+    interval: 30s
+  prometheusRule:
+    enabled: true
+  grafanaDashboard:
+    enabled: true
+
+# Ingress for API access
+ingress:
+  enabled: true
+  className: nginx
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+  hosts:
+    - host: artificial-memory.example.com
+      paths:
+        - path: /
+          pathType: Prefix
+  tls:
+    - secretName: artificial-memory-tls
+      hosts:
+        - artificial-memory.example.com
+
+# Network policies
+networkPolicy:
+  enabled: true
+
+# Pod disruption budget
+podDisruptionBudget:
+  enabled: true
+  minAvailable: 1
+
+# Priority class
+priorityClass:
+  enabled: false
+  name: high-priority
+  value: 1000000

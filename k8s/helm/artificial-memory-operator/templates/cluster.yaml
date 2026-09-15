@@ -1,0 +1,50 @@
+{{- if .Values.cluster.enabled }}
+---
+apiVersion: memory.artificialmemory.dev/v1
+kind: ArtificialMemoryCluster
+metadata:
+  name: {{ .Values.cluster.name }}
+  namespace: {{ .Values.cluster.namespace }}
+  labels:
+    app.kubernetes.io/name: {{ include "artificial-memory-operator.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+    app.kubernetes.io/component: cluster
+spec:
+  replicas: {{ .Values.cluster.replicas }}
+  storage:
+    backend: {{ .Values.cluster.storage.backend }}
+    vector: {{ .Values.cluster.storage.vector }}
+    {{- if .Values.cluster.storage.postgres }}
+    postgres:
+      host: {{ .Values.cluster.storage.postgres.host }}
+      port: {{ .Values.cluster.storage.postgres.port }}
+      database: {{ .Values.cluster.storage.postgres.database }}
+      secretRef: {{ .Values.cluster.storage.postgres.secretRef }}
+    {{- end }}
+    {{- if .Values.cluster.storage.resources }}
+    resources:
+      {{- toYaml .Values.cluster.storage.resources | nindent 6 }}
+    {{- end }}
+  runtime:
+    recallWorkers: {{ .Values.cluster.runtime.recallWorkers }}
+    consolidationWorkers: {{ .Values.cluster.runtime.consolidationWorkers }}
+    compilerWorkers: {{ .Values.cluster.runtime.compilerWorkers }}
+    {{- if .Values.cluster.runtime.resources }}
+    resources:
+      {{- toYaml .Values.cluster.runtime.resources | nindent 6 }}
+    {{- end }}
+  policy:
+    compression: {{ .Values.cluster.policy.compression }}
+    retention: {{ .Values.cluster.policy.retention }}
+    governance: {{ .Values.cluster.policy.governance }}
+  image:
+    repository: {{ .Values.cluster.image.repository }}
+    tag: {{ .Values.cluster.image.tag }}
+    pullPolicy: {{ .Values.cluster.image.pullPolicy }}
+  {{- if .Values.cluster.config }}
+  config:
+    {{- toYaml .Values.cluster.config | nindent 4 }}
+  {{- end }}
+---
+{{- end }}

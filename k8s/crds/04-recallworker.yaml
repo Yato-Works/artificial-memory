@@ -1,0 +1,164 @@
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: recallworkers.memory.artificialmemory.dev
+  labels:
+    app.kubernetes.io/name: artificial-memory-operator
+    app.kubernetes.io/version: "0.1.0"
+spec:
+  group: memory.artificialmemory.dev
+  versions:
+    - name: v1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            spec:
+              type: object
+              required:
+                - clusterRef
+              properties:
+                clusterRef:
+                  type: string
+                  description: Reference to ArtificialMemoryCluster
+                replicas:
+                  type: integer
+                  minimum: 1
+                  maximum: 50
+                  default: 4
+                resources:
+                  type: object
+                  properties:
+                    requests:
+                      type: object
+                      properties:
+                        memory:
+                          type: string
+                          default: "256Mi"
+                        cpu:
+                          type: string
+                          default: "100m"
+                    limits:
+                      type: object
+                      properties:
+                        memory:
+                          type: string
+                          default: "1Gi"
+                        cpu:
+                          type: string
+                          default: "500m"
+                config:
+                  type: object
+                  description: Recall worker configuration
+                  additionalProperties:
+                    type: string
+                autoscaling:
+                  type: object
+                  properties:
+                    enabled:
+                      type: boolean
+                      default: true
+                    minReplicas:
+                      type: integer
+                      minimum: 1
+                      default: 2
+                    maxReplicas:
+                      type: integer
+                      maximum: 100
+                      default: 20
+                    targetCPUUtilization:
+                      type: integer
+                      minimum: 10
+                      maximum: 90
+                      default: 60
+                    targetMemoryUtilization:
+                      type: integer
+                      minimum: 10
+                      maximum: 90
+                      default: 70
+                    scaleUpStabilizationWindow:
+                      type: string
+                      default: "60s"
+                    scaleDownStabilizationWindow:
+                      type: string
+                      default: "300s"
+                service:
+                  type: object
+                  properties:
+                    port:
+                      type: integer
+                      default: 8000
+                    type:
+                      type: string
+                      enum: ["ClusterIP", "LoadBalancer", "NodePort"]
+                      default: "ClusterIP"
+            status:
+              type: object
+              properties:
+                phase:
+                  type: string
+                  enum: ["Pending", "Creating", "Running", "Scaling", "Degraded", "Failed"]
+                conditions:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      type:
+                        type: string
+                      status:
+                        type: string
+                        enum: ["True", "False", "Unknown"]
+                      reason:
+                        type: string
+                      message:
+                        type: string
+                      lastTransitionTime:
+                        type: string
+                        format: date-time
+                readyReplicas:
+                  type: integer
+                desiredReplicas:
+                  type: integer
+                currentReplicas:
+                  type: integer
+                totalQueries:
+                  type: integer
+                avgLatencyMs:
+                  type: integer
+                p99LatencyMs:
+                  type: integer
+                cacheHitRate:
+                  type: number
+                serviceEndpoint:
+                  type: string
+  scope: Namespaced
+  names:
+    plural: recallworkers
+    singular: recallworker
+    kind: RecallWorker
+    shortNames:
+      - rw
+  additionalPrinterColumns:
+    - name: Phase
+      type: string
+      jsonPath: .status.phase
+    - name: Ready
+      type: integer
+      jsonPath: .status.readyReplicas
+    - name: Desired
+      type: integer
+      jsonPath: .status.desiredReplicas
+    - name: Queries
+      type: integer
+      jsonPath: .status.totalQueries
+    - name: Avg Latency
+      type: integer
+      jsonPath: .status.avgLatencyMs
+    - name: Endpoint
+      type: string
+      jsonPath: .status.serviceEndpoint
+    - name: Age
+      type: date
+      jsonPath: .metadata.creationTimestamp

@@ -1,0 +1,15 @@
+{{- if .Values.operator.enabled }}
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "artificial-memory-operator.fullname" . }}-config
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app.kubernetes.io/name: {{ include "artificial-memory-operator.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+data:
+  KOPF_LOG_LEVEL: {{ .Values.operator.logging.level }}
+  KOPF_LOG_FORMAT: {{ .Values.operator.logging.format }}
+  OPERATOR_NAMESPACE: {{ .Release.Namespace }}
+{{- end }}

@@ -1,0 +1,17 @@
+apiVersion: v2
+name: artificial-memory-operator
+description: A Helm chart for deploying the Artificial Memory Operator
+type: application
+version: 0.1.0
+appVersion: "0.1.0"
+keywords:
+  - artificial-memory
+  - operator
+  - kubernetes
+  - memory
+  - cognitive-runtime
+maintainers:
+  - name: Artificial Memory Team
+    email: team@artificialmemory.dev
+sources:
+  - https://github.com/your-org/artificial-memory

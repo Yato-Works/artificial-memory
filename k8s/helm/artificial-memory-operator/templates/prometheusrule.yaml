@@ -1,0 +1,88 @@
+{{- if and .Values.monitoring.enabled .Values.monitoring.prometheusRule.enabled }}
+---
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: {{ include "artificial-memory-operator.fullname" . }}
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app.kubernetes.io/name: {{ include "artificial-memory-operator.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    release: prometheus
+spec:
+  groups:
+    - name: artificial-memory-operator
+      rules:
+        - alert: ArtificialMemoryOperatorDown
+          expr: up{job="artificial-memory-operator"} == 0
+          for: 1m
+          labels:
+            severity: critical
+          annotations:
+            summary: "Artificial Memory Operator is down"
+            description: "The Artificial Memory Operator has been down for more than 1 minute."
+
+        - alert: ArtificialMemoryClusterDegraded
+          expr: artificial_memory_cluster_phase{phase="Degraded"} == 1
+          for: 2m
+          labels:
+            severity: warning
+          annotations:
+            summary: "Artificial Memory Cluster {{ $labels.namespace }}/{{ $labels.cluster }} is degraded"
+            description: "Cluster {{ $labels.cluster }} in namespace {{ $labels.namespace }} has been in Degraded phase for more than 2 minutes."
+
+        - alert: ArtificialMemoryClusterFailed
+          expr: artificial_memory_cluster_phase{phase="Failed"} == 1
+          for: 1m
+          labels:
+            severity: critical
+          annotations:
+            summary: "Artificial Memory Cluster {{ $labels.namespace }}/{{ $labels.cluster }} has failed"
+            description: "Cluster {{ $labels.cluster }} in namespace {{ $labels.namespace }} has entered Failed phase."
+
+        - alert: ArtificialMemoryRecallWorkerScaling
+          expr: artificial_memory_recall_worker_ready_replicas < artificial_memory_recall_worker_desired_replicas
+          for: 5m
+          labels:
+            severity: warning
+          annotations:
+            summary: "Recall workers not scaling up"
+            description: "Recall worker {{ $labels.namespace }}/{{ $labels.worker }} has {{ $value }} ready replicas but {{ $labels.desired }} desired."
+
+        - alert: ArtificialMemoryVectorIndexBuildStuck
+          expr: artificial_memory_vector_index_build_progress < 100 and artificial_memory_vector_index_phase == "Building"
+          for: 10m
+          labels:
+            severity: warning
+          annotations:
+            summary: "Vector index build stuck"
+            description: "Vector index {{ $labels.namespace }}/{{ $labels.index }} has been building for more than 10 minutes at {{ $value }}% progress."
+
+        - alert: ArtificialMemoryPostgreSQLConnectionsHigh
+          expr: pg_stat_database_numbackends / pg_settings_max_connections > 0.8
+          for: 5m
+          labels:
+            severity: warning
+          annotations:
+            summary: "PostgreSQL connections high"
+            description: "PostgreSQL instance {{ $labels.instance }} is using more than 80% of max connections."
+
+        - alert: ArtificialMemoryMemoryUsageHigh
+          expr: (container_memory_usage_bytes / container_spec_memory_limit_bytes) > 0.85
+          for: 5m
+          labels:
+            severity: warning
+          annotations:
+            summary: "High memory usage"
+            description: "Container {{ $labels.container }} in pod {{ $labels.pod }} is using more than 85% of memory limit."
+
+        - alert: ArtificialMemoryCPUThrottling
+          expr: sum(rate(container_cpu_cfs_throttled_periods_total[5m])) / sum(rate(container_cpu_cfs_periods_total[5m])) > 0.25
+          for: 5m
+          labels:
+            severity: warning
+          annotations:
+            summary: "CPU throttling detected"
+            description: "Container {{ $labels.container }} in pod {{ $labels.pod }} is being CPU throttled > 25%."
+---
+{{- end }}

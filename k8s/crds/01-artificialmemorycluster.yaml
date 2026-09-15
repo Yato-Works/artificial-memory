@@ -1,0 +1,225 @@
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: artificialmemoryclusters.memory.artificialmemory.dev
+  labels:
+    app.kubernetes.io/name: artificial-memory-operator
+    app.kubernetes.io/version: "0.1.0"
+spec:
+  group: memory.artificialmemory.dev
+  versions:
+    - name: v1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            spec:
+              type: object
+              required:
+                - replicas
+              properties:
+                replicas:
+                  type: integer
+                  minimum: 1
+                  maximum: 10
+                  default: 3
+                  description: Number of runtime replicas
+                storage:
+                  type: object
+                  required:
+                    - backend
+                    - vector
+                  properties:
+                    backend:
+                      type: string
+                      enum: ["postgres", "sqlite"]
+                      default: "postgres"
+                      description: Storage backend type
+                    vector:
+                      type: string
+                      enum: ["pgvector", "faiss"]
+                      default: "pgvector"
+                      description: Vector index backend
+                    postgres:
+                      type: object
+                      properties:
+                        host:
+                          type: string
+                          default: "postgres"
+                        port:
+                          type: integer
+                          default: 5432
+                        database:
+                          type: string
+                          default: "artificial_memory"
+                        secretRef:
+                          type: string
+                          description: Secret containing PostgreSQL credentials
+                    resources:
+                      type: object
+                      properties:
+                        requests:
+                          type: object
+                          properties:
+                            memory:
+                              type: string
+                              default: "512Mi"
+                            cpu:
+                              type: string
+                              default: "250m"
+                        limits:
+                          type: object
+                          properties:
+                            memory:
+                              type: string
+                              default: "2Gi"
+                            cpu:
+                              type: string
+                              default: "1000m"
+                runtime:
+                  type: object
+                  properties:
+                    recallWorkers:
+                      type: integer
+                      minimum: 1
+                      maximum: 20
+                      default: 4
+                      description: Number of recall worker pods
+                    consolidationWorkers:
+                      type: integer
+                      minimum: 1
+                      maximum: 10
+                      default: 2
+                      description: Number of consolidation worker pods
+                    compilerWorkers:
+                      type: integer
+                      minimum: 1
+                      maximum: 10
+                      default: 2
+                      description: Number of compiler worker pods
+                    resources:
+                      type: object
+                      properties:
+                        requests:
+                          type: object
+                          properties:
+                            memory:
+                              type: string
+                              default: "256Mi"
+                            cpu:
+                              type: string
+                              default: "100m"
+                        limits:
+                          type: object
+                          properties:
+                            memory:
+                              type: string
+                              default: "1Gi"
+                            cpu:
+                              type: string
+                              default: "500m"
+                policy:
+                  type: object
+                  properties:
+                    compression:
+                      type: string
+                      enum: ["adaptive", "fixed", "none"]
+                      default: "adaptive"
+                      description: Compression policy
+                    retention:
+                      type: string
+                      enum: ["policy-driven", "time-based", "none"]
+                      default: "policy-driven"
+                      description: Retention policy
+                    governance:
+                      type: string
+                      enum: ["enabled", "disabled"]
+                      default: "enabled"
+                      description: Governance enforcement
+                image:
+                  type: object
+                  properties:
+                    repository:
+                      type: string
+                      default: "artificial-memory"
+                    tag:
+                      type: string
+                      default: "latest"
+                    pullPolicy:
+                      type: string
+                      enum: ["Always", "IfNotPresent", "Never"]
+                      default: "IfNotPresent"
+                config:
+                  type: object
+                  description: Additional runtime configuration
+                  additionalProperties:
+                    type: string
+            status:
+              type: object
+              properties:
+                phase:
+                  type: string
+                  enum: ["Pending", "Creating", "Running", "Updating", "Degraded", "Failed"]
+                  description: Current phase of the cluster
+                conditions:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      type:
+                        type: string
+                      status:
+                        type: string
+                        enum: ["True", "False", "Unknown"]
+                      reason:
+                        type: string
+                      message:
+                        type: string
+                      lastTransitionTime:
+                        type: string
+                        format: date-time
+                  description: Current conditions
+                replicas:
+                  type: integer
+                  description: Current number of ready replicas
+                recallWorkersReady:
+                  type: integer
+                  description: Number of ready recall workers
+                consolidationWorkersReady:
+                  type: integer
+                  description: Number of ready consolidation workers
+                compilerWorkersReady:
+                  type: integer
+                  description: Number of ready compiler workers
+                storageReady:
+                  type: boolean
+                  description: Whether storage is ready
+                vectorIndexReady:
+                  type: boolean
+                  description: Whether vector index is ready
+                lastUpdateTime:
+                  type: string
+                  format: date-time
+  scope: Namespaced
+  names:
+    plural: artificialmemoryclusters
+    singular: artificialmemorycluster
+    kind: ArtificialMemoryCluster
+    shortNames:
+      - amc
+      - amcluster
+  additionalPrinterColumns:
+    - name: Phase
+      type: string
+      jsonPath: .status.phase
+    - name: Replicas
+      type: integer
+      jsonPath: .status.replicas
+    - name: Recall Workers
+      type: integer
+      jsonPath: .status.recallWorkersReady
+    - name: Age
+      type: date
+      jsonPath: .metadata.creationTimestamp
