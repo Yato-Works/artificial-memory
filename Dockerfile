@@ -1,7 +1,7 @@
 # Dockerfile for Artificial Memory / Context Runtime
 
 # Build stage
-FROM python:3.11-slim as builder
+FROM python:3.11-slim AS builder
 
 WORKDIR /app
 
@@ -17,7 +17,7 @@ COPY src/ ./src/
 RUN pip install --no-cache-dir -e ".[web,llm]"
 
 # Production stage
-FROM python:3.11-slim as production
+FROM python:3.11-slim AS production
 
 WORKDIR /app
 
@@ -39,10 +39,9 @@ COPY --chown=appuser:appuser src/ ./src/
 COPY --chown=appuser:appuser pyproject.toml ./
 COPY --chown=appuser:appuser static/ ./static/
 COPY --chown=appuser:appuser scripts/ ./scripts/
-COPY --chown=appuser:appuser memory_files/ ./memory_files/
 
-# Create data directory
-RUN mkdir -p /app/data && chown appuser:appuser /app/data
+# Create runtime data directories
+RUN mkdir -p /app/memory_files /app/data && chown -R appuser:appuser /app/memory_files /app/data
 
 # Switch to non-root user
 USER appuser
