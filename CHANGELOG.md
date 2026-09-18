@@ -43,6 +43,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Dry-run validation findings: REUSE freezes selection across repeats
     (stability 1.0) where classic re-ranking drifts (0.0); gate is a no-op
     at pool_size=64 with 20-candidate pools (use a smaller pool to arm it)
+  - First real-LLM run (phi4-mini, frozen config, gate-pool=10):
+    - quality identical across arms (answer_accuracy 0.1 = abstention only;
+      phi4-mini fails all knowledge questions under the 2,000 budget, so
+      raid mechanisms are quality-neutral here -- no recall lost to REUSE)
+    - cache arm: retrieval p50 32.1 ms vs classic 42.9 ms (~25% faster);
+      plan tiering full=10 / reuse=240 (96% reuse)
+    - gate arm: pool narrowed 200 -> 100 candidates, context tokens
+      522 -> 262.6 (-50%), retrieval p50 25.8 ms (fastest); selection
+      agreement vs classic drops to 0.0 (gate changes candidate pools by
+      design), repeat-selection stability stays 1.0
+    - cross-arm agreement confirms determinism: cache replays stable
+      selections, classic re-ranks drift (stability 0.05)
+    - evidence: benchmark/results/deepseek_ab/summary_20260918_161229.json
 
 ### Added
 - **v0.2.0 Phase 1 - Memory Evolution Core**

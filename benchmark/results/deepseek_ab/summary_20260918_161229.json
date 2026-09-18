@@ -1,0 +1,409 @@
+{
+  "experiment": "deepseek-raid-ab-small",
+  "timestamp": "2026-09-18T16:12:29.003572",
+  "question_ids": [
+    "factual_recall-00",
+    "multi_session_recall-00",
+    "temporal_reasoning-00",
+    "knowledge_updates-00",
+    "contradiction_handling-00",
+    "indirect_recall-00",
+    "distractor_resistance-00",
+    "abstention-00",
+    "compression_recovery-00",
+    "reflection_reinterpretation-00"
+  ],
+  "answer_repeats": 3,
+  "latency_repeats": 5,
+  "dry_run": false,
+  "arms": {
+    "classic": {
+      "arm": "classic",
+      "gate_pool": null,
+      "run_id": "controlled_20260918_161119",
+      "run_dir": "benchmark\\results\\controlled\\controlled_20260918_161119",
+      "failures": 0,
+      "plan_stats": null,
+      "gate_stats": null,
+      "retrieval_latency": {
+        "n": 30,
+        "mean_ms": 43.268,
+        "p50_ms": 42.95,
+        "p95_ms": 48.237
+      },
+      "context_tokens": {
+        "mean": 524.4,
+        "total": 15732
+      },
+      "repeat_selection_stability": 0.05,
+      "scores": [
+        {
+          "question_id": "factual_recall-00",
+          "category": "factual_recall",
+          "score": 0.0,
+          "outcome": "fail",
+          "coverage": 0.0
+        },
+        {
+          "question_id": "multi_session_recall-00",
+          "category": "multi_session_recall",
+          "score": 0.0,
+          "outcome": "fail",
+          "coverage": 0.0
+        },
+        {
+          "question_id": "temporal_reasoning-00",
+          "category": "temporal_reasoning",
+          "score": 0.0,
+          "outcome": "fail",
+          "coverage": 0.0
+        },
+        {
+          "question_id": "knowledge_updates-00",
+          "category": "knowledge_updates",
+          "score": 0.0,
+          "outcome": "fail",
+          "coverage": 0.0
+        },
+        {
+          "question_id": "contradiction_handling-00",
+          "category": "contradiction_handling",
+          "score": 0.0,
+          "outcome": "fail",
+          "coverage": 0.0
+        },
+        {
+          "question_id": "indirect_recall-00",
+          "category": "indirect_recall",
+          "score": 0.0,
+          "outcome": "fail",
+          "coverage": 0.0
+        },
+        {
+          "question_id": "distractor_resistance-00",
+          "category": "distractor_resistance",
+          "score": 0.0,
+          "outcome": "fail",
+          "coverage": 0.0
+        },
+        {
+          "question_id": "abstention-00",
+          "category": "abstention",
+          "score": 1.0,
+          "outcome": "pass",
+          "coverage": 1.0
+        },
+        {
+          "question_id": "compression_recovery-00",
+          "category": "compression_recovery",
+          "score": 0.0,
+          "outcome": "fail",
+          "coverage": 0.0
+        },
+        {
+          "question_id": "reflection_reinterpretation-00",
+          "category": "reflection_reinterpretation",
+          "score": 0.0,
+          "outcome": "fail",
+          "coverage": 0.0
+        }
+      ],
+      "aggregates": [
+        {
+          "player": "AM v0.2.0",
+          "question_count": 10,
+          "pass_count": 1,
+          "partial_count": 0,
+          "fail_count": 9,
+          "false_positive_count": 0,
+          "answer_accuracy": 0.1,
+          "partial_rate": 0.0,
+          "false_positive_rate": 0.0,
+          "forbidden_violation_rate": 0.0,
+          "mean_ground_truth_coverage": 0.1,
+          "mean_score": 0.1,
+          "abstention_accuracy": 1.0,
+          "abstention_question_count": 1,
+          "mean_score_consistency": 0.9666666666666668,
+          "category_accuracy": {
+            "abstention": 1.0,
+            "compression_recovery": 0.0,
+            "contradiction_handling": 0.0,
+            "distractor_resistance": 0.0,
+            "factual_recall": 0.0,
+            "indirect_recall": 0.0,
+            "knowledge_updates": 0.0,
+            "multi_session_recall": 0.0,
+            "reflection_reinterpretation": 0.0,
+            "temporal_reasoning": 0.0
+          }
+        }
+      ]
+    },
+    "cache": {
+      "arm": "cache",
+      "gate_pool": null,
+      "run_id": "controlled_20260918_161159",
+      "run_dir": "benchmark\\results\\controlled\\controlled_20260918_161159",
+      "failures": 0,
+      "store_memory_count": 100,
+      "plan_stats": {
+        "full": 10,
+        "reindex": 0,
+        "reuse": 240
+      },
+      "gate_stats": null,
+      "retrieval_latency": {
+        "n": 30,
+        "mean_ms": 30.272,
+        "p50_ms": 32.127,
+        "p95_ms": 35.905
+      },
+      "context_tokens": {
+        "mean": 522,
+        "total": 15660
+      },
+      "repeat_selection_stability": 1.0,
+      "scores": [
+        {
+          "question_id": "factual_recall-00",
+          "category": "factual_recall",
+          "score": 0.0,
+          "outcome": "fail",
+          "coverage": 0.0
+        },
+        {
+          "question_id": "multi_session_recall-00",
+          "category": "multi_session_recall",
+          "score": 0.0,
+          "outcome": "fail",
+          "coverage": 0.0
+        },
+        {
+          "question_id": "temporal_reasoning-00",
+          "category": "temporal_reasoning",
+          "score": 0.0,
+          "outcome": "fail",
+          "coverage": 0.0
+        },
+        {
+          "question_id": "knowledge_updates-00",
+          "category": "knowledge_updates",
+          "score": 0.0,
+          "outcome": "fail",
+          "coverage": 0.0
+        },
+        {
+          "question_id": "contradiction_handling-00",
+          "category": "contradiction_handling",
+          "score": 0.0,
+          "outcome": "fail",
+          "coverage": 0.0
+        },
+        {
+          "question_id": "indirect_recall-00",
+          "category": "indirect_recall",
+          "score": 0.0,
+          "outcome": "fail",
+          "coverage": 0.0
+        },
+        {
+          "question_id": "distractor_resistance-00",
+          "category": "distractor_resistance",
+          "score": 0.0,
+          "outcome": "fail",
+          "coverage": 0.0
+        },
+        {
+          "question_id": "abstention-00",
+          "category": "abstention",
+          "score": 1.0,
+          "outcome": "pass",
+          "coverage": 1.0
+        },
+        {
+          "question_id": "compression_recovery-00",
+          "category": "compression_recovery",
+          "score": 0.0,
+          "outcome": "fail",
+          "coverage": 0.0
+        },
+        {
+          "question_id": "reflection_reinterpretation-00",
+          "category": "reflection_reinterpretation",
+          "score": 0.0,
+          "outcome": "fail",
+          "coverage": 0.0
+        }
+      ],
+      "aggregates": [
+        {
+          "player": "AM v0.2.0",
+          "question_count": 10,
+          "pass_count": 1,
+          "partial_count": 0,
+          "fail_count": 9,
+          "false_positive_count": 0,
+          "answer_accuracy": 0.1,
+          "partial_rate": 0.0,
+          "false_positive_rate": 0.0,
+          "forbidden_violation_rate": 0.0,
+          "mean_ground_truth_coverage": 0.1,
+          "mean_score": 0.1,
+          "abstention_accuracy": 1.0,
+          "abstention_question_count": 1,
+          "mean_score_consistency": 1.0,
+          "category_accuracy": {
+            "abstention": 1.0,
+            "compression_recovery": 0.0,
+            "contradiction_handling": 0.0,
+            "distractor_resistance": 0.0,
+            "factual_recall": 0.0,
+            "indirect_recall": 0.0,
+            "knowledge_updates": 0.0,
+            "multi_session_recall": 0.0,
+            "reflection_reinterpretation": 0.0,
+            "temporal_reasoning": 0.0
+          }
+        }
+      ]
+    },
+    "gate": {
+      "arm": "gate",
+      "gate_pool": 10,
+      "run_id": "controlled_20260918_161215",
+      "run_dir": "benchmark\\results\\controlled\\controlled_20260918_161215",
+      "failures": 0,
+      "store_memory_count": 100,
+      "plan_stats": {
+        "full": 10,
+        "reindex": 0,
+        "reuse": 240
+      },
+      "gate_stats": {
+        "calls": 10,
+        "total_in": 200,
+        "total_out": 100,
+        "narrowed": 100
+      },
+      "retrieval_latency": {
+        "n": 30,
+        "mean_ms": 29.042,
+        "p50_ms": 25.794,
+        "p95_ms": 28.976
+      },
+      "context_tokens": {
+        "mean": 262.6,
+        "total": 7878
+      },
+      "repeat_selection_stability": 1.0,
+      "scores": [
+        {
+          "question_id": "factual_recall-00",
+          "category": "factual_recall",
+          "score": 0.0,
+          "outcome": "fail",
+          "coverage": 0.0
+        },
+        {
+          "question_id": "multi_session_recall-00",
+          "category": "multi_session_recall",
+          "score": 0.0,
+          "outcome": "fail",
+          "coverage": 0.0
+        },
+        {
+          "question_id": "temporal_reasoning-00",
+          "category": "temporal_reasoning",
+          "score": 0.0,
+          "outcome": "fail",
+          "coverage": 0.0
+        },
+        {
+          "question_id": "knowledge_updates-00",
+          "category": "knowledge_updates",
+          "score": 0.0,
+          "outcome": "fail",
+          "coverage": 0.0
+        },
+        {
+          "question_id": "contradiction_handling-00",
+          "category": "contradiction_handling",
+          "score": 0.0,
+          "outcome": "fail",
+          "coverage": 0.0
+        },
+        {
+          "question_id": "indirect_recall-00",
+          "category": "indirect_recall",
+          "score": 0.0,
+          "outcome": "fail",
+          "coverage": 0.0
+        },
+        {
+          "question_id": "distractor_resistance-00",
+          "category": "distractor_resistance",
+          "score": 0.0,
+          "outcome": "fail",
+          "coverage": 0.0
+        },
+        {
+          "question_id": "abstention-00",
+          "category": "abstention",
+          "score": 1.0,
+          "outcome": "pass",
+          "coverage": 1.0
+        },
+        {
+          "question_id": "compression_recovery-00",
+          "category": "compression_recovery",
+          "score": 0.0,
+          "outcome": "fail",
+          "coverage": 0.0
+        },
+        {
+          "question_id": "reflection_reinterpretation-00",
+          "category": "reflection_reinterpretation",
+          "score": 0.0,
+          "outcome": "fail",
+          "coverage": 0.0
+        }
+      ],
+      "aggregates": [
+        {
+          "player": "AM v0.2.0",
+          "question_count": 10,
+          "pass_count": 1,
+          "partial_count": 0,
+          "fail_count": 9,
+          "false_positive_count": 0,
+          "answer_accuracy": 0.1,
+          "partial_rate": 0.0,
+          "false_positive_rate": 0.0,
+          "forbidden_violation_rate": 0.0,
+          "mean_ground_truth_coverage": 0.1,
+          "mean_score": 0.1,
+          "abstention_accuracy": 1.0,
+          "abstention_question_count": 1,
+          "mean_score_consistency": 1.0,
+          "category_accuracy": {
+            "abstention": 1.0,
+            "compression_recovery": 0.0,
+            "contradiction_handling": 0.0,
+            "distractor_resistance": 0.0,
+            "factual_recall": 0.0,
+            "indirect_recall": 0.0,
+            "knowledge_updates": 0.0,
+            "multi_session_recall": 0.0,
+            "reflection_reinterpretation": 0.0,
+            "temporal_reasoning": 0.0
+          }
+        }
+      ]
+    }
+  },
+  "cross_arm_selection_agreement": {
+    "classic_vs_cache": 0.1,
+    "classic_vs_gate": 0.0
+  }
+}
