@@ -607,6 +607,121 @@ def gate_sweep(dataset, sample: int, pool_sizes: list, args) -> dict:
               f"{er['selected']:>7.0%}")
     return sweep
 
+def grid_sweep(dataset, sample: int, windows: list, pools: list, args) -> dict:
+    """Joint window × gate-pool grid (Phase 8.6 operating-point search).
+
+    LLM-free.  Ingests the shared history **once**, then probes every
+    ``(window, gate_pool)`` cell so the whole grid shares one store snapshot.
+    For each cell we record:
+
+        evidence_recall_gate : GT-evidence surviving window + gate (quality)
+        gate_out_per_q       : candidates handed to ranking (cost proxy)
+        pool_reduction       : gate traffic compression
+
+    The deliverable is the Pareto frontier over (recall ↑, cost ↓) — the
+    "keep coverage, cut tokens" operating points the 3,000-call benchmark
+    should freeze.
+    """
+    from artificial_memory.recall.deepseek_engine import DeepSeekRecallEngine
+    from artificial_memory.runtime import ArtificialMemoryRuntime, RuntimeConfig
+
+    import asyncio
+
+    runtime = ArtificialMemoryRuntime(RuntimeConfig(
+        database_path=":memory:",
+        memory_files_path=None,
+        vector_index_path=None,
+        retrieval_strategy="deepseek",
+    ))
+    for scenario in dataset.scenarios:
+        for turn in scenario.turns:
+            if turn.speaker == "user":
+                asyncio.run(runtime.remember(turn.content, topic="Arena"))
+
+    topic_obj = runtime.conversation_manager.get_or_create_topic("Arena")
+    engine = runtime.recall_engine
+    assert isinstance(engine, DeepSeekRecallEngine)
+    store_all = runtime.store.get_memories(topic_id=topic_obj.id, limit=10000)
+
+    questions = []
+    for cat in ArenaCategory:
+        questions.extend(dataset.by_category(cat)[:sample])
+
+    static = not args.touch_feedback
+    grid = {
+        "recall_level": args.audit_level,
+        "static_store": static,
+        "store_memory_count": len(store_all),
+        "sample_per_category": sample,
+        "cells": [],
+    }
+    print(f"\n=== WINDOW x GATE GRID (level={args.audit_level}, "
+          f"static_store={static}, {len(questions)} questions, "
+          f"store={len(store_all)}) ===")
+    print(f"  {'window':>7} {'pool':>6} | {'ev recall':>9} | "
+          f"{'sel recall':>9} | {'gate out/q':>10} | {'reduction':>9} | damage")
+    for window in windows:
+        for pool in pools:
+            gate = MeasuredGate(pool_size=pool)
+            engine.candidate_window = window
+            engine.gate = gate
+            # The plan cache is shared across cells (one runtime): without
+            # clearing it, every later cell would REUSE the first cell's
+            # selection and the window/pool change would never reach the
+            # selected stage.  Each cell must probe a fresh plan.
+            engine.plan_cache.clear()
+            ctx = _frozen_access_stats() if static else _nullcontext()
+            with ctx:
+                rows = _probe_questions(
+                    engine, gate, runtime, store_all, questions,
+                    window, args.audit_level, pool,
+                )
+            valid = [r for r in rows if r.get("gt_groups")]
+            er = _evidence_recall(valid)
+            damage = _gate_damage(valid)
+            g = {"in": sum(r["pool_in"] for r in valid),
+                 "out": sum(r["pool_out"] for r in valid)}
+            n = len(valid)
+            out_per_q = g["out"] / n if n else 0.0
+            reduction = 1 - (g["out"] / g["in"]) if g["in"] else 0.0
+            cell = {
+                "window": window,
+                "gate_pool": pool,
+                "evidence_recall_candidates": er["candidates"],
+                "evidence_recall_gate": er["gate"],
+                "evidence_recall_selected": er["selected"],
+                "gate_in": g["in"],
+                "gate_out": g["out"],
+                "gate_out_per_question": round(out_per_q, 2),
+                "pool_reduction": round(reduction, 4),
+                "gate_damage": damage,
+            }
+            grid["cells"].append(cell)
+            print(f"  {str(window):>7} {pool:>6} | {er['gate']:>8.0%} | "
+                  f"{er['selected']:>8.0%} | {out_per_q:>10.1f} | "
+                  f"{reduction:>8.0%} | {damage:>5.1%}")
+
+    # Pareto frontier over (evidence recall at gate ↑, gate out/question ↓).
+    def _dominates(a, b):
+        return (a["evidence_recall_gate"] >= b["evidence_recall_gate"]
+                and a["gate_out_per_question"] <= b["gate_out_per_question"]
+                and (a["evidence_recall_gate"] > b["evidence_recall_gate"]
+                     or a["gate_out_per_question"] < b["gate_out_per_question"]))
+
+    frontier = [
+        c for c in grid["cells"]
+        if not any(_dominates(o, c) for o in grid["cells"] if o is not c)
+    ]
+    frontier.sort(key=lambda c: (-c["evidence_recall_gate"],
+                                 c["gate_out_per_question"]))
+    grid["pareto_frontier"] = frontier
+    print("\n  --- Pareto frontier (recall ^, cost v) ---")
+    for c in frontier:
+        print(f"    window={c['window']:>4} pool={c['gate_pool']:>3}  "
+              f"recall={c['evidence_recall_gate']:.0%}  "
+              f"out/q={c['gate_out_per_question']:.1f}  "
+              f"reduction={c['pool_reduction']:.0%}")
+    return grid
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="DeepSeek Raid small-scale A/B E2E")
@@ -621,6 +736,11 @@ def main() -> None:
     parser.add_argument("--gate-sweep", default=None,
                         help="comma list of gate pool sizes (e.g. 64,128,250,440); "
                              "swept on --wide-window to expose gate damage")
+    parser.add_argument("--grid-sweep", default=None,
+                        help="comma list of windows (e.g. 50,100,200,300,440); "
+                             "swept jointly with --grid-pools over the full grid")
+    parser.add_argument("--grid-pools", default="10,20,32,64,100",
+                        help="comma list of gate pool sizes for --grid-sweep")
     parser.add_argument("--answer-repeats", type=int, default=3)
     parser.add_argument("--latency-repeats", type=int, default=5)
     parser.add_argument("--arms", default="classic,cache,gate,gate_wide",
@@ -652,6 +772,17 @@ def main() -> None:
         out_path = out_dir / f"window_sweep_{stamp}.json"
         out_path.write_text(
             json.dumps(sweep, indent=2, ensure_ascii=False), encoding="utf-8"
+        )
+        print(f"\nevidence written: {out_path}")
+        return
+
+    if args.grid_sweep:
+        windows = [None] + [int(w) for w in args.grid_sweep.split(",") if w.strip()]
+        pools = [int(p) for p in args.grid_pools.split(",") if p.strip()]
+        grid = grid_sweep(dataset, args.audit_sample, windows, pools, args)
+        out_path = out_dir / f"grid_sweep_{stamp}.json"
+        out_path.write_text(
+            json.dumps(grid, indent=2, ensure_ascii=False), encoding="utf-8"
         )
         print(f"\nevidence written: {out_path}")
         return
