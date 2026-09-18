@@ -529,6 +529,416 @@ def gate_gt_audit(dataset, gate_pool: int, sample: int,
     return audit
 
 
+# ---------------------------------------------------------------------------
+# Phase 8.7: cheap-recall scorer comparison (LLM-free offline sweep)
+# ---------------------------------------------------------------------------
+
+
+def _tokenize(text: str) -> list:
+    """Shared tokenisation: lowercase, alnum-only, whitespace split."""
+    words = []
+    for raw in text.lower().split():
+        token = "".join(c for c in raw if c.isalnum())
+        if token:
+            words.append(token)
+    return words
+
+
+class CheapScorers:
+    """The four candidate-gate scorers under comparison.
+
+    Each scorer is a pure ``query x memory -> float`` function (higher =
+    keep).  All of them run on the *same* candidate pool, so the comparison
+    isolates the scoring function itself -- identical inputs, identical
+    budget, no runtime interaction.
+    """
+
+    def __init__(self, store_all: list):
+        from collections import Counter
+
+        self.doc_tokens = {m.id: _tokenize(m.content) for m in store_all}
+        self.n_docs = len(self.doc_tokens)
+        self.df: Counter = Counter()
+        for toks in self.doc_tokens.values():
+            self.df.update(set(toks))
+        self.avgdl = (
+            sum(len(t) for t in self.doc_tokens.values()) / self.n_docs
+            if self.n_docs else 0.0
+        )
+        # Recency signal for the hybrid scorer (created_at per memory id).
+        self.created_at = {
+            m.id: getattr(m, "created_at", None) for m in store_all
+        }
+        # Hybrid blend weights (recorded in sweep output for reproducibility).
+        self.hybrid_alpha = 0.6    # lexical (BM25) weight
+        self.hybrid_gamma = 0.05   # recency bonus weight
+        self._embedding_model = None      # lazy
+        self._memory_vectors = {}         # memory_id -> vector
+        self._query_vectors = {}          # query text -> vector (per-run cache)
+        self._encode_time_ms = 0.0
+        self.embedding_model_name = "all-MiniLM-L6-v2"
+        self._session_by_id = {}          # memory_id -> session idx (session scorer)
+
+    # -- 1. Jaccard (the current HierarchicalGate score) -------------------
+    def jaccard(self, query: str, mem) -> float:
+        q = set(_tokenize(query))
+        w = set(self.doc_tokens[mem.id])
+        union = q | w
+        return (len(q & w) / len(union)) if union else 0.0
+
+    # -- 2. BM25-like IDF-weighted lexical match ---------------------------
+    def bm25(self, query: str, mem, k1: float = 1.5, b: float = 0.75) -> float:
+        import math
+
+        q_tokens = _tokenize(query)
+        doc = self.doc_tokens[mem.id]
+        if not q_tokens or not doc:
+            return 0.0
+        tf = {}
+        for t in doc:
+            tf[t] = tf.get(t, 0) + 1
+        dl = len(doc)
+        norm = k1 * (1 - b + b * dl / (self.avgdl or 1.0))
+        score = 0.0
+        for t in set(q_tokens):
+            if t not in tf:
+                continue
+            idf = math.log(1 + (self.n_docs - self.df[t] + 0.5)
+                           / (self.df[t] + 0.5))
+            score += idf * (tf[t] * (k1 + 1)) / (tf[t] + norm)
+        return score
+
+    # -- 3. Embedding cosine (MiniLM, the project's own model) -------------
+    def set_memory_texts(self, texts_by_id: dict) -> None:
+        """Pre-encode every candidate content once (shared by all queries).
+
+        Uses the project's own loader (``get_sentence_transformer``) and
+        ``normalize_embeddings=True`` so cosine similarity is a plain dot
+        product -- identical to how ``vector_search.py`` embeds memories.
+        """
+        import time as _time
+
+        from artificial_memory.memory.embeddings import get_sentence_transformer
+
+        t0 = _time.perf_counter()
+        self._embedding_model = get_sentence_transformer(self.embedding_model_name)
+        ids = list(texts_by_id)
+        vectors = self._embedding_model.encode(
+            [texts_by_id[i] for i in ids], normalize_embeddings=True
+        )
+        self._memory_vectors = {i: v for i, v in zip(ids, vectors)}
+        self._encode_time_ms = (_time.perf_counter() - t0) * 1000
+
+    def _query_vector(self, query: str):
+        """Encode a query once per run (no per-memory re-encoding)."""
+        if query not in self._query_vectors:
+            self._query_vectors[query] = self._embedding_model.encode(
+                [query], normalize_embeddings=True
+            )[0]
+        return self._query_vectors[query]
+
+    def embedding(self, query: str, mem) -> float:
+        if self._embedding_model is None:
+            from artificial_memory.memory.embeddings import get_sentence_transformer
+
+            self._embedding_model = get_sentence_transformer(self.embedding_model_name)
+        if mem.id not in self._memory_vectors:
+            self._memory_vectors[mem.id] = self._embedding_model.encode(
+                [mem.content], normalize_embeddings=True
+            )[0]
+        q_vec = self._query_vector(query)
+        m_vec = self._memory_vectors[mem.id]
+        # Vectors are L2-normalised, so the dot product IS the cosine.
+        return float(sum(a * b for a, b in zip(q_vec, m_vec)))
+
+    # -- 4. Hybrid: BM25 + embedding + recency, per-pool normalised ---------
+    def _hybrid_pool(self, query: str, memories: list,
+                     alpha: float | None = None,
+                     gamma: float | None = None) -> list:
+        """Blend IDF-weighted lexical, semantic, and recency signals.
+
+        BM25 (unbounded) and cosine (0..1) live on different scales, so both
+        are min-max normalised *within the pool* before blending -- alpha is
+        then a real weighting.  A small recency bonus (newest = 1.0 inside
+        the pool) breaks ties toward fresh evidence without dominating.
+        Note: a per-memory_type df weight was considered but the arena store
+        is 100% SEMANTIC, so it would be a no-op -- omitted deliberately.
+        """
+        alpha = self.hybrid_alpha if alpha is None else alpha
+        gamma = self.hybrid_gamma if gamma is None else gamma
+        lex = [self.bm25(query, m) for m in memories]
+        sem = [self.embedding(query, m) for m in memories]
+
+        def _mm(values):
+            lo, hi = min(values), max(values)
+            if hi - lo < 1e-12:
+                return [0.0 for _ in values]
+            return [(v - lo) / (hi - lo) for v in values]
+
+        lex_n, sem_n = _mm(lex), _mm(sem)
+        times = [self.created_at.get(m.id) for m in memories]
+        if all(t is not None for t in times) and len(set(times)) > 1:
+            lo, hi = min(times), max(times)
+            rec = [(t - lo) / (hi - lo) for t in times]
+        else:
+            rec = [0.0 for _ in memories]
+        return [alpha * l + (1 - alpha) * s + gamma * r
+                for l, s, r in zip(lex_n, sem_n, rec)]
+
+    def score_pool(self, name: str, query: str, memories: list) -> list:
+        """Score a whole pool at once (required for intra-pool normalisation)."""
+        if name == "hybrid":
+            return self._hybrid_pool(query, memories)
+        if name == "session":
+            return self._session_pool(query, memories)
+        fn = self.get(name)
+        return [fn(query, m) for m in memories]
+
+    def set_session_map(self, session_by_id: dict) -> None:
+        """Install the memory-id -> session-index map (session scorer)."""
+        self._session_by_id = session_by_id
+
+    def _session_pool(self, query: str, memories: list) -> list:
+        """Session-granular scoring: a memory scores as its session does.
+
+        Rationale (Phase 8.7 finding): the evidence set for a question is a
+        whole *session* of memories, so any memory-granular scorer leaves
+        half the evidence session behind no matter how good it is.  Here the
+        per-session score is the MAX member BM25 (one distinctive memory
+        proves the session is relevant), and every member inherits it, with
+        a small own-BM25 fraction to order members inside a session.  Top-K
+        selection therefore takes sessions in whole blocks first.
+        """
+        own = [self.bm25(query, m) for m in memories]
+        if not self._session_by_id:
+            return own
+        # Session score = max member score over pool members.
+        session_scores: dict = {}
+        for m, o in zip(memories, own):
+            sid = self._session_by_id.get(m.id)
+            if sid is None:
+                continue
+            if o > session_scores.get(sid, float("-inf")):
+                session_scores[sid] = o
+        out = []
+        for m, o in zip(memories, own):
+            sid = self._session_by_id.get(m.id)
+            s = session_scores.get(sid)
+            # 0.1 * own keeps intra-session ordering without diluting the
+            # block structure; ungrouped memories fall back to own score.
+            out.append((s + 0.1 * o) if s is not None else o)
+        return out
+
+    def names(self) -> list:
+        return ["jaccard", "bm25", "embedding", "hybrid", "session"]
+
+    def get(self, name: str):
+        if name == "jaccard":
+            return self.jaccard
+        if name == "bm25":
+            return self.bm25
+        if name == "embedding":
+            return self.embedding
+        raise ValueError(f"unknown scorer: {name}")
+
+
+def scorer_sweep(dataset, sample: int, pools: list,
+                 windows: list | None = None, recall_level: int = 2) -> dict:
+    """Phase 8.7 scorer comparison: 4 cheap scorers x windows x K, LLM-free.
+
+    Protocol:
+      1. Ingest once, building a session -> memory-id map (each scenario is
+         one session).  The evidence set for a question is ALL memories from
+         its ``evidence_sessions`` -- the session definition is authoritative
+         because GT-term matching over-counts distractors that merely share
+         vocabulary.  GT-term matching is kept only as a fallback.
+      2. For each candidate window, fetch each question's raw pool ONCE
+         (gate detached -- identical input for every scorer).
+      3. Offline, score the pool with each scorer and keep the top-K for
+         K in ``pools``; measure evidence retention per (scorer, K).
+         K values >= the window are excluded (the gate would be a no-op).
+
+    Success criterion (Phase 8.7 exit): a scorer + window + K cell where
+    evidence retention ~= the no-gate ceiling while K is substantially below
+    the window.  If no cell qualifies, the finding is "no cheap gate works
+    on this memory structure" -- recorded as such.
+    """
+    from artificial_memory.recall.deepseek_engine import DeepSeekRecallEngine
+    from artificial_memory.runtime import ArtificialMemoryRuntime, RuntimeConfig
+    from artificial_memory.core.models import RecallLevel as RL
+
+    import asyncio
+    import time as _time
+
+    windows = windows or [440]
+
+    runtime = ArtificialMemoryRuntime(RuntimeConfig(
+        database_path=":memory:",
+        memory_files_path=None,
+        vector_index_path=None,
+        retrieval_strategy="deepseek",
+    ))
+
+    # Ingest once; each scenario is one session -> map its memories.
+    session_memories: dict[int, set] = {}
+    for idx, scenario in enumerate(dataset.scenarios):
+        ids: set = set()
+        for turn in scenario.turns:
+            if turn.speaker == "user":
+                ir = asyncio.run(runtime.remember(turn.content, topic="Arena"))
+                ids.add(ir.identity.memory_id)
+        session_memories[idx] = ids
+
+    topic_id = runtime.conversation_manager.get_or_create_topic("Arena").id
+    engine = runtime.recall_engine
+    assert isinstance(engine, DeepSeekRecallEngine)
+    engine.gate = None                      # raw pool: the scorer's input
+
+    store_all = runtime.store.get_memories(topic_id=topic_id, limit=10000)
+    scorers = CheapScorers(store_all)
+    scorers.set_memory_texts({m.id: m.content for m in store_all})
+    # Session scorer: invert the session -> ids map to id -> session.
+    scorers.set_session_map({
+        mid: sid for sid, mid_set in session_memories.items() for mid in mid_set
+    })
+
+    def _session_evidence(q) -> tuple[set, str]:
+        """Authoritative session-based evidence set (GT-term fallback)."""
+        if q.evidence_sessions:
+            merged: set = set()
+            for s in q.evidence_sessions:
+                merged |= session_memories.get(s, set())
+            return merged, "sessions"
+        return ({
+            m.id for m in store_all
+            if any(term.lower() in m.content.lower()
+                   for group in q.ground_truth for term in group)
+        }, "gt_terms")
+
+    # Question sample: first N of every category, skipping no-GT questions
+    # is done per-case (abstention-00 has no ground truth by design).
+    questions = []
+    for cat in ArenaCategory:
+        questions.extend(dataset.by_category(cat)[:sample])
+
+    # ---- per window: fetch pools once, score offline ----------------------
+    windows_results: dict = {}
+    window_meta: dict = {}
+    for window in windows:
+        engine.candidate_window = window
+        cases = []
+        with _frozen_access_stats():
+            for q in questions:
+                if not q.ground_truth:
+                    continue
+                evidence_ids, ev_mode = _session_evidence(q)
+                pool = engine._get_candidates(
+                    q.question, topic_id, RL(recall_level)
+                )
+                if pool:
+                    cases.append({"query": q.question, "pool": pool,
+                                  "evidence_ids": evidence_ids,
+                                  "evidence_mode": ev_mode})
+
+        total_evidence = sum(len(c["evidence_ids"]) for c in cases)
+        pool_evidence = sum(
+            len(c["evidence_ids"] & {m.id for m in c["pool"]}) for c in cases
+        )
+        ceiling = round(pool_evidence / total_evidence, 4) if total_evidence else 0.0
+        avg_pool = round(statistics.mean(len(c["pool"]) for c in cases), 1)
+        # Effective K values: the gate must actually narrow the pool.
+        effective_ks = [k for k in pools if k < window]
+
+        per_scorer: dict = {}
+        for name in scorers.names():
+            per_pool = {k: {"retained": 0, "score_ms": 0.0} for k in effective_ks}
+            for case in cases:
+                t0 = _time.perf_counter()
+                scores = scorers.score_pool(name, case["query"], case["pool"])
+                scored = sorted(
+                    zip(scores, case["pool"]),
+                    key=lambda t: (-t[0], t[1].id),   # order-stable tie-break
+                )
+                elapsed = (_time.perf_counter() - t0) * 1000
+                for k in effective_ks:
+                    keep_ids = {m.id for _, m in scored[:k]}
+                    per_pool[k]["retained"] += len(case["evidence_ids"] & keep_ids)
+                    per_pool[k]["score_ms"] += elapsed
+            per_scorer[name] = {
+                str(k): {
+                    "evidence_retention": round(v["retained"] / total_evidence, 4)
+                    if total_evidence else 0.0,
+                    "gate_damage": round(
+                        (pool_evidence - v["retained"]) / pool_evidence, 4
+                    ) if pool_evidence else 0.0,
+                    "score_ms_total": round(v["score_ms"], 1),
+                    "score_ms_per_query": round(v["score_ms"] / len(cases), 3),
+                }
+                for k, v in per_pool.items()
+            }
+
+        windows_results[str(window)] = per_scorer
+        window_meta[str(window)] = {
+            "questions": len(cases),
+            "avg_pool_size": avg_pool,
+            "evidence_total": total_evidence,
+            "pool_ceiling": ceiling,
+            "effective_ks": effective_ks,
+            "evidence_modes": sorted({c["evidence_mode"] for c in cases}),
+        }
+        print(f"\n  [window={window}] {len(cases)} questions, "
+              f"avg pool {avg_pool}, evidence {total_evidence}, "
+              f"ceiling {ceiling:.0%}, effective K<="
+              f"{max(effective_ks) if effective_ks else 0}")
+
+    sweep = {
+        "scorers": scorers.names(),
+        "pools": pools,
+        "windows": windows,
+        "recall_level": recall_level,
+        "hybrid_params": {
+            "alpha": scorers.hybrid_alpha,
+            "gamma": scorers.hybrid_gamma,
+            "lexical": "bm25",
+            "semantic": "embedding_cosine_minmax",
+            "recency": "created_at_minmax_in_pool",
+        },
+        "evidence_definition": (
+            "all memories from evidence_sessions (fallback: GT-term match)"
+        ),
+        "embedding_encode_ms_total": round(scorers._encode_time_ms, 1),
+        "window_meta": window_meta,
+        "results": windows_results,
+    }
+
+    print(f"\n=== SCORER SWEEP (windows={windows}, level={recall_level}) ===")
+    print(f"  evidence: {sweep['evidence_definition']}")
+    print(f"  hybrid: alpha={scorers.hybrid_alpha} (BM25) + "
+          f"{1 - scorers.hybrid_alpha:.2} (cosine) + {scorers.hybrid_gamma} recency")
+    for window in windows:
+        meta = window_meta[str(window)]
+        per = windows_results[str(window)]
+        ks = meta["effective_ks"]
+        print(f"\n  --- window={window}: ceiling {meta['pool_ceiling']:.0%} "
+              f"(evidence {meta['evidence_total']}, avg pool {meta['avg_pool_size']}) ---")
+        print("  " + f"{'scorer':<10}" + "".join(f"{'K=' + str(k):>9}" for k in ks)
+              + "   (cell = evidence retention)")
+        for name, cells in per.items():
+            row = "".join(f"{cells[str(k)]['evidence_retention']:>9.0%}" for k in ks)
+            print(f"  {name:<10}{row}")
+        print("  " + f"{'damage':<10}" + "".join(f"{'K=' + str(k):>9}" for k in ks))
+        for name, cells in per.items():
+            row = "".join(f"{cells[str(k)]['gate_damage']:>9.0%}" for k in ks)
+            print(f"  {name:<10}{row}")
+        print("  scoring time per query (ms):")
+        for name, cells in per.items():
+            first_k = ks[0] if ks else None
+            ms = cells[str(first_k)]["score_ms_per_query"] if first_k else 0.0
+            print(f"    {name:<10} {ms}")
+    return sweep
+
+
+
 def window_sweep(dataset, gate_pool: int, sample: int, windows: list, args) -> dict:
     """LLM-free candidate-window sweep: the Phase 8.5 decision table.
 
@@ -741,6 +1151,15 @@ def main() -> None:
                              "swept jointly with --grid-pools over the full grid")
     parser.add_argument("--grid-pools", default="10,20,32,64,100",
                         help="comma list of gate pool sizes for --grid-sweep")
+    parser.add_argument("--scorer-sweep", action="store_true",
+                        help="Phase 8.7: compare jaccard/bm25/embedding/hybrid "
+                             "cheap scorers over identical pools (LLM-free)")
+    parser.add_argument("--scorer-pools", default="10,20,32,64,100",
+                        help="comma list of pool sizes for --scorer-sweep")
+    parser.add_argument("--scorer-windows", default=None,
+                        help="comma list of candidate windows for "
+                             "--scorer-sweep (e.g. 50,200,440); pool is "
+                             "fetched once per window, scorers share it")
     parser.add_argument("--answer-repeats", type=int, default=3)
     parser.add_argument("--latency-repeats", type=int, default=5)
     parser.add_argument("--arms", default="classic,cache,gate,gate_wide",
@@ -783,6 +1202,24 @@ def main() -> None:
         out_path = out_dir / f"grid_sweep_{stamp}.json"
         out_path.write_text(
             json.dumps(grid, indent=2, ensure_ascii=False), encoding="utf-8"
+        )
+        print(f"\nevidence written: {out_path}")
+        return
+
+    if args.scorer_sweep:
+        pools = [int(p) for p in args.scorer_pools.split(",") if p.strip()]
+        windows = (
+            [int(w) for w in args.scorer_windows.split(",") if w.strip()]
+            if args.scorer_windows else None
+        )
+        sweep = scorer_sweep(
+            dataset, args.audit_sample, pools,
+            windows=windows,
+            recall_level=args.audit_level,
+        )
+        out_path = out_dir / f"scorer_sweep_{stamp}.json"
+        out_path.write_text(
+            json.dumps(sweep, indent=2, ensure_ascii=False), encoding="utf-8"
         )
         print(f"\nevidence written: {out_path}")
         return
