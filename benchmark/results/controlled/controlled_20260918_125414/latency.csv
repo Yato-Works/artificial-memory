@@ -1,0 +1,51 @@
+player,question_id,category,p50_ms,p95_ms,avg_ms
+Simple RAG,factual_recall-00,factual_recall,2680.3,2680.3,2680.3
+Simple RAG,multi_session_recall-00,multi_session_recall,290.6,290.6,290.6
+Simple RAG,temporal_reasoning-00,temporal_reasoning,359.7,359.7,359.7
+Simple RAG,knowledge_updates-00,knowledge_updates,461.1,461.1,461.1
+Simple RAG,contradiction_handling-00,contradiction_handling,503.4,503.4,503.4
+Simple RAG,indirect_recall-00,indirect_recall,408.2,408.2,408.2
+Simple RAG,distractor_resistance-00,distractor_resistance,213.7,213.7,213.7
+Simple RAG,abstention-00,abstention,202.9,202.9,202.9
+Simple RAG,compression_recovery-00,compression_recovery,233.5,233.5,233.5
+Simple RAG,reflection_reinterpretation-00,reflection_reinterpretation,379.2,379.2,379.2
+MemoryBank-style,factual_recall-00,factual_recall,186.0,186.0,186.0
+MemoryBank-style,multi_session_recall-00,multi_session_recall,184.4,184.4,184.4
+MemoryBank-style,temporal_reasoning-00,temporal_reasoning,215.1,215.1,215.1
+MemoryBank-style,knowledge_updates-00,knowledge_updates,175.7,175.7,175.7
+MemoryBank-style,contradiction_handling-00,contradiction_handling,155.4,155.4,155.4
+MemoryBank-style,indirect_recall-00,indirect_recall,172.2,172.2,172.2
+MemoryBank-style,distractor_resistance-00,distractor_resistance,177.9,177.9,177.9
+MemoryBank-style,abstention-00,abstention,183.5,183.5,183.5
+MemoryBank-style,compression_recovery-00,compression_recovery,237.5,237.5,237.5
+MemoryBank-style,reflection_reinterpretation-00,reflection_reinterpretation,382.9,382.9,382.9
+MemGPT-style,factual_recall-00,factual_recall,309.7,309.7,309.7
+MemGPT-style,multi_session_recall-00,multi_session_recall,313.5,313.5,313.5
+MemGPT-style,temporal_reasoning-00,temporal_reasoning,401.2,401.2,401.2
+MemGPT-style,knowledge_updates-00,knowledge_updates,372.1,372.1,372.1
+MemGPT-style,contradiction_handling-00,contradiction_handling,348.2,348.2,348.2
+MemGPT-style,indirect_recall-00,indirect_recall,382.3,382.3,382.3
+MemGPT-style,distractor_resistance-00,distractor_resistance,370.9,370.9,370.9
+MemGPT-style,abstention-00,abstention,305.8,305.8,305.8
+MemGPT-style,compression_recovery-00,compression_recovery,402.2,402.2,402.2
+MemGPT-style,reflection_reinterpretation-00,reflection_reinterpretation,506.5,506.5,506.5
+Mem0-style,factual_recall-00,factual_recall,285.3,285.3,285.3
+Mem0-style,multi_session_recall-00,multi_session_recall,253.0,253.0,253.0
+Mem0-style,temporal_reasoning-00,temporal_reasoning,142.2,142.2,142.2
+Mem0-style,knowledge_updates-00,knowledge_updates,123.8,123.8,123.8
+Mem0-style,contradiction_handling-00,contradiction_handling,265.3,265.3,265.3
+Mem0-style,indirect_recall-00,indirect_recall,145.8,145.8,145.8
+Mem0-style,distractor_resistance-00,distractor_resistance,137.8,137.8,137.8
+Mem0-style,abstention-00,abstention,120.3,120.3,120.3
+Mem0-style,compression_recovery-00,compression_recovery,130.5,130.5,130.5
+Mem0-style,reflection_reinterpretation-00,reflection_reinterpretation,210.4,210.4,210.4
+AM v0.2.0,factual_recall-00,factual_recall,302.7,302.7,302.7
+AM v0.2.0,multi_session_recall-00,multi_session_recall,568.2,568.2,568.2
+AM v0.2.0,temporal_reasoning-00,temporal_reasoning,296.7,296.7,296.7
+AM v0.2.0,knowledge_updates-00,knowledge_updates,282.3,282.3,282.3
+AM v0.2.0,contradiction_handling-00,contradiction_handling,292.6,292.6,292.6
+AM v0.2.0,indirect_recall-00,indirect_recall,292.2,292.2,292.2
+AM v0.2.0,distractor_resistance-00,distractor_resistance,292.0,292.0,292.0
+AM v0.2.0,abstention-00,abstention,241.6,241.6,241.6
+AM v0.2.0,compression_recovery-00,compression_recovery,267.6,267.6,267.6
+AM v0.2.0,reflection_reinterpretation-00,reflection_reinterpretation,395.3,395.3,395.3

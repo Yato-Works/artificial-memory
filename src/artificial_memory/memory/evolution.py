@@ -19,7 +19,14 @@ from artificial_memory.core.models import (
 
 
 class EvolutionOperationType(StrEnum):
-    """Types of memory evolution operations."""
+    """Types of memory lifecycle operations (v0.2.0 Phase 1).
+
+    The v0.2.0 plan defines nine first-class lifecycle operations:
+    KEEP / REINFORCE / COMPRESS / MERGE / REINTERPRET / ARCHIVE / RESTORE /
+    CONTRADICT / REJECT. COMPRESS is owned by the compression pipeline,
+    ARCHIVE is a status transition, and CONTRADICT is routed through the
+    contradiction module; the remaining operations are handled here.
+    """
     REVISE = "revise"           # Update memory with new evidence
     MERGE = "merge"             # Combine multiple memories
     SPLIT = "split"             # Divide a memory into parts
@@ -27,6 +34,15 @@ class EvolutionOperationType(StrEnum):
     SUPERSEDE = "supersede"     # Replace with newer version
     REACTIVATE = "reactivate"   # Bring back from archive
     HEAL = "heal"               # Repair from integrity check
+    # --- v0.2.0 Phase 1 additions ---
+    REINFORCE = "reinforce"     # Strengthen confidence via evidence / use
+    REINTERPRET = "reinterpret" # Derive a new interpretation from evidence
+    RESTORE = "restore"         # Recover resolution from stored versions
+    KEEP = "keep"               # Explicit decision to retain as-is
+    REJECT = "reject"           # Explicit decision to stop retaining
+    # --- v0.2.0 Phase 2 additions ---
+    TRANSITION = "transition"   # Lifecycle / temporal state transition
+
 
 
 @dataclass
@@ -334,7 +350,130 @@ class MemoryEvolutionEngine:
 
         return sections if sections else [content]
 
+    # ==================== Reinforcement (v0.2.0) ====================
+
+    def reinforce_memory(
+        self,
+        memory_id: int,
+        evidence_source: str = "recall",
+        amount: float = 0.05,
+        reason: str = "",
+        triggered_by: str = "auto",
+    ) -> Memory:
+        """Reinforce a memory with supporting evidence or successful use.
+
+        Reinforcement raises confidence (bounded to 1.0) and refreshes the
+        access signal. Content is never modified, so no version snapshot is
+        required - the full audit trail lives in the evolution event.
+        """
+        memory = self.store.get_memory(memory_id)
+        if not memory:
+            raise ValueError(f"Memory {memory_id} not found")
+
+        if amount < 0:
+            raise ValueError("Reinforcement amount must be non-negative")
+
+        old_confidence = memory.confidence
+        memory.confidence = min(1.0, memory.confidence + amount)
+        memory.touch()
+        memory = self.store.update_memory(memory)
+
+        event = EvolutionEvent(
+            memory_id=memory_id,
+            operation=EvolutionOperationType.REINFORCE,
+            description=reason or f"Reinforced via {evidence_source}",
+            metadata={
+                "evidence_source": evidence_source,
+                "amount": amount,
+                "old_confidence": old_confidence,
+                "new_confidence": memory.confidence,
+                "reason": reason,
+            },
+            triggered_by=triggered_by,
+        )
+        self._log_evolution_event(event)
+
+        return memory
+
+    # ==================== Reinterpretation (v0.2.0) ====================
+
+    def reinterpret_memory(
+        self,
+        memory_id: int,
+        interpretation: str,
+        confidence: float = 0.7,
+        supersede: bool = False,
+        evidence_source: str = "runtime",
+        triggered_by: str = "auto",
+    ) -> Memory:
+        """Derive a new interpretation from an existing memory's evidence.
+
+        The original memory is preserved untouched as the evidence record;
+        the interpretation becomes a new SEMANTIC memory linked to it via an
+        ELABORATES association (same convention as superseding revisions).
+        With ``supersede=True`` the source memory is marked archived and no
+        longer current, while its evidence remains fully recoverable.
+
+        Note: interpretation *generation* by an LLM arrives in Phase 5; here
+        the interpretation text is supplied by the caller (deterministic).
+        """
+        source = self.store.get_memory(memory_id)
+        if not source:
+            raise ValueError(f"Memory {memory_id} not found")
+
+        if not interpretation.strip():
+            raise ValueError("Interpretation must be a non-empty string")
+
+        confidence = max(0.0, min(1.0, confidence))
+
+        new_memory = Memory(
+            topic_id=source.topic_id,
+            memory_type=MemoryType.SEMANTIC,
+            content=interpretation,
+            resolution=ResolutionLevel.SEMANTIC,
+            importance=source.importance,
+            confidence=confidence,
+            status=MemoryStatus.ACTIVE,
+            valid_from=datetime.now(),
+            is_current=True,
+            source_conversation_id=source.source_conversation_id,
+        )
+        new_memory = self.store.create_memory(new_memory)
+
+        self.store.create_association(Association(
+            source_memory_id=source.id,
+            target_memory_id=new_memory.id,
+            association_type=AssociationType.ELABORATES,
+            strength=0.8,
+        ))
+
+        if supersede:
+            source.status = MemoryStatus.ARCHIVED
+            source.is_current = False
+            source.updated_at = datetime.now()
+            self.store.update_memory(source)
+
+        event = EvolutionEvent(
+            memory_id=memory_id,
+            operation=EvolutionOperationType.REINTERPRET,
+            source_memory_ids=[source.id] if source.id is not None else [],
+            target_memory_id=new_memory.id,
+            description="Reinterpreted evidence into a new semantic memory",
+            old_content=source.content,
+            new_content=interpretation,
+            metadata={
+                "evidence_source": evidence_source,
+                "confidence": confidence,
+                "supersede": supersede,
+            },
+            triggered_by=triggered_by,
+        )
+        self._log_evolution_event(event)
+
+        return new_memory
+
     # ==================== Reactivation ====================
+
 
     def reactivate_memory(self, memory_id: int) -> Memory:
         """Reactivate an archived memory (e.g., after recall)."""
@@ -367,7 +506,134 @@ class MemoryEvolutionEngine:
 
         return memory
 
+    # ==================== Restoration (v0.2.0) ====================
+
+    def restore_memory(
+        self,
+        memory_id: int,
+        target_resolution: ResolutionLevel | None = None,
+        triggered_by: str = "auto",
+    ) -> Memory:
+        """Restore an archived / compressed memory from stored versions.
+
+        Resolution recovery: the most detailed stored version at or below the
+        requested ``target_resolution`` (default SEMANTIC) is restored as the
+        memory's current representation, and the memory becomes active again.
+        If no more detailed version exists, the memory is still reactivated
+        at its current resolution. History is preserved: nothing is deleted.
+        """
+        memory = self.store.get_memory(memory_id)
+        if not memory:
+            raise ValueError(f"Memory {memory_id} not found")
+
+        target = target_resolution or ResolutionLevel.SEMANTIC
+
+        versions = self.store.get_memory_versions(memory_id)
+        candidates = [
+            version
+            for version in versions
+            # Lower ResolutionLevel value = more detail. Restore must move
+            # toward more detail than the current representation, while
+            # staying within the requested target resolution.
+            if version.resolution.value < memory.resolution.value
+            and version.resolution.value <= target.value
+        ]
+
+        restored_from: ResolutionLevel | None = None
+        if candidates:
+            best = min(candidates, key=lambda version: version.resolution.value)
+            memory.content = best.content
+            memory.resolution = best.resolution
+            restored_from = best.resolution
+
+        memory.status = MemoryStatus.ACTIVE
+        memory.is_current = True
+        memory.touch()
+        memory = self.store.update_memory(memory)
+
+        event = EvolutionEvent(
+            memory_id=memory_id,
+            operation=EvolutionOperationType.RESTORE,
+            description=(
+                f"Restored from version at {restored_from.name}"
+                if restored_from is not None
+                else "Reactivated (no more detailed version available)"
+            ),
+            metadata={
+                "target_resolution": target.name,
+                "restored_from": restored_from.name if restored_from is not None else None,
+            },
+            triggered_by=triggered_by,
+        )
+        self._log_evolution_event(event)
+
+        return memory
+
+    # ==================== Keep / Reject (v0.2.0) ====================
+
+    def keep_memory(
+        self,
+        memory_id: int,
+        reason: str = "",
+        triggered_by: str = "policy",
+    ) -> Memory:
+        """Explicitly retain a memory as-is (policy decision: KEEP).
+
+        Content, resolution, and scores are unchanged; the decision itself is
+        the mutation and is recorded as a first-class evolution event.
+        """
+        memory = self.store.get_memory(memory_id)
+        if not memory:
+            raise ValueError(f"Memory {memory_id} not found")
+
+        memory.touch()
+        memory = self.store.update_memory(memory)
+
+        event = EvolutionEvent(
+            memory_id=memory_id,
+            operation=EvolutionOperationType.KEEP,
+            description=reason or "Explicit retention decision (KEEP)",
+            metadata={"reason": reason},
+            triggered_by=triggered_by,
+        )
+        self._log_evolution_event(event)
+
+        return memory
+
+    def reject_memory(
+        self,
+        memory_id: int,
+        reason: str = "",
+        triggered_by: str = "policy",
+    ) -> Memory:
+        """Explicitly stop retaining a memory as current truth (policy: REJECT).
+
+        The memory is not deleted: it becomes DORMANT and non-current so the
+        evidence remains auditable, consistent with "forgetting = resolution
+        down, not deletion".
+        """
+        memory = self.store.get_memory(memory_id)
+        if not memory:
+            raise ValueError(f"Memory {memory_id} not found")
+
+        memory.status = MemoryStatus.DORMANT
+        memory.is_current = False
+        memory.updated_at = datetime.now()
+        memory = self.store.update_memory(memory)
+
+        event = EvolutionEvent(
+            memory_id=memory_id,
+            operation=EvolutionOperationType.REJECT,
+            description=reason or "Explicit retention decision (REJECT)",
+            metadata={"reason": reason},
+            triggered_by=triggered_by,
+        )
+        self._log_evolution_event(event)
+
+        return memory
+
     # ==================== Healing ====================
+
 
     def heal_memory(
         self,
@@ -476,33 +742,38 @@ class MemoryEvolutionEngine:
         return func(content, {})
 
     def _log_evolution_event(self, event: EvolutionEvent) -> None:
-        """Persist evolution event to storage (P0-5).
+        """Persist evolution event to storage (P0-5)."""
+        log_evolution_event(self.store, event)
 
-        Every meaningful memory change (revise/merge/split/heal/...) is
-        written to the evolution_events table for full traceability.
-        Falls back to in-memory ring buffer for stores without persistence.
-        """
-        from artificial_memory.core.models import EvolutionEventRecord
 
-        record = EvolutionEventRecord(
-            id=event.id,
-            memory_id=event.memory_id,
-            operation=event.operation.value,
-            source_memory_ids=list(event.source_memory_ids),
-            target_memory_id=event.target_memory_id,
-            description=event.description,
-            old_content=event.old_content,
-            new_content=event.new_content,
-            metadata=dict(event.metadata),
-            triggered_by=event.triggered_by,
-            created_at=event.created_at,
-        )
-        try:
-            saved = self.store.add_evolution_event(record)
-            event.id = saved.id
-        except AttributeError:
-            # Store backend without evolution event persistence
-            pass
+def log_evolution_event(store: MemoryStore, event: EvolutionEvent) -> None:
+    """Persist an evolution event to storage (shared by all lifecycle managers).
+
+    Every meaningful memory change (revise/merge/supersede/transition/...) is
+    written to the evolution_events table for full traceability. Falls back
+    silently for stores without evolution event persistence.
+    """
+    from artificial_memory.core.models import EvolutionEventRecord
+
+    record = EvolutionEventRecord(
+        id=event.id,
+        memory_id=event.memory_id,
+        operation=event.operation.value,
+        source_memory_ids=list(event.source_memory_ids),
+        target_memory_id=event.target_memory_id,
+        description=event.description,
+        old_content=event.old_content,
+        new_content=event.new_content,
+        metadata=dict(event.metadata),
+        triggered_by=event.triggered_by,
+        created_at=event.created_at,
+    )
+    try:
+        saved = store.add_evolution_event(record)
+        event.id = saved.id
+    except AttributeError:
+        # Store backend without evolution event persistence
+        pass
 
 
 def create_memory_evolution_engine(

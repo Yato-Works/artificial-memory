@@ -686,7 +686,7 @@ class PostgresMemoryStore:
         return association
 
     def get_associations(self, memory_id: int, association_type: AssociationType | None = None) -> list[Association]:
-        query = "SELECT * FROM associations WHERE source_memory_id = %s OR target_memory_id = %s"
+        query = "SELECT * FROM associations WHERE (source_memory_id = %s OR target_memory_id = %s)"
         params = [memory_id, memory_id]
         if association_type:
             query += " AND association_type = %s"

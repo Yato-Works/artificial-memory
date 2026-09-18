@@ -1,0 +1,21 @@
+player,question_id,category,repeat_index,is_official,outcome,score,correct,ground_truth_coverage,covered_groups,must_total,forbidden_violation,forbidden_hits,abstention_detected,answer_empty,score_consistency,answer_text
+Simple RAG,factual_recall-00,factual_recall,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,ripgrep
+Simple RAG,factual_recall-00,factual_recall,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,ripgrep
+Simple RAG,multi_session_recall-00,multi_session_recall,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Rust
+Simple RAG,multi_session_recall-00,multi_session_recall,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Rust
+Simple RAG,temporal_reasoning-00,temporal_reasoning,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+Simple RAG,temporal_reasoning-00,temporal_reasoning,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+Simple RAG,knowledge_updates-00,knowledge_updates,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,ClickHouse
+Simple RAG,knowledge_updates-00,knowledge_updates,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,ClickHouse
+Simple RAG,contradiction_handling-00,contradiction_handling,majority,1,partial,0.5,0,0.5,1,2,0,,0,0,1.0,Redis
+Simple RAG,contradiction_handling-00,contradiction_handling,0,0,partial,0.5,0,0.5,1,2,0,,0,0,1.0,Redis
+Simple RAG,indirect_recall-00,indirect_recall,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Kyoto
+Simple RAG,indirect_recall-00,indirect_recall,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Kyoto
+Simple RAG,distractor_resistance-00,distractor_resistance,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,ripgrep
+Simple RAG,distractor_resistance-00,distractor_resistance,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,ripgrep
+Simple RAG,abstention-00,abstention,majority,1,false_positive,0.0,0,1.0,0,0,0,,0,0,1.0,tokei
+Simple RAG,abstention-00,abstention,0,0,false_positive,0.0,0,1.0,0,0,0,,0,0,1.0,tokei
+Simple RAG,compression_recovery-00,compression_recovery,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Serial AM-1160
+Simple RAG,compression_recovery-00,compression_recovery,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Serial AM-1160
+Simple RAG,reflection_reinterpretation-00,reflection_reinterpretation,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Preferring to revert to the last known good state after changes.
+Simple RAG,reflection_reinterpretation-00,reflection_reinterpretation,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Preferring to revert to the last known good state after changes.

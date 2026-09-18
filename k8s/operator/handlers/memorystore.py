@@ -1,11 +1,12 @@
 """MemoryStore CRD handler."""
 
+import logging
+from datetime import datetime
+from typing import Any
+
 import kopf
 import kubernetes.client
 from kubernetes.client.rest import ApiException
-import logging
-from typing import Dict, Any
-from datetime import datetime
 
 logger = logging.getLogger(__name__)
 
@@ -26,7 +27,7 @@ def get_k8s_custom_objects():
     return kubernetes.client.CustomObjectsApi()
 
 
-def create_condition(condition_type: str, status: str, reason: str, message: str) -> Dict[str, Any]:
+def create_condition(condition_type: str, status: str, reason: str, message: str) -> dict[str, Any]:
     return {
         "type": condition_type,
         "status": status,
@@ -36,7 +37,7 @@ def create_condition(condition_type: str, status: str, reason: str, message: str
     }
 
 
-def update_status(custom_api, namespace: str, name: str, status: Dict[str, Any]):
+def update_status(custom_api, namespace: str, name: str, status: dict[str, Any]):
     try:
         custom_api.patch_namespaced_custom_object_status(
             group=API_GROUP,
@@ -52,7 +53,7 @@ def update_status(custom_api, namespace: str, name: str, status: Dict[str, Any])
 
 @kopf.on.create(API_GROUP, API_VERSION, STORE_PLURAL)
 @kopf.on.update(API_GROUP, API_VERSION, STORE_PLURAL)
-def reconcile_store(spec: Dict[str, Any], name: str, namespace: str, status: Dict[str, Any], logger: logging.Logger, **_) -> Dict[str, Any]:
+def reconcile_store(spec: dict[str, Any], name: str, namespace: str, status: dict[str, Any], logger: logging.Logger, **_) -> dict[str, Any]:
     logger.info(f"Reconciling MemoryStore {namespace}/{name}")
 
     custom_api = get_k8s_custom_objects()
@@ -105,14 +106,14 @@ def reconcile_store(spec: Dict[str, Any], name: str, namespace: str, status: Dic
         raise
 
 
-def reconcile_postgres_store(core_api, custom_api, namespace: str, name: str, spec: Dict[str, Any], logger: logging.Logger) -> bool:
+def reconcile_postgres_store(core_api, custom_api, namespace: str, name: str, spec: dict[str, Any], logger: logging.Logger) -> bool:
     """Reconcile PostgreSQL store (typically external)."""
     pg_spec = spec.get("postgres", {})
     secret_ref = pg_spec.get("secretRef")
 
     if secret_ref:
         try:
-            secret = core_api.read_namespaced_secret(name=secret_ref, namespace=namespace)
+            core_api.read_namespaced_secret(name=secret_ref, namespace=namespace)
             logger.info(f"Found PostgreSQL secret {secret_ref}")
             return True
         except ApiException as e:
@@ -127,10 +128,17 @@ def reconcile_postgres_store(core_api, custom_api, namespace: str, name: str, sp
         return True
 
 
-def reconcile_sqlite_store(apps_api, core_api, namespace: str, name: str, spec: Dict[str, Any], logger: logging.Logger) -> bool:
-    """Reconcile SQLite store with PVC."""
-    sqlite_spec = spec.get("sqlite", {})
-    path = sqlite_spec.get("path", "/data/memory.db")
+def reconcile_sqlite_store(apps_api, core_api, namespace: str, name: str, spec: dict[str, Any], logger: logging.Logger) -> bool:
+    """Reconcile SQLite store with PVC.
+
+    NOTE: the CR fields ``sqlite.path`` and ``spec.storage`` are not propagated
+    to the PVC below (storage size is fixed at 10Gi), because creating the PVC is
+    the only reconciliation this operator performs for the SQLite backend today.
+    This is a known gap, tracked in
+    ``docs/reports/v0.2.0-phase6-engineering-review.md`` ("Remaining Work"), not
+    an unused-variable oversight: the previous ``_ = sqlite_spec.get("path", ...)``
+    read only made the gap invisible.
+    """
 
     # Create PVC
     pvc_name = f"{name}-data"

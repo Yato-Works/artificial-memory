@@ -1,0 +1,51 @@
+player,question_id,category,context_tokens,retrieval_ms,context_build_ms,answer_ms,total_latency_ms
+Simple RAG,factual_recall-00,factual_recall,397,14.4,0.0,2680.3,2680.3
+Simple RAG,multi_session_recall-00,multi_session_recall,369,18.1,0.0,290.6,290.6
+Simple RAG,temporal_reasoning-00,temporal_reasoning,381,17.7,0.0,359.7,359.7
+Simple RAG,knowledge_updates-00,knowledge_updates,331,24.9,0.0,461.1,461.1
+Simple RAG,contradiction_handling-00,contradiction_handling,415,19.3,0.0,503.4,503.4
+Simple RAG,indirect_recall-00,indirect_recall,378,17.9,0.0,408.2,408.2
+Simple RAG,distractor_resistance-00,distractor_resistance,366,28.3,0.0,213.7,213.7
+Simple RAG,abstention-00,abstention,370,19.0,0.0,202.9,202.9
+Simple RAG,compression_recovery-00,compression_recovery,467,16.5,0.0,233.5,233.5
+Simple RAG,reflection_reinterpretation-00,reflection_reinterpretation,400,17.8,0.0,379.2,379.2
+MemoryBank-style,factual_recall-00,factual_recall,397,17.4,0.0,186.0,186.0
+MemoryBank-style,multi_session_recall-00,multi_session_recall,369,18.2,0.0,184.4,184.4
+MemoryBank-style,temporal_reasoning-00,temporal_reasoning,381,17.8,0.0,215.1,215.1
+MemoryBank-style,knowledge_updates-00,knowledge_updates,331,18.4,0.0,175.7,175.7
+MemoryBank-style,contradiction_handling-00,contradiction_handling,415,18.3,0.0,155.4,155.4
+MemoryBank-style,indirect_recall-00,indirect_recall,378,19.2,0.0,172.2,172.2
+MemoryBank-style,distractor_resistance-00,distractor_resistance,366,18.8,0.0,177.9,177.9
+MemoryBank-style,abstention-00,abstention,370,18.2,0.0,183.5,183.5
+MemoryBank-style,compression_recovery-00,compression_recovery,467,18.1,0.0,237.5,237.5
+MemoryBank-style,reflection_reinterpretation-00,reflection_reinterpretation,400,19.7,0.0,382.9,382.9
+MemGPT-style,factual_recall-00,factual_recall,486,18.5,0.0,309.7,309.7
+MemGPT-style,multi_session_recall-00,multi_session_recall,458,18.1,0.0,313.5,313.5
+MemGPT-style,temporal_reasoning-00,temporal_reasoning,470,17.7,0.0,401.2,401.2
+MemGPT-style,knowledge_updates-00,knowledge_updates,420,19.3,0.0,372.1,372.1
+MemGPT-style,contradiction_handling-00,contradiction_handling,504,16.7,0.0,348.2,348.2
+MemGPT-style,indirect_recall-00,indirect_recall,467,17.6,0.0,382.3,382.3
+MemGPT-style,distractor_resistance-00,distractor_resistance,455,18.5,0.1,370.9,370.9
+MemGPT-style,abstention-00,abstention,459,20.0,0.0,305.8,305.8
+MemGPT-style,compression_recovery-00,compression_recovery,556,16.2,0.0,402.2,402.2
+MemGPT-style,reflection_reinterpretation-00,reflection_reinterpretation,489,19.2,0.0,506.5,506.5
+Mem0-style,factual_recall-00,factual_recall,0,2.1,0.0,285.3,285.3
+Mem0-style,multi_session_recall-00,multi_session_recall,0,0.2,0.0,253.0,253.0
+Mem0-style,temporal_reasoning-00,temporal_reasoning,0,0.2,0.0,142.2,142.2
+Mem0-style,knowledge_updates-00,knowledge_updates,0,0.2,0.0,123.8,123.8
+Mem0-style,contradiction_handling-00,contradiction_handling,0,0.2,0.0,265.3,265.3
+Mem0-style,indirect_recall-00,indirect_recall,0,0.2,0.0,145.8,145.8
+Mem0-style,distractor_resistance-00,distractor_resistance,0,0.2,0.0,137.8,137.8
+Mem0-style,abstention-00,abstention,0,0.2,0.0,120.3,120.3
+Mem0-style,compression_recovery-00,compression_recovery,0,0.2,0.0,130.5,130.5
+Mem0-style,reflection_reinterpretation-00,reflection_reinterpretation,0,0.2,0.0,210.4,210.4
+AM v0.2.0,factual_recall-00,factual_recall,522,47.6,0.0,302.7,302.7
+AM v0.2.0,multi_session_recall-00,multi_session_recall,494,32.7,0.0,568.2,568.2
+AM v0.2.0,temporal_reasoning-00,temporal_reasoning,527,34.8,0.0,296.7,296.7
+AM v0.2.0,knowledge_updates-00,knowledge_updates,500,22.7,0.0,282.3,282.3
+AM v0.2.0,contradiction_handling-00,contradiction_handling,515,23.5,0.0,292.6,292.6
+AM v0.2.0,indirect_recall-00,indirect_recall,514,20.9,0.0,292.2,292.2
+AM v0.2.0,distractor_resistance-00,distractor_resistance,535,25.5,0.0,292.0,292.0
+AM v0.2.0,abstention-00,abstention,533,18.4,0.0,241.6,241.6
+AM v0.2.0,compression_recovery-00,compression_recovery,535,15.9,0.0,267.6,267.6
+AM v0.2.0,reflection_reinterpretation-00,reflection_reinterpretation,524,16.0,0.0,395.3,395.3

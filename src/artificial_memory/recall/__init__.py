@@ -7,6 +7,16 @@ from artificial_memory.recall.human_recall import (
     RecallMode,
     create_human_recall_engine,
 )
+from artificial_memory.recall.predictive import (
+    PredictiveRecallConfig,
+    PredictiveRecallEngine,
+    PrefetchCache,
+    PrefetchEntry,
+    PrefetchResult,
+    TopicPrediction,
+    TopicPredictor,
+    create_predictive_recall_engine,
+)
 
 __all__ = [
     "BasicRecallEngine",
@@ -15,4 +25,12 @@ __all__ = [
     "HumanRecallResult",
     "RecallMode",
     "create_human_recall_engine",
+    "PrefetchCache",
+    "PrefetchEntry",
+    "PrefetchResult",
+    "PredictiveRecallConfig",
+    "PredictiveRecallEngine",
+    "TopicPrediction",
+    "TopicPredictor",
+    "create_predictive_recall_engine",
 ]

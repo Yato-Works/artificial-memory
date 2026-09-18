@@ -641,7 +641,7 @@ class SQLiteMemoryStore:
         return association
 
     def get_associations(self, memory_id: int, association_type: AssociationType | None = None) -> list[Association]:
-        query = "SELECT * FROM associations WHERE source_memory_id = ? OR target_memory_id = ?"
+        query = "SELECT * FROM associations WHERE (source_memory_id = ? OR target_memory_id = ?)"
         params = [memory_id, memory_id]
         if association_type:
             query += " AND association_type = ?"

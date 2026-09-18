@@ -372,8 +372,8 @@ def create_benchmark_manifest(
         parameters={
             "benchmark_name": benchmark_name,
             "benchmark_parameters": parameters,
+            "expected_metrics": expected_metrics,
         },
-        expected_metrics=expected_metrics,
         seed=42,
         tags=["benchmark", benchmark_name],
     )

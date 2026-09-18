@@ -1,11 +1,12 @@
 """VectorIndex CRD handler."""
 
+import logging
+from datetime import datetime
+from typing import Any
+
 import kopf
 import kubernetes.client
 from kubernetes.client.rest import ApiException
-import logging
-from typing import Dict, Any
-from datetime import datetime
 
 logger = logging.getLogger(__name__)
 
@@ -26,7 +27,7 @@ def get_k8s_custom_objects():
     return kubernetes.client.CustomObjectsApi()
 
 
-def create_condition(condition_type: str, status: str, reason: str, message: str) -> Dict[str, Any]:
+def create_condition(condition_type: str, status: str, reason: str, message: str) -> dict[str, Any]:
     return {
         "type": condition_type,
         "status": status,
@@ -36,7 +37,7 @@ def create_condition(condition_type: str, status: str, reason: str, message: str
     }
 
 
-def update_status(custom_api, namespace: str, name: str, status: Dict[str, Any]):
+def update_status(custom_api, namespace: str, name: str, status: dict[str, Any]):
     try:
         custom_api.patch_namespaced_custom_object_status(
             group=API_GROUP,
@@ -52,7 +53,7 @@ def update_status(custom_api, namespace: str, name: str, status: Dict[str, Any])
 
 @kopf.on.create(API_GROUP, API_VERSION, INDEX_PLURAL)
 @kopf.on.update(API_GROUP, API_VERSION, INDEX_PLURAL)
-def reconcile_vector_index(spec: Dict[str, Any], name: str, namespace: str, status: Dict[str, Any], logger: logging.Logger, **_) -> Dict[str, Any]:
+def reconcile_vector_index(spec: dict[str, Any], name: str, namespace: str, status: dict[str, Any], logger: logging.Logger, **_) -> dict[str, Any]:
     logger.info(f"Reconciling VectorIndex {namespace}/{name}")
 
     custom_api = get_k8s_custom_objects()
@@ -73,11 +74,7 @@ def reconcile_vector_index(spec: Dict[str, Any], name: str, namespace: str, stat
         }
 
     cluster_ref = spec.get("clusterRef")
-    dimension = spec.get("dimension", 384)
-    index_type = spec.get("indexType", "hnsw")
     storage = spec.get("storage", {})
-    sync = spec.get("sync", {})
-    image = spec.get("image", "artificial-memory-vector-index:latest")
 
     try:
         if storage.get("backend") == "pgvector":
@@ -112,7 +109,7 @@ def reconcile_vector_index(spec: Dict[str, Any], name: str, namespace: str, stat
         raise
 
 
-def reconcile_pgvector_index(core_api: kubernetes.client.CoreV1Api, namespace: str, name: str, cluster_ref: str, spec: Dict[str, Any], logger: logging.Logger) -> bool:
+def reconcile_pgvector_index(core_api: kubernetes.client.CoreV1Api, namespace: str, name: str, cluster_ref: str, spec: dict[str, Any], logger: logging.Logger) -> bool:
     """pgvector index is managed via PostgreSQL - just verify connection."""
     logger.info(f"pgvector index for {cluster_ref} - managed by PostgreSQL")
     return True
@@ -124,7 +121,7 @@ def reconcile_faiss_index(
     namespace: str,
     name: str,
     cluster_ref: str,
-    spec: Dict[str, Any],
+    spec: dict[str, Any],
     logger: logging.Logger,
 ) -> bool:
     """Reconcile standalone FAISS index deployment."""

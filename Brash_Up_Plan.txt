@@ -1,0 +1,638 @@
+# Artificial Memory v0.2.0
+
+## Overnight Engineering Audit & OSS Polish
+
+You are working on **Artificial Memory v0.2.0**, an open-source long-term memory runtime for AI systems.
+
+The project is currently **midway through Phase 6 (Predictive Recall)**.
+
+Before moving into benchmark preparation and final evaluation, perform a **full engineering review and polish pass of everything implemented so far**.
+
+This is not a feature-development task.
+
+The objective is to turn the current implementation into a **clean, maintainable, well-structured, OSS-quality codebase suitable for public evaluation and benchmarking**.
+
+---
+
+# 1. Primary Objective
+
+Review the current repository and improve it according to the following priorities:
+
+1. Correctness
+2. Maintainability
+3. Architectural consistency
+4. Readability
+5. Testability
+6. OSS quality
+7. Documentation quality
+8. Performance where improvements are low-risk
+9. Removal of unnecessary technical debt
+10. Benchmark readiness
+
+Do **not** introduce major new features unless they are strictly necessary to fix an existing architectural problem.
+
+The goal is:
+
+> **Polish what exists. Do not redesign the project for the sake of redesigning it.**
+
+---
+
+# 2. First Step — Understand the Current State
+
+Before making changes:
+
+1. Inspect the repository structure.
+2. Read the existing architecture documentation.
+3. Read the implementation of all completed phases.
+4. Read the test suite.
+5. Inspect recent changes and current git state.
+6. Identify unfinished Phase 6 work.
+7. Identify technical debt introduced during rapid development.
+8. Build a clear mental model of the current architecture.
+
+Do not make assumptions about what has already been implemented.
+
+Verify it from the actual repository.
+
+---
+
+# 3. Phase-by-Phase Audit
+
+Review all completed functionality up to the current Phase 6 state.
+
+For each subsystem, determine:
+
+* What it is supposed to do
+* What it currently does
+* Whether the implementation matches the design
+* Whether the API is coherent
+* Whether there is duplicated logic
+* Whether there is dead code
+* Whether there are hidden coupling problems
+* Whether tests adequately cover important behavior
+* Whether naming is consistent
+* Whether error handling is appropriate
+* Whether there are obvious performance problems
+* Whether the subsystem is ready for external users
+
+Pay particular attention to integration boundaries between:
+
+```text
+Memory Formation
+Memory IR
+Memory Evolution
+Temporal State
+Contradiction Handling
+Memory Graph
+Memory Reconstruction
+Context Allocation
+Background Reflection
+Predictive Recall
+Audit / Provenance
+Storage
+MCP / external interfaces
+```
+
+---
+
+# 4. OSS Code Quality Pass
+
+Artificial Memory is an open-source project.
+
+Clean the codebase accordingly.
+
+## Remove unnecessary comments
+
+Remove comments that merely restate what the code already says.
+
+For example, avoid comments like:
+
+```python
+# Increment access count
+access_count += 1
+```
+
+Keep comments only when they explain:
+
+* non-obvious behavior,
+* architectural reasoning,
+* tricky edge cases,
+* invariants,
+* compatibility constraints,
+* safety assumptions,
+* or deliberate trade-offs.
+
+Prefer self-documenting code over explanatory comment spam.
+
+---
+
+# 5. Dead Code and Technical Debt
+
+Look for:
+
+* unused functions,
+* unused imports,
+* obsolete compatibility layers,
+* abandoned experiments,
+* duplicate utilities,
+* duplicated business logic,
+* unnecessary wrappers,
+* unreachable branches,
+* stale TODOs,
+* temporary debugging code,
+* commented-out old implementations,
+* test-only hacks that leaked into production code.
+
+Remove these where safe.
+
+Do not delete something merely because it is unused if it is clearly part of a public API or intended extension point.
+
+When uncertain, preserve the API and document the uncertainty.
+
+---
+
+# 6. Refactoring Rules
+
+Refactor code when doing so improves:
+
+* cohesion,
+* separation of concerns,
+* testability,
+* readability,
+* or long-term maintainability.
+
+Prefer small, composable modules.
+
+Avoid giant "manager" classes that contain unrelated responsibilities.
+
+Avoid unnecessary abstraction layers.
+
+Avoid rewriting stable components merely because another implementation looks cleaner.
+
+The resulting architecture should remain understandable to a new contributor.
+
+---
+
+# 7. API Consistency
+
+Check all public interfaces for consistency.
+
+Look for:
+
+* inconsistent naming,
+* inconsistent parameter conventions,
+* inconsistent return types,
+* inconsistent error handling,
+* inconsistent async/sync behavior,
+* leaking internal implementation details,
+* confusing object ownership,
+* surprising mutation behavior.
+
+Public APIs should communicate intent clearly.
+
+Where appropriate, preserve backward compatibility with the existing v0.2.0 API.
+
+Do not break existing functionality merely to make naming aesthetically cleaner.
+
+---
+
+# 8. Memory Lifecycle Integrity
+
+Pay special attention to the core AM thesis:
+
+> **Forgetting = Resolution Down, not Deletion.**
+
+Make sure implemented lifecycle operations preserve this principle.
+
+Review:
+
+```text
+RAW
+LIGHT
+EPISODE
+SEMANTIC
+LONG_TERM
+DEEP_LONG_TERM
+```
+
+and ensure that resolution transitions are:
+
+* explicit,
+* predictable,
+* testable,
+* reversible where intended,
+* and properly represented in provenance/history.
+
+Check that compression or archival does not accidentally destroy information that the architecture claims remains recoverable.
+
+---
+
+# 9. Evolution and Reflection Safety
+
+Review the Memory Evolution and Background Reflection implementation.
+
+Ensure that LLM-driven or heuristic-driven changes do not directly mutate arbitrary state without appropriate validation.
+
+Prefer the pattern:
+
+```text
+Observation
+    ↓
+Proposal
+    ↓
+Validation / Policy
+    ↓
+Mutation
+    ↓
+Audit Event
+```
+
+Check that mutations such as:
+
+```text
+REINFORCE
+COMPRESS
+MERGE
+REINTERPRET
+ARCHIVE
+RESTORE
+CONTRADICT
+REJECT
+```
+
+remain auditable.
+
+Avoid hidden state changes.
+
+---
+
+# 10. Provenance and Audit
+
+Verify that important memory mutations preserve:
+
+* source,
+* timestamp,
+* previous state,
+* resulting state,
+* operation,
+* reason,
+* relevant evidence,
+* actor / subsystem.
+
+A researcher or contributor should be able to inspect a memory and understand how it evolved.
+
+Fix any places where provenance is silently lost during:
+
+* compression,
+* merging,
+* reinterpretation,
+* restoration,
+* graph expansion,
+* or retrieval.
+
+---
+
+# 11. Predictive Recall Review
+
+Because Phase 6 is currently in progress, review its implementation carefully.
+
+Separate:
+
+```text
+prediction
+prefetch
+cache
+context injection
+```
+
+These should not accidentally become one operation.
+
+Predictive recall should not automatically pollute the active LLM context.
+
+Verify that prefetched memories remain available without being injected unless the context allocator determines they are useful.
+
+Also check:
+
+* cache invalidation,
+* stale predictions,
+* duplicate prefetches,
+* unnecessary computation,
+* failure behavior.
+
+Do not over-engineer Phase 6 beyond what is already implemented.
+
+---
+
+# 12. Testing
+
+Run the complete existing test suite.
+
+Then improve tests where necessary.
+
+Prioritize tests for:
+
+* memory lifecycle,
+* resolution transitions,
+* contradiction handling,
+* temporal state,
+* provenance,
+* reflection mutations,
+* reconstruction,
+* context allocation,
+* predictive recall,
+* archive / restore behavior,
+* public APIs.
+
+Do not weaken or remove tests simply because they fail after refactoring.
+
+Fix the implementation or update the test only when the intended behavior has genuinely changed.
+
+---
+
+# 13. Regression Safety
+
+The following must remain stable unless there is a documented reason for change:
+
+* existing public APIs,
+* existing successful test behavior,
+* memory semantics,
+* provenance guarantees,
+* core architecture,
+* documented MCP behavior,
+* benchmark-related interfaces.
+
+Avoid introducing changes that could make benchmark results incomparable with earlier AM versions unless they are part of the defined v0.2.0 architecture.
+
+---
+
+# 14. Performance Review
+
+Look for obvious inefficiencies such as:
+
+* unnecessary repeated embedding,
+* duplicate database queries,
+* redundant graph traversals,
+* repeated serialization,
+* unnecessary LLM calls,
+* uncontrolled reflection loops,
+* excessive context construction,
+* inefficient cache behavior.
+
+Fix low-risk performance issues.
+
+Do not perform speculative micro-optimizations.
+
+Preserve readability.
+
+---
+
+# 15. Security and Reliability Review
+
+Inspect for obvious issues including:
+
+* unsafe file operations,
+* uncontrolled resource usage,
+* missing validation,
+* silent exception swallowing,
+* unbounded recursion,
+* unbounded queues,
+* accidental credential exposure,
+* unsafe external input handling,
+* non-deterministic behavior that should be deterministic.
+
+This is a local-first OSS runtime.
+
+Avoid introducing unnecessary network dependencies.
+
+---
+
+# 16. Documentation Cleanup
+
+Review documentation affected by the implementation.
+
+Make sure documentation does not claim features that do not exist.
+
+Make sure architecture descriptions match the code.
+
+Remove outdated implementation notes.
+
+Prefer concise documentation over excessive repetition.
+
+Keep detailed architectural rationale in dedicated design documents rather than filling source files with comments.
+
+---
+
+# 17. Benchmark Readiness
+
+Do not build the final benchmark yet unless an existing issue directly blocks benchmark infrastructure.
+
+Instead, make sure the codebase is ready for benchmarking.
+
+Verify that:
+
+* runs can be reproduced,
+* configuration is explicit,
+* model settings are not hard-coded unexpectedly,
+* random seeds can be controlled where relevant,
+* logs can be separated from benchmark results,
+* outputs can be serialized deterministically,
+* memory state can be inspected,
+* benchmark harnesses will be able to interact with the runtime cleanly.
+
+The benchmark must later be able to evaluate AM without requiring special internal hacks.
+
+---
+
+# 18. Preserve Research Integrity
+
+Do not optimize the implementation specifically for hypothetical benchmark questions.
+
+Do not introduce benchmark-specific special cases.
+
+Do not hard-code expected answers.
+
+Do not create hidden heuristics that only work for the planned evaluation dataset.
+
+Artificial Memory should remain a general-purpose memory runtime.
+
+---
+
+# 19. Quality Bar
+
+Before finishing, ask:
+
+### Architecture
+
+* Can a new contributor understand the major components quickly?
+* Are responsibilities clearly separated?
+* Are there unnecessary dependencies?
+
+### Code
+
+* Is naming consistent?
+* Are functions reasonably sized?
+* Are abstractions justified?
+* Is there unnecessary complexity?
+
+### Memory Semantics
+
+* Is the resolution model preserved?
+* Are contradictions explicit?
+* Is provenance preserved?
+* Are lifecycle transitions understandable?
+
+### OSS
+
+* Would I be comfortable publishing this exact repository publicly?
+* Would a reviewer understand why the code is structured this way?
+* Are comments explaining *why* rather than *what*?
+
+### Research
+
+* Can this implementation be evaluated reproducibly?
+* Are behavior and configuration observable?
+* Are important state transitions auditable?
+
+---
+
+# 20. Required Deliverables
+
+At the end of the task, provide:
+
+## A. Cleaned Repository
+
+The repository itself should contain the actual improvements.
+
+---
+
+## B. Engineering Review Report
+
+Create:
+
+```text
+docs/reports/v0.2.0-phase6-engineering-review.md
+```
+
+Include:
+
+```text
+Current State
+Completed Components
+Issues Found
+Refactors Performed
+Technical Debt Removed
+Tests Added / Modified
+Performance Improvements
+Potential Risks
+Remaining Technical Debt
+Benchmark Readiness
+Recommended Next Steps
+```
+
+---
+
+## C. Change Summary
+
+Provide a concise summary of:
+
+```text
+Files changed
+Major refactors
+Removed dead code
+Comment cleanup
+Tests added
+Potential breaking changes
+```
+
+---
+
+## D. Remaining Work
+
+Explicitly identify anything that should **not** be changed during this pass.
+
+For example:
+
+```text
+Phase 6 unfinished work
+known experimental components
+benchmark-specific future work
+architectural questions still under research
+```
+
+Do not hide uncertainty.
+
+---
+
+# 21. Final Verification
+
+Before declaring the task complete:
+
+1. Run the full test suite.
+2. Verify that tests pass.
+3. Check formatting/linting if configured.
+4. Check that no debugging artifacts remain.
+5. Search for TODO/FIXME markers introduced by the current development cycle.
+6. Review the final diff.
+7. Verify documentation consistency.
+8. Verify that no accidental API breaks were introduced.
+9. Verify that no benchmark-specific hacks were introduced.
+10. Produce the engineering review report.
+
+If tests fail, investigate and fix them where safe.
+
+Do not simply report failures without attempting to resolve them.
+
+---
+
+# 22. Important Constraint
+
+This is an **engineering polish and audit pass**.
+
+Do not turn it into a new architecture project.
+
+Do not replace the current design wholesale.
+
+Do not add speculative features.
+
+Do not optimize for code golf.
+
+Do not reduce functionality for the sake of simplicity.
+
+The target is:
+
+> **The same Artificial Memory v0.2.0 architecture, but cleaner, more maintainable, more testable, more auditable, and ready to enter serious benchmark evaluation.**
+
+---
+
+# 23. Final Output
+
+When finished, report:
+
+```text
+PHASE 6 OVERNIGHT POLISH COMPLETE
+
+Repository:
+[summary]
+
+Tests:
+[results]
+
+Major Improvements:
+[list]
+
+Technical Debt Removed:
+[list]
+
+Benchmark Readiness:
+[assessment]
+
+Remaining Issues:
+[list]
+
+Recommended Next Step:
+[one clear recommendation]
+```
+
+Do not claim completion for work that was not actually performed.
+
+Accuracy is more important than appearing successful.

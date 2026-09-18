@@ -1,11 +1,12 @@
 """ArtificialMemoryCluster CRD handler."""
 
+import logging
+from datetime import datetime
+from typing import Any
+
 import kopf
 import kubernetes.client
 from kubernetes.client.rest import ApiException
-import logging
-from typing import Dict, Any, Optional
-from datetime import datetime
 
 logger = logging.getLogger(__name__)
 
@@ -29,7 +30,7 @@ def get_k8s_custom_objects():
     return kubernetes.client.CustomObjectsApi()
 
 
-def create_condition(condition_type: str, status: str, reason: str, message: str) -> Dict[str, Any]:
+def create_condition(condition_type: str, status: str, reason: str, message: str) -> dict[str, Any]:
     """Create a condition dict."""
     return {
         "type": condition_type,
@@ -44,7 +45,7 @@ def update_status(
     custom_api: kubernetes.client.CustomObjectsApi,
     namespace: str,
     name: str,
-    status: Dict[str, Any],
+    status: dict[str, Any],
 ) -> None:
     """Update CRD status."""
     try:
@@ -63,13 +64,13 @@ def update_status(
 @kopf.on.create(API_GROUP, API_VERSION, CLUSTER_PLURAL)
 @kopf.on.update(API_GROUP, API_VERSION, CLUSTER_PLURAL)
 def reconcile_cluster(
-    spec: Dict[str, Any],
+    spec: dict[str, Any],
     name: str,
     namespace: str,
-    status: Dict[str, Any],
+    status: dict[str, Any],
     logger: logging.Logger,
     **_,
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """Reconcile ArtificialMemoryCluster."""
     logger.info(f"Reconciling ArtificialMemoryCluster {namespace}/{name}")
 
@@ -153,7 +154,7 @@ def reconcile_storage(
     custom_api: kubernetes.client.CustomObjectsApi,
     namespace: str,
     cluster_name: str,
-    spec: Dict[str, Any],
+    spec: dict[str, Any],
     logger: logging.Logger,
 ) -> bool:
     """Reconcile MemoryStore for the cluster."""
@@ -214,7 +215,7 @@ def reconcile_vector_index(
     custom_api: kubernetes.client.CustomObjectsApi,
     namespace: str,
     cluster_name: str,
-    spec: Dict[str, Any],
+    spec: dict[str, Any],
     logger: logging.Logger,
 ) -> bool:
     """Reconcile VectorIndex for the cluster."""
@@ -274,9 +275,9 @@ def reconcile_runtime(
     custom_api: kubernetes.client.CustomObjectsApi,
     namespace: str,
     cluster_name: str,
-    spec: Dict[str, Any],
+    spec: dict[str, Any],
     logger: logging.Logger,
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """Reconcile runtime deployments (recall, consolidation, compiler workers)."""
     runtime_spec = spec.get("runtime", {})
     image_spec = spec.get("image", {})
@@ -343,7 +344,7 @@ def reconcile_deployment(
     replicas: int,
     image: str,
     worker_type: str,
-    cluster_spec: Dict[str, Any],
+    cluster_spec: dict[str, Any],
     logger: logging.Logger,
 ) -> int:
     """Reconcile a single deployment."""

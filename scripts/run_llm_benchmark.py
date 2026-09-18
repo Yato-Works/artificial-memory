@@ -111,7 +111,6 @@ async def run(models: list[str], n_questions: int, seed: int) -> dict:
     for m in store.get_memories(limit=10000):
         engine.add_memory(m)
         by_content[m.content] = m.id
-    content_to_case = {c["content"]: c for c in cases}
 
     compressor = RuleBasedCompressor()
     all_contents = [c["content"] for c in cases]

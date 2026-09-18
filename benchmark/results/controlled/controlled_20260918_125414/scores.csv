@@ -1,0 +1,101 @@
+player,question_id,category,repeat_index,is_official,outcome,score,correct,ground_truth_coverage,covered_groups,must_total,forbidden_violation,forbidden_hits,abstention_detected,answer_empty,score_consistency,answer_text
+Simple RAG,factual_recall-00,factual_recall,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,ripgrep
+Simple RAG,factual_recall-00,factual_recall,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,ripgrep
+Simple RAG,multi_session_recall-00,multi_session_recall,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Rust
+Simple RAG,multi_session_recall-00,multi_session_recall,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Rust
+Simple RAG,temporal_reasoning-00,temporal_reasoning,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+Simple RAG,temporal_reasoning-00,temporal_reasoning,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+Simple RAG,knowledge_updates-00,knowledge_updates,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,ClickHouse
+Simple RAG,knowledge_updates-00,knowledge_updates,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,ClickHouse
+Simple RAG,contradiction_handling-00,contradiction_handling,majority,1,partial,0.5,0,0.5,1,2,0,,0,0,1.0,Redis
+Simple RAG,contradiction_handling-00,contradiction_handling,0,0,partial,0.5,0,0.5,1,2,0,,0,0,1.0,Redis
+Simple RAG,indirect_recall-00,indirect_recall,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Kyoto
+Simple RAG,indirect_recall-00,indirect_recall,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Kyoto
+Simple RAG,distractor_resistance-00,distractor_resistance,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,ripgrep
+Simple RAG,distractor_resistance-00,distractor_resistance,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,ripgrep
+Simple RAG,abstention-00,abstention,majority,1,false_positive,0.0,0,1.0,0,0,0,,0,0,1.0,tokei
+Simple RAG,abstention-00,abstention,0,0,false_positive,0.0,0,1.0,0,0,0,,0,0,1.0,tokei
+Simple RAG,compression_recovery-00,compression_recovery,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Serial AM-1160
+Simple RAG,compression_recovery-00,compression_recovery,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Serial AM-1160
+Simple RAG,reflection_reinterpretation-00,reflection_reinterpretation,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Preferring to revert to the last known good state after changes.
+Simple RAG,reflection_reinterpretation-00,reflection_reinterpretation,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Preferring to revert to the last known good state after changes.
+MemoryBank-style,factual_recall-00,factual_recall,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,ripgrep
+MemoryBank-style,factual_recall-00,factual_recall,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,ripgrep
+MemoryBank-style,multi_session_recall-00,multi_session_recall,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Rust
+MemoryBank-style,multi_session_recall-00,multi_session_recall,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Rust
+MemoryBank-style,temporal_reasoning-00,temporal_reasoning,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+MemoryBank-style,temporal_reasoning-00,temporal_reasoning,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+MemoryBank-style,knowledge_updates-00,knowledge_updates,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,ClickHouse
+MemoryBank-style,knowledge_updates-00,knowledge_updates,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,ClickHouse
+MemoryBank-style,contradiction_handling-00,contradiction_handling,majority,1,partial,0.5,0,0.5,1,2,0,,0,0,1.0,Redis
+MemoryBank-style,contradiction_handling-00,contradiction_handling,0,0,partial,0.5,0,0.5,1,2,0,,0,0,1.0,Redis
+MemoryBank-style,indirect_recall-00,indirect_recall,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Kyoto
+MemoryBank-style,indirect_recall-00,indirect_recall,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Kyoto
+MemoryBank-style,distractor_resistance-00,distractor_resistance,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,ripgrep
+MemoryBank-style,distractor_resistance-00,distractor_resistance,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,ripgrep
+MemoryBank-style,abstention-00,abstention,majority,1,false_positive,0.0,0,1.0,0,0,0,,0,0,1.0,tokei
+MemoryBank-style,abstention-00,abstention,0,0,false_positive,0.0,0,1.0,0,0,0,,0,0,1.0,tokei
+MemoryBank-style,compression_recovery-00,compression_recovery,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Serial AM-1160
+MemoryBank-style,compression_recovery-00,compression_recovery,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Serial AM-1160
+MemoryBank-style,reflection_reinterpretation-00,reflection_reinterpretation,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Preferring to revert to the last known good state after changes.
+MemoryBank-style,reflection_reinterpretation-00,reflection_reinterpretation,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Preferring to revert to the last known good state after changes.
+MemGPT-style,factual_recall-00,factual_recall,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,ripgrep
+MemGPT-style,factual_recall-00,factual_recall,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,ripgrep
+MemGPT-style,multi_session_recall-00,multi_session_recall,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Rust
+MemGPT-style,multi_session_recall-00,multi_session_recall,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Rust
+MemGPT-style,temporal_reasoning-00,temporal_reasoning,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+MemGPT-style,temporal_reasoning-00,temporal_reasoning,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+MemGPT-style,knowledge_updates-00,knowledge_updates,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,ClickHouse
+MemGPT-style,knowledge_updates-00,knowledge_updates,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,ClickHouse
+MemGPT-style,contradiction_handling-00,contradiction_handling,majority,1,partial,0.5,0,0.5,1,2,0,,0,0,1.0,Redis
+MemGPT-style,contradiction_handling-00,contradiction_handling,0,0,partial,0.5,0,0.5,1,2,0,,0,0,1.0,Redis
+MemGPT-style,indirect_recall-00,indirect_recall,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Kyoto
+MemGPT-style,indirect_recall-00,indirect_recall,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Kyoto
+MemGPT-style,distractor_resistance-00,distractor_resistance,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,ripgrep
+MemGPT-style,distractor_resistance-00,distractor_resistance,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,ripgrep
+MemGPT-style,abstention-00,abstention,majority,1,false_positive,0.0,0,1.0,0,0,0,,0,0,1.0,tokei
+MemGPT-style,abstention-00,abstention,0,0,false_positive,0.0,0,1.0,0,0,0,,0,0,1.0,tokei
+MemGPT-style,compression_recovery-00,compression_recovery,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1160
+MemGPT-style,compression_recovery-00,compression_recovery,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1160
+MemGPT-style,reflection_reinterpretation-00,reflection_reinterpretation,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring ripgrep as the editor toolchain.
+MemGPT-style,reflection_reinterpretation-00,reflection_reinterpretation,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring ripgrep as the editor toolchain.
+Mem0-style,factual_recall-00,factual_recall,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Visual Studio Code
+Mem0-style,factual_recall-00,factual_recall,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Visual Studio Code
+Mem0-style,multi_session_recall-00,multi_session_recall,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,"Project Atlas, Geography, and Cartography."
+Mem0-style,multi_session_recall-00,multi_session_recall,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,"Project Atlas, Geography, and Cartography."
+Mem0-style,temporal_reasoning-00,temporal_reasoning,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+Mem0-style,temporal_reasoning-00,temporal_reasoning,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+Mem0-style,knowledge_updates-00,knowledge_updates,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Google Drive
+Mem0-style,knowledge_updates-00,knowledge_updates,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Google Drive
+Mem0-style,contradiction_handling-00,contradiction_handling,majority,1,fail,0.0,0,0.0,0,2,0,,0,0,1.0,Answer: Project Atlas runs on the Cache Layer 2.
+Mem0-style,contradiction_handling-00,contradiction_handling,0,0,fail,0.0,0,0.0,0,2,0,,0,0,1.0,Answer: Project Atlas runs on the Cache Layer 2.
+Mem0-style,indirect_recall-00,indirect_recall,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+Mem0-style,indirect_recall-00,indirect_recall,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+Mem0-style,distractor_resistance-00,distractor_resistance,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Google Drive File Stream
+Mem0-style,distractor_resistance-00,distractor_resistance,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Google Drive File Stream
+Mem0-style,abstention-00,abstention,majority,1,false_positive,0.0,0,1.0,0,0,0,,0,0,1.0,Visual Studio Code
+Mem0-style,abstention-00,abstention,0,0,false_positive,0.0,0,1.0,0,0,0,,0,0,1.0,Visual Studio Code
+Mem0-style,compression_recovery-00,compression_recovery,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+Mem0-style,compression_recovery-00,compression_recovery,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+Mem0-style,reflection_reinterpretation-00,reflection_reinterpretation,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,"A preference for detailed, comprehensive information."
+Mem0-style,reflection_reinterpretation-00,reflection_reinterpretation,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,"A preference for detailed, comprehensive information."
+AM v0.2.0,factual_recall-00,factual_recall,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,factual_recall-00,factual_recall,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,multi_session_recall-00,multi_session_recall,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,"The user began studying, practised, and later recommended the use of symlinking files."
+AM v0.2.0,multi_session_recall-00,multi_session_recall,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,"The user began studying, practised, and later recommended the use of symlinking files."
+AM v0.2.0,temporal_reasoning-00,temporal_reasoning,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,Unknown location
+AM v0.2.0,temporal_reasoning-00,temporal_reasoning,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,Unknown location
+AM v0.2.0,knowledge_updates-00,knowledge_updates,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,knowledge_updates-00,knowledge_updates,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-00,contradiction_handling,majority,1,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-00,contradiction_handling,0,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,indirect_recall-00,indirect_recall,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,indirect_recall-00,indirect_recall,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-00,distractor_resistance,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-00,distractor_resistance,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,abstention-00,abstention,majority,1,pass,1.0,1,1.0,0,0,0,,1,0,1.0,I don't know.
+AM v0.2.0,abstention-00,abstention,0,0,pass,1.0,1,1.0,0,0,0,,1,0,1.0,I don't know.
+AM v0.2.0,compression_recovery-00,compression_recovery,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,compression_recovery-00,compression_recovery,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,reflection_reinterpretation-00,reflection_reinterpretation,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Copying files by hand instead of using symlinks.
+AM v0.2.0,reflection_reinterpretation-00,reflection_reinterpretation,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Copying files by hand instead of using symlinks.

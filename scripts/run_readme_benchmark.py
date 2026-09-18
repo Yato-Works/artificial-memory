@@ -37,7 +37,6 @@ sys.path.insert(0, str(REPO_ROOT / "src"))
 
 from artificial_memory.compression.compressor import RuleBasedCompressor  # noqa: E402
 from artificial_memory.runtime import ArtificialMemoryRuntime, RuntimeConfig  # noqa: E402
-from artificial_memory.storage.sqlite_store import SQLiteMemoryStore  # noqa: E402
 
 _T0_GLOBAL = time.perf_counter()
 
@@ -221,7 +220,6 @@ async def run_benchmark(n_memories: int, n_queries: int, seed: int) -> dict:
         metrics_output_dir=str(tmp / "metrics"),
     )
     am = ArtificialMemoryRuntime(cfg)
-    store: SQLiteMemoryStore = am.store  # type: ignore[assignment]
     model_load_s = time.perf_counter() - _T0_GLOBAL
     result: dict = {"meta": {}, "metrics": {}}
 

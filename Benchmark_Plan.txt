@@ -1,0 +1,919 @@
+# Phase 8 — Memory Arena 正式設計書
+
+**Project:** Artificial Memory (AM)
+**Target:** AM v0.2.0
+**Status:** Rev.2.1 — Spec Freeze（Phase 8.2 実装時凍結項目確定）
+**Date:** 2026-09-18
+**Owner:** Yato-Works
+
+## 0. Revision History
+
+* Rev.1 (2026-09-18): Draft for implementation freeze
+* Rev.2 (2026-09-18): Spec freeze — 8 amendments
+  1. Controlled抽出LLMのモデル固定（何をさせるかは戦略として非固定）
+  2. Controlled context budget = 2,000 tokens固定（sweepは補助実験へ分離）
+  3. M1–M8 ↔ arena v1 データセット対応表の追加（M7/M8はプロトコル測定）
+  4. Real-System Arenaの回答抽出プロトコル規定
+  5. R0（MemoryBank reference）を optional / stretch 化
+  6. Repeat protocol（回答3回 / latency 5回以上）の規定
+  7. Real-System Arenaではcontext budgetを強制せずnative behaviorを実測
+  8. Write-side LLM cost（call数 / tokens）を必須メトリクス化
+* Rev.2.1 (2026-09-18): Phase 8.2 実装時の凍結項目確定（結果に影響するため記録）
+  1. 凍結モデルを `phi4-mini:latest` に決定（`qwen3:4b` は本Ollama環境でthinking抑制不可。
+     §5 モデル選定の記録を参照）。実装前の決定でありPhase 8.2結果はこの構成で統一
+  2. `write_llm_calls` はLLM呼び出しのみを数える（非LLM書き込みは`calls=0`＋latencyのみ）。
+     `write latency` はE2Eで二重計上しない（§6 計測セマンティクス）
+  3. 凍結promptはコード内定数と完全一致させる。`/no_think` は非思考型モデルのため不採用
+
+## 1. Executive Summary
+
+Phase 8では、AM v0.2.0を既存の長期記憶・コンテキスト管理系と同一評価基盤上で比較する。
+
+比較は二層に分離する。
+
+### Controlled Strategy Arena
+
+* Simple RAG
+* MemoryBank-style
+* MemGPT-style
+* Mem0-style
+* AM v0.2.0
+
+同一データセット、同一回答LLM、同一埋め込み、同一採点系で、**記憶戦略そのものの差**を比較する。
+
+### Real-System Arena
+
+* Mem0 OSS
+* Letta
+* MemoryBank reference implementation（再現可能な場合）
+* AM v0.2.0
+
+実際のソフトウェアが持つmemory extraction、retrieval、reranking、context management、agent loop等を含め、**End-to-End system performance**として比較する。
+
+本ベンチマークの目的はAMを勝たせることではない。
+
+> 「どこでAMが強いか」
+> 「どこでAMが弱いか」
+> 「なぜその差が発生したか」
+
+を再現可能な形で明らかにすることを目的とする。
+
+### 全体構造（Rev.2 最終仕様）
+
+```text
+                 PHASE 8 MEMORY ARENA
+                         │
+          ┌──────────────┴──────────────┐
+          │                             │
+     CONTROLLED ARENA              REAL ARENA
+          │                             │
+   同一条件で戦略比較              実装そのものを比較
+          │                             │
+   Simple RAG                    Mem0 OSS
+   MemoryBank-style              Letta
+   MemGPT-style                  MemoryBank ref (optional)
+   Mem0-style                    AM v0.2.0
+   AM v0.2.0
+          │
+          ├── fixed LLM（回答・抽出ともモデル固定）
+          ├── fixed embedding
+          ├── fixed dataset（arena v1 / sha256凍結）
+          ├── fixed scoring（用語群ベース・judge不要）
+          ├── fixed 2K context budget
+          └── write-side cost も必須測定
+                         │
+                         ↓
+                  Mechanism Analysis
+                         │
+           Observed → Mechanism
+                    → Trade-off
+                    → Action
+```
+
+---
+
+## 2. Research Questions
+
+### RQ1
+
+Vector-only retrievalとhybrid/entity-aware retrievalでは、記憶検索品質がどう変化するか。
+
+### RQ2
+
+Hierarchical context managementはtoken efficiencyとlatencyにどのようなtrade-offを与えるか。
+
+### RQ3
+
+Importance / decay / consolidationはlong-horizon memoryのretentionとfreshnessにどう影響するか。
+
+### RQ4
+
+Memory IR + Context IRの分離はcontext token efficiencyにどの程度寄与するか。
+
+### RQ5
+
+Provenance / temporal state / contradiction handlingは、単純なfact storeと異なるfailure modeをどの程度減らせるか。
+
+### RQ6
+
+既存memory systemに存在し、AM v0.2.0に不足している機構は何か。
+
+---
+
+## 3. Benchmark Subjects
+
+| ID | Subject              | Class      | Purpose                               |
+| -- | -------------------- | ---------- | ------------------------------------- |
+| S0 | Simple RAG           | Controlled | 最低限の基準線                               |
+| S1 | MemoryBank-style     | Controlled | importance / decay / consolidation    |
+| S2 | MemGPT-style         | Controlled | hierarchical context                  |
+| S3 | Mem0-style           | Controlled | extraction + hybrid retrieval         |
+| S4 | AM v0.2.0            | Controlled | System Under Test                     |
+| R0 | MemoryBank reference | Real       | 実装比較                                  |
+| R1 | Letta                | Real       | 現行MemGPT系実装                           |
+| R2 | Mem0 OSS             | Real       | production-oriented OSS memory system |
+| R3 | AM v0.2.0            | Real       | System Under Test                     |
+
+`MemGPT`は研究システムとして扱い、現行の実戦比較対象には`Letta`を使用する。
+
+R0（MemoryBank reference implementation）は **optional / stretch** とする。
+再現できない場合でも、本計画の凍結基準・Acceptance Criteria（§13）には影響しない。
+
+---
+
+## 4. Mem0 Baseline Specification
+
+Mem0については、Controlled版とReal版を完全に分離する。
+
+### Mem0-style
+
+概念的には、
+
+```text
+Messages
+   ↓
+LLM Memory Extraction
+   ↓
+Candidate Memories
+   ↓
+Dedup / Conflict Handling
+   ↓
+Vector + Metadata Storage
+   ↓
+Semantic / Keyword / Entity Signals
+   ↓
+Ranking / Fusion
+   ↓
+Top-K Memories
+```
+
+を再現する。
+
+これはMem0の内部コードを複製するものではなく、公開仕様・論文・実装から観測される**戦略特性の再実装**とする。
+
+特に現行OSSアルゴリズムで観測される以下の2点は再現対象の核であり、これを落として「Mem0-style」を実装すると比較対象の核が失われるため、必須要件とする：
+
+* 書き込み時の **single-pass ADD-only extraction**（LLMによるmemory抽出）
+* 検索時の **semantic / BM25 / entity の multi-signal retrieval**
+
+### Mem0 OSS
+
+実際の固定バージョンを使用する。
+
+必ず以下を記録する。
+
+* Mem0 version
+* Git SHA
+* LLM
+* embedding model
+* vector store
+* reranker
+* top_k
+* threshold
+* filters
+* Python version
+* OS
+* hardware
+
+### Graph Memory
+
+Mem0 OSSとPlatform Graph Memoryは別実験として扱う。
+
+```text
+Real Arena
+ ├─ Mem0 OSS
+ └─ Mem0 Platform Graph
+```
+
+を混同しない。
+
+---
+
+## 5. Fairness Rules
+
+公平性とは「全Playerを同じアルゴリズムにすること」ではなく、
+
+> **同一条件で、それぞれの本来の機構を測定すること**
+
+と定義する。
+
+### 固定するもの
+
+* dataset
+* question order
+* session boundaries
+* timestamps
+* final answer model
+* embedding model
+* tokenizer
+* temperature
+* evaluation prompt
+* scoring implementation
+* hardware class
+* measurement protocol
+* extraction LLM model（書き込み時にLLMを使う戦略では、回答LLMと同一のローカルモデルに固定）
+* Controlled context budget = 2,000 tokens（Official Budget）
+
+### 固定しないもの
+
+* memory extraction
+* reranking
+* summarization
+* entity resolution
+* context paging
+* agent loop
+* native caching
+
+これらは各システム固有の設計として測定対象に含める。
+
+抽出LLMについては厳密に以下とする：
+
+* 固定する： **どのモデルか**（モデル差の統制）
+* 固定しない： **何をLLMにさせるか / いつ呼ぶか / どれだけ要約するか**（戦略の個性）
+
+MemoryBankは論文上、日次イベント／グローバルイベントのsummaryや
+personality summaryにLLMを使う一方で、retrieval自体はdense retrieval + FAISS
+である。このようにLLM呼び出しの有無・位置は戦略ごとに異なってよい。
+全PlayerにLLM extractionを強制するのではない。
+
+### Controlled Context Budget
+
+Controlled Arenaでは、回答時にプレイヤーへ渡すコンテキストの上限を
+
+> **Official Context Budget = 2,000 tokens**
+
+に固定する。予算超過はプロトコル違反として `failures.jsonl` に記録する。
+実際に使用したトークン量は `final context tokens` として常に記録する。
+
+補助実験として **budget sweep（1,000 / 2,000 / 4,000 tokens）** を行い、
+「少ないcontextでもAMは強いか」を測定する。sweep結果は公式比較から分離し、
+参考値として報告する。
+
+### Real-System Context
+
+Real-System Arenaでは2,000 token予算を強制しない。LettaやMem0はそれぞれ
+自身のcontext management（retrieval後のprompt enrichment等を含む）を持つため、
+
+> **Native behaviorを維持したまま、実際に使用したcontext tokensを測る**
+
+を基本とする。
+
+```text
+Controlled:  同一 2,000 token budget → 戦略比較
+Real:        Native context management → 実測 context tokens
+```
+
+この2つを混同しない。
+
+### Fixed LLM Configuration（Phase 8.2 Spec Freeze）
+
+Controlled Arenaの全Playerが、回答生成・memory extractionに使うLLMを
+以下に凍結する。実装後に変更した場合は「LLM configuration change」として
+別の実験に分離し、Phase 8.2の結果とは比較しない。
+
+| 項目 | 固定値 |
+| --- | --- |
+| base_url | `http://localhost:11434`（Ollamaローカル） |
+| model | `phi4-mini:latest`（ローカルインストール済み・非思考型） |
+| think | 送信しない（非思考型モデルのため） |
+| temperature | `0.0` |
+| seed | `42` |
+| answer max output tokens | `256` |
+| extraction max output tokens | `256` |
+| system prompt | 下記に凍結（変更禁止・sha256でmanifestに記録） |
+| context format | 下記に凍結 |
+
+**モデル選定の記録（2026-09-18プローブ）**: 当初候補の `qwen3:4b` は、この
+Ollamaインストールでは `think: false` フラグも `/no_think` ソフトスイッチも
+無視され、1呼び出しあたり300〜500トークンのchain-of-thoughtがcontentに混入
+した（約26秒/回）。これは (a) forbidden語の採点汚染（推論テキスト内にforbidden語が出る）、
+(b) 3,000+呼び出し（200問 × 5 Player × 3 repeat）を実用時間に不可能にする、
+という二重の問題があった。プローブで `phi4-mini:latest` は直接回答
+（"ripgrep"、3 completion tokens）を確認したため、凍結モデルをこちらに決定した。
+実施前に決定したLLM configuration changeであり、Phase 8.2の結果はこの構成で
+统一される。
+
+**凍結ハッシュ（実測値）**: `config_sha256 = f5317d523d06a65d…`
+（`research/benchmarks/llm.py` の `frozen_config_sha256()`。model / temperature /
+seed / max output tokens / 4つのprompt定数すべてを含む。Phase 8.2の全runで一致する
+ことをmanifestが保証する）
+
+**検証済み動作（実LLMスモーク）**: `phi4-mini:latest` は
+121 prompt + 3 completion tokens / 2,340 ms で “ripgrep” を返し、
+AMプレイヤー経由でも「Visual Studio Code」（context 564 tokens / llm 124 tokens、
+write cost 0 calls）を返した。論理推論の混入なし。
+
+回答用system prompt（凍結）:
+
+```text
+You answer questions using ONLY the provided conversation context.
+Rules:
+- Reply with the final answer only. Never show your reasoning, thinking steps, or any preamble.
+- If the context does not contain the answer, reply exactly: I don't know.
+- Never invent information that is not in the context.
+- Answer in English with one or two short sentences.
+```
+
+回答用ユーザープロンプト形式（凍結）:
+
+```text
+Conversation context:
+{context}
+
+Question: {question_text}
+Answer:
+```
+
+extraction用prompt（Mem0-style等のwrite-side戦略）も同様にコード内定数として
+凍結し、`config_sha256` / `prompt_sha256` としてmanifestに記録する。
+
+回答生成器は全Playerで**単一の共有インスタンス**（同一モデル・同一設定）を使う。
+LLMの性能差を消し、memory / retrieval systemの差だけを測るためである。
+
+上記のprompt文字列は `research/benchmarks/llm.py` のコード内定数と完全一致させ、
+`prompt_sha256` / `config_sha256` としてmanifestに記録する（不一致はバグ扱い）。
+思考型モデル向けのsoft switch（`/no_think`）は、凍結モデルが非思考型のため
+promptに含めない（当初 `qwen3:4b` で検討したがモデル選定と同時に不採用）。
+
+### Leakage Boundary（Ground Truth遮断）
+
+```text
+Question
+   │
+   ├── Ground Truth ────────┐
+   │                         │
+   │                    Evaluation only
+   │                         │
+   ▼                         │
+Player                       │
+   │                         │
+   ▼                         │
+Retrieval                    │
+   │                         │
+   ▼                         │
+Retrieved Context            │
+   │                         │
+   ▼                         │
+Fixed LLM                    │
+   │                         │
+   ▼                         │
+Answer ─────────────────────┘
+```
+
+* LLMのプロンプトは **question text + retrieved context のみ** から構成する。
+* ground truth（および `forbidden`、`expected_abstention` 等）はPlayerの
+  生成経路に一切渡さない。scoringのみが使用する。
+* 設計上、誤用を不可能にする： 回答生成APIのシグネチャは
+  `answer(question_text, context)` であり、questionオブジェクト自体を
+  受け取れない。`_generate_answer(question, ...)` のような誘惑は消す。
+* Leakage Guardテスト（`tests/test_phase8_leakage.py`）で機械的に検査する：
+  ground truthをセンチネル文字列に置き換え、プロンプトに含まれないことを
+  全Playerに対してassertする。
+
+### Evaluation Boundary
+
+* contextに存在しない情報を回答した場合、それは「賢く答えた」ではなく
+  **benchmark上の failure** として扱う。
+* abstention質問（`expected_abstention=True`）に対して具体的な値を答えた
+  場合も failure（false positive）。
+* 上記のsystem promptのabstention ruleにより、Playerは「I don't know」を
+  統一的に選択できる。
+
+---
+
+## 6. Metrics
+
+### Quality
+
+* Recall@K
+* Context Recall
+* Answer Accuracy
+* Temporal Accuracy
+* Multi-hop Accuracy
+* Contradiction Handling
+
+### Write-side Cost（必須）
+
+* memory-write LLM call count
+* memory-write tokens
+* write latency
+
+計測セマンティクス（Phase 8.2で確定）:
+
+* `write_llm_calls` は **LLM呼び出しのみ** を数える。embedding-onlyの書き込みや
+  決定論的なconsolidation / context pagingは `calls=0` で呼び、latencyのみ記録する。
+  これにより「LLMを書き込みに使う戦略」と「使わない戦略」の差が数値に出る。
+* `write latency` はmemory形成のE2E時間であり、per-turn LLM latencyの加算による
+  二重計上はしない（Mem0-styleはE2E時間にextraction時間が含まれるため）。
+* 抽出にLLMを使う戦略（Mem0-style等）は、使用モデルを回答LLMと同一に固定する
+  （§5 Fixed LLM Configuration）。「何をLLMにさせるか」「いつ呼ぶか」は戦略自由度。
+
+Mem0のようなシステムはmemory write自体にLLM推論を含む（現行OSSの `add()`
+はデフォルトでLLM extractionを行う）。write-side costを欠くと
+「回答時は速いが、memory形成時に大量のLLM呼び出しを行う」という重要な差を
+見落とす。
+
+### Total Cost（必須）
+
+```text
+Total Cost = Memory Write LLM
+           + Retrieval
+           + Context Construction
+           + Answer LLM
+```
+
+### Efficiency
+
+* answer-generation tokens
+* total LLM tokens
+* LLM call count
+* retrieval latency
+* context-build latency
+* end-to-end latency
+* p50 latency
+* p95 latency
+* storage size
+* memory item count
+* final context tokens（Controlled: 2,000 token予算内の使用量 / Real: 実測値）
+
+特にtoken efficiencyは品質と分離しない。
+
+```text
+High Quality + Low Token Cost
+```
+
+を確認する。
+
+---
+
+## 7. Experimental Matrix
+
+### M1 — Short Context
+
+基本的なrecallとoverhead。
+
+### M2 — Long Horizon
+
+長期間のmemory accumulationとscaling。
+
+### M3 — Temporal Update
+
+同一属性が時間とともに変化する状況。
+
+### M4 — Multi-Hop
+
+複数memoryを横断しないと答えられない問題。
+
+### M5 — Context Compression
+
+限られたtoken budget内で必要情報を保持できるか。
+
+### M6 — Retrieval Noise
+
+大量の似た・無関係なmemoryが存在する場合。
+
+### M7 — Cold / Warm Cache
+
+cacheの有無によるlatency差。
+
+### M8 — Failure / Recovery
+
+部分欠損、再起動、矛盾memory等。
+
+### M1–M8 ↔ Arena v1 データセット対応表
+
+凍結済みのarena v1（`dataset_sha256: 84dd96f2...`）のカテゴリは以下に対応する。
+
+| Matrix | Arena v1カテゴリ | 測定方法 |
+| --- | --- | --- |
+| M1 Short Context | factual_recall | データセット |
+| M2 Long Horizon | multi_session（部分的） | scaling評価は追加シナリオ → arena v2 |
+| M3 Temporal Update | temporal_reasoning + knowledge_updates | データセット |
+| M4 Multi-Hop | multi_session + indirect_recall | データセット |
+| M5 Context Compression | compression_recovery | データセット（2K budgetと併用） |
+| M6 Retrieval Noise | distractor_resistance + abstention | データセット |
+| M7 Cold/Warm Cache | — | ランナー側プロトコル測定（データセットでは測らない） |
+| M8 Failure/Recovery | contradiction_handling（部分的） | 再起動・部分欠損はランナー側プロトコル測定 |
+
+* M7 / M8 はデータセットではなくランナー側の実行プロトコル（別プロセス実行、
+  障害注入）として定義する。
+* 対応外の測定が必要になった場合、arena v2 として再凍結する
+  （`dataset_sha256` が異なるため、v1の結果は無効化されない）。
+
+---
+
+## 8. Real-System vs Controlled-System
+
+重要な原則として、
+
+### Controlled Arena
+
+```text
+「このmemory strategyは何ができるか？」
+```
+
+を測る。
+
+### Real-System Arena
+
+```text
+「この実装全体を動かしたら何が起きるか？」
+```
+
+を測る。
+
+したがって、
+
+> 「Mem0-styleがAMより強い」
+
+と
+
+> 「Mem0 OSSの実装全体がAMより強い」
+
+は**別の主張**として扱う。
+
+### Answer Extraction Protocol
+
+採点は用語群ベース（judge LLM不要）だが、Real-System Arenaの自由形式出力
+に対しては切り出し規則を固定する：
+
+> **最後のアシスタント発言の全文を採点対象とする**
+
+* Markdown・前置き・説明文は許容する（全文が採点対象）
+* forbidden語は回答全文に含まれた時点で違反とする
+* この規則はControlled / Real共通とする
+
+---
+
+## 9. Reproducibility
+
+各runで最低限、
+
+```json
+{
+  "benchmark_version": "...",
+  "dataset_sha256": "...",
+  "player": "...",
+  "player_version": "...",
+  "player_git_sha": "...",
+  "llm": "...",
+  "extraction_llm": "...",
+  "embedding": "...",
+  "vector_store": "...",
+  "config_sha256": "...",
+  "prompt_sha256": "...",
+  "python": "...",
+  "os": "...",
+  "hardware": "...",
+  "seed": 42
+}
+```
+
+既存システムの公表数字（例: Mem0のLoCoMo / LongMemEval / BEAMスコア）を
+引用・比較する場合は、**どの実装・モデル・構成・データセット・costで出た
+数字か**をmanifestレベルで固定してから扱う。Mem0 OSSとPlatformには差が
+ある（公式README自身がPlatform側にOSSにないproprietary optimizationが
+ある旨を明記している）ため、数字の出自を混同しない。
+
+### Repeat Protocol
+
+* 回答品質： 同一質問を **3回** 実行し、多数決または平均で採点する
+* latency： **5回以上** の測定から p50 / p95 を算出する
+* 各repeatはmanifestの `seed` とRepeat Protocol自体の記録により再現可能とする
+
+を保存する。
+
+また、
+
+```text
+results/
+└── run/
+    ├── manifest.json
+    ├── metrics.csv
+    ├── latency.csv
+    ├── tokens.csv
+    ├── failures.jsonl
+    ├── traces.jsonl
+    └── environment.txt
+```
+
+という形でraw dataを残す。
+
+---
+
+## 10. Scoring Spec（Judge-free）
+
+本節は Scorer の凍結仕様である。Scorer は **LLM judgeを使わない**（§5
+Evaluation Boundary）。評価器をLLMにすると
+
+```text
+memory architecture → retrieval → phi4-mini → answer → another LLM → score
+```
+
+となり、評価器そのものが新しい変数になってしまう。judge-free採点は
+「memory/retrieval systemの差」だけを測るというArenaの目的に直結する。
+
+### Scorerをrunnerから分離する
+
+```text
+ArenaRunner ──記録だけ──▶ run/ (traces, metrics, tokens, latency, manifest)
+                                   │
+                                   ▼
+                                Scorer
+                                   │
+                                   ▼
+                              scores.csv
+```
+
+* Runnerは「この回答は何点だったか」を知らない。事実のみを記録する。
+* Scorerは記録（traces）と、`dataset_sha256` を照合済みのdatasetを入力に取り、
+  `question_id × player × repeat` 単位で採点する。
+* したがってScorerを改善しても元のtracesから**再採点**できる。
+  本番runの結果を一度も捨てない。
+
+### 入力
+
+* answer text（`Answer.text` = 最後のアシスタント発言の全文）
+* question（dataset側）: `ground_truth` / `forbidden` / `expected_abstention`
+
+これらground truth系フィールドはPlayerの生成経路には一切渡らない
+（§5 Leakage Boundary）。
+
+### 正規化（Normalization）
+
+判定はすべて正規化後の文字列に対して行う:
+
+1. Unicode NFKC 正規化
+2. 小文字化
+3. 空白（全角含む）を単一スペースに畳む
+4. 句読点の除去は**行わない**。`f#` や `c++` のような記号を含むtermを壊さない
+   ためで、周囲の記号はterm側の境界判定で吸収する。
+
+用語の一致は **word-boundary aware な部分一致**:
+
+* 英数字のみの語（`rust`, `atlas`）は語境界で判定し、`rust` が `trust` の
+  内部に一致することを防ぐ。
+* 記号を含む語（`f#`, `c++`）や空白を含む複合語（`visual studio code`）は
+  正規化後の部分一致で判定する。複合語の語順は固定。
+* 1つのterm group内の複数termは「同義語（表記ゆれ）」として扱い、いずれか
+  1つの一致でそのgroupを充足する。
+
+### 判定
+
+**must-mention（`ground_truth` = term groups）**
+
+* `ground_truth` はterm groupの列。各groupは「そのうちいずれか1つが出現すれば
+  充足」とみなす。
+* `covered` = 充足したgroup数、`must_total` = group数
+* `ground_truth_coverage` = covered / must_total（`must_total == 0` なら 1.0）
+
+**forbidden**
+
+* `forbidden` のいずれかが出現したら `forbidden_violation = True`
+* 出現した語を `forbidden_hits` に記録する
+
+**abstention（`expected_abstention = True`）**
+
+* 「情報不足」を表明していれば `abstention_detected = True`
+* 検出はjudge-freeの語彙規則（`i don't know` / `not enough information` /
+  `no information` / `cannot determine` / `unknown` 等）と、凍結promptの
+  `ABSTENTION_TEXT` の出現による。
+* 具体的な値を答えた場合（`abstention_detected = False`）は
+  **false positive** としてfailure（§5 Evaluation Boundary）。
+
+### Outcome
+
+| 条件 | outcome | score |
+|---|---|---|
+| abstention質問 かつ abstained（forbidden語なし） | `pass` | 1.0 |
+| abstention質問 かつ 断定回答（ground_truth充足なし・またはforbidden語あり） | `false_positive` | 0.0 |
+| abstention質問 かつ abstained（forbidden語あり） | `false_positive` | 0.0 |
+| abstention質問 かつ `ground_truth` 充足あり | `pass` | 1.0 |
+| 通常質問 かつ forbidden語あり | `fail` | 0.0 |
+| 通常質問 かつ 全group充足 | `pass` | 1.0 |
+| 通常質問 かつ 一部group充足 | `partial` | coverage |
+| 通常質問 かつ 充足groupなし | `fail` | 0.0 |
+
+* `correct` = (`outcome == "pass"`)
+* forbidden語の出現は、group充足の状況にかかわらず score を 0.0 にする。
+* abstention質問の `ground_truth` は通常空であり、`forbidden` が
+  「唯一の決定的な誤答」を突き止める役割を担う。
+* 空回答（空白のみを含む）は `outcome = "fail"` / score 0.0 とする
+  （abstention質問でも false positive とは区別する）。`abstention_detected` は
+  `None` になる。
+* 既知の限界: 語境界判定は `go`（言語名）と英語の一般動詞 `go` を区別しない。
+  これはterm-based採点に固有の曖昧さであり、全Playerに等しく適用されるため
+  比較の公平性は保たれる（凍結仕様として許容する）。
+
+### 集約メトリクス
+
+* `answer_accuracy` = pass数 / 全質問数（カテゴリ別・全体の両方）
+* `partial_rate` / `false_positive_rate` / `forbidden_violation_rate`
+* `ground_truth_coverage` 平均（部分点の粒度を保つ）
+* `abstention_accuracy`（abstentionカテゴリのpass率）
+
+### 決定性
+
+* Scorerは同じ入力に対して常に同じ出力を返す（乱数・時刻・LLMを使わない）。
+* repeat（3回）の全結果を `repeat_scores` に保持し、公式値 `score` は
+  **majority answer**（runner側の多数決）を採点したものとする。
+  多数決は answer text の完全一致で数える（runnerと同一規則）。
+  `score_consistency` = 全repeatのうち公式`outcome`と一致した`outcome`の割合。
+* tie-break: 多数決が同数の場合は `run_index` 最小の回答を採用
+  （runner側の既存規則と一致させる）。
+
+### Scorer単体テスト（synthetic cases）
+
+Scorerは本番runの前に、以下の人工ケースで固定する:
+
+| Answer | 期待 |
+|---|---|
+| required terms 全部あり | `pass` / 1.0 |
+| 1つ欠落（2 group中1充足） | `partial` / 0.5 |
+| forbidden あり | `fail` / 0.0（`forbidden_violation=True`） |
+| 情報不足なのに断定 | `false_positive` / 0.0 |
+| 情報不足＋abstain | `pass` / 1.0 |
+| 大文字小文字違い | `pass`（正規化により一致） |
+| 複合term（`visual studio code`） | `pass`（語順固定・部分一致） |
+| 複合termの語順違い（`code visual studio`） | `fail` |
+| 境界語（`trust` が `rust` groupに一致しない） | `fail` |
+| 同義語group（`vs code` が `visual studio code` groupを充足） | `pass` |
+
+---
+
+## 11. Result Interpretation
+
+結果は「勝敗」だけで解釈しない。
+
+各差分について、
+
+1. **Observed**
+2. **Mechanism**
+3. **Trade-off**
+4. **Action**
+
+を分析する。
+
+例:
+
+```text
+Observed:
+Mem0のmulti-hop recallが高い
+
+Mechanism:
+Entity-aware retrievalが関連memoryをboostした
+
+Trade-off:
+Entity extraction等の追加処理コストが発生
+
+Action:
+AMへのentity index導入を研究候補化
+```
+
+この形式で、他システムの優れた機構をAMへ取り込む。
+
+---
+
+## 12. Implementation Plan
+
+### Phase 8.0
+
+Spec Freeze
+
+### Phase 8.1
+
+Arena Core
+
+### Phase 8.2
+
+Controlled Players
+
+```text
+Simple RAG
+MemoryBank-style
+MemGPT-style
+Mem0-style
+AM
+```
+
+### Phase 8.3 — Scoring & E2E Validation
+
+本番run（3,000 calls）の**前**に、採点系を完成させる。順序を逆にすると
+「run A → 旧Scorer」「run B → 新Scorer」となり比較の再現性が崩れるため、
+Scorerはrunより先に凍結する。
+
+```text
+8.3.1 Scorer implementation        (scorer.py, judge-free per §10)
+8.3.2 Scorer unit tests            (synthetic cases per §10)
+8.3.3 Replay determinism           (traces → same score, 決定性・再採点)
+8.3.4 Single-player E2E            (10〜20問 × 1 player × 1 repeat)
+8.3.5 Multi-player smoke           (5 players × 少数問)
+8.3.6 Production run               (200問 × 5 players × 3 repeats = 3,000 calls)
+8.3.7 Result validation            (§13 Final Gate)
+```
+
+Single-player E2E（8.3.4）で一度通すもの:
+
+```text
+run/
+├── manifest.json
+├── metrics.csv
+├── latency.csv
+├── tokens.csv
+├── traces.jsonl
+└── scores.csv   ← Scorerが出力
+```
+
+#### Phase 8.3 Final Gate
+
+```text
+[ ] Scorer spec frozen
+[ ] Scorer unit tests
+[ ] 1-player E2E
+[ ] 5-player smoke
+[ ] traces replay → same score
+[ ] manifest reproducibility check
+[ ] no ground-truth leakage
+[ ] temp cleanup
+[ ] write/read token accounting
+[ ] deterministic tie-break
+[ ] output schema validation
+```
+
+### Phase 8.4 — Real-System Adapters
+
+```text
+Mem0 OSS
+Letta
+MemoryBank reference（optional / stretch）
+AM
+```
+
+### Phase 8.5 — Mechanism Analysis
+
+§11 の Observed → Mechanism → Trade-off → Action に従い、本番runの結果を
+解釈する。**測る（8.3）と解釈する（8.5）を分離**する。
+
+### Phase 8.6 — Public Release
+
+---
+
+## 13. Acceptance Criteria
+
+* [ ] Controlled Arenaが単一コマンドで実行可能
+* [ ] 5 Controlled Playersが同一datasetを処理可能
+* [ ] Controlled context budget（2,000 tokens）の強制と実測context tokensの記録
+* [ ] write-side LLM cost（call数 / tokens）の記録
+* [ ] Mem0 OSS adapterが動作
+* [ ] Letta adapterが動作
+* [ ] R0（MemoryBank reference）は optional / stretch（未達でも基準を満たす）
+* [ ] dataset hashを保存
+* [ ] version / Git SHAを保存
+* [ ] token metricsを保存
+* [ ] p50 / p95 latencyを保存
+* [ ] raw traceを保存
+* [ ] failed runを保存
+* [ ] style / real-systemを分離
+* [ ] AMの改善候補を機構レベルで抽出可能
+
+---
+
+## 14. Core Principle
+
+> **Do not benchmark to prove AM is the best. Benchmark to find out where AM is actually better, where it is worse, and why.**
+
+AM v0.2.0が負けた場合も、その結果を失敗として終わらせない。
+
+```text
+Existing System
+      ↓
+Observed Mechanism
+      ↓
+AM Gap
+      ↓
+Research / Implementation Change
+      ↓
+Next Benchmark
+```
+
+このループをPhase 8の研究サイクルとする。

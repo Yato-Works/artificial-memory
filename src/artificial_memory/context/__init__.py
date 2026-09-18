@@ -1,5 +1,13 @@
 # Context module init
 
+from artificial_memory.context.allocator import (
+    AllocatedPart,
+    AllocatorConfig,
+    ContextAllocation,
+    ContextAllocator,
+    RepresentationLevel,
+    create_context_allocator,
+)
 from artificial_memory.context.builder import (
     BasicContextBuilder,
     TokenCounter,
@@ -19,8 +27,14 @@ from artificial_memory.context.ir_models import (
 )
 
 __all__ = [
+    "AllocatedPart",
+    "AllocatorConfig",
     "BasicContextBuilder",
+    "ContextAllocation",
+    "ContextAllocator",
+    "RepresentationLevel",
     "TokenCounter",
+    "create_context_allocator",
     "create_context_builder",
     "IRUnit",
     "IRSequence",

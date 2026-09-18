@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 from dataclasses import dataclass, field
 from datetime import datetime
 from pathlib import Path
@@ -52,22 +53,41 @@ class VectorSearchEngine:
         self.collector = get_metrics_collector()
 
     def _load_or_create_index(self):
-        """Load existing index or create new one."""
-        if self.index_file.exists() and self.metadata_file.exists():
-            self.index = faiss.read_index(str(self.index_file))
-            with open(self.metadata_file) as f:
-                data = json.load(f)
-                self.id_to_memory_id = {int(k): v for k, v in data.get('id_to_memory_id', {}).items()}
-                self.memory_id_to_index = {int(k): v for k, v in data.get('memory_id_to_index', {}).items()}
-        else:
-            self.index = faiss.IndexFlatIP(self.dimension)
-            self.id_to_memory_id = {}
-            self.memory_id_to_index = {}
+        """Load existing index or create new one.
+
+        Tolerates a missing or corrupt metadata file by starting fresh:
+        an empty metadata.json (e.g. from an interrupted non-atomic write
+        in an earlier process) must never crash engine construction.
+        """
+        try:
+            if self.index_file.exists() and self.metadata_file.exists():
+                index = faiss.read_index(str(self.index_file))
+                with open(self.metadata_file, encoding="utf-8") as f:
+                    data = json.load(f)
+                if index.ntotal == len(data.get("memory_id_to_index", {})):
+                    self.index = index
+                    self.id_to_memory_id = {
+                        int(k): v for k, v in data.get("id_to_memory_id", {}).items()
+                    }
+                    self.memory_id_to_index = {
+                        int(k): v for k, v in data.get("memory_id_to_index", {}).items()
+                    }
+                    return
+        except (json.JSONDecodeError, OSError, KeyError, ValueError, RuntimeError):
+            pass
+        # Corrupt or inconsistent state: rebuild from scratch
+        self.index = faiss.IndexFlatIP(self.dimension)
+        self.id_to_memory_id = {}
+        self.memory_id_to_index = {}
 
     def _save_index(self):
-        """Save index and metadata to disk."""
-        faiss.write_index(self.index, str(self.index_file))
-        with open(self.metadata_file, 'w') as f:
+        """Save index and metadata to disk (atomically)."""
+        # Write both files to temporary names first, then atomically replace,
+        # so a crash mid-write can never leave an empty/partial metadata file.
+        tmp_meta = self.metadata_file.with_suffix(".json.tmp")
+        tmp_index = self.index_file.with_suffix(".index.tmp")
+        faiss.write_index(self.index, str(tmp_index))
+        with open(tmp_meta, "w", encoding="utf-8") as f:
             json.dump({
                 'id_to_memory_id': self.id_to_memory_id,
                 'memory_id_to_index': self.memory_id_to_index,
@@ -75,6 +95,8 @@ class VectorSearchEngine:
                 'total_vectors': self.index.ntotal,
                 'updated_at': datetime.now().isoformat(),
             }, f)
+        os.replace(str(tmp_index), str(self.index_file))
+        os.replace(str(tmp_meta), str(self.metadata_file))
 
     def _encode_text(self, text: str) -> np.ndarray:
         """Encode text to normalized vector."""

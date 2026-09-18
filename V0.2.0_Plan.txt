@@ -1,0 +1,1777 @@
+# Artificial Memory v0.2.0
+
+## Adaptive Memory Runtime for Long-Lived AI
+
+**Status:** Draft
+**Version:** 0.2.0
+**Project:** [Yato-Works/artificial-memory](https://github.com/Yato-Works/artificial-memory)
+
+---
+
+## 1. Abstract
+
+Artificial Memory (AM) v0.2.0 is designed as an **Adaptive Memory Runtime for long-lived AI systems**.
+
+Artificial Memory does not treat memory as a static collection of retrieved facts.
+
+Instead, memory is modeled as a **persistent, multi-resolution, evolving state** that can be:
+
+* stored,
+* retrieved,
+* compressed,
+* reinforced,
+* reinterpreted,
+* contradicted,
+* reconstructed,
+* archived,
+* restored,
+* and audited over time.
+
+The central principle of AM remains:
+
+> **Forgetting = Resolution Down, not Deletion.**
+
+Version 0.2.0 extends this principle into a complete memory lifecycle.
+
+A memory is not simply either "remembered" or "forgotten."
+Its **representation, relevance, confidence, resolution, and future utility may change over time**.
+
+AM therefore introduces a runtime architecture that combines:
+
+* multi-resolution memory,
+* hybrid retrieval,
+* temporal state management,
+* contradiction handling,
+* memory evolution,
+* background reflection,
+* memory reconstruction,
+* context allocation,
+* provenance,
+* auditability,
+* and predictive recall.
+
+The goal is not to build another vector database.
+
+The goal is to build a **runtime that continuously manages what an AI remembers, how it remembers it, and when it should reconsider what it remembers.**
+
+---
+
+# 2. Design Thesis
+
+Traditional RAG systems generally model memory as:
+
+```text
+Store → Embed → Retrieve → Inject
+```
+
+This model is useful, but incomplete for long-lived interaction.
+
+A long-lived AI must answer additional questions:
+
+* Is this memory still relevant?
+* Is it still true?
+* Has the user changed?
+* Is another memory contradicting it?
+* Can multiple memories be merged?
+* Can the memory be compressed without losing useful information?
+* Can an archived memory be reconstructed at higher resolution?
+* Why was this memory retained?
+* Why was it downgraded?
+* What evidence caused it to change?
+
+AM v0.2.0 therefore models memory as a lifecycle:
+
+```text
+Experience
+    ↓
+Formation
+    ↓
+Representation
+    ↓
+Retrieval
+    ↓
+Use
+    ↓
+Evolution
+    ↓
+Reflection
+    ↓
+Compression / Reinforcement / Reinterpretation
+    ↓
+Archive
+    ↓
+Reconstruction
+```
+
+Memory is therefore treated as **state**, not merely data.
+
+---
+
+# 3. Core Principles
+
+## 3.1 Forgetting Is Resolution Reduction
+
+AM does not define forgetting as deletion.
+
+Instead:
+
+```text
+RAW
+ ↓
+LIGHT
+ ↓
+EPISODE
+ ↓
+SEMANTIC
+ ↓
+LONG_TERM
+ ↓
+DEEP_LONG_TERM
+```
+
+A memory may become less detailed while remaining recoverable.
+
+For example:
+
+```text
+RAW
+"I started learning Rust on March 12 and built
+a small command-line parser."
+
+↓
+
+EPISODE
+"Started learning Rust and built a small CLI tool."
+
+↓
+
+SEMANTIC
+"Has experience using Rust."
+
+↓
+
+LONG_TERM
+"Uses Rust regularly."
+```
+
+The system may retain a low-resolution representation while removing the memory from the active high-detail context.
+
+---
+
+## 3.2 Memory Can Recover Resolution
+
+Resolution changes are not necessarily one-way.
+
+When later evidence makes an archived memory important, AM may reconstruct or restore additional detail.
+
+```text
+DEEP_LONG_TERM
+      ↑
+      │
+      │ resolution recovery
+      │
+      ↓
+SEMANTIC
+      ↑
+      │
+EPISODE
+      ↑
+LIGHT
+      ↑
+RAW
+```
+
+This creates a bidirectional lifecycle:
+
+> **Memory can fade in resolution without disappearing, then regain resolution when needed.**
+
+---
+
+## 3.3 Memory Is an Evolving State
+
+A memory is not immutable.
+
+Its:
+
+* importance,
+* confidence,
+* currentness,
+* future utility,
+* access frequency,
+* contradiction state,
+* and resolution
+
+may change independently.
+
+AM therefore avoids representing memory with a single universal "importance score."
+
+---
+
+## 3.4 Evidence and Interpretation Must Remain Distinct
+
+AM distinguishes:
+
+```text
+Evidence
+```
+
+from:
+
+```text
+Interpretation / belief
+```
+
+For example:
+
+```text
+Evidence:
+"I used Rust for a small project."
+
+Interpretation:
+"The user is becoming a regular Rust developer."
+```
+
+The second may be useful, but it must not erase or replace the first.
+
+This distinction allows later reinterpretation without destroying provenance.
+
+---
+
+## 3.5 Contradiction Is Not Necessarily Error
+
+A contradiction may represent:
+
+* changing preferences,
+* changing skills,
+* changing circumstances,
+* outdated information,
+* disagreement between sources,
+* or an actual erroneous memory.
+
+AM therefore preserves contradictory states with temporal and provenance information.
+
+```text
+Preference: Python
+    timestamp: 2025-04-10
+
+Preference: Rust
+    timestamp: 2026-08-22
+```
+
+The two records can coexist.
+
+The runtime determines which state is relevant to a particular query.
+
+---
+
+## 3.6 Memory Should Be Auditable
+
+Every AI-driven memory mutation should be explainable.
+
+For each change, AM should be able to answer:
+
+```text
+What changed?
+Why did it change?
+When did it change?
+What evidence caused the change?
+Which process changed it?
+What was the previous state?
+```
+
+Memory evolution must therefore produce an auditable event trail.
+
+---
+
+# 4. Goals
+
+AM v0.2.0 has the following primary goals.
+
+### G1 — Persistent Long-Term Memory
+
+Maintain memory across sessions without requiring the entire historical context to remain in the active prompt.
+
+### G2 — Multi-Resolution Representation
+
+Maintain multiple levels of memory detail and dynamically select an appropriate resolution.
+
+### G3 — Adaptive Memory Evolution
+
+Allow memories to become reinforced, compressed, reinterpreted, archived, merged, or restored.
+
+### G4 — Background Reflection
+
+Allow the runtime to review memories during idle or low-load periods.
+
+### G5 — Temporal and Contradiction Awareness
+
+Represent changing facts and conflicting observations without destructive overwriting.
+
+### G6 — Context-Aware Allocation
+
+Treat the LLM context window as a constrained resource.
+
+### G7 — Memory Reconstruction
+
+Allow the runtime to combine multiple related memories to reconstruct useful information rather than relying on single-shot vector retrieval.
+
+### G8 — Provenance and Auditability
+
+Preserve the origin and evolution history of every persistent memory.
+
+### G9 — Reproducible Evaluation
+
+Provide a rigorous benchmark framework for measuring memory quality, efficiency, and failure modes.
+
+---
+
+# 5. Non-Goals
+
+AM v0.2.0 does **not** attempt to:
+
+* retrain the foundation model itself,
+* replace the LLM's internal knowledge,
+* become a general-purpose vector database,
+* guarantee factual correctness of external information,
+* automatically determine the user's real-world identity,
+* perform unrestricted autonomous actions,
+* solve model hallucination entirely through memory,
+* or hide memory mutations from the user.
+
+AM is a memory runtime, not a foundation model.
+
+---
+
+# 6. System Architecture
+
+```text
+                         ┌─────────────────────┐
+                         │   AI Application     │
+                         └──────────┬──────────┘
+                                    │
+                                    ▼
+                      ┌──────────────────────────┐
+                      │ Artificial Memory Runtime │
+                      │          v0.2.0           │
+                      └────────────┬─────────────┘
+                                   │
+          ┌────────────────────────┼────────────────────────┐
+          │                        │                        │
+          ▼                        ▼                        ▼
+ ┌─────────────────┐      ┌─────────────────┐      ┌─────────────────┐
+ │ Memory Formation│      │ Memory Retrieval │      │ Context Allocator│
+ └────────┬────────┘      └────────┬────────┘      └────────┬────────┘
+          │                        │                        │
+          ▼                        ▼                        ▼
+ ┌─────────────────┐      ┌─────────────────┐      ┌─────────────────┐
+ │    Memory IR    │      │ Hybrid Recall   │      │ Token Budgeting │
+ └────────┬────────┘      └────────┬────────┘      └─────────────────┘
+          │                        │
+          │                        ▼
+          │               ┌─────────────────┐
+          │               │ Reconstruction  │
+          │               │     Layer       │
+          │               └────────┬────────┘
+          │                        │
+          └───────────────┬────────┘
+                          ▼
+                 ┌───────────────────┐
+                 │ Memory Evolution  │
+                 └─────────┬─────────┘
+                           │
+          ┌────────────────┼────────────────┐
+          ▼                ▼                ▼
+      Reinforce        Reinterpret       Compress
+          │                │                │
+          └────────────────┼────────────────┘
+                           ▼
+                    Contradiction /
+                       Archive
+                           │
+                           ▼
+                 Background Reflection
+                           │
+                           ▼
+                   Audit / Provenance
+```
+
+---
+
+# 7. Memory Representation
+
+AM v0.2.0 extends the existing Memory IR with explicit state and lifecycle metadata.
+
+A conceptual memory object:
+
+```yaml
+id: memory_01HXYZ
+
+content:
+  text: "User has been using Rust regularly."
+
+type:
+  semantic
+
+resolution:
+  level: LONG_TERM
+
+state:
+  importance: 0.84
+  confidence: 0.91
+  currentness: 0.88
+  future_utility: 0.79
+  contradiction_risk: 0.12
+
+usage:
+  access_count: 17
+  last_accessed: 2026-09-16T22:10:00Z
+
+temporal:
+  created_at: 2026-03-10T12:00:00Z
+  updated_at: 2026-09-16T21:50:00Z
+  valid_from: 2026-03-10T12:00:00Z
+  valid_until: null
+
+provenance:
+  source_type: conversation
+  source_ids:
+    - conversation_20260310_01
+    - conversation_20260822_04
+
+relations:
+  related_ids: []
+  contradiction_ids:
+    - memory_01ABC
+  derived_from:
+    - memory_01RAW
+```
+
+The exact schema is implementation-defined, but the semantic separation of these fields is mandatory.
+
+---
+
+# 8. Resolution Model
+
+AM retains the existing six-level resolution model:
+
+```text
+RAW
+LIGHT
+EPISODE
+SEMANTIC
+LONG_TERM
+DEEP_LONG_TERM
+```
+
+## 8.1 RAW
+
+Original event-level information.
+
+Purpose:
+
+* exact provenance,
+* detailed reconstruction,
+* debugging,
+* auditability.
+
+---
+
+## 8.2 LIGHT
+
+Shortened representation preserving important local information.
+
+Purpose:
+
+* lightweight recall,
+* session continuity,
+* context preparation.
+
+---
+
+## 8.3 EPISODE
+
+A coherent event or session-level representation.
+
+Purpose:
+
+* reconstructing what happened,
+* temporal reasoning,
+* multi-session reasoning.
+
+---
+
+## 8.4 SEMANTIC
+
+Generalized knowledge derived from one or multiple episodes.
+
+Purpose:
+
+* stable facts,
+* preferences,
+* skills,
+* long-term attributes.
+
+---
+
+## 8.5 LONG_TERM
+
+Highly persistent information that is repeatedly useful or strongly supported.
+
+Purpose:
+
+* durable user knowledge,
+* stable relationships,
+* recurring project context.
+
+---
+
+## 8.6 DEEP_LONG_TERM
+
+Very high-value persistent knowledge that should remain recoverable even when rarely accessed.
+
+Purpose:
+
+* critical preferences,
+* core identity-independent facts,
+* durable project knowledge,
+* foundational relationships.
+
+---
+
+# 9. Memory Formation
+
+Every new interaction enters AM through a formation pipeline.
+
+```text
+Conversation
+    ↓
+Segmentation
+    ↓
+Candidate Extraction
+    ↓
+Classification
+    ↓
+Evidence Capture
+    ↓
+Initial Scoring
+    ↓
+Resolution Assignment
+    ↓
+Storage
+```
+
+The formation layer identifies candidate memories such as:
+
+* facts,
+* preferences,
+* events,
+* projects,
+* skills,
+* relationships,
+* decisions,
+* constraints,
+* goals,
+* unresolved claims.
+
+Not every conversation fragment becomes long-term memory.
+
+---
+
+# 10. Memory Lifecycle
+
+Each memory follows a lifecycle.
+
+```text
+CREATE
+  ↓
+OBSERVE
+  ↓
+USE
+  ↓
+EVOLVE
+  ↓
+REFLECT
+  ↓
+{ REINFORCE
+  COMPRESS
+  MERGE
+  REINTERPRET
+  CONTRADICT
+  ARCHIVE }
+  ↓
+RESTORE / RECONSTRUCT
+```
+
+The lifecycle is not strictly linear.
+
+Memories may move backward and forward between states.
+
+---
+
+# 11. Memory Evolution
+
+AM v0.2.0 introduces a dedicated **Memory Evolution Engine**.
+
+The engine combines:
+
+### Runtime signals
+
+* recency,
+* access count,
+* temporal relevance,
+* retrieval frequency,
+* relationship density,
+* contradiction signals,
+* resolution level,
+* context pressure.
+
+### Reflection signals
+
+* future usefulness,
+* redundancy,
+* semantic stability,
+* validity,
+* importance,
+* confidence,
+* interpretability,
+* relationship discovery.
+
+The runtime then applies an explicit evolution policy.
+
+---
+
+# 12. Evolution Operations
+
+The following operations are first-class AM operations.
+
+```text
+KEEP
+REINFORCE
+COMPRESS
+MERGE
+REINTERPRET
+ARCHIVE
+RESTORE
+CONTRADICT
+REJECT
+```
+
+## KEEP
+
+Preserve the current representation.
+
+## REINFORCE
+
+Increase confidence or persistence due to repeated evidence or use.
+
+## COMPRESS
+
+Reduce representation size or resolution while preserving useful semantics.
+
+## MERGE
+
+Combine redundant or closely related memories.
+
+## REINTERPRET
+
+Generate a new higher-level interpretation from existing evidence.
+
+## ARCHIVE
+
+Remove from the active retrieval set while preserving recoverable historical state.
+
+## RESTORE
+
+Recover an archived or compressed memory into an active representation.
+
+## CONTRADICT
+
+Create or update an explicit temporal or semantic contradiction relationship.
+
+## REJECT
+
+Prevent a low-confidence or invalid candidate from entering persistent memory.
+
+---
+
+# 13. Background Reflection
+
+One of the defining features of AM v0.2.0 is **Background Reflection**.
+
+Reflection allows memory management to occur outside the critical response path.
+
+Possible triggers include:
+
+```text
+- idle time
+- end of session
+- low system load
+- memory pressure
+- contradiction detection
+- scheduled maintenance
+- unresolved memory clusters
+```
+
+The reflection subsystem does not inspect the entire memory store indiscriminately.
+
+Instead, it selects **reflection candidates**.
+
+Candidates may include:
+
+* frequently accessed memories,
+* rarely accessed high-value memories,
+* memories approaching archival thresholds,
+* contradictions,
+* duplicate clusters,
+* low-confidence memories,
+* unstable interpretations,
+* unresolved relationships,
+* recently changed preferences.
+
+---
+
+# 14. Reflection Pipeline
+
+```text
+Candidate Selection
+        ↓
+Evidence Retrieval
+        ↓
+Memory Review
+        ↓
+State Assessment
+        ↓
+Proposed Mutation
+        ↓
+Policy Validation
+        ↓
+Commit
+        ↓
+Audit Event
+```
+
+The reflection model should not directly mutate arbitrary memory.
+
+It should propose an operation:
+
+```json
+{
+  "operation": "REINTERPRET",
+  "target": "memory_123",
+  "reason": "Repeated recent evidence indicates a broader stable pattern.",
+  "evidence": [
+    "memory_456",
+    "memory_782"
+  ]
+}
+```
+
+The Evolution Policy then validates and commits the mutation.
+
+This separation prevents the reflection model from becoming an unconstrained database writer.
+
+---
+
+# 15. Memory Reconstruction
+
+AM v0.2.0 introduces a **Memory Reconstruction Layer**.
+
+Traditional retrieval:
+
+```text
+query → top-k memories
+```
+
+AM reconstruction:
+
+```text
+query
+  ↓
+initial candidates
+  ↓
+semantic relations
+  ↓
+temporal relations
+  ↓
+provenance expansion
+  ↓
+contradiction checks
+  ↓
+multi-memory synthesis
+  ↓
+reconstructed evidence package
+```
+
+This allows AM to answer questions whose relevant information is distributed across multiple memories.
+
+Example:
+
+```text
+Memory A:
+User started learning Rust.
+
+Memory B:
+User built a Rust CLI application.
+
+Memory C:
+User has continued using Rust for later projects.
+
+Query:
+"What programming language has the user increasingly adopted?"
+```
+
+AM may reconstruct:
+
+```text
+A → B → C
+```
+
+rather than relying on a single vector match.
+
+---
+
+# 16. Memory Graph
+
+The memory graph represents relationships between memories.
+
+Example relationship types:
+
+```text
+related_to
+derived_from
+caused_by
+contradicts
+supersedes
+supports
+refines
+part_of
+precedes
+follows
+```
+
+Example:
+
+```mermaid
+graph LR
+    A["Memory A"] -->|derived_from| B["Memory B"]
+    A -->|supports| C["Memory C"]
+    A -->|contradicts| D["Memory D"]
+    B -->|part_of| E["Episode E"]
+    C -->|refines| F["Semantic Memory F"]
+```
+
+The graph is not required to store every possible relationship.
+
+Relations must provide measurable retrieval or lifecycle value.
+
+---
+
+# 17. Retrieval Architecture
+
+AM uses hybrid retrieval.
+
+```text
+Query
+  │
+  ├── Vector Search
+  │
+  ├── Metadata / Temporal Search
+  │
+  ├── Graph Expansion
+  │
+  └── Keyword / Exact Match
+          ↓
+      Candidate Pool
+          ↓
+       Re-ranking
+          ↓
+   Memory Reconstruction
+          ↓
+    Context Allocation
+```
+
+The goal is not to maximize raw retrieval count.
+
+The goal is to produce a small, high-quality **evidence package** for the answering model.
+
+---
+
+# 18. Context Allocator
+
+The context window is treated as a constrained resource.
+
+AM assigns each candidate memory a context representation:
+
+```text
+FULL
+COMPRESSED
+SUMMARY
+TAG
+OMIT
+```
+
+Example:
+
+```text
+High priority:
+FULL
+
+Medium priority:
+COMPRESSED
+
+Low priority:
+SUMMARY
+
+Minimal supporting information:
+TAG
+
+Irrelevant:
+OMIT
+```
+
+Context allocation considers:
+
+* query relevance,
+* importance,
+* confidence,
+* temporal relevance,
+* contradiction risk,
+* resolution,
+* token cost,
+* expected utility.
+
+The allocator therefore optimizes:
+
+> **Useful information per token.**
+
+---
+
+# 19. Predictive Recall
+
+AM may optionally perform prefetching.
+
+```text
+Current Topic
+      ↓
+Likely Future Topics
+      ↓
+Candidate Memory Retrieval
+      ↓
+Cache
+      ↓
+Context only when needed
+```
+
+Predictive recall does not automatically inject prefetched memories into the active context.
+
+This distinction reduces unnecessary context pollution.
+
+---
+
+# 20. Temporal Memory
+
+Every persistent memory should support temporal interpretation.
+
+AM distinguishes:
+
+```text
+creation time
+update time
+validity start
+validity end
+observation time
+source time
+```
+
+This enables questions such as:
+
+```text
+"What does the user currently prefer?"
+"What did the user prefer last year?"
+"When did this preference change?"
+"What evidence caused the change?"
+```
+
+Temporal correctness is a first-class evaluation target.
+
+---
+
+# 21. Contradiction Management
+
+Contradictions are represented explicitly.
+
+Example:
+
+```text
+M1:
+User prefers Python.
+
+M2:
+User prefers Rust.
+
+Relationship:
+M1 --contradicts--> M2
+```
+
+The runtime may additionally infer:
+
+```text
+M1.valid_until = 2026-02-01
+M2.valid_from  = 2026-02-01
+```
+
+when sufficient evidence exists.
+
+AM must never silently overwrite historical evidence solely because a newer statement exists.
+
+---
+
+# 22. Provenance
+
+Every persistent interpretation should have an evidence chain.
+
+```text
+Semantic Memory
+      ↓
+Episode
+      ↓
+Conversation
+      ↓
+Original Message
+```
+
+A memory should be able to answer:
+
+> **"Where did this come from?"**
+
+and:
+
+> **"Which evidence supports this interpretation?"**
+
+---
+
+# 23. Audit System
+
+AM introduces an append-only memory evolution log.
+
+Example:
+
+```json
+{
+  "event": "memory_mutation",
+  "memory_id": "memory_123",
+  "operation": "COMPRESS",
+  "previous_resolution": "EPISODE",
+  "new_resolution": "SEMANTIC",
+  "reason": "Low recent utility with stable semantics.",
+  "evidence": [
+    "memory_456",
+    "memory_789"
+  ],
+  "actor": "reflection_agent",
+  "timestamp": "2026-09-17T12:00:00Z"
+}
+```
+
+The audit layer is designed for:
+
+* debugging,
+* user inspection,
+* reproducibility,
+* research analysis,
+* rollback,
+* and trust.
+
+---
+
+# 24. Storage Architecture
+
+AM v0.2.0 uses a hybrid storage model.
+
+```text
+                    ┌──────────────────┐
+                    │   Memory Graph   │
+                    └────────┬─────────┘
+                             │
+         ┌───────────────────┼──────────────────┐
+         │                   │                  │
+         ▼                   ▼                  ▼
+    Vector Index         Structured DB       Archive
+      FAISS/etc.          SQLite/Postgres    Raw Logs
+```
+
+### Vector layer
+
+Optimized for semantic candidate retrieval.
+
+### Structured layer
+
+Stores:
+
+* memory metadata,
+* lifecycle state,
+* temporal fields,
+* provenance,
+* relationships,
+* evolution state.
+
+### Archive layer
+
+Preserves original or deeply compressed representations.
+
+The initial implementation may use lightweight local components such as:
+
+```text
+SQLite
++
+FAISS
++
+local archive
++
+NetworkX
+```
+
+with optional adapters for larger deployments.
+
+---
+
+# 25. Local-First Design
+
+AM should remain practical for local AI deployments.
+
+The v0.2.0 architecture therefore favors:
+
+* local storage,
+* local embedding models,
+* local reflection models,
+* deterministic configuration,
+* optional cloud LLM integration,
+* pluggable storage backends.
+
+The memory runtime itself should not require a hosted SaaS service.
+
+---
+
+# 26. Failure Handling
+
+AM must assume that memory operations can be wrong.
+
+Examples include:
+
+* hallucinated summaries,
+* incorrect merges,
+* false contradictions,
+* incorrect temporal interpretation,
+* loss of important details during compression,
+* over-aggressive archival,
+* misleading reinterpretation.
+
+Therefore:
+
+> **AI-generated memory mutations are proposals, not unquestionable truth.**
+
+Mutations should be validated through:
+
+1. provenance,
+2. policy rules,
+3. confidence checks,
+4. structural validation,
+5. optional verifier models.
+
+---
+
+# 27. Safety and Privacy
+
+Memory systems may contain highly sensitive user information.
+
+AM should support:
+
+* explicit memory deletion,
+* configurable retention,
+* local-only operation,
+* encryption at rest where appropriate,
+* audit logging,
+* provenance inspection,
+* configurable reflection,
+* memory export,
+* memory reset.
+
+AM should never assume that every conversation should become permanent memory.
+
+---
+
+# 28. Benchmark Philosophy
+
+AM v0.2.0 will be evaluated using two complementary benchmark tracks.
+
+## Track A — Standardized Evaluation
+
+Use established long-term memory benchmarks such as LongMemEval where possible.
+
+Purpose:
+
+> Compare memory architectures under an externally defined task distribution.
+
+---
+
+## Track B — AM Memory Arena
+
+A custom 200-question benchmark designed to test capabilities that are especially relevant to adaptive memory systems.
+
+The benchmark must be specified and frozen **before seeing final system results**.
+
+---
+
+# 29. AM Memory Arena — 200 Questions
+
+| Category                          | Questions |
+| --------------------------------- | --------: |
+| Factual Recall                    |        20 |
+| Multi-Session Recall              |        20 |
+| Temporal Reasoning                |        20 |
+| Knowledge Updates                 |        20 |
+| Contradiction Handling            |        20 |
+| Indirect Recall                   |        20 |
+| Distractor Resistance             |        20 |
+| Abstention / Unknown Detection    |        20 |
+| Compression / Resolution Recovery |        20 |
+| Reflection / Reinterpretation     |        20 |
+| **Total**                         |   **200** |
+
+---
+
+# 30. Benchmark Requirements
+
+Every system must receive:
+
+* identical conversations,
+* identical questions,
+* identical base model where possible,
+* identical generation settings,
+* identical token limits,
+* identical number of trials,
+* identical access to external information,
+* no manual intervention.
+
+Prompts and configuration must be publicly documented.
+
+The benchmark should be frozen before final result analysis.
+
+---
+
+# 31. Evaluation Metrics
+
+AM will not rely on a single aggregate score.
+
+Metrics include:
+
+### Accuracy
+
+Whether the answer matches the ground truth.
+
+### Temporal Accuracy
+
+Whether the system identifies the correct state at the requested time.
+
+### Contradiction Accuracy
+
+Whether the system correctly handles conflicting memories.
+
+### Abstention Accuracy
+
+Whether the system refuses to invent information when no supporting memory exists.
+
+### Evidence Accuracy
+
+Whether the answer is supported by the retrieved evidence.
+
+### Context Efficiency
+
+Useful information obtained per context token.
+
+### Latency
+
+Time required to retrieve and prepare memory.
+
+### Memory Cost
+
+Storage and computational cost of maintaining memory.
+
+### Mutation Correctness
+
+Whether memory evolution operations improve or preserve future utility.
+
+### Reconstruction Success
+
+Whether compressed or distributed memories can be correctly reconstructed.
+
+---
+
+# 32. Benchmark Transparency
+
+All final benchmark artifacts should be published.
+
+```text
+benchmark/
+├── dataset/
+├── protocol/
+├── configs/
+├── results/
+│   ├── raw_results.json
+│   ├── scores.csv
+│   ├── failures.json
+│   └── latency.csv
+├── analysis/
+└── README.md
+```
+
+The benchmark should include failures, not only successful examples.
+
+A dedicated section should report:
+
+> **Where AM Loses**
+
+This is essential for scientific credibility.
+
+---
+
+# 33. Baselines
+
+Initial baseline families:
+
+### Baseline A — MemoryBank-style
+
+Persistent vector memory with decay and summary-based consolidation.
+
+### Baseline B — MemGPT / Letta-style
+
+Agent-managed context and external memory.
+
+### Baseline C — Simple RAG
+
+Vector retrieval without advanced memory evolution.
+
+### System Under Test — Artificial Memory v0.2.0
+
+Full adaptive runtime.
+
+Additional systems may be added later, but the core comparison must remain stable.
+
+---
+
+# 34. Fairness Rules
+
+To reduce evaluation bias:
+
+1. Freeze the benchmark before final runs.
+2. Publish the evaluation protocol.
+3. Use identical questions and conversations.
+4. Use the same answering model in the controlled-memory track.
+5. Publish all configuration values.
+6. Publish failures.
+7. Do not remove difficult questions after testing.
+8. Do not tune the benchmark after observing results.
+9. Separate exploratory experiments from final evaluation.
+10. Repeat runs where stochasticity is significant.
+
+The objective is not to design a benchmark that guarantees AM wins.
+
+The objective is to determine whether AM's architecture actually provides measurable advantages.
+
+---
+
+# 35. Research Hypothesis
+
+AM v0.2.0 is based on the following hypothesis:
+
+> **Explicit memory evolution, multi-resolution representation, background reflection, temporal state management, and memory reconstruction can improve long-term memory quality beyond static retrieval while reducing unnecessary context usage.**
+
+Expected benefits are particularly relevant to:
+
+* multi-session reasoning,
+* temporal updates,
+* contradiction handling,
+* long-term preference evolution,
+* memory compression,
+* resolution recovery,
+* and unknown detection.
+
+These are hypotheses to be tested, not predetermined results.
+
+---
+
+# 36. Implementation Phases
+
+## Phase 1 — Memory Evolution Core
+
+Implement:
+
+* state vectors,
+* lifecycle operations,
+* importance/utility signals,
+* resolution transitions,
+* evolution policies.
+
+---
+
+## Phase 2 — Temporal and Contradiction Layer
+
+Implement:
+
+* temporal validity,
+* contradiction edges,
+* supersession,
+* state transitions,
+* provenance chains.
+
+---
+
+## Phase 3 — Reconstruction Layer
+
+Implement:
+
+* graph traversal,
+* multi-memory evidence aggregation,
+* contextual reconstruction,
+* evidence ranking.
+
+---
+
+## Phase 4 — Context Allocator
+
+Implement:
+
+* token budgeting,
+* full/compressed/tag representations,
+* relevance scoring,
+* priority allocation.
+
+---
+
+## Phase 5 — Background Reflection
+
+Implement:
+
+* candidate selection,
+* reflection workers,
+* merge detection,
+* reinterpretation,
+* archival,
+* reinforcement,
+* audit events.
+
+---
+
+## Phase 6 — Predictive Recall
+
+Implement:
+
+* topic prediction,
+* prefetch,
+* cache,
+* deferred context injection.
+
+---
+
+## Phase 7 — Benchmark Infrastructure
+
+Implement:
+
+* benchmark dataset,
+* evaluation runner,
+* deterministic configs,
+* scoring,
+* raw result storage,
+* failure analysis.
+
+---
+
+## Phase 8 — Comparative Evaluation
+
+Run:
+
+```text
+Simple RAG
+MemoryBank-style
+MemGPT / Letta-style
+Artificial Memory
+```
+
+under controlled conditions.
+
+---
+
+# 37. Proposed Runtime API
+
+The exact API may change, but AM v0.2.0 should expose concepts such as:
+
+```text
+memory.store()
+memory.retrieve()
+memory.reconstruct()
+
+memory.evolve()
+memory.reflect()
+
+memory.compress()
+memory.merge()
+memory.reinterpret()
+
+memory.archive()
+memory.restore()
+
+memory.explain()
+memory.history()
+
+context.allocate()
+context.prefetch()
+```
+
+The API should expose capabilities rather than implementation details.
+
+---
+
+# 38. Observability
+
+AM should expose runtime metrics such as:
+
+```text
+memory_count
+active_memory_count
+archived_memory_count
+
+retrieval_latency
+reconstruction_latency
+
+reflection_cycles
+reflection_cost
+
+compression_events
+merge_events
+reinterpretation_events
+
+contradiction_count
+restoration_count
+
+context_tokens_saved
+context_tokens_allocated
+```
+
+This allows performance and memory evolution to be analyzed independently.
+
+---
+
+# 39. Design Philosophy
+
+AM v0.2.0 intentionally combines ideas from several areas:
+
+```text
+RAG
+    → semantic retrieval
+
+MemoryBank
+    → importance / forgetting
+
+MemGPT
+    → context as managed memory
+
+Graph Memory
+    → relationships / reconstruction
+
+Observational Memory
+    → asynchronous observation and reflection
+
+Agentic Memory
+    → memory operations as explicit actions
+
+AM
+    → unified adaptive memory runtime
+```
+
+The goal is not to reproduce any individual architecture.
+
+The goal is to construct a coherent runtime around the underlying problem:
+
+> **How should a long-lived AI maintain useful memory over time under limited context, changing information, uncertainty, and imperfect retrieval?**
+
+---
+
+# 40. Version Boundary
+
+## AM v0.1.0
+
+Primary capabilities:
+
+```text
+Store
+Retrieve
+Compress
+Persist
+Trace
+```
+
+Core thesis:
+
+> **Forgetting = Resolution Down, not Deletion.**
+
+---
+
+## AM v0.2.0
+
+Adds:
+
+```text
+Evolution
+Reflection
+Reinterpretation
+Reconstruction
+Temporal State
+Contradiction Handling
+Context Allocation
+Predictive Recall
+Audit Events
+Benchmark Infrastructure
+```
+
+The conceptual transition is:
+
+```text
+v0.1.0
+"AI can remember."
+
+        ↓
+
+v0.2.0
+"AI memory can change, reflect, reconstruct,
+and manage itself over time."
+```
+
+---
+
+# 41. Success Criteria
+
+AM v0.2.0 is successful if it demonstrates, through reproducible experiments, that the runtime can:
+
+1. retain useful information across long sessions,
+2. correctly handle changing information,
+3. preserve contradictory historical states,
+4. recover useful information from compressed memory,
+5. distinguish known information from unknown information,
+6. dynamically allocate context according to task needs,
+7. perform useful background reflection,
+8. preserve evidence and provenance through memory evolution,
+9. reduce unnecessary context usage,
+10. and remain inspectable and reproducible.
+
+Performance superiority over other systems is an empirical question.
+
+---
+
+# 42. Final Principle
+
+Artificial Memory should not model human-like memory as a static database.
+
+It should model memory as a **living computational state**.
+
+A memory may become weaker without disappearing.
+
+A fact may become outdated without becoming irrelevant historically.
+
+A summary may become insufficient and require reconstruction.
+
+A contradiction may represent change rather than corruption.
+
+An old event may acquire new meaning.
+
+A previously forgotten detail may become important again.
+
+Therefore:
+
+> **Memory is not what an AI stores.**
+>
+> **Memory is how an AI continuously decides what remains worth remembering, at what resolution, and why.**
+
+And the central design principle of Artificial Memory v0.2.0 is:
+
+> ## **Memory should not only be retrieved. It should be reflected upon.**
+
+---
+
+# 43. Research Basis
+
+The architecture of AM v0.2.0 is informed by ideas from:
+
+* **MemoryBank** — long-term memory, importance, decay, and consolidation
+* **MemGPT / Letta** — memory hierarchy and context management
+* **LongMemEval** — evaluation of long-term memory capabilities
+* **LoCoMo** — long-context conversational memory evaluation
+* **ReAct** — tool-using reasoning patterns
+* **MIRROR** — asynchronous cognitive-style reflection
+* **MRAgent** — memory reconstruction through associative structures
+* **Observational Memory** — observer/reflector-based memory consolidation
+* **AgeMem** — explicit memory management as agentic operations
+* **Continual Learning** — consolidation and protection against forgetting
+* **Knowledge Graphs** — explicit semantic and temporal relations
+
+These works provide individual components and research directions.
+
+Artificial Memory v0.2.0 attempts to combine those ideas into a single **adaptive, auditable, multi-resolution memory runtime**.
+
+---
+
+# 44. Open Research Questions
+
+Several questions remain intentionally unresolved.
+
+### Q1
+
+How should reflection cost be balanced against memory quality?
+
+### Q2
+
+When should a memory be reinterpreted rather than merely reinforced?
+
+### Q3
+
+How much information can safely be removed from an archived representation?
+
+### Q4
+
+Can resolution recovery reliably reconstruct details that were not explicitly preserved?
+
+### Q5
+
+How should conflicting evidence be weighted when sources have different reliability?
+
+### Q6
+
+Can predictive recall improve latency without increasing context noise?
+
+### Q7
+
+How much of memory management should be controlled by deterministic runtime policy versus an LLM?
+
+### Q8
+
+Can memory evolution remain stable over months or years without accumulating systematic drift?
+
+These questions form the deeper research agenda beyond the first implementation.
+
+---
+
+# 45. Closing Statement
+
+Artificial Memory v0.2.0 is not intended to be the final architecture for AI memory.
+
+It is an experiment in treating long-term memory as a first-class runtime problem.
+
+Instead of asking:
+
+> "Can an AI retrieve an old fact?"
+
+AM asks a larger question:
+
+> **"Can an AI continuously maintain, compress, reinterpret, reconstruct, and govern its own long-term memory?"**
+
+That is the problem this version is designed to explore.
+

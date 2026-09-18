@@ -1,10 +1,19 @@
 """Artificial Memory Operator - Main entry point."""
 
+import logging
+
 import kopf
 import kubernetes.client
-from kubernetes.client.rest import ApiException
-import logging
-import os
+import kubernetes.config
+
+# Import handlers
+from k8s.operator.handlers import (
+    artificialmemorycluster,
+    memorystore,
+    memoryworker,
+    recallworker,
+    vectorindex,
+)
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -48,16 +57,12 @@ def cleanup(**_):
     logger.info("Operator shutting down")
 
 
-# Import handlers
-from k8s.operator.handlers import (
-    artificialmemorycluster,
-    memorystore,
-    memoryworker,
-    recallworker,
-    vectorindex,
-)
-
 __all__ = [
     "configure",
     "cleanup",
+    "artificialmemorycluster",
+    "memorystore",
+    "memoryworker",
+    "recallworker",
+    "vectorindex",
 ]

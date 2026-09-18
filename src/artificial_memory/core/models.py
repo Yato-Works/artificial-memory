@@ -48,6 +48,7 @@ class AssociationType(StrEnum):
     CONTRADICTS = "contradicts"
     ELABORATES = "elaborates"
     SUMMARIZES = "summarizes"
+    SUPERSEDES = "supersedes"
 
 
 class ConversationStatus(StrEnum):
