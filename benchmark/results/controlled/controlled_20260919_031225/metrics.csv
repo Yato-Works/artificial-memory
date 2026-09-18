@@ -1,0 +1,21 @@
+player,question_id,category,context_tokens,retrieval_ms,context_build_ms,answer_ms,total_latency_ms
+AM v0.2.0,factual_recall-00,factual_recall,522,16.0,0.0,8084.8,1888.7
+AM v0.2.0,factual_recall-01,factual_recall,509,43.0,0.0,324.5,334.3
+AM v0.2.0,factual_recall-02,factual_recall,513,42.7,0.0,324.7,332.1
+AM v0.2.0,factual_recall-03,factual_recall,507,40.5,0.0,331.9,328.5
+AM v0.2.0,factual_recall-04,factual_recall,509,43.1,0.0,328.2,327.8
+AM v0.2.0,factual_recall-05,factual_recall,509,42.4,0.0,326.8,335.6
+AM v0.2.0,factual_recall-06,factual_recall,507,41.5,0.0,334.4,339.3
+AM v0.2.0,factual_recall-07,factual_recall,501,39.5,0.0,328.8,339.1
+AM v0.2.0,factual_recall-08,factual_recall,510,46.0,0.0,350.6,346.8
+AM v0.2.0,factual_recall-09,factual_recall,509,43.0,0.0,335.9,336.2
+AM v0.2.0,factual_recall-10,factual_recall,507,40.6,0.0,346.7,333.6
+AM v0.2.0,factual_recall-11,factual_recall,508,40.9,0.0,358.3,316.4
+AM v0.2.0,factual_recall-12,factual_recall,500,31.1,0.0,311.8,336.1
+AM v0.2.0,factual_recall-13,factual_recall,505,44.1,0.0,341.7,326.7
+AM v0.2.0,factual_recall-14,factual_recall,503,39.8,0.0,344.8,330.0
+AM v0.2.0,factual_recall-15,factual_recall,510,30.7,0.0,313.7,284.3
+AM v0.2.0,factual_recall-16,factual_recall,508,18.1,0.0,272.8,243.9
+AM v0.2.0,factual_recall-17,factual_recall,511,15.4,0.0,253.9,258.9
+AM v0.2.0,factual_recall-18,factual_recall,506,15.9,0.0,253.8,256.2
+AM v0.2.0,factual_recall-19,factual_recall,519,17.0,0.0,250.0,238.2

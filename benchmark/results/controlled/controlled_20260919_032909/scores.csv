@@ -1,0 +1,81 @@
+player,question_id,category,repeat_index,is_official,outcome,score,correct,ground_truth_coverage,covered_groups,must_total,forbidden_violation,forbidden_hits,abstention_detected,answer_empty,score_consistency,answer_text
+AM v0.2.0,compression_recovery-00,compression_recovery,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1160
+AM v0.2.0,compression_recovery-00,compression_recovery,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1160
+AM v0.2.0,compression_recovery-00,compression_recovery,1,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1160
+AM v0.2.0,compression_recovery-00,compression_recovery,2,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1160
+AM v0.2.0,compression_recovery-01,compression_recovery,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1161
+AM v0.2.0,compression_recovery-01,compression_recovery,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1161
+AM v0.2.0,compression_recovery-01,compression_recovery,1,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1161
+AM v0.2.0,compression_recovery-01,compression_recovery,2,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1161
+AM v0.2.0,compression_recovery-02,compression_recovery,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1162
+AM v0.2.0,compression_recovery-02,compression_recovery,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1162
+AM v0.2.0,compression_recovery-02,compression_recovery,1,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1162
+AM v0.2.0,compression_recovery-02,compression_recovery,2,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1162
+AM v0.2.0,compression_recovery-03,compression_recovery,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1163
+AM v0.2.0,compression_recovery-03,compression_recovery,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1163
+AM v0.2.0,compression_recovery-03,compression_recovery,1,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1163
+AM v0.2.0,compression_recovery-03,compression_recovery,2,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1163
+AM v0.2.0,compression_recovery-04,compression_recovery,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1164
+AM v0.2.0,compression_recovery-04,compression_recovery,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1164
+AM v0.2.0,compression_recovery-04,compression_recovery,1,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1164
+AM v0.2.0,compression_recovery-04,compression_recovery,2,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1164
+AM v0.2.0,compression_recovery-05,compression_recovery,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,serial AM-1165
+AM v0.2.0,compression_recovery-05,compression_recovery,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,serial AM-1165
+AM v0.2.0,compression_recovery-05,compression_recovery,1,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,serial AM-1165
+AM v0.2.0,compression_recovery-05,compression_recovery,2,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,serial AM-1165
+AM v0.2.0,compression_recovery-06,compression_recovery,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1166
+AM v0.2.0,compression_recovery-06,compression_recovery,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1166
+AM v0.2.0,compression_recovery-06,compression_recovery,1,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1166
+AM v0.2.0,compression_recovery-06,compression_recovery,2,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1166
+AM v0.2.0,compression_recovery-07,compression_recovery,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1167
+AM v0.2.0,compression_recovery-07,compression_recovery,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1167
+AM v0.2.0,compression_recovery-07,compression_recovery,1,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1167
+AM v0.2.0,compression_recovery-07,compression_recovery,2,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1167
+AM v0.2.0,compression_recovery-08,compression_recovery,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1168
+AM v0.2.0,compression_recovery-08,compression_recovery,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1168
+AM v0.2.0,compression_recovery-08,compression_recovery,1,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1168
+AM v0.2.0,compression_recovery-08,compression_recovery,2,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1168
+AM v0.2.0,compression_recovery-09,compression_recovery,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1169
+AM v0.2.0,compression_recovery-09,compression_recovery,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1169
+AM v0.2.0,compression_recovery-09,compression_recovery,1,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1169
+AM v0.2.0,compression_recovery-09,compression_recovery,2,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1169
+AM v0.2.0,compression_recovery-10,compression_recovery,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Serial AM-1170
+AM v0.2.0,compression_recovery-10,compression_recovery,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Serial AM-1170
+AM v0.2.0,compression_recovery-10,compression_recovery,1,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Serial AM-1170
+AM v0.2.0,compression_recovery-10,compression_recovery,2,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Serial AM-1170
+AM v0.2.0,compression_recovery-11,compression_recovery,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,serial AM-1171
+AM v0.2.0,compression_recovery-11,compression_recovery,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,serial AM-1171
+AM v0.2.0,compression_recovery-11,compression_recovery,1,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,serial AM-1171
+AM v0.2.0,compression_recovery-11,compression_recovery,2,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,serial AM-1171
+AM v0.2.0,compression_recovery-12,compression_recovery,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1172
+AM v0.2.0,compression_recovery-12,compression_recovery,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1172
+AM v0.2.0,compression_recovery-12,compression_recovery,1,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1172
+AM v0.2.0,compression_recovery-12,compression_recovery,2,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1172
+AM v0.2.0,compression_recovery-13,compression_recovery,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1173
+AM v0.2.0,compression_recovery-13,compression_recovery,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1173
+AM v0.2.0,compression_recovery-13,compression_recovery,1,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1173
+AM v0.2.0,compression_recovery-13,compression_recovery,2,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1173
+AM v0.2.0,compression_recovery-14,compression_recovery,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1174
+AM v0.2.0,compression_recovery-14,compression_recovery,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1174
+AM v0.2.0,compression_recovery-14,compression_recovery,1,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1174
+AM v0.2.0,compression_recovery-14,compression_recovery,2,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1174
+AM v0.2.0,compression_recovery-15,compression_recovery,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,serial AM-1175
+AM v0.2.0,compression_recovery-15,compression_recovery,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,serial AM-1175
+AM v0.2.0,compression_recovery-15,compression_recovery,1,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,serial AM-1175
+AM v0.2.0,compression_recovery-15,compression_recovery,2,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,serial AM-1175
+AM v0.2.0,compression_recovery-16,compression_recovery,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Serial AM-1176
+AM v0.2.0,compression_recovery-16,compression_recovery,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Serial AM-1176
+AM v0.2.0,compression_recovery-16,compression_recovery,1,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Serial AM-1176
+AM v0.2.0,compression_recovery-16,compression_recovery,2,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Serial AM-1176
+AM v0.2.0,compression_recovery-17,compression_recovery,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,serial AM-1177
+AM v0.2.0,compression_recovery-17,compression_recovery,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,serial AM-1177
+AM v0.2.0,compression_recovery-17,compression_recovery,1,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,serial AM-1177
+AM v0.2.0,compression_recovery-17,compression_recovery,2,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,serial AM-1177
+AM v0.2.0,compression_recovery-18,compression_recovery,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1178
+AM v0.2.0,compression_recovery-18,compression_recovery,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1178
+AM v0.2.0,compression_recovery-18,compression_recovery,1,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1178
+AM v0.2.0,compression_recovery-18,compression_recovery,2,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1178
+AM v0.2.0,compression_recovery-19,compression_recovery,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1179
+AM v0.2.0,compression_recovery-19,compression_recovery,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1179
+AM v0.2.0,compression_recovery-19,compression_recovery,1,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1179
+AM v0.2.0,compression_recovery-19,compression_recovery,2,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1179

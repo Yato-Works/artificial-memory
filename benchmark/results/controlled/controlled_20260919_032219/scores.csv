@@ -1,0 +1,81 @@
+player,question_id,category,repeat_index,is_official,outcome,score,correct,ground_truth_coverage,covered_groups,must_total,forbidden_violation,forbidden_hits,abstention_detected,answer_empty,score_consistency,answer_text
+AM v0.2.0,distractor_resistance-00,distractor_resistance,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,git-lfs
+AM v0.2.0,distractor_resistance-00,distractor_resistance,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,git-lfs
+AM v0.2.0,distractor_resistance-00,distractor_resistance,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,git-lfs
+AM v0.2.0,distractor_resistance-00,distractor_resistance,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,git-lfs
+AM v0.2.0,distractor_resistance-01,distractor_resistance,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-01,distractor_resistance,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-01,distractor_resistance,1,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-01,distractor_resistance,2,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-02,distractor_resistance,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-02,distractor_resistance,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-02,distractor_resistance,1,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-02,distractor_resistance,2,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-03,distractor_resistance,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-03,distractor_resistance,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-03,distractor_resistance,1,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-03,distractor_resistance,2,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-04,distractor_resistance,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-04,distractor_resistance,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-04,distractor_resistance,1,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-04,distractor_resistance,2,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-05,distractor_resistance,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,git-lfs
+AM v0.2.0,distractor_resistance-05,distractor_resistance,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,git-lfs
+AM v0.2.0,distractor_resistance-05,distractor_resistance,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,git-lfs
+AM v0.2.0,distractor_resistance-05,distractor_resistance,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,git-lfs
+AM v0.2.0,distractor_resistance-06,distractor_resistance,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-06,distractor_resistance,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-06,distractor_resistance,1,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-06,distractor_resistance,2,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-07,distractor_resistance,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-07,distractor_resistance,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-07,distractor_resistance,1,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-07,distractor_resistance,2,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-08,distractor_resistance,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-08,distractor_resistance,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-08,distractor_resistance,1,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-08,distractor_resistance,2,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-09,distractor_resistance,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-09,distractor_resistance,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-09,distractor_resistance,1,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-09,distractor_resistance,2,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-10,distractor_resistance,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-10,distractor_resistance,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-10,distractor_resistance,1,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-10,distractor_resistance,2,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-11,distractor_resistance,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,ackermann
+AM v0.2.0,distractor_resistance-11,distractor_resistance,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,ackermann
+AM v0.2.0,distractor_resistance-11,distractor_resistance,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,ackermann
+AM v0.2.0,distractor_resistance-11,distractor_resistance,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,ackermann
+AM v0.2.0,distractor_resistance-12,distractor_resistance,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-12,distractor_resistance,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-12,distractor_resistance,1,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-12,distractor_resistance,2,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-13,distractor_resistance,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-13,distractor_resistance,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-13,distractor_resistance,1,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-13,distractor_resistance,2,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-14,distractor_resistance,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-14,distractor_resistance,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-14,distractor_resistance,1,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-14,distractor_resistance,2,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-15,distractor_resistance,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-15,distractor_resistance,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-15,distractor_resistance,1,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-15,distractor_resistance,2,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-16,distractor_resistance,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-16,distractor_resistance,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-16,distractor_resistance,1,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-16,distractor_resistance,2,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-17,distractor_resistance,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-17,distractor_resistance,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-17,distractor_resistance,1,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-17,distractor_resistance,2,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-18,distractor_resistance,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-18,distractor_resistance,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-18,distractor_resistance,1,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-18,distractor_resistance,2,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-19,distractor_resistance,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-19,distractor_resistance,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-19,distractor_resistance,1,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,distractor_resistance-19,distractor_resistance,2,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.

@@ -1,0 +1,81 @@
+player,question_id,category,repeat_index,is_official,outcome,score,correct,ground_truth_coverage,covered_groups,must_total,forbidden_violation,forbidden_hits,abstention_detected,answer_empty,score_consistency,answer_text
+AM v0.2.0,multi_session_recall-00,multi_session_recall,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Standard-library solutions
+AM v0.2.0,multi_session_recall-00,multi_session_recall,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Standard-library solutions
+AM v0.2.0,multi_session_recall-00,multi_session_recall,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Standard-library solutions
+AM v0.2.0,multi_session_recall-00,multi_session_recall,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Standard-library solutions
+AM v0.2.0,multi_session_recall-01,multi_session_recall,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Standard-library solutions
+AM v0.2.0,multi_session_recall-01,multi_session_recall,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Standard-library solutions
+AM v0.2.0,multi_session_recall-01,multi_session_recall,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Standard-library solutions
+AM v0.2.0,multi_session_recall-01,multi_session_recall,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Standard-library solutions
+AM v0.2.0,multi_session_recall-02,multi_session_recall,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,"The user began studying, practised, and later recommended standard-library solutions."
+AM v0.2.0,multi_session_recall-02,multi_session_recall,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,"The user began studying, practised, and later recommended standard-library solutions."
+AM v0.2.0,multi_session_recall-02,multi_session_recall,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,"The user began studying, practised, and later recommended standard-library solutions."
+AM v0.2.0,multi_session_recall-02,multi_session_recall,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,"The user began studying, practised, and later recommended standard-library solutions."
+AM v0.2.0,multi_session_recall-03,multi_session_recall,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases.
+AM v0.2.0,multi_session_recall-03,multi_session_recall,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases.
+AM v0.2.0,multi_session_recall-03,multi_session_recall,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases.
+AM v0.2.0,multi_session_recall-03,multi_session_recall,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases.
+AM v0.2.0,multi_session_recall-04,multi_session_recall,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Standard-library solutions
+AM v0.2.0,multi_session_recall-04,multi_session_recall,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Standard-library solutions
+AM v0.2.0,multi_session_recall-04,multi_session_recall,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Standard-library solutions
+AM v0.2.0,multi_session_recall-04,multi_session_recall,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Standard-library solutions
+AM v0.2.0,multi_session_recall-05,multi_session_recall,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,"The user began studying, practised, and later recommended standard-library solutions before libraries."
+AM v0.2.0,multi_session_recall-05,multi_session_recall,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,"The user began studying, practised, and later recommended standard-library solutions before libraries."
+AM v0.2.0,multi_session_recall-05,multi_session_recall,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,"The user began studying, practised, and later recommended standard-library solutions before libraries."
+AM v0.2.0,multi_session_recall-05,multi_session_recall,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,"The user began studying, practised, and later recommended standard-library solutions before libraries."
+AM v0.2.0,multi_session_recall-06,multi_session_recall,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Keeping an untouched backup of the previous schema.
+AM v0.2.0,multi_session_recall-06,multi_session_recall,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Keeping an untouched backup of the previous schema.
+AM v0.2.0,multi_session_recall-06,multi_session_recall,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Keeping an untouched backup of the previous schema.
+AM v0.2.0,multi_session_recall-06,multi_session_recall,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Keeping an untouched backup of the previous schema.
+AM v0.2.0,multi_session_recall-07,multi_session_recall,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Standard-library solutions
+AM v0.2.0,multi_session_recall-07,multi_session_recall,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Standard-library solutions
+AM v0.2.0,multi_session_recall-07,multi_session_recall,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Standard-library solutions
+AM v0.2.0,multi_session_recall-07,multi_session_recall,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Standard-library solutions
+AM v0.2.0,multi_session_recall-08,multi_session_recall,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,"The user began studying, practised, and later recommended the use of standard-library solutions before libraries."
+AM v0.2.0,multi_session_recall-08,multi_session_recall,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,"The user began studying, practised, and later recommended the use of standard-library solutions before libraries."
+AM v0.2.0,multi_session_recall-08,multi_session_recall,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,"The user began studying, practised, and later recommended the use of standard-library solutions before libraries."
+AM v0.2.0,multi_session_recall-08,multi_session_recall,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,"The user began studying, practised, and later recommended the use of standard-library solutions before libraries."
+AM v0.2.0,multi_session_recall-09,multi_session_recall,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Benchmarking before and after every change
+AM v0.2.0,multi_session_recall-09,multi_session_recall,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Benchmarking before and after every change
+AM v0.2.0,multi_session_recall-09,multi_session_recall,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Benchmarking before and after every change
+AM v0.2.0,multi_session_recall-09,multi_session_recall,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Benchmarking before and after every change
+AM v0.2.0,multi_session_recall-10,multi_session_recall,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases.
+AM v0.2.0,multi_session_recall-10,multi_session_recall,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases.
+AM v0.2.0,multi_session_recall-10,multi_session_recall,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases.
+AM v0.2.0,multi_session_recall-10,multi_session_recall,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases.
+AM v0.2.0,multi_session_recall-11,multi_session_recall,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases.
+AM v0.2.0,multi_session_recall-11,multi_session_recall,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases.
+AM v0.2.0,multi_session_recall-11,multi_session_recall,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases.
+AM v0.2.0,multi_session_recall-11,multi_session_recall,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases.
+AM v0.2.0,multi_session_recall-12,multi_session_recall,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases.
+AM v0.2.0,multi_session_recall-12,multi_session_recall,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases.
+AM v0.2.0,multi_session_recall-12,multi_session_recall,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases.
+AM v0.2.0,multi_session_recall-12,multi_session_recall,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases.
+AM v0.2.0,multi_session_recall-13,multi_session_recall,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Standard-library solutions
+AM v0.2.0,multi_session_recall-13,multi_session_recall,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Standard-library solutions
+AM v0.2.0,multi_session_recall-13,multi_session_recall,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Standard-library solutions
+AM v0.2.0,multi_session_recall-13,multi_session_recall,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Standard-library solutions
+AM v0.2.0,multi_session_recall-14,multi_session_recall,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Logging every measurement under a serial number
+AM v0.2.0,multi_session_recall-14,multi_session_recall,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Logging every measurement under a serial number
+AM v0.2.0,multi_session_recall-14,multi_session_recall,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Logging every measurement under a serial number
+AM v0.2.0,multi_session_recall-14,multi_session_recall,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Logging every measurement under a serial number
+AM v0.2.0,multi_session_recall-15,multi_session_recall,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases
+AM v0.2.0,multi_session_recall-15,multi_session_recall,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases
+AM v0.2.0,multi_session_recall-15,multi_session_recall,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases
+AM v0.2.0,multi_session_recall-15,multi_session_recall,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases
+AM v0.2.0,multi_session_recall-16,multi_session_recall,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases.
+AM v0.2.0,multi_session_recall-16,multi_session_recall,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases.
+AM v0.2.0,multi_session_recall-16,multi_session_recall,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases.
+AM v0.2.0,multi_session_recall-16,multi_session_recall,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases.
+AM v0.2.0,multi_session_recall-17,multi_session_recall,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,"The user began studying, practised, and later recommended the use of standard-library solutions before libraries."
+AM v0.2.0,multi_session_recall-17,multi_session_recall,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,"The user began studying, practised, and later recommended the use of standard-library solutions before libraries."
+AM v0.2.0,multi_session_recall-17,multi_session_recall,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,"The user began studying, practised, and later recommended the use of standard-library solutions before libraries."
+AM v0.2.0,multi_session_recall-17,multi_session_recall,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,"The user began studying, practised, and later recommended the use of standard-library solutions before libraries."
+AM v0.2.0,multi_session_recall-18,multi_session_recall,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases
+AM v0.2.0,multi_session_recall-18,multi_session_recall,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases
+AM v0.2.0,multi_session_recall-18,multi_session_recall,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases
+AM v0.2.0,multi_session_recall-18,multi_session_recall,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases
+AM v0.2.0,multi_session_recall-19,multi_session_recall,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases.
+AM v0.2.0,multi_session_recall-19,multi_session_recall,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases.
+AM v0.2.0,multi_session_recall-19,multi_session_recall,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases.
+AM v0.2.0,multi_session_recall-19,multi_session_recall,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases.

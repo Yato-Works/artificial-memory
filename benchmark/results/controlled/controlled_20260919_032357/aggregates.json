@@ -1,0 +1,25 @@
+{
+  "scoring_spec": "v0.2.0-scoring-1",
+  "players": [
+    {
+      "player": "AM v0.2.0",
+      "question_count": 20,
+      "pass_count": 20,
+      "partial_count": 0,
+      "fail_count": 0,
+      "false_positive_count": 0,
+      "answer_accuracy": 1.0,
+      "partial_rate": 0.0,
+      "false_positive_rate": 0.0,
+      "forbidden_violation_rate": 0.0,
+      "mean_ground_truth_coverage": 1.0,
+      "mean_score": 1.0,
+      "abstention_accuracy": null,
+      "abstention_question_count": 0,
+      "mean_score_consistency": 1.0,
+      "category_accuracy": {
+        "factual_recall": 1.0
+      }
+    }
+  ]
+}

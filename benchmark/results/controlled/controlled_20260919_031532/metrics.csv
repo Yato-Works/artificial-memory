@@ -1,0 +1,21 @@
+player,question_id,category,context_tokens,retrieval_ms,context_build_ms,answer_ms,total_latency_ms
+AM v0.2.0,contradiction_handling-00,contradiction_handling,522,42.4,0.0,577.1,400.2
+AM v0.2.0,contradiction_handling-01,contradiction_handling,495,36.7,0.0,329.5,290.6
+AM v0.2.0,contradiction_handling-02,contradiction_handling,494,21.5,0.0,299.1,287.1
+AM v0.2.0,contradiction_handling-03,contradiction_handling,505,36.2,0.0,491.6,389.2
+AM v0.2.0,contradiction_handling-04,contradiction_handling,512,40.2,0.0,343.7,356.4
+AM v0.2.0,contradiction_handling-05,contradiction_handling,509,41.9,0.0,354.8,347.2
+AM v0.2.0,contradiction_handling-06,contradiction_handling,501,42.7,0.0,311.4,361.0
+AM v0.2.0,contradiction_handling-07,contradiction_handling,505,43.2,0.0,401.4,372.2
+AM v0.2.0,contradiction_handling-08,contradiction_handling,502,43.3,0.0,333.4,337.3
+AM v0.2.0,contradiction_handling-09,contradiction_handling,495,34.2,0.0,351.4,348.6
+AM v0.2.0,contradiction_handling-10,contradiction_handling,501,44.1,0.0,355.8,354.9
+AM v0.2.0,contradiction_handling-11,contradiction_handling,505,42.5,0.0,277.2,270.5
+AM v0.2.0,contradiction_handling-12,contradiction_handling,496,34.7,0.0,335.9,386.2
+AM v0.2.0,contradiction_handling-13,contradiction_handling,504,42.4,0.0,337.2,313.2
+AM v0.2.0,contradiction_handling-14,contradiction_handling,504,43.2,0.0,321.6,339.3
+AM v0.2.0,contradiction_handling-15,contradiction_handling,502,41.5,0.0,336.9,347.6
+AM v0.2.0,contradiction_handling-16,contradiction_handling,497,42.4,0.0,343.9,353.4
+AM v0.2.0,contradiction_handling-17,contradiction_handling,504,43.1,0.0,348.1,339.8
+AM v0.2.0,contradiction_handling-18,contradiction_handling,515,42.0,0.0,329.8,335.7
+AM v0.2.0,contradiction_handling-19,contradiction_handling,500,42.3,0.0,322.1,326.1

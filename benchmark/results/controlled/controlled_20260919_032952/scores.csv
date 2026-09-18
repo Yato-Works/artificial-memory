@@ -1,0 +1,81 @@
+player,question_id,category,repeat_index,is_official,outcome,score,correct,ground_truth_coverage,covered_groups,must_total,forbidden_violation,forbidden_hits,abstention_detected,answer_empty,score_consistency,answer_text
+AM v0.2.0,reflection_reinterpretation-00,reflection_reinterpretation,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Using ripgrep as an editor toolchain
+AM v0.2.0,reflection_reinterpretation-00,reflection_reinterpretation,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Using ripgrep as an editor toolchain
+AM v0.2.0,reflection_reinterpretation-00,reflection_reinterpretation,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Using ripgrep as an editor toolchain
+AM v0.2.0,reflection_reinterpretation-00,reflection_reinterpretation,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Using ripgrep as an editor toolchain
+AM v0.2.0,reflection_reinterpretation-01,reflection_reinterpretation,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring bat as an editor toolchain
+AM v0.2.0,reflection_reinterpretation-01,reflection_reinterpretation,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring bat as an editor toolchain
+AM v0.2.0,reflection_reinterpretation-01,reflection_reinterpretation,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring bat as an editor toolchain
+AM v0.2.0,reflection_reinterpretation-01,reflection_reinterpretation,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring bat as an editor toolchain
+AM v0.2.0,reflection_reinterpretation-02,reflection_reinterpretation,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Using fd as the daily driver
+AM v0.2.0,reflection_reinterpretation-02,reflection_reinterpretation,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Using fd as the daily driver
+AM v0.2.0,reflection_reinterpretation-02,reflection_reinterpretation,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Using fd as the daily driver
+AM v0.2.0,reflection_reinterpretation-02,reflection_reinterpretation,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Using fd as the daily driver
+AM v0.2.0,reflection_reinterpretation-03,reflection_reinterpretation,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring the editor toolchain delta
+AM v0.2.0,reflection_reinterpretation-03,reflection_reinterpretation,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring the editor toolchain delta
+AM v0.2.0,reflection_reinterpretation-03,reflection_reinterpretation,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring the editor toolchain delta
+AM v0.2.0,reflection_reinterpretation-03,reflection_reinterpretation,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring the editor toolchain delta
+AM v0.2.0,reflection_reinterpretation-04,reflection_reinterpretation,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Using zoxide as an editor toolchain
+AM v0.2.0,reflection_reinterpretation-04,reflection_reinterpretation,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Using zoxide as an editor toolchain
+AM v0.2.0,reflection_reinterpretation-04,reflection_reinterpretation,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Using zoxide as an editor toolchain
+AM v0.2.0,reflection_reinterpretation-04,reflection_reinterpretation,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Using zoxide as an editor toolchain
+AM v0.2.0,reflection_reinterpretation-05,reflection_reinterpretation,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Using starship as the preferred editor toolchain
+AM v0.2.0,reflection_reinterpretation-05,reflection_reinterpretation,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Using starship as the preferred editor toolchain
+AM v0.2.0,reflection_reinterpretation-05,reflection_reinterpretation,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Using starship as the preferred editor toolchain
+AM v0.2.0,reflection_reinterpretation-05,reflection_reinterpretation,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Using starship as the preferred editor toolchain
+AM v0.2.0,reflection_reinterpretation-06,reflection_reinterpretation,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Using sccache as the preferred editor toolchain.
+AM v0.2.0,reflection_reinterpretation-06,reflection_reinterpretation,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Using sccache as the preferred editor toolchain.
+AM v0.2.0,reflection_reinterpretation-06,reflection_reinterpretation,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Using sccache as the preferred editor toolchain.
+AM v0.2.0,reflection_reinterpretation-06,reflection_reinterpretation,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Using sccache as the preferred editor toolchain.
+AM v0.2.0,reflection_reinterpretation-07,reflection_reinterpretation,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring watchexec as an editor toolchain
+AM v0.2.0,reflection_reinterpretation-07,reflection_reinterpretation,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring watchexec as an editor toolchain
+AM v0.2.0,reflection_reinterpretation-07,reflection_reinterpretation,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring watchexec as an editor toolchain
+AM v0.2.0,reflection_reinterpretation-07,reflection_reinterpretation,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring watchexec as an editor toolchain
+AM v0.2.0,reflection_reinterpretation-08,reflection_reinterpretation,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring helix as the daily driver
+AM v0.2.0,reflection_reinterpretation-08,reflection_reinterpretation,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring helix as the daily driver
+AM v0.2.0,reflection_reinterpretation-08,reflection_reinterpretation,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring helix as the daily driver
+AM v0.2.0,reflection_reinterpretation-08,reflection_reinterpretation,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring helix as the daily driver
+AM v0.2.0,reflection_reinterpretation-09,reflection_reinterpretation,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring hyperfine as an editor toolchain
+AM v0.2.0,reflection_reinterpretation-09,reflection_reinterpretation,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring hyperfine as an editor toolchain
+AM v0.2.0,reflection_reinterpretation-09,reflection_reinterpretation,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring hyperfine as an editor toolchain
+AM v0.2.0,reflection_reinterpretation-09,reflection_reinterpretation,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring hyperfine as an editor toolchain
+AM v0.2.0,reflection_reinterpretation-10,reflection_reinterpretation,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring the editor toolchain dust
+AM v0.2.0,reflection_reinterpretation-10,reflection_reinterpretation,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring the editor toolchain dust
+AM v0.2.0,reflection_reinterpretation-10,reflection_reinterpretation,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring the editor toolchain dust
+AM v0.2.0,reflection_reinterpretation-10,reflection_reinterpretation,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring the editor toolchain dust
+AM v0.2.0,reflection_reinterpretation-11,reflection_reinterpretation,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring procs as the daily driver.
+AM v0.2.0,reflection_reinterpretation-11,reflection_reinterpretation,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring procs as the daily driver.
+AM v0.2.0,reflection_reinterpretation-11,reflection_reinterpretation,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring procs as the daily driver.
+AM v0.2.0,reflection_reinterpretation-11,reflection_reinterpretation,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring procs as the daily driver.
+AM v0.2.0,reflection_reinterpretation-12,reflection_reinterpretation,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Using sd as the daily driver
+AM v0.2.0,reflection_reinterpretation-12,reflection_reinterpretation,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Using sd as the daily driver
+AM v0.2.0,reflection_reinterpretation-12,reflection_reinterpretation,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Using sd as the daily driver
+AM v0.2.0,reflection_reinterpretation-12,reflection_reinterpretation,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Using sd as the daily driver
+AM v0.2.0,reflection_reinterpretation-13,reflection_reinterpretation,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Using tokei as an editor toolchain
+AM v0.2.0,reflection_reinterpretation-13,reflection_reinterpretation,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Using tokei as an editor toolchain
+AM v0.2.0,reflection_reinterpretation-13,reflection_reinterpretation,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Using tokei as an editor toolchain
+AM v0.2.0,reflection_reinterpretation-13,reflection_reinterpretation,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Using tokei as an editor toolchain
+AM v0.2.0,reflection_reinterpretation-14,reflection_reinterpretation,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferred editor toolchain is xh.
+AM v0.2.0,reflection_reinterpretation-14,reflection_reinterpretation,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferred editor toolchain is xh.
+AM v0.2.0,reflection_reinterpretation-14,reflection_reinterpretation,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferred editor toolchain is xh.
+AM v0.2.0,reflection_reinterpretation-14,reflection_reinterpretation,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferred editor toolchain is xh.
+AM v0.2.0,reflection_reinterpretation-15,reflection_reinterpretation,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring mise as an editor toolchain
+AM v0.2.0,reflection_reinterpretation-15,reflection_reinterpretation,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring mise as an editor toolchain
+AM v0.2.0,reflection_reinterpretation-15,reflection_reinterpretation,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring mise as an editor toolchain
+AM v0.2.0,reflection_reinterpretation-15,reflection_reinterpretation,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring mise as an editor toolchain
+AM v0.2.0,reflection_reinterpretation-16,reflection_reinterpretation,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring typos as the daily driver
+AM v0.2.0,reflection_reinterpretation-16,reflection_reinterpretation,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring typos as the daily driver
+AM v0.2.0,reflection_reinterpretation-16,reflection_reinterpretation,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring typos as the daily driver
+AM v0.2.0,reflection_reinterpretation-16,reflection_reinterpretation,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring typos as the daily driver
+AM v0.2.0,reflection_reinterpretation-17,reflection_reinterpretation,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring the editor toolchain bacon
+AM v0.2.0,reflection_reinterpretation-17,reflection_reinterpretation,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring the editor toolchain bacon
+AM v0.2.0,reflection_reinterpretation-17,reflection_reinterpretation,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring the editor toolchain bacon
+AM v0.2.0,reflection_reinterpretation-17,reflection_reinterpretation,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring the editor toolchain bacon
+AM v0.2.0,reflection_reinterpretation-18,reflection_reinterpretation,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring cargo-nextest as an editor toolchain
+AM v0.2.0,reflection_reinterpretation-18,reflection_reinterpretation,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring cargo-nextest as an editor toolchain
+AM v0.2.0,reflection_reinterpretation-18,reflection_reinterpretation,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring cargo-nextest as an editor toolchain
+AM v0.2.0,reflection_reinterpretation-18,reflection_reinterpretation,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring cargo-nextest as an editor toolchain
+AM v0.2.0,reflection_reinterpretation-19,reflection_reinterpretation,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Using sccache as an editor toolchain
+AM v0.2.0,reflection_reinterpretation-19,reflection_reinterpretation,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Using sccache as an editor toolchain
+AM v0.2.0,reflection_reinterpretation-19,reflection_reinterpretation,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Using sccache as an editor toolchain
+AM v0.2.0,reflection_reinterpretation-19,reflection_reinterpretation,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Using sccache as an editor toolchain

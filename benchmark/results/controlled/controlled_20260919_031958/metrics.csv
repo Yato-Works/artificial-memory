@@ -1,0 +1,21 @@
+player,question_id,category,context_tokens,retrieval_ms,context_build_ms,answer_ms,total_latency_ms
+AM v0.2.0,multi_session_recall-00,multi_session_recall,522,38.1,0.0,511.0,216.9
+AM v0.2.0,multi_session_recall-01,multi_session_recall,522,35.1,0.0,308.7,177.4
+AM v0.2.0,multi_session_recall-02,multi_session_recall,522,35.6,0.0,375.3,242.9
+AM v0.2.0,multi_session_recall-03,multi_session_recall,522,31.0,0.0,121.2,161.7
+AM v0.2.0,multi_session_recall-04,multi_session_recall,522,35.3,0.0,292.7,173.7
+AM v0.2.0,multi_session_recall-05,multi_session_recall,522,34.4,0.0,356.8,238.4
+AM v0.2.0,multi_session_recall-06,multi_session_recall,522,34.3,0.0,290.7,159.6
+AM v0.2.0,multi_session_recall-07,multi_session_recall,522,34.7,0.0,299.3,174.1
+AM v0.2.0,multi_session_recall-08,multi_session_recall,522,34.1,0.0,404.7,255.1
+AM v0.2.0,multi_session_recall-09,multi_session_recall,522,34.4,0.0,333.5,174.0
+AM v0.2.0,multi_session_recall-10,multi_session_recall,522,33.1,0.0,316.0,182.6
+AM v0.2.0,multi_session_recall-11,multi_session_recall,522,33.2,0.0,361.9,241.0
+AM v0.2.0,multi_session_recall-12,multi_session_recall,522,29.4,0.0,324.5,183.6
+AM v0.2.0,multi_session_recall-13,multi_session_recall,522,33.3,0.0,312.2,179.8
+AM v0.2.0,multi_session_recall-14,multi_session_recall,522,32.5,0.0,374.9,248.7
+AM v0.2.0,multi_session_recall-15,multi_session_recall,522,33.3,0.0,323.8,183.4
+AM v0.2.0,multi_session_recall-16,multi_session_recall,522,33.4,0.0,315.6,177.6
+AM v0.2.0,multi_session_recall-17,multi_session_recall,522,32.8,0.0,380.8,245.2
+AM v0.2.0,multi_session_recall-18,multi_session_recall,522,33.5,0.0,282.6,164.1
+AM v0.2.0,multi_session_recall-19,multi_session_recall,522,33.6,0.0,325.4,181.7

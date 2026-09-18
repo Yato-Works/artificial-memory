@@ -1,0 +1,81 @@
+player,question_id,category,repeat_index,is_official,outcome,score,correct,ground_truth_coverage,covered_groups,must_total,forbidden_violation,forbidden_hits,abstention_detected,answer_empty,score_consistency,answer_text
+AM v0.2.0,knowledge_updates-00,knowledge_updates,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,An untouched backup of the previous schema.
+AM v0.2.0,knowledge_updates-00,knowledge_updates,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,An untouched backup of the previous schema.
+AM v0.2.0,knowledge_updates-00,knowledge_updates,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,An untouched backup of the previous schema.
+AM v0.2.0,knowledge_updates-00,knowledge_updates,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,An untouched backup of the previous schema.
+AM v0.2.0,knowledge_updates-01,knowledge_updates,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,The user's primary database for project beacon is not specified.
+AM v0.2.0,knowledge_updates-01,knowledge_updates,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,The user's primary database for project beacon is not specified.
+AM v0.2.0,knowledge_updates-01,knowledge_updates,1,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,The user's primary database for project beacon is not specified.
+AM v0.2.0,knowledge_updates-01,knowledge_updates,2,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,The user's primary database for project beacon is not specified.
+AM v0.2.0,knowledge_updates-02,knowledge_updates,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,knowledge_updates-02,knowledge_updates,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,knowledge_updates-02,knowledge_updates,1,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,knowledge_updates-02,knowledge_updates,2,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,knowledge_updates-03,knowledge_updates,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,An untouched backup of the previous schema.
+AM v0.2.0,knowledge_updates-03,knowledge_updates,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,An untouched backup of the previous schema.
+AM v0.2.0,knowledge_updates-03,knowledge_updates,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,An untouched backup of the previous schema.
+AM v0.2.0,knowledge_updates-03,knowledge_updates,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,An untouched backup of the previous schema.
+AM v0.2.0,knowledge_updates-04,knowledge_updates,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,knowledge_updates-04,knowledge_updates,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,knowledge_updates-04,knowledge_updates,1,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,knowledge_updates-04,knowledge_updates,2,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,knowledge_updates-05,knowledge_updates,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,knowledge_updates-05,knowledge_updates,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,knowledge_updates-05,knowledge_updates,1,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,knowledge_updates-05,knowledge_updates,2,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,knowledge_updates-06,knowledge_updates,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,An untouched backup of the previous schema.
+AM v0.2.0,knowledge_updates-06,knowledge_updates,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,An untouched backup of the previous schema.
+AM v0.2.0,knowledge_updates-06,knowledge_updates,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,An untouched backup of the previous schema.
+AM v0.2.0,knowledge_updates-06,knowledge_updates,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,An untouched backup of the previous schema.
+AM v0.2.0,knowledge_updates-07,knowledge_updates,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,An untouched backup of the previous schema
+AM v0.2.0,knowledge_updates-07,knowledge_updates,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,An untouched backup of the previous schema
+AM v0.2.0,knowledge_updates-07,knowledge_updates,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,An untouched backup of the previous schema
+AM v0.2.0,knowledge_updates-07,knowledge_updates,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,An untouched backup of the previous schema
+AM v0.2.0,knowledge_updates-08,knowledge_updates,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,The user's primary database for project ivory is not specified in the provided context.
+AM v0.2.0,knowledge_updates-08,knowledge_updates,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,The user's primary database for project ivory is not specified in the provided context.
+AM v0.2.0,knowledge_updates-08,knowledge_updates,1,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,The user's primary database for project ivory is not specified in the provided context.
+AM v0.2.0,knowledge_updates-08,knowledge_updates,2,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,The user's primary database for project ivory is not specified in the provided context.
+AM v0.2.0,knowledge_updates-09,knowledge_updates,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,knowledge_updates-09,knowledge_updates,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,knowledge_updates-09,knowledge_updates,1,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,knowledge_updates-09,knowledge_updates,2,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,knowledge_updates-10,knowledge_updates,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,knowledge_updates-10,knowledge_updates,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,knowledge_updates-10,knowledge_updates,1,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,knowledge_updates-10,knowledge_updates,2,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,knowledge_updates-11,knowledge_updates,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Serial number logs
+AM v0.2.0,knowledge_updates-11,knowledge_updates,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Serial number logs
+AM v0.2.0,knowledge_updates-11,knowledge_updates,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Serial number logs
+AM v0.2.0,knowledge_updates-11,knowledge_updates,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Serial number logs
+AM v0.2.0,knowledge_updates-12,knowledge_updates,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,knowledge_updates-12,knowledge_updates,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,knowledge_updates-12,knowledge_updates,1,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,knowledge_updates-12,knowledge_updates,2,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,knowledge_updates-13,knowledge_updates,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,knowledge_updates-13,knowledge_updates,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,knowledge_updates-13,knowledge_updates,1,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,knowledge_updates-13,knowledge_updates,2,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,knowledge_updates-14,knowledge_updates,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,knowledge_updates-14,knowledge_updates,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,knowledge_updates-14,knowledge_updates,1,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,knowledge_updates-14,knowledge_updates,2,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,knowledge_updates-15,knowledge_updates,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,knowledge_updates-15,knowledge_updates,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,knowledge_updates-15,knowledge_updates,1,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,knowledge_updates-15,knowledge_updates,2,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,knowledge_updates-16,knowledge_updates,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,An untouched backup of the previous schema.
+AM v0.2.0,knowledge_updates-16,knowledge_updates,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,An untouched backup of the previous schema.
+AM v0.2.0,knowledge_updates-16,knowledge_updates,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,An untouched backup of the previous schema.
+AM v0.2.0,knowledge_updates-16,knowledge_updates,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,An untouched backup of the previous schema.
+AM v0.2.0,knowledge_updates-17,knowledge_updates,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,An untouched backup of the previous schema.
+AM v0.2.0,knowledge_updates-17,knowledge_updates,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,An untouched backup of the previous schema.
+AM v0.2.0,knowledge_updates-17,knowledge_updates,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,An untouched backup of the previous schema.
+AM v0.2.0,knowledge_updates-17,knowledge_updates,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,An untouched backup of the previous schema.
+AM v0.2.0,knowledge_updates-18,knowledge_updates,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,knowledge_updates-18,knowledge_updates,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,knowledge_updates-18,knowledge_updates,1,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,knowledge_updates-18,knowledge_updates,2,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,knowledge_updates-19,knowledge_updates,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,An untouched backup of the previous schema.
+AM v0.2.0,knowledge_updates-19,knowledge_updates,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,An untouched backup of the previous schema.
+AM v0.2.0,knowledge_updates-19,knowledge_updates,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,An untouched backup of the previous schema.
+AM v0.2.0,knowledge_updates-19,knowledge_updates,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,An untouched backup of the previous schema.

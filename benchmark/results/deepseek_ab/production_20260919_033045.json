@@ -1,0 +1,236 @@
+{
+  "experiment": "deepseek-raid-production-ab",
+  "timestamp": "2026-09-19T03:30:45.076902",
+  "question_count": 200,
+  "answer_repeats": 3,
+  "latency_repeats": 5,
+  "total_calls_design": 3000,
+  "dry_run": false,
+  "arms": {
+    "classic": {
+      "arm": "classic",
+      "gate_pool": null,
+      "candidate_window": null,
+      "run_dirs": [
+        "benchmark\\results\\controlled\\controlled_20260919_031225",
+        "benchmark\\results\\controlled\\controlled_20260919_031317",
+        "benchmark\\results\\controlled\\controlled_20260919_031409",
+        "benchmark\\results\\controlled\\controlled_20260919_031449",
+        "benchmark\\results\\controlled\\controlled_20260919_031532",
+        "benchmark\\results\\controlled\\controlled_20260919_031611",
+        "benchmark\\results\\controlled\\controlled_20260919_031649",
+        "benchmark\\results\\controlled\\controlled_20260919_031729",
+        "benchmark\\results\\controlled\\controlled_20260919_031806",
+        "benchmark\\results\\controlled\\controlled_20260919_031846"
+      ],
+      "chunks": 10,
+      "failures": 0,
+      "calls_observed": 600,
+      "plan_stats": null,
+      "gate_stats": null,
+      "retrieval_latency": {
+        "mean_ms": 38.549,
+        "p50_ms": 41.456,
+        "p95_ms": 44.31
+      },
+      "answer_latency": {
+        "mean_ms": 385.171,
+        "p50_ms": 345.657,
+        "p95_ms": 566.736
+      },
+      "context_tokens": {
+        "mean": 510.4,
+        "total": 306264
+      },
+      "repeat_selection_stability": 0.0,
+      "question_count": 200,
+      "aggregates": [
+        {
+          "player": "AM v0.2.0",
+          "question_count": 200,
+          "pass_count": 23,
+          "partial_count": 0,
+          "fail_count": 177,
+          "false_positive_count": 0,
+          "answer_accuracy": 0.115,
+          "partial_rate": 0.0,
+          "false_positive_rate": 0.0,
+          "forbidden_violation_rate": 0.0,
+          "mean_ground_truth_coverage": 0.115,
+          "mean_score": 0.115,
+          "abstention_accuracy": 1.0,
+          "abstention_question_count": 20,
+          "mean_score_consistency": 0.9816666666666665,
+          "category_accuracy": {
+            "abstention": 1.0,
+            "compression_recovery": 0.0,
+            "contradiction_handling": 0.0,
+            "distractor_resistance": 0.0,
+            "factual_recall": 0.0,
+            "indirect_recall": 0.0,
+            "knowledge_updates": 0.0,
+            "multi_session_recall": 0.0,
+            "reflection_reinterpretation": 0.15,
+            "temporal_reasoning": 0.0
+          }
+        }
+      ]
+    },
+    "cache": {
+      "arm": "cache",
+      "gate_pool": null,
+      "candidate_window": null,
+      "run_dirs": [
+        "benchmark\\results\\controlled\\controlled_20260919_031935",
+        "benchmark\\results\\controlled\\controlled_20260919_031958",
+        "benchmark\\results\\controlled\\controlled_20260919_032023",
+        "benchmark\\results\\controlled\\controlled_20260919_032111",
+        "benchmark\\results\\controlled\\controlled_20260919_032136",
+        "benchmark\\results\\controlled\\controlled_20260919_032157",
+        "benchmark\\results\\controlled\\controlled_20260919_032219",
+        "benchmark\\results\\controlled\\controlled_20260919_032239",
+        "benchmark\\results\\controlled\\controlled_20260919_032302",
+        "benchmark\\results\\controlled\\controlled_20260919_032325"
+      ],
+      "chunks": 10,
+      "failures": 0,
+      "calls_observed": 600,
+      "plan_stats": {
+        "full": 200,
+        "reindex": 0,
+        "reuse": 4800
+      },
+      "gate_stats": null,
+      "retrieval_latency": {
+        "mean_ms": 31.659,
+        "p50_ms": 33.0,
+        "p95_ms": 35.803
+      },
+      "answer_latency": {
+        "mean_ms": 257.424,
+        "p50_ms": 177.345,
+        "p95_ms": 407.815
+      },
+      "context_tokens": {
+        "mean": 522,
+        "total": 313200
+      },
+      "repeat_selection_stability": 1.0,
+      "question_count": 200,
+      "aggregates": [
+        {
+          "player": "AM v0.2.0",
+          "question_count": 200,
+          "pass_count": 19,
+          "partial_count": 0,
+          "fail_count": 180,
+          "false_positive_count": 1,
+          "answer_accuracy": 0.095,
+          "partial_rate": 0.0,
+          "false_positive_rate": 0.005,
+          "forbidden_violation_rate": 0.0,
+          "mean_ground_truth_coverage": 0.1,
+          "mean_score": 0.095,
+          "abstention_accuracy": 0.95,
+          "abstention_question_count": 20,
+          "mean_score_consistency": 1.0,
+          "category_accuracy": {
+            "abstention": 0.95,
+            "compression_recovery": 0.0,
+            "contradiction_handling": 0.0,
+            "distractor_resistance": 0.0,
+            "factual_recall": 0.0,
+            "indirect_recall": 0.0,
+            "knowledge_updates": 0.0,
+            "multi_session_recall": 0.0,
+            "reflection_reinterpretation": 0.0,
+            "temporal_reasoning": 0.0
+          }
+        }
+      ]
+    },
+    "session": {
+      "arm": "session",
+      "gate_pool": null,
+      "candidate_window": null,
+      "run_dirs": [
+        "benchmark\\results\\controlled\\controlled_20260919_032357",
+        "benchmark\\results\\controlled\\controlled_20260919_032433",
+        "benchmark\\results\\controlled\\controlled_20260919_032511",
+        "benchmark\\results\\controlled\\controlled_20260919_032554",
+        "benchmark\\results\\controlled\\controlled_20260919_032635",
+        "benchmark\\results\\controlled\\controlled_20260919_032716",
+        "benchmark\\results\\controlled\\controlled_20260919_032754",
+        "benchmark\\results\\controlled\\controlled_20260919_032832",
+        "benchmark\\results\\controlled\\controlled_20260919_032909",
+        "benchmark\\results\\controlled\\controlled_20260919_032952"
+      ],
+      "chunks": 10,
+      "failures": 0,
+      "calls_observed": 600,
+      "plan_stats": {
+        "full": 200,
+        "reindex": 0,
+        "reuse": 4800
+      },
+      "gate_stats": {
+        "applications": 200,
+        "total_in": 88000,
+        "total_out": 20000,
+        "corpus_size": 4400
+      },
+      "retrieval_latency": {
+        "mean_ms": 102.865,
+        "p50_ms": 93.517,
+        "p95_ms": 147.422
+      },
+      "answer_latency": {
+        "mean_ms": 459.35,
+        "p50_ms": 239.971,
+        "p95_ms": 1017.976
+      },
+      "context_tokens": {
+        "mean": 1988.9,
+        "total": 1193331
+      },
+      "repeat_selection_stability": 1.0,
+      "question_count": 200,
+      "aggregates": [
+        {
+          "player": "AM v0.2.0",
+          "question_count": 200,
+          "pass_count": 107,
+          "partial_count": 14,
+          "fail_count": 59,
+          "false_positive_count": 20,
+          "answer_accuracy": 0.535,
+          "partial_rate": 0.07,
+          "false_positive_rate": 0.1,
+          "forbidden_violation_rate": 0.08,
+          "mean_ground_truth_coverage": 0.675,
+          "mean_score": 0.57,
+          "abstention_accuracy": 0.0,
+          "abstention_question_count": 20,
+          "mean_score_consistency": 0.9983333333333334,
+          "category_accuracy": {
+            "abstention": 0.0,
+            "compression_recovery": 1.0,
+            "contradiction_handling": 0.0,
+            "distractor_resistance": 0.9,
+            "factual_recall": 1.0,
+            "indirect_recall": 0.15,
+            "knowledge_updates": 0.65,
+            "multi_session_recall": 1.0,
+            "reflection_reinterpretation": 0.0,
+            "temporal_reasoning": 0.65
+          }
+        }
+      ]
+    }
+  },
+  "cross_arm_selection_agreement": {
+    "classic_vs_cache": 0.05,
+    "classic_vs_session": 0.0
+  },
+  "wall_time_s": 1099.9
+}

@@ -1,0 +1,81 @@
+player,question_id,category,repeat_index,is_official,outcome,score,correct,ground_truth_coverage,covered_groups,must_total,forbidden_violation,forbidden_hits,abstention_detected,answer_empty,score_consistency,answer_text
+AM v0.2.0,contradiction_handling-00,contradiction_handling,majority,1,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-00,contradiction_handling,0,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-00,contradiction_handling,1,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-00,contradiction_handling,2,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-01,contradiction_handling,majority,1,fail,0.0,0,0.0,0,2,0,,0,0,1.0,memcached
+AM v0.2.0,contradiction_handling-01,contradiction_handling,0,0,fail,0.0,0,0.0,0,2,0,,0,0,1.0,memcached
+AM v0.2.0,contradiction_handling-01,contradiction_handling,1,0,fail,0.0,0,0.0,0,2,0,,0,0,1.0,memcached
+AM v0.2.0,contradiction_handling-01,contradiction_handling,2,0,fail,0.0,0,0.0,0,2,0,,0,0,1.0,memcached
+AM v0.2.0,contradiction_handling-02,contradiction_handling,majority,1,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-02,contradiction_handling,0,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-02,contradiction_handling,1,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-02,contradiction_handling,2,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-03,contradiction_handling,majority,1,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-03,contradiction_handling,0,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-03,contradiction_handling,1,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-03,contradiction_handling,2,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-04,contradiction_handling,majority,1,fail,0.0,0,0.0,0,2,0,,0,0,1.0,memcached
+AM v0.2.0,contradiction_handling-04,contradiction_handling,0,0,fail,0.0,0,0.0,0,2,0,,0,0,1.0,memcached
+AM v0.2.0,contradiction_handling-04,contradiction_handling,1,0,fail,0.0,0,0.0,0,2,0,,0,0,1.0,memcached
+AM v0.2.0,contradiction_handling-04,contradiction_handling,2,0,fail,0.0,0,0.0,0,2,0,,0,0,1.0,memcached
+AM v0.2.0,contradiction_handling-05,contradiction_handling,majority,1,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-05,contradiction_handling,0,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-05,contradiction_handling,1,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-05,contradiction_handling,2,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-06,contradiction_handling,majority,1,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-06,contradiction_handling,0,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-06,contradiction_handling,1,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-06,contradiction_handling,2,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-07,contradiction_handling,majority,1,fail,0.0,0,0.0,0,2,0,,0,0,1.0,Memcached
+AM v0.2.0,contradiction_handling-07,contradiction_handling,0,0,fail,0.0,0,0.0,0,2,0,,0,0,1.0,Memcached
+AM v0.2.0,contradiction_handling-07,contradiction_handling,1,0,fail,0.0,0,0.0,0,2,0,,0,0,1.0,Memcached
+AM v0.2.0,contradiction_handling-07,contradiction_handling,2,0,fail,0.0,0,0.0,0,2,0,,0,0,1.0,Memcached
+AM v0.2.0,contradiction_handling-08,contradiction_handling,majority,1,fail,0.0,0,0.0,0,2,0,,0,0,1.0,memcached
+AM v0.2.0,contradiction_handling-08,contradiction_handling,0,0,fail,0.0,0,0.0,0,2,0,,0,0,1.0,memcached
+AM v0.2.0,contradiction_handling-08,contradiction_handling,1,0,fail,0.0,0,0.0,0,2,0,,0,0,1.0,memcached
+AM v0.2.0,contradiction_handling-08,contradiction_handling,2,0,fail,0.0,0,0.0,0,2,0,,0,0,1.0,memcached
+AM v0.2.0,contradiction_handling-09,contradiction_handling,majority,1,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-09,contradiction_handling,0,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-09,contradiction_handling,1,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-09,contradiction_handling,2,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-10,contradiction_handling,majority,1,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-10,contradiction_handling,0,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-10,contradiction_handling,1,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-10,contradiction_handling,2,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-11,contradiction_handling,majority,1,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-11,contradiction_handling,0,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-11,contradiction_handling,1,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-11,contradiction_handling,2,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-12,contradiction_handling,majority,1,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-12,contradiction_handling,0,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-12,contradiction_handling,1,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-12,contradiction_handling,2,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-13,contradiction_handling,majority,1,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-13,contradiction_handling,0,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-13,contradiction_handling,1,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-13,contradiction_handling,2,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-14,contradiction_handling,majority,1,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-14,contradiction_handling,0,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-14,contradiction_handling,1,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-14,contradiction_handling,2,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-15,contradiction_handling,majority,1,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-15,contradiction_handling,0,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-15,contradiction_handling,1,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-15,contradiction_handling,2,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-16,contradiction_handling,majority,1,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-16,contradiction_handling,0,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-16,contradiction_handling,1,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-16,contradiction_handling,2,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-17,contradiction_handling,majority,1,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-17,contradiction_handling,0,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-17,contradiction_handling,1,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-17,contradiction_handling,2,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-18,contradiction_handling,majority,1,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-18,contradiction_handling,0,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-18,contradiction_handling,1,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-18,contradiction_handling,2,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-19,contradiction_handling,majority,1,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-19,contradiction_handling,0,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-19,contradiction_handling,1,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.
+AM v0.2.0,contradiction_handling-19,contradiction_handling,2,0,fail,0.0,0,0.0,0,2,0,,1,0,1.0,I don't know.

@@ -1,0 +1,194 @@
+{
+  "experiment": "deepseek-raid-production-ab",
+  "timestamp": "2026-09-19T02:57:18.330017",
+  "question_count": 40,
+  "answer_repeats": 3,
+  "latency_repeats": 5,
+  "total_calls_design": 600,
+  "dry_run": false,
+  "arms": {
+    "classic": {
+      "arm": "classic",
+      "gate_pool": null,
+      "candidate_window": null,
+      "run_dirs": [
+        "benchmark\\results\\controlled\\controlled_20260919_025308",
+        "benchmark\\results\\controlled\\controlled_20260919_025343",
+        "benchmark\\results\\controlled\\controlled_20260919_025406",
+        "benchmark\\results\\controlled\\controlled_20260919_025430"
+      ],
+      "chunks": 4,
+      "failures": 0,
+      "calls_observed": 120,
+      "plan_stats": null,
+      "gate_stats": null,
+      "retrieval_latency": {
+        "mean_ms": 31.076,
+        "p50_ms": 32.312,
+        "p95_ms": 44.325
+      },
+      "answer_latency": {
+        "mean_ms": 465.24,
+        "p50_ms": 340.884,
+        "p95_ms": 590.024
+      },
+      "context_tokens": {
+        "mean": 510.5,
+        "total": 61255
+      },
+      "repeat_selection_stability": 0.0125,
+      "question_count": 40,
+      "aggregates": [
+        {
+          "player": "AM v0.2.0",
+          "question_count": 40,
+          "pass_count": 0,
+          "partial_count": 0,
+          "fail_count": 40,
+          "false_positive_count": 0,
+          "answer_accuracy": 0.0,
+          "partial_rate": 0.0,
+          "false_positive_rate": 0.0,
+          "forbidden_violation_rate": 0.0,
+          "mean_ground_truth_coverage": 0.0,
+          "mean_score": 0.0,
+          "abstention_accuracy": null,
+          "abstention_question_count": 0,
+          "mean_score_consistency": 1.0,
+          "category_accuracy": {
+            "factual_recall": 0.0,
+            "multi_session_recall": 0.0
+          }
+        }
+      ]
+    },
+    "cache": {
+      "arm": "cache",
+      "gate_pool": null,
+      "candidate_window": null,
+      "run_dirs": [
+        "benchmark\\results\\controlled\\controlled_20260919_025453",
+        "benchmark\\results\\controlled\\controlled_20260919_025505",
+        "benchmark\\results\\controlled\\controlled_20260919_025519",
+        "benchmark\\results\\controlled\\controlled_20260919_025534"
+      ],
+      "chunks": 4,
+      "failures": 0,
+      "calls_observed": 120,
+      "plan_stats": {
+        "full": 40,
+        "reindex": 0,
+        "reuse": 960
+      },
+      "gate_stats": null,
+      "retrieval_latency": {
+        "mean_ms": 31.395,
+        "p50_ms": 33.579,
+        "p95_ms": 37.096
+      },
+      "answer_latency": {
+        "mean_ms": 219.688,
+        "p50_ms": 172.731,
+        "p95_ms": 378.328
+      },
+      "context_tokens": {
+        "mean": 522,
+        "total": 62640
+      },
+      "repeat_selection_stability": 1.0,
+      "question_count": 40,
+      "aggregates": [
+        {
+          "player": "AM v0.2.0",
+          "question_count": 40,
+          "pass_count": 0,
+          "partial_count": 0,
+          "fail_count": 40,
+          "false_positive_count": 0,
+          "answer_accuracy": 0.0,
+          "partial_rate": 0.0,
+          "false_positive_rate": 0.0,
+          "forbidden_violation_rate": 0.0,
+          "mean_ground_truth_coverage": 0.0,
+          "mean_score": 0.0,
+          "abstention_accuracy": null,
+          "abstention_question_count": 0,
+          "mean_score_consistency": 1.0,
+          "category_accuracy": {
+            "factual_recall": 0.0,
+            "multi_session_recall": 0.0
+          }
+        }
+      ]
+    },
+    "session": {
+      "arm": "session",
+      "gate_pool": null,
+      "candidate_window": null,
+      "run_dirs": [
+        "benchmark\\results\\controlled\\controlled_20260919_025549",
+        "benchmark\\results\\controlled\\controlled_20260919_025613",
+        "benchmark\\results\\controlled\\controlled_20260919_025634",
+        "benchmark\\results\\controlled\\controlled_20260919_025656"
+      ],
+      "chunks": 4,
+      "failures": 0,
+      "calls_observed": 120,
+      "plan_stats": {
+        "full": 40,
+        "reindex": 0,
+        "reuse": 960
+      },
+      "gate_stats": {
+        "applications": 40,
+        "total_in": 17600,
+        "total_out": 4000,
+        "corpus_size": 1760
+      },
+      "retrieval_latency": {
+        "mean_ms": 104.939,
+        "p50_ms": 92.961,
+        "p95_ms": 154.155
+      },
+      "answer_latency": {
+        "mean_ms": 450.895,
+        "p50_ms": 227.969,
+        "p95_ms": 902.732
+      },
+      "context_tokens": {
+        "mean": 1990.9,
+        "total": 238908
+      },
+      "repeat_selection_stability": 1.0,
+      "question_count": 40,
+      "aggregates": [
+        {
+          "player": "AM v0.2.0",
+          "question_count": 40,
+          "pass_count": 40,
+          "partial_count": 0,
+          "fail_count": 0,
+          "false_positive_count": 0,
+          "answer_accuracy": 1.0,
+          "partial_rate": 0.0,
+          "false_positive_rate": 0.0,
+          "forbidden_violation_rate": 0.0,
+          "mean_ground_truth_coverage": 1.0,
+          "mean_score": 1.0,
+          "abstention_accuracy": null,
+          "abstention_question_count": 0,
+          "mean_score_consistency": 1.0,
+          "category_accuracy": {
+            "factual_recall": 1.0,
+            "multi_session_recall": 1.0
+          }
+        }
+      ]
+    }
+  },
+  "cross_arm_selection_agreement": {
+    "classic_vs_cache": 0.1,
+    "classic_vs_session": 0.0
+  },
+  "wall_time_s": 249.7
+}

@@ -1,0 +1,21 @@
+player,question_id,category,context_tokens,retrieval_ms,context_build_ms,answer_ms,total_latency_ms
+AM v0.2.0,indirect_recall-00,indirect_recall,522,37.7,0.0,490.6,236.8
+AM v0.2.0,indirect_recall-01,indirect_recall,522,34.7,0.0,552.2,218.3
+AM v0.2.0,indirect_recall-02,indirect_recall,522,26.8,0.0,263.2,161.7
+AM v0.2.0,indirect_recall-03,indirect_recall,522,31.5,0.0,318.5,168.3
+AM v0.2.0,indirect_recall-04,indirect_recall,522,24.1,0.0,291.9,169.5
+AM v0.2.0,indirect_recall-05,indirect_recall,522,27.8,0.0,259.6,164.8
+AM v0.2.0,indirect_recall-06,indirect_recall,522,18.8,0.0,241.9,151.8
+AM v0.2.0,indirect_recall-07,indirect_recall,522,132.4,0.0,317.2,173.6
+AM v0.2.0,indirect_recall-08,indirect_recall,522,31.8,0.0,305.0,173.3
+AM v0.2.0,indirect_recall-09,indirect_recall,522,19.8,0.0,247.5,168.7
+AM v0.2.0,indirect_recall-10,indirect_recall,522,33.4,0.0,250.5,167.6
+AM v0.2.0,indirect_recall-11,indirect_recall,522,22.2,0.0,182.0,158.1
+AM v0.2.0,indirect_recall-12,indirect_recall,522,36.1,0.0,287.5,178.9
+AM v0.2.0,indirect_recall-13,indirect_recall,522,34.9,0.0,328.2,200.1
+AM v0.2.0,indirect_recall-14,indirect_recall,522,35.0,0.0,267.8,187.3
+AM v0.2.0,indirect_recall-15,indirect_recall,522,34.4,0.0,290.5,192.5
+AM v0.2.0,indirect_recall-16,indirect_recall,522,34.1,0.0,216.3,176.2
+AM v0.2.0,indirect_recall-17,indirect_recall,522,34.1,0.0,304.9,190.5
+AM v0.2.0,indirect_recall-18,indirect_recall,522,33.5,0.0,291.2,189.5
+AM v0.2.0,indirect_recall-19,indirect_recall,522,33.5,0.0,234.1,176.8

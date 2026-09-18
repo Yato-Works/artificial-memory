@@ -1,0 +1,81 @@
+player,question_id,category,repeat_index,is_official,outcome,score,correct,ground_truth_coverage,covered_groups,must_total,forbidden_violation,forbidden_hits,abstention_detected,answer_empty,score_consistency,answer_text
+AM v0.2.0,temporal_reasoning-00,temporal_reasoning,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,temporal_reasoning-00,temporal_reasoning,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,temporal_reasoning-00,temporal_reasoning,1,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,temporal_reasoning-00,temporal_reasoning,2,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,temporal_reasoning-01,temporal_reasoning,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Lisbon
+AM v0.2.0,temporal_reasoning-01,temporal_reasoning,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Lisbon
+AM v0.2.0,temporal_reasoning-01,temporal_reasoning,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Lisbon
+AM v0.2.0,temporal_reasoning-01,temporal_reasoning,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Lisbon
+AM v0.2.0,temporal_reasoning-02,temporal_reasoning,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,The context does not contain the answer.
+AM v0.2.0,temporal_reasoning-02,temporal_reasoning,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,The context does not contain the answer.
+AM v0.2.0,temporal_reasoning-02,temporal_reasoning,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,The context does not contain the answer.
+AM v0.2.0,temporal_reasoning-02,temporal_reasoning,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,The context does not contain the answer.
+AM v0.2.0,temporal_reasoning-03,temporal_reasoning,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,The context does not contain the answer.
+AM v0.2.0,temporal_reasoning-03,temporal_reasoning,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,The context does not contain the answer.
+AM v0.2.0,temporal_reasoning-03,temporal_reasoning,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,The context does not contain the answer.
+AM v0.2.0,temporal_reasoning-03,temporal_reasoning,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,The context does not contain the answer.
+AM v0.2.0,temporal_reasoning-04,temporal_reasoning,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Sibiu
+AM v0.2.0,temporal_reasoning-04,temporal_reasoning,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Sibiu
+AM v0.2.0,temporal_reasoning-04,temporal_reasoning,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Sibiu
+AM v0.2.0,temporal_reasoning-04,temporal_reasoning,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Sibiu
+AM v0.2.0,temporal_reasoning-05,temporal_reasoning,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Lund
+AM v0.2.0,temporal_reasoning-05,temporal_reasoning,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Lund
+AM v0.2.0,temporal_reasoning-05,temporal_reasoning,1,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Lund
+AM v0.2.0,temporal_reasoning-05,temporal_reasoning,2,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Lund
+AM v0.2.0,temporal_reasoning-06,temporal_reasoning,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Ghent
+AM v0.2.0,temporal_reasoning-06,temporal_reasoning,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Ghent
+AM v0.2.0,temporal_reasoning-06,temporal_reasoning,1,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Ghent
+AM v0.2.0,temporal_reasoning-06,temporal_reasoning,2,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Ghent
+AM v0.2.0,temporal_reasoning-07,temporal_reasoning,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Utrecht
+AM v0.2.0,temporal_reasoning-07,temporal_reasoning,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Utrecht
+AM v0.2.0,temporal_reasoning-07,temporal_reasoning,1,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Utrecht
+AM v0.2.0,temporal_reasoning-07,temporal_reasoning,2,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Utrecht
+AM v0.2.0,temporal_reasoning-08,temporal_reasoning,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Aarhus
+AM v0.2.0,temporal_reasoning-08,temporal_reasoning,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Aarhus
+AM v0.2.0,temporal_reasoning-08,temporal_reasoning,1,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Aarhus
+AM v0.2.0,temporal_reasoning-08,temporal_reasoning,2,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Aarhus
+AM v0.2.0,temporal_reasoning-09,temporal_reasoning,majority,1,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,temporal_reasoning-09,temporal_reasoning,0,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,temporal_reasoning-09,temporal_reasoning,1,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,temporal_reasoning-09,temporal_reasoning,2,0,fail,0.0,0,0.0,0,1,0,,1,0,1.0,I don't know.
+AM v0.2.0,temporal_reasoning-10,temporal_reasoning,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Galway
+AM v0.2.0,temporal_reasoning-10,temporal_reasoning,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Galway
+AM v0.2.0,temporal_reasoning-10,temporal_reasoning,1,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Galway
+AM v0.2.0,temporal_reasoning-10,temporal_reasoning,2,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Galway
+AM v0.2.0,temporal_reasoning-11,temporal_reasoning,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Trieste
+AM v0.2.0,temporal_reasoning-11,temporal_reasoning,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Trieste
+AM v0.2.0,temporal_reasoning-11,temporal_reasoning,1,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Trieste
+AM v0.2.0,temporal_reasoning-11,temporal_reasoning,2,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Trieste
+AM v0.2.0,temporal_reasoning-12,temporal_reasoning,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Lund
+AM v0.2.0,temporal_reasoning-12,temporal_reasoning,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Lund
+AM v0.2.0,temporal_reasoning-12,temporal_reasoning,1,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Lund
+AM v0.2.0,temporal_reasoning-12,temporal_reasoning,2,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Lund
+AM v0.2.0,temporal_reasoning-13,temporal_reasoning,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Kyoto
+AM v0.2.0,temporal_reasoning-13,temporal_reasoning,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Kyoto
+AM v0.2.0,temporal_reasoning-13,temporal_reasoning,1,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Kyoto
+AM v0.2.0,temporal_reasoning-13,temporal_reasoning,2,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Kyoto
+AM v0.2.0,temporal_reasoning-14,temporal_reasoning,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Utrecht
+AM v0.2.0,temporal_reasoning-14,temporal_reasoning,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Utrecht
+AM v0.2.0,temporal_reasoning-14,temporal_reasoning,1,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Utrecht
+AM v0.2.0,temporal_reasoning-14,temporal_reasoning,2,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Utrecht
+AM v0.2.0,temporal_reasoning-15,temporal_reasoning,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Tallinn
+AM v0.2.0,temporal_reasoning-15,temporal_reasoning,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Tallinn
+AM v0.2.0,temporal_reasoning-15,temporal_reasoning,1,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Tallinn
+AM v0.2.0,temporal_reasoning-15,temporal_reasoning,2,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Tallinn
+AM v0.2.0,temporal_reasoning-16,temporal_reasoning,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Tartu
+AM v0.2.0,temporal_reasoning-16,temporal_reasoning,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Tartu
+AM v0.2.0,temporal_reasoning-16,temporal_reasoning,1,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Tartu
+AM v0.2.0,temporal_reasoning-16,temporal_reasoning,2,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Tartu
+AM v0.2.0,temporal_reasoning-17,temporal_reasoning,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Slovakia
+AM v0.2.0,temporal_reasoning-17,temporal_reasoning,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Slovakia
+AM v0.2.0,temporal_reasoning-17,temporal_reasoning,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Slovakia
+AM v0.2.0,temporal_reasoning-17,temporal_reasoning,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Slovakia
+AM v0.2.0,temporal_reasoning-18,temporal_reasoning,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Trieste
+AM v0.2.0,temporal_reasoning-18,temporal_reasoning,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Trieste
+AM v0.2.0,temporal_reasoning-18,temporal_reasoning,1,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Trieste
+AM v0.2.0,temporal_reasoning-18,temporal_reasoning,2,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Trieste
+AM v0.2.0,temporal_reasoning-19,temporal_reasoning,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Ghent
+AM v0.2.0,temporal_reasoning-19,temporal_reasoning,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Ghent
+AM v0.2.0,temporal_reasoning-19,temporal_reasoning,1,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Ghent
+AM v0.2.0,temporal_reasoning-19,temporal_reasoning,2,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Ghent

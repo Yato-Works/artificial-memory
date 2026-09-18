@@ -1,0 +1,21 @@
+player,question_id,category,context_tokens,retrieval_ms,context_build_ms,answer_ms,total_latency_ms
+AM v0.2.0,temporal_reasoning-00,temporal_reasoning,1993,162.3,0.1,1362.4,486.4
+AM v0.2.0,temporal_reasoning-01,temporal_reasoning,1985,139.9,0.1,935.9,333.3
+AM v0.2.0,temporal_reasoning-02,temporal_reasoning,1990,44.9,0.0,234.8,421.0
+AM v0.2.0,temporal_reasoning-03,temporal_reasoning,1989,142.5,0.2,1070.5,460.5
+AM v0.2.0,temporal_reasoning-04,temporal_reasoning,1998,134.7,0.1,992.0,370.3
+AM v0.2.0,temporal_reasoning-05,temporal_reasoning,1972,136.3,0.1,1036.0,388.3
+AM v0.2.0,temporal_reasoning-06,temporal_reasoning,1975,136.9,0.1,905.7,368.3
+AM v0.2.0,temporal_reasoning-07,temporal_reasoning,1976,155.3,0.2,1019.4,375.5
+AM v0.2.0,temporal_reasoning-08,temporal_reasoning,1991,74.2,0.1,881.4,343.0
+AM v0.2.0,temporal_reasoning-09,temporal_reasoning,1980,95.1,0.1,935.9,364.9
+AM v0.2.0,temporal_reasoning-10,temporal_reasoning,1992,139.7,0.2,1002.2,355.3
+AM v0.2.0,temporal_reasoning-11,temporal_reasoning,1994,119.6,0.1,1094.2,403.2
+AM v0.2.0,temporal_reasoning-12,temporal_reasoning,1981,155.5,0.1,985.6,382.1
+AM v0.2.0,temporal_reasoning-13,temporal_reasoning,1999,153.5,0.1,1002.8,392.4
+AM v0.2.0,temporal_reasoning-14,temporal_reasoning,1989,158.1,0.1,986.6,365.7
+AM v0.2.0,temporal_reasoning-15,temporal_reasoning,1994,143.4,0.1,983.8,381.1
+AM v0.2.0,temporal_reasoning-16,temporal_reasoning,1983,143.7,0.1,968.8,340.4
+AM v0.2.0,temporal_reasoning-17,temporal_reasoning,1998,143.6,0.1,976.3,372.8
+AM v0.2.0,temporal_reasoning-18,temporal_reasoning,1992,65.1,0.1,816.7,343.9
+AM v0.2.0,temporal_reasoning-19,temporal_reasoning,1996,151.6,0.1,1015.1,430.9

@@ -1,0 +1,41 @@
+player,question_id,category,repeat_index,is_official,outcome,score,correct,ground_truth_coverage,covered_groups,must_total,forbidden_violation,forbidden_hits,abstention_detected,answer_empty,score_consistency,answer_text
+AM v0.2.0,multi_session_recall-00,multi_session_recall,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Symlinking files
+AM v0.2.0,multi_session_recall-00,multi_session_recall,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Symlinking files
+AM v0.2.0,multi_session_recall-00,multi_session_recall,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Symlinking files
+AM v0.2.0,multi_session_recall-00,multi_session_recall,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Symlinking files
+AM v0.2.0,multi_session_recall-01,multi_session_recall,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Standard-library solutions
+AM v0.2.0,multi_session_recall-01,multi_session_recall,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Standard-library solutions
+AM v0.2.0,multi_session_recall-01,multi_session_recall,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Standard-library solutions
+AM v0.2.0,multi_session_recall-01,multi_session_recall,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Standard-library solutions
+AM v0.2.0,multi_session_recall-02,multi_session_recall,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases.
+AM v0.2.0,multi_session_recall-02,multi_session_recall,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases.
+AM v0.2.0,multi_session_recall-02,multi_session_recall,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases.
+AM v0.2.0,multi_session_recall-02,multi_session_recall,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases.
+AM v0.2.0,multi_session_recall-03,multi_session_recall,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases.
+AM v0.2.0,multi_session_recall-03,multi_session_recall,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases.
+AM v0.2.0,multi_session_recall-03,multi_session_recall,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases.
+AM v0.2.0,multi_session_recall-03,multi_session_recall,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases.
+AM v0.2.0,multi_session_recall-04,multi_session_recall,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases.
+AM v0.2.0,multi_session_recall-04,multi_session_recall,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases.
+AM v0.2.0,multi_session_recall-04,multi_session_recall,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases.
+AM v0.2.0,multi_session_recall-04,multi_session_recall,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases.
+AM v0.2.0,multi_session_recall-05,multi_session_recall,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases
+AM v0.2.0,multi_session_recall-05,multi_session_recall,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases
+AM v0.2.0,multi_session_recall-05,multi_session_recall,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases
+AM v0.2.0,multi_session_recall-05,multi_session_recall,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Comparing profiles from two consecutive releases
+AM v0.2.0,multi_session_recall-06,multi_session_recall,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Keeping an untouched backup of the previous schema
+AM v0.2.0,multi_session_recall-06,multi_session_recall,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Keeping an untouched backup of the previous schema
+AM v0.2.0,multi_session_recall-06,multi_session_recall,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Keeping an untouched backup of the previous schema
+AM v0.2.0,multi_session_recall-06,multi_session_recall,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Keeping an untouched backup of the previous schema
+AM v0.2.0,multi_session_recall-07,multi_session_recall,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,"The user began studying, practised, and later recommended the use of standard-library solutions."
+AM v0.2.0,multi_session_recall-07,multi_session_recall,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,"The user began studying, practised, and later recommended the use of standard-library solutions."
+AM v0.2.0,multi_session_recall-07,multi_session_recall,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,"The user began studying, practised, and later recommended the use of standard-library solutions."
+AM v0.2.0,multi_session_recall-07,multi_session_recall,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,"The user began studying, practised, and later recommended the use of standard-library solutions."
+AM v0.2.0,multi_session_recall-08,multi_session_recall,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,"The user did not study, practise, or recommend anything about project ivory."
+AM v0.2.0,multi_session_recall-08,multi_session_recall,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,"The user did not study, practise, or recommend anything about project ivory."
+AM v0.2.0,multi_session_recall-08,multi_session_recall,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,"The user did not study, practise, or recommend anything about project ivory."
+AM v0.2.0,multi_session_recall-08,multi_session_recall,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,"The user did not study, practise, or recommend anything about project ivory."
+AM v0.2.0,multi_session_recall-09,multi_session_recall,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,"The user began studying, practiced, and later recommended the standard-library solution."
+AM v0.2.0,multi_session_recall-09,multi_session_recall,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,"The user began studying, practiced, and later recommended the standard-library solution."
+AM v0.2.0,multi_session_recall-09,multi_session_recall,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,"The user began studying, practiced, and later recommended the standard-library solution."
+AM v0.2.0,multi_session_recall-09,multi_session_recall,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,"The user began studying, practiced, and later recommended the standard-library solution."

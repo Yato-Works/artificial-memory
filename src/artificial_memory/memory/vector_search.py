@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import os
+import time
 from dataclasses import dataclass, field
 from datetime import datetime
 from pathlib import Path
@@ -95,8 +96,28 @@ class VectorSearchEngine:
                 'total_vectors': self.index.ntotal,
                 'updated_at': datetime.now().isoformat(),
             }, f)
-        os.replace(str(tmp_index), str(self.index_file))
-        os.replace(str(tmp_meta), str(self.metadata_file))
+        self._atomic_replace(tmp_index, self.index_file)
+        self._atomic_replace(tmp_meta, self.metadata_file)
+
+    @staticmethod
+    def _atomic_replace(src: Path, dst: Path) -> None:
+        """``os.replace`` with retry for transient Windows AV file locks.
+
+        On Windows, antivirus scanners briefly hold a shared-read lock on
+        freshly written files; ``os.replace`` then fails with WinError 5
+        (Access denied) even though the process has full permissions.  The
+        lock clears within milliseconds, so a short bounded retry converts
+        the flaky failure into the intended atomic swap.
+        """
+        last_exc: OSError | None = None
+        for attempt in range(5):
+            try:
+                os.replace(str(src), str(dst))
+                return
+            except PermissionError as exc:  # WinError 5 (transient AV lock)
+                last_exc = exc
+                time.sleep(0.05 * (2 ** attempt))  # 50ms, 100ms, 200ms, 400ms
+        raise last_exc  # type: ignore[misc]
 
     def _encode_text(self, text: str) -> np.ndarray:
         """Encode text to normalized vector."""

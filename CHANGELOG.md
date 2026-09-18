@@ -8,6 +8,51 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- **v0.2.0 Phase 8.9 - Production A/B validation (3,000-call real-LLM run)**
+  - `scripts/deepseek_ab_production.py`: chunked three-arm production
+    experiment -- 200 questions x 5 repeats x 3 arms (`classic` / `cache` /
+    `session`) = 3,000 answer calls in 30 crash-isolated chunks (evidence
+    flushed per chunk, `failures=0` across all 30)
+  - Medium-scale confirmation (40 questions, 600 calls): session-gate
+    accuracy 1.0 vs classic 0.0, GT coverage 1.0, repeat stability 1.0,
+    plan reuse 960/1000 (96%); cost: p50 93 ms vs 32 ms, tokens 1,991 vs
+    511 (the correctness-for-cost trade-off that motivates Phase 8.10)
+  - Budget audit: every one of the 1,800 answer contexts <= 2,000 tokens
+    (0 violations); `violation=None` clarified as "key absent from
+    summary", re-verified from raw traces
+  - Window/scorer sweep evidence retained under
+    `benchmark/results/deepseek_ab/` (see ADR-0002 for the full chain)
+- **v0.2.0 Phase 8.8 - Session-granular gate: runtime wiring + real-LLM validation**
+  - `SessionGate` in `recall/retrieval_cache.py`: session-level BM25-style
+    scoring where a session's *maximum* evidence score is assigned to every
+    memory in it -- session membership is the recall-bearing structure, not
+    per-memory lexical similarity
+  - `RuntimeConfig.retrieval_strategy="deepseek_session"`: session gate +
+    widened candidate window wired into the runtime (opt-in, additive);
+    `DeepSeekRecallEngine` gained a configurable candidate window
+    (`candidate_window`, default = frozen recent-50)
+  - 10-question real-LLM validation: accuracy 0.0 -> 0.6, GT coverage
+    0.1 -> 0.75, repeat stability -> 1.0 at 440 -> 100 candidate reduction
+- **v0.2.0 Phase 8.6/8.7 - Bottleneck forensics + cheap-scorer sweep**
+  - GT-funnel audit (`--gate-audit`): store -> candidates -> gate ->
+    selected attribution; finding: the frozen candidate window (recent-50
+    of 440 memories) loses 89% of ground-truth evidence *before* the gate
+    runs -- the original Jaccard gate was innocent (fired 0 times)
+  - `--window-sweep`: candidate-window decision table (50/100/250/450)
+  - Cheap-scorer sweep (Jaccard / BM25 / embedding / hybrid / session):
+    memory-level scorers keep destroying 62-86% of evidence at useful pool
+    sizes; only session-granular scoring achieves non-destructive reduction
+    (the "right unit of retrieval was not a Memory" finding, ADR-0002)
+
+### Fixed
+- `memory/vector_search.py`: bounded retry (50-400 ms exponential backoff)
+  around the atomic `os.replace` in `_save_index`; on Windows, antivirus
+  scanners briefly hold a shared-read lock on freshly written
+  `.tmp`/FAISS index files, making `os.replace` fail with WinError 5 even
+  though permissions are correct.  This flaked 5 `test_phase8_arena`
+  tests intermittently (all passed in isolation); with the retry the full
+  suite is stable: 435 passed, 11 skipped, 0 failed.  No semantic change.
+
 - **v0.2.0 Phase 8.4 - DeepSeek Raid (DeepSeek V4.1-inspired retrieval acceleration)**
   - `recall/retrieval_cache.py`: three DeepSeek V4.1 systems patterns
     translated to memory-runtime mechanisms:
