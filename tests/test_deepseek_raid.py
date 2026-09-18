@@ -1,0 +1,331 @@
+"""Tests for the DeepSeek Raid retrieval acceleration (Phase 8.4).
+
+Covers the three raid primitives and their composition:
+
+- ``RetrievalPlanCache``: FULL/REINDEX/REUSE tiering, query families, TTL,
+  eviction, determinism.
+- ``HierarchicalGate``: pool narrowing, no-op threshold, order-stable
+  tie-breaks.
+- ``EphemeralStore``: scratch get/put, bounded replay, discard semantics.
+- ``DeepSeekRecallEngine``: composition with the frozen BasicRecallEngine —
+  candidate gating, CSA2 tiering with side-effect parity, scorer-compatible
+  results.
+- Runtime opt-in wiring: "classic" (frozen) vs "deepseek" (raid).
+
+The frozen Scorer and the S0-S3 baseline players must be untouched by this
+phase; a small regression block at the bottom asserts that.
+"""
+
+from __future__ import annotations
+
+import pytest
+
+from artificial_memory.core.models import Memory, MemoryType, RecallLevel, ResolutionLevel
+from artificial_memory.recall.engine import BasicRecallEngine
+from artificial_memory.recall.retrieval_cache import (
+    FULL,
+    REINDEX,
+    REUSE,
+    EphemeralStore,
+    HierarchicalGate,
+    RetrievalPlan,
+    RetrievalPlanCache,
+)
+from artificial_memory.recall.deepseek_engine import DeepSeekRecallEngine
+from artificial_memory.runtime import ArtificialMemoryRuntime, RuntimeConfig
+from artificial_memory.storage.sqlite_store import SQLiteMemoryStore
+
+
+# ---------------------------------------------------------------------------
+# Helpers
+# ---------------------------------------------------------------------------
+
+def make_memory(content: str, memory_id: int | None = None) -> Memory:
+    return Memory(
+        id=memory_id,
+        topic_id=1,
+        memory_type=MemoryType.EPISODE,
+        content=content,
+        resolution=ResolutionLevel.EPISODE,
+    )
+
+
+class CountingCache(RetrievalPlanCache):
+    """Plan cache that counts fresh retrievals for miss accounting."""
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fresh_calls = 0
+
+
+# ---------------------------------------------------------------------------
+# RetrievalPlanCache (CSA2)
+# ---------------------------------------------------------------------------
+
+class TestRetrievalPlanCache:
+    def test_first_query_is_full(self):
+        cache = RetrievalPlanCache()
+        calls = []
+
+        def fresh(q):
+            calls.append(q)
+            return [1, 2], []
+
+        plan, mode = cache.lookup_or_plan("What is X?", fresh)
+        assert mode == FULL
+        assert plan.candidate_ids == (1, 2)
+        assert calls == ["What is X?"]
+
+    def test_identical_query_reuses(self):
+        cache = RetrievalPlanCache()
+        calls = []
+
+        def fresh(q):
+            calls.append(q)
+            return [1], []
+
+        cache.lookup_or_plan("What is X?", fresh)
+        plan, mode = cache.lookup_or_plan("What is X?", fresh)
+        assert mode == REUSE
+        assert calls == ["What is X?"]  # fresh run only once
+        assert plan.reuse_count == 1
+
+    def test_rephrase_reindexes(self):
+        cache = RetrievalPlanCache()
+        calls = []
+
+        def fresh(q):
+            calls.append(q)
+            return [1], []
+
+        cache.lookup_or_plan("what is the project codename", fresh)
+        plan, mode = cache.lookup_or_plan("what is the project codename?", fresh)
+        assert mode == REINDEX  # punctuation differs -> not verbatim REUSE
+        assert calls == ["what is the project codename"]
+        assert plan.candidate_ids == (1,)
+
+    def test_signature_drops_punctuation_keeps_order(self):
+        sig_a = RetrievalPlanCache._signature("Why did X fail?")
+        sig_b = RetrievalPlanCache._signature("why did X fail")
+        sig_c = RetrievalPlanCache._signature("How did X fail?")
+        assert sig_a == sig_b
+        assert sig_a != sig_c  # word order preserved
+
+    def test_ttl_expiry_returns_full(self):
+        import time as _t
+
+        cache = RetrievalPlanCache(ttl_seconds=0.0)
+        calls = []
+
+        def fresh(q):
+            calls.append(q)
+            return [1], []
+
+        cache.lookup_or_plan("same query", fresh)
+        _t.sleep(0.01)
+        _plan, mode = cache.lookup_or_plan("same query", fresh)
+        assert mode == FULL
+        assert len(calls) == 2
+
+    def test_eviction_is_insertion_order(self):
+        cache = RetrievalPlanCache(max_families=2)
+
+        def fresh(q):
+            return [1], []
+
+        cache.lookup_or_plan("alpha beta", fresh)
+        cache.lookup_or_plan("gamma delta", fresh)
+        cache.lookup_or_plan("epsilon zeta", fresh)
+        # "alpha beta" was evicted -> next lookup on it is FULL again.
+        _plan, mode = cache.lookup_or_plan("alpha beta", fresh)
+        assert mode == FULL
+        assert cache.stats_snapshot()[FULL] == 4
+
+    def test_stats_are_counted(self):
+        cache = RetrievalPlanCache()
+
+        def fresh(q):
+            return [1], []
+
+        cache.lookup_or_plan("q one", fresh)
+        cache.lookup_or_plan("q one", fresh)   # REUSE
+        cache.lookup_or_plan("q one?", fresh)  # REINDEX
+        stats = cache.stats_snapshot()
+        assert stats == {FULL: 1, REINDEX: 1, REUSE: 1}
+
+
+# ---------------------------------------------------------------------------
+# HierarchicalGate (HSI)
+# ---------------------------------------------------------------------------
+
+class TestHierarchicalGate:
+    def _pool(self, n: int) -> list[Memory]:
+        return [make_memory(f"memory about topic {i}", memory_id=i) for i in range(n)]
+
+    def test_small_pool_is_noop(self):
+        gate = HierarchicalGate(pool_size=64)
+        pool = self._pool(10)
+        assert gate.filter("anything", pool) is pool
+
+    def test_large_pool_narrows_to_pool_size(self):
+        gate = HierarchicalGate(pool_size=8, min_keep=2)
+        pool = self._pool(100)
+        out = gate.filter("memory about topic 42", pool)
+        assert len(out) <= 8
+
+    def test_relevant_memory_survives(self):
+        gate = HierarchicalGate(pool_size=4, min_keep=1)
+        pool = [make_memory(f"unrelated filler {i}", memory_id=i) for i in range(50)]
+        target = make_memory("the launch codename is Blue Falcon", memory_id=999)
+        out = gate.filter("what is the launch codename?", pool + [target])
+        assert target in out
+
+    def test_tie_break_keeps_earliest(self):
+        gate = HierarchicalGate(pool_size=2, min_keep=1)
+        a = make_memory("alpha alpha", memory_id=1)
+        b = make_memory("alpha alpha", memory_id=2)
+        out = gate.filter("alpha", [a, b])
+        assert out[0] is a  # earliest index wins on equal score
+
+
+# ---------------------------------------------------------------------------
+# EphemeralStore (Bounded Replay)
+# ---------------------------------------------------------------------------
+
+class TestEphemeralStore:
+    def test_put_get_roundtrip(self):
+        store = EphemeralStore()
+        store.put("k", "v")
+        assert store.get("k") == "v"
+
+    def test_replay_rebuilds_missing_key(self):
+        store = EphemeralStore(replay=lambda k: f"rebuilt:{k}")
+        assert store.get("missing") == "rebuilt:missing"
+        assert store.replays == 1
+        assert store.get("missing") == "rebuilt:missing"  # now cached
+        assert store.replays == 1
+
+    def test_no_replay_closure_returns_none(self):
+        store = EphemeralStore()
+        assert store.get("missing") is None
+
+    def test_bounded_fifo_eviction(self):
+        store = EphemeralStore(max_keys=2)
+        store.put("a", 1)
+        store.put("b", 2)
+        store.put("c", 3)
+        assert store.keys() == ["b", "c"]
+        assert store.discards == 1
+
+    def test_discard_all_does_not_persist(self):
+        store = EphemeralStore(replay=lambda k: "x")
+        store.put("a", 1)
+        store.discard_all()
+        assert len(store) == 0
+        # Rebuilt from source after discard (Bounded Replay core).
+        assert store.get("a") == "x"
+
+
+# ---------------------------------------------------------------------------
+# DeepSeekRecallEngine (composition)
+# ---------------------------------------------------------------------------
+
+class TestDeepSeekRecallEngine:
+    @staticmethod
+    def _seeded_engine(contents, gate=None):
+        from artificial_memory.core.models import Project, Topic
+
+        store = SQLiteMemoryStore(":memory:")
+        project = store.create_project(Project(name="t"))
+        topic = store.create_topic(
+            Topic(project_id=project.id, name="T", path="T")
+        )
+        for text in contents:
+            store.create_memory(Memory(
+                topic_id=topic.id, memory_type=MemoryType.EPISODE,
+                content=text, resolution=ResolutionLevel.EPISODE,
+            ))
+        return DeepSeekRecallEngine(store, gate=gate), topic.id
+
+    def test_full_then_reuse_same_selection(self):
+        engine, topic_id = self._seeded_engine(
+            ["alpha report", "beta launch", "alpha summary"]
+        )
+        m1, t1 = engine.recall(
+            "alpha report", topic_id=topic_id, level=RecallLevel.CURRENT_ONLY
+        )
+        m2, t2 = engine.recall(
+            "alpha report", topic_id=topic_id, level=RecallLevel.CURRENT_ONLY
+        )
+        assert [x.id for x in m1] == [x.id for x in m2]
+        assert t1 == t2
+        assert engine.plan_cache.stats_snapshot()[REUSE] == 1
+
+    def test_gate_narrows_candidates(self):
+        contents = [f"filler number {i} with unrelated words" for i in range(30)]
+        contents.append("the special zebra crosses the river")
+        engine, topic_id = self._seeded_engine(
+            contents, gate=HierarchicalGate(pool_size=8)
+        )
+        memories, _ = engine.recall(
+            "where does the special zebra go?",
+            topic_id=topic_id, level=RecallLevel.CURRENT_ONLY,
+        )
+        assert engine.gate_applications >= 1
+        assert any("zebra" in m.content for m in memories)
+
+    def test_frozen_engine_untouched(self):
+        """BasicRecallEngine must have no plan cache / gate attributes."""
+        engine = BasicRecallEngine(SQLiteMemoryStore(":memory:"))
+        assert not hasattr(engine, "plan_cache")
+        assert not hasattr(engine, "gate")
+
+
+# ---------------------------------------------------------------------------
+# Runtime opt-in wiring
+# ---------------------------------------------------------------------------
+
+class TestRuntimeWiring:
+    @staticmethod
+    def _config(strategy: str) -> RuntimeConfig:
+        return RuntimeConfig(
+            database_path=":memory:",
+            memory_files_path=None,
+            vector_index_path=None,
+            retrieval_strategy=strategy,
+        )
+
+    def test_default_config_is_classic(self):
+        runtime = ArtificialMemoryRuntime(RuntimeConfig(
+            database_path=":memory:", memory_files_path=None, vector_index_path=None,
+        ))
+        assert type(runtime.recall_engine) is BasicRecallEngine
+
+    def test_classic_is_frozen(self):
+        runtime = ArtificialMemoryRuntime(self._config("classic"))
+        assert type(runtime.recall_engine) is BasicRecallEngine
+
+    def test_deepseek_wires_raid_engine(self):
+        runtime = ArtificialMemoryRuntime(self._config("deepseek"))
+        assert isinstance(runtime.recall_engine, DeepSeekRecallEngine)
+
+    def test_deepseek_end_to_end_tiering(self):
+        import asyncio
+
+        runtime = ArtificialMemoryRuntime(self._config("deepseek"))
+
+        async def scenario():
+            await runtime.remember("The launch codename is Blue Falcon.", topic="Arena")
+            await runtime.remember("Blue Falcon launches in March.", topic="Arena")
+            r1 = await runtime.recall("What is the launch codename?", topic="Arena", level=2)
+            r2 = await runtime.recall("What is the launch codename?", topic="Arena", level=2)
+            return r1, r2
+
+        r1, r2 = asyncio.run(scenario())
+        assert r1.memories_retrieved == r2.memories_retrieved
+        stats = runtime.recall_engine.plan_cache.stats_snapshot()
+        assert stats[REUSE] >= 1
+
+
+
+

@@ -8,6 +8,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- **v0.2.0 Phase 8.4 - DeepSeek Raid (DeepSeek V4.1-inspired retrieval acceleration)**
+  - `recall/retrieval_cache.py`: three DeepSeek V4.1 systems patterns
+    translated to memory-runtime mechanisms:
+    - `RetrievalPlanCache` (CSA2 analogue): FULL / REINDEX / REUSE
+      candidate-set reuse for repeated query families, with deterministic
+      punctuation-stripping signatures, insertion-order eviction and TTL
+    - `HierarchicalGate` (HSI analogue): cheap lexical Jaccard pre-filter
+      narrowing the candidate pool before semantic ranking; order-stable
+      tie-breaks keep recorded runs replayable
+    - `EphemeralStore` (SWA Bounded Replay analogue): bounded session
+      scratch state that is discarded, never persisted, and rebuilt from
+      the source log through a replay closure
+  - `recall/deepseek_engine.py`: `DeepSeekRecallEngine` composing the plan
+    cache + gate on top of the frozen `BasicRecallEngine` (subclass, never
+    in-place modification)
+  - `RuntimeConfig.retrieval_strategy`: opt-in switch (`"classic"` default =
+    frozen behavior; `"deepseek"` wires the raid engine); S0-S3 baseline
+    players and the frozen Scorer are untouched
+  - `tests/test_deepseek_raid.py`: 23 tests covering tiering, gating,
+    replay, composition and runtime wiring (full suite: 423 passed,
+    11 skipped, zero regressions)
+
+### Added
 - **v0.2.0 Phase 1 - Memory Evolution Core**
   - Runtime memory state vector (`MemoryStateVector`) with `importance` /
     `confidence` / `currentness` / `future_utility` / `contradiction_risk`

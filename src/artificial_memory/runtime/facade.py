@@ -193,6 +193,9 @@ class RuntimeConfig:
     max_audit_files: int = 100
     metrics_output_dir: str = "metrics"
 
+    # DeepSeek Raid: opt-in retrieval acceleration (default = frozen behavior)
+    retrieval_strategy: str = "classic"  # "classic" | "deepseek"
+
     def __post_init__(self) -> None:
         import secrets as _secrets
         import warnings as _warnings
@@ -336,7 +339,14 @@ class ArtificialMemoryRuntime:
         self.conversation_manager = ConversationManager(self.store)
         self.topic_classifier = RuleBasedTopicClassifier(self.store)
         self.compressor = RuleBasedCompressor()
-        self.recall_engine = BasicRecallEngine(self.store)
+        if self.config.retrieval_strategy == "deepseek":
+            # DeepSeek Raid: opt-in CSA2 plan cache + HSI gate.  Strictly
+            # additive -- the frozen BasicRecallEngine path is unchanged for
+            # "classic", so baselines and pre-raid tests keep their semantics.
+            from artificial_memory.recall.deepseek_engine import DeepSeekRecallEngine
+            self.recall_engine = DeepSeekRecallEngine(self.store)
+        else:
+            self.recall_engine = BasicRecallEngine(self.store)
         self.context_builder = EnhancedContextBuilder(
             self.store, self.recall_engine,
             budget_ratios={
