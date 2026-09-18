@@ -431,5 +431,145 @@ class TestRuntimeWiring:
         assert stats[REUSE] >= 1
 
 
+# ---------------------------------------------------------------------------
+# SessionGate (Phase 8.7 winner) + deepseek_session runtime wiring
+# ---------------------------------------------------------------------------
+
+class TestSessionGate:
+    @staticmethod
+    def _memories(contents):
+        from datetime import datetime, timedelta
+
+        memories = []
+        base = datetime(2026, 1, 1, 12, 0, 0)
+        for i, text in enumerate(contents):
+            memories.append(Memory(
+                topic_id=1,
+                memory_type=MemoryType.SEMANTIC,
+                content=text,
+                resolution=ResolutionLevel.SEMANTIC,
+                created_at=base + timedelta(seconds=i),
+            ))
+        return memories
+
+    def test_sessions_kept_whole(self):
+        """A session whose member scores high keeps *all* its members."""
+        from artificial_memory.recall.retrieval_cache import SessionGate
+
+        gate = SessionGate(pool_size=4)
+        # Session A: one member mentions ripgrep, the rest are generic.
+        contents = [
+            "atlas daily driver is ripgrep",      # distinctive member
+            "atlas notes follow-up",              # generic member of same session
+            "atlas meeting minutes archived",     # generic member of same session
+            "gardening filler one",
+            "gardening filler two",
+            "gardening filler three",
+        ]
+        memories = self._memories(contents)
+        kept = gate.filter("which ripgrep tool does atlas use?", memories)
+        assert len(kept) <= 4
+        kept_ids = {m.id for m in kept}
+        # The distinctive member survives...
+        assert memories[0].id in kept_ids
+        # ...and its whole session rides along (block behaviour).
+        assert memories[1].id in kept_ids
+        assert memories[2].id in kept_ids
+
+    def test_small_pool_is_noop(self):
+        from artificial_memory.recall.retrieval_cache import SessionGate
+
+        gate = SessionGate(pool_size=100)
+        memories = self._memories([f"filler {i}" for i in range(10)])
+        kept = gate.filter("anything", memories)
+        assert kept == memories
+
+    def test_deterministic_order_stable(self):
+        from artificial_memory.recall.retrieval_cache import SessionGate
+
+        gate = SessionGate(pool_size=3)
+        memories = self._memories(
+            ["alpha topic", "beta topic", "gamma topic", "delta topic"]
+        )
+        first = gate.filter("alpha", memories)
+        second = gate.filter("alpha", memories)
+        assert [m.id for m in first] == [m.id for m in second]
+
+    def test_explicit_sessions_override_derivation(self):
+        from artificial_memory.recall.retrieval_cache import SessionGate
+
+        memories = self._memories(["a one", "a two", "b one", "b two"])
+        # Force all four into one session regardless of timestamps.
+        explicit = {m.id: 0 for m in memories}
+        gate = SessionGate(session_by_id=explicit, pool_size=2)
+        kept = gate.filter("a one", memories)
+        assert len(kept) <= 2
+
+
+class TestDeepSeekSessionWiring:
+    @staticmethod
+    def _config(**overrides) -> RuntimeConfig:
+        defaults = dict(
+            database_path=":memory:",
+            memory_files_path=None,
+            vector_index_path=None,
+            retrieval_strategy="deepseek_session",
+        )
+        defaults.update(overrides)
+        return RuntimeConfig(**defaults)
+
+    def test_wires_session_gate_engine(self):
+        from artificial_memory.recall.retrieval_cache import SessionGate
+
+        runtime = ArtificialMemoryRuntime(self._config())
+        assert isinstance(runtime.recall_engine, DeepSeekRecallEngine)
+        assert isinstance(runtime.recall_engine.gate, SessionGate)
+        assert runtime.recall_engine.candidate_window == 450
+
+    def test_tuning_fields_reach_the_gate(self):
+        from artificial_memory.recall.retrieval_cache import SessionGate
+
+        runtime = ArtificialMemoryRuntime(self._config(
+            session_gate_pool=32, candidate_window=64,
+        ))
+        assert runtime.recall_engine.gate.pool_size == 32
+        assert runtime.recall_engine.candidate_window == 64
+
+    def test_end_to_end_session_tiering(self):
+        import asyncio
+
+        runtime = ArtificialMemoryRuntime(self._config())
+
+        async def scenario():
+            for i in range(1, 21):
+                await runtime.remember(
+                    f"Session A turn {i}: project atlas uses ripgrep daily.",
+                    topic="Arena",
+                )
+            for i in range(1, 21):
+                await runtime.remember(
+                    f"Session B turn {i}: unrelated gardening filler {i}.",
+                    topic="Arena",
+                )
+            r1 = await runtime.recall(
+                "What toolchain does project atlas use?",
+                topic="Arena", level=2,
+            )
+            r2 = await runtime.recall(
+                "What toolchain does project atlas use?",
+                topic="Arena", level=2,
+            )
+            return r1, r2
+
+        r1, r2 = asyncio.run(scenario())
+        assert r1.memories_retrieved == r2.memories_retrieved
+        assert any(
+            "ripgrep" in m.semantic_content.content for m in r1.memories
+        ), "wide window + session gate must recover the evidence session"
+        stats = runtime.recall_engine.plan_cache.stats_snapshot()
+        assert stats[REUSE] >= 1
+
+
+
 
 

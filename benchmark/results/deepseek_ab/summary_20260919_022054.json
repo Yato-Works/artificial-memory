@@ -1,0 +1,156 @@
+{
+  "experiment": "deepseek-raid-ab-small",
+  "timestamp": "2026-09-19T02:20:54.871687",
+  "question_ids": [
+    "factual_recall-00",
+    "multi_session_recall-00",
+    "temporal_reasoning-00",
+    "knowledge_updates-00",
+    "contradiction_handling-00",
+    "indirect_recall-00",
+    "distractor_resistance-00",
+    "abstention-00",
+    "compression_recovery-00",
+    "reflection_reinterpretation-00"
+  ],
+  "answer_repeats": 3,
+  "latency_repeats": 5,
+  "dry_run": false,
+  "arms": {
+    "session": {
+      "arm": "session",
+      "gate_pool": 100,
+      "candidate_window": 450,
+      "run_id": "controlled_20260919_022017",
+      "run_dir": "benchmark\\results\\controlled\\controlled_20260919_022017",
+      "failures": 0,
+      "store_memory_count": 440,
+      "plan_stats": {
+        "full": 10,
+        "reindex": 0,
+        "reuse": 240
+      },
+      "gate_stats": {
+        "applications": 10,
+        "total_in": 4400,
+        "total_out": 1000,
+        "corpus_size": 440
+      },
+      "retrieval_latency": {
+        "n": 30,
+        "mean_ms": 50.95,
+        "p50_ms": 45.365,
+        "p95_ms": 85.459
+      },
+      "context_tokens": {
+        "mean": 1989.5,
+        "total": 59685
+      },
+      "repeat_selection_stability": 1.0,
+      "scores": [
+        {
+          "question_id": "factual_recall-00",
+          "category": "factual_recall",
+          "score": 1.0,
+          "outcome": "pass",
+          "coverage": 1.0
+        },
+        {
+          "question_id": "multi_session_recall-00",
+          "category": "multi_session_recall",
+          "score": 1.0,
+          "outcome": "pass",
+          "coverage": 1.0
+        },
+        {
+          "question_id": "temporal_reasoning-00",
+          "category": "temporal_reasoning",
+          "score": 0.0,
+          "outcome": "fail",
+          "coverage": 0.0
+        },
+        {
+          "question_id": "knowledge_updates-00",
+          "category": "knowledge_updates",
+          "score": 1.0,
+          "outcome": "pass",
+          "coverage": 1.0
+        },
+        {
+          "question_id": "contradiction_handling-00",
+          "category": "contradiction_handling",
+          "score": 0.5,
+          "outcome": "partial",
+          "coverage": 0.5
+        },
+        {
+          "question_id": "indirect_recall-00",
+          "category": "indirect_recall",
+          "score": 1.0,
+          "outcome": "pass",
+          "coverage": 1.0
+        },
+        {
+          "question_id": "distractor_resistance-00",
+          "category": "distractor_resistance",
+          "score": 1.0,
+          "outcome": "pass",
+          "coverage": 1.0
+        },
+        {
+          "question_id": "abstention-00",
+          "category": "abstention",
+          "score": 0.0,
+          "outcome": "false_positive",
+          "coverage": 1.0
+        },
+        {
+          "question_id": "compression_recovery-00",
+          "category": "compression_recovery",
+          "score": 1.0,
+          "outcome": "pass",
+          "coverage": 1.0
+        },
+        {
+          "question_id": "reflection_reinterpretation-00",
+          "category": "reflection_reinterpretation",
+          "score": 0.0,
+          "outcome": "fail",
+          "coverage": 0.0
+        }
+      ],
+      "aggregates": [
+        {
+          "player": "AM v0.2.0",
+          "question_count": 10,
+          "pass_count": 6,
+          "partial_count": 1,
+          "fail_count": 2,
+          "false_positive_count": 1,
+          "answer_accuracy": 0.6,
+          "partial_rate": 0.1,
+          "false_positive_rate": 0.1,
+          "forbidden_violation_rate": 0.1,
+          "mean_ground_truth_coverage": 0.75,
+          "mean_score": 0.65,
+          "abstention_accuracy": 0.0,
+          "abstention_question_count": 1,
+          "mean_score_consistency": 1.0,
+          "category_accuracy": {
+            "abstention": 0.0,
+            "compression_recovery": 1.0,
+            "contradiction_handling": 0.0,
+            "distractor_resistance": 1.0,
+            "factual_recall": 1.0,
+            "indirect_recall": 1.0,
+            "knowledge_updates": 1.0,
+            "multi_session_recall": 1.0,
+            "reflection_reinterpretation": 0.0,
+            "temporal_reasoning": 0.0
+          }
+        }
+      ]
+    }
+  },
+  "cross_arm_selection_agreement": {}
+}

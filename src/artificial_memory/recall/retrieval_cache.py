@@ -288,3 +288,167 @@ class EphemeralStore:
     def keys(self) -> list[str]:
         return list(self._scratch)
 
+
+# ---------------------------------------------------------------------------
+# Session-granular gate (Phase 8.7 scorer-sweep winner)
+# ---------------------------------------------------------------------------
+
+
+def _tokenize(text: str) -> list[str]:
+    """Shared tokenisation: lowercase, alnum-only, whitespace split."""
+    words: list[str] = []
+    for raw in text.lower().split():
+        token = "".join(c for c in raw if c.isalnum())
+        if token:
+            words.append(token)
+    return words
+
+
+class SessionGate:
+    """Session-granular candidate gate (the Phase 8.7 finding, productised).
+
+    Phase 8.6 established that every *memory-granular* cheap scorer (Jaccard,
+    BM25, embedding cosine) destroys 60-86% of the evidence set: the evidence
+    for a question is a whole *session* of memories, so per-memory scoring
+    always strands part of it.  Phase 8.7 measured the fix: score a memory as
+    its session does -- per-session score = MAX member BM25 (one distinctive
+    member proves the session is relevant), every member inherits it, with a
+    small own-BM25 fraction for intra-session ordering.  Measured 85%
+    evidence retention @ K=100 while cutting the pool 4x faster than hybrid
+    blending (no embedding pass at all).
+
+    Corpus statistics (IDF, avgdl) come from ``corpus_provider`` -- a
+    parameterless callable returning the full memory snapshot -- and are
+    rebuilt only when the snapshot grows, so repeated recalls do not
+    re-tokenise the store.  If no provider is given the *pool itself* is the
+    corpus (deterministic, slightly weaker IDF).
+    """
+
+    def __init__(
+        self,
+        session_by_id: dict[int, int] | None = None,
+        pool_size: int = 100,
+        own_weight: float = 0.1,
+        corpus_provider: Callable[[], list[Memory]] | None = None,
+        session_gap_seconds: float = 300.0,
+    ):
+        self._explicit_sessions = session_by_id
+        self.pool_size = pool_size
+        self.own_weight = own_weight
+        self._corpus_provider = corpus_provider
+        self.session_gap_seconds = session_gap_seconds
+        # Corpus caches (rebuilt when the snapshot grows).
+        self._doc_tokens: dict[int, list[str]] = {}
+        self._df: dict[str, int] = {}
+        self._avgdl = 0.0
+        self._corpus_size = -1
+        # Observability counters.
+        self.applications = 0
+        self.total_in = 0
+        self.total_out = 0
+
+    # -- corpus statistics ---------------------------------------------------
+    def _ensure_corpus(self, memories: list[Memory]) -> None:
+        corpus = self._corpus_provider() if self._corpus_provider else memories
+        if len(corpus) == self._corpus_size:
+            return  # snapshot unchanged: reuse token/IDF caches
+        self._corpus_size = len(corpus)
+        from collections import Counter
+
+        self._doc_tokens = {m.id: _tokenize(m.content) for m in corpus}
+        df: Counter = Counter()
+        for toks in self._doc_tokens.values():
+            df.update(set(toks))
+        self._df = dict(df)
+        self._avgdl = (
+            sum(len(t) for t in self._doc_tokens.values()) / len(self._doc_tokens)
+            if self._doc_tokens else 0.0
+        )
+
+    def _sessions_for(self, memories: list[Memory]) -> dict[int, int]:
+        """Explicit map if given; otherwise derive sessions from time gaps."""
+        if self._explicit_sessions is not None:
+            return self._explicit_sessions
+        derived: dict[int, int] = {}
+        session = 0
+        last_seen = None
+        for mem in sorted(memories, key=lambda m: m.created_at):
+            created = mem.created_at
+            if (
+                last_seen is not None
+                and (created - last_seen).total_seconds() > self.session_gap_seconds
+            ):
+                session += 1
+            derived[mem.id] = session
+            last_seen = created
+        return derived
+
+    def _bm25(self, query: str, mem: Memory, k1: float = 1.5, b: float = 0.75) -> float:
+        import math
+
+        q_tokens = _tokenize(query)
+        doc = self._doc_tokens.get(mem.id)
+        if not q_tokens or not doc:
+            return 0.0
+        tf: dict[str, int] = {}
+        for t in doc:
+            tf[t] = tf.get(t, 0) + 1
+        dl = len(doc)
+        norm = k1 * (1 - b + b * dl / (self._avgdl or 1.0))
+        score = 0.0
+        n_docs = len(self._doc_tokens)
+        for t in set(q_tokens):
+            df = self._df.get(t, 0)
+            if t not in tf:
+                continue
+            idf = math.log(1 + (n_docs - df + 0.5) / (df + 0.5))
+            score += idf * (tf[t] * (k1 + 1)) / (tf[t] + norm)
+        return score
+
+    # -- gate interface (matches HierarchicalGate.filter) --------------------
+    def filter(self, query: str, memories: list[Memory]) -> list[Memory]:
+        """Narrow ``memories`` to at most ``pool_size``, sessions kept whole.
+
+        Deterministic for a fixed input list: order-stable sort (score desc,
+        earliest index wins on ties), so a recorded run replays identically.
+        """
+        self._ensure_corpus(memories)
+        self.applications += 1
+        self.total_in += len(memories)
+        if len(memories) <= self.pool_size:
+            self.total_out += len(memories)
+            return memories  # pool already small: gate is a no-op
+
+        sessions = self._sessions_for(memories)
+        own_scores = [self._bm25(query, m) for m in memories]
+
+        # Session score = MAX member BM25 over pool members.
+        session_scores: dict[int, float] = {}
+        for mem, own in zip(memories, own_scores):
+            sid = sessions.get(mem.id)
+            if sid is None:
+                continue
+            if own > session_scores.get(sid, float("-inf")):
+                session_scores[sid] = own
+
+        scored: list[tuple[float, int, Memory]] = []
+        for idx, (mem, own) in enumerate(zip(memories, own_scores)):
+            s = session_scores.get(sessions.get(mem.id))
+            # Sessions in whole blocks first; own_weight*own orders inside a
+            # session; ungrouped memories fall back to their own score.
+            combined = (s + self.own_weight * own) if s is not None else own
+            scored.append((combined, -idx, mem))
+        scored.sort(key=lambda t: (-t[0], t[1]))
+        kept = [m for _, _, m in scored[: self.pool_size]]
+        self.total_out += len(kept)
+        return kept
+
+    def snapshot(self) -> dict[str, int]:
+        """Observability counters for the caller's metadata."""
+        return {
+            "applications": self.applications,
+            "total_in": self.total_in,
+            "total_out": self.total_out,
+            "corpus_size": self._corpus_size,
+        }
+

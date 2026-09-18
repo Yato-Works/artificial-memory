@@ -194,7 +194,15 @@ class RuntimeConfig:
     metrics_output_dir: str = "metrics"
 
     # DeepSeek Raid: opt-in retrieval acceleration (default = frozen behavior)
-    retrieval_strategy: str = "classic"  # "classic" | "deepseek"
+    #   "classic"          frozen BasicRecallEngine (baseline)
+    #   "deepseek"         CSA2 plan cache only
+    #   "deepseek_session" plan cache + SessionGate + full-store window
+    #                      (Phase 8.7: session-granular gate, 85% evidence
+    #                      retention @ K=100 with no embedding pass)
+    retrieval_strategy: str = "classic"
+    # deepseek_session tuning (only used when retrieval_strategy="deepseek_session")
+    session_gate_pool: int = 100     # post-gate candidate pool size (K=100 winner)
+    candidate_window: int = 450      # pre-gate fetch window (450 >= S4 store size)
 
     def __post_init__(self) -> None:
         import secrets as _secrets
@@ -345,6 +353,25 @@ class ArtificialMemoryRuntime:
             # "classic", so baselines and pre-raid tests keep their semantics.
             from artificial_memory.recall.deepseek_engine import DeepSeekRecallEngine
             self.recall_engine = DeepSeekRecallEngine(self.store)
+        elif self.config.retrieval_strategy == "deepseek_session":
+            # Phase 8.7 winner: CSA2 plan cache + session-granular gate.
+            # The window opens to the full store (the Phase 8.5 funnel audit
+            # showed the frozen recent-50 candidate window destroys 89% of
+            # the evidence before any gate runs) and SessionGate narrows it
+            # back down at session granularity, keeping evidence sessions
+            # whole.  Still strictly opt-in and additive.
+            from artificial_memory.recall.deepseek_engine import DeepSeekRecallEngine
+            from artificial_memory.recall.retrieval_cache import SessionGate
+
+            session_gate = SessionGate(
+                pool_size=self.config.session_gate_pool,
+                corpus_provider=self._store_snapshot,
+            )
+            self.recall_engine = DeepSeekRecallEngine(
+                self.store,
+                gate=session_gate,
+                candidate_window=self.config.candidate_window,
+            )
         else:
             self.recall_engine = BasicRecallEngine(self.store)
         self.context_builder = EnhancedContextBuilder(
@@ -719,6 +746,14 @@ class ArtificialMemoryRuntime:
         """Debug inspection of a memory (sync version)."""
         import asyncio
         return asyncio.run(self.trace(memory_id))
+
+    def _store_snapshot(self) -> list:
+        """Parameterless full-store snapshot for SessionGate corpus stats.
+
+        Called by the gate only when its cached corpus size is stale, so the
+        cost is one full scan per store growth, not per recall.
+        """
+        return self.store.get_memories(limit=100000)
 
     def _build_context_ir(self, query: str, topic_id: int, max_tokens: int) -> ContextIR:
         """Build ContextIR from context builder."""

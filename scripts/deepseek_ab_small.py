@@ -265,6 +265,44 @@ def run_classic(dataset, args, answerer) -> dict:
     return summary
 
 
+def run_session(dataset, args, answerer) -> dict:
+    """Phase 8.7 arm: facade-wired ``deepseek_session`` (no post-hoc attach).
+
+    The runtime itself constructs DeepSeekRecallEngine + SessionGate with the
+    full-store window, so this arm exercises the committed wiring exactly as
+    a user would get it from ``RuntimeConfig(retrieval_strategy=...)``.
+    """
+    player = AMv020Player(
+        {"context_budget": 2000, "retrieval_strategy": "deepseek_session"},
+        answerer=answerer,
+    )
+    result = ArenaRunner(_build_config(args, dataset, player)).run()
+    run_dir = Path(args.output_dir) / "controlled" / result.run_id
+
+    engine = player._runtime.recall_engine
+    plan_stats = (
+        engine.plan_cache.stats_snapshot()
+        if hasattr(engine, "plan_cache") else None
+    )
+    gate_stats = engine.gate.snapshot() if getattr(engine, "gate", None) else None
+
+    summary = {
+        "arm": "session",
+        "gate_pool": getattr(getattr(engine, "gate", None), "pool_size", None),
+        "candidate_window": getattr(engine, "candidate_window", None),
+        "run_id": result.run_id,
+        "run_dir": str(run_dir),
+        "failures": len(result.failures),
+        "store_memory_count": len(player._runtime.store.get_memories(limit=10000)),
+        "plan_stats": plan_stats,
+        "gate_stats": gate_stats,
+        **_collect_retrieval_evidence(result),
+        **_score_block(run_dir, dataset),
+    }
+    _print_arm("session", result, summary)
+    return summary
+
+
 def cross_arm_agreement(arms: dict) -> dict:
     """Fraction of questions where an arm's first-repeat selection == classic's.
 
@@ -1162,7 +1200,7 @@ def main() -> None:
                              "fetched once per window, scorers share it")
     parser.add_argument("--answer-repeats", type=int, default=3)
     parser.add_argument("--latency-repeats", type=int, default=5)
-    parser.add_argument("--arms", default="classic,cache,gate,gate_wide",
+    parser.add_argument("--arms", default="classic,cache,gate,gate_wide,session",
                         help="comma-separated subset of classic/cache/gate/gate_wide")
     parser.add_argument("--gate-audit", action="store_true",
                         help="run the LLM-free gate GT-coverage audit and exit")
@@ -1272,6 +1310,8 @@ def main() -> None:
             arms[label] = run_arm(
                 "gate_wide", args.gate_pool, args.wide_window, answerer, dataset, args
             )
+        elif label == "session":
+            arms[label] = run_session(dataset, args, answerer)
         else:
             raise SystemExit(f"unknown arm: {label}")
 
