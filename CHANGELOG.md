@@ -29,6 +29,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `tests/test_deepseek_raid.py`: 23 tests covering tiering, gating,
     replay, composition and runtime wiring (full suite: 423 passed,
     11 skipped, zero regressions)
+- **v0.2.0 Phase 8.5 - DeepSeek Raid A/B experiment harness**
+  - `scripts/deepseek_ab_small.py`: three-arm controlled E2E over the
+    10-question Phase 8.3.4 subset -- `classic` (frozen baseline) vs
+    `cache` (CSA2 plan cache) vs `gate` (plan cache + HierarchicalGate);
+    EphemeralStore stays out of every arm so deltas attribute cleanly
+  - `AMv020Player`: `retrieval_strategy` config passthrough (default
+    `"classic"` keeps frozen behaviour) and `memory_ids` in Answer.metadata
+    for selection-level determinism evidence
+  - Evidence per arm: frozen-Scorer aggregates, retrieval latency
+    p50/p95, context tokens, FULL/REINDEX/REUSE counters, gate traffic,
+    repeat-selection stability, cross-arm selection agreement
+  - Dry-run validation findings: REUSE freezes selection across repeats
+    (stability 1.0) where classic re-ranking drifts (0.0); gate is a no-op
+    at pool_size=64 with 20-candidate pools (use a smaller pool to arm it)
 
 ### Added
 - **v0.2.0 Phase 1 - Memory Evolution Core**

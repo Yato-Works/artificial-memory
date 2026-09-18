@@ -737,11 +737,16 @@ class AMv020Player(ControlledPlayer, _SharedAnswerGeneration):
         # Lazy import to avoid circular dependency
         from artificial_memory.runtime import ArtificialMemoryRuntime, RuntimeConfig
 
-        # Use full AM runtime
+        # DeepSeek Raid A/B: the retrieval strategy is opt-in via the player
+        # config dict.  Default "classic" keeps the frozen behaviour byte
+        # identical, so pre-raid benchmark reproductions are unaffected.
         self._runtime = ArtificialMemoryRuntime(RuntimeConfig(
             database_path=":memory:",
             memory_files_path=None,
             vector_index_path=None,
+            retrieval_strategy=str(
+                (self.config or {}).get("retrieval_strategy", "classic")
+            ),
         ))
 
         start = time.perf_counter()
@@ -810,6 +815,10 @@ class AMv020Player(ControlledPlayer, _SharedAnswerGeneration):
                 "memories_retrieved": result.memories_retrieved,
                 "recall_level": result.level.value if hasattr(result.level, "value") else str(result.level),
                 "answer_tokens": llm.total_tokens,
+                # Retrieval-selection evidence: lets the A/B analysis verify
+                # that REUSE replays the *identical* memory id sequence, and
+                # that classic recomputation matches (determinism).
+                "memory_ids": [m.identity.memory_id for m in result.memories],
             },
         )
 
