@@ -1,0 +1,152 @@
+{
+  "gate_pool": 64,
+  "candidate_window": null,
+  "recall_level": 2,
+  "static_store": true,
+  "store_memory_count": 440,
+  "frozen_pool_size": 20,
+  "questions": 10,
+  "funnel": {
+    "stage_store": 1.0,
+    "stage_candidates": 0.0,
+    "stage_gate": 0.0,
+    "stage_selected": 0.0
+  },
+  "gate_narrowing": {
+    "in": 180,
+    "out": 180
+  },
+  "evidence_recall": {
+    "evidence_total": 39,
+    "store": 1.0,
+    "candidates": 0.0,
+    "gate": 0.0,
+    "selected": 0.0
+  },
+  "gate_damage": 0.0,
+  "rows": [
+    {
+      "question_id": "factual_recall-00",
+      "category": "factual_recall",
+      "gt_groups": 1,
+      "evidence_count": 5,
+      "stage_store": 5,
+      "stage_candidates": 0,
+      "stage_gate": 0,
+      "stage_selected": 0,
+      "pool_in": 20,
+      "pool_out": 20,
+      "frozen_pool": 20
+    },
+    {
+      "question_id": "multi_session_recall-00",
+      "category": "multi_session_recall",
+      "gt_groups": 1,
+      "evidence_count": 3,
+      "stage_store": 3,
+      "stage_candidates": 0,
+      "stage_gate": 0,
+      "stage_selected": 0,
+      "pool_in": 20,
+      "pool_out": 20,
+      "frozen_pool": 20
+    },
+    {
+      "question_id": "temporal_reasoning-00",
+      "category": "temporal_reasoning",
+      "gt_groups": 1,
+      "evidence_count": 3,
+      "stage_store": 3,
+      "stage_candidates": 0,
+      "stage_gate": 0,
+      "stage_selected": 0,
+      "pool_in": 20,
+      "pool_out": 20,
+      "frozen_pool": 20
+    },
+    {
+      "question_id": "knowledge_updates-00",
+      "category": "knowledge_updates",
+      "gt_groups": 1,
+      "evidence_count": 4,
+      "stage_store": 4,
+      "stage_candidates": 0,
+      "stage_gate": 0,
+      "stage_selected": 0,
+      "pool_in": 20,
+      "pool_out": 20,
+      "frozen_pool": 20
+    },
+    {
+      "question_id": "contradiction_handling-00",
+      "category": "contradiction_handling",
+      "gt_groups": 2,
+      "evidence_count": 8,
+      "stage_store": 8,
+      "stage_candidates": 0,
+      "stage_gate": 0,
+      "stage_selected": 0,
+      "pool_in": 20,
+      "pool_out": 20,
+      "frozen_pool": 20
+    },
+    {
+      "question_id": "indirect_recall-00",
+      "category": "indirect_recall",
+      "gt_groups": 1,
+      "evidence_count": 3,
+      "stage_store": 3,
+      "stage_candidates": 0,
+      "stage_gate": 0,
+      "stage_selected": 0,
+      "pool_in": 20,
+      "pool_out": 20,
+      "frozen_pool": 20
+    },
+    {
+      "question_id": "distractor_resistance-00",
+      "category": "distractor_resistance",
+      "gt_groups": 1,
+      "evidence_count": 5,
+      "stage_store": 5,
+      "stage_candidates": 0,
+      "stage_gate": 0,
+      "stage_selected": 0,
+      "pool_in": 20,
+      "pool_out": 20,
+      "frozen_pool": 20
+    },
+    {
+      "question_id": "abstention-00",
+      "category": "abstention",
+      "gt_groups": 0,
+      "note": "no ground truth (abstention)"
+    },
+    {
+      "question_id": "compression_recovery-00",
+      "category": "compression_recovery",
+      "gt_groups": 1,
+      "evidence_count": 1,
+      "stage_store": 1,
+      "stage_candidates": 0,
+      "stage_gate": 0,
+      "stage_selected": 0,
+      "pool_in": 20,
+      "pool_out": 20,
+      "frozen_pool": 20
+    },
+    {
+      "question_id": "reflection_reinterpretation-00",
+      "category": "reflection_reinterpretation",
+      "gt_groups": 1,
+      "evidence_count": 7,
+      "stage_store": 7,
+      "stage_candidates": 0,
+      "stage_gate": 0,
+      "stage_selected": 0,
+      "pool_in": 20,
+      "pool_out": 20,
+      "frozen_pool": 20
+    }
+  ]
+}

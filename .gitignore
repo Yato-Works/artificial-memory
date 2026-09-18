@@ -63,6 +63,11 @@ docs/planning/
 notes/
 scratch/
 
+# Local experiment scratch (TEMP redirection target, debug scripts)
+.tmp/
+benchmark/results/_wiring_check/
+benchmark/results/_debug_runs/
+
 # Local research and benchmark run outputs
 ablation_results/
 am_benchmarks/

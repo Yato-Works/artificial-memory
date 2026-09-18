@@ -279,6 +279,110 @@ class TestDeepSeekRecallEngine:
         engine = BasicRecallEngine(SQLiteMemoryStore(":memory:"))
         assert not hasattr(engine, "plan_cache")
         assert not hasattr(engine, "gate")
+        assert not hasattr(engine, "candidate_window")
+
+
+# ---------------------------------------------------------------------------
+# Candidate window (Phase 8.5 funnel-audit finding)
+# ---------------------------------------------------------------------------
+
+class TestCandidateWindow:
+    @staticmethod
+    def _seeded_store(n: int):
+        from artificial_memory.core.models import Project, Topic
+
+        store = SQLiteMemoryStore(":memory:")
+        project = store.create_project(Project(name="t"))
+        topic = store.create_topic(
+            Topic(project_id=project.id, name="T", path="T")
+        )
+        for i in range(n):
+            store.create_memory(Memory(
+                topic_id=topic.id, memory_type=MemoryType.EPISODE,
+                content=f"memory {i} filler {i * 7919 % 101}",  # spread lexicon
+                resolution=ResolutionLevel.SEMANTIC,
+            ))
+        return store, topic.id
+
+    def test_window_none_matches_frozen_exactly(self):
+        """window=None must reproduce the frozen candidate fetch byte-identically."""
+        store, topic_id = self._seeded_store(120)
+        frozen = BasicRecallEngine(store)
+        raid = DeepSeekRecallEngine(store)
+        assert raid.candidate_window is None
+        frozen_pool = frozen._get_candidates(
+            "memory 3 filler", topic_id, RecallLevel.CURRENT_ONLY
+        )
+        raid_pool = raid._get_candidates(
+            "memory 3 filler", topic_id, RecallLevel.CURRENT_ONLY
+        )
+        assert [m.id for m in frozen_pool] == [m.id for m in raid_pool]
+        assert len(frozen_pool) == 50  # frozen per-level cap
+
+    def test_window_widens_candidates(self):
+        store, topic_id = self._seeded_store(120)
+        wide = DeepSeekRecallEngine(store, candidate_window=200)
+        pool = wide._get_candidates(
+            "memory 3 filler", topic_id, RecallLevel.CURRENT_ONLY
+        )
+        # Window is an upper bound: capped by store size (120 < 200), but
+        # strictly wider than the frozen recent-50 window.
+        assert len(pool) == 120
+        assert len(pool) > 50
+
+    def test_window_covers_store(self):
+        """A window >= store size must surface every active memory (level 0)."""
+        store, topic_id = self._seeded_store(80)
+        wide = DeepSeekRecallEngine(store, candidate_window=450)
+        pool = wide._get_candidates(
+            "anything", topic_id, RecallLevel.CURRENT_ONLY
+        )
+        assert len(pool) == 80
+
+    def test_window_applies_per_bucket(self):
+        """Window W is a per-bucket fetch bound, not a ratio-scaled total.
+
+        Deliberate Phase 8.5 design: ratio-scaling a widened window (e.g.
+        450 * 20/60 = 150 per bucket) would still hide older evidence when
+        buckets are unevenly filled (a 100%-semantic store gets 450 * 40/60
+        for its only bucket... capped at the frozen level split, never the
+        full store).  Per-bucket W means "how deep into each partition we
+        look", so W >= store size surfaces every active memory.
+        """
+        from artificial_memory.core.models import Project, Topic
+
+        store = SQLiteMemoryStore(":memory:")
+        project = store.create_project(Project(name="t"))
+        topic = store.create_topic(
+            Topic(project_id=project.id, name="T", path="T")
+        )
+        for i in range(45):
+            store.create_memory(Memory(
+                topic_id=topic.id, memory_type=MemoryType.EPISODE,
+                content=f"episode {i}", resolution=ResolutionLevel.EPISODE,
+            ))
+            store.create_memory(Memory(
+                topic_id=topic.id, memory_type=MemoryType.SEMANTIC,
+                content=f"semantic {i}", resolution=ResolutionLevel.SEMANTIC,
+            ))
+        wide = DeepSeekRecallEngine(store, candidate_window=60)
+        pool = wide._get_candidates("q", topic.id, RecallLevel.EPISODE)
+        episodes = sum(1 for m in pool if m.resolution == ResolutionLevel.EPISODE)
+        semantics = sum(1 for m in pool if m.resolution == ResolutionLevel.SEMANTIC)
+        # Per-bucket W=60 with 45 available per bucket: both buckets fill
+        # completely (ratio-scaling would give the frozen 40:20 instead).
+        assert episodes == 45
+        assert semantics == 45
+        assert len(pool) == 90
+
+    def test_frozen_engine_still_has_hardcoded_window(self):
+        """The frozen engine's own path must be untouched by the raid window."""
+        store, topic_id = self._seeded_store(120)
+        frozen = BasicRecallEngine(store)
+        pool = frozen._get_candidates(
+            "anything", topic_id, RecallLevel.CURRENT_ONLY
+        )
+        assert len(pool) == 50  # unchanged: recent-50 window
 
 
 # ---------------------------------------------------------------------------

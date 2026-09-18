@@ -17,7 +17,7 @@ Scorer sees identical result shapes.
 
 from __future__ import annotations
 
-from artificial_memory.core.models import Memory, RecallEvent, RecallLevel
+from artificial_memory.core.models import Memory, MemoryStatus, RecallEvent, RecallLevel
 from artificial_memory.recall.engine import BasicRecallEngine
 from artificial_memory.recall.retrieval_cache import (
     FULL,
@@ -43,19 +43,79 @@ class DeepSeekRecallEngine(BasicRecallEngine):
         store,
         plan_cache: RetrievalPlanCache | None = None,
         gate: HierarchicalGate | None = None,
+        candidate_window: int | None = None,
     ):
         super().__init__(store)
         self.plan_cache = plan_cache or RetrievalPlanCache()
         self.gate = gate  # None -> gate disabled (pure plan-cache mode)
+        # Candidate window (Phase 8.5 funnel-audit finding): the frozen
+        # engine's per-level ``limit`` caps surface only the *most recent*
+        # slice of the store (e.g. 50 at level 0), which measured 89% GT loss
+        # on the S4 dataset *before* any raid mechanism runs.  ``None`` keeps
+        # the frozen behaviour byte-identical; an integer widens the window
+        # while preserving each level's resolution-bucket ratios.
+        self.candidate_window = candidate_window
         # Observability counters for Answer.metadata.
         self.gate_applications = 0
 
     # ------------------------------------------------------------------
-    # Candidate pipeline override (HSI gate lives here)
+    # Candidate pipeline override (HSI gate + configurable window live here)
     # ------------------------------------------------------------------
+    # Frozen per-level bucket specs, mirrored verbatim from
+    # ``BasicRecallEngine._get_candidates``: (resolution, is_current, limit).
+    # ``None`` resolution means "no resolution filter" (level 0).
+    _LEVEL_BUCKETS = None  # built lazily (models import order safety)
+
+    @classmethod
+    def _buckets_for_level(cls, level) -> list[tuple]:
+        if cls._LEVEL_BUCKETS is None:
+            from artificial_memory.core.models import ResolutionLevel
+
+            R = ResolutionLevel
+            cls._LEVEL_BUCKETS = {
+                RecallLevel.CURRENT_ONLY: [(None, True, 50)],
+                RecallLevel.LONG_TERM_SUMMARY: [
+                    (R.SEMANTIC, None, 30),
+                    (R.LONG_TERM, None, 30),
+                    (R.DEEP_LONG_TERM, None, 30),
+                ],
+                RecallLevel.EPISODE: [(R.EPISODE, None, 40), (R.SEMANTIC, None, 20)],
+                RecallLevel.LIGHT_COMPRESSION: [
+                    (R.LIGHT, None, 30), (R.EPISODE, None, 15), (R.SEMANTIC, None, 15),
+                ],
+                RecallLevel.RAW: [
+                    (R.LIGHT, None, 20), (R.EPISODE, None, 20), (R.SEMANTIC, None, 20),
+                ],
+            }
+        return cls._LEVEL_BUCKETS[level]
+
     def _get_candidates(self, query, topic_id, level) -> list[Memory]:
-        """Level-based candidate fetch, optionally narrowed by the gate."""
-        candidates = super()._get_candidates(query, topic_id, level)
+        """Level-based candidate fetch, optionally narrowed by the gate.
+
+        With ``candidate_window=None`` this is *exactly* the frozen path.
+        With a window W, each resolution bucket's fetch limit becomes W.
+        Buckets are disjoint partitions of the store (by resolution), so the
+        window means "how deep into each partition we look": W >= store size
+        recovers every active memory, while the frozen ratio-scaling (e.g.
+        450 * 20/60 = 150 per bucket) would still hide older evidence in a
+        100%-semantic store (Phase 8.5 funnel-audit finding).
+        """
+        if self.candidate_window is None:
+            candidates = super()._get_candidates(query, topic_id, level)
+        else:
+            candidates: list[Memory] = []
+            for resolution, is_current, _frozen_limit in self._buckets_for_level(level):
+                candidates.extend(self.store.get_memories(
+                    topic_id=topic_id,
+                    resolution=resolution,
+                    is_current=is_current,
+                    status=MemoryStatus.ACTIVE,
+                    limit=self.candidate_window,
+                ))
+            # Deduplicate by memory ID (frozen-path parity).
+            seen: set[int] = set()
+            candidates = [m for m in candidates if m.id not in seen and not seen.add(m.id)]
+
         if self.gate is not None and candidates:
             candidates = self.gate.filter(query, candidates)
             self.gate_applications += 1

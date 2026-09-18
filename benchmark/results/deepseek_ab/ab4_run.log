@@ -1,0 +1,50 @@
+DeepSeek Raid A/B small-scale E2E (10 questions, dry-run=True)
+  [factual_recall] For project atlas, what did the user say their preferred editor toolchain is?
+  [multi_session_recall] Across our conversations about project atlas, which subject did the user begin studying, practise, and later recommend to colleagues?
+  [temporal_reasoning] Where was the user working on 2026-01-27 while project atlas was active?
+  [knowledge_updates] What is the user's primary database for project atlas now?
+  [contradiction_handling] For project atlas, which cache layer should I assume the system runs on?
+  [indirect_recall] In which city is the machine that runs the daily driver toolchain of project atlas located?
+  [distractor_resistance] Which file search tool is pinned for project atlas?
+  [abstention] Which debugger did the user configure for project atlas?
+  [compression_recovery] What serial number was filed for the p99 latency measurement of project atlas?
+  [reflection_reinterpretation] Considering everything the user said about project atlas, what recurring preference does the user consistently show?
+
+=== arm [classic] run_id=controlled_20260918_183313 failures=0 ===
+  store memories: n/a
+  plan stats: None   gate: None
+  retrieval latency mean/p50/p95: 40.591 / 34.766 / 85.809 ms
+  context tokens mean: 516.5
+  repeat selection stability: 1.0
+  scorer: [{"player": "AM v0.2.0", "question_count": 10, "pass_count": 1, "partial_count": 0, "fail_count": 9, "false_positive_count": 0, "answer_accuracy": 0.1, "partial_rate": 0.0, "false_positive_rate": 0.0, "forbidden_violation_rate": 0.0, "mean_ground_truth_coverage": 0.1, "mean_score": 0.1, "abstention_accuracy": 1.0, "abstention_question_count": 1, "mean_score_consistency": 1.0, "category_accuracy": {"abstention": 1.0, "compression_recovery": 0.0, "contradiction_handling": 0.0, "distractor_resistance": 0.0, "factual_recall": 0.0, "indirect_recall": 0.0, "knowledge_updates": 0.0, "multi_session_recall": 0.0, "reflection_reinterpretation": 0.0, "temporal_reasoning": 0.0}}]
+
+=== arm [cache] run_id=controlled_20260918_183327 failures=0 ===
+  store memories: 100
+  plan stats: {'full': 10, 'reindex': 0, 'reuse': 40}   gate: None
+  retrieval latency mean/p50/p95: 22.727 / 22.13 / 27.174 ms
+  context tokens mean: 522
+  repeat selection stability: 1.0
+  scorer: [{"player": "AM v0.2.0", "question_count": 10, "pass_count": 1, "partial_count": 0, "fail_count": 9, "false_positive_count": 0, "answer_accuracy": 0.1, "partial_rate": 0.0, "false_positive_rate": 0.0, "forbidden_violation_rate": 0.0, "mean_ground_truth_coverage": 0.1, "mean_score": 0.1, "abstention_accuracy": 1.0, "abstention_question_count": 1, "mean_score_consistency": 1.0, "category_accuracy": {"abstention": 1.0, "compression_recovery": 0.0, "contradiction_handling": 0.0, "distractor_resistance": 0.0, "factual_recall": 0.0, "indirect_recall": 0.0, "knowledge_updates": 0.0, "multi_session_recall": 0.0, "reflection_reinterpretation": 0.0, "temporal_reasoning": 0.0}}]
+
+=== arm [gate] run_id=controlled_20260918_183331 failures=0 ===
+  store memories: 100
+  plan stats: {'full': 10, 'reindex': 0, 'reuse': 40}   gate: {'calls': 10, 'total_in': 200, 'total_out': 200, 'narrowed': 0}
+  retrieval latency mean/p50/p95: 46.4 / 38.596 / 124.438 ms
+  context tokens mean: 522
+  repeat selection stability: 1.0
+  scorer: [{"player": "AM v0.2.0", "question_count": 10, "pass_count": 1, "partial_count": 0, "fail_count": 9, "false_positive_count": 0, "answer_accuracy": 0.1, "partial_rate": 0.0, "false_positive_rate": 0.0, "forbidden_violation_rate": 0.0, "mean_ground_truth_coverage": 0.1, "mean_score": 0.1, "abstention_accuracy": 1.0, "abstention_question_count": 1, "mean_score_consistency": 1.0, "category_accuracy": {"abstention": 1.0, "compression_recovery": 0.0, "contradiction_handling": 0.0, "distractor_resistance": 0.0, "factual_recall": 0.0, "indirect_recall": 0.0, "knowledge_updates": 0.0, "multi_session_recall": 0.0, "reflection_reinterpretation": 0.0, "temporal_reasoning": 0.0}}]
+
+=== arm [gate_wide] run_id=controlled_20260918_183334 failures=0 ===
+  store memories: 100
+  plan stats: {'full': 10, 'reindex': 0, 'reuse': 40}   gate: {'calls': 10, 'total_in': 4400, 'total_out': 640, 'narrowed': 3760}
+  retrieval latency mean/p50/p95: 81.654 / 82.163 / 91.615 ms
+  context tokens mean: 1450
+  repeat selection stability: 1.0
+  scorer: [{"player": "AM v0.2.0", "question_count": 10, "pass_count": 1, "partial_count": 0, "fail_count": 9, "false_positive_count": 0, "answer_accuracy": 0.1, "partial_rate": 0.0, "false_positive_rate": 0.0, "forbidden_violation_rate": 0.0, "mean_ground_truth_coverage": 0.1, "mean_score": 0.1, "abstention_accuracy": 1.0, "abstention_question_count": 1, "mean_score_consistency": 1.0, "category_accuracy": {"abstention": 1.0, "compression_recovery": 0.0, "contradiction_handling": 0.0, "distractor_resistance": 0.0, "factual_recall": 0.0, "indirect_recall": 0.0, "knowledge_updates": 0.0, "multi_session_recall": 0.0, "reflection_reinterpretation": 0.0, "temporal_reasoning": 0.0}}]
+
+=== cross-arm selection agreement ===
+  classic_vs_cache: 0.1
+  classic_vs_gate: 0.1
+  classic_vs_gate_wide: 0.0
+
+evidence written: benchmark\results\deepseek_ab\summary_20260918_183340.json
