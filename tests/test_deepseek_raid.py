@@ -18,6 +18,8 @@ phase; a small regression block at the bottom asserts that.
 
 from __future__ import annotations
 
+import asyncio
+
 import pytest
 
 from artificial_memory.core.models import Memory, MemoryType, RecallLevel, ResolutionLevel
@@ -558,6 +560,97 @@ class TestSessionGate:
         first = gate.filter("beta topic", memories)
         second = gate.filter("beta topic", memories)
         assert [m.id for m in first] == [m.id for m in second]
+
+    def test_floor_applies_below_pool_size(self):
+        """Phase 8.11: the floor must work even when pool <= pool_size.
+
+        Regression for the silent no-op: the old early-return at
+        ``len(memories) <= pool_size`` disabled the floor whenever the
+        candidate window was small (measured: floor=8 with floor_drops=0
+        across 60 validation runs).
+        """
+        from artificial_memory.recall.retrieval_cache import SessionGate
+
+        memories = self._memories([
+            "atlas daily driver is ripgrep",
+            "gardening filler one",
+            "gardening filler two",
+        ])
+        gate = SessionGate(pool_size=10, score_floor=0.5)
+        kept = gate.filter("which ripgrep tool does atlas use?", memories)
+        kept_ids = {m.id for m in kept}
+        assert len(kept) < len(memories)      # floor fired
+        assert memories[0].id in kept_ids     # evidenced memory survives
+        assert gate.floor_drops == 2          # both fillers dropped
+
+    def test_floor_zero_keeps_small_pool_intact(self):
+        from artificial_memory.recall.retrieval_cache import SessionGate
+
+        memories = self._memories(["alpha one", "beta two", "gamma three"])
+        gate = SessionGate(pool_size=10, score_floor=0.0)
+        kept = gate.filter("anything", memories)
+        assert kept == memories
+        assert gate.floor_drops == 0
+
+
+class TestPlanCacheGateFlush:
+    """Phase 8.11: the plan cache must not replay across gate configs."""
+
+    @staticmethod
+    def _runtime() -> "ArtificialMemoryRuntime":
+        import asyncio  # noqa: F401  (used inside test closures)
+
+        return ArtificialMemoryRuntime(RuntimeConfig(
+            database_path=":memory:",
+            memory_files_path=None,
+            vector_index_path=None,
+            retrieval_strategy="deepseek_session",
+        ))
+
+    def test_gate_swap_flushes_plan_cache(self):
+        from artificial_memory.recall.retrieval_cache import SessionGate
+
+        runtime = self._runtime()
+        engine = runtime.recall_engine
+
+        async def seed_and_recall():
+            for i in range(1, 12):
+                await runtime.remember(
+                    f"turn {i}: project atlas uses ripgrep daily.", topic="T"
+                )
+            # Warm the plan cache under the runtime's default gate.
+            await runtime.recall("atlas ripgrep", topic="T", level=2)
+
+            # Swap in a gate with a different floor: the cached plans were
+            # seeded by a different gate config and must not be replayed.
+            old_cache = engine.plan_cache
+            engine.gate = SessionGate(
+                pool_size=8, corpus_provider=runtime._store_snapshot,
+                score_floor=1.0,
+            )
+            await runtime.recall("atlas ripgrep", topic="T", level=2)
+            return old_cache
+
+        old_cache = asyncio.run(seed_and_recall())
+        assert engine.plan_cache is not old_cache
+
+    def test_same_gate_config_keeps_plans(self):
+        runtime = self._runtime()
+        engine = runtime.recall_engine
+
+        async def scenario():
+            for i in range(1, 12):
+                await runtime.remember(
+                    f"turn {i}: project atlas uses ripgrep daily.", topic="T"
+                )
+            await runtime.recall("atlas ripgrep", topic="T", level=2)
+            old_cache = engine.plan_cache
+            await runtime.recall("atlas ripgrep", topic="T", level=2)
+            return old_cache
+
+        old_cache = asyncio.run(scenario())
+        assert engine.plan_cache is old_cache
+        assert engine.plan_cache.stats[REUSE] >= 1
 
 
 class TestDeepSeekSessionWiring:

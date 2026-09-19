@@ -55,8 +55,13 @@ class DeepSeekRecallEngine(BasicRecallEngine):
         # the frozen behaviour byte-identical; an integer widens the window
         # while preserving each level's resolution-bucket ratios.
         self.candidate_window = candidate_window
+        # Gate-config fingerprint for plan-cache flush (see ``recall``).
+        self._gate_cfg = None
         # Observability counters for Answer.metadata.
         self.gate_applications = 0
+        # Gate-config provenance for plan-cache flushing (Phase 8.11):
+        # None until the first recall stamps it.
+        self._gate_cfg = None
 
     # ------------------------------------------------------------------
     # Candidate pipeline override (HSI gate + configurable window live here)
@@ -139,6 +144,27 @@ class DeepSeekRecallEngine(BasicRecallEngine):
         verbatim.  Both hit paths still touch access stats and log a recall
         event so downstream store behaviour stays identical.
         """
+        # The gate is part of the *plan's* provenance: a plan seeded by a run
+        # with floor=F replaying under a different gate config would serve
+        # candidates the current gate would have rejected.  Flushing on any
+        # gate-parameter change keeps plans honest (Phase 8.11 finding: the
+        # floor lever measured as a no-op for 60 runs because the plan cache
+        # kept replaying floor=0.0 pools).
+        gate_cfg = None
+        if self.gate is not None:
+            gate_cfg = (
+                type(self.gate).__name__,
+                self.gate.pool_size,
+                getattr(self.gate, "max_sessions", None),
+                getattr(self.gate, "score_floor", None),
+            )
+        if gate_cfg != self._gate_cfg:
+            self.plan_cache = RetrievalPlanCache(
+                max_families=self.plan_cache.max_families,
+                ttl_seconds=self.plan_cache.ttl_seconds,
+            )
+            self._gate_cfg = gate_cfg
+
         fresh_result: dict[str, tuple[list[Memory], int]] = {}
 
         def _run_fresh(q: str) -> tuple[list[int], list[float]]:

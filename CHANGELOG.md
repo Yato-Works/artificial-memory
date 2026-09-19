@@ -8,6 +8,43 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- **v0.2.0 Phase 8.11 - Score-floor abstention lever + three-layer forensic audit**
+  - `SessionGate.score_floor`: memories whose own BM25 is below the floor are
+    excluded individually (not backfilled), so the gate may return *fewer*
+    than pool_size memories; an empty context is the correct answer to a
+    question the store cannot evidence
+  - Dose-response (LLM-free, 20 abstention + 9 GT questions, pool=100):
+    floor=0.0 abstention_ctx=84.8 / gt_retention=0.513; floor=1-2 78.0 /
+    0.539 (retention unchanged); floor=3 38.1 / 0.487; floor=8 0.0 (100%
+    empty) / 0.128.  Usable window: floor in [1, 2] trims filler with zero
+    retention cost
+  - **Fix (silent no-op #1)**: `SessionGate.filter` returned early when
+    `len(memories) <= pool_size`, which disabled the floor entirely whenever
+    the candidate window was small (measured: floor=8 produced
+    `floor_drops=0`, 60 consecutive validation runs were evidence-free
+    no-ops).  Floor evaluation now runs BEFORE the size short-circuit
+  - **Fix (silent no-op #2)**: swapping `engine.gate` did not invalidate the
+    CSA2 plan cache -- plans seeded under floor=0.0 kept replaying under
+    floor=8.0 (`DeepSeekRecallEngine.recall` now flushes the plan cache when
+    the gate type/pool/max_sessions/score_floor signature changes)
+  - **Fix (validation harness)**: a per-floor `SessionGate` built without
+    `corpus_provider` computes IDF over the *pool*, not the store -- a
+    different scorer from the shipped one; harnesses must wire
+    `corpus_provider=runtime._store_snapshot` to measure production
+    behaviour
+  - **Dataset finding (misattribution)**: the S4 abstention questions are
+    *not* unevidenced -- S6 contains "For project <P>, the user set the
+    debugger to <X>" for all 20 projects, directly contradicting S5's
+    "only discussed scheduling and never a debugger".  The Phase 8.9
+    abstention accuracy collapse (0.95 -> 0.00) was therefore partly
+    misattributed: gate_wide surfaced the S6 answer and the scorer marked
+    answering as `false_positive`.  The floor lever is mechanically
+    correct (dose-response above) but the abstention dataset must be
+    repaired before it can validate the fabrication hypothesis
+  - Evidence: `floor_validation_20260919_153600.json` (valid run; the 60
+    earlier no-op evidence files were deleted, see comment in
+    `scripts/deepseek_ab_small.py` history)
+### Added
 - **v0.2.0 Phase 8.10 - Session-granular cheap-recall cost curve**
   - `SessionGate.max_sessions`: top-K whole sessions retained, pool-size cap
     removed (sessions kept whole; deterministic tie-break on first-index)

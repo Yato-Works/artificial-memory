@@ -332,6 +332,7 @@ class SessionGate:
         corpus_provider: Callable[[], list[Memory]] | None = None,
         session_gap_seconds: float = 300.0,
         max_sessions: int | None = None,
+        score_floor: float = 0.0,
     ):
         self._explicit_sessions = session_by_id
         self.pool_size = pool_size
@@ -342,6 +343,12 @@ class SessionGate:
         # session score) instead of every session with a member in the pool.
         # None = keep all (the Phase 8.7/8.9 behaviour).
         self.max_sessions = max_sessions
+        # Phase 8.11 abstention lever: sessions whose best BM25 is below the
+        # floor carry no real evidence -- they are filler that the answer LLM
+        # pattern-matches into a fabricated answer (measured: abstention
+        # accuracy 0.95 -> 0.00 when the gate always fills the pool).  0.0
+        # keeps every scored session (the Phase 8.7/8.9 behaviour).
+        self.score_floor = score_floor
         # Corpus caches (rebuilt when the snapshot grows).
         self._doc_tokens: dict[int, list[str]] = {}
         self._df: dict[str, int] = {}
@@ -351,6 +358,7 @@ class SessionGate:
         self.applications = 0
         self.total_in = 0
         self.total_out = 0
+        self.floor_drops = 0
 
     # -- corpus statistics ---------------------------------------------------
     def _ensure_corpus(self, memories: list[Memory]) -> None:
@@ -420,16 +428,46 @@ class SessionGate:
         self._ensure_corpus(memories)
         self.applications += 1
         self.total_in += len(memories)
-        if len(memories) <= self.pool_size:
-            self.total_out += len(memories)
-            return memories  # pool already small: gate is a no-op
-
+        if not memories:
+            return memories
         sessions = self._sessions_for(memories)
         own_scores = [self._bm25(query, m) for m in memories]
 
-        # Session score = MAX member BM25 over pool members.
+        # Phase 8.11 abstention floor: memories whose own BM25 is below the
+        # floor carry no lexical evidence for this query and are excluded
+        # individually (NOT backfilled), so the gate may return *fewer* than
+        # pool_size memories -- an empty context is the correct answer to a
+        # question the store cannot evidence.  The floor is enforced per
+        # member rather than per session because ingest typically produces a
+        # single mega-session whose MAX member score survives any incidental
+        # lexical overlap, which would defeat a session-level floor.
+        # NOTE: this runs BEFORE the pool_size no-op check -- with a small
+        # candidate window the pool may never exceed pool_size, yet a floor
+        # above 0 must still be able to empty an unevidenced pool (measured:
+        # the no-op short-circuit silently disabled the entire 8.11 lever).
+        floor_ids: set[int] = set()
+        if self.score_floor > 0.0:
+            survivors = []
+            for idx, (mem, own) in enumerate(zip(memories, own_scores)):
+                if own < self.score_floor:
+                    floor_ids.add(mem.id)
+                else:
+                    survivors.append((idx, mem, own))
+            self.floor_drops += len(memories) - len(survivors)
+        else:
+            survivors = [
+                (idx, mem, own) for idx, (mem, own) in enumerate(zip(memories, own_scores))
+            ]
+
+        if len(memories) <= self.pool_size:
+            # Pool already fits: keep only floor survivors, original order.
+            kept = [m for _, m, _ in survivors]
+            self.total_out += len(kept)
+            return kept
+
+        # Session score = MAX surviving-member BM25.
         session_scores: dict[int, float] = {}
-        for mem, own in zip(memories, own_scores):
+        for _, mem, own in survivors:
             sid = sessions.get(mem.id)
             if sid is None:
                 continue
@@ -437,8 +475,9 @@ class SessionGate:
                 session_scores[sid] = own
 
         scored: list[tuple[float, int, Memory]] = []
-        for idx, (mem, own) in enumerate(zip(memories, own_scores)):
-            s = session_scores.get(sessions.get(mem.id))
+        for idx, mem, own in survivors:
+            sid = sessions.get(mem.id)
+            s = session_scores.get(sid)
             # Sessions in whole blocks first; own_weight*own orders inside a
             # session; ungrouped memories fall back to their own score.
             combined = (s + self.own_weight * own) if s is not None else own
@@ -448,10 +487,10 @@ class SessionGate:
         if self.max_sessions is not None:
             # Phase 8.10: keep only the top-K whole sessions.  Sessions are
             # ranked by score (desc) with the earliest member index as the
-            # deterministic tie-break; every member of a kept session stays,
-            # ordered by member score.  Same order-stable replay guarantee.
+            # deterministic tie-break; every *surviving* member of a kept
+            # session stays, ordered by member score (floor drops excluded).
             first_idx: dict[int, int] = {}
-            for idx, mem in enumerate(memories):
+            for idx, mem, _ in survivors:
                 sid = sessions.get(mem.id)
                 if sid is not None and sid not in first_idx:
                     first_idx[sid] = idx
@@ -459,15 +498,15 @@ class SessionGate:
                 session_scores.items(),
                 key=lambda kv: (-kv[1], first_idx.get(kv[0], len(memories))),
             )
-            keep_ids = {sid for sid, _ in ranked[: self.max_sessions]}
             members: dict[int, list[tuple[float, int, Memory]]] = {}
-            for idx, (mem, own) in enumerate(zip(memories, own_scores)):
+            for idx, mem, own in survivors:
                 sid = sessions.get(mem.id)
-                if sid in keep_ids:
-                    s = session_scores[sid]
-                    members.setdefault(sid, []).append(
-                        (s + self.own_weight * own, -idx, mem)
-                    )
+                if sid is None:
+                    continue
+                s = session_scores[sid]
+                members.setdefault(sid, []).append(
+                    (s + self.own_weight * own, -idx, mem)
+                )
             kept: list[Memory] = []
             for sid, _ in ranked[: self.max_sessions]:
                 block = members.get(sid, [])
@@ -487,6 +526,7 @@ class SessionGate:
             "applications": self.applications,
             "total_in": self.total_in,
             "total_out": self.total_out,
+            "floor_drops": self.floor_drops,
             "corpus_size": self._corpus_size,
         }
 
