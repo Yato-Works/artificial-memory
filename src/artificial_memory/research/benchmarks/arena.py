@@ -38,7 +38,7 @@ from enum import StrEnum
 from pathlib import Path
 from typing import Any
 
-ARENA_VERSION = "v0.2.0-arena-1"
+ARENA_VERSION = "v0.2.0-arena-2"
 QUESTIONS_PER_CATEGORY = 20
 SESSION_INTERVAL_DAYS = 15
 SESSION_COUNT = 8
@@ -114,6 +114,23 @@ PROJECTS: tuple[str, ...] = (
     "atlas", "beacon", "cinder", "delta", "ember", "fjord", "glacier", "harbor",
     "ivory", "juniper", "kelp", "lumen", "moss", "nectar", "onyx", "prism",
     "quartz", "reef", "summit", "tundra",
+)
+# Phase 8.12 dataset repair: entities that are *never* the subject of a
+# question.  The abstention plot plants the queried attribute (a debugger) on
+# a near-miss entity so that the history contains a plausible distractor while
+# the queried project carries no evidence.  That is only sound if the
+# distractor entity can never coincide with a queried project: with 20
+# questions and 20 projects, mapping abstention index -> PROJECTS[index + 7]
+# is surjective, so *every* project received a debugger fact (measured: 7 of
+# 20 abstention questions had real evidence in the history, e.g. atlas ->
+# tokei planted by the question that queried nectar).  Drawing the distractor
+# entity from this pool keeps the near-miss while making evidence-absence a
+# structural guarantee rather than a coincidence of the shift.
+PROJECTS_UNQUERIED: tuple[str, ...] = (
+    "aurora", "borealis", "cascade", "driftwood", "eclipse", "fathom",
+    "granite", "hollow", "isotope", "jetstream", "keystone", "lantern",
+    "meridian", "nimbus", "obsidian", "palisade", "quill", "ridgeline",
+    "solstice", "thicket",
 )
 LANGUAGES: tuple[str, ...] = (
     "Rust", "Go", "Elixir", "Zig", "Kotlin", "Swift", "Julia", "Nim",
@@ -524,14 +541,23 @@ def _plot_distractor_resistance(index: int) -> tuple[list[_PlantedFact], dict[st
 def _plot_abstention(index: int) -> tuple[list[_PlantedFact], dict[str, Any]]:
     """Nothing in the history supports an answer; abstention is correct.
 
-    The queried attribute is never asserted for the queried project, while
-    related projects do have such attributes. This separates \"no evidence\"
-    from \"weak evidence\" (plan #30: abstention accuracy).
+    The queried attribute is never asserted for the queried project, while a
+    near-miss entity does carry such an attribute. This separates "no
+    evidence" from "weak evidence" (plan #30: abstention accuracy).
+
+    Phase 8.12 repair: the near-miss entity is drawn from
+    :data:`PROJECTS_UNQUERIED`, never from :data:`PROJECTS`. With 20 questions
+    and 20 queried projects, the previous ``_pick(PROJECTS, index + 7)`` shift
+    was surjective over PROJECTS, so *every* project was eventually given a
+    debugger by some other question's plot -- the queried project then had
+    real evidence in the history and "correct abstention" was unwinnable
+    (measured: 7 of 20 abstention questions were evidenced, e.g. the question
+    about `nectar` planted "atlas ... set the debugger to tokei").
     """
     slot = _slot_index(ArenaCategory.ABSTENTION, index)
     day = _day_for_slot(slot)
     project = _pick(PROJECTS, index)
-    other_project = _pick(PROJECTS, index + 7)
+    other_project = _pick(PROJECTS_UNQUERIED, index)
     tool = _pick(TOOLS, slot)
     facts = [
         _PlantedFact(
@@ -552,7 +578,10 @@ def _plot_abstention(index: int) -> tuple[list[_PlantedFact], dict[str, Any]]:
         "expected_abstention": True,
         "evidence_sessions": (_session_for_slot(slot),),
         "difficulty": "hard",
-        "notes": "the attribute is only planted for a different project; any value is wrong",
+        "notes": (
+            "the attribute is only planted for an entity that is never a "
+            "queried project; any value is wrong"
+        ),
     }
 
 

@@ -8,6 +8,43 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- **v0.2.0 Phase 8.12 - Abstention dataset repair (arena-2) + abstention semantics audit**
+  - **Dataset defect (root cause of the Phase 8.9 abstention collapse)**:
+    `_plot_abstention` planted its near-miss distractor on
+    `PROJECTS[index + 7]`.  With 20 questions and 20 projects that shift is
+    surjective over `PROJECTS`, so *every* queried project eventually received
+    a debugger from some other question's plot -- 7 of 20 abstention questions
+    had real evidence in the history (e.g. the `nectar` question planted
+    "atlas ... set the debugger to tokei", directly contradicting S5's "never
+    a debugger").  Phase 8.9's `gate_wide` did not fabricate "tokei"; it
+    surfaced a planted assertion and the scorer booked it as
+    `false_positive`
+  - **Repair**: new `PROJECTS_UNQUERIED` pool (20 entities, disjoint from
+    `PROJECTS`) supplies abstention distractors, making evidence-absence a
+    structural guarantee.  `ARENA_VERSION` -> `v0.2.0-arena-2`, frozen hash
+    regenerated (`eed68804...`)
+  - **Invariant tests** (`tests/test_v02_phase7.py`): pool disjointness, plus
+    a history grep asserting no turn says "for project <P>, the user set the
+    debugger to" for any abstention project (pre-repair 7 offenders ->
+    post-repair 0)
+  - **`--abstention-audit`** (`scripts/deepseek_ab_small.py`): Part 1 counts
+    asserting vs denying memories per abstention question (post-repair:
+    `abstention_evidenced=0`, `structurally_unwinnable=true`); Part 2 sweeps
+    `score_floor` for the dose-response
+  - **Floor dose-response** (20 abstention + 9 GT questions, pool=100,
+    window=450): floor 0.0 -> ctx 83.5 / GT 0.5128; floor 2.0 -> 78.0 /
+    **0.5385** (retention-neutral-to-positive, the knee); floor 3.0 -> 37.7 /
+    0.4872; floor 4.0 -> 2.2 / 0.3333; floor 6.0 -> 0.1 (95% empty) / 0.2564;
+    floor 8.0 -> 0.0 (100% empty) / 0.1538
+  - **Finding**: a query-independent *lexical* floor cannot implement
+    abstention -- abstention and evidence questions share the same lexical
+    profile, so emptying the context costs 85% of GT retention.  Abstention
+    must come from evidence *presence* (denial memories), not evidence
+    *strength*.  `score_floor` is retained as a cost lever only (default 0.0)
+  - Evidence: `abstention_audit_20260919_170618.json`,
+    [ADR-0003](docs/adr/0003-abstention-evidence-absence.md)
+
+### Added
 - **v0.2.0 Phase 8.11 - Score-floor abstention lever + three-layer forensic audit**
   - `SessionGate.score_floor`: memories whose own BM25 is below the floor are
     excluded individually (not backfilled), so the gate may return *fewer*

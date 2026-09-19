@@ -1,0 +1,236 @@
+{
+  "dataset_version": "v0.2.0-arena-2",
+  "candidate_window": 450,
+  "gate_pool": 100,
+  "store_memory_count": 440,
+  "abstention_questions": 20,
+  "abstention_evidenced": 0,
+  "abstention_structurally_unwinnable": true,
+  "evidence_rows": [
+    {
+      "question_id": "abstention-00",
+      "project": "atlas",
+      "attribute": "debugger",
+      "asserting_memories": 0,
+      "denials": 1,
+      "sample_offender": null
+    },
+    {
+      "question_id": "abstention-01",
+      "project": "beacon",
+      "attribute": "debugger",
+      "asserting_memories": 0,
+      "denials": 1,
+      "sample_offender": null
+    },
+    {
+      "question_id": "abstention-02",
+      "project": "cinder",
+      "attribute": "debugger",
+      "asserting_memories": 0,
+      "denials": 1,
+      "sample_offender": null
+    },
+    {
+      "question_id": "abstention-03",
+      "project": "delta",
+      "attribute": "debugger",
+      "asserting_memories": 0,
+      "denials": 1,
+      "sample_offender": null
+    },
+    {
+      "question_id": "abstention-04",
+      "project": "ember",
+      "attribute": "debugger",
+      "asserting_memories": 0,
+      "denials": 1,
+      "sample_offender": null
+    },
+    {
+      "question_id": "abstention-05",
+      "project": "fjord",
+      "attribute": "debugger",
+      "asserting_memories": 0,
+      "denials": 1,
+      "sample_offender": null
+    },
+    {
+      "question_id": "abstention-06",
+      "project": "glacier",
+      "attribute": "debugger",
+      "asserting_memories": 0,
+      "denials": 1,
+      "sample_offender": null
+    },
+    {
+      "question_id": "abstention-07",
+      "project": "harbor",
+      "attribute": "debugger",
+      "asserting_memories": 0,
+      "denials": 1,
+      "sample_offender": null
+    },
+    {
+      "question_id": "abstention-08",
+      "project": "ivory",
+      "attribute": "debugger",
+      "asserting_memories": 0,
+      "denials": 1,
+      "sample_offender": null
+    },
+    {
+      "question_id": "abstention-09",
+      "project": "juniper",
+      "attribute": "debugger",
+      "asserting_memories": 0,
+      "denials": 1,
+      "sample_offender": null
+    },
+    {
+      "question_id": "abstention-10",
+      "project": "kelp",
+      "attribute": "debugger",
+      "asserting_memories": 0,
+      "denials": 1,
+      "sample_offender": null
+    },
+    {
+      "question_id": "abstention-11",
+      "project": "lumen",
+      "attribute": "debugger",
+      "asserting_memories": 0,
+      "denials": 1,
+      "sample_offender": null
+    },
+    {
+      "question_id": "abstention-12",
+      "project": "moss",
+      "attribute": "debugger",
+      "asserting_memories": 0,
+      "denials": 1,
+      "sample_offender": null
+    },
+    {
+      "question_id": "abstention-13",
+      "project": "nectar",
+      "attribute": "debugger",
+      "asserting_memories": 0,
+      "denials": 1,
+      "sample_offender": null
+    },
+    {
+      "question_id": "abstention-14",
+      "project": "onyx",
+      "attribute": "debugger",
+      "asserting_memories": 0,
+      "denials": 1,
+      "sample_offender": null
+    },
+    {
+      "question_id": "abstention-15",
+      "project": "prism",
+      "attribute": "debugger",
+      "asserting_memories": 0,
+      "denials": 1,
+      "sample_offender": null
+    },
+    {
+      "question_id": "abstention-16",
+      "project": "quartz",
+      "attribute": "debugger",
+      "asserting_memories": 0,
+      "denials": 1,
+      "sample_offender": null
+    },
+    {
+      "question_id": "abstention-17",
+      "project": "reef",
+      "attribute": "debugger",
+      "asserting_memories": 0,
+      "denials": 1,
+      "sample_offender": null
+    },
+    {
+      "question_id": "abstention-18",
+      "project": "summit",
+      "attribute": "debugger",
+      "asserting_memories": 0,
+      "denials": 1,
+      "sample_offender": null
+    },
+    {
+      "question_id": "abstention-19",
+      "project": "tundra",
+      "attribute": "debugger",
+      "asserting_memories": 0,
+      "denials": 1,
+      "sample_offender": null
+    }
+  ],
+  "floor_sweep": [
+    {
+      "floor": 0.0,
+      "abstention_context_mean": 83.5,
+      "abstention_empty_rate": 0.0,
+      "gt_retention": 0.5128,
+      "floor_drops": 0
+    },
+    {
+      "floor": 0.5,
+      "abstention_context_mean": 78.0,
+      "abstention_empty_rate": 0.0,
+      "gt_retention": 0.5128,
+      "floor_drops": 10025
+    },
+    {
+      "floor": 1.0,
+      "abstention_context_mean": 78.0,
+      "abstention_empty_rate": 0.0,
+      "gt_retention": 0.5128,
+      "floor_drops": 10025
+    },
+    {
+      "floor": 2.0,
+      "abstention_context_mean": 78.0,
+      "abstention_empty_rate": 0.0,
+      "gt_retention": 0.5385,
+      "floor_drops": 10227
+    },
+    {
+      "floor": 3.0,
+      "abstention_context_mean": 37.7,
+      "abstention_empty_rate": 0.0,
+      "gt_retention": 0.4872,
+      "floor_drops": 11391
+    },
+    {
+      "floor": 4.0,
+      "abstention_context_mean": 2.2,
+      "abstention_empty_rate": 0.0,
+      "gt_retention": 0.3333,
+      "floor_drops": 12338
+    },
+    {
+      "floor": 5.0,
+      "abstention_context_mean": 2.0,
+      "abstention_empty_rate": 0.0,
+      "gt_retention": 0.3077,
+      "floor_drops": 12465
+    },
+    {
+      "floor": 6.0,
+      "abstention_context_mean": 0.1,
+      "abstention_empty_rate": 0.95,
+      "gt_retention": 0.2564,
+      "floor_drops": 12554
+    },
+    {
+      "floor": 8.0,
+      "abstention_context_mean": 0.0,
+      "abstention_empty_rate": 1.0,
+      "gt_retention": 0.1538,
+      "floor_drops": 12651
+    }
+  ]
+}

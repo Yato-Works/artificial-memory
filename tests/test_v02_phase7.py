@@ -14,6 +14,8 @@ import pytest
 from artificial_memory.research.benchmarks.arena import (
     ARENA_EPOCH,
     ARENA_VERSION,
+    PROJECTS,
+    PROJECTS_UNQUERIED,
     QUESTIONS_PER_CATEGORY,
     SESSION_COUNT,
     TOTAL_QUESTIONS,
@@ -113,6 +115,28 @@ class TestQuestionQuality:
         abstention = dataset.by_category(ArenaCategory.ABSTENTION)
         assert len(abstention) == QUESTIONS_PER_CATEGORY
         assert all(q.expected_abstention for q in abstention)
+
+    def test_abstention_distractor_entities_are_never_queried(self):
+        # Phase 8.12 repair: the near-miss entity pool must stay disjoint from
+        # the queried project pool, otherwise a later plot can silently supply
+        # evidence for an earlier abstention question.
+        assert set(PROJECTS).isdisjoint(PROJECTS_UNQUERIED)
+
+    def test_abstention_history_contains_no_evidence(self, dataset):
+        """Abstention must be *structurally* unwinnable-by-answering.
+
+        Every abstention question asks for a debugger of a project; the
+        history may only deny it. If any turn positively asserts the attribute
+        for the queried project, "no evidence" silently became "evidence", and
+        a system that answers correctly is scored as a false positive
+        (measured pre-repair: 7 of 20 questions were evidenced).
+        """
+        history = [turn.content for scenario in dataset.scenarios for turn in scenario.turns]
+        for question in dataset.by_category(ArenaCategory.ABSTENTION):
+            project = question.question.split("for project ")[-1].rstrip("?").strip()
+            assertion = f"for project {project}, the user set the debugger to"
+            offenders = [text for text in history if assertion in text.lower()]
+            assert not offenders, (question.question_id, offenders)
 
     def test_non_abstention_questions_do_not_expect_abstention(self, dataset):
         others = [

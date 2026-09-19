@@ -32,7 +32,11 @@ from datetime import datetime
 from pathlib import Path
 
 from artificial_memory.recall.retrieval_cache import HierarchicalGate
-from artificial_memory.research.benchmarks.arena import ArenaCategory, build_dataset
+from artificial_memory.research.benchmarks.arena import (
+    ARENA_VERSION,
+    ArenaCategory,
+    build_dataset,
+)
 from artificial_memory.research.benchmarks.players import AMv020Player
 from artificial_memory.research.benchmarks.runner import ArenaRunner, RunConfig
 from artificial_memory.research.benchmarks.scorer import player_aggregates, score_run_dir
@@ -564,6 +568,179 @@ def gate_gt_audit(dataset, gate_pool: int, sample: int,
         print(f"  [{lost:<6}] {r['question_id']:<28} "
               f"store->cand->gate->sel = {funnel}  "
               f"(pool {r['pool_in']}->{r['pool_out']})")
+    return audit
+
+
+# ---------------------------------------------------------------------------
+# Phase 8.12: abstention semantics audit (dataset repair + floor dose-response)
+# ---------------------------------------------------------------------------
+
+
+def _abstention_claim(question: str) -> tuple[str, str]:
+    """(project, attribute) parsed from an abstention question.
+
+    The abstention plot asks "Which <attribute> did the user configure for
+    project <P>?" while the history template asserts
+    "for project <P>, the user set the <attribute> to <X>".  Both halves are
+    derived from the question text so the audit needs no dataset internals.
+    """
+    lowered = question.lower()
+    project = lowered.split("for project ")[-1].rstrip("?").strip()
+    attribute = ""
+    if lowered.startswith("which "):
+        attribute = lowered[len("which "):].split(" ")[0].strip("?,")
+    return project, attribute
+
+
+def abstention_audit(dataset, floors: list, candidate_window: int | None,
+                     gate_pool: int) -> dict:
+    """Measure whether \"no evidence\" is structural, then test the floor.
+
+    Part 1 (dataset repair check): for every abstention question, count store
+    memories that *positively assert* the queried attribute for the queried
+    project.  Pre-repair (arena-1) this was 7/20: the near-miss entity was
+    drawn from the queried project pool with a surjective shift, so another
+    question's plot eventually supplied the queried project's answer and
+    \"correct abstention\" became unwinnable.  Post-repair (arena-2) the
+    near-miss entity comes from ``PROJECTS_UNQUERIED``, so the count must be
+    exactly 0.
+
+    Part 2 (floor dose-response): sweep ``SessionGate.score_floor`` with the
+    production wiring (corpus_provider + plan-cache flush on gate config
+    change) and report, per floor, how much context abstention questions
+    still receive and whether GT evidence retention survives.  This is the
+    measurement Phase 8.11 could not make, because the pre-repair dataset
+    answered the abstention questions.
+    """
+    from artificial_memory.runtime import ArtificialMemoryRuntime, RuntimeConfig
+
+    import asyncio
+
+    runtime = ArtificialMemoryRuntime(RuntimeConfig(
+        database_path=":memory:",
+        memory_files_path=None,
+        vector_index_path=None,
+        retrieval_strategy="deepseek_session",
+        session_gate_pool=gate_pool,
+        candidate_window=candidate_window if candidate_window else 450,
+    ))
+    for scenario in dataset.scenarios:
+        for turn in scenario.turns:
+            if turn.speaker == "user":
+                asyncio.run(runtime.remember(turn.content, topic="Arena"))
+
+    topic_obj = runtime.conversation_manager.get_or_create_topic("Arena")
+    engine = runtime.recall_engine
+    store_all = runtime.store.get_memories(topic_id=topic_obj.id, limit=10000)
+    return _abstention_probe(runtime, engine, store_all, dataset, floors,
+                             candidate_window, gate_pool)
+
+
+def _abstention_probe(runtime, engine, store_all, dataset, floors,
+                      candidate_window, gate_pool) -> dict:
+    """Evidence-absence check + floor dose-response (see abstention_audit)."""
+    from artificial_memory.recall.retrieval_cache import SessionGate
+
+    import asyncio
+
+    abstention_qs = dataset.by_category(ArenaCategory.ABSTENTION)
+    gt_qs = [
+        dataset.by_category(cat)[0] for cat in ArenaCategory
+        if cat != ArenaCategory.ABSTENTION
+    ]
+
+    # -- Part 1: is evidence absence structural? --------------------------
+    evidence_rows = []
+    for question in abstention_qs:
+        project, attribute = _abstention_claim(question.question)
+        assertion = f"for project {project}, the user set the {attribute} to"
+        denial = f"for project {project}, the user only discussed"
+        offenders = [
+            m.content for m in store_all if assertion in m.content.lower()
+        ]
+        evidence_rows.append({
+            "question_id": question.question_id,
+            "project": project,
+            "attribute": attribute,
+            "asserting_memories": len(offenders),
+            "denials": sum(1 for m in store_all if denial in m.content.lower()),
+            "sample_offender": offenders[0][:120] if offenders else None,
+        })
+    evidenced = sum(1 for r in evidence_rows if r["asserting_memories"])
+
+    # -- Part 2: floor dose-response on a truly unevidenced set ------------
+    rows = []
+    with _frozen_access_stats():
+        for floor in floors:
+            # Rebuilt gate per floor; DeepSeekRecallEngine flushes the plan
+            # cache when this signature changes (Phase 8.11 silent no-op #2).
+            engine.gate = SessionGate(
+                pool_size=gate_pool,
+                corpus_provider=runtime._store_snapshot,
+                score_floor=floor,
+            )
+            ab_sizes = []
+            for question in abstention_qs:
+                result = asyncio.run(runtime.recall(
+                    question.question, topic="Arena", level=2, max_tokens=2000
+                ))
+                ab_sizes.append(result.memories_retrieved)
+
+            retained = total = 0
+            for question in gt_qs:
+                evidence = {
+                    m.id for m in store_all
+                    if any(
+                        term.lower() in m.content.lower()
+                        for group in question.ground_truth for term in group
+                    )
+                }
+                result = asyncio.run(runtime.recall(
+                    question.question, topic="Arena", level=2, max_tokens=2000
+                ))
+                selected = {m.identity.memory_id for m in result.memories}
+                total += len(evidence)
+                retained += len(evidence & selected)
+
+            rows.append({
+                "floor": floor,
+                "abstention_context_mean": round(sum(ab_sizes) / len(ab_sizes), 1),
+                "abstention_empty_rate": round(
+                    sum(1 for n in ab_sizes if n == 0) / len(ab_sizes), 3
+                ),
+                "gt_retention": round(retained / total, 4) if total else None,
+                "floor_drops": engine.gate.floor_drops,
+            })
+
+    audit = {
+        "dataset_version": ARENA_VERSION,
+        "candidate_window": candidate_window,
+        "gate_pool": gate_pool,
+        "store_memory_count": len(store_all),
+        "abstention_questions": len(abstention_qs),
+        "abstention_evidenced": evidenced,
+        "abstention_structurally_unwinnable": evidenced == 0,
+        "evidence_rows": evidence_rows,
+        "floor_sweep": rows,
+    }
+
+    print(f"\n=== ABSTENTION AUDIT (dataset={audit['dataset_version']}, "
+          f"window={candidate_window}, pool={gate_pool}, "
+          f"store={len(store_all)}) ===")
+    print(f"  abstention questions         : {len(abstention_qs)}")
+    print(f"  questions with real evidence : {evidenced}"
+          f"{'   <-- NO EVIDENCE IS STRUCTURAL' if evidenced == 0 else '   <-- STILL BROKEN'}")
+    for r in evidence_rows:
+        if r["asserting_memories"]:
+            print(f"   [EVIDENCED] {r['question_id']} ({r['project']}): "
+                  f"{r['sample_offender']}")
+    print("\n  floor sweep (context handed to an unanswerable question):")
+    print(f"  {'floor':>6} | {'abst ctx':>8} | {'empty':>6} | "
+          f"{'gt retention':>12} | {'floor drops':>11}")
+    for r in rows:
+        print(f"  {r['floor']:>6} | {r['abstention_context_mean']:>8} | "
+              f"{r['abstention_empty_rate']:>5.0%} | "
+              f"{str(r['gt_retention']):>12} | {r['floor_drops']:>11}")
     return audit
 
 
@@ -1363,6 +1540,14 @@ def main() -> None:
                         help="comma list of gate pool sizes for "
                              "--session-cost-audit (the binding cost lever; "
                              "K alone does not bind at pool=100)")
+    parser.add_argument("--abstention-audit", action="store_true",
+                        help="Phase 8.12: verify abstention questions are "
+                             "structurally unevidenced (dataset repair) and "
+                             "sweep SessionGate.score_floor dose-response "
+                             "(LLM-free)")
+    parser.add_argument("--floor-values", default="0,0.5,1,2,3,5,8",
+                        help="comma list of score_floor values for "
+                             "--abstention-audit")
     parser.add_argument("--output-dir", default="benchmark/results")
     args = parser.parse_args()
 
@@ -1432,6 +1617,16 @@ def main() -> None:
         audit = cost_audit(dataset, args.audit_sample, ks, args,
                            pools=audit_pools)
         out_path = out_dir / f"session_cost_audit_{stamp}.json"
+        out_path.write_text(
+            json.dumps(audit, indent=2, ensure_ascii=False), encoding="utf-8"
+        )
+        print(f"\nevidence written: {out_path}")
+        return
+
+    if args.abstention_audit:
+        floors = [float(f) for f in args.floor_values.split(",") if f.strip()]
+        audit = abstention_audit(dataset, floors, args.wide_window, args.gate_pool)
+        out_path = out_dir / f"abstention_audit_{stamp}.json"
         out_path.write_text(
             json.dumps(audit, indent=2, ensure_ascii=False), encoding="utf-8"
         )

@@ -3132,7 +3132,7 @@
         "ripgrep"
       ],
       "ground_truth": [],
-      "notes": "the attribute is only planted for a different project; any value is wrong",
+      "notes": "the attribute is only planted for an entity that is never a queried project; any value is wrong",
       "question": "Which debugger did the user configure for project atlas?",
       "question_id": "abstention-00",
       "reference_timestamp": null,
@@ -3149,7 +3149,7 @@
         "bat"
       ],
       "ground_truth": [],
-      "notes": "the attribute is only planted for a different project; any value is wrong",
+      "notes": "the attribute is only planted for an entity that is never a queried project; any value is wrong",
       "question": "Which debugger did the user configure for project beacon?",
       "question_id": "abstention-01",
       "reference_timestamp": null,
@@ -3166,7 +3166,7 @@
         "fd"
       ],
       "ground_truth": [],
-      "notes": "the attribute is only planted for a different project; any value is wrong",
+      "notes": "the attribute is only planted for an entity that is never a queried project; any value is wrong",
       "question": "Which debugger did the user configure for project cinder?",
       "question_id": "abstention-02",
       "reference_timestamp": null,
@@ -3183,7 +3183,7 @@
         "delta"
       ],
       "ground_truth": [],
-      "notes": "the attribute is only planted for a different project; any value is wrong",
+      "notes": "the attribute is only planted for an entity that is never a queried project; any value is wrong",
       "question": "Which debugger did the user configure for project delta?",
       "question_id": "abstention-03",
       "reference_timestamp": null,
@@ -3200,7 +3200,7 @@
         "zoxide"
       ],
       "ground_truth": [],
-      "notes": "the attribute is only planted for a different project; any value is wrong",
+      "notes": "the attribute is only planted for an entity that is never a queried project; any value is wrong",
       "question": "Which debugger did the user configure for project ember?",
       "question_id": "abstention-04",
       "reference_timestamp": null,
@@ -3217,7 +3217,7 @@
         "starship"
       ],
       "ground_truth": [],
-      "notes": "the attribute is only planted for a different project; any value is wrong",
+      "notes": "the attribute is only planted for an entity that is never a queried project; any value is wrong",
       "question": "Which debugger did the user configure for project fjord?",
       "question_id": "abstention-05",
       "reference_timestamp": null,
@@ -3234,7 +3234,7 @@
         "just"
       ],
       "ground_truth": [],
-      "notes": "the attribute is only planted for a different project; any value is wrong",
+      "notes": "the attribute is only planted for an entity that is never a queried project; any value is wrong",
       "question": "Which debugger did the user configure for project glacier?",
       "question_id": "abstention-06",
       "reference_timestamp": null,
@@ -3251,7 +3251,7 @@
         "watchexec"
       ],
       "ground_truth": [],
-      "notes": "the attribute is only planted for a different project; any value is wrong",
+      "notes": "the attribute is only planted for an entity that is never a queried project; any value is wrong",
       "question": "Which debugger did the user configure for project harbor?",
       "question_id": "abstention-07",
       "reference_timestamp": null,
@@ -3268,7 +3268,7 @@
         "helix"
       ],
       "ground_truth": [],
-      "notes": "the attribute is only planted for a different project; any value is wrong",
+      "notes": "the attribute is only planted for an entity that is never a queried project; any value is wrong",
       "question": "Which debugger did the user configure for project ivory?",
       "question_id": "abstention-08",
       "reference_timestamp": null,
@@ -3285,7 +3285,7 @@
         "hyperfine"
       ],
       "ground_truth": [],
-      "notes": "the attribute is only planted for a different project; any value is wrong",
+      "notes": "the attribute is only planted for an entity that is never a queried project; any value is wrong",
       "question": "Which debugger did the user configure for project juniper?",
       "question_id": "abstention-09",
       "reference_timestamp": null,
@@ -3302,7 +3302,7 @@
         "dust"
       ],
       "ground_truth": [],
-      "notes": "the attribute is only planted for a different project; any value is wrong",
+      "notes": "the attribute is only planted for an entity that is never a queried project; any value is wrong",
       "question": "Which debugger did the user configure for project kelp?",
       "question_id": "abstention-10",
       "reference_timestamp": null,
@@ -3319,7 +3319,7 @@
         "procs"
       ],
       "ground_truth": [],
-      "notes": "the attribute is only planted for a different project; any value is wrong",
+      "notes": "the attribute is only planted for an entity that is never a queried project; any value is wrong",
       "question": "Which debugger did the user configure for project lumen?",
       "question_id": "abstention-11",
       "reference_timestamp": null,
@@ -3336,7 +3336,7 @@
         "sd"
       ],
       "ground_truth": [],
-      "notes": "the attribute is only planted for a different project; any value is wrong",
+      "notes": "the attribute is only planted for an entity that is never a queried project; any value is wrong",
       "question": "Which debugger did the user configure for project moss?",
       "question_id": "abstention-12",
       "reference_timestamp": null,
@@ -3353,7 +3353,7 @@
         "tokei"
       ],
       "ground_truth": [],
-      "notes": "the attribute is only planted for a different project; any value is wrong",
+      "notes": "the attribute is only planted for an entity that is never a queried project; any value is wrong",
       "question": "Which debugger did the user configure for project nectar?",
       "question_id": "abstention-13",
       "reference_timestamp": null,
@@ -3370,7 +3370,7 @@
         "xh"
       ],
       "ground_truth": [],
-      "notes": "the attribute is only planted for a different project; any value is wrong",
+      "notes": "the attribute is only planted for an entity that is never a queried project; any value is wrong",
       "question": "Which debugger did the user configure for project onyx?",
       "question_id": "abstention-14",
       "reference_timestamp": null,
@@ -3387,7 +3387,7 @@
         "mise"
       ],
       "ground_truth": [],
-      "notes": "the attribute is only planted for a different project; any value is wrong",
+      "notes": "the attribute is only planted for an entity that is never a queried project; any value is wrong",
       "question": "Which debugger did the user configure for project prism?",
       "question_id": "abstention-15",
       "reference_timestamp": null,
@@ -3404,7 +3404,7 @@
         "typos"
       ],
       "ground_truth": [],
-      "notes": "the attribute is only planted for a different project; any value is wrong",
+      "notes": "the attribute is only planted for an entity that is never a queried project; any value is wrong",
       "question": "Which debugger did the user configure for project quartz?",
       "question_id": "abstention-16",
       "reference_timestamp": null,
@@ -3421,7 +3421,7 @@
         "bacon"
       ],
       "ground_truth": [],
-      "notes": "the attribute is only planted for a different project; any value is wrong",
+      "notes": "the attribute is only planted for an entity that is never a queried project; any value is wrong",
       "question": "Which debugger did the user configure for project reef?",
       "question_id": "abstention-17",
       "reference_timestamp": null,
@@ -3438,7 +3438,7 @@
         "cargo-nextest"
       ],
       "ground_truth": [],
-      "notes": "the attribute is only planted for a different project; any value is wrong",
+      "notes": "the attribute is only planted for an entity that is never a queried project; any value is wrong",
       "question": "Which debugger did the user configure for project summit?",
       "question_id": "abstention-18",
       "reference_timestamp": null,
@@ -3455,7 +3455,7 @@
         "sccache"
       ],
       "ground_truth": [],
-      "notes": "the attribute is only planted for a different project; any value is wrong",
+      "notes": "the attribute is only planted for an entity that is never a queried project; any value is wrong",
       "question": "Which debugger did the user configure for project tundra?",
       "question_id": "abstention-19",
       "reference_timestamp": null,
@@ -6451,61 +6451,61 @@
           "speaker": "user"
         },
         {
-          "content": "For project harbor, the user set the debugger to ripgrep.",
+          "content": "For project aurora, the user set the debugger to ripgrep.",
           "day": 76,
           "session_index": 5,
           "speaker": "user"
         },
         {
-          "content": "For project ivory, the user set the debugger to bat.",
+          "content": "For project borealis, the user set the debugger to bat.",
           "day": 76,
           "session_index": 5,
           "speaker": "user"
         },
         {
-          "content": "For project juniper, the user set the debugger to fd.",
+          "content": "For project cascade, the user set the debugger to fd.",
           "day": 76,
           "session_index": 5,
           "speaker": "user"
         },
         {
-          "content": "For project kelp, the user set the debugger to delta.",
+          "content": "For project driftwood, the user set the debugger to delta.",
           "day": 76,
           "session_index": 5,
           "speaker": "user"
         },
         {
-          "content": "For project lumen, the user set the debugger to zoxide.",
+          "content": "For project eclipse, the user set the debugger to zoxide.",
           "day": 76,
           "session_index": 5,
           "speaker": "user"
         },
         {
-          "content": "For project moss, the user set the debugger to starship.",
+          "content": "For project fathom, the user set the debugger to starship.",
           "day": 76,
           "session_index": 5,
           "speaker": "user"
         },
         {
-          "content": "For project nectar, the user set the debugger to just.",
+          "content": "For project granite, the user set the debugger to just.",
           "day": 76,
           "session_index": 5,
           "speaker": "user"
         },
         {
-          "content": "For project onyx, the user set the debugger to watchexec.",
+          "content": "For project hollow, the user set the debugger to watchexec.",
           "day": 76,
           "session_index": 5,
           "speaker": "user"
         },
         {
-          "content": "For project prism, the user set the debugger to helix.",
+          "content": "For project isotope, the user set the debugger to helix.",
           "day": 76,
           "session_index": 5,
           "speaker": "user"
         },
         {
-          "content": "For project quartz, the user set the debugger to hyperfine.",
+          "content": "For project jetstream, the user set the debugger to hyperfine.",
           "day": 76,
           "session_index": 5,
           "speaker": "user"
@@ -6944,19 +6944,7 @@
           "speaker": "user"
         },
         {
-          "content": "For project atlas, the user set the debugger to tokei.",
-          "day": 91,
-          "session_index": 6,
-          "speaker": "user"
-        },
-        {
           "content": "For project beacon the user only remembers that a throughput measurement was filed.",
-          "day": 91,
-          "session_index": 6,
-          "speaker": "user"
-        },
-        {
-          "content": "For project beacon, the user set the debugger to xh.",
           "day": 91,
           "session_index": 6,
           "speaker": "user"
@@ -6968,19 +6956,7 @@
           "speaker": "user"
         },
         {
-          "content": "For project cinder, the user set the debugger to mise.",
-          "day": 91,
-          "session_index": 6,
-          "speaker": "user"
-        },
-        {
           "content": "For project delta the user only remembers that a cold start time measurement was filed.",
-          "day": 91,
-          "session_index": 6,
-          "speaker": "user"
-        },
-        {
-          "content": "For project delta, the user set the debugger to typos.",
           "day": 91,
           "session_index": 6,
           "speaker": "user"
@@ -6992,31 +6968,13 @@
           "speaker": "user"
         },
         {
-          "content": "For project ember, the user set the debugger to bacon.",
-          "day": 91,
-          "session_index": 6,
-          "speaker": "user"
-        },
-        {
           "content": "For project fjord the user only remembers that a cache hit rate measurement was filed.",
           "day": 91,
           "session_index": 6,
           "speaker": "user"
         },
         {
-          "content": "For project fjord, the user set the debugger to cargo-nextest.",
-          "day": 91,
-          "session_index": 6,
-          "speaker": "user"
-        },
-        {
           "content": "For project glacier the user only remembers that a error rate measurement was filed.",
-          "day": 91,
-          "session_index": 6,
-          "speaker": "user"
-        },
-        {
-          "content": "For project glacier, the user set the debugger to sccache.",
           "day": 91,
           "session_index": 6,
           "speaker": "user"
@@ -7046,7 +7004,25 @@
           "speaker": "user"
         },
         {
+          "content": "For project keystone, the user set the debugger to dust.",
+          "day": 91,
+          "session_index": 6,
+          "speaker": "user"
+        },
+        {
+          "content": "For project lantern, the user set the debugger to procs.",
+          "day": 91,
+          "session_index": 6,
+          "speaker": "user"
+        },
+        {
           "content": "For project lumen the user only remembers that a compile time measurement was filed.",
+          "day": 91,
+          "session_index": 6,
+          "speaker": "user"
+        },
+        {
+          "content": "For project meridian, the user set the debugger to sd.",
           "day": 91,
           "session_index": 6,
           "speaker": "user"
@@ -7064,25 +7040,49 @@
           "speaker": "user"
         },
         {
+          "content": "For project nimbus, the user set the debugger to tokei.",
+          "day": 91,
+          "session_index": 6,
+          "speaker": "user"
+        },
+        {
+          "content": "For project obsidian, the user set the debugger to xh.",
+          "day": 91,
+          "session_index": 6,
+          "speaker": "user"
+        },
+        {
           "content": "For project onyx the user only remembers that a write amplification measurement was filed.",
           "day": 91,
           "session_index": 6,
           "speaker": "user"
         },
         {
-          "content": "For project reef, the user set the debugger to dust.",
+          "content": "For project palisade, the user set the debugger to mise.",
           "day": 91,
           "session_index": 6,
           "speaker": "user"
         },
         {
-          "content": "For project summit, the user set the debugger to procs.",
+          "content": "For project quill, the user set the debugger to typos.",
           "day": 91,
           "session_index": 6,
           "speaker": "user"
         },
         {
-          "content": "For project tundra, the user set the debugger to sd.",
+          "content": "For project ridgeline, the user set the debugger to bacon.",
+          "day": 91,
+          "session_index": 6,
+          "speaker": "user"
+        },
+        {
+          "content": "For project solstice, the user set the debugger to cargo-nextest.",
+          "day": 91,
+          "session_index": 6,
+          "speaker": "user"
+        },
+        {
+          "content": "For project thicket, the user set the debugger to sccache.",
           "day": 91,
           "session_index": 6,
           "speaker": "user"
@@ -7561,5 +7561,5 @@
       ]
     }
   ],
-  "version": "v0.2.0-arena-1"
+  "version": "v0.2.0-arena-2"
 }
