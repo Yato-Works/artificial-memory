@@ -16,9 +16,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     gives 95.6% of the accuracy at 4.6% of tokens)
   - `scripts/deepseek_ab_small.py`: `--cost-audit` (pool x K grid),
     `--gate-audit` (funnel), `--window-sweep`
-  - Finding: "fr...e" refuted -- `max_sessions` lever inactive at pool=100
-    (pool_size caps first); real leverage is at pool <= 60 OR K=1
-  - Evidence: `benchmark/results/deepseek_ab/session_cost_audit_*.json`
+  - Finding: the pool=60 "free win" was **refuted** under stratified
+    sampling -- the winning run's question set was easy-category only
+    (`factual_recall` + `multi_session_recall`); on a stratified 40-question
+    set pool=60 scores 0.50 / 0.613 (accuracy / GT coverage) vs 0.55 / 0.725
+    at pool=100. The `max_sessions` lever is inactive at pool=100 (the
+    pool_size cap binds first); real leverage is at pool <= 60 OR K=1
+  - Evidence: `benchmark/results/deepseek_ab/session_cost_audit_*.json`,
+    `production_20260919_093444.json` (pool=60), `production_20260919_095444.json`
+    (pool=100), `production_20260919_095745.json` (both, same stratified set)
 - **v0.2.0 Phase 8.9 - Production A/B validation (3,000-call real-LLM run)**
   - `scripts/deepseek_ab_production.py`: chunked three-arm production
     experiment -- 200 questions x 5 repeats x 3 arms (`classic` / `cache` /
