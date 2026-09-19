@@ -172,13 +172,40 @@ def _build_chunk_config(args, dataset, player, question_ids) -> RunConfig:
     )
 
 
-def _fresh_player(label: str, answerer):
+class SessionPoolPlayer(AMv020Player):
+    """Session arm with a post-ingest gate pool override (Phase 8.10).
+
+    The runtime (and its SessionGate) is built lazily inside ``ingest``, so
+    the pool override must also happen *after* ingest — the same hook pattern
+    the small-scale script uses for gate attachment.
+    """
+
+    def __init__(self, session_pool: int, answerer):
+        super().__init__(
+            {"context_budget": 2000, "retrieval_strategy": "deepseek_session"},
+            answerer=answerer,
+        )
+        self._session_pool = session_pool
+
+    def ingest(self, scenarios) -> None:
+        super().ingest(scenarios)
+        if self._runtime is not None:
+            gate = self._runtime.recall_engine.gate
+            if gate is not None:
+                gate.pool_size = self._session_pool
+
+
+def _fresh_player(label: str, answerer, session_pool: int | None = None):
     """A new player instance per (arm, chunk): fresh runtime + fresh caches."""
     if label == "classic":
         return AMv020Player({"context_budget": 2000}, answerer=answerer)
     if label == "cache":
         return ab.StrategyPlayer(None, None, answerer=answerer)
     if label == "session":
+        # Phase 8.10: shrink the gate's final candidate cap (the binding cost
+        # lever).  Default None keeps the Phase 8.9 pool=100 operating point.
+        if session_pool is not None:
+            return SessionPoolPlayer(session_pool, answerer=answerer)
         return AMv020Player(
             {"context_budget": 2000, "retrieval_strategy": "deepseek_session"},
             answerer=answerer,
@@ -204,21 +231,50 @@ def main() -> None:
     parser.add_argument("--max-questions", type=int, default=200,
                         help="cap on questions (200 = full production run)")
     parser.add_argument("--chunk-size", type=int, default=20)
+    parser.add_argument("--session-pool", type=int, default=None,
+                        help="override the session arm's SessionGate pool_size "
+                             "(the Phase 8.10 cost lever; default keeps 100)")
     parser.add_argument("--answer-repeats", type=int, default=3)
     parser.add_argument("--latency-repeats", type=int, default=5)
     parser.add_argument("--output-dir", default="benchmark/results")
     args = parser.parse_args()
 
     dataset = build_dataset()
+
+    # Stratified (round-robin) selection: a truncated run must still span every
+    # capability axis.  Taking the first N question ids in dataset order would
+    # silently sample only the leading categories (factual_recall +
+    # multi_session_recall for N=40), so a capped run would report accuracy on
+    # the two easiest axes only.  Interleaving keeps every --max-questions
+    # sample representative; the achieved distribution is persisted below.
+    per_cat: dict[str, list[str]] = {
+        cat.value: [q.question_id for q in dataset.by_category(cat)]
+        for cat in ArenaCategory
+    }
     all_qids: list[str] = []
-    for cat in ArenaCategory:
-        all_qids.extend(q.question_id for q in dataset.by_category(cat))
-    all_qids = all_qids[:args.max_questions]
+    depth = 0
+    while len(all_qids) < args.max_questions:
+        added = False
+        for cat in ArenaCategory:
+            ids = per_cat[cat.value]
+            if depth < len(ids) and len(all_qids) < args.max_questions:
+                all_qids.append(ids[depth])
+                added = True
+        if not added:
+            break
+        depth += 1
+
+    cat_distribution: dict[str, int] = {}
+    for qid in all_qids:
+        q = dataset.by_id(qid)
+        key = q.category.value if q is not None else "unknown"
+        cat_distribution[key] = cat_distribution.get(key, 0) + 1
 
     arms_list = [a.strip() for a in args.arms.split(",") if a.strip()]
     total_calls = (len(all_qids) * args.latency_repeats * len(arms_list))
     print("=== DeepSeek Raid production A/B ===")
     print(f"  questions: {len(all_qids)}  arms: {arms_list}")
+    print(f"  categories: {cat_distribution}")
     print(f"  calls: {len(all_qids)} x {args.latency_repeats} repeats "
           f"x {len(arms_list)} arms = {total_calls}")
     print(f"  dry_run={args.dry_run} chunk={args.chunk_size}")
@@ -236,7 +292,7 @@ def main() -> None:
         chunks = [all_qids[i:i + args.chunk_size]
                   for i in range(0, len(all_qids), args.chunk_size)]
         for ci, chunk_qids in enumerate(chunks):
-            player = _fresh_player(label, answerer)
+            player = _fresh_player(label, answerer, session_pool=args.session_pool)
             result = ArenaRunner(
                 _build_chunk_config(args, dataset, player, chunk_qids)
             ).run()
@@ -284,8 +340,15 @@ def main() -> None:
         "experiment": "deepseek-raid-production-ab",
         "timestamp": datetime.now().isoformat(),
         "question_count": len(all_qids),
+        "question_categories": cat_distribution,
+        "question_ids": all_qids,
         "answer_repeats": args.answer_repeats,
         "latency_repeats": args.latency_repeats,
+        "max_questions": args.max_questions,
+        # Provenance: the session arm's SessionGate pool_size override is a
+        # first-class experimental condition (Phase 8.10 cost lever), so it is
+        # recorded next to the question set rather than inferred from traces.
+        "session_pool": args.session_pool,
         "total_calls_design": total_calls,
         "dry_run": args.dry_run,
         "arms": arm_summaries,

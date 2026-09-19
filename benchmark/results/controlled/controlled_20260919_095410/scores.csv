@@ -1,0 +1,81 @@
+player,question_id,category,repeat_index,is_official,outcome,score,correct,ground_truth_coverage,covered_groups,must_total,forbidden_violation,forbidden_hits,abstention_detected,answer_empty,score_consistency,answer_text
+AM v0.2.0,factual_recall-02,factual_recall,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,fd
+AM v0.2.0,factual_recall-02,factual_recall,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,fd
+AM v0.2.0,factual_recall-02,factual_recall,1,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,fd
+AM v0.2.0,factual_recall-02,factual_recall,2,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,fd
+AM v0.2.0,factual_recall-03,factual_recall,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,delta
+AM v0.2.0,factual_recall-03,factual_recall,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,delta
+AM v0.2.0,factual_recall-03,factual_recall,1,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,delta
+AM v0.2.0,factual_recall-03,factual_recall,2,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,delta
+AM v0.2.0,multi_session_recall-02,multi_session_recall,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Elixir
+AM v0.2.0,multi_session_recall-02,multi_session_recall,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Elixir
+AM v0.2.0,multi_session_recall-02,multi_session_recall,1,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Elixir
+AM v0.2.0,multi_session_recall-02,multi_session_recall,2,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Elixir
+AM v0.2.0,multi_session_recall-03,multi_session_recall,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Zig
+AM v0.2.0,multi_session_recall-03,multi_session_recall,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Zig
+AM v0.2.0,multi_session_recall-03,multi_session_recall,1,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Zig
+AM v0.2.0,multi_session_recall-03,multi_session_recall,2,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Zig
+AM v0.2.0,temporal_reasoning-02,temporal_reasoning,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Bologna
+AM v0.2.0,temporal_reasoning-02,temporal_reasoning,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Bologna
+AM v0.2.0,temporal_reasoning-02,temporal_reasoning,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Bologna
+AM v0.2.0,temporal_reasoning-02,temporal_reasoning,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Bologna
+AM v0.2.0,temporal_reasoning-03,temporal_reasoning,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,The context does not contain the answer.
+AM v0.2.0,temporal_reasoning-03,temporal_reasoning,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,The context does not contain the answer.
+AM v0.2.0,temporal_reasoning-03,temporal_reasoning,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,The context does not contain the answer.
+AM v0.2.0,temporal_reasoning-03,temporal_reasoning,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,The context does not contain the answer.
+AM v0.2.0,knowledge_updates-02,knowledge_updates,majority,1,fail,0.0,0,0.0,0,1,1,Postgres,0,0,1.0,Postgres
+AM v0.2.0,knowledge_updates-02,knowledge_updates,0,0,fail,0.0,0,0.0,0,1,1,Postgres,0,0,1.0,Postgres
+AM v0.2.0,knowledge_updates-02,knowledge_updates,1,0,fail,0.0,0,0.0,0,1,1,Postgres,0,0,1.0,Postgres
+AM v0.2.0,knowledge_updates-02,knowledge_updates,2,0,fail,0.0,0,0.0,0,1,1,Postgres,0,0,1.0,Postgres
+AM v0.2.0,knowledge_updates-03,knowledge_updates,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,SurrealDB
+AM v0.2.0,knowledge_updates-03,knowledge_updates,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,SurrealDB
+AM v0.2.0,knowledge_updates-03,knowledge_updates,1,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,SurrealDB
+AM v0.2.0,knowledge_updates-03,knowledge_updates,2,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,SurrealDB
+AM v0.2.0,contradiction_handling-02,contradiction_handling,majority,1,partial,0.5,0,0.5,1,2,0,,0,0,1.0,Postgres
+AM v0.2.0,contradiction_handling-02,contradiction_handling,0,0,partial,0.5,0,0.5,1,2,0,,0,0,1.0,Postgres
+AM v0.2.0,contradiction_handling-02,contradiction_handling,1,0,partial,0.5,0,0.5,1,2,0,,0,0,1.0,Postgres
+AM v0.2.0,contradiction_handling-02,contradiction_handling,2,0,partial,0.5,0,0.5,1,2,0,,0,0,1.0,Postgres
+AM v0.2.0,contradiction_handling-03,contradiction_handling,majority,1,fail,0.0,0,0.0,0,2,0,,0,0,0.666667,SurrealDB
+AM v0.2.0,contradiction_handling-03,contradiction_handling,0,0,partial,0.5,0,0.0,0,2,0,,0,0,0.666667,SurrealDB
+AM v0.2.0,contradiction_handling-03,contradiction_handling,1,0,fail,0.0,0,0.0,0,2,0,,0,0,0.666667,SurrealDB
+AM v0.2.0,contradiction_handling-03,contradiction_handling,2,0,fail,0.0,0,0.0,0,2,0,,0,0,0.666667,SurrealDB
+AM v0.2.0,indirect_recall-02,indirect_recall,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Ghent
+AM v0.2.0,indirect_recall-02,indirect_recall,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Ghent
+AM v0.2.0,indirect_recall-02,indirect_recall,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Ghent
+AM v0.2.0,indirect_recall-02,indirect_recall,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Ghent
+AM v0.2.0,indirect_recall-03,indirect_recall,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Ghent
+AM v0.2.0,indirect_recall-03,indirect_recall,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Ghent
+AM v0.2.0,indirect_recall-03,indirect_recall,1,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Ghent
+AM v0.2.0,indirect_recall-03,indirect_recall,2,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,Ghent
+AM v0.2.0,distractor_resistance-02,distractor_resistance,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,fd
+AM v0.2.0,distractor_resistance-02,distractor_resistance,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,fd
+AM v0.2.0,distractor_resistance-02,distractor_resistance,1,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,fd
+AM v0.2.0,distractor_resistance-02,distractor_resistance,2,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,fd
+AM v0.2.0,distractor_resistance-03,distractor_resistance,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,delta
+AM v0.2.0,distractor_resistance-03,distractor_resistance,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,delta
+AM v0.2.0,distractor_resistance-03,distractor_resistance,1,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,delta
+AM v0.2.0,distractor_resistance-03,distractor_resistance,2,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,delta
+AM v0.2.0,abstention-02,abstention,majority,1,false_positive,0.0,0,1.0,0,0,1,fd,0,0,1.0,fd
+AM v0.2.0,abstention-02,abstention,0,0,false_positive,0.0,0,1.0,0,0,1,fd,0,0,1.0,fd
+AM v0.2.0,abstention-02,abstention,1,0,false_positive,0.0,0,1.0,0,0,1,fd,0,0,1.0,fd
+AM v0.2.0,abstention-02,abstention,2,0,false_positive,0.0,0,1.0,0,0,1,fd,0,0,1.0,fd
+AM v0.2.0,abstention-03,abstention,majority,1,false_positive,0.0,0,1.0,0,0,1,delta,0,0,1.0,delta
+AM v0.2.0,abstention-03,abstention,0,0,false_positive,0.0,0,1.0,0,0,1,delta,0,0,1.0,delta
+AM v0.2.0,abstention-03,abstention,1,0,false_positive,0.0,0,1.0,0,0,1,delta,0,0,1.0,delta
+AM v0.2.0,abstention-03,abstention,2,0,false_positive,0.0,0,1.0,0,0,1,delta,0,0,1.0,delta
+AM v0.2.0,compression_recovery-02,compression_recovery,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1162
+AM v0.2.0,compression_recovery-02,compression_recovery,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1162
+AM v0.2.0,compression_recovery-02,compression_recovery,1,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1162
+AM v0.2.0,compression_recovery-02,compression_recovery,2,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1162
+AM v0.2.0,compression_recovery-03,compression_recovery,majority,1,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1163
+AM v0.2.0,compression_recovery-03,compression_recovery,0,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1163
+AM v0.2.0,compression_recovery-03,compression_recovery,1,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1163
+AM v0.2.0,compression_recovery-03,compression_recovery,2,0,pass,1.0,1,1.0,1,1,0,,0,0,1.0,AM-1163
+AM v0.2.0,reflection_reinterpretation-02,reflection_reinterpretation,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring fd as the editor toolchain
+AM v0.2.0,reflection_reinterpretation-02,reflection_reinterpretation,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring fd as the editor toolchain
+AM v0.2.0,reflection_reinterpretation-02,reflection_reinterpretation,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring fd as the editor toolchain
+AM v0.2.0,reflection_reinterpretation-02,reflection_reinterpretation,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring fd as the editor toolchain
+AM v0.2.0,reflection_reinterpretation-03,reflection_reinterpretation,majority,1,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring delta as the daily driver
+AM v0.2.0,reflection_reinterpretation-03,reflection_reinterpretation,0,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring delta as the daily driver
+AM v0.2.0,reflection_reinterpretation-03,reflection_reinterpretation,1,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring delta as the daily driver
+AM v0.2.0,reflection_reinterpretation-03,reflection_reinterpretation,2,0,fail,0.0,0,0.0,0,1,0,,0,0,1.0,Preferring delta as the daily driver

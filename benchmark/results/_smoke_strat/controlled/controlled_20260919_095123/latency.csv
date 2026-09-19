@@ -1,0 +1,21 @@
+player,question_id,category,p50_ms,p95_ms,avg_ms
+AM v0.2.0,factual_recall-02,factual_recall,37.0,57.7,40.6
+AM v0.2.0,factual_recall-03,factual_recall,57.5,95.8,66.3
+AM v0.2.0,multi_session_recall-02,multi_session_recall,92.8,248.7,124.0
+AM v0.2.0,multi_session_recall-03,multi_session_recall,99.4,144.7,105.9
+AM v0.2.0,temporal_reasoning-02,temporal_reasoning,106.5,145.0,112.0
+AM v0.2.0,temporal_reasoning-03,temporal_reasoning,104.6,149.9,114.9
+AM v0.2.0,knowledge_updates-02,knowledge_updates,97.0,131.1,106.0
+AM v0.2.0,knowledge_updates-03,knowledge_updates,96.8,138.4,100.6
+AM v0.2.0,contradiction_handling-02,contradiction_handling,96.4,118.2,97.7
+AM v0.2.0,contradiction_handling-03,contradiction_handling,96.6,196.4,124.1
+AM v0.2.0,indirect_recall-02,indirect_recall,95.5,136.5,102.5
+AM v0.2.0,indirect_recall-03,indirect_recall,98.3,127.8,103.9
+AM v0.2.0,distractor_resistance-02,distractor_resistance,91.2,127.3,97.2
+AM v0.2.0,distractor_resistance-03,distractor_resistance,98.5,132.3,105.4
+AM v0.2.0,abstention-02,abstention,99.5,135.9,105.0
+AM v0.2.0,abstention-03,abstention,98.4,133.2,106.1
+AM v0.2.0,compression_recovery-02,compression_recovery,91.1,132.4,98.5
+AM v0.2.0,compression_recovery-03,compression_recovery,79.2,135.4,84.1
+AM v0.2.0,reflection_reinterpretation-02,reflection_reinterpretation,51.5,112.9,64.6
+AM v0.2.0,reflection_reinterpretation-03,reflection_reinterpretation,100.4,126.9,101.8

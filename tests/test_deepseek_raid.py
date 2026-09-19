@@ -437,19 +437,28 @@ class TestRuntimeWiring:
 
 class TestSessionGate:
     @staticmethod
-    def _memories(contents):
+    def _memories(contents, session_ids=None):
+        """Build in-memory ``Memory`` objects with *explicit unique ids*.
+
+        ``SessionGate`` keys its corpus/IDF/session maps by ``Memory.id``, so a
+        test fixture without ids would silently collapse every document into a
+        single ``None`` key and pass vacuously.  Ids are therefore assigned
+        here (1-based, matching store-assigned ids).
+        """
         from datetime import datetime, timedelta
 
         memories = []
         base = datetime(2026, 1, 1, 12, 0, 0)
         for i, text in enumerate(contents):
-            memories.append(Memory(
+            mem = Memory(
                 topic_id=1,
                 memory_type=MemoryType.SEMANTIC,
                 content=text,
                 resolution=ResolutionLevel.SEMANTIC,
                 created_at=base + timedelta(seconds=i),
-            ))
+            )
+            mem.id = i + 1
+            memories.append(mem)
         return memories
 
     def test_sessions_kept_whole(self):
@@ -504,6 +513,51 @@ class TestSessionGate:
         gate = SessionGate(session_by_id=explicit, pool_size=2)
         kept = gate.filter("a one", memories)
         assert len(kept) <= 2
+
+    def test_max_sessions_keeps_top_k_only(self):
+        """Phase 8.10 lever: only the K best-scoring whole sessions survive."""
+        from artificial_memory.recall.retrieval_cache import SessionGate
+
+        memories = self._memories([
+            "atlas daily driver is ripgrep",   # session 0, distinctive
+            "atlas meeting minutes archived",  # session 0
+            "gardening filler one",            # session 1
+            "gardening filler two",            # session 1
+            "cooking filler three",            # session 2
+            "cooking filler four",             # session 2
+        ])
+        # Explicit session assignment (timing-derived sessions would collapse
+        # these into one: the fixture spaces timestamps 1s apart).
+        session_by_id = {
+            memories[0].id: 0, memories[1].id: 0,
+            memories[2].id: 1, memories[3].id: 1,
+            memories[4].id: 2, memories[5].id: 2,
+        }
+        gate = SessionGate(
+            session_by_id=session_by_id, pool_size=3, max_sessions=1
+        )
+        kept = gate.filter("which ripgrep tool does atlas use?", memories)
+        kept_ids = {m.id for m in kept}
+        # The high-scoring session survives whole...
+        assert memories[0].id in kept_ids
+        assert memories[1].id in kept_ids
+        # ...and no member of a dropped session is kept.
+        assert memories[2].id not in kept_ids
+        assert memories[4].id not in kept_ids
+
+    def test_max_sessions_deterministic(self):
+        from artificial_memory.recall.retrieval_cache import SessionGate
+
+        memories = self._memories(
+            [f"filler {i} beta topic" for i in range(8)]
+        )
+        session_by_id = {m.id: i // 2 for i, m in enumerate(memories)}
+        gate = SessionGate(
+            session_by_id=session_by_id, pool_size=3, max_sessions=2
+        )
+        first = gate.filter("beta topic", memories)
+        second = gate.filter("beta topic", memories)
+        assert [m.id for m in first] == [m.id for m in second]
 
 
 class TestDeepSeekSessionWiring:

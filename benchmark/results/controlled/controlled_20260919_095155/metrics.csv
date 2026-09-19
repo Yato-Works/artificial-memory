@@ -1,0 +1,21 @@
+player,question_id,category,context_tokens,retrieval_ms,context_build_ms,answer_ms,total_latency_ms
+AM v0.2.0,factual_recall-00,factual_recall,522,46.2,0.0,10458.0,2362.6
+AM v0.2.0,factual_recall-01,factual_recall,506,42.8,0.0,331.5,332.9
+AM v0.2.0,multi_session_recall-00,multi_session_recall,509,29.7,0.0,359.6,455.2
+AM v0.2.0,multi_session_recall-01,multi_session_recall,514,46.2,0.0,351.7,437.3
+AM v0.2.0,temporal_reasoning-00,temporal_reasoning,501,47.0,0.0,316.9,311.2
+AM v0.2.0,temporal_reasoning-01,temporal_reasoning,499,42.2,0.0,296.1,311.4
+AM v0.2.0,knowledge_updates-00,knowledge_updates,499,41.6,0.0,302.6,378.0
+AM v0.2.0,knowledge_updates-01,knowledge_updates,523,41.3,0.0,313.7,322.4
+AM v0.2.0,contradiction_handling-00,contradiction_handling,511,44.0,0.0,320.2,305.2
+AM v0.2.0,contradiction_handling-01,contradiction_handling,515,33.7,0.0,279.8,322.6
+AM v0.2.0,indirect_recall-00,indirect_recall,515,42.8,0.0,344.6,338.9
+AM v0.2.0,indirect_recall-01,indirect_recall,508,44.1,0.0,338.3,321.1
+AM v0.2.0,distractor_resistance-00,distractor_resistance,517,43.2,0.0,327.0,299.7
+AM v0.2.0,distractor_resistance-01,distractor_resistance,497,46.4,0.0,341.6,296.4
+AM v0.2.0,abstention-00,abstention,515,37.6,0.0,335.2,318.7
+AM v0.2.0,abstention-01,abstention,515,42.4,0.0,336.5,347.0
+AM v0.2.0,compression_recovery-00,compression_recovery,515,45.7,0.0,328.7,342.0
+AM v0.2.0,compression_recovery-01,compression_recovery,523,43.4,0.0,352.7,344.4
+AM v0.2.0,reflection_reinterpretation-00,reflection_reinterpretation,524,41.3,0.0,430.9,415.4
+AM v0.2.0,reflection_reinterpretation-01,reflection_reinterpretation,521,38.5,0.0,416.9,455.2

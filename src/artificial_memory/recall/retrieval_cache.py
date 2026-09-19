@@ -331,12 +331,17 @@ class SessionGate:
         own_weight: float = 0.1,
         corpus_provider: Callable[[], list[Memory]] | None = None,
         session_gap_seconds: float = 300.0,
+        max_sessions: int | None = None,
     ):
         self._explicit_sessions = session_by_id
         self.pool_size = pool_size
         self.own_weight = own_weight
         self._corpus_provider = corpus_provider
         self.session_gap_seconds = session_gap_seconds
+        # Phase 8.10 cost lever: keep only the top-K whole sessions (by
+        # session score) instead of every session with a member in the pool.
+        # None = keep all (the Phase 8.7/8.9 behaviour).
+        self.max_sessions = max_sessions
         # Corpus caches (rebuilt when the snapshot grows).
         self._doc_tokens: dict[int, list[str]] = {}
         self._df: dict[str, int] = {}
@@ -439,6 +444,39 @@ class SessionGate:
             combined = (s + self.own_weight * own) if s is not None else own
             scored.append((combined, -idx, mem))
         scored.sort(key=lambda t: (-t[0], t[1]))
+
+        if self.max_sessions is not None:
+            # Phase 8.10: keep only the top-K whole sessions.  Sessions are
+            # ranked by score (desc) with the earliest member index as the
+            # deterministic tie-break; every member of a kept session stays,
+            # ordered by member score.  Same order-stable replay guarantee.
+            first_idx: dict[int, int] = {}
+            for idx, mem in enumerate(memories):
+                sid = sessions.get(mem.id)
+                if sid is not None and sid not in first_idx:
+                    first_idx[sid] = idx
+            ranked = sorted(
+                session_scores.items(),
+                key=lambda kv: (-kv[1], first_idx.get(kv[0], len(memories))),
+            )
+            keep_ids = {sid for sid, _ in ranked[: self.max_sessions]}
+            members: dict[int, list[tuple[float, int, Memory]]] = {}
+            for idx, (mem, own) in enumerate(zip(memories, own_scores)):
+                sid = sessions.get(mem.id)
+                if sid in keep_ids:
+                    s = session_scores[sid]
+                    members.setdefault(sid, []).append(
+                        (s + self.own_weight * own, -idx, mem)
+                    )
+            kept: list[Memory] = []
+            for sid, _ in ranked[: self.max_sessions]:
+                block = members.get(sid, [])
+                block.sort(key=lambda t: (-t[0], t[1]))
+                kept.extend(m for _, _, m in block)
+            kept = kept[: self.pool_size]
+            self.total_out += len(kept)
+            return kept
+
         kept = [m for _, _, m in scored[: self.pool_size]]
         self.total_out += len(kept)
         return kept

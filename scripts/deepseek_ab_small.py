@@ -1171,6 +1171,144 @@ def grid_sweep(dataset, sample: int, windows: list, pools: list, args) -> dict:
               f"reduction={c['pool_reduction']:.0%}")
     return grid
 
+def cost_audit(dataset, sample: int, session_ks: list, args,
+               pools: list | None = None) -> dict:
+    """Phase 8.10: the accuracy-vs-cost operating curve for SessionGate.
+
+    Phase 8.9 fixed the recall problem but pays ~3.9x classic's tokens
+    (1,991 of a 2,000 budget at p50).  This audit sweeps the two cost levers,
+    LLM-free:
+
+        gate.pool_size    final post-gate candidate cap (default 100)
+        gate.max_sessions top-K whole sessions by score (None = every
+                          touched session, the Phase 8.9 behaviour)
+
+    and measures:
+
+        retention   evidence ids present in the final selection
+                    (session-authoritative evidence, per Phase 8.7)
+        tokens      engine token estimate of the selection (the player's
+                    context-input proxy)
+        gate_out    post-gate pool size
+
+    First finding (smoke, pool=100): the K lever does not bind -- each of
+    the 10 dataset sessions holds ~44 memories, so the pool cap of 100 is
+    hit before K ever cuts.  Hence pools is swept jointly: the deliverable
+    is the frontier of ``min Cost s.t. Retention ~= baseline``.
+    """
+    from artificial_memory.recall.deepseek_engine import DeepSeekRecallEngine
+    from artificial_memory.recall.retrieval_cache import SessionGate
+    from artificial_memory.runtime import ArtificialMemoryRuntime, RuntimeConfig
+    from artificial_memory.core.models import RecallLevel as RL
+
+    import asyncio
+
+    runtime = ArtificialMemoryRuntime(RuntimeConfig(
+        database_path=":memory:",
+        memory_files_path=None,
+        vector_index_path=None,
+        retrieval_strategy="deepseek_session",
+    ))
+
+    # Ingest once; each scenario is one session -> map its memories
+    # (the authoritative evidence definition from Phase 8.7).
+    session_memories: dict[int, set] = {}
+    for idx, scenario in enumerate(dataset.scenarios):
+        ids: set = set()
+        for turn in scenario.turns:
+            if turn.speaker == "user":
+                ir = asyncio.run(runtime.remember(turn.content, topic="Arena"))
+                ids.add(ir.identity.memory_id)
+        session_memories[idx] = ids
+
+    topic_id = runtime.conversation_manager.get_or_create_topic("Arena").id
+    engine = runtime.recall_engine
+    assert isinstance(engine, DeepSeekRecallEngine)
+    gate = engine.gate
+    assert isinstance(gate, SessionGate)
+    store_all = runtime.store.get_memories(topic_id=topic_id, limit=10000)
+
+    questions = []
+    for cat in ArenaCategory:
+        questions.extend(dataset.by_category(cat)[:sample])
+    cases = []
+    for q in questions:
+        if not q.ground_truth:
+            continue
+        if q.evidence_sessions:
+            evidence: set = set()
+            for s in q.evidence_sessions:
+                evidence |= session_memories.get(s, set())
+            mode = "sessions"
+        else:
+            evidence = {
+                m.id for m in store_all
+                if any(term.lower() in m.content.lower()
+                       for group in q.ground_truth for term in group)
+            }
+            mode = "gt_terms"
+        cases.append({"q": q, "evidence": evidence, "mode": mode})
+
+    rows = []
+    pools = pools or [gate.pool_size]
+    print(f"\n=== SESSION COST AUDIT (pools={pools}, "
+          f"level={args.audit_level}, {len(cases)} questions, "
+          f"store={len(store_all)} memories) ===")
+    print(f"  {'pool':>5} | {'K':>5} | {'retention':>9} | {'tokens p50':>10} | "
+          f"{'tokens p95':>10} | {'sel mean':>8} | {'gate in->out':>13}")
+    for pool in pools:
+        gate.pool_size = pool
+        for k in session_ks:
+            gate.max_sessions = k
+            gate.applications = gate.total_in = gate.total_out = 0
+            engine.plan_cache.clear()
+
+            retained = evidence_total = 0
+            tokens_all: list[float] = []
+            sel_sizes: list[int] = []
+            with _frozen_access_stats():
+                for case in cases:
+                    memories, tokens = engine.recall(
+                        case["q"].question, topic_id,
+                        RL(args.audit_level), 2000,
+                    )
+                    sel_ids = {m.id for m in memories}
+                    retained += len(case["evidence"] & sel_ids)
+                    evidence_total += len(case["evidence"])
+                    tokens_all.append(float(tokens))
+                    sel_sizes.append(len(memories))
+
+            snap = gate.snapshot()
+            retention = round(retained / evidence_total, 4) if evidence_total else 0.0
+            row = {
+                "pool": pool,
+                "max_sessions": k,
+                "evidence_retention": retention,
+                "tokens_p50": round(_pctl(tokens_all, 0.50), 1),
+                "tokens_p95": round(_pctl(tokens_all, 0.95), 1),
+                "tokens_mean": round(statistics.mean(tokens_all), 1) if tokens_all else 0.0,
+                "selected_mean": round(statistics.mean(sel_sizes), 1) if sel_sizes else 0.0,
+                "gate_in": snap["total_in"],
+                "gate_out": snap["total_out"],
+            }
+            rows.append(row)
+            print(f"  {pool:>5} | {str(k):>5} | {retention:>8.0%} | "
+                  f"{row['tokens_p50']:>10.1f} | {row['tokens_p95']:>10.1f} | "
+                  f"{row['selected_mean']:>8.1f} | "
+                  f"{row['gate_in']:>6}->{row['gate_out']}")
+
+    return {
+        "pools": pools,
+        "gate_pool_default": gate.pool_size,
+        "candidate_window": getattr(engine, "candidate_window", None),
+        "recall_level": args.audit_level,
+        "store_memory_count": len(store_all),
+        "questions": len(cases),
+        "rows": rows,
+    }
+
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="DeepSeek Raid small-scale A/B E2E")
     parser.add_argument("--dry-run", action="store_true",
@@ -1213,6 +1351,18 @@ def main() -> None:
                         help="keep the live recall touch() side effects; by "
                              "default the audit freezes access stats so the "
                              "candidate window is the only varying factor")
+    parser.add_argument("--session-cost-audit", action="store_true",
+                        help="Phase 8.10: sweep SessionGate.max_sessions (K) "
+                             "for the accuracy-vs-cost operating curve "
+                             "(LLM-free)")
+    parser.add_argument("--session-ks", default="2,3,5,10",
+                        help="comma list of K values for --session-cost-audit; "
+                             "None (keep every touched session, the Phase 8.9 "
+                             "behaviour) is always included as the baseline")
+    parser.add_argument("--audit-pools", default="100,60,40,20,10",
+                        help="comma list of gate pool sizes for "
+                             "--session-cost-audit (the binding cost lever; "
+                             "K alone does not bind at pool=100)")
     parser.add_argument("--output-dir", default="benchmark/results")
     args = parser.parse_args()
 
@@ -1268,6 +1418,22 @@ def main() -> None:
         out_path = out_dir / f"gate_sweep_{stamp}.json"
         out_path.write_text(
             json.dumps(sweep, indent=2, ensure_ascii=False), encoding="utf-8"
+        )
+        print(f"\nevidence written: {out_path}")
+        return
+
+    if args.session_cost_audit:
+        ks: list = [None]  # baseline: keep every touched session (Phase 8.9)
+        for token in args.session_ks.split(","):
+            token = token.strip()
+            if token and token.lower() != "none":
+                ks.append(int(token))
+        audit_pools = [int(p) for p in args.audit_pools.split(",") if p.strip()]
+        audit = cost_audit(dataset, args.audit_sample, ks, args,
+                           pools=audit_pools)
+        out_path = out_dir / f"session_cost_audit_{stamp}.json"
+        out_path.write_text(
+            json.dumps(audit, indent=2, ensure_ascii=False), encoding="utf-8"
         )
         print(f"\nevidence written: {out_path}")
         return

@@ -1,0 +1,291 @@
+{
+  "pools": [
+    100,
+    60,
+    40,
+    20,
+    10
+  ],
+  "gate_pool_default": 10,
+  "candidate_window": 450,
+  "recall_level": 2,
+  "store_memory_count": 440,
+  "questions": 9,
+  "rows": [
+    {
+      "pool": 100,
+      "max_sessions": null,
+      "evidence_retention": 0.4257,
+      "tokens_p50": 1993.0,
+      "tokens_p95": 1998.0,
+      "tokens_mean": 1990.8,
+      "selected_mean": 85.9,
+      "gate_in": 3960,
+      "gate_out": 900
+    },
+    {
+      "pool": 100,
+      "max_sessions": 5,
+      "evidence_retention": 0.4275,
+      "tokens_p50": 1994.0,
+      "tokens_p95": 1998.0,
+      "tokens_mean": 1992.9,
+      "selected_mean": 86,
+      "gate_in": 3960,
+      "gate_out": 900
+    },
+    {
+      "pool": 100,
+      "max_sessions": 3,
+      "evidence_retention": 0.4275,
+      "tokens_p50": 1993.0,
+      "tokens_p95": 1998.0,
+      "tokens_mean": 1991.3,
+      "selected_mean": 85.9,
+      "gate_in": 3960,
+      "gate_out": 900
+    },
+    {
+      "pool": 100,
+      "max_sessions": 2,
+      "evidence_retention": 0.4275,
+      "tokens_p50": 1995.0,
+      "tokens_p95": 1998.0,
+      "tokens_mean": 1992.7,
+      "selected_mean": 86,
+      "gate_in": 3960,
+      "gate_out": 900
+    },
+    {
+      "pool": 100,
+      "max_sessions": 1,
+      "evidence_retention": 0.4275,
+      "tokens_p50": 1997.0,
+      "tokens_p95": 1999.0,
+      "tokens_mean": 1993.2,
+      "selected_mean": 86,
+      "gate_in": 3960,
+      "gate_out": 900
+    },
+    {
+      "pool": 60,
+      "max_sessions": null,
+      "evidence_retention": 0.4367,
+      "tokens_p50": 1362.0,
+      "tokens_p95": 1677.0,
+      "tokens_mean": 1393.9,
+      "selected_mean": 60,
+      "gate_in": 3960,
+      "gate_out": 540
+    },
+    {
+      "pool": 60,
+      "max_sessions": 5,
+      "evidence_retention": 0.4367,
+      "tokens_p50": 1362.0,
+      "tokens_p95": 1679.0,
+      "tokens_mean": 1394.3,
+      "selected_mean": 60,
+      "gate_in": 3960,
+      "gate_out": 540
+    },
+    {
+      "pool": 60,
+      "max_sessions": 3,
+      "evidence_retention": 0.4349,
+      "tokens_p50": 1362.0,
+      "tokens_p95": 1677.0,
+      "tokens_mean": 1394.1,
+      "selected_mean": 60,
+      "gate_in": 3960,
+      "gate_out": 540
+    },
+    {
+      "pool": 60,
+      "max_sessions": 2,
+      "evidence_retention": 0.4367,
+      "tokens_p50": 1361.0,
+      "tokens_p95": 1679.0,
+      "tokens_mean": 1394.1,
+      "selected_mean": 60,
+      "gate_in": 3960,
+      "gate_out": 540
+    },
+    {
+      "pool": 60,
+      "max_sessions": 1,
+      "evidence_retention": 0.4367,
+      "tokens_p50": 1362.0,
+      "tokens_p95": 1677.0,
+      "tokens_mean": 1394.1,
+      "selected_mean": 60,
+      "gate_in": 3960,
+      "gate_out": 540
+    },
+    {
+      "pool": 40,
+      "max_sessions": null,
+      "evidence_retention": 0.3358,
+      "tokens_p50": 889.0,
+      "tokens_p95": 1114.0,
+      "tokens_mean": 926.1,
+      "selected_mean": 40,
+      "gate_in": 3960,
+      "gate_out": 360
+    },
+    {
+      "pool": 40,
+      "max_sessions": 5,
+      "evidence_retention": 0.3376,
+      "tokens_p50": 886.0,
+      "tokens_p95": 1111.0,
+      "tokens_mean": 926.6,
+      "selected_mean": 40,
+      "gate_in": 3960,
+      "gate_out": 360
+    },
+    {
+      "pool": 40,
+      "max_sessions": 3,
+      "evidence_retention": 0.345,
+      "tokens_p50": 889.0,
+      "tokens_p95": 1114.0,
+      "tokens_mean": 926.9,
+      "selected_mean": 40,
+      "gate_in": 3960,
+      "gate_out": 360
+    },
+    {
+      "pool": 40,
+      "max_sessions": 2,
+      "evidence_retention": 0.3358,
+      "tokens_p50": 885.0,
+      "tokens_p95": 1111.0,
+      "tokens_mean": 925.7,
+      "selected_mean": 40,
+      "gate_in": 3960,
+      "gate_out": 360
+    },
+    {
+      "pool": 40,
+      "max_sessions": 1,
+      "evidence_retention": 0.3376,
+      "tokens_p50": 888.0,
+      "tokens_p95": 1114.0,
+      "tokens_mean": 926.6,
+      "selected_mean": 40,
+      "gate_in": 3960,
+      "gate_out": 360
+    },
+    {
+      "pool": 20,
+      "max_sessions": null,
+      "evidence_retention": 0.1615,
+      "tokens_p50": 447.0,
+      "tokens_p95": 544.0,
+      "tokens_mean": 442.9,
+      "selected_mean": 20,
+      "gate_in": 3960,
+      "gate_out": 180
+    },
+    {
+      "pool": 20,
+      "max_sessions": 5,
+      "evidence_retention": 0.178,
+      "tokens_p50": 447.0,
+      "tokens_p95": 544.0,
+      "tokens_mean": 442.4,
+      "selected_mean": 20,
+      "gate_in": 3960,
+      "gate_out": 180
+    },
+    {
+      "pool": 20,
+      "max_sessions": 3,
+      "evidence_retention": 0.1706,
+      "tokens_p50": 447.0,
+      "tokens_p95": 544.0,
+      "tokens_mean": 442.7,
+      "selected_mean": 20,
+      "gate_in": 3960,
+      "gate_out": 180
+    },
+    {
+      "pool": 20,
+      "max_sessions": 2,
+      "evidence_retention": 0.1706,
+      "tokens_p50": 446.0,
+      "tokens_p95": 545.0,
+      "tokens_mean": 442.7,
+      "selected_mean": 20,
+      "gate_in": 3960,
+      "gate_out": 180
+    },
+    {
+      "pool": 20,
+      "max_sessions": 1,
+      "evidence_retention": 0.1725,
+      "tokens_p50": 449.0,
+      "tokens_p95": 543.0,
+      "tokens_mean": 442.3,
+      "selected_mean": 20,
+      "gate_in": 3960,
+      "gate_out": 180
+    },
+    {
+      "pool": 10,
+      "max_sessions": null,
+      "evidence_retention": 0.0716,
+      "tokens_p50": 217.0,
+      "tokens_p95": 261.0,
+      "tokens_mean": 219.6,
+      "selected_mean": 10,
+      "gate_in": 3960,
+      "gate_out": 90
+    },
+    {
+      "pool": 10,
+      "max_sessions": 5,
+      "evidence_retention": 0.0826,
+      "tokens_p50": 219.0,
+      "tokens_p95": 261.0,
+      "tokens_mean": 218.3,
+      "selected_mean": 10,
+      "gate_in": 3960,
+      "gate_out": 90
+    },
+    {
+      "pool": 10,
+      "max_sessions": 3,
+      "evidence_retention": 0.0862,
+      "tokens_p50": 218.0,
+      "tokens_p95": 261.0,
+      "tokens_mean": 219.7,
+      "selected_mean": 10,
+      "gate_in": 3960,
+      "gate_out": 90
+    },
+    {
+      "pool": 10,
+      "max_sessions": 2,
+      "evidence_retention": 0.0807,
+      "tokens_p50": 216.0,
+      "tokens_p95": 261.0,
+      "tokens_mean": 218.8,
+      "selected_mean": 10,
+      "gate_in": 3960,
+      "gate_out": 90
+    },
+    {
+      "pool": 10,
+      "max_sessions": 1,
+      "evidence_retention": 0.0771,
+      "tokens_p50": 223.0,
+      "tokens_p95": 261.0,
+      "tokens_mean": 219.2,
+      "selected_mean": 10,
+      "gate_in": 3960,
+      "gate_out": 90
+    }
+  ]
+}

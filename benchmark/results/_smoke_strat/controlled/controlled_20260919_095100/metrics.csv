@@ -1,0 +1,21 @@
+player,question_id,category,context_tokens,retrieval_ms,context_build_ms,answer_ms,total_latency_ms
+AM v0.2.0,factual_recall-00,factual_recall,1988,184.4,0.1,185.0,113.1
+AM v0.2.0,factual_recall-01,factual_recall,1984,127.7,0.1,128.2,76.2
+AM v0.2.0,multi_session_recall-00,multi_session_recall,1988,60.5,0.0,60.7,78.8
+AM v0.2.0,multi_session_recall-01,multi_session_recall,1982,100.0,0.0,100.3,63.0
+AM v0.2.0,temporal_reasoning-00,temporal_reasoning,1993,136.7,0.1,137.3,111.3
+AM v0.2.0,temporal_reasoning-01,temporal_reasoning,1985,150.7,0.1,151.4,117.4
+AM v0.2.0,knowledge_updates-00,knowledge_updates,1983,146.5,0.1,147.0,95.1
+AM v0.2.0,knowledge_updates-01,knowledge_updates,1983,71.4,0.1,71.8,90.0
+AM v0.2.0,contradiction_handling-00,contradiction_handling,1997,136.2,0.1,136.7,106.8
+AM v0.2.0,contradiction_handling-01,contradiction_handling,1987,138.1,0.1,138.6,105.0
+AM v0.2.0,indirect_recall-00,indirect_recall,1996,147.0,0.1,147.5,109.3
+AM v0.2.0,indirect_recall-01,indirect_recall,1997,134.4,0.1,135.0,103.6
+AM v0.2.0,distractor_resistance-00,distractor_resistance,1988,161.4,0.1,162.1,110.5
+AM v0.2.0,distractor_resistance-01,distractor_resistance,1989,130.5,0.1,131.2,105.9
+AM v0.2.0,abstention-00,abstention,1990,126.6,0.1,127.3,103.9
+AM v0.2.0,abstention-01,abstention,1997,132.6,0.1,133.5,75.0
+AM v0.2.0,compression_recovery-00,compression_recovery,1979,53.9,0.0,54.2,40.1
+AM v0.2.0,compression_recovery-01,compression_recovery,1985,53.2,0.0,53.5,57.5
+AM v0.2.0,reflection_reinterpretation-00,reflection_reinterpretation,1997,154.1,0.1,155.4,111.4
+AM v0.2.0,reflection_reinterpretation-01,reflection_reinterpretation,1994,150.4,0.1,151.0,116.8

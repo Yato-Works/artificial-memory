@@ -1,0 +1,39 @@
+{
+  "gate_pool": 100,
+  "candidate_window": 450,
+  "recall_level": 2,
+  "store_memory_count": 440,
+  "questions": 9,
+  "rows": [
+    {
+      "max_sessions": null,
+      "evidence_retention": 0.4257,
+      "tokens_p50": 1993.0,
+      "tokens_p95": 1999.0,
+      "tokens_mean": 1991.0,
+      "selected_mean": 85.9,
+      "gate_in": 3960,
+      "gate_out": 900
+    },
+    {
+      "max_sessions": 2,
+      "evidence_retention": 0.4275,
+      "tokens_p50": 1997.0,
+      "tokens_p95": 1998.0,
+      "tokens_mean": 1993.1,
+      "selected_mean": 86,
+      "gate_in": 3960,
+      "gate_out": 900
+    },
+    {
+      "max_sessions": 3,
+      "evidence_retention": 0.4275,
+      "tokens_p50": 1996.0,
+      "tokens_p95": 1999.0,
+      "tokens_mean": 1993.3,
+      "selected_mean": 86,
+      "gate_in": 3960,
+      "gate_out": 900
+    }
+  ]
+}

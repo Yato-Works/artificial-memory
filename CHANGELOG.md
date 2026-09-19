@@ -8,6 +8,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- **v0.2.0 Phase 8.10 - Session-granular cheap-recall cost curve**
+  - `SessionGate.max_sessions`: top-K whole sessions retained, pool-size cap
+    removed (sessions kept whole; deterministic tie-break on first-index)
+  - LLM-free cost audit: 95.2% cost reduction (pool=10) / 43.7% retention at
+    pool=100 / 43.7% retention, 1394 mean tokens at pool=60 (max_sessions=1
+    gives 95.6% of the accuracy at 4.6% of tokens)
+  - `scripts/deepseek_ab_small.py`: `--cost-audit` (pool x K grid),
+    `--gate-audit` (funnel), `--window-sweep`
+  - Finding: "fr...e" refuted -- `max_sessions` lever inactive at pool=100
+    (pool_size caps first); real leverage is at pool <= 60 OR K=1
+  - Evidence: `benchmark/results/deepseek_ab/session_cost_audit_*.json`
 - **v0.2.0 Phase 8.9 - Production A/B validation (3,000-call real-LLM run)**
   - `scripts/deepseek_ab_production.py`: chunked three-arm production
     experiment -- 200 questions x 5 repeats x 3 arms (`classic` / `cache` /

@@ -1,0 +1,11 @@
+player,question_id,category,context_tokens,retrieval_ms,context_build_ms,answer_ms,total_latency_ms
+AM v0.2.0,multi_session_recall-00,multi_session_recall,1309,128.8,0.1,834.6,296.5
+AM v0.2.0,multi_session_recall-01,multi_session_recall,1304,122.2,0.1,601.2,240.6
+AM v0.2.0,multi_session_recall-02,multi_session_recall,1304,115.6,0.1,616.6,270.6
+AM v0.2.0,multi_session_recall-03,multi_session_recall,1296,118.8,0.1,614.0,263.0
+AM v0.2.0,multi_session_recall-04,multi_session_recall,1303,112.2,0.1,613.8,251.9
+AM v0.2.0,multi_session_recall-05,multi_session_recall,1305,60.7,0.0,498.2,227.3
+AM v0.2.0,multi_session_recall-06,multi_session_recall,1314,108.2,0.1,579.6,248.2
+AM v0.2.0,multi_session_recall-07,multi_session_recall,1314,121.9,0.1,640.9,273.5
+AM v0.2.0,multi_session_recall-08,multi_session_recall,1296,121.7,0.1,623.8,247.4
+AM v0.2.0,multi_session_recall-09,multi_session_recall,1318,114.9,0.1,653.8,268.2
