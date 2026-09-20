@@ -85,13 +85,13 @@ class CoverageChecker:
             else:
                 prop_ok = any(target_prop in u.target_property.lower() for u in selected_units)
         else:
-            # For open-domain conversational queries: ensure at least 3 relevant units or high token budget
-            # For aggregation queries: require evidence from at least 2 distinct sessions
+            # For open-domain conversational queries: ensure at least 1 relevant unit with evidence
+            # For aggregation queries: require evidence from at least 2 distinct sessions or 3 units
             if intent == QueryIntent.AGGREGATION_QUERY:
                 sessions = self._get_sessions(selected_units)
-                prop_ok = len(selected_units) >= 4 and len(sessions) >= 2
+                prop_ok = len(selected_units) >= 3 and len(sessions) >= 2
             else:
-                prop_ok = len(selected_units) >= 3
+                prop_ok = len(selected_units) >= 1
 
         # 3. Temporal Coverage
         m_date = self.DATE_PATTERN.search(query)
@@ -167,7 +167,7 @@ class MinimumSufficientContextCompiler:
         self,
         query: str,
         records: Sequence[StructuredIR],
-        target_token_budget: int = 180,
+        target_token_budget: int = 450,
         weights: Optional[Any] = None,
         enabled_temporal_rules: Optional[set[str]] = None,
         reference_date_str: Optional[str] = None,
@@ -248,12 +248,12 @@ class MinimumSufficientContextCompiler:
                     )
 
         # 3. Minimal Sufficient Subset Search with Adaptive Budgeting:
-        # Dynamically select up to 5-6 units while strictly respecting target_token_budget
+        # Dynamically select up to 8-14 units while strictly respecting target_token_budget
         # For aggregation queries, allow more units from diverse sessions
         is_aggregation = intent == QueryIntent.AGGREGATION_QUERY
         selected_units: list[ApexMemoryUnit] = []
         curr_tokens = 0
-        max_units = 10 if is_aggregation else 6
+        max_units = 14 if is_aggregation else 8
         cert = self.checker.check(query, intent, selected_units)
 
         # Track session diversity for aggregation queries
@@ -397,6 +397,16 @@ class MinimumSufficientContextCompiler:
                 ref_date,
                 enabled_rules=enabled_temporal_rules,
             )
+            # Compact noisy assistant boilerplate (> 150 chars) to prioritize factual user turns
+            if "assistant:" in grounded_text.lower():
+                parts = re.split(r"(assistant:\s*)", grounded_text, maxsplit=1, flags=re.IGNORECASE)
+                if len(parts) == 3:
+                    prefix = parts[0] + parts[1]
+                    ast_body = parts[2].strip()
+                    if len(ast_body) > 140:
+                        m_sent = re.match(r"(.*?[.!?])(?:\s+|$)", ast_body)
+                        compact_body = m_sent.group(1) if m_sent and len(m_sent.group(1)) <= 140 else ast_body[:120] + "..."
+                        grounded_text = prefix + compact_body
             lines.append(grounded_text)
 
         context_text = "\n".join(lines)
