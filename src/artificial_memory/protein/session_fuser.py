@@ -62,10 +62,21 @@ class SessionFuser:
     def determine_unit(self, query: str) -> str:
         """Determine target aggregation unit from query semantics."""
         ql = query.lower()
-        # 1. Currency / Financial Amount (Priority #1: questions asking about spent/cost/dollars)
+        # 1. Direct Time Span Counting (Priority #1 when explicitly asking for days/hours/weeks/months)
+        if re.search(r"how many\s+(?:more\s+)?days\b", ql) or "number of days" in ql or "days did i" in ql or "days in total" in ql:
+            return "days"
+        if re.search(r"how many\s+(?:more\s+)?hours\b", ql) or "number of hours" in ql or "hours did i" in ql:
+            return "hours"
+        if re.search(r"how many\s+(?:more\s+)?weeks\b", ql) or "number of weeks" in ql or "weeks did i" in ql:
+            return "weeks"
+        if re.search(r"how many\s+(?:more\s+)?months\b", ql) or "number of months" in ql or "months did i" in ql:
+            return "months"
+
+        # 2. Currency / Financial Amount (questions asking about spent/cost/dollars)
         if any(w in ql for w in ["dollar", "money", "cost", "price", "expense", "expenses", "spent", "spend", "earned", "earn", "total amount", "amount i spent", "amount spent", "$"]):
             return "$"
-        # 2. Specific Entity / Object Types
+
+        # 3. Specific Entity / Object Types
         if "furniture" in ql:
             return "pieces of furniture"
         if "clothing" in ql or "clothes" in ql:
@@ -80,16 +91,7 @@ class SessionFuser:
             return "model kits"
         if "restaurant" in ql:
             return "restaurants"
-        # 3. Direct Time Span Counting (e.g. "how many days/hours/weeks/months")
-        # Do not mistake trailing time prepositional phrases (e.g. "in the past few months") for counting target!
-        if re.search(r"how many\s+(?:more\s+)?days\b", ql) or "number of days" in ql or "days did i" in ql or "days in total" in ql:
-            return "days"
-        if re.search(r"how many\s+(?:more\s+)?hours\b", ql) or "number of hours" in ql or "hours did i" in ql:
-            return "hours"
-        if re.search(r"how many\s+(?:more\s+)?weeks\b", ql) or "number of weeks" in ql or "weeks did i" in ql:
-            return "weeks"
-        if re.search(r"how many\s+(?:more\s+)?months\b", ql) or "number of months" in ql or "months did i" in ql:
-            return "months"
+
         if "day" in ql and not any(w in ql for w in ["in the past", "over the", "in the last"]):
             return "days"
         if "hour" in ql:
