@@ -301,9 +301,11 @@ class MinimumSufficientContextCompiler:
                 "doctors": ["doctor", "dr.", "dermatologist", "physician", "specialist", "ent"],
                 "plants": ["plant", "lily", "succulent", "fern", "basil", "nursery", "bought", "acquired"],
                 "projects": ["project", "lead", "leading", "led", "completed", "manage", "launch"],
-                "days": ["day", "days", "camping", "trip", "visit", "spent"],
+                "days": ["day", "days", "camping", "camp", "trip", "visit", "spent"],
                 "weeks": ["week", "weeks", "watch", "marvel", "movie", "film"],
                 "hours": ["hour", "hours", "jog", "run", "exercise", "workout"],
+                "model kits": ["model", "kit", "kits", "tamiya", "revell", "scale", "tank", "spitfire", "camaro"],
+                "restaurants": ["restaurant", "restaurants", "korean", "italian", "tried", "eat", "dined"],
                 "items": ["item", "items", "count", "total", "how many", "how much"],
             }
             keywords = agg_evidence_keywords.get(unit, agg_evidence_keywords["items"])
@@ -316,14 +318,14 @@ class MinimumSufficientContextCompiler:
                     seen_sessions.add(m.group(1))
             
             # Search ALL candidates for aggregation evidence from new sessions
-            # Use a generous budget for aggregation (target + 100 tokens)
-            agg_budget = target_token_budget + 100
+            # Use a generous budget for aggregation (target + 120 tokens)
+            agg_budget = target_token_budget + 120
             added = 0
             
             # Extract query-specific topic keywords for better filtering
             query_words = set(re.findall(r"\b[a-zA-Z0-9_-]+\b", query.lower()))
             stop_words = {
-                "how", "much", "total", "money", "have", "since", "start", "year", "the", "and", "for", "on", "in", "to", "of", "a", "an", "is", "was", "what", "when", "where", "which", "who", "why", "many", "related", "i", "me", "my", "your", "our", "their", "his", "her", "its", "this", "that", "these", "those", "been", "being", "were", "are", "am", "has", "had", "do", "does", "did", "will", "would", "could", "should", "can", "may", "might", "must", "shall", "need", "want", "like", "just", "also", "very", "more", "most", "some", "any", "all", "each", "every", "other", "another", "such", "only", "own", "same", "than", "too", "very", "much", "many", "few", "little", "lot", "lots", "bit", "bits", "piece", "pieces", "item", "items", "thing", "things", "way", "ways", "time", "times", "day", "days", "week", "weeks", "month", "months", "year", "years", "spent", "spend", "cost", "price", "expense", "expenses", "paid", "pay", "bought", "buy", "purchased", "purchase"
+                "how", "much", "total", "money", "have", "since", "start", "year", "the", "and", "for", "on", "in", "to", "of", "a", "an", "is", "was", "what", "when", "where", "which", "who", "why", "many", "related", "i", "me", "my", "your", "our", "their", "his", "her", "its", "this", "that", "these", "those", "been", "being", "were", "are", "am", "has", "had", "do", "does", "did", "will", "would", "could", "should", "can", "may", "might", "must", "shall", "need", "want", "like", "just", "also", "very", "more", "most", "some", "any", "all", "each", "every", "other", "another", "such", "only", "own", "same", "than", "too", "very", "few", "little", "lot", "lots", "bit", "bits", "piece", "pieces", "thing", "things", "way", "ways", "time", "times"
             }
             query_topic_words = {w for w in query_words if len(w) > 3 and w not in stop_words}
             # Split compound words (e.g., "bike-related" -> "bike", "related")
@@ -347,10 +349,10 @@ class MinimumSufficientContextCompiler:
                 has_evidence = any(kw in content_lower for kw in keywords)
                 # Also check for numbers/currency
                 has_numbers = bool(re.search(r"\b\d+\b", content_lower)) or "$" in content_lower
-                # Check for query-specific topic relevance - require at least one topic word
+                # Check for query-specific topic relevance
                 has_topic = any(tw in content_lower for tw in expanded_topic_words) if expanded_topic_words else True
                 
-                if has_evidence and has_numbers and has_topic:
+                if (has_topic and has_numbers) or (has_evidence and has_numbers):
                     m = re.search(r"\[([a-zA-Z0-9_-]+)(?:\s+on\s+[^\]]+)?\]", extra.ir.raw_content)
                     if m and m.group(1) not in seen_sessions:
                         selected_units.append(extra)

@@ -179,12 +179,31 @@ class StateReconstructor:
                 continue
             valid_temporal_units.append(u)
 
+        # Common stop words and stemmer for relevance scoring
+        COMMON_STOP_WORDS = {
+            "for", "what", "which", "the", "did", "was", "were", "our", "system",
+            "and", "but", "are", "been", "being", "have", "has", "had", "does",
+            "that", "this", "these", "those", "can", "could", "would", "should",
+            "will", "shall", "may", "might", "must", "you", "your", "yours",
+            "into", "than", "too", "very", "much", "also", "just"
+        }
+
+        def stem(w: str) -> str:
+            if w.endswith("ing") and len(w) > 5:
+                return w[:-3]
+            if w.endswith("ed") and len(w) > 4:
+                return w[:-2]
+            if w.endswith("s") and len(w) > 3 and not w.endswith("ss"):
+                return w[:-1]
+            return w
+
         # 3. Property / Aspect Scoping & Multi-Dimensional Relevance Scoring
         def unit_relevance(u: ApexMemoryUnit) -> float:
             content_lower = u.ir.raw_content.lower()
             prop_lower = u.target_property.lower()
             val_lower = u.ir.value.lower()
             u_date = self._extract_record_date(u.ir)
+            is_user_source = (u.ir.source or "").lower() == "user" or "user:" in content_lower
 
             # Base score from Universal Evidence Scorer
             breakdown = self.evidence_scorer.compute_score(query, u, weights)
@@ -212,30 +231,11 @@ class StateReconstructor:
                         score -= 20.0
             else:
                 # General word overlap with speaker weighting and stemming
-                COMMON_STOP_WORDS = {
-                    "for", "what", "which", "the", "did", "was", "were", "our", "system",
-                    "and", "but", "are", "been", "being", "have", "has", "had", "does",
-                    "that", "this", "these", "those", "can", "could", "would", "should",
-                    "will", "shall", "may", "might", "must", "you", "your", "yours",
-                    "into", "than", "too", "very", "much", "also", "just"
-                }
                 query_tokens = [
                     w for w in re.findall(r"\b[a-zA-Z0-9_-]+\b", q_lower)
                     if len(w) > 2 and w not in COMMON_STOP_WORDS
                 ]
-                is_user_source = (u.ir.source or "").lower() == "user" or "user:" in content_lower
                 speaker_multiplier = 2.5 if is_user_source else 1.0
-
-                def stem(w: str) -> str:
-                    if w.endswith("ing") and len(w) > 5:
-                        return w[:-3]
-                    if w.endswith("ed") and len(w) > 4:
-                        return w[:-2]
-                    if w.endswith("s") and len(w) > 3 and not w.endswith("ss"):
-                        return w[:-1]
-                    return w
-
-                query_stems = {stem(w) for w in query_tokens}
 
                 for w in query_tokens:
                     w_stem = stem(w)
@@ -295,13 +295,38 @@ class StateReconstructor:
                 if "abandoned" in content_lower and not any(w in q_lower for w in ["abandon", "why"]):
                     score -= 25.0
             elif intent == QueryIntent.AGGREGATION_QUERY:
-                # Boost sessions containing aggregation-relevant keywords
+                # Extract core topic words (excluding aggregation frames)
+                AGGREGATION_FRAME_WORDS = {
+                    "how", "many", "much", "total", "combined", "altogether", "sum", "count",
+                    "number", "have", "had", "has", "did", "was", "were", "been", "being",
+                    "this", "that", "these", "those", "year", "years", "month", "months",
+                    "week", "weeks", "day", "days", "time", "times", "united", "states", "america"
+                }
+                agg_topic_words = [
+                    w for w in re.findall(r"\b[a-zA-Z0-9_-]+\b", q_lower)
+                    if len(w) > 2 and w not in COMMON_STOP_WORDS and w not in AGGREGATION_FRAME_WORDS
+                ]
+                has_agg_topic = False
+                for tw in agg_topic_words:
+                    tw_stem = stem(tw)
+                    if tw in content_lower or tw_stem in content_lower:
+                        has_agg_topic = True
+                        score += 35.0  # Massive topic anchor boost
+                        if is_user_source:
+                            score += 15.0
+                        break
+
+                # Penalize non-topic sessions that only match generic aggregation words
+                if agg_topic_words and not has_agg_topic:
+                    score *= 0.25
+
+                # Boost sessions containing aggregation-relevant action keywords
                 agg_keywords = ["pick up", "return", "exchange", "bought", "acquired", "got", "purchased",
                                "visited", "went to", "attended", "spent", "cost", "paid", "earned",
                                "hours", "days", "weeks", "months", "times", "count"]
                 agg_matches = sum(1 for kw in agg_keywords if kw in content_lower)
                 if agg_matches > 0:
-                    score += 15.0 + agg_matches * 5.0  # Boost for aggregation evidence
+                    score += 10.0 + agg_matches * 4.0
                 # Boost sessions with numbers/quantities
                 if re.search(r"\b\d+\b", content_lower):
                     score += 10.0
@@ -390,11 +415,27 @@ class StateReconstructor:
             final_slice = reflection_slice if reflection_slice else scored_units
 
         elif intent == QueryIntent.AGGREGATION_QUERY:
-            # For aggregation, prefer EVIDENCE role units and units with numbers/quantities
-            agg_slice = [
-                u for u in scored_units
-                if u.role == MemoryRole.EVIDENCE or re.search(r"\b\d+\b", u.ir.raw_content.lower())
-            ]
+            # Enforce session diversity so multi-session evidence across 3-5 sessions is preserved
+            agg_slice: list[ApexMemoryUnit] = []
+            session_counts: dict[str, int] = {}
+
+            # Pass 1: select up to 2 top units per session
+            for u in scored_units:
+                sid = u.ir.source or "unknown"
+                m_sid = SESS_PATTERN.search(u.ir.raw_content)
+                if m_sid:
+                    sid = m_sid.group(1)
+                cnt = session_counts.get(sid, 0)
+                if cnt < 2:
+                    agg_slice.append(u)
+                    session_counts[sid] = cnt + 1
+
+            # Pass 2: fill in remaining units up to 20
+            for u in scored_units:
+                if len(agg_slice) >= 20:
+                    break
+                if u not in agg_slice:
+                    agg_slice.append(u)
             final_slice = agg_slice if agg_slice else scored_units
 
         else:
