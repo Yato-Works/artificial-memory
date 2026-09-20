@@ -298,8 +298,8 @@ class LongMemEvalAdapter:
             "twice": "2", "once": "1",
         }
         ans_lower = predicted_answer.lower().strip()
-        clean_gt = gt_lower
-        clean_ans = ans_lower
+        clean_gt = re.sub(r",(?=\d{3}\b)", "", gt_lower)
+        clean_ans = re.sub(r",(?=\d{3}\b)", "", ans_lower)
         for w, n in WORD_TO_NUM.items():
             clean_gt = re.sub(rf"\b{w}\b", n, clean_gt)
             clean_ans = re.sub(rf"\b{w}\b", n, clean_ans)

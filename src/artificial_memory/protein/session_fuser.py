@@ -173,14 +173,15 @@ class SessionFuser:
             for sid, contents in session_lines.items():
                 for content in contents:
                     c_lower = content.lower()
-                    if is_luxury and not any(l in c_lower for l in ["luxury", "splurge", "high-end", "designer"]):
+                    if is_luxury and not any(l in c_lower for l in ["luxury", "splurge", "high-end", "designer", "gucci", "gown"]):
                         continue
                     for s in re.split(r"[.!?]\s+", content):
                         s_lower = s.lower()
                         m_curr = re.search(r"\$(\d+(?:,\d+)*(?:\.\d+)?)", s_lower)
                         if m_curr:
                             val = float(m_curr.group(1).replace(",", ""))
-                            if is_luxury and any(b in s_lower for b in ["budget-friendly", "h&m", "steal", "cheap", "affordable"]):
+                            # When asking for luxury items, skip fast-fashion small items under $100 (e.g. H&M $20)
+                            if is_luxury and val < 100 and any(b in s_lower for b in ["h&m", "graphic tees", "steal", "budget"]):
                                 continue
 
                             item_key = None
@@ -211,9 +212,12 @@ class SessionFuser:
                 for content in contents:
                     for s in re.split(r"[.!?]\s+", content):
                         s_lower = s.lower()
+                        # Reject protective accessories that are not furniture itself
+                        if "scratch guard" in s_lower or "protect the furniture" in s_lower or "damaging the furniture" in s_lower:
+                            continue
                         f_matches = [fw for fw in FURNITURE_WORDS if fw in s_lower]
                         has_act = any(act in s_lower for act in FURNITURE_ACTIONS)
-                        if f_matches and has_act and not any(w in s_lower for w in ["scratch guards", "pillows", "camera"]):
+                        if f_matches and has_act:
                             seen_furniture_sessions.add(sid)
                             found_snippets.append((sid, s.strip(), 1.0))
                             total_sum += 1.0
