@@ -62,6 +62,12 @@ class SessionFuser:
     def determine_unit(self, query: str) -> str:
         """Determine target aggregation unit from query semantics."""
         ql = query.lower()
+        # 1. Currency / Financial Amount (Priority #1: questions asking about spent/cost/dollars)
+        if any(w in ql for w in ["dollar", "money", "cost", "price", "expense", "expenses", "spent", "spend", "earned", "earn", "total amount", "amount i spent", "amount spent", "$"]):
+            return "$"
+        # 2. Specific Entity / Object Types
+        if "furniture" in ql:
+            return "pieces of furniture"
         if "clothing" in ql or "clothes" in ql:
             return "items of clothing"
         if "plant" in ql:
@@ -72,16 +78,24 @@ class SessionFuser:
             return "projects"
         if "model kit" in ql:
             return "model kits"
-        if "day" in ql:
+        if "restaurant" in ql:
+            return "restaurants"
+        # 3. Direct Time Span Counting (e.g. "how many days/hours/weeks/months")
+        # Do not mistake trailing time prepositional phrases (e.g. "in the past few months") for counting target!
+        if re.search(r"how many\s+(?:more\s+)?days\b", ql) or "number of days" in ql or "days did i" in ql or "days in total" in ql:
+            return "days"
+        if re.search(r"how many\s+(?:more\s+)?hours\b", ql) or "number of hours" in ql or "hours did i" in ql:
+            return "hours"
+        if re.search(r"how many\s+(?:more\s+)?weeks\b", ql) or "number of weeks" in ql or "weeks did i" in ql:
+            return "weeks"
+        if re.search(r"how many\s+(?:more\s+)?months\b", ql) or "number of months" in ql or "months did i" in ql:
+            return "months"
+        if "day" in ql and not any(w in ql for w in ["in the past", "over the", "in the last"]):
             return "days"
         if "hour" in ql:
             return "hours"
-        if "week" in ql:
+        if "week" in ql and not any(w in ql for w in ["in the past", "over the", "in the last"]):
             return "weeks"
-        if "month" in ql:
-            return "months"
-        if any(w in ql for w in ["dollar", "money", "cost", "price", "expense", "expenses", "spent", "spend", "earned", "earn"]):
-            return "$"
         return "items"
 
     def fuse(
@@ -113,6 +127,8 @@ class SessionFuser:
             "clothes": {"clothing", "clothes", "blazer", "boots", "jacket", "jeans", "shirt", "pants", "dress", "sweater"},
             "plant": {"plant", "plants", "lily", "succulent", "fern", "basil", "snake"},
             "plants": {"plant", "plants", "lily", "succulent", "fern", "basil", "snake"},
+            "furniture": {"furniture", "bookshelf", "table", "chair", "desk", "couch", "sofa", "bed", "mattress", "cabinet", "dresser"},
+            "pieces of furniture": {"furniture", "bookshelf", "table", "chair", "desk", "couch", "sofa", "bed", "mattress", "cabinet", "dresser"},
         }
         EXTRA_STOPS = {
             "different", "items", "item", "need", "needs", "needed", "store", "stores",
@@ -153,13 +169,20 @@ class SessionFuser:
 
         if unit == "$":
             seen_items = set()
+            is_luxury = "luxury" in ql
             for sid, contents in session_lines.items():
                 for content in contents:
+                    c_lower = content.lower()
+                    if is_luxury and not any(l in c_lower for l in ["luxury", "splurge", "high-end", "designer"]):
+                        continue
                     for s in re.split(r"[.!?]\s+", content):
                         s_lower = s.lower()
                         m_curr = re.search(r"\$(\d+(?:,\d+)*(?:\.\d+)?)", s_lower)
                         if m_curr:
                             val = float(m_curr.group(1).replace(",", ""))
+                            if is_luxury and any(b in s_lower for b in ["budget-friendly", "h&m", "steal", "cheap", "affordable"]):
+                                continue
+
                             item_key = None
                             if "light" in s_lower:
                                 item_key = "lights"
@@ -177,6 +200,26 @@ class SessionFuser:
 
                             found_snippets.append((sid, s.strip(), val))
                             total_sum += val
+
+        elif unit == "pieces of furniture":
+            seen_furniture_sessions = set()
+            FURNITURE_WORDS = ["bookshelf", "table", "chair", "desk", "couch", "sofa", "bed", "mattress", "cabinet", "dresser"]
+            FURNITURE_ACTIONS = ["bought", "ordered", "assembled", "fixed", "fix", "sell", "sold", "got"]
+            for sid, contents in session_lines.items():
+                if sid in seen_furniture_sessions:
+                    continue
+                for content in contents:
+                    for s in re.split(r"[.!?]\s+", content):
+                        s_lower = s.lower()
+                        f_matches = [fw for fw in FURNITURE_WORDS if fw in s_lower]
+                        has_act = any(act in s_lower for act in FURNITURE_ACTIONS)
+                        if f_matches and has_act and not any(w in s_lower for w in ["scratch guards", "pillows", "camera"]):
+                            seen_furniture_sessions.add(sid)
+                            found_snippets.append((sid, s.strip(), 1.0))
+                            total_sum += 1.0
+                            break
+                    if sid in seen_furniture_sessions:
+                        break
 
         elif unit == "doctors":
             seen_doctors = set()

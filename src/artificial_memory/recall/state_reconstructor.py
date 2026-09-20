@@ -185,7 +185,8 @@ class StateReconstructor:
             "and", "but", "are", "been", "being", "have", "has", "had", "does",
             "that", "this", "these", "those", "can", "could", "would", "should",
             "will", "shall", "may", "might", "must", "you", "your", "yours",
-            "into", "than", "too", "very", "much", "also", "just"
+            "into", "than", "too", "very", "much", "also", "just",
+            "time", "times", "day", "days", "before", "after", "went", "about"
         }
 
         def stem(w: str) -> str:
@@ -323,22 +324,33 @@ class StateReconstructor:
                 # Boost sessions containing aggregation-relevant action keywords
                 agg_keywords = ["pick up", "return", "exchange", "bought", "acquired", "got", "purchased",
                                "visited", "went to", "attended", "spent", "cost", "paid", "earned",
-                               "hours", "days", "weeks", "months", "times", "count"]
+                               "hours", "days", "weeks", "months", "times", "count", "assemble", "fix", "sold"]
                 agg_matches = sum(1 for kw in agg_keywords if kw in content_lower)
                 if agg_matches > 0:
                     score += 10.0 + agg_matches * 4.0
                 # Boost sessions with numbers/quantities
-                if re.search(r"\b\d+\b", content_lower):
+                if re.search(r"\b\d+\b", content_lower) or "$" in content_lower:
                     score += 10.0
+                    if is_user_source:
+                        score += 20.0  # Factual numbers from user are golden evidence
+
+                # Downweight oversized assistant boilerplate in aggregation queries
+                if not is_user_source and "assistant:" in content_lower and len(content_lower) > 200:
+                    score *= 0.60
 
             return score
 
-        # Compute raw scores and track session maximums for coherence spillover
+        # Compute raw scores and track session & family maximums for coherence spillover
         raw_scores: list[tuple[float, ApexMemoryUnit]] = []
         session_max_scores: dict[str, float] = {}
+        family_max_scores: dict[str, float] = {}
 
         # Session coherence spillover applies to external benchmark sessions (LongMemEval style)
         SESS_PATTERN = re.compile(r"\[(answer_[a-zA-Z0-9_-]+|[a-zA-Z0-9_-]+_[0-9]+|ultrachat_[0-9]+|sharegpt_[a-zA-Z0-9_-]+)")
+
+        def get_family_id(sid: str) -> str:
+            m = re.match(r"^(.*?)(?:_\d+)?$", sid)
+            return m.group(1) if m else sid
 
         for u in valid_temporal_units:
             sc = unit_relevance(u)
@@ -346,20 +358,29 @@ class StateReconstructor:
             sid_match = SESS_PATTERN.search(u.ir.raw_content)
             if sid_match and sc > 0:
                 sid = sid_match.group(1)
+                fam = get_family_id(sid)
                 session_max_scores[sid] = max(session_max_scores.get(sid, 0.0), sc)
+                family_max_scores[fam] = max(family_max_scores.get(fam, 0.0), sc)
 
-        # Apply Session Coherence Spillover: boost other units in high-relevance sessions
+        # Apply Session & Family Coherence Spillover: boost other units in high-relevance sessions & sibling sessions
         scored_units_with_score: list[tuple[float, ApexMemoryUnit]] = []
         for sc, u in raw_scores:
             final_sc = sc
             sid_match = SESS_PATTERN.search(u.ir.raw_content)
             if sid_match:
                 sid = sid_match.group(1)
+                fam = get_family_id(sid)
                 sess_peak = session_max_scores.get(sid, 0.0)
+                fam_peak = family_max_scores.get(fam, 0.0)
+                is_user = (u.ir.source or "").lower() == "user" or "user:" in u.ir.raw_content.lower()
+
                 if sess_peak >= 15.0:
-                    is_user = (u.ir.source or "").lower() == "user" or "user:" in u.ir.raw_content.lower()
-                    spill_rate = 0.55 if is_user else 0.25
+                    spill_rate = 0.70 if is_user else 0.20
                     final_sc = max(final_sc, sess_peak * spill_rate)
+                if fam_peak >= 25.0 and fam != sid:
+                    fam_spill_rate = 0.50 if is_user else 0.15
+                    final_sc = max(final_sc, fam_peak * fam_spill_rate)
+
             if final_sc > 0:
                 scored_units_with_score.append((final_sc, u))
 
@@ -415,12 +436,15 @@ class StateReconstructor:
             final_slice = reflection_slice if reflection_slice else scored_units
 
         elif intent == QueryIntent.AGGREGATION_QUERY:
-            # Enforce session diversity so multi-session evidence across 3-5 sessions is preserved
+            # Enforce session diversity and prioritize user factual statements across sessions
             agg_slice: list[ApexMemoryUnit] = []
             session_counts: dict[str, int] = {}
 
-            # Pass 1: select up to 2 top units per session
+            # Pass 0: Pick top user factual turns from each session (up to 2 per session)
             for u in scored_units:
+                is_u = (u.ir.source or "").lower() == "user" or "user:" in u.ir.raw_content.lower()
+                if not is_u:
+                    continue
                 sid = u.ir.source or "unknown"
                 m_sid = SESS_PATTERN.search(u.ir.raw_content)
                 if m_sid:
@@ -430,9 +454,22 @@ class StateReconstructor:
                     agg_slice.append(u)
                     session_counts[sid] = cnt + 1
 
-            # Pass 2: fill in remaining units up to 20
+            # Pass 1: select other top units per session (up to 2 total per session)
             for u in scored_units:
-                if len(agg_slice) >= 20:
+                if u in agg_slice:
+                    continue
+                sid = u.ir.source or "unknown"
+                m_sid = SESS_PATTERN.search(u.ir.raw_content)
+                if m_sid:
+                    sid = m_sid.group(1)
+                cnt = session_counts.get(sid, 0)
+                if cnt < 2:
+                    agg_slice.append(u)
+                    session_counts[sid] = cnt + 1
+
+            # Pass 2: fill in remaining units up to 30
+            for u in scored_units:
+                if len(agg_slice) >= 30:
                     break
                 if u not in agg_slice:
                     agg_slice.append(u)

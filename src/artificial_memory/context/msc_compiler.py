@@ -167,7 +167,7 @@ class MinimumSufficientContextCompiler:
         self,
         query: str,
         records: Sequence[StructuredIR],
-        target_token_budget: int = 450,
+        target_token_budget: int = 500,
         weights: Optional[Any] = None,
         enabled_temporal_rules: Optional[set[str]] = None,
         reference_date_str: Optional[str] = None,
@@ -253,37 +253,42 @@ class MinimumSufficientContextCompiler:
         is_aggregation = intent == QueryIntent.AGGREGATION_QUERY
         selected_units: list[ApexMemoryUnit] = []
         curr_tokens = 0
-        max_units = 14 if is_aggregation else 8
+        max_units = 14 if is_aggregation else 12
         cert = self.checker.check(query, intent, selected_units)
 
-        # Track session diversity for aggregation queries
+        # Track session diversity
         seen_sessions: set[str] = set()
 
         # Phase 1: Initial selection with session diversity
         for u in candidate_units[:max_units]:
-            u_tok = len(u.ir.raw_content.split())
+            raw_words = len(u.ir.raw_content.split())
+            is_ast = "assistant:" in u.ir.raw_content.lower()
+            # Assistant turns are compacted down to <= 140 chars (~25-35 tokens) in Phase 4
+            u_tok = min(raw_words, 35) if is_ast else raw_words
+
             if selected_units and (curr_tokens + u_tok > target_token_budget):
-                if is_aggregation:
-                    # For aggregation, skip oversized units but continue searching for smaller ones from other sessions
-                    continue
-                break
+                # Never break prematurely: skip oversized units and continue searching for compact user turns!
+                continue
             
-            # For aggregation queries, encourage session diversity
-            if is_aggregation:
+            # Encourage session balance for aggregation or temporal multi-session queries:
+            # For single-session queries, allow picking up to 6 units from the primary target session!
+            is_multi_hop_query = is_aggregation or any(w in query.lower() for w in ["before", "after", "while", "during", "between", "both", "all"])
+            if is_multi_hop_query:
                 sid_match = re.search(r"\[([a-zA-Z0-9_-]+)(?:\s+on\s+[^\]]+)?\]", u.ir.raw_content)
                 if sid_match:
                     sid = sid_match.group(1)
-                    # Allow up to 2 units per session, then prefer new sessions
                     session_count = sum(1 for su in selected_units 
                                        if re.search(rf"\[{re.escape(sid)}(?:\s+on\s+[^\]]+)?\]", su.ir.raw_content))
-                    if session_count >= 2 and len(seen_sessions) < 4:
-                        continue  # Skip this unit, prefer new sessions
+                    max_per_sess = 2 if is_aggregation else 3
+                    if session_count >= max_per_sess and len(seen_sessions) < 4:
+                        continue
                     seen_sessions.add(sid)
             
             selected_units.append(u)
             curr_tokens += u_tok
             cert = self.checker.check(query, intent, selected_units)
-            if cert.is_sufficient and len(selected_units) >= 4 and curr_tokens >= 110:
+            # Only early stop when we have broad coverage across at least 6 units and substantial context
+            if cert.is_sufficient and len(selected_units) >= 6 and curr_tokens >= 250:
                 break
 
         # Phase 2: Aggregation Query Enhancement - Second-pass retrieval for comprehensive session coverage
@@ -297,6 +302,7 @@ class MinimumSufficientContextCompiler:
             # Keywords that indicate aggregation evidence for this unit type
             agg_evidence_keywords = {
                 "$": ["spent", "cost", "paid", "price", "$", "dollar", "expense", "bought", "purchased"],
+                "pieces of furniture": ["furniture", "bookshelf", "table", "chair", "desk", "couch", "sofa", "bed", "mattress", "cabinet", "dresser", "assembled", "bought", "fixed", "sold"],
                 "items of clothing": ["pick up", "return", "exchange", "bought", "got", "blazer", "boots", "jeans", "shirt"],
                 "doctors": ["doctor", "dr.", "dermatologist", "physician", "specialist", "ent"],
                 "plants": ["plant", "lily", "succulent", "fern", "basil", "nursery", "bought", "acquired"],
@@ -318,14 +324,15 @@ class MinimumSufficientContextCompiler:
                     seen_sessions.add(m.group(1))
             
             # Search ALL candidates for aggregation evidence from new sessions
-            # Use a generous budget for aggregation (target + 120 tokens)
-            agg_budget = target_token_budget + 120
+            # Use a generous budget for aggregation (target + 180 tokens)
+            agg_budget = target_token_budget + 180
             added = 0
             
             # Extract query-specific topic keywords for better filtering
             query_words = set(re.findall(r"\b[a-zA-Z0-9_-]+\b", query.lower()))
             stop_words = {
-                "how", "much", "total", "money", "have", "since", "start", "year", "the", "and", "for", "on", "in", "to", "of", "a", "an", "is", "was", "what", "when", "where", "which", "who", "why", "many", "related", "i", "me", "my", "your", "our", "their", "his", "her", "its", "this", "that", "these", "those", "been", "being", "were", "are", "am", "has", "had", "do", "does", "did", "will", "would", "could", "should", "can", "may", "might", "must", "shall", "need", "want", "like", "just", "also", "very", "more", "most", "some", "any", "all", "each", "every", "other", "another", "such", "only", "own", "same", "than", "too", "very", "few", "little", "lot", "lots", "bit", "bits", "piece", "pieces", "thing", "things", "way", "ways", "time", "times"
+                "how", "much", "total", "money", "have", "since", "start", "year", "the", "and", "for", "on", "in", "to", "of", "a", "an", "is", "was", "what", "when", "where", "which", "who", "why", "many", "related", "i", "me", "my", "your", "our", "their", "his", "her", "its", "this", "that", "these", "those", "been", "being", "were", "are", "am", "has", "had", "do", "does", "did", "will", "would", "could", "should", "can", "may", "might", "must", "shall", "need", "want", "like", "just", "also", "very", "more", "most", "some", "any", "all", "each", "every", "other", "another", "such", "only", "own", "same", "than", "too", "very", "few", "little", "lot", "lots", "bit", "bits", "piece", "pieces", "thing", "things", "way", "ways", "time", "times",
+                "past", "months", "month", "days", "day", "weeks", "week", "years", "year", "recently", "lately", "spend", "spent"
             }
             query_topic_words = {w for w in query_words if len(w) > 3 and w not in stop_words}
             # Split compound words (e.g., "bike-related" -> "bike", "related")
@@ -340,19 +347,32 @@ class MinimumSufficientContextCompiler:
                     break
                 if extra in selected_units:
                     continue
-                u_tok = len(extra.ir.raw_content.split())
+                raw_words = len(extra.ir.raw_content.split())
+                is_ast = "assistant:" in extra.ir.raw_content.lower()
+                u_tok = min(raw_words, 35) if is_ast else raw_words
                 if curr_tokens + u_tok > agg_budget:
                     continue
                 
                 content_lower = extra.ir.raw_content.lower()
                 # Check if this unit has aggregation evidence (generic keywords)
                 has_evidence = any(kw in content_lower for kw in keywords)
-                # Also check for numbers/currency
-                has_numbers = bool(re.search(r"\b\d+\b", content_lower)) or "$" in content_lower
+                # Also check for numbers/currency/word-numbers/action-item occurrences
+                has_numbers = (
+                    bool(re.search(r"\b\d+\b", content_lower))
+                    or "$" in content_lower
+                    or any(re.search(rf"\b{wn}\b", content_lower) for wn in ["one", "two", "three", "four", "five", "six", "a", "an"])
+                    or (unit in ["pieces of furniture", "items of clothing", "plants", "model kits"] and any(act in content_lower for act in ["bought", "ordered", "assembled", "fixed", "fix", "sell", "sold", "got", "picked up"]))
+                )
                 # Check for query-specific topic relevance
                 has_topic = any(tw in content_lower for tw in expanded_topic_words) if expanded_topic_words else True
                 
-                if (has_topic and has_numbers) or (has_evidence and has_numbers):
+                # If target unit is specific (e.g. furniture, clothing), require evidence match
+                if unit != "items":
+                    match_condition = has_evidence and has_numbers
+                else:
+                    match_condition = (has_topic and has_numbers) or (has_evidence and has_numbers)
+                
+                if match_condition:
                     m = re.search(r"\[([a-zA-Z0-9_-]+)(?:\s+on\s+[^\]]+)?\]", extra.ir.raw_content)
                     if m and m.group(1) not in seen_sessions:
                         selected_units.append(extra)
