@@ -419,16 +419,22 @@ class MinimumSufficientContextCompiler:
                 ref_date,
                 enabled_rules=enabled_temporal_rules,
             )
-            # Compact noisy assistant boilerplate (> 150 chars) to prioritize factual user turns
-            if "assistant:" in grounded_text.lower():
-                parts = re.split(r"(assistant:\s*)", grounded_text, maxsplit=1, flags=re.IGNORECASE)
-                if len(parts) == 3:
-                    prefix = parts[0] + parts[1]
-                    ast_body = parts[2].strip()
-                    if len(ast_body) > 140:
-                        m_sent = re.match(r"(.*?[.!?])(?:\s+|$)", ast_body)
-                        compact_body = m_sent.group(1) if m_sent and len(m_sent.group(1)) <= 140 else ast_body[:120] + "..."
-                        grounded_text = prefix + compact_body
+            # Compact noisy assistant boilerplate only if the query is NOT asking about assistant content,
+            # and only if the assistant turn does NOT contain the query's topic keywords!
+            ql = query.lower()
+            is_assistant_query = any(w in ql for w in ["you", "your", "told me", "remind me", "suggest", "recommend", "previous conversation", "previous chat", "discussed", "mentioned", "author", "story", "book", "image", "title"])
+            q_topic_words = {w for w in re.findall(r"\b[a-zA-Z0-9_-]+\b", ql) if len(w) > 3 and w not in {"what", "when", "where", "which", "about", "from", "that", "this", "have", "with", "would", "could", "should"}}
+
+            if "assistant:" in grounded_text.lower() and not is_assistant_query:
+                if not any(tw in grounded_text.lower() for tw in q_topic_words):
+                    parts = re.split(r"(assistant:\s*)", grounded_text, maxsplit=1, flags=re.IGNORECASE)
+                    if len(parts) == 3:
+                        prefix = parts[0] + parts[1]
+                        ast_body = parts[2].strip()
+                        if len(ast_body) > 200:
+                            m_sent = re.match(r"(.*?[.!?])(?:\s+|$)", ast_body)
+                            compact_body = m_sent.group(1) if m_sent and len(m_sent.group(1)) <= 200 else ast_body[:180] + "..."
+                            grounded_text = prefix + compact_body
             lines.append(grounded_text)
 
         context_text = "\n".join(lines)
