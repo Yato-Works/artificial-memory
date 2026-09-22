@@ -1,0 +1,61 @@
+player,question_id,category,context_tokens,retrieval_ms,context_build_ms,answer_ms,total_latency_ms
+Simple RAG,factual_recall-00,factual_recall,397,9.5,0.0,401.3,401.3
+Simple RAG,multi_session_recall-00,multi_session_recall,371,7.8,0.0,219.0,219.0
+Simple RAG,temporal_reasoning-00,temporal_reasoning,381,7.6,0.0,304.4,304.4
+Simple RAG,knowledge_updates-00,knowledge_updates,331,7.2,0.0,227.4,227.4
+Simple RAG,contradiction_handling-00,contradiction_handling,415,12.9,0.0,251.1,251.1
+Simple RAG,indirect_recall-00,indirect_recall,381,7.1,0.0,248.0,248.0
+Simple RAG,distractor_resistance-00,distractor_resistance,366,6.8,0.0,239.0,239.0
+Simple RAG,abstention-00,abstention,374,13.3,0.0,1223.4,1223.4
+Simple RAG,compression_recovery-00,compression_recovery,467,7.3,0.0,347.6,347.6
+Simple RAG,reflection_reinterpretation-00,reflection_reinterpretation,403,11.8,0.0,399.8,399.8
+MemoryBank-style,factual_recall-00,factual_recall,397,13.1,0.0,109.8,109.8
+MemoryBank-style,multi_session_recall-00,multi_session_recall,371,7.0,0.0,85.2,85.2
+MemoryBank-style,temporal_reasoning-00,temporal_reasoning,381,7.1,0.0,134.9,134.9
+MemoryBank-style,knowledge_updates-00,knowledge_updates,331,6.8,0.0,104.7,104.7
+MemoryBank-style,contradiction_handling-00,contradiction_handling,415,7.2,0.0,86.3,86.3
+MemoryBank-style,indirect_recall-00,indirect_recall,381,7.0,0.0,102.5,102.5
+MemoryBank-style,distractor_resistance-00,distractor_resistance,366,7.1,0.0,101.5,101.5
+MemoryBank-style,abstention-00,abstention,374,7.0,0.0,974.4,974.4
+MemoryBank-style,compression_recovery-00,compression_recovery,467,7.0,0.0,153.9,153.9
+MemoryBank-style,reflection_reinterpretation-00,reflection_reinterpretation,403,7.1,0.0,297.6,297.6
+MemGPT-style,factual_recall-00,factual_recall,486,6.9,0.0,269.9,269.9
+MemGPT-style,multi_session_recall-00,multi_session_recall,460,7.4,0.0,224.9,224.9
+MemGPT-style,temporal_reasoning-00,temporal_reasoning,470,7.2,0.0,311.2,311.2
+MemGPT-style,knowledge_updates-00,knowledge_updates,420,7.1,0.0,229.9,229.9
+MemGPT-style,contradiction_handling-00,contradiction_handling,504,8.0,0.0,252.9,252.9
+MemGPT-style,indirect_recall-00,indirect_recall,470,8.3,0.0,263.6,263.6
+MemGPT-style,distractor_resistance-00,distractor_resistance,455,6.9,0.0,254.8,254.8
+MemGPT-style,abstention-00,abstention,463,12.8,0.0,232.1,232.1
+MemGPT-style,compression_recovery-00,compression_recovery,556,12.7,0.0,336.0,336.0
+MemGPT-style,reflection_reinterpretation-00,reflection_reinterpretation,492,7.6,0.0,401.8,401.8
+Mem0-style,factual_recall-00,factual_recall,272,14.5,0.0,190.0,190.0
+Mem0-style,multi_session_recall-00,multi_session_recall,304,14.0,0.0,187.1,187.1
+Mem0-style,temporal_reasoning-00,temporal_reasoning,279,14.9,0.0,254.5,254.5
+Mem0-style,knowledge_updates-00,knowledge_updates,303,21.0,0.0,213.7,213.7
+Mem0-style,contradiction_handling-00,contradiction_handling,253,14.7,0.0,190.4,190.4
+Mem0-style,indirect_recall-00,indirect_recall,300,13.5,0.0,228.6,228.6
+Mem0-style,distractor_resistance-00,distractor_resistance,310,13.5,0.0,225.1,225.1
+Mem0-style,abstention-00,abstention,275,14.0,0.0,206.5,206.5
+Mem0-style,compression_recovery-00,compression_recovery,382,13.9,0.0,295.7,295.7
+Mem0-style,reflection_reinterpretation-00,reflection_reinterpretation,310,21.6,0.0,453.3,453.3
+AM v0.2.0,factual_recall-00,factual_recall,522,20.3,0.0,265.5,265.5
+AM v0.2.0,multi_session_recall-00,multi_session_recall,494,16.6,0.0,404.0,404.0
+AM v0.2.0,temporal_reasoning-00,temporal_reasoning,528,16.5,0.0,279.1,279.1
+AM v0.2.0,knowledge_updates-00,knowledge_updates,516,16.3,0.0,466.8,466.8
+AM v0.2.0,contradiction_handling-00,contradiction_handling,517,16.8,0.0,281.5,281.5
+AM v0.2.0,indirect_recall-00,indirect_recall,509,16.8,0.0,279.7,279.7
+AM v0.2.0,distractor_resistance-00,distractor_resistance,520,16.4,0.0,277.7,277.7
+AM v0.2.0,abstention-00,abstention,521,18.9,0.0,274.0,274.0
+AM v0.2.0,compression_recovery-00,compression_recovery,522,21.3,0.0,292.5,292.5
+AM v0.2.0,reflection_reinterpretation-00,reflection_reinterpretation,534,16.4,0.0,362.3,362.3
+AM v0.2.0 (Hardened),factual_recall-00,factual_recall,1998,49.2,0.0,650.5,650.5
+AM v0.2.0 (Hardened),multi_session_recall-00,multi_session_recall,1995,48.1,0.0,666.1,666.1
+AM v0.2.0 (Hardened),temporal_reasoning-00,temporal_reasoning,1985,49.4,0.0,798.4,798.4
+AM v0.2.0 (Hardened),knowledge_updates-00,knowledge_updates,1995,45.4,0.0,697.2,697.2
+AM v0.2.0 (Hardened),contradiction_handling-00,contradiction_handling,2000,46.1,0.0,749.5,749.5
+AM v0.2.0 (Hardened),indirect_recall-00,indirect_recall,1996,46.5,0.0,697.1,697.1
+AM v0.2.0 (Hardened),distractor_resistance-00,distractor_resistance,1992,45.5,0.0,716.9,716.9
+AM v0.2.0 (Hardened),abstention-00,abstention,0,20.8,0.0,170.8,170.8
+AM v0.2.0 (Hardened),compression_recovery-00,compression_recovery,1976,44.1,0.0,704.2,704.2
+AM v0.2.0 (Hardened),reflection_reinterpretation-00,reflection_reinterpretation,1994,49.2,0.0,878.0,878.0

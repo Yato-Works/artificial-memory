@@ -1,0 +1,483 @@
+{
+  "benchmark": "LoCoMo-10 (Snap Research, ACL 2024)",
+  "total_conversations": 10,
+  "total_questions": 1986,
+  "micro_accuracy": 0.4254783484390735,
+  "macro_accuracy": 0.4295411258930807,
+  "micro_oracle_recall": 0.4602215508559919,
+  "macro_oracle_recall": 0.46268983443925105,
+  "mean_tokens_per_q": 153.70166163141994,
+  "mean_latency_ms": 341.9912518629298,
+  "total_elapsed_seconds": 679.2104068999761,
+  "write_llm_calls": 0,
+  "category_breakdown": {
+    "temporal": {
+      "total": 321,
+      "correct": 185,
+      "oracle": 204
+    },
+    "open-domain": {
+      "total": 96,
+      "correct": 13,
+      "oracle": 35
+    },
+    "multi-hop": {
+      "total": 282,
+      "correct": 66,
+      "oracle": 126
+    },
+    "single-hop": {
+      "total": 841,
+      "correct": 423,
+      "oracle": 474
+    },
+    "adversarial": {
+      "total": 446,
+      "correct": 158,
+      "oracle": 75
+    }
+  },
+  "conversations": [
+    {
+      "conv_idx": 0,
+      "sample_id": "conv-26",
+      "speakers": [
+        "Caroline",
+        "Melanie"
+      ],
+      "total_questions": 199,
+      "overall_accuracy": 0.4020100502512563,
+      "overall_oracle_recall": 0.44221105527638194,
+      "factual_accuracy": 0.4473684210526316,
+      "factual_oracle_recall": 0.5394736842105263,
+      "mean_tokens": 153.5,
+      "mean_latency_ms": 315.2,
+      "elapsed_seconds": 62.7,
+      "categories": {
+        "temporal": {
+          "total": 37,
+          "correct": 24,
+          "oracle": 28
+        },
+        "open-domain": {
+          "total": 13,
+          "correct": 2,
+          "oracle": 6
+        },
+        "multi-hop": {
+          "total": 32,
+          "correct": 12,
+          "oracle": 15
+        },
+        "single-hop": {
+          "total": 70,
+          "correct": 30,
+          "oracle": 33
+        },
+        "adversarial": {
+          "total": 47,
+          "correct": 12,
+          "oracle": 6
+        }
+      }
+    },
+    {
+      "conv_idx": 1,
+      "sample_id": "conv-30",
+      "speakers": [
+        "Gina",
+        "Jon"
+      ],
+      "total_questions": 105,
+      "overall_accuracy": 0.49523809523809526,
+      "overall_oracle_recall": 0.4857142857142857,
+      "factual_accuracy": 0.49382716049382713,
+      "factual_oracle_recall": 0.5679012345679012,
+      "mean_tokens": 158.0,
+      "mean_latency_ms": 326.6,
+      "elapsed_seconds": 34.3,
+      "categories": {
+        "temporal": {
+          "total": 26,
+          "correct": 22,
+          "oracle": 21
+        },
+        "single-hop": {
+          "total": 44,
+          "correct": 16,
+          "oracle": 20
+        },
+        "multi-hop": {
+          "total": 11,
+          "correct": 2,
+          "oracle": 5
+        },
+        "adversarial": {
+          "total": 24,
+          "correct": 12,
+          "oracle": 5
+        }
+      }
+    },
+    {
+      "conv_idx": 2,
+      "sample_id": "conv-41",
+      "speakers": [
+        "John",
+        "Maria"
+      ],
+      "total_questions": 193,
+      "total_turns": 663,
+      "total_ir_records": 663,
+      "overall_accuracy": 0.5077720207253886,
+      "overall_oracle_recall": 0.5699481865284974,
+      "factual_accuracy": 0.5131578947368421,
+      "factual_oracle_recall": 0.6381578947368421,
+      "mean_tokens": 155.65284974093265,
+      "mean_latency_ms": 355.6813740931811,
+      "elapsed_seconds": 68.6501702000096,
+      "categories": {
+        "temporal": {
+          "total": 27,
+          "correct": 19,
+          "oracle": 21
+        },
+        "multi-hop": {
+          "total": 31,
+          "correct": 7,
+          "oracle": 18
+        },
+        "open-domain": {
+          "total": 8,
+          "correct": 1,
+          "oracle": 1
+        },
+        "single-hop": {
+          "total": 86,
+          "correct": 51,
+          "oracle": 57
+        },
+        "adversarial": {
+          "total": 41,
+          "correct": 20,
+          "oracle": 13
+        }
+      }
+    },
+    {
+      "conv_idx": 3,
+      "sample_id": "conv-42",
+      "speakers": [
+        "Joanna",
+        "Nate"
+      ],
+      "total_questions": 260,
+      "total_turns": 629,
+      "total_ir_records": 629,
+      "overall_accuracy": 0.4,
+      "overall_oracle_recall": 0.4346153846153846,
+      "factual_accuracy": 0.4321608040201005,
+      "factual_oracle_recall": 0.5276381909547738,
+      "mean_tokens": 147.2923076923077,
+      "mean_latency_ms": 332.10142961515186,
+      "elapsed_seconds": 86.35155709998799,
+      "categories": {
+        "open-domain": {
+          "total": 11,
+          "correct": 2,
+          "oracle": 3
+        },
+        "multi-hop": {
+          "total": 37,
+          "correct": 5,
+          "oracle": 14
+        },
+        "temporal": {
+          "total": 40,
+          "correct": 22,
+          "oracle": 27
+        },
+        "single-hop": {
+          "total": 111,
+          "correct": 57,
+          "oracle": 61
+        },
+        "adversarial": {
+          "total": 61,
+          "correct": 18,
+          "oracle": 8
+        }
+      }
+    },
+    {
+      "conv_idx": 4,
+      "sample_id": "conv-43",
+      "speakers": [
+        "John",
+        "Tim"
+      ],
+      "total_questions": 242,
+      "total_turns": 680,
+      "total_ir_records": 680,
+      "overall_accuracy": 0.4214876033057851,
+      "overall_oracle_recall": 0.43388429752066116,
+      "factual_accuracy": 0.4887640449438202,
+      "factual_oracle_recall": 0.5449438202247191,
+      "mean_tokens": 155.28512396694214,
+      "mean_latency_ms": 341.00339710719646,
+      "elapsed_seconds": 82.5280422999931,
+      "categories": {
+        "multi-hop": {
+          "total": 31,
+          "correct": 8,
+          "oracle": 11
+        },
+        "open-domain": {
+          "total": 14,
+          "correct": 2,
+          "oracle": 8
+        },
+        "temporal": {
+          "total": 26,
+          "correct": 19,
+          "oracle": 17
+        },
+        "single-hop": {
+          "total": 107,
+          "correct": 58,
+          "oracle": 61
+        },
+        "adversarial": {
+          "total": 64,
+          "correct": 15,
+          "oracle": 8
+        }
+      }
+    },
+    {
+      "conv_idx": 5,
+      "sample_id": "conv-44",
+      "speakers": [
+        "Andrew",
+        "Audrey"
+      ],
+      "total_questions": 158,
+      "total_turns": 675,
+      "total_ir_records": 675,
+      "overall_accuracy": 0.45569620253164556,
+      "overall_oracle_recall": 0.44936708860759494,
+      "factual_accuracy": 0.45528455284552843,
+      "factual_oracle_recall": 0.5121951219512195,
+      "mean_tokens": 154.70253164556962,
+      "mean_latency_ms": 359.8336582274701,
+      "elapsed_seconds": 56.856772099999944,
+      "categories": {
+        "temporal": {
+          "total": 24,
+          "correct": 11,
+          "oracle": 11
+        },
+        "multi-hop": {
+          "total": 30,
+          "correct": 7,
+          "oracle": 11
+        },
+        "open-domain": {
+          "total": 7,
+          "correct": 0,
+          "oracle": 0
+        },
+        "single-hop": {
+          "total": 62,
+          "correct": 38,
+          "oracle": 41
+        },
+        "adversarial": {
+          "total": 35,
+          "correct": 16,
+          "oracle": 8
+        }
+      }
+    },
+    {
+      "conv_idx": 6,
+      "sample_id": "conv-47",
+      "speakers": [
+        "James",
+        "John"
+      ],
+      "total_questions": 190,
+      "total_turns": 689,
+      "total_ir_records": 689,
+      "overall_accuracy": 0.3631578947368421,
+      "overall_oracle_recall": 0.42105263157894735,
+      "factual_accuracy": 0.38666666666666666,
+      "factual_oracle_recall": 0.49333333333333335,
+      "mean_tokens": 151.18947368421053,
+      "mean_latency_ms": 343.2142863169582,
+      "elapsed_seconds": 65.214479199989,
+      "categories": {
+        "open-domain": {
+          "total": 13,
+          "correct": 1,
+          "oracle": 6
+        },
+        "temporal": {
+          "total": 34,
+          "correct": 12,
+          "oracle": 18
+        },
+        "multi-hop": {
+          "total": 20,
+          "correct": 5,
+          "oracle": 5
+        },
+        "single-hop": {
+          "total": 83,
+          "correct": 40,
+          "oracle": 45
+        },
+        "adversarial": {
+          "total": 40,
+          "correct": 11,
+          "oracle": 6
+        }
+      }
+    },
+    {
+      "conv_idx": 7,
+      "sample_id": "conv-48",
+      "speakers": [
+        "Deborah",
+        "Jolene"
+      ],
+      "total_questions": 239,
+      "total_turns": 681,
+      "total_ir_records": 681,
+      "overall_accuracy": 0.46443514644351463,
+      "overall_oracle_recall": 0.46443514644351463,
+      "factual_accuracy": 0.42408376963350786,
+      "factual_oracle_recall": 0.5549738219895288,
+      "mean_tokens": 154.6694560669456,
+      "mean_latency_ms": 351.5684000002347,
+      "elapsed_seconds": 84.02961959998356,
+      "categories": {
+        "temporal": {
+          "total": 42,
+          "correct": 20,
+          "oracle": 21
+        },
+        "multi-hop": {
+          "total": 21,
+          "correct": 4,
+          "oracle": 11
+        },
+        "open-domain": {
+          "total": 10,
+          "correct": 2,
+          "oracle": 6
+        },
+        "single-hop": {
+          "total": 118,
+          "correct": 55,
+          "oracle": 68
+        },
+        "adversarial": {
+          "total": 48,
+          "correct": 30,
+          "oracle": 5
+        }
+      }
+    },
+    {
+      "conv_idx": 8,
+      "sample_id": "conv-49",
+      "speakers": [
+        "Evan",
+        "Sam"
+      ],
+      "total_questions": 196,
+      "total_turns": 509,
+      "total_ir_records": 509,
+      "overall_accuracy": 0.40816326530612246,
+      "overall_oracle_recall": 0.47959183673469385,
+      "factual_accuracy": 0.44871794871794873,
+      "factual_oracle_recall": 0.5641025641025641,
+      "mean_tokens": 154.30102040816325,
+      "mean_latency_ms": 332.7515928565622,
+      "elapsed_seconds": 65.22322810001788,
+      "categories": {
+        "multi-hop": {
+          "total": 37,
+          "correct": 10,
+          "oracle": 21
+        },
+        "temporal": {
+          "total": 33,
+          "correct": 18,
+          "oracle": 21
+        },
+        "open-domain": {
+          "total": 13,
+          "correct": 2,
+          "oracle": 3
+        },
+        "single-hop": {
+          "total": 73,
+          "correct": 40,
+          "oracle": 43
+        },
+        "adversarial": {
+          "total": 40,
+          "correct": 10,
+          "oracle": 6
+        }
+      }
+    },
+    {
+      "conv_idx": 9,
+      "sample_id": "conv-50",
+      "speakers": [
+        "Calvin",
+        "Dave"
+      ],
+      "total_questions": 204,
+      "total_turns": 568,
+      "total_ir_records": 568,
+      "overall_accuracy": 0.37745098039215685,
+      "overall_oracle_recall": 0.44607843137254904,
+      "factual_accuracy": 0.3987341772151899,
+      "factual_oracle_recall": 0.5126582278481012,
+      "mean_tokens": 155.98529411764707,
+      "mean_latency_ms": 359.5712499990637,
+      "elapsed_seconds": 73.35653829999501,
+      "categories": {
+        "temporal": {
+          "total": 32,
+          "correct": 18,
+          "oracle": 19
+        },
+        "multi-hop": {
+          "total": 32,
+          "correct": 6,
+          "oracle": 15
+        },
+        "open-domain": {
+          "total": 7,
+          "correct": 1,
+          "oracle": 2
+        },
+        "single-hop": {
+          "total": 87,
+          "correct": 38,
+          "oracle": 45
+        },
+        "adversarial": {
+          "total": 46,
+          "correct": 14,
+          "oracle": 10
+        }
+      }
+    }
+  ]
+}

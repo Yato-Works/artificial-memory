@@ -1,0 +1,1947 @@
+{
+  "summary": {
+    "conv_idx": 6,
+    "sample_id": "conv-47",
+    "mode": "retrieval_only",
+    "total_questions": 190,
+    "total_turns": 689,
+    "total_ir_records": 689,
+    "overall_accuracy": 0.0,
+    "overall_oracle_recall": 0.7526315789473684,
+    "factual_accuracy": 0.0,
+    "factual_oracle_recall": 0.7866666666666666,
+    "mean_tokens": 2309.7,
+    "mean_latency_ms": 0.0,
+    "elapsed_seconds": 86.45207020000089,
+    "categories": {
+      "open-domain": {
+        "total": 13,
+        "correct": 0,
+        "oracle": 9
+      },
+      "temporal": {
+        "total": 34,
+        "correct": 0,
+        "oracle": 27
+      },
+      "multi-hop": {
+        "total": 20,
+        "correct": 0,
+        "oracle": 13
+      },
+      "single-hop": {
+        "total": 83,
+        "correct": 0,
+        "oracle": 69
+      },
+      "adversarial": {
+        "total": 40,
+        "correct": 0,
+        "oracle": 25
+      }
+    },
+    "failure_taxonomy_v2": {}
+  },
+  "results": [
+    {
+      "question_id": "conv-47-qa-000",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Obesity",
+      "tokens_used": 2147,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-001",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "bowling",
+      "tokens_used": 2131,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-002",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "VR Club, McGee's, baseball game",
+      "tokens_used": 2258,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-003",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "No",
+      "tokens_used": 2233,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-004",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "February 2022",
+      "tokens_used": 2355,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-005",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "John's favorite game is CS:GO, and James's is Apex Legends.",
+      "tokens_used": 2216,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-006",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Likely yes",
+      "tokens_used": 2216,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-007",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Connecticut.",
+      "tokens_used": 2221,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-008",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Three dogs.",
+      "tokens_used": 2750,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-009",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "Ned, Daisy, Max",
+      "tokens_used": 2193,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-010",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "first week of April 2022",
+      "tokens_used": 2243,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-011",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "seeking solitude",
+      "tokens_used": 2134,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-012",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Presumably not",
+      "tokens_used": 2303,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-013",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "In 2021",
+      "tokens_used": 2277,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-014",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "April 26, 2022",
+      "tokens_used": 2189,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-015",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "March 2022",
+      "tokens_used": 2317,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-016",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "UNO",
+      "tokens_used": 2379,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-017",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "Mafia",
+      "tokens_used": 2440,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-018",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "The Name of the Wind, Stormlight Archive, Kingkiller Chronicles, Expanse",
+      "tokens_used": 2171,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-019",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "Most likely yes, because he mentioned that the only creatures that gave him joy are dogs and he was actively trying to date.",
+      "tokens_used": 2494,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-020",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "two",
+      "tokens_used": 2912,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-021",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "May 7, 2022",
+      "tokens_used": 2536,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-022",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "animal shelter, homeless, children's hospital",
+      "tokens_used": 2563,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-023",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "In July, 2022",
+      "tokens_used": 2387,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-024",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "football simulator, virtual world inspired by Witcher 3",
+      "tokens_used": 2196,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-025",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "No, James is a Liverpool fan and John is a Manchester City fan.",
+      "tokens_used": 2405,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-026",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Italy, Mexico, Turkey, Canada, Greenland",
+      "tokens_used": 2219,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-027",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "game design course, cooking classes",
+      "tokens_used": 2197,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-028",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "May 2022",
+      "tokens_used": 2379,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-029",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "July 11, 2022",
+      "tokens_used": 2371,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-030",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Canada",
+      "tokens_used": 2125,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-031",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "19 days",
+      "tokens_used": 2772,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-032",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "Toronto, Canada",
+      "tokens_used": 2200,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-033",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "Yes",
+      "tokens_used": 2428,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-034",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Canada, Greenland",
+      "tokens_used": 2141,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-035",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "Greenland",
+      "tokens_used": 2339,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-036",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Most likely John's partner.",
+      "tokens_used": 1936,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-037",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "July 21, 2022",
+      "tokens_used": 2477,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-038",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "quit his IT Job, secured his dream job, aspires to become an eSports competition organizer",
+      "tokens_used": 2102,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-039",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "2019",
+      "tokens_used": 2394,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-040",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "swimming, catching frisbees, balancing on a skateboard, sit, stay, paw, and rollover",
+      "tokens_used": 2201,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-041",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "August 9, 2022",
+      "tokens_used": 2364,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-042",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "August 9, 2022",
+      "tokens_used": 2294,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-043",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "In September, 2022",
+      "tokens_used": 2437,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-044",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Possibly because he likes to drink beer on his days off.",
+      "tokens_used": 2253,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-045",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Stout, lager",
+      "tokens_used": 2076,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-046",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "August 27, 2022",
+      "tokens_used": 2142,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-047",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "September 3, 2022",
+      "tokens_used": 2406,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-048",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "September 11, 2022",
+      "tokens_used": 2233,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-049",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Sennheiser headphones, Logitech mouse, gaming desk",
+      "tokens_used": 2286,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-050",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "September 2, 2022",
+      "tokens_used": 2295,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-051",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "AC Valhalla, Witcher 3, FIFA 23, Dungeons of the Dragons, futuristic dystopian game",
+      "tokens_used": 2286,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-052",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "approximately summer of 2022",
+      "tokens_used": 2425,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-053",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "six months",
+      "tokens_used": 3092,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-054",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "online programming competition, programming seminar",
+      "tokens_used": 2272,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-055",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Last week before 13 October 2022.",
+      "tokens_used": 2588,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-056",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "mother, sister",
+      "tokens_used": 2342,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-057",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "October 19, 2022",
+      "tokens_used": 2400,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-058",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "October 20, 2022",
+      "tokens_used": 2369,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-059",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "On the night of October 30 to 31, 2022",
+      "tokens_used": 2528,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-060",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "CS:GO, Fortnite, Overwatch and Apex Legends",
+      "tokens_used": 2337,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-061",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "They decided to live together and rented an apartment not far from McGee's bar.",
+      "tokens_used": 2316,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-062",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "nearly three months",
+      "tokens_used": 2950,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-063",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "November 4, 2022",
+      "tokens_used": 2409,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-064",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "nearly four months",
+      "tokens_used": 2885,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-065",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "November 7, 2022",
+      "tokens_used": 2344,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-066",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "November 5-6, 2022",
+      "tokens_used": 2328,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-067",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Python and C++",
+      "tokens_used": 2271,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-068",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "An app for dog walking and pet care",
+      "tokens_used": 2210,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-069",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "By allowing users to customize their pup's preferences/needs",
+      "tokens_used": 2222,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-070",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "bottle caps",
+      "tokens_used": 2376,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-071",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "help find the perfect pet",
+      "tokens_used": 2177,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-072",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Drums",
+      "tokens_used": 2119,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-073",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "One month",
+      "tokens_used": 2564,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-074",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "CS:GO",
+      "tokens_used": 2203,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-075",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Apex Legends",
+      "tokens_used": 2389,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-076",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "voice chat",
+      "tokens_used": 2263,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-077",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "never put your ego above team success",
+      "tokens_used": 2298,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-078",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "a pup",
+      "tokens_used": 2108,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-079",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Ned",
+      "tokens_used": 2177,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-080",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "He found her appearance and eyes amazing.",
+      "tokens_used": 2418,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-081",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "Appearance of a woman he saw during a walk",
+      "tokens_used": 2401,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-082",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Italy",
+      "tokens_used": 2286,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-083",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Technologically advanced megacities and tasty street food",
+      "tokens_used": 2194,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-084",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Coding assignment",
+      "tokens_used": 2240,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-085",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Labrador",
+      "tokens_used": 2251,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-086",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Pepperoni",
+      "tokens_used": 2144,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-087",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Hawaiian",
+      "tokens_used": 2089,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-088",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "A tournament for CS:GO",
+      "tokens_used": 2315,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-089",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Bought groceries and cooked food for the homeless",
+      "tokens_used": 2577,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-090",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Raise money for a dog shelter",
+      "tokens_used": 2385,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-091",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "tracking inventory, resources, and donations",
+      "tokens_used": 2592,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-092",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "computer application on smartphones",
+      "tokens_used": 2377,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-093",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "money and a trophy",
+      "tokens_used": 2308,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-094",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "a new part of the football simulator, collecting player databases",
+      "tokens_used": 817,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-095",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Liverpool",
+      "tokens_used": 2232,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-096",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "Manchester City",
+      "tokens_used": 2142,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-097",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "debating on which team will perform better in the championship",
+      "tokens_used": 2224,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-098",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "catching frisbees in mid-air",
+      "tokens_used": 2243,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-099",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "providing necessary items to those who are less fortunate",
+      "tokens_used": 2280,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-100",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "No",
+      "tokens_used": 2305,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-101",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Reading",
+      "tokens_used": 2520,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-102",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Reading while snuggled under the covers",
+      "tokens_used": 2224,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-103",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Extreme sports",
+      "tokens_used": 2258,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-104",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Vancouver",
+      "tokens_used": 2272,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-105",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "July 20",
+      "tokens_used": 2374,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-106",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Chess",
+      "tokens_used": 2347,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-107",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "to focus on things that align with his values and passions",
+      "tokens_used": 2455,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-108",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Fortnite competitions",
+      "tokens_used": 2343,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-109",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "routine examination and vaccination",
+      "tokens_used": 2248,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-110",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "strategy and RPG games",
+      "tokens_used": 2207,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-111",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "The Witcher 3",
+      "tokens_used": 2300,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-112",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "shaping the world with choices",
+      "tokens_used": 2385,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-113",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Samantha",
+      "tokens_used": 2203,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-114",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "call her",
+      "tokens_used": 2237,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-115",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "a gaming night",
+      "tokens_used": 2552,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-116",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "dark beer",
+      "tokens_used": 2229,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-117",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "balancing mechanics and ensuring fairness",
+      "tokens_used": 2372,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-118",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "coding",
+      "tokens_used": 2449,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-119",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "basic games and stories",
+      "tokens_used": 2359,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-120",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Sennheiser",
+      "tokens_used": 2305,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-121",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Lager beer",
+      "tokens_used": 2196,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-122",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "$10",
+      "tokens_used": 3071,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-123",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Dough",
+      "tokens_used": 2296,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-124",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "He wanted to learn something new",
+      "tokens_used": 2339,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-125",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Omelette",
+      "tokens_used": 2394,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-126",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Dungeons of the Dragon",
+      "tokens_used": 2433,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-127",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "books, movies, dreams",
+      "tokens_used": 2382,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-128",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "a dream with a medieval castle full of puzzles and traps",
+      "tokens_used": 2407,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-129",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "electronic and rock music",
+      "tokens_used": 2168,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-130",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "guitar",
+      "tokens_used": 2236,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-131",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "drums",
+      "tokens_used": 2291,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-132",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "making his first mobile game",
+      "tokens_used": 2339,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-133",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "2D adventure",
+      "tokens_used": 2198,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-134",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "watch tutorials and keep up with developer forums",
+      "tokens_used": 2354,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-135",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "programming mentor for game developers",
+      "tokens_used": 2220,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-136",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "excited and inspired",
+      "tokens_used": 2475,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-137",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "RPGs",
+      "tokens_used": 2247,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-138",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Witcher 3",
+      "tokens_used": 2322,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-139",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Super Mario and The Legend of Zelda games",
+      "tokens_used": 2331,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-140",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "a game",
+      "tokens_used": 2270,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-141",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Fortnite, Overwatch, Apex Legends",
+      "tokens_used": 2416,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-142",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "To raise money for a children's hospital",
+      "tokens_used": 2428,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-143",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "To move in together",
+      "tokens_used": 2323,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-144",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "In an apartment not far from McGee's bar",
+      "tokens_used": 2229,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-145",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "They love spending time together at the bar",
+      "tokens_used": 2278,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-146",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "FIFA 23",
+      "tokens_used": 2113,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-147",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "Control with a gamepad and timing",
+      "tokens_used": 3463,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-148",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "An online board game",
+      "tokens_used": 712,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-149",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "Luna",
+      "tokens_used": 2239,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-150",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 2050,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-151",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 2157,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-152",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 2399,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-153",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 2136,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-154",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 2237,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-155",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 2518,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-156",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 2391,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-157",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 2533,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-158",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 2373,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-159",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 2222,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-160",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 2326,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-161",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 2312,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-162",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 2422,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-163",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 2294,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-164",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 2329,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-165",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 2388,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-166",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 2309,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-167",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 2248,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-168",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 2268,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-169",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 2089,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-170",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 2193,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-171",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 3066,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-172",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 2347,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-173",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 2344,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-174",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 2233,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-175",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 2357,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-176",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 2408,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-177",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 2130,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-178",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 2346,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-179",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 2413,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-180",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 2487,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-181",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 2384,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-182",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 2366,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-183",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 2349,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-184",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 2351,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-185",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 2326,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-186",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 2146,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-187",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 2081,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-188",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 712,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-189",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 2193,
+      "latency_ms": 0.0,
+      "is_correct": false
+    }
+  ]
+}

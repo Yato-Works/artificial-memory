@@ -1,0 +1,82 @@
+================================================================================
+      LOCOMO EXPERIMENT RUNNER (Phase 0 Measurement Harness)
+================================================================================
+Mode: FULL (frozen LLM) | Convs: [7, 8, 9] | Out: benchmark_results\locomo10_runs\subject_binding_v1
+Frozen protocol: scorer / dataset / LLM config untouched.
+================================================================================
+
+===========================================================================
+--- STARTING CONVERSATION 7 (FULL (frozen LLM)) ---
+===========================================================================
+Sample ID: conv-48
+Ingested 681 turns into 681 StructuredIR records in 0.34s.
+Evaluating 239 questions...
+  [025/239] Acc:  56.0% | Ora:  80.0% | Tok/Q: 1354.3 | Q: What new yoga poses did Deborah 
+  [050/239] Acc:  50.0% | Ora:  80.0% | Tok/Q: 1397.1 | Q: How long has Jolene been doing y
+  [075/239] Acc:  50.7% | Ora:  82.7% | Tok/Q: 1382.1 | Q: What do Deborah and Jolene plan 
+  [100/239] Acc:  50.0% | Ora:  82.0% | Tok/Q: 1374.3 | Q: What do Deborah and Jolene plan 
+  [125/239] Acc:  55.2% | Ora:  80.8% | Tok/Q: 1364.6 | Q: How does Jolene plan to pursue h
+  [150/239] Acc:  60.7% | Ora:  82.7% | Tok/Q: 1372.3 | Q: What game did Jolene recommend f
+  [175/239] Acc:  65.1% | Ora:  84.0% | Tok/Q: 1390.5 | Q: Why did Jolene have to reschedul
+  [200/239] Acc:  64.5% | Ora:  82.5% | Tok/Q: 1395.3 | Q: What cool stuff did Deborah acco
+  [225/239] Acc:  61.3% | Ora:  81.8% | Tok/Q: 1412.3 | Q: What did Deborah's mom stress th
+  [239/239] Acc:  60.3% | Ora:  80.3% | Tok/Q: 1411.8 | Q: What activity did Jolene enjoy a
+
+>> CONV 7 COMPLETED in 423.6s:
+   * Oracle Recall:  80.3% (192/239)
+   * Accuracy:       60.3% (144/239)
+   * Mean Latency:   1771.9 ms
+   * Mean Tokens/Q:  1411.8 tok
+   * Saved to:       benchmark_results\locomo10_runs\subject_binding_v1\conv_7_results.json
+
+===========================================================================
+--- STARTING CONVERSATION 8 (FULL (frozen LLM)) ---
+===========================================================================
+Sample ID: conv-49
+Ingested 509 turns into 509 StructuredIR records in 0.28s.
+Evaluating 196 questions...
+  [025/196] Acc:  72.0% | Ora:  88.0% | Tok/Q: 1576.6 | Q: What significant event happened 
+  [050/196] Acc:  60.0% | Ora:  78.0% | Tok/Q: 1525.1 | Q: Who was injured in Evan's family
+  [075/196] Acc:  56.0% | Ora:  78.7% | Tok/Q: 1502.5 | Q: When did Evan's son fall off his
+  [100/196] Acc:  59.0% | Ora:  80.0% | Tok/Q: 1515.7 | Q: What did Evan suggest Sam to che
+  [125/196] Acc:  60.0% | Ora:  80.0% | Tok/Q: 1527.3 | Q: What does Evan mention about his
+  [150/196] Acc:  64.7% | Ora:  80.7% | Tok/Q: 1536.3 | Q: What advice did Evan suggest Sam
+  [175/196] Acc:  60.6% | Ora:  78.3% | Tok/Q: 1522.2 | Q: What activity does Sam do to kee
+  [196/196] Acc:  56.6% | Ora:  76.0% | Tok/Q: 1507.8 | Q: What did Sam share a photo of th
+
+>> CONV 8 COMPLETED in 333.4s:
+   * Oracle Recall:  76.0% (149/196)
+   * Accuracy:       56.6% (111/196)
+   * Mean Latency:   1700.9 ms
+   * Mean Tokens/Q:  1507.8 tok
+   * Saved to:       benchmark_results\locomo10_runs\subject_binding_v1\conv_8_results.json
+
+===========================================================================
+--- STARTING CONVERSATION 9 (FULL (frozen LLM)) ---
+===========================================================================
+Sample ID: conv-50
+Ingested 568 turns into 568 StructuredIR records in 0.34s.
+Evaluating 204 questions...
+  [025/204] Acc:  56.0% | Ora:  84.0% | Tok/Q: 1534.0 | Q: Can Dave work with engines?
+  [050/204] Acc:  56.0% | Ora:  84.0% | Tok/Q: 1533.5 | Q: When Dave was a child, what did 
+  [075/204] Acc:  53.3% | Ora:  78.7% | Tok/Q: 1610.0 | Q: What advice did Calvin receive f
+  [100/204] Acc:  59.0% | Ora:  80.0% | Tok/Q: 1583.7 | Q: How did Calvin meet Frank Ocean?
+  [125/204] Acc:  61.6% | Ora:  79.2% | Tok/Q: 1570.6 | Q: What activity does Dave find ful
+  [150/204] Acc:  62.0% | Ora:  76.7% | Tok/Q: 1562.8 | Q: What kind of impact does Dave's 
+  [175/204] Acc:  56.6% | Ora:  74.9% | Tok/Q: 1552.7 | Q: What design is featured on Dave'
+  [200/204] Acc:  51.5% | Ora:  74.0% | Tok/Q: 1550.3 | Q: Who did Dave invite to see him p
+  [204/204] Acc:  50.5% | Ora:  72.5% | Tok/Q: 1550.9 | Q: Where did Calvin take a stunning
+
+>> CONV 9 COMPLETED in 346.9s:
+   * Oracle Recall:  72.5% (148/204)
+   * Accuracy:       50.5% (103/204)
+   * Mean Latency:   1699.9 ms
+   * Mean Tokens/Q:  1550.9 tok
+   * Saved to:       benchmark_results\locomo10_runs\subject_binding_v1\conv_9_results.json
+
+================================================================================
+RUN TAG: subject_binding_v1 | Questions: 639
+Micro Oracle Recall: 76.53% (489/639)
+Micro Accuracy:      56.03% (358/639)
+Total time: 1105.2s
+================================================================================

@@ -1,0 +1,296 @@
+{
+  "accuracy": 9.375,
+  "oracle_recall": 21.875,
+  "mean_tokens": 341.625,
+  "elapsed_s": 13.152808199999527,
+  "results": [
+    {
+      "question_id": "conv-26-qa-003",
+      "question": "What did Caroline research?",
+      "ground_truth": "Adoption agencies",
+      "pred": "Kids' books",
+      "is_correct": false,
+      "oracle_recall": false,
+      "tokens": 248
+    },
+    {
+      "question_id": "conv-26-qa-004",
+      "question": "What is Caroline's identity?",
+      "ground_truth": "Transgender woman",
+      "pred": "I don't know.",
+      "is_correct": false,
+      "oracle_recall": false,
+      "tokens": 311
+    },
+    {
+      "question_id": "conv-26-qa-007",
+      "question": "What is Caroline's relationship status?",
+      "ground_truth": "Single",
+      "pred": "I don't know.",
+      "is_correct": false,
+      "oracle_recall": false,
+      "tokens": 347
+    },
+    {
+      "question_id": "conv-26-qa-011",
+      "question": "Where did Caroline move from 4 years ago?",
+      "ground_truth": "Sweden",
+      "pred": "I don't know.",
+      "is_correct": false,
+      "oracle_recall": false,
+      "tokens": 378
+    },
+    {
+      "question_id": "conv-26-qa-013",
+      "question": "What career path has Caroline decided to persue?",
+      "ground_truth": "counseling or mental health for Transgender people",
+      "pred": "Counseling and mental health",
+      "is_correct": true,
+      "oracle_recall": false,
+      "tokens": 315
+    },
+    {
+      "question_id": "conv-26-qa-015",
+      "question": "What activities does Melanie partake in?",
+      "ground_truth": "pottery, camping, painting, swimming",
+      "pred": "Pottery class",
+      "is_correct": false,
+      "oracle_recall": true,
+      "tokens": 273
+    },
+    {
+      "question_id": "conv-26-qa-018",
+      "question": "Where has Melanie camped?",
+      "ground_truth": "beach, mountains, forest",
+      "pred": "I don't know.",
+      "is_correct": false,
+      "oracle_recall": false,
+      "tokens": 341
+    },
+    {
+      "question_id": "conv-26-qa-019",
+      "question": "What do Melanie's kids like?",
+      "ground_truth": "dinosaurs, nature",
+      "pred": "Exploring and playing outdoors",
+      "is_correct": false,
+      "oracle_recall": false,
+      "tokens": 404
+    },
+    {
+      "question_id": "conv-26-qa-023",
+      "question": "What books has Melanie read?",
+      "ground_truth": "\"Nothing is Impossible\", \"Charlotte's Web\"",
+      "pred": "I don't know.",
+      "is_correct": false,
+      "oracle_recall": false,
+      "tokens": 250
+    },
+    {
+      "question_id": "conv-26-qa-024",
+      "question": "What does Melanie do to destress?",
+      "ground_truth": "Running, pottery",
+      "pred": "Melanie enjoys family time.",
+      "is_correct": false,
+      "oracle_recall": false,
+      "tokens": 251
+    },
+    {
+      "question_id": "conv-26-qa-032",
+      "question": "What LGBTQ+ events has Caroline participated in?",
+      "ground_truth": "Pride parade, school speech, support group",
+      "pred": "Participated in a support group for LGBTQ+ adoption.",
+      "is_correct": false,
+      "oracle_recall": true,
+      "tokens": 313
+    },
+    {
+      "question_id": "conv-26-qa-034",
+      "question": "What events has Caroline participated in to help children?",
+      "ground_truth": "Mentoring program, school speech",
+      "pred": "Applied to adoption agencies",
+      "is_correct": false,
+      "oracle_recall": false,
+      "tokens": 373
+    },
+    {
+      "question_id": "conv-26-qa-037",
+      "question": "What did Melanie paint recently?",
+      "ground_truth": "sunset",
+      "pred": "A painting inspired by sunsets",
+      "is_correct": true,
+      "oracle_recall": false,
+      "tokens": 298
+    },
+    {
+      "question_id": "conv-26-qa-038",
+      "question": "What activities has Melanie done with her family?",
+      "ground_truth": "Pottery, painting, camping, museum, swimming, hiking",
+      "pred": "Camping and hanging with the kids",
+      "is_correct": false,
+      "oracle_recall": true,
+      "tokens": 333
+    },
+    {
+      "question_id": "conv-26-qa-039",
+      "question": "In what ways is Caroline participating in the LGBTQ community?",
+      "ground_truth": "Joining activist group, going to pride parades, participating in an art show, mentoring program",
+      "pred": "Joining an activist group, attending conferences, representing LGBTQ+ themes in art, and advocating for trans rights.",
+      "is_correct": false,
+      "oracle_recall": true,
+      "tokens": 476
+    },
+    {
+      "question_id": "conv-26-qa-040",
+      "question": "How many times has Melanie gone to the beach in 2023?",
+      "ground_truth": "2",
+      "pred": "Once",
+      "is_correct": false,
+      "oracle_recall": false,
+      "tokens": 439
+    },
+    {
+      "question_id": "conv-26-qa-043",
+      "question": "What kind of art does Caroline make?",
+      "ground_truth": "abstract art",
+      "pred": "Drawing flowers",
+      "is_correct": false,
+      "oracle_recall": false,
+      "tokens": 360
+    },
+    {
+      "question_id": "conv-26-qa-047",
+      "question": "Who supports Caroline when she has a negative experience?",
+      "ground_truth": "Her mentors, family, and friends",
+      "pred": "Her friends, family, and mentors",
+      "is_correct": true,
+      "oracle_recall": true,
+      "tokens": 432
+    },
+    {
+      "question_id": "conv-26-qa-048",
+      "question": "What types of pottery have Melanie and her kids made?",
+      "ground_truth": "bowls, cup",
+      "pred": "Marshmallow roasting and nature learning",
+      "is_correct": false,
+      "oracle_recall": false,
+      "tokens": 401
+    },
+    {
+      "question_id": "conv-26-qa-051",
+      "question": "What has Melanie painted?",
+      "ground_truth": "Horse, sunset, sunrise",
+      "pred": "A lake sunrise",
+      "is_correct": false,
+      "oracle_recall": false,
+      "tokens": 233
+    },
+    {
+      "question_id": "conv-26-qa-052",
+      "question": "What are Melanie's pets' names?",
+      "ground_truth": "Oliver, Luna, Bailey",
+      "pred": "Oscar",
+      "is_correct": false,
+      "oracle_recall": false,
+      "tokens": 320
+    },
+    {
+      "question_id": "conv-26-qa-055",
+      "question": "What subject have Caroline and Melanie both painted?",
+      "ground_truth": "Sunsets",
+      "pred": "Painting",
+      "is_correct": false,
+      "oracle_recall": false,
+      "tokens": 374
+    },
+    {
+      "question_id": "conv-26-qa-056",
+      "question": "What symbols are important to Caroline?",
+      "ground_truth": "Rainbow flag, transgender symbol",
+      "pred": "Friendship, compassion, and family",
+      "is_correct": false,
+      "oracle_recall": true,
+      "tokens": 386
+    },
+    {
+      "question_id": "conv-26-qa-060",
+      "question": "What instruments does Melanie play?",
+      "ground_truth": "clarinet and violin",
+      "pred": "I don't know.",
+      "is_correct": false,
+      "oracle_recall": false,
+      "tokens": 266
+    },
+    {
+      "question_id": "conv-26-qa-061",
+      "question": "What musical artists/bands has Melanie seen?",
+      "ground_truth": "Summer Sounds, Matt Patterson",
+      "pred": "I don't know.",
+      "is_correct": false,
+      "oracle_recall": false,
+      "tokens": 244
+    },
+    {
+      "question_id": "conv-26-qa-065",
+      "question": "What are some changes Caroline has faced during her transition journey?",
+      "ground_truth": "Changes to her body, losing unsupportive friends",
+      "pred": "She's grown into her true self and accepted her identity.",
+      "is_correct": false,
+      "oracle_recall": false,
+      "tokens": 388
+    },
+    {
+      "question_id": "conv-26-qa-066",
+      "question": "What does Melanie do with her family on hikes?",
+      "ground_truth": "Roast marshmallows, tell stories",
+      "pred": "She hikes with them.",
+      "is_correct": false,
+      "oracle_recall": true,
+      "tokens": 370
+    },
+    {
+      "question_id": "conv-26-qa-070",
+      "question": "What transgender-specific events has Caroline attended?",
+      "ground_truth": "Poetry reading, conference",
+      "pred": "I don't know.",
+      "is_correct": false,
+      "oracle_recall": false,
+      "tokens": 274
+    },
+    {
+      "question_id": "conv-26-qa-071",
+      "question": "What book did Melanie read from Caroline's suggestion?",
+      "ground_truth": "\"Becoming Nicole\"",
+      "pred": "I don't know.",
+      "is_correct": false,
+      "oracle_recall": false,
+      "tokens": 344
+    },
+    {
+      "question_id": "conv-26-qa-075",
+      "question": "How many children does Melanie have?",
+      "ground_truth": "3",
+      "pred": "I don't know.",
+      "is_correct": false,
+      "oracle_recall": false,
+      "tokens": 424
+    },
+    {
+      "question_id": "conv-26-qa-076",
+      "question": "When did Melanie go on a hike after the roadtrip?",
+      "ground_truth": "19 October 2023",
+      "pred": "I don't know.",
+      "is_correct": false,
+      "oracle_recall": false,
+      "tokens": 529
+    },
+    {
+      "question_id": "conv-26-qa-078",
+      "question": "What items has Melanie bought?",
+      "ground_truth": "Figurines, shoes",
+      "pred": "I don't know.",
+      "is_correct": false,
+      "oracle_recall": false,
+      "tokens": 237
+    }
+  ]
+}

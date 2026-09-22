@@ -1,0 +1,216 @@
+================================================================================
+      LOCOMO EXPERIMENT RUNNER (Phase 0 Measurement Harness)
+================================================================================
+Mode: RETRIEVAL-ONLY | Convs: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] | Out: benchmark_results\locomo10_runs\selection_v3
+Frozen protocol: scorer / dataset / LLM config untouched.
+================================================================================
+
+===========================================================================
+--- STARTING CONVERSATION 0 (RETRIEVAL-ONLY (no LLM)) ---
+===========================================================================
+Sample ID: conv-26
+Ingested 419 turns into 419 StructuredIR records in 0.26s.
+Evaluating 199 questions...
+  [025/199] Ora:  96.0% | Q: What does Melanie do to destress?
+  [050/199] Ora:  88.0% | Q: When did Caroline and Melanie go to a pr
+  [075/199] Ora:  84.0% | Q: When did Melanie's family go on a roadtr
+  [100/199] Ora:  86.0% | Q: What motivated Caroline to pursue counse
+  [125/199] Ora:  85.6% | Q: What pets does Melanie have?
+  [150/199] Ora:  85.3% | Q: What do Melanie's family give her?
+  [175/199] Ora:  80.6% | Q: How often does Caroline go to the beach 
+  [199/199] Ora:  76.4% | Q: What does Caroline love most about campi
+
+>> CONV 0 COMPLETED in 49.4s:
+   * Oracle Recall:  76.4% (152/199)
+   * Mean Tokens/Q:  2446.0 tok
+   * Saved to:       benchmark_results\locomo10_runs\selection_v3\conv_0_results.json
+
+===========================================================================
+--- STARTING CONVERSATION 1 (RETRIEVAL-ONLY (no LLM)) ---
+===========================================================================
+Sample ID: conv-30
+Ingested 369 turns into 369 StructuredIR records in 0.21s.
+Evaluating 105 questions...
+  [025/105] Ora:  96.0% | Q: Which events has Jon participated in to 
+  [050/105] Ora:  90.0% | Q: What did Gina want her customers to feel
+  [075/105] Ora:  82.7% | Q: What does Jon plan to do at the grand op
+  [100/105] Ora:  76.0% | Q: What book is Gina currently reading?
+  [105/105] Ora:  73.3% | Q: What plans does Gina have after receivin
+
+>> CONV 1 COMPLETED in 21.5s:
+   * Oracle Recall:  73.3% (77/105)
+   * Mean Tokens/Q:  2306.7 tok
+   * Saved to:       benchmark_results\locomo10_runs\selection_v3\conv_1_results.json
+
+===========================================================================
+--- STARTING CONVERSATION 2 (RETRIEVAL-ONLY (no LLM)) ---
+===========================================================================
+Sample ID: conv-41
+Ingested 663 turns into 663 StructuredIR records in 0.40s.
+Evaluating 193 questions...
+  [025/193] Ora:  84.0% | Q: When did John start boot camp with his f
+  [050/193] Ora:  84.0% | Q: What food item did Maria drop off at the
+  [075/193] Ora:  86.7% | Q: Why did Maria sit with the little girl a
+  [100/193] Ora:  87.0% | Q: What did John and the veterans do during
+  [125/193] Ora:  86.4% | Q: What kind of activities did Maria do at 
+  [150/193] Ora:  86.0% | Q: What is John currently doing as a volunt
+  [175/193] Ora:  84.0% | Q: What does John say she feels when doing 
+  [193/193] Ora:  82.4% | Q: How is John's new puppy adjusting to its
+
+>> CONV 2 COMPLETED in 81.3s:
+   * Oracle Recall:  82.4% (159/193)
+   * Mean Tokens/Q:  2425.7 tok
+   * Saved to:       benchmark_results\locomo10_runs\selection_v3\conv_2_results.json
+
+===========================================================================
+--- STARTING CONVERSATION 3 (RETRIEVAL-ONLY (no LLM)) ---
+===========================================================================
+Sample ID: conv-42
+Ingested 629 turns into 629 StructuredIR records in 0.35s.
+Evaluating 260 questions...
+  [025/260] Ora:  84.0% | Q: When is Nate hosting a gaming party?
+  [050/260] Ora:  86.0% | Q: How many times has Joanna's scripts been
+  [075/260] Ora:  80.0% | Q: What recommendations has Nate received f
+  [100/260] Ora:  81.0% | Q: What are Joanna's plans for her finished
+  [125/260] Ora:  82.4% | Q: What event is Nate organizing in June 20
+  [150/260] Ora:  84.0% | Q: What did Joanna share with her writers g
+  [175/260] Ora:  84.0% | Q: What does Nate rely on for cheer and joy
+  [200/260] Ora:  83.5% | Q: What color did Joanna choose for her hai
+  [225/260] Ora:  81.8% | Q: What did Joanna discover at the museum i
+  [250/260] Ora:  80.4% | Q: What game is Joanna currently playing an
+  [260/260] Ora:  80.8% | Q: What does Joanna love most about having 
+
+>> CONV 3 COMPLETED in 101.9s:
+   * Oracle Recall:  80.8% (210/260)
+   * Mean Tokens/Q:  2196.6 tok
+   * Saved to:       benchmark_results\locomo10_runs\selection_v3\conv_3_results.json
+
+===========================================================================
+--- STARTING CONVERSATION 4 (RETRIEVAL-ONLY (no LLM)) ---
+===========================================================================
+Sample ID: conv-43
+Ingested 680 turns into 680 StructuredIR records in 0.35s.
+Evaluating 242 questions...
+  [025/242] Ora:  92.0% | Q: Where was John between August 11 and Aug
+  [050/242] Ora:  90.0% | Q: How many times has John injured his ankl
+  [075/242] Ora:  92.0% | Q: What aspects of the Harry Potter univers
+  [100/242] Ora:  91.0% | Q: What tradition does Tim mention they lov
+  [125/242] Ora:  88.8% | Q: Who is one of Tim's sources of inspirati
+  [150/242] Ora:  90.0% | Q: What book did Tim just finish reading on
+  [175/242] Ora:  88.6% | Q: What charity event did John organize rec
+  [200/242] Ora:  88.0% | Q: How long did Tim and his high school bas
+  [225/242] Ora:  84.9% | Q: What instrument is John learning to play
+  [242/242] Ora:  83.5% | Q: What was Tims's reaction to sealing the 
+
+>> CONV 4 COMPLETED in 104.4s:
+   * Oracle Recall:  83.5% (202/242)
+   * Mean Tokens/Q:  2459.3 tok
+   * Saved to:       benchmark_results\locomo10_runs\selection_v3\conv_4_results.json
+
+===========================================================================
+--- STARTING CONVERSATION 5 (RETRIEVAL-ONLY (no LLM)) ---
+===========================================================================
+Sample ID: conv-44
+Ingested 675 turns into 675 StructuredIR records in 0.36s.
+Evaluating 158 questions...
+  [025/158] Ora:  88.0% | Q: Did Audrey and Andrew grow up with a pet
+  [050/158] Ora:  74.0% | Q: What does Audrey view her pets as?
+  [075/158] Ora:  74.7% | Q: How does Andrew feel about their search 
+  [100/158] Ora:  80.0% | Q: What did Audrey do with her pups over th
+  [125/158] Ora:  81.6% | Q: What kind of flowers does Andrew have a 
+  [150/158] Ora:  78.7% | Q: What type of games do Andrew's dogs like
+  [158/158] Ora:  77.8% | Q: How often does Andrew meet up with other
+
+>> CONV 5 COMPLETED in 78.2s:
+   * Oracle Recall:  77.8% (123/158)
+   * Mean Tokens/Q:  2389.0 tok
+   * Saved to:       benchmark_results\locomo10_runs\selection_v3\conv_5_results.json
+
+===========================================================================
+--- STARTING CONVERSATION 6 (RETRIEVAL-ONLY (no LLM)) ---
+===========================================================================
+Sample ID: conv-47
+Ingested 689 turns into 689 StructuredIR records in 0.17s.
+Evaluating 190 questions...
+  [025/190] Ora:  72.0% | Q: What kind of games has James tried to de
+  [050/190] Ora:  72.0% | Q: What gaming equipments did John buy or r
+  [075/190] Ora:  74.7% | Q: What game did John play in an intense to
+  [100/190] Ora:  75.0% | Q: What is the main focus of the organizati
+  [125/190] Ora:  77.6% | Q: Why did James sign up for a cooking clas
+  [150/190] Ora:  78.7% | Q: What is the name of John's cousin's dog?
+  [175/190] Ora:  75.4% | Q: What did John prepare for the first time
+  [190/190] Ora:  75.3% | Q: What is the name of James's cousin's dog
+
+>> CONV 6 COMPLETED in 86.5s:
+   * Oracle Recall:  75.3% (143/190)
+   * Mean Tokens/Q:  2309.7 tok
+   * Saved to:       benchmark_results\locomo10_runs\selection_v3\conv_6_results.json
+
+===========================================================================
+--- STARTING CONVERSATION 7 (RETRIEVAL-ONLY (no LLM)) ---
+===========================================================================
+Sample ID: conv-48
+Ingested 681 turns into 681 StructuredIR records in 0.35s.
+Evaluating 239 questions...
+  [025/239] Ora:  84.0% | Q: What new yoga poses did Deborah try?
+  [050/239] Ora:  84.0% | Q: How long has Jolene been doing yoga and 
+  [075/239] Ora:  85.3% | Q: What do Deborah and Jolene plan to try w
+  [100/239] Ora:  84.0% | Q: What do Deborah and Jolene plan to try w
+  [125/239] Ora:  82.4% | Q: How does Jolene plan to pursue her dream
+  [150/239] Ora:  84.0% | Q: What game did Jolene recommend for being
+  [175/239] Ora:  85.1% | Q: Why did Jolene have to reschedule their 
+  [200/239] Ora:  84.0% | Q: What cool stuff did Deborah accomplish a
+  [225/239] Ora:  83.1% | Q: What did Deborah's mom stress the value 
+  [239/239] Ora:  82.8% | Q: What activity did Jolene enjoy at the mu
+
+>> CONV 7 COMPLETED in 104.7s:
+   * Oracle Recall:  82.8% (198/239)
+   * Mean Tokens/Q:  2220.8 tok
+   * Saved to:       benchmark_results\locomo10_runs\selection_v3\conv_7_results.json
+
+===========================================================================
+--- STARTING CONVERSATION 8 (RETRIEVAL-ONLY (no LLM)) ---
+===========================================================================
+Sample ID: conv-49
+Ingested 509 turns into 509 StructuredIR records in 0.27s.
+Evaluating 196 questions...
+  [025/196] Ora:  88.0% | Q: What significant event happened in Sam's
+  [050/196] Ora:  80.0% | Q: Who was injured in Evan's family?
+  [075/196] Ora:  81.3% | Q: When did Evan's son fall off his bike?
+  [100/196] Ora:  83.0% | Q: What did Evan suggest Sam to check out f
+  [125/196] Ora:  83.2% | Q: What does Evan mention about his progres
+  [150/196] Ora:  83.3% | Q: What advice did Evan suggest Sam seek fr
+  [175/196] Ora:  83.4% | Q: What activity does Sam do to keep himsel
+  [196/196] Ora:  80.6% | Q: What did Sam share a photo of that was t
+
+>> CONV 8 COMPLETED in 68.7s:
+   * Oracle Recall:  80.6% (158/196)
+   * Mean Tokens/Q:  2363.0 tok
+   * Saved to:       benchmark_results\locomo10_runs\selection_v3\conv_8_results.json
+
+===========================================================================
+--- STARTING CONVERSATION 9 (RETRIEVAL-ONLY (no LLM)) ---
+===========================================================================
+Sample ID: conv-50
+Ingested 568 turns into 568 StructuredIR records in 0.33s.
+Evaluating 204 questions...
+  [025/204] Ora:  88.0% | Q: Can Dave work with engines?
+  [050/204] Ora:  88.0% | Q: When Dave was a child, what did he and h
+  [075/204] Ora:  82.7% | Q: What advice did Calvin receive from the 
+  [100/204] Ora:  83.0% | Q: How did Calvin meet Frank Ocean?
+  [125/204] Ora:  81.6% | Q: What activity does Dave find fulfilling,
+  [150/204] Ora:  80.0% | Q: What kind of impact does Dave's blog on 
+  [175/204] Ora:  79.4% | Q: What design is featured on Dave's guitar
+  [200/204] Ora:  79.0% | Q: Who did Dave invite to see him perform i
+  [204/204] Ora:  77.5% | Q: Where did Calvin take a stunning photo o
+
+>> CONV 9 COMPLETED in 84.3s:
+   * Oracle Recall:  77.5% (158/204)
+   * Mean Tokens/Q:  2450.1 tok
+   * Saved to:       benchmark_results\locomo10_runs\selection_v3\conv_9_results.json
+
+================================================================================
+RUN TAG: selection_v3 | Questions: 1986
+Micro Oracle Recall: 79.56% (1580/1986)
+Total time: 784.1s
+================================================================================

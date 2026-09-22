@@ -1,0 +1,11 @@
+player,question_id,category,p50_ms,p95_ms,avg_ms
+AM v0.2.0,factual_recall-00,factual_recall,13.8,16.8,14.0
+AM v0.2.0,multi_session_recall-00,multi_session_recall,12.9,13.2,12.9
+AM v0.2.0,temporal_reasoning-00,temporal_reasoning,12.8,13.3,12.9
+AM v0.2.0,knowledge_updates-00,knowledge_updates,12.5,12.8,12.5
+AM v0.2.0,contradiction_handling-00,contradiction_handling,12.8,13.1,12.8
+AM v0.2.0,indirect_recall-00,indirect_recall,12.5,12.8,12.5
+AM v0.2.0,distractor_resistance-00,distractor_resistance,12.9,14.0,13.1
+AM v0.2.0,abstention-00,abstention,12.2,12.6,12.3
+AM v0.2.0,compression_recovery-00,compression_recovery,12.5,13.4,12.8
+AM v0.2.0,reflection_reinterpretation-00,reflection_reinterpretation,13.2,13.7,13.1

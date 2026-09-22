@@ -157,6 +157,9 @@ class DeepSeekRecallEngine(BasicRecallEngine):
                 self.gate.pool_size,
                 getattr(self.gate, "max_sessions", None),
                 getattr(self.gate, "score_floor", None),
+                getattr(self.gate, "abstention_threshold", None),
+                getattr(self.gate, "session_aggregation", None),
+                getattr(self.gate, "aggregation_k", None),
             )
         if gate_cfg != self._gate_cfg:
             self.plan_cache = RetrievalPlanCache(

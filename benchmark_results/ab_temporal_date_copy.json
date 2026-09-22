@@ -1,0 +1,3860 @@
+{
+ "stored": {
+  "conv-26-qa-000": {
+   "pred": "7 May 2023",
+   "correct": true
+  },
+  "conv-26-qa-001": {
+   "pred": "Last year (2022)",
+   "correct": true
+  },
+  "conv-26-qa-005": {
+   "pred": "Saturday before 25 May 2023",
+   "correct": false
+  },
+  "conv-26-qa-006": {
+   "pred": "Next month (June 2023)",
+   "correct": true
+  },
+  "conv-26-qa-008": {
+   "pred": "Last week before 9 June 2023",
+   "correct": true
+  },
+  "conv-26-qa-009": {
+   "pred": "The week before 6 July 2023",
+   "correct": false
+  },
+  "conv-26-qa-010": {
+   "pred": "Four years",
+   "correct": true
+  },
+  "conv-26-qa-012": {
+   "pred": "10 years ago",
+   "correct": true
+  },
+  "conv-26-qa-016": {
+   "pred": "July 2, 2023",
+   "correct": true
+  },
+  "conv-26-qa-017": {
+   "pred": "July 2023",
+   "correct": true
+  },
+  "conv-26-qa-020": {
+   "pred": "Yesterday (5 July 2023)",
+   "correct": true
+  },
+  "conv-26-qa-021": {
+   "pred": "The week before 6 July 2023",
+   "correct": true
+  },
+  "conv-26-qa-025": {
+   "pred": "10 July 2023",
+   "correct": true
+  },
+  "conv-26-qa-026": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-26-qa-028": {
+   "pred": "Last Friday before 15 July 2023",
+   "correct": true
+  },
+  "conv-26-qa-029": {
+   "pred": "Last Friday",
+   "correct": false
+  },
+  "conv-26-qa-031": {
+   "pred": "June 2023",
+   "correct": false
+  },
+  "conv-26-qa-033": {
+   "pred": "Last Friday before 14 August 2023",
+   "correct": false
+  },
+  "conv-26-qa-035": {
+   "pred": "July 15, 2023",
+   "correct": false
+  },
+  "conv-26-qa-036": {
+   "pred": "The weekend before 17 July 2023",
+   "correct": true
+  },
+  "conv-26-qa-041": {
+   "pred": "Last Tuesday",
+   "correct": false
+  },
+  "conv-26-qa-044": {
+   "pred": "The weekend before 17 July 2023",
+   "correct": false
+  },
+  "conv-26-qa-045": {
+   "pred": "August 7, 2023",
+   "correct": false
+  },
+  "conv-26-qa-049": {
+   "pred": "June 2023",
+   "correct": false
+  },
+  "conv-26-qa-053": {
+   "pred": "Last Friday before 25 May 2023",
+   "correct": false
+  },
+  "conv-26-qa-054": {
+   "pred": "Last week before 23 August 2023",
+   "correct": true
+  },
+  "conv-26-qa-057": {
+   "pred": "The week before 25 August 2023",
+   "correct": true
+  },
+  "conv-26-qa-058": {
+   "pred": "24 August 2023",
+   "correct": true
+  },
+  "conv-26-qa-062": {
+   "pred": "27 August 2023",
+   "correct": true
+  },
+  "conv-26-qa-063": {
+   "pred": "September 2023",
+   "correct": true
+  },
+  "conv-26-qa-067": {
+   "pred": "The weekend before 13 September 2023",
+   "correct": true
+  },
+  "conv-26-qa-068": {
+   "pred": "Seven years",
+   "correct": false
+  },
+  "conv-26-qa-072": {
+   "pred": "Last year (2022)",
+   "correct": true
+  },
+  "conv-26-qa-073": {
+   "pred": "September 2023",
+   "correct": true
+  },
+  "conv-26-qa-074": {
+   "pred": "The past weekend",
+   "correct": false
+  },
+  "conv-26-qa-079": {
+   "pred": "Friday before 22 October 2023",
+   "correct": true
+  },
+  "conv-26-qa-080": {
+   "pred": "21 October 2023",
+   "correct": true
+  },
+  "conv-30-qa-000": {
+   "pred": "19 January 2023",
+   "correct": true
+  },
+  "conv-30-qa-001": {
+   "pred": "January 2023",
+   "correct": true
+  },
+  "conv-30-qa-006": {
+   "pred": "February 2023",
+   "correct": true
+  },
+  "conv-30-qa-007": {
+   "pred": "29 January, 2023",
+   "correct": true
+  },
+  "conv-30-qa-008": {
+   "pred": "28 January 2023",
+   "correct": true
+  },
+  "conv-30-qa-010": {
+   "pred": "8 February, 2023",
+   "correct": true
+  },
+  "conv-30-qa-011": {
+   "pred": "A few years ago",
+   "correct": true
+  },
+  "conv-30-qa-012": {
+   "pred": "Last week before 16 March 2023",
+   "correct": true
+  },
+  "conv-30-qa-013": {
+   "pred": "Not specified",
+   "correct": false
+  },
+  "conv-30-qa-014": {
+   "pred": "March 2023",
+   "correct": false
+  },
+  "conv-30-qa-015": {
+   "pred": "May 2023",
+   "correct": true
+  },
+  "conv-30-qa-016": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-30-qa-019": {
+   "pred": "10 May 2023",
+   "correct": true
+  },
+  "conv-30-qa-020": {
+   "pred": "10 May 2023",
+   "correct": false
+  },
+  "conv-30-qa-021": {
+   "pred": "D12:6 on 7:18 pm on 27 May, 2023",
+   "correct": true
+  },
+  "conv-30-qa-022": {
+   "pred": "8 February, 2023",
+   "correct": false
+  },
+  "conv-30-qa-026": {
+   "pred": "16 March, 2023",
+   "correct": false
+  },
+  "conv-30-qa-028": {
+   "pred": "The week before 19 June 2023",
+   "correct": true
+  },
+  "conv-30-qa-030": {
+   "pred": "Tomorrow (20 June 2023)",
+   "correct": true
+  },
+  "conv-30-qa-032": {
+   "pred": "The week before 21 June 2023",
+   "correct": true
+  },
+  "conv-30-qa-033": {
+   "pred": "June 20, 2023",
+   "correct": true
+  },
+  "conv-30-qa-034": {
+   "pred": "Last week before 9 July 2023",
+   "correct": true
+  },
+  "conv-30-qa-035": {
+   "pred": "Today",
+   "correct": false
+  },
+  "conv-30-qa-036": {
+   "pred": "21 July, 2023",
+   "correct": true
+  },
+  "conv-30-qa-037": {
+   "pred": "6:46 pm on 23 July, 2023",
+   "correct": true
+  },
+  "conv-30-qa-038": {
+   "pred": "Last Friday before 23 July 2023",
+   "correct": false
+  },
+  "conv-41-qa-000": {
+   "pred": "John",
+   "correct": false
+  },
+  "conv-41-qa-001": {
+   "pred": "21 December 2022",
+   "correct": true
+  },
+  "conv-41-qa-004": {
+   "pred": "Last week before 1 January 2023",
+   "correct": true
+  },
+  "conv-41-qa-005": {
+   "pred": "December 2022",
+   "correct": true
+  },
+  "conv-41-qa-010": {
+   "pred": "24 February 2023",
+   "correct": true
+  },
+  "conv-41-qa-013": {
+   "pred": "6 March 2023",
+   "correct": false
+  },
+  "conv-41-qa-016": {
+   "pred": "Last week before 2 April 2023",
+   "correct": true
+  },
+  "conv-41-qa-020": {
+   "pred": "Last year (2022)",
+   "correct": true
+  },
+  "conv-41-qa-022": {
+   "pred": "Last month (March 2023)",
+   "correct": true
+  },
+  "conv-41-qa-024": {
+   "pred": "Last month (April 2023)",
+   "correct": true
+  },
+  "conv-41-qa-027": {
+   "pred": "Last Friday before 20 May 2023",
+   "correct": true
+  },
+  "conv-41-qa-031": {
+   "pred": "John got Max 10 years ago.",
+   "correct": false
+  },
+  "conv-41-qa-034": {
+   "pred": "Last week before 16 June 2023",
+   "correct": true
+  },
+  "conv-41-qa-038": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-41-qa-043": {
+   "pred": "The week before 7 July 2023",
+   "correct": true
+  },
+  "conv-41-qa-046": {
+   "pred": "The weekend before 12 June 2023",
+   "correct": false
+  },
+  "conv-41-qa-048": {
+   "pred": "last Sunday before 31 July 2023",
+   "correct": false
+  },
+  "conv-41-qa-051": {
+   "pred": "About a year ago",
+   "correct": false
+  },
+  "conv-41-qa-053": {
+   "pred": "2022",
+   "correct": true
+  },
+  "conv-41-qa-054": {
+   "pred": "Yesterday (4 August 2023)",
+   "correct": true
+  },
+  "conv-41-qa-055": {
+   "pred": "Last week before 9 August 2023",
+   "correct": true
+  },
+  "conv-41-qa-056": {
+   "pred": "The weekend before 7 April 2023",
+   "correct": false
+  },
+  "conv-41-qa-058": {
+   "pred": "Two weeks ago from 11 August 2023",
+   "correct": false
+  },
+  "conv-41-qa-059": {
+   "pred": "Last summer",
+   "correct": false
+  },
+  "conv-41-qa-061": {
+   "pred": "Last week before 13 August 2023",
+   "correct": true
+  },
+  "conv-41-qa-063": {
+   "pred": "0 weeks",
+   "correct": false
+  },
+  "conv-41-qa-091": {
+   "pred": "A violin concert",
+   "correct": false
+  },
+  "conv-42-qa-002": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-42-qa-003": {
+   "pred": "The week before 21 January 2022",
+   "correct": false
+  },
+  "conv-42-qa-006": {
+   "pred": "3 years",
+   "correct": true
+  },
+  "conv-42-qa-007": {
+   "pred": "Last Friday before 23 January 2022",
+   "correct": false
+  },
+  "conv-42-qa-008": {
+   "pred": "Nate did not specify when he got his first two turtles.",
+   "correct": false
+  },
+  "conv-42-qa-009": {
+   "pred": "Finished her first full screenplay.",
+   "correct": false
+  },
+  "conv-42-qa-013": {
+   "pred": "23 March 2022",
+   "correct": true
+  },
+  "conv-42-qa-015": {
+   "pred": "7:37 pm on 15 April, 2022",
+   "correct": false
+  },
+  "conv-42-qa-016": {
+   "pred": "He dyed his hair.",
+   "correct": false
+  },
+  "conv-42-qa-017": {
+   "pred": "The Lord of the Rings Trilogy",
+   "correct": true
+  },
+  "conv-42-qa-018": {
+   "pred": "Whispering Falls",
+   "correct": false
+  },
+  "conv-42-qa-020": {
+   "pred": "The conversation context does not contain the answer.",
+   "correct": false
+  },
+  "conv-42-qa-021": {
+   "pred": "Max",
+   "correct": true
+  },
+  "conv-42-qa-022": {
+   "pred": "She didn't specify a date for starting her third screenplay.",
+   "correct": false
+  },
+  "conv-42-qa-024": {
+   "pred": "Two weekends later from the conversation on 5:44 pm on 3 June, 2022.",
+   "correct": false
+  },
+  "conv-42-qa-025": {
+   "pred": "This weekend",
+   "correct": false
+  },
+  "conv-42-qa-026": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-42-qa-028": {
+   "pred": "The Friday before 24 June 2022",
+   "correct": false
+  },
+  "conv-42-qa-029": {
+   "pred": "This weekend",
+   "correct": false
+  },
+  "conv-42-qa-031": {
+   "pred": "Friday, before 10 July 2022",
+   "correct": false
+  },
+  "conv-42-qa-032": {
+   "pred": "Woodhaven",
+   "correct": true
+  },
+  "conv-42-qa-033": {
+   "pred": "Last week before 14 August 2022",
+   "correct": false
+  },
+  "conv-42-qa-035": {
+   "pred": "22 August, 2022",
+   "correct": false
+  },
+  "conv-42-qa-036": {
+   "pred": "The week before 22 August 2022",
+   "correct": false
+  },
+  "conv-42-qa-037": {
+   "pred": "21 August 2022",
+   "correct": true
+  },
+  "conv-42-qa-038": {
+   "pred": "Last Friday before 14 September 2022",
+   "correct": false
+  },
+  "conv-42-qa-039": {
+   "pred": "Last Monday before 14 September 2022",
+   "correct": false
+  },
+  "conv-42-qa-040": {
+   "pred": "The week before 14 September 2022",
+   "correct": false
+  },
+  "conv-42-qa-041": {
+   "pred": "The exact date is not provided in the context.",
+   "correct": false
+  },
+  "conv-42-qa-043": {
+   "pred": "A few weeks",
+   "correct": false
+  },
+  "conv-42-qa-044": {
+   "pred": "Last week before 6 October 2022",
+   "correct": false
+  },
+  "conv-42-qa-045": {
+   "pred": "The week before 6 October 2022",
+   "correct": false
+  },
+  "conv-42-qa-048": {
+   "pred": "Last Friday before 9 October 2022",
+   "correct": false
+  },
+  "conv-42-qa-054": {
+   "pred": "Sunday before 25 October 2022",
+   "correct": false
+  },
+  "conv-42-qa-057": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-42-qa-064": {
+   "pred": "Last Saturday before 7 November 2022",
+   "correct": false
+  },
+  "conv-42-qa-065": {
+   "pred": "Valorant tournament",
+   "correct": true
+  },
+  "conv-42-qa-072": {
+   "pred": "10 November 2022",
+   "correct": true
+  },
+  "conv-42-qa-077": {
+   "pred": "The week before 2 May 2022",
+   "correct": true
+  },
+  "conv-42-qa-086": {
+   "pred": "10 November 2022",
+   "correct": true
+  },
+  "conv-43-qa-006": {
+   "pred": "June 2023",
+   "correct": true
+  },
+  "conv-43-qa-010": {
+   "pred": "August 2023",
+   "correct": false
+  },
+  "conv-43-qa-012": {
+   "pred": "Five years ago from 2023, which would be 2018.",
+   "correct": true
+  },
+  "conv-43-qa-016": {
+   "pred": "2 weeks",
+   "correct": false
+  },
+  "conv-43-qa-020": {
+   "pred": "New York City",
+   "correct": false
+  },
+  "conv-43-qa-022": {
+   "pred": "15th",
+   "correct": false
+  },
+  "conv-43-qa-023": {
+   "pred": "Next month (September 2023)",
+   "correct": true
+  },
+  "conv-43-qa-024": {
+   "pred": "He was on a trip.",
+   "correct": false
+  },
+  "conv-43-qa-031": {
+   "pred": "September 2023",
+   "correct": true
+  },
+  "conv-43-qa-033": {
+   "pred": "Next month (October 2023)",
+   "correct": true
+  },
+  "conv-43-qa-037": {
+   "pred": "The week before 13 October 2023",
+   "correct": false
+  },
+  "conv-43-qa-039": {
+   "pred": "2022",
+   "correct": true
+  },
+  "conv-43-qa-040": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-43-qa-044": {
+   "pred": "Short but sweet. The exact date is not provided in the context.",
+   "correct": false
+  },
+  "conv-43-qa-045": {
+   "pred": "United Kingdom",
+   "correct": false
+  },
+  "conv-43-qa-046": {
+   "pred": "He was in the UK.",
+   "correct": true
+  },
+  "conv-43-qa-047": {
+   "pred": "Last week (the week before 2 October 2023)",
+   "correct": false
+  },
+  "conv-43-qa-054": {
+   "pred": "Last year (2022)",
+   "correct": true
+  },
+  "conv-43-qa-055": {
+   "pred": "After college, he was drafted by a team.",
+   "correct": false
+  },
+  "conv-43-qa-056": {
+   "pred": "About four months ago",
+   "correct": false
+  },
+  "conv-43-qa-058": {
+   "pred": "Last August",
+   "correct": false
+  },
+  "conv-43-qa-060": {
+   "pred": "The Friday before 11 December 2023",
+   "correct": true
+  },
+  "conv-43-qa-063": {
+   "pred": "Last summer",
+   "correct": false
+  },
+  "conv-43-qa-064": {
+   "pred": "December 2023",
+   "correct": true
+  },
+  "conv-43-qa-068": {
+   "pred": "February 2024",
+   "correct": false
+  },
+  "conv-43-qa-069": {
+   "pred": "February 2024",
+   "correct": true
+  },
+  "conv-44-qa-000": {
+   "pred": "2023",
+   "correct": false
+  },
+  "conv-44-qa-001": {
+   "pred": "The week before 27 March 2023",
+   "correct": true
+  },
+  "conv-44-qa-004": {
+   "pred": "Last week before 16 April 2023",
+   "correct": false
+  },
+  "conv-44-qa-005": {
+   "pred": "Last week before 3 May 2023",
+   "correct": false
+  },
+  "conv-44-qa-006": {
+   "pred": "2 April, 2023",
+   "correct": false
+  },
+  "conv-44-qa-007": {
+   "pred": "3 years",
+   "correct": true
+  },
+  "conv-44-qa-008": {
+   "pred": "No, Andrew did not have a pet dog during March 2023.",
+   "correct": true
+  },
+  "conv-44-qa-010": {
+   "pred": "11 May, 2023",
+   "correct": false
+  },
+  "conv-44-qa-011": {
+   "pred": "Last Sunday before 13 June 2023",
+   "correct": false
+  },
+  "conv-44-qa-013": {
+   "pred": "June 26, 2023",
+   "correct": true
+  },
+  "conv-44-qa-016": {
+   "pred": "Saturday",
+   "correct": false
+  },
+  "conv-44-qa-022": {
+   "pred": "He went camping.",
+   "correct": false
+  },
+  "conv-44-qa-025": {
+   "pred": "The weekend before 24 August 2023",
+   "correct": true
+  },
+  "conv-44-qa-030": {
+   "pred": "November 2023",
+   "correct": true
+  },
+  "conv-44-qa-034": {
+   "pred": "1 month",
+   "correct": false
+  },
+  "conv-44-qa-037": {
+   "pred": "Last Friday before 24 September 2023",
+   "correct": false
+  },
+  "conv-44-qa-038": {
+   "pred": "The weekend before 24 October 2023",
+   "correct": true
+  },
+  "conv-44-qa-045": {
+   "pred": "None (not mentioned in conversation).",
+   "correct": false
+  },
+  "conv-44-qa-046": {
+   "pred": "2",
+   "correct": false
+  },
+  "conv-44-qa-047": {
+   "pred": "1 month",
+   "correct": true
+  },
+  "conv-44-qa-055": {
+   "pred": "[D9:8 on 1:51 pm on 26 June, 2023]",
+   "correct": false
+  },
+  "conv-44-qa-057": {
+   "pred": "Andrew adopted Scout after deciding on a name for his new pup, which was mentioned in the conversation on 9:02 am on 22 November, 2023. However, the exact date of the adoption is not specified in the provided context.",
+   "correct": false
+  },
+  "conv-44-qa-058": {
+   "pred": "None (not mentioned in conversation).",
+   "correct": false
+  },
+  "conv-44-qa-059": {
+   "pred": "Andrew adopted his first pet in 2023.",
+   "correct": false
+  },
+  "conv-47-qa-001": {
+   "pred": "Bowling",
+   "correct": true
+  },
+  "conv-47-qa-004": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-47-qa-010": {
+   "pred": "Last week before 12 April 2022",
+   "correct": false
+  },
+  "conv-47-qa-011": {
+   "pred": "Busy with work and stuff",
+   "correct": false
+  },
+  "conv-47-qa-013": {
+   "pred": "2021",
+   "correct": true
+  },
+  "conv-47-qa-014": {
+   "pred": "Three days ago from 29 April 2022",
+   "correct": false
+  },
+  "conv-47-qa-015": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-47-qa-021": {
+   "pred": "7 May 2022",
+   "correct": true
+  },
+  "conv-47-qa-023": {
+   "pred": "Next month (July 2022)",
+   "correct": true
+  },
+  "conv-47-qa-028": {
+   "pred": "May 2022",
+   "correct": true
+  },
+  "conv-47-qa-029": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-47-qa-031": {
+   "pred": "None (not mentioned in conversation).",
+   "correct": false
+  },
+  "conv-47-qa-032": {
+   "pred": "He was at work.",
+   "correct": false
+  },
+  "conv-47-qa-037": {
+   "pred": "Yesterday (21 July 2022)",
+   "correct": true
+  },
+  "conv-47-qa-039": {
+   "pred": "3 years ago",
+   "correct": false
+  },
+  "conv-47-qa-041": {
+   "pred": "Yesterday (3 September 2022)",
+   "correct": false
+  },
+  "conv-47-qa-042": {
+   "pred": "Yesterday (9 August 2022)",
+   "correct": true
+  },
+  "conv-47-qa-043": {
+   "pred": "September 2022",
+   "correct": true
+  },
+  "conv-47-qa-046": {
+   "pred": "They met at McGee's bar on 27 August 2022.",
+   "correct": true
+  },
+  "conv-47-qa-047": {
+   "pred": "3 September 2022",
+   "correct": true
+  },
+  "conv-47-qa-048": {
+   "pred": "Next Sunday",
+   "correct": false
+  },
+  "conv-47-qa-050": {
+   "pred": "27 March 2022",
+   "correct": false
+  },
+  "conv-47-qa-052": {
+   "pred": "Last Tuesday",
+   "correct": false
+  },
+  "conv-47-qa-053": {
+   "pred": "A few months",
+   "correct": false
+  },
+  "conv-47-qa-055": {
+   "pred": "Last week before 13 October 2022",
+   "correct": true
+  },
+  "conv-47-qa-057": {
+   "pred": "19 October 2022",
+   "correct": true
+  },
+  "conv-47-qa-058": {
+   "pred": "Yesterday (20 October 2022)",
+   "correct": true
+  },
+  "conv-47-qa-059": {
+   "pred": "The week before 13 October 2022",
+   "correct": false
+  },
+  "conv-47-qa-061": {
+   "pred": "He asked her to become his girlfriend.",
+   "correct": false
+  },
+  "conv-47-qa-062": {
+   "pred": "A few days",
+   "correct": false
+  },
+  "conv-47-qa-063": {
+   "pred": "4 November 2022",
+   "correct": true
+  },
+  "conv-47-qa-064": {
+   "pred": "He had been playing for a month before winning the chess tournament.",
+   "correct": false
+  },
+  "conv-47-qa-065": {
+   "pred": "Before starting their road trip on 4 November 2022.",
+   "correct": false
+  },
+  "conv-47-qa-066": {
+   "pred": "7 November, 2022",
+   "correct": false
+  },
+  "conv-48-qa-000": {
+   "pred": "A yoga retreat",
+   "correct": false
+  },
+  "conv-48-qa-002": {
+   "pred": "Deborah's mother passed away before 23 January 2023.",
+   "correct": false
+  },
+  "conv-48-qa-003": {
+   "pred": "2022",
+   "correct": true
+  },
+  "conv-48-qa-004": {
+   "pred": "2010",
+   "correct": true
+  },
+  "conv-48-qa-007": {
+   "pred": "Paris",
+   "correct": false
+  },
+  "conv-48-qa-009": {
+   "pred": "None (not mentioned in conversation).",
+   "correct": false
+  },
+  "conv-48-qa-010": {
+   "pred": "1993",
+   "correct": true
+  },
+  "conv-48-qa-012": {
+   "pred": "26 January 2023",
+   "correct": true
+  },
+  "conv-48-qa-017": {
+   "pred": "Last year (2022)",
+   "correct": true
+  },
+  "conv-48-qa-021": {
+   "pred": "Next Saturday",
+   "correct": false
+  },
+  "conv-48-qa-022": {
+   "pred": "31 January 2023",
+   "correct": true
+  },
+  "conv-48-qa-026": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-48-qa-027": {
+   "pred": "Last summer",
+   "correct": false
+  },
+  "conv-48-qa-029": {
+   "pred": "The week before 3 September 2023",
+   "correct": false
+  },
+  "conv-48-qa-030": {
+   "pred": "4:12 pm on 22 February, 2023",
+   "correct": false
+  },
+  "conv-48-qa-031": {
+   "pred": "Last summer",
+   "correct": false
+  },
+  "conv-48-qa-032": {
+   "pred": "Last year (2022)",
+   "correct": true
+  },
+  "conv-48-qa-034": {
+   "pred": "2022",
+   "correct": false
+  },
+  "conv-48-qa-035": {
+   "pred": "Yesterday (24 February 2023)",
+   "correct": true
+  },
+  "conv-48-qa-037": {
+   "pred": "Last Sunday before 2 March 2023",
+   "correct": true
+  },
+  "conv-48-qa-038": {
+   "pred": "So much has been going on lately. I started this yoga class in the neighborhood - it's such a good feeling! Now I get to share the exercise with my neighbors and watch it really transform them. [D9:3 on 11:22 am on 13 March, 2023]",
+   "correct": false
+  },
+  "conv-48-qa-043": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-48-qa-044": {
+   "pred": "Today",
+   "correct": false
+  },
+  "conv-48-qa-045": {
+   "pred": "The week before 1 February 2023",
+   "correct": false
+  },
+  "conv-48-qa-046": {
+   "pred": "The context does not contain the answer.",
+   "correct": false
+  },
+  "conv-48-qa-047": {
+   "pred": "5 June 2023",
+   "correct": true
+  },
+  "conv-48-qa-050": {
+   "pred": "Not specified",
+   "correct": false
+  },
+  "conv-48-qa-051": {
+   "pred": "The day before yesterday on 25 June 2023",
+   "correct": false
+  },
+  "conv-48-qa-052": {
+   "pred": "The week before 1 August 2023",
+   "correct": false
+  },
+  "conv-48-qa-053": {
+   "pred": "Two years ago",
+   "correct": false
+  },
+  "conv-48-qa-054": {
+   "pred": "Susie",
+   "correct": true
+  },
+  "conv-48-qa-055": {
+   "pred": "Susie",
+   "correct": false
+  },
+  "conv-48-qa-056": {
+   "pred": "Last week before 16 August 2023",
+   "correct": true
+  },
+  "conv-48-qa-057": {
+   "pred": "The week before 21 August 2023",
+   "correct": false
+  },
+  "conv-48-qa-060": {
+   "pred": "Last week before 24 August 2023",
+   "correct": true
+  },
+  "conv-48-qa-065": {
+   "pred": "Brazil",
+   "correct": true
+  },
+  "conv-48-qa-066": {
+   "pred": "Yesterday (29 August 2023)",
+   "correct": true
+  },
+  "conv-48-qa-068": {
+   "pred": "None (not mentioned in conversation).",
+   "correct": false
+  },
+  "conv-48-qa-071": {
+   "pred": "Last Friday before 3 September 2023",
+   "correct": false
+  },
+  "conv-48-qa-076": {
+   "pred": "The Friday before 17 September 2023",
+   "correct": true
+  },
+  "conv-48-qa-078": {
+   "pred": "A meditation retreat in Phuket",
+   "correct": true
+  },
+  "conv-48-qa-081": {
+   "pred": "None (not mentioned in conversation).",
+   "correct": false
+  },
+  "conv-49-qa-004": {
+   "pred": "Painting",
+   "correct": true
+  },
+  "conv-49-qa-009": {
+   "pred": "Last weekend before 24 May 2023",
+   "correct": true
+  },
+  "conv-49-qa-012": {
+   "pred": "Monday before 27 July 2023",
+   "correct": false
+  },
+  "conv-49-qa-013": {
+   "pred": "The week before 6 June 2023",
+   "correct": false
+  },
+  "conv-49-qa-017": {
+   "pred": "The Friday before 27 July 2023",
+   "correct": true
+  },
+  "conv-49-qa-022": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-49-qa-023": {
+   "pred": "28 July 2023",
+   "correct": true
+  },
+  "conv-49-qa-024": {
+   "pred": "A health scare",
+   "correct": false
+  },
+  "conv-49-qa-025": {
+   "pred": "2023",
+   "correct": false
+  },
+  "conv-49-qa-030": {
+   "pred": "Canada",
+   "correct": false
+  },
+  "conv-49-qa-035": {
+   "pred": "Last Saturday before 15 August 2023",
+   "correct": true
+  },
+  "conv-49-qa-039": {
+   "pred": "1 month",
+   "correct": false
+  },
+  "conv-49-qa-040": {
+   "pred": "A few days ago",
+   "correct": false
+  },
+  "conv-49-qa-041": {
+   "pred": "Painting classes",
+   "correct": true
+  },
+  "conv-49-qa-045": {
+   "pred": "Canada",
+   "correct": false
+  },
+  "conv-49-qa-047": {
+   "pred": "Last month (July 2023)",
+   "correct": true
+  },
+  "conv-49-qa-052": {
+   "pred": "Painting session",
+   "correct": true
+  },
+  "conv-49-qa-053": {
+   "pred": "Next Saturday",
+   "correct": false
+  },
+  "conv-49-qa-058": {
+   "pred": "One year ago",
+   "correct": false
+  },
+  "conv-49-qa-059": {
+   "pred": "14 October 2023",
+   "correct": true
+  },
+  "conv-49-qa-060": {
+   "pred": "Eating healthier",
+   "correct": false
+  },
+  "conv-49-qa-061": {
+   "pred": "Work stress",
+   "correct": false
+  },
+  "conv-49-qa-063": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-49-qa-066": {
+   "pred": "October 2023",
+   "correct": false
+  },
+  "conv-49-qa-067": {
+   "pred": "December 2023",
+   "correct": true
+  },
+  "conv-49-qa-068": {
+   "pred": "Not specified",
+   "correct": false
+  },
+  "conv-49-qa-070": {
+   "pred": "They got married last week, so they dated for less than a week.",
+   "correct": false
+  },
+  "conv-49-qa-073": {
+   "pred": "Next summer",
+   "correct": false
+  },
+  "conv-49-qa-074": {
+   "pred": "Last Tuesday before 17 December 2023",
+   "correct": false
+  },
+  "conv-49-qa-075": {
+   "pred": "5 January 2024",
+   "correct": true
+  },
+  "conv-49-qa-076": {
+   "pred": "June 2023",
+   "correct": false
+  },
+  "conv-49-qa-079": {
+   "pred": "February 2024",
+   "correct": true
+  },
+  "conv-49-qa-080": {
+   "pred": "December 31, 2023",
+   "correct": false
+  },
+  "conv-50-qa-000": {
+   "pred": "April 20, 2023",
+   "correct": false
+  },
+  "conv-50-qa-002": {
+   "pred": "26 March, 2023",
+   "correct": false
+  },
+  "conv-50-qa-008": {
+   "pred": "Last week before 16 May 2023",
+   "correct": false
+  },
+  "conv-50-qa-009": {
+   "pred": "Last week before 16 May 2023",
+   "correct": true
+  },
+  "conv-50-qa-010": {
+   "pred": "Last week before 16 May 2023",
+   "correct": true
+  },
+  "conv-50-qa-012": {
+   "pred": "The week before 31 May 2023",
+   "correct": false
+  },
+  "conv-50-qa-014": {
+   "pred": "Yesterday (8 June 2023)",
+   "correct": true
+  },
+  "conv-50-qa-016": {
+   "pred": "July 2023",
+   "correct": true
+  },
+  "conv-50-qa-017": {
+   "pred": "Last Friday (the Friday before 21 June 2023)",
+   "correct": true
+  },
+  "conv-50-qa-025": {
+   "pred": "Last Friday before 22 August 2023",
+   "correct": true
+  },
+  "conv-50-qa-026": {
+   "pred": "Yesterday (21 August 2023)",
+   "correct": true
+  },
+  "conv-50-qa-027": {
+   "pred": "Boston",
+   "correct": false
+  },
+  "conv-50-qa-031": {
+   "pred": "He was in San Francisco.",
+   "correct": true
+  },
+  "conv-50-qa-034": {
+   "pred": "1 September 2023",
+   "correct": true
+  },
+  "conv-50-qa-035": {
+   "pred": "Last week before 2 September 2023",
+   "correct": false
+  },
+  "conv-50-qa-036": {
+   "pred": "11th September 2023",
+   "correct": false
+  },
+  "conv-50-qa-038": {
+   "pred": "Last night",
+   "correct": false
+  },
+  "conv-50-qa-043": {
+   "pred": "Boston",
+   "correct": true
+  },
+  "conv-50-qa-044": {
+   "pred": "3 October 2023",
+   "correct": true
+  },
+  "conv-50-qa-048": {
+   "pred": "Attending a music festival in Boston",
+   "correct": false
+  },
+  "conv-50-qa-050": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-50-qa-051": {
+   "pred": "August 2022",
+   "correct": true
+  },
+  "conv-50-qa-052": {
+   "pred": "He didn't specify a second trip to Tokyo.",
+   "correct": false
+  },
+  "conv-50-qa-055": {
+   "pred": "24 October 2023",
+   "correct": true
+  },
+  "conv-50-qa-057": {
+   "pred": "Photography",
+   "correct": true
+  },
+  "conv-50-qa-061": {
+   "pred": "Not specified",
+   "correct": false
+  },
+  "conv-50-qa-062": {
+   "pred": "The context does not contain the answer.",
+   "correct": false
+  },
+  "conv-50-qa-065": {
+   "pred": "At sunset, as mentioned in the conversation on 27:7 on 10:49 am on 29 October, 2023.",
+   "correct": false
+  },
+  "conv-50-qa-067": {
+   "pred": "Tokyo",
+   "correct": true
+  },
+  "conv-50-qa-068": {
+   "pred": "A neighbor's garage",
+   "correct": false
+  },
+  "conv-50-qa-069": {
+   "pred": "November 2023",
+   "correct": true
+  },
+  "conv-50-qa-070": {
+   "pred": "16 November 2023",
+   "correct": true
+  }
+ },
+ "plain_new": {
+  "conv-26-qa-000": {
+   "pred": "7 May 2023",
+   "correct": true
+  },
+  "conv-26-qa-001": {
+   "pred": "Last year (2022)",
+   "correct": true
+  },
+  "conv-26-qa-005": {
+   "pred": "Saturday before 25 May 2023",
+   "correct": false
+  },
+  "conv-26-qa-006": {
+   "pred": "Next month (June 2023)",
+   "correct": true
+  },
+  "conv-26-qa-008": {
+   "pred": "Last week before 9 June 2023",
+   "correct": true
+  },
+  "conv-26-qa-009": {
+   "pred": "The week before 6 July 2023",
+   "correct": false
+  },
+  "conv-26-qa-010": {
+   "pred": "Four years",
+   "correct": true
+  },
+  "conv-26-qa-012": {
+   "pred": "10 years ago",
+   "correct": true
+  },
+  "conv-26-qa-016": {
+   "pred": "July 2, 2023",
+   "correct": true
+  },
+  "conv-26-qa-017": {
+   "pred": "July 2023",
+   "correct": true
+  },
+  "conv-26-qa-020": {
+   "pred": "Yesterday (5 July 2023)",
+   "correct": true
+  },
+  "conv-26-qa-021": {
+   "pred": "The week before 6 July 2023",
+   "correct": true
+  },
+  "conv-26-qa-025": {
+   "pred": "10 July 2023",
+   "correct": true
+  },
+  "conv-26-qa-026": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-26-qa-028": {
+   "pred": "Last Friday before 15 July 2023",
+   "correct": true
+  },
+  "conv-26-qa-029": {
+   "pred": "Last Friday before 15 July 2023",
+   "correct": true
+  },
+  "conv-26-qa-031": {
+   "pred": "June 2023",
+   "correct": false
+  },
+  "conv-26-qa-033": {
+   "pred": "Last Friday before 14 August 2023",
+   "correct": false
+  },
+  "conv-26-qa-035": {
+   "pred": "July 15, 2023",
+   "correct": false
+  },
+  "conv-26-qa-036": {
+   "pred": "The weekend before 17 July 2023",
+   "correct": true
+  },
+  "conv-26-qa-041": {
+   "pred": "The Tuesday before 20 July 2023",
+   "correct": true
+  },
+  "conv-26-qa-044": {
+   "pred": "The weekend before 17 July 2023",
+   "correct": false
+  },
+  "conv-26-qa-045": {
+   "pred": "August 7, 2023",
+   "correct": false
+  },
+  "conv-26-qa-049": {
+   "pred": "June 2023",
+   "correct": false
+  },
+  "conv-26-qa-053": {
+   "pred": "Last Friday before 25 May 2023",
+   "correct": false
+  },
+  "conv-26-qa-054": {
+   "pred": "Last week before 23 August 2023",
+   "correct": true
+  },
+  "conv-26-qa-057": {
+   "pred": "The week before 25 August 2023",
+   "correct": true
+  },
+  "conv-26-qa-058": {
+   "pred": "24 August 2023",
+   "correct": true
+  },
+  "conv-26-qa-062": {
+   "pred": "27 August 2023",
+   "correct": true
+  },
+  "conv-26-qa-063": {
+   "pred": "September 2023",
+   "correct": true
+  },
+  "conv-26-qa-067": {
+   "pred": "The weekend before 13 September 2023",
+   "correct": true
+  },
+  "conv-26-qa-068": {
+   "pred": "Seven years",
+   "correct": false
+  },
+  "conv-26-qa-072": {
+   "pred": "Last year (2022)",
+   "correct": true
+  },
+  "conv-26-qa-073": {
+   "pred": "September 2023",
+   "correct": true
+  },
+  "conv-26-qa-074": {
+   "pred": "Last weekend",
+   "correct": false
+  },
+  "conv-26-qa-079": {
+   "pred": "Friday before 22 October 2023",
+   "correct": true
+  },
+  "conv-26-qa-080": {
+   "pred": "21 October 2023",
+   "correct": true
+  },
+  "conv-30-qa-000": {
+   "pred": "19 January 2023",
+   "correct": true
+  },
+  "conv-30-qa-001": {
+   "pred": "January 2023",
+   "correct": true
+  },
+  "conv-30-qa-006": {
+   "pred": "February 2023",
+   "correct": true
+  },
+  "conv-30-qa-007": {
+   "pred": "29 January, 2023",
+   "correct": true
+  },
+  "conv-30-qa-008": {
+   "pred": "28 January 2023",
+   "correct": true
+  },
+  "conv-30-qa-010": {
+   "pred": "8 February, 2023",
+   "correct": true
+  },
+  "conv-30-qa-011": {
+   "pred": "A few years ago",
+   "correct": true
+  },
+  "conv-30-qa-012": {
+   "pred": "Last week before 16 March 2023",
+   "correct": true
+  },
+  "conv-30-qa-013": {
+   "pred": "Not specified",
+   "correct": false
+  },
+  "conv-30-qa-014": {
+   "pred": "March 2023",
+   "correct": false
+  },
+  "conv-30-qa-015": {
+   "pred": "May 2023",
+   "correct": true
+  },
+  "conv-30-qa-016": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-30-qa-019": {
+   "pred": "10 May 2023",
+   "correct": true
+  },
+  "conv-30-qa-020": {
+   "pred": "10 May 2023",
+   "correct": false
+  },
+  "conv-30-qa-021": {
+   "pred": "D12:6 on 7:18 pm on 27 May, 2023",
+   "correct": true
+  },
+  "conv-30-qa-022": {
+   "pred": "8 February, 2023",
+   "correct": false
+  },
+  "conv-30-qa-026": {
+   "pred": "16 March, 2023",
+   "correct": false
+  },
+  "conv-30-qa-028": {
+   "pred": "The week before 19 June 2023",
+   "correct": true
+  },
+  "conv-30-qa-030": {
+   "pred": "Tomorrow (20 June 2023)",
+   "correct": true
+  },
+  "conv-30-qa-032": {
+   "pred": "The week before 21 June 2023",
+   "correct": true
+  },
+  "conv-30-qa-033": {
+   "pred": "June 20, 2023",
+   "correct": true
+  },
+  "conv-30-qa-034": {
+   "pred": "Last week before 9 July 2023",
+   "correct": true
+  },
+  "conv-30-qa-035": {
+   "pred": "Today",
+   "correct": false
+  },
+  "conv-30-qa-036": {
+   "pred": "21 July, 2023",
+   "correct": true
+  },
+  "conv-30-qa-037": {
+   "pred": "6:46 pm on 23 July, 2023",
+   "correct": true
+  },
+  "conv-30-qa-038": {
+   "pred": "Last Friday before 23 July 2023",
+   "correct": false
+  },
+  "conv-41-qa-000": {
+   "pred": "John",
+   "correct": false
+  },
+  "conv-41-qa-001": {
+   "pred": "21 December 2022",
+   "correct": true
+  },
+  "conv-41-qa-004": {
+   "pred": "Last week before 1 January 2023",
+   "correct": true
+  },
+  "conv-41-qa-005": {
+   "pred": "Last month (December 2022)",
+   "correct": true
+  },
+  "conv-41-qa-010": {
+   "pred": "24 February 2023",
+   "correct": true
+  },
+  "conv-41-qa-013": {
+   "pred": "6 March 2023",
+   "correct": false
+  },
+  "conv-41-qa-016": {
+   "pred": "Last week before 2 April 2023",
+   "correct": true
+  },
+  "conv-41-qa-020": {
+   "pred": "Last year (2022)",
+   "correct": true
+  },
+  "conv-41-qa-022": {
+   "pred": "Last month (March 2023)",
+   "correct": true
+  },
+  "conv-41-qa-024": {
+   "pred": "Last month (April 2023)",
+   "correct": true
+  },
+  "conv-41-qa-027": {
+   "pred": "Last Friday before 20 May 2023",
+   "correct": true
+  },
+  "conv-41-qa-031": {
+   "pred": "10 years ago",
+   "correct": false
+  },
+  "conv-41-qa-034": {
+   "pred": "Last week before 16 June 2023",
+   "correct": true
+  },
+  "conv-41-qa-038": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-41-qa-043": {
+   "pred": "The week before 7 July 2023",
+   "correct": true
+  },
+  "conv-41-qa-046": {
+   "pred": "The weekend before 12 June 2023",
+   "correct": false
+  },
+  "conv-41-qa-048": {
+   "pred": "last Sunday before 31 July 2023",
+   "correct": false
+  },
+  "conv-41-qa-051": {
+   "pred": "About a year ago",
+   "correct": false
+  },
+  "conv-41-qa-053": {
+   "pred": "2022",
+   "correct": true
+  },
+  "conv-41-qa-054": {
+   "pred": "Yesterday (4 August 2023)",
+   "correct": true
+  },
+  "conv-41-qa-055": {
+   "pred": "Last week before 9 August 2023",
+   "correct": true
+  },
+  "conv-41-qa-056": {
+   "pred": "The weekend before 7 April 2023",
+   "correct": false
+  },
+  "conv-41-qa-058": {
+   "pred": "Two weeks ago from 11 August 2023",
+   "correct": false
+  },
+  "conv-41-qa-059": {
+   "pred": "Last summer",
+   "correct": false
+  },
+  "conv-41-qa-061": {
+   "pred": "Last week before 13 August 2023",
+   "correct": true
+  },
+  "conv-41-qa-063": {
+   "pred": "0 weeks",
+   "correct": false
+  },
+  "conv-41-qa-091": {
+   "pred": "A violin concert",
+   "correct": false
+  },
+  "conv-42-qa-002": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-42-qa-003": {
+   "pred": "The week before 21 January 2022",
+   "correct": false
+  },
+  "conv-42-qa-006": {
+   "pred": "3 years",
+   "correct": true
+  },
+  "conv-42-qa-007": {
+   "pred": "Last Friday before 23 January 2022",
+   "correct": false
+  },
+  "conv-42-qa-008": {
+   "pred": "Nate did not specify when he got his first two turtles.",
+   "correct": false
+  },
+  "conv-42-qa-009": {
+   "pred": "Finished her first full screenplay.",
+   "correct": false
+  },
+  "conv-42-qa-013": {
+   "pred": "23 March 2022",
+   "correct": true
+  },
+  "conv-42-qa-015": {
+   "pred": "7:37 pm on 15 April, 2022",
+   "correct": false
+  },
+  "conv-42-qa-016": {
+   "pred": "He dyed his hair.",
+   "correct": false
+  },
+  "conv-42-qa-017": {
+   "pred": "The Lord of the Rings Trilogy",
+   "correct": true
+  },
+  "conv-42-qa-018": {
+   "pred": "Whispering Falls",
+   "correct": false
+  },
+  "conv-42-qa-020": {
+   "pred": "The conversation context does not contain the answer.",
+   "correct": false
+  },
+  "conv-42-qa-021": {
+   "pred": "Max",
+   "correct": true
+  },
+  "conv-42-qa-022": {
+   "pred": "She didn't specify a date for starting her third screenplay.",
+   "correct": false
+  },
+  "conv-42-qa-024": {
+   "pred": "Two weekends later from the conversation on 5:44 pm on 3 June, 2022.",
+   "correct": false
+  },
+  "conv-42-qa-025": {
+   "pred": "This weekend",
+   "correct": false
+  },
+  "conv-42-qa-026": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-42-qa-028": {
+   "pred": "The Friday before 24 June 2022",
+   "correct": false
+  },
+  "conv-42-qa-029": {
+   "pred": "This weekend",
+   "correct": false
+  },
+  "conv-42-qa-031": {
+   "pred": "Friday, before 10 July 2022",
+   "correct": false
+  },
+  "conv-42-qa-032": {
+   "pred": "Woodhaven",
+   "correct": true
+  },
+  "conv-42-qa-033": {
+   "pred": "Last week before 14 August 2022",
+   "correct": false
+  },
+  "conv-42-qa-035": {
+   "pred": "22 August, 2022",
+   "correct": false
+  },
+  "conv-42-qa-036": {
+   "pred": "The week before 22 August 2022",
+   "correct": false
+  },
+  "conv-42-qa-037": {
+   "pred": "21 August 2022",
+   "correct": true
+  },
+  "conv-42-qa-038": {
+   "pred": "Last Friday before 14 September 2022",
+   "correct": false
+  },
+  "conv-42-qa-039": {
+   "pred": "Last Monday before 14 September 2022",
+   "correct": false
+  },
+  "conv-42-qa-040": {
+   "pred": "The week before 14 September 2022",
+   "correct": false
+  },
+  "conv-42-qa-041": {
+   "pred": "The exact date is not provided in the context.",
+   "correct": false
+  },
+  "conv-42-qa-043": {
+   "pred": "A few weeks",
+   "correct": false
+  },
+  "conv-42-qa-044": {
+   "pred": "Last week before 6 October 2022",
+   "correct": false
+  },
+  "conv-42-qa-045": {
+   "pred": "The week before 6 October 2022",
+   "correct": false
+  },
+  "conv-42-qa-048": {
+   "pred": "Last Friday before 9 October 2022",
+   "correct": false
+  },
+  "conv-42-qa-054": {
+   "pred": "Sunday before 25 October 2022",
+   "correct": false
+  },
+  "conv-42-qa-057": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-42-qa-064": {
+   "pred": "Last Saturday before 7 November 2022",
+   "correct": false
+  },
+  "conv-42-qa-065": {
+   "pred": "Valorant tournament",
+   "correct": true
+  },
+  "conv-42-qa-072": {
+   "pred": "10 November 2022",
+   "correct": true
+  },
+  "conv-42-qa-077": {
+   "pred": "The week before 2 May 2022",
+   "correct": true
+  },
+  "conv-42-qa-086": {
+   "pred": "10 November 2022",
+   "correct": true
+  },
+  "conv-43-qa-006": {
+   "pred": "June 2023",
+   "correct": true
+  },
+  "conv-43-qa-010": {
+   "pred": "August 2023",
+   "correct": false
+  },
+  "conv-43-qa-012": {
+   "pred": "Five years ago from 2023, which would be 2018.",
+   "correct": true
+  },
+  "conv-43-qa-016": {
+   "pred": "2 weeks",
+   "correct": false
+  },
+  "conv-43-qa-020": {
+   "pred": "New York City",
+   "correct": false
+  },
+  "conv-43-qa-022": {
+   "pred": "15th",
+   "correct": false
+  },
+  "conv-43-qa-023": {
+   "pred": "Next month (September 2023)",
+   "correct": true
+  },
+  "conv-43-qa-024": {
+   "pred": "He was on a trip.",
+   "correct": false
+  },
+  "conv-43-qa-031": {
+   "pred": "September 2023",
+   "correct": true
+  },
+  "conv-43-qa-033": {
+   "pred": "Next month (October 2023)",
+   "correct": true
+  },
+  "conv-43-qa-037": {
+   "pred": "The week before 13 October 2023",
+   "correct": false
+  },
+  "conv-43-qa-039": {
+   "pred": "2022",
+   "correct": true
+  },
+  "conv-43-qa-040": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-43-qa-044": {
+   "pred": "Short but sweet. The exact date is not provided in the context.",
+   "correct": false
+  },
+  "conv-43-qa-045": {
+   "pred": "United Kingdom",
+   "correct": false
+  },
+  "conv-43-qa-046": {
+   "pred": "He was in the UK.",
+   "correct": true
+  },
+  "conv-43-qa-047": {
+   "pred": "Last week (the week before 2 October 2023)",
+   "correct": false
+  },
+  "conv-43-qa-054": {
+   "pred": "Last year (2022)",
+   "correct": true
+  },
+  "conv-43-qa-055": {
+   "pred": "After college, he was drafted by a team.",
+   "correct": false
+  },
+  "conv-43-qa-056": {
+   "pred": "About four months ago",
+   "correct": false
+  },
+  "conv-43-qa-058": {
+   "pred": "Last August",
+   "correct": false
+  },
+  "conv-43-qa-060": {
+   "pred": "The Friday before 11 December 2023",
+   "correct": true
+  },
+  "conv-43-qa-063": {
+   "pred": "Last summer",
+   "correct": false
+  },
+  "conv-43-qa-064": {
+   "pred": "December 2023",
+   "correct": true
+  },
+  "conv-43-qa-068": {
+   "pred": "February 2024",
+   "correct": false
+  },
+  "conv-43-qa-069": {
+   "pred": "February 2024",
+   "correct": true
+  },
+  "conv-44-qa-000": {
+   "pred": "2023",
+   "correct": false
+  },
+  "conv-44-qa-001": {
+   "pred": "The week before 27 March 2023",
+   "correct": true
+  },
+  "conv-44-qa-004": {
+   "pred": "Last week before 16 April 2023",
+   "correct": false
+  },
+  "conv-44-qa-005": {
+   "pred": "Last week before 3 May 2023",
+   "correct": false
+  },
+  "conv-44-qa-006": {
+   "pred": "2 April, 2023",
+   "correct": false
+  },
+  "conv-44-qa-007": {
+   "pred": "3 years",
+   "correct": true
+  },
+  "conv-44-qa-008": {
+   "pred": "No, Andrew did not have a pet dog during March 2023.",
+   "correct": true
+  },
+  "conv-44-qa-010": {
+   "pred": "11 May, 2023",
+   "correct": false
+  },
+  "conv-44-qa-011": {
+   "pred": "Last Sunday before 13 June 2023",
+   "correct": false
+  },
+  "conv-44-qa-013": {
+   "pred": "June 26, 2023",
+   "correct": true
+  },
+  "conv-44-qa-016": {
+   "pred": "Saturday",
+   "correct": false
+  },
+  "conv-44-qa-022": {
+   "pred": "He went camping.",
+   "correct": false
+  },
+  "conv-44-qa-025": {
+   "pred": "The weekend before 24 August 2023",
+   "correct": true
+  },
+  "conv-44-qa-030": {
+   "pred": "November 2023",
+   "correct": true
+  },
+  "conv-44-qa-034": {
+   "pred": "1 month",
+   "correct": false
+  },
+  "conv-44-qa-037": {
+   "pred": "Last Friday before 24 September 2023",
+   "correct": false
+  },
+  "conv-44-qa-038": {
+   "pred": "The weekend before 24 October 2023",
+   "correct": true
+  },
+  "conv-44-qa-045": {
+   "pred": "None (not mentioned in conversation).",
+   "correct": false
+  },
+  "conv-44-qa-046": {
+   "pred": "2",
+   "correct": false
+  },
+  "conv-44-qa-047": {
+   "pred": "1 month",
+   "correct": true
+  },
+  "conv-44-qa-055": {
+   "pred": "[D9:8 on 1:51 pm on 26 June, 2023]",
+   "correct": false
+  },
+  "conv-44-qa-057": {
+   "pred": "Andrew adopted Scout after deciding on a name for his new pup, which was mentioned in the conversation on 9:02 am on 22 November, 2023. However, the exact date of the adoption is not specified in the provided context.",
+   "correct": false
+  },
+  "conv-44-qa-058": {
+   "pred": "None (not mentioned in conversation).",
+   "correct": false
+  },
+  "conv-44-qa-059": {
+   "pred": "Not specified",
+   "correct": false
+  },
+  "conv-47-qa-001": {
+   "pred": "Bowling",
+   "correct": true
+  },
+  "conv-47-qa-004": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-47-qa-010": {
+   "pred": "Last week before 12 April 2022",
+   "correct": false
+  },
+  "conv-47-qa-011": {
+   "pred": "Busy with work and stuff",
+   "correct": false
+  },
+  "conv-47-qa-013": {
+   "pred": "2021",
+   "correct": true
+  },
+  "conv-47-qa-014": {
+   "pred": "Three days ago from 29 April 2022",
+   "correct": false
+  },
+  "conv-47-qa-015": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-47-qa-021": {
+   "pred": "7 May 2022",
+   "correct": true
+  },
+  "conv-47-qa-023": {
+   "pred": "Next month (July 2022)",
+   "correct": true
+  },
+  "conv-47-qa-028": {
+   "pred": "May 2022",
+   "correct": true
+  },
+  "conv-47-qa-029": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-47-qa-031": {
+   "pred": "None (not mentioned in conversation).",
+   "correct": false
+  },
+  "conv-47-qa-032": {
+   "pred": "He was at work.",
+   "correct": false
+  },
+  "conv-47-qa-037": {
+   "pred": "Yesterday (21 July 2022)",
+   "correct": true
+  },
+  "conv-47-qa-039": {
+   "pred": "3 years ago",
+   "correct": false
+  },
+  "conv-47-qa-041": {
+   "pred": "Yesterday (3 September 2022)",
+   "correct": false
+  },
+  "conv-47-qa-042": {
+   "pred": "Yesterday (9 August 2022)",
+   "correct": true
+  },
+  "conv-47-qa-043": {
+   "pred": "September 2022",
+   "correct": true
+  },
+  "conv-47-qa-046": {
+   "pred": "They met at McGee's bar on 27 August 2022.",
+   "correct": true
+  },
+  "conv-47-qa-047": {
+   "pred": "3 September 2022",
+   "correct": true
+  },
+  "conv-47-qa-048": {
+   "pred": "Next Sunday",
+   "correct": false
+  },
+  "conv-47-qa-050": {
+   "pred": "27 March 2022",
+   "correct": false
+  },
+  "conv-47-qa-052": {
+   "pred": "Last Tuesday",
+   "correct": false
+  },
+  "conv-47-qa-053": {
+   "pred": "A few months",
+   "correct": false
+  },
+  "conv-47-qa-055": {
+   "pred": "Last week before 13 October 2022",
+   "correct": true
+  },
+  "conv-47-qa-057": {
+   "pred": "19 October 2022",
+   "correct": true
+  },
+  "conv-47-qa-058": {
+   "pred": "Yesterday (20 October 2022)",
+   "correct": true
+  },
+  "conv-47-qa-059": {
+   "pred": "The week before 13 October 2022",
+   "correct": false
+  },
+  "conv-47-qa-061": {
+   "pred": "He asked her to become his girlfriend.",
+   "correct": false
+  },
+  "conv-47-qa-062": {
+   "pred": "A few days",
+   "correct": false
+  },
+  "conv-47-qa-063": {
+   "pred": "4 November 2022",
+   "correct": true
+  },
+  "conv-47-qa-064": {
+   "pred": "He had been playing for a month before winning the chess tournament.",
+   "correct": false
+  },
+  "conv-47-qa-065": {
+   "pred": "Before starting their road trip on 4 November 2022.",
+   "correct": false
+  },
+  "conv-47-qa-066": {
+   "pred": "7 November, 2022",
+   "correct": false
+  },
+  "conv-48-qa-000": {
+   "pred": "A yoga retreat",
+   "correct": false
+  },
+  "conv-48-qa-002": {
+   "pred": "Deborah's mother passed away before 23 January 2023.",
+   "correct": false
+  },
+  "conv-48-qa-003": {
+   "pred": "2022",
+   "correct": true
+  },
+  "conv-48-qa-004": {
+   "pred": "2010",
+   "correct": true
+  },
+  "conv-48-qa-007": {
+   "pred": "Paris",
+   "correct": false
+  },
+  "conv-48-qa-009": {
+   "pred": "None (not mentioned in conversation).",
+   "correct": false
+  },
+  "conv-48-qa-010": {
+   "pred": "1993",
+   "correct": true
+  },
+  "conv-48-qa-012": {
+   "pred": "26 January 2023",
+   "correct": true
+  },
+  "conv-48-qa-017": {
+   "pred": "Last year (2022)",
+   "correct": true
+  },
+  "conv-48-qa-021": {
+   "pred": "Next Saturday",
+   "correct": false
+  },
+  "conv-48-qa-022": {
+   "pred": "31 January 2023",
+   "correct": true
+  },
+  "conv-48-qa-026": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-48-qa-027": {
+   "pred": "Last summer",
+   "correct": false
+  },
+  "conv-48-qa-029": {
+   "pred": "The week before 3 September 2023",
+   "correct": false
+  },
+  "conv-48-qa-030": {
+   "pred": "4:12 pm on 22 February, 2023",
+   "correct": false
+  },
+  "conv-48-qa-031": {
+   "pred": "Last summer",
+   "correct": false
+  },
+  "conv-48-qa-032": {
+   "pred": "Last year (2022)",
+   "correct": true
+  },
+  "conv-48-qa-034": {
+   "pred": "2022",
+   "correct": false
+  },
+  "conv-48-qa-035": {
+   "pred": "Yesterday (24 February 2023)",
+   "correct": true
+  },
+  "conv-48-qa-037": {
+   "pred": "Last Sunday before 2 March 2023",
+   "correct": true
+  },
+  "conv-48-qa-038": {
+   "pred": "So much has been going on lately. I started this yoga class in the neighborhood - it's such a good feeling! Now I get to share the exercise with my neighbors and watch it really transform them. [D9:3 on 11:22 am on 13 March, 2023]",
+   "correct": false
+  },
+  "conv-48-qa-043": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-48-qa-044": {
+   "pred": "Today",
+   "correct": false
+  },
+  "conv-48-qa-045": {
+   "pred": "The week before 1 February 2023",
+   "correct": false
+  },
+  "conv-48-qa-046": {
+   "pred": "The context does not contain the answer.",
+   "correct": false
+  },
+  "conv-48-qa-047": {
+   "pred": "5 June 2023",
+   "correct": true
+  },
+  "conv-48-qa-050": {
+   "pred": "Not specified",
+   "correct": false
+  },
+  "conv-48-qa-051": {
+   "pred": "The day before yesterday on 25 June 2023",
+   "correct": false
+  },
+  "conv-48-qa-052": {
+   "pred": "The week before 1 August 2023",
+   "correct": false
+  },
+  "conv-48-qa-053": {
+   "pred": "Two years ago",
+   "correct": false
+  },
+  "conv-48-qa-054": {
+   "pred": "Susie",
+   "correct": true
+  },
+  "conv-48-qa-055": {
+   "pred": "Susie",
+   "correct": false
+  },
+  "conv-48-qa-056": {
+   "pred": "Last week before 16 August 2023",
+   "correct": true
+  },
+  "conv-48-qa-057": {
+   "pred": "The week before 21 August 2023",
+   "correct": false
+  },
+  "conv-48-qa-060": {
+   "pred": "Last week before 24 August 2023",
+   "correct": true
+  },
+  "conv-48-qa-065": {
+   "pred": "Brazil",
+   "correct": true
+  },
+  "conv-48-qa-066": {
+   "pred": "Yesterday (29 August 2023)",
+   "correct": true
+  },
+  "conv-48-qa-068": {
+   "pred": "None (not mentioned in conversation).",
+   "correct": false
+  },
+  "conv-48-qa-071": {
+   "pred": "Last Friday before 3 September 2023",
+   "correct": false
+  },
+  "conv-48-qa-076": {
+   "pred": "The Friday before 17 September 2023",
+   "correct": true
+  },
+  "conv-48-qa-078": {
+   "pred": "A meditation retreat in Phuket",
+   "correct": true
+  },
+  "conv-48-qa-081": {
+   "pred": "None (not mentioned in conversation).",
+   "correct": false
+  },
+  "conv-49-qa-004": {
+   "pred": "Painting",
+   "correct": true
+  },
+  "conv-49-qa-009": {
+   "pred": "Last weekend before 24 May 2023",
+   "correct": true
+  },
+  "conv-49-qa-012": {
+   "pred": "Monday before 27 July 2023",
+   "correct": false
+  },
+  "conv-49-qa-013": {
+   "pred": "The week before 6 June 2023",
+   "correct": false
+  },
+  "conv-49-qa-017": {
+   "pred": "The Friday before 27 July 2023",
+   "correct": true
+  },
+  "conv-49-qa-022": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-49-qa-023": {
+   "pred": "28 July 2023",
+   "correct": true
+  },
+  "conv-49-qa-024": {
+   "pred": "A health scare",
+   "correct": false
+  },
+  "conv-49-qa-025": {
+   "pred": "2023",
+   "correct": false
+  },
+  "conv-49-qa-030": {
+   "pred": "Canada",
+   "correct": false
+  },
+  "conv-49-qa-035": {
+   "pred": "Last Saturday before 15 August 2023",
+   "correct": true
+  },
+  "conv-49-qa-039": {
+   "pred": "1 month",
+   "correct": false
+  },
+  "conv-49-qa-040": {
+   "pred": "A few days ago",
+   "correct": false
+  },
+  "conv-49-qa-041": {
+   "pred": "Painting classes",
+   "correct": true
+  },
+  "conv-49-qa-045": {
+   "pred": "Canada",
+   "correct": false
+  },
+  "conv-49-qa-047": {
+   "pred": "Last month (July 2023)",
+   "correct": true
+  },
+  "conv-49-qa-052": {
+   "pred": "Painting session",
+   "correct": true
+  },
+  "conv-49-qa-053": {
+   "pred": "Next Saturday",
+   "correct": false
+  },
+  "conv-49-qa-058": {
+   "pred": "One year ago",
+   "correct": false
+  },
+  "conv-49-qa-059": {
+   "pred": "14 October 2023",
+   "correct": true
+  },
+  "conv-49-qa-060": {
+   "pred": "Eating healthier",
+   "correct": false
+  },
+  "conv-49-qa-061": {
+   "pred": "Work stress",
+   "correct": false
+  },
+  "conv-49-qa-063": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-49-qa-066": {
+   "pred": "October 2023",
+   "correct": false
+  },
+  "conv-49-qa-067": {
+   "pred": "December 2023",
+   "correct": true
+  },
+  "conv-49-qa-068": {
+   "pred": "Not specified",
+   "correct": false
+  },
+  "conv-49-qa-070": {
+   "pred": "They got married last week, so they dated for less than a week.",
+   "correct": false
+  },
+  "conv-49-qa-073": {
+   "pred": "Next summer",
+   "correct": false
+  },
+  "conv-49-qa-074": {
+   "pred": "Last Tuesday before 17 December 2023",
+   "correct": false
+  },
+  "conv-49-qa-075": {
+   "pred": "5 January 2024",
+   "correct": true
+  },
+  "conv-49-qa-076": {
+   "pred": "June 2023",
+   "correct": false
+  },
+  "conv-49-qa-079": {
+   "pred": "February 2024",
+   "correct": true
+  },
+  "conv-49-qa-080": {
+   "pred": "December 31, 2023",
+   "correct": false
+  },
+  "conv-50-qa-000": {
+   "pred": "April 20, 2023",
+   "correct": false
+  },
+  "conv-50-qa-002": {
+   "pred": "26 March, 2023",
+   "correct": false
+  },
+  "conv-50-qa-008": {
+   "pred": "Last week before 16 May 2023",
+   "correct": false
+  },
+  "conv-50-qa-009": {
+   "pred": "Last week before 16 May 2023",
+   "correct": true
+  },
+  "conv-50-qa-010": {
+   "pred": "Last week before 16 May 2023",
+   "correct": true
+  },
+  "conv-50-qa-012": {
+   "pred": "The week before 31 May 2023",
+   "correct": false
+  },
+  "conv-50-qa-014": {
+   "pred": "Yesterday (8 June 2023)",
+   "correct": true
+  },
+  "conv-50-qa-016": {
+   "pred": "July 2023",
+   "correct": true
+  },
+  "conv-50-qa-017": {
+   "pred": "Last Friday (the Friday before 21 June 2023)",
+   "correct": true
+  },
+  "conv-50-qa-025": {
+   "pred": "Last Friday before 22 August 2023",
+   "correct": true
+  },
+  "conv-50-qa-026": {
+   "pred": "Yesterday (21 August 2023)",
+   "correct": true
+  },
+  "conv-50-qa-027": {
+   "pred": "Boston",
+   "correct": false
+  },
+  "conv-50-qa-031": {
+   "pred": "He was in San Francisco.",
+   "correct": true
+  },
+  "conv-50-qa-034": {
+   "pred": "1 September 2023",
+   "correct": true
+  },
+  "conv-50-qa-035": {
+   "pred": "Last week before 2 September 2023",
+   "correct": false
+  },
+  "conv-50-qa-036": {
+   "pred": "11th September 2023",
+   "correct": false
+  },
+  "conv-50-qa-038": {
+   "pred": "Last night",
+   "correct": false
+  },
+  "conv-50-qa-043": {
+   "pred": "Boston",
+   "correct": true
+  },
+  "conv-50-qa-044": {
+   "pred": "3 October 2023",
+   "correct": true
+  },
+  "conv-50-qa-048": {
+   "pred": "Attending a music festival in Boston",
+   "correct": false
+  },
+  "conv-50-qa-050": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-50-qa-051": {
+   "pred": "August 2022",
+   "correct": true
+  },
+  "conv-50-qa-052": {
+   "pred": "He didn't specify a second trip to Tokyo.",
+   "correct": false
+  },
+  "conv-50-qa-055": {
+   "pred": "24 October 2023",
+   "correct": true
+  },
+  "conv-50-qa-057": {
+   "pred": "Photography",
+   "correct": true
+  },
+  "conv-50-qa-061": {
+   "pred": "Not specified",
+   "correct": false
+  },
+  "conv-50-qa-062": {
+   "pred": "The context does not contain the answer.",
+   "correct": false
+  },
+  "conv-50-qa-065": {
+   "pred": "At sunset, as mentioned in the conversation on 27:7 on 10:49 am on 29 October, 2023.",
+   "correct": false
+  },
+  "conv-50-qa-067": {
+   "pred": "Tokyo",
+   "correct": true
+  },
+  "conv-50-qa-068": {
+   "pred": "He found it in a neighbor's garage.",
+   "correct": false
+  },
+  "conv-50-qa-069": {
+   "pred": "November 2023",
+   "correct": true
+  },
+  "conv-50-qa-070": {
+   "pred": "16 November 2023",
+   "correct": true
+  }
+ },
+ "date_copy": {
+  "conv-26-qa-000": {
+   "pred": "7 May 2023",
+   "correct": true
+  },
+  "conv-26-qa-001": {
+   "pred": "Last year (2022)",
+   "correct": true
+  },
+  "conv-26-qa-005": {
+   "pred": "the Saturday before 25 May 2023",
+   "correct": false
+  },
+  "conv-26-qa-006": {
+   "pred": "June 2023",
+   "correct": true
+  },
+  "conv-26-qa-008": {
+   "pred": "The week before 9 June 2023",
+   "correct": true
+  },
+  "conv-26-qa-009": {
+   "pred": "The week before 6 July 2023",
+   "correct": false
+  },
+  "conv-26-qa-010": {
+   "pred": "Four years",
+   "correct": true
+  },
+  "conv-26-qa-012": {
+   "pred": "Ten years ago",
+   "correct": true
+  },
+  "conv-26-qa-016": {
+   "pred": "2 July 2023",
+   "correct": true
+  },
+  "conv-26-qa-017": {
+   "pred": "July 2023",
+   "correct": true
+  },
+  "conv-26-qa-020": {
+   "pred": "5 July 2023",
+   "correct": true
+  },
+  "conv-26-qa-021": {
+   "pred": "the week before 6 July 2023",
+   "correct": true
+  },
+  "conv-26-qa-025": {
+   "pred": "10 July 2023",
+   "correct": true
+  },
+  "conv-26-qa-026": {
+   "pred": "2022",
+   "correct": true
+  },
+  "conv-26-qa-028": {
+   "pred": "last Friday (the Friday before 15 July 2023)",
+   "correct": true
+  },
+  "conv-26-qa-029": {
+   "pred": "last Friday (the Friday before 15 July 2023)",
+   "correct": true
+  },
+  "conv-26-qa-031": {
+   "pred": "June 2023",
+   "correct": false
+  },
+  "conv-26-qa-033": {
+   "pred": "last Friday (the Friday before 14 August 2023)",
+   "correct": false
+  },
+  "conv-26-qa-035": {
+   "pred": "15 July 2023",
+   "correct": false
+  },
+  "conv-26-qa-036": {
+   "pred": "the weekend before 17 July 2023",
+   "correct": true
+  },
+  "conv-26-qa-041": {
+   "pred": "last Tuesday (the Tuesday before 20 July 2023)",
+   "correct": true
+  },
+  "conv-26-qa-044": {
+   "pred": "14 August, 2023",
+   "correct": false
+  },
+  "conv-26-qa-045": {
+   "pred": "The Friday before 14 August 2023",
+   "correct": true
+  },
+  "conv-26-qa-049": {
+   "pred": "June 2023",
+   "correct": false
+  },
+  "conv-26-qa-053": {
+   "pred": "23 August, 2023",
+   "correct": false
+  },
+  "conv-26-qa-054": {
+   "pred": "the week before 23 August 2023",
+   "correct": true
+  },
+  "conv-26-qa-057": {
+   "pred": "the week before 25 August 2023",
+   "correct": true
+  },
+  "conv-26-qa-058": {
+   "pred": "24 August 2023",
+   "correct": true
+  },
+  "conv-26-qa-062": {
+   "pred": "27 August 2023",
+   "correct": true
+  },
+  "conv-26-qa-063": {
+   "pred": "September 2023",
+   "correct": true
+  },
+  "conv-26-qa-067": {
+   "pred": "The weekend before 13 September 2023",
+   "correct": true
+  },
+  "conv-26-qa-068": {
+   "pred": "Seven years",
+   "correct": false
+  },
+  "conv-26-qa-072": {
+   "pred": "2022",
+   "correct": true
+  },
+  "conv-26-qa-073": {
+   "pred": "September 2023",
+   "correct": true
+  },
+  "conv-26-qa-074": {
+   "pred": "past weekend",
+   "correct": false
+  },
+  "conv-26-qa-079": {
+   "pred": "last Friday (the Friday before 22 October 2023)",
+   "correct": true
+  },
+  "conv-26-qa-080": {
+   "pred": "21 October 2023",
+   "correct": true
+  },
+  "conv-30-qa-000": {
+   "pred": "19 January 2023",
+   "correct": true
+  },
+  "conv-30-qa-001": {
+   "pred": "January 2023",
+   "correct": true
+  },
+  "conv-30-qa-006": {
+   "pred": "February 2023",
+   "correct": true
+  },
+  "conv-30-qa-007": {
+   "pred": "29 January 2023",
+   "correct": true
+  },
+  "conv-30-qa-008": {
+   "pred": "28 January 2023",
+   "correct": true
+  },
+  "conv-30-qa-010": {
+   "pred": "8 February, 2023",
+   "correct": true
+  },
+  "conv-30-qa-011": {
+   "pred": "A few years ago",
+   "correct": true
+  },
+  "conv-30-qa-012": {
+   "pred": "last week (the week before 16 March 2023)",
+   "correct": true
+  },
+  "conv-30-qa-013": {
+   "pred": "Not specified",
+   "correct": false
+  },
+  "conv-30-qa-014": {
+   "pred": "3 April 2023",
+   "correct": true
+  },
+  "conv-30-qa-015": {
+   "pred": "May 2023",
+   "correct": true
+  },
+  "conv-30-qa-016": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-30-qa-019": {
+   "pred": "10 May 2023",
+   "correct": true
+  },
+  "conv-30-qa-020": {
+   "pred": "10 May 2023",
+   "correct": false
+  },
+  "conv-30-qa-021": {
+   "pred": "D12:6 on 7:18 pm on 27 May, 2023",
+   "correct": true
+  },
+  "conv-30-qa-022": {
+   "pred": "D13:4 on 8:29 pm on 13 June, 2023",
+   "correct": true
+  },
+  "conv-30-qa-026": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-30-qa-028": {
+   "pred": "the week before 19 June 2023",
+   "correct": true
+  },
+  "conv-30-qa-030": {
+   "pred": "tomorrow (20 June 2023)",
+   "correct": true
+  },
+  "conv-30-qa-032": {
+   "pred": "the week before 21 June 2023",
+   "correct": true
+  },
+  "conv-30-qa-033": {
+   "pred": "Yesterday (20 June 2023)",
+   "correct": true
+  },
+  "conv-30-qa-034": {
+   "pred": "last week (the week before 9 July 2023)",
+   "correct": true
+  },
+  "conv-30-qa-035": {
+   "pred": "Today",
+   "correct": false
+  },
+  "conv-30-qa-036": {
+   "pred": "21 July, 2023",
+   "correct": true
+  },
+  "conv-30-qa-037": {
+   "pred": "23 July 2023",
+   "correct": true
+  },
+  "conv-30-qa-038": {
+   "pred": "last Friday (the Friday before 23 July 2023)",
+   "correct": false
+  },
+  "conv-41-qa-000": {
+   "pred": "None (not mentioned in conversation).",
+   "correct": false
+  },
+  "conv-41-qa-001": {
+   "pred": "21 December 2022",
+   "correct": true
+  },
+  "conv-41-qa-004": {
+   "pred": "The week before 1 January 2023",
+   "correct": true
+  },
+  "conv-41-qa-005": {
+   "pred": "December 2022",
+   "correct": true
+  },
+  "conv-41-qa-010": {
+   "pred": "24 February 2023",
+   "correct": true
+  },
+  "conv-41-qa-013": {
+   "pred": "the week before 6 March 2023",
+   "correct": true
+  },
+  "conv-41-qa-016": {
+   "pred": "last week (the week before 2 April 2023)",
+   "correct": true
+  },
+  "conv-41-qa-020": {
+   "pred": "Last year (2022)",
+   "correct": true
+  },
+  "conv-41-qa-022": {
+   "pred": "last month (March 2023)",
+   "correct": true
+  },
+  "conv-41-qa-024": {
+   "pred": "April 2023",
+   "correct": true
+  },
+  "conv-41-qa-027": {
+   "pred": "last Friday (the Friday before 20 May 2023)",
+   "correct": true
+  },
+  "conv-41-qa-031": {
+   "pred": "10 years ago",
+   "correct": false
+  },
+  "conv-41-qa-034": {
+   "pred": "the week before 16 June 2023",
+   "correct": true
+  },
+  "conv-41-qa-038": {
+   "pred": "last Friday (the Friday before 10 April 2023)",
+   "correct": false
+  },
+  "conv-41-qa-043": {
+   "pred": "the week before 7 July 2023",
+   "correct": true
+  },
+  "conv-41-qa-046": {
+   "pred": "the weekend before 22 July 2023",
+   "correct": true
+  },
+  "conv-41-qa-048": {
+   "pred": "last Sunday (the Sunday before 31 July 2023)",
+   "correct": false
+  },
+  "conv-41-qa-051": {
+   "pred": "About a year ago",
+   "correct": false
+  },
+  "conv-41-qa-053": {
+   "pred": "2022",
+   "correct": true
+  },
+  "conv-41-qa-054": {
+   "pred": "yesterday (4 August 2023)",
+   "correct": true
+  },
+  "conv-41-qa-055": {
+   "pred": "last week (the week before 9 August 2023)",
+   "correct": true
+  },
+  "conv-41-qa-056": {
+   "pred": "last weekend (the weekend before 9 August 2023)",
+   "correct": false
+  },
+  "conv-41-qa-058": {
+   "pred": "Two weeks ago",
+   "correct": false
+  },
+  "conv-41-qa-059": {
+   "pred": "Last summer",
+   "correct": false
+  },
+  "conv-41-qa-061": {
+   "pred": "the week before 13 August 2023",
+   "correct": true
+  },
+  "conv-41-qa-063": {
+   "pred": "0 weeks",
+   "correct": false
+  },
+  "conv-41-qa-091": {
+   "pred": "A picnic",
+   "correct": false
+  },
+  "conv-42-qa-002": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-42-qa-003": {
+   "pred": "the week before 21 January 2022",
+   "correct": false
+  },
+  "conv-42-qa-006": {
+   "pred": "3 years",
+   "correct": true
+  },
+  "conv-42-qa-007": {
+   "pred": "last Friday (the Friday before 23 January 2022)",
+   "correct": false
+  },
+  "conv-42-qa-008": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-42-qa-009": {
+   "pred": "Finished her first full screenplay.",
+   "correct": false
+  },
+  "conv-42-qa-013": {
+   "pred": "23 March 2022",
+   "correct": true
+  },
+  "conv-42-qa-015": {
+   "pred": "The week before 15 April 2022",
+   "correct": false
+  },
+  "conv-42-qa-016": {
+   "pred": "Dyed his hair",
+   "correct": false
+  },
+  "conv-42-qa-017": {
+   "pred": "The Lord of the Rings Trilogy",
+   "correct": true
+  },
+  "conv-42-qa-018": {
+   "pred": "Whispering Falls",
+   "correct": false
+  },
+  "conv-42-qa-020": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-42-qa-021": {
+   "pred": "Max",
+   "correct": true
+  },
+  "conv-42-qa-022": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-42-qa-024": {
+   "pred": "Two weekends later from the first mentioned date.",
+   "correct": false
+  },
+  "conv-42-qa-025": {
+   "pred": "This weekend.",
+   "correct": false
+  },
+  "conv-42-qa-026": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-42-qa-028": {
+   "pred": "last Friday (the Friday before 24 June 2022)",
+   "correct": false
+  },
+  "conv-42-qa-029": {
+   "pred": "This weekend",
+   "correct": false
+  },
+  "conv-42-qa-031": {
+   "pred": "Friday before 15 July 2023",
+   "correct": false
+  },
+  "conv-42-qa-032": {
+   "pred": "Woodhaven",
+   "correct": true
+  },
+  "conv-42-qa-033": {
+   "pred": "the week before 14 August 2022",
+   "correct": false
+  },
+  "conv-42-qa-035": {
+   "pred": "22 August, 2022",
+   "correct": false
+  },
+  "conv-42-qa-036": {
+   "pred": "the week before 22 August 2022",
+   "correct": false
+  },
+  "conv-42-qa-037": {
+   "pred": "21 August 2022",
+   "correct": true
+  },
+  "conv-42-qa-038": {
+   "pred": "last Friday (the Friday before 14 September 2022)",
+   "correct": false
+  },
+  "conv-42-qa-039": {
+   "pred": "14 September 2022",
+   "correct": false
+  },
+  "conv-42-qa-040": {
+   "pred": "last week (the week before 14 September 2022)",
+   "correct": false
+  },
+  "conv-42-qa-041": {
+   "pred": "The exact date is not provided in the context.",
+   "correct": false
+  },
+  "conv-42-qa-043": {
+   "pred": "A ton of late nights and edits over the course of a week. The exact duration is not specified.",
+   "correct": false
+  },
+  "conv-42-qa-044": {
+   "pred": "The week before 6 October 2022",
+   "correct": false
+  },
+  "conv-42-qa-045": {
+   "pred": "the week before 6 October 2022",
+   "correct": false
+  },
+  "conv-42-qa-048": {
+   "pred": "last Friday (the Friday before 9 October 2022)",
+   "correct": false
+  },
+  "conv-42-qa-054": {
+   "pred": "Sunday (the Sunday before 25 October 2022)",
+   "correct": false
+  },
+  "conv-42-qa-057": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-42-qa-064": {
+   "pred": "last Saturday (the Saturday before 7 November 2022)",
+   "correct": false
+  },
+  "conv-42-qa-065": {
+   "pred": "Valorant tournament on the Saturday before 7 November 2022",
+   "correct": true
+  },
+  "conv-42-qa-072": {
+   "pred": "10 November 2022",
+   "correct": true
+  },
+  "conv-42-qa-077": {
+   "pred": "last week (the week before 2 May 2022)",
+   "correct": true
+  },
+  "conv-42-qa-086": {
+   "pred": "10 November 2022",
+   "correct": true
+  },
+  "conv-43-qa-006": {
+   "pred": "June 2023",
+   "correct": true
+  },
+  "conv-43-qa-010": {
+   "pred": "August 2023",
+   "correct": false
+  },
+  "conv-43-qa-012": {
+   "pred": "Five years ago from 2023, which would be 2018.",
+   "correct": true
+  },
+  "conv-43-qa-016": {
+   "pred": "2",
+   "correct": false
+  },
+  "conv-43-qa-020": {
+   "pred": "I don't know",
+   "correct": false
+  },
+  "conv-43-qa-022": {
+   "pred": "15th",
+   "correct": false
+  },
+  "conv-43-qa-023": {
+   "pred": "September 2023",
+   "correct": true
+  },
+  "conv-43-qa-024": {
+   "pred": "He was in Chicago.",
+   "correct": true
+  },
+  "conv-43-qa-031": {
+   "pred": "September 2023",
+   "correct": true
+  },
+  "conv-43-qa-033": {
+   "pred": "October 2023",
+   "correct": true
+  },
+  "conv-43-qa-037": {
+   "pred": "the week before 13 October 2023",
+   "correct": false
+  },
+  "conv-43-qa-039": {
+   "pred": "2022",
+   "correct": true
+  },
+  "conv-43-qa-040": {
+   "pred": "None (not mentioned in conversation).",
+   "correct": false
+  },
+  "conv-43-qa-044": {
+   "pred": "Short but sweet. The exact date is not provided.",
+   "correct": false
+  },
+  "conv-43-qa-045": {
+   "pred": "United Kingdom",
+   "correct": false
+  },
+  "conv-43-qa-046": {
+   "pred": "He went to a castle during his trip to the UK.",
+   "correct": true
+  },
+  "conv-43-qa-047": {
+   "pred": "last week (the week before 2 October 2023)",
+   "correct": false
+  },
+  "conv-43-qa-054": {
+   "pred": "2022",
+   "correct": true
+  },
+  "conv-43-qa-055": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-43-qa-056": {
+   "pred": "About four months ago",
+   "correct": false
+  },
+  "conv-43-qa-058": {
+   "pred": "last week (the week before 16 July 2023)",
+   "correct": false
+  },
+  "conv-43-qa-060": {
+   "pred": "last Friday (the Friday before 11 December 2023)",
+   "correct": true
+  },
+  "conv-43-qa-063": {
+   "pred": "last summer",
+   "correct": false
+  },
+  "conv-43-qa-064": {
+   "pred": "December 2023",
+   "correct": true
+  },
+  "conv-43-qa-068": {
+   "pred": "February 2024",
+   "correct": false
+  },
+  "conv-43-qa-069": {
+   "pred": "February 2024",
+   "correct": true
+  },
+  "conv-44-qa-000": {
+   "pred": "2023",
+   "correct": false
+  },
+  "conv-44-qa-001": {
+   "pred": "the week before 27 March 2023",
+   "correct": true
+  },
+  "conv-44-qa-004": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-44-qa-005": {
+   "pred": "Last week (the week before 3 May 2023)",
+   "correct": false
+  },
+  "conv-44-qa-006": {
+   "pred": "2 April, 2023",
+   "correct": false
+  },
+  "conv-44-qa-007": {
+   "pred": "3 years",
+   "correct": true
+  },
+  "conv-44-qa-008": {
+   "pred": "I don't know.",
+   "correct": true
+  },
+  "conv-44-qa-010": {
+   "pred": "11 May 2023",
+   "correct": false
+  },
+  "conv-44-qa-011": {
+   "pred": "last Sunday (the Sunday before 13 June 2023)",
+   "correct": false
+  },
+  "conv-44-qa-013": {
+   "pred": "26 June, 2023",
+   "correct": true
+  },
+  "conv-44-qa-016": {
+   "pred": "Saturday",
+   "correct": false
+  },
+  "conv-44-qa-022": {
+   "pred": "He went fishing in one of the nearby lakes.",
+   "correct": false
+  },
+  "conv-44-qa-025": {
+   "pred": "last weekend (the weekend before 24 August 2023)",
+   "correct": true
+  },
+  "conv-44-qa-030": {
+   "pred": "November 2023",
+   "correct": true
+  },
+  "conv-44-qa-034": {
+   "pred": "1 month",
+   "correct": false
+  },
+  "conv-44-qa-037": {
+   "pred": "last Friday (the Friday before 24 September 2023)",
+   "correct": false
+  },
+  "conv-44-qa-038": {
+   "pred": "the weekend before 24 October 2023",
+   "correct": true
+  },
+  "conv-44-qa-045": {
+   "pred": "None (not mentioned in conversation).",
+   "correct": false
+  },
+  "conv-44-qa-046": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-44-qa-047": {
+   "pred": "1 month",
+   "correct": true
+  },
+  "conv-44-qa-055": {
+   "pred": "He set up a doggy play area in the backyard with agility stuff and toys.",
+   "correct": false
+  },
+  "conv-44-qa-057": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-44-qa-058": {
+   "pred": "None (not mentioned in conversation).",
+   "correct": false
+  },
+  "conv-44-qa-059": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-47-qa-001": {
+   "pred": "Bowling",
+   "correct": true
+  },
+  "conv-47-qa-004": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-47-qa-010": {
+   "pred": "last week (the week before 12 April 2022)",
+   "correct": false
+  },
+  "conv-47-qa-011": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-47-qa-013": {
+   "pred": "2021",
+   "correct": true
+  },
+  "conv-47-qa-014": {
+   "pred": "Three days ago",
+   "correct": false
+  },
+  "conv-47-qa-015": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-47-qa-021": {
+   "pred": "7 May 2022",
+   "correct": true
+  },
+  "conv-47-qa-023": {
+   "pred": "Next month (July 2022)",
+   "correct": true
+  },
+  "conv-47-qa-028": {
+   "pred": "19 June, 2022",
+   "correct": false
+  },
+  "conv-47-qa-029": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-47-qa-031": {
+   "pred": "None (not mentioned in conversation).",
+   "correct": false
+  },
+  "conv-47-qa-032": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-47-qa-037": {
+   "pred": "Yesterday (21 July 2022)",
+   "correct": true
+  },
+  "conv-47-qa-039": {
+   "pred": "3 years ago",
+   "correct": false
+  },
+  "conv-47-qa-041": {
+   "pred": "3 September 2022",
+   "correct": false
+  },
+  "conv-47-qa-042": {
+   "pred": "9 August 2022",
+   "correct": true
+  },
+  "conv-47-qa-043": {
+   "pred": "Not specified",
+   "correct": false
+  },
+  "conv-47-qa-046": {
+   "pred": "Not specified",
+   "correct": false
+  },
+  "conv-47-qa-047": {
+   "pred": "3 September 2022",
+   "correct": true
+  },
+  "conv-47-qa-048": {
+   "pred": "Next Sunday",
+   "correct": false
+  },
+  "conv-47-qa-050": {
+   "pred": "27 March 2022",
+   "correct": false
+  },
+  "conv-47-qa-052": {
+   "pred": "a few months ago",
+   "correct": false
+  },
+  "conv-47-qa-053": {
+   "pred": "A few months",
+   "correct": false
+  },
+  "conv-47-qa-055": {
+   "pred": "The week before 13 October 2022",
+   "correct": false
+  },
+  "conv-47-qa-057": {
+   "pred": "19 October 2022",
+   "correct": true
+  },
+  "conv-47-qa-058": {
+   "pred": "20 October 2022",
+   "correct": true
+  },
+  "conv-47-qa-059": {
+   "pred": "The week before 20 April 2022",
+   "correct": false
+  },
+  "conv-47-qa-061": {
+   "pred": "He asked her to become his girlfriend.",
+   "correct": false
+  },
+  "conv-47-qa-062": {
+   "pred": "A short period",
+   "correct": false
+  },
+  "conv-47-qa-063": {
+   "pred": "4 November 2022",
+   "correct": true
+  },
+  "conv-47-qa-064": {
+   "pred": "A month",
+   "correct": false
+  },
+  "conv-47-qa-065": {
+   "pred": "Not specified",
+   "correct": false
+  },
+  "conv-47-qa-066": {
+   "pred": "7 November, 2022",
+   "correct": false
+  },
+  "conv-48-qa-000": {
+   "pred": "A robotics project",
+   "correct": false
+  },
+  "conv-48-qa-002": {
+   "pred": "When Deborah's mother passed away, it was not specified in the provided context.",
+   "correct": false
+  },
+  "conv-48-qa-003": {
+   "pred": "2022",
+   "correct": true
+  },
+  "conv-48-qa-004": {
+   "pred": "2010",
+   "correct": true
+  },
+  "conv-48-qa-007": {
+   "pred": "Paris",
+   "correct": false
+  },
+  "conv-48-qa-009": {
+   "pred": "None (not mentioned in conversation).",
+   "correct": false
+  },
+  "conv-48-qa-010": {
+   "pred": "1993",
+   "correct": true
+  },
+  "conv-48-qa-012": {
+   "pred": "27 January 2023",
+   "correct": false
+  },
+  "conv-48-qa-017": {
+   "pred": "Last year (2022)",
+   "correct": true
+  },
+  "conv-48-qa-021": {
+   "pred": "Next Saturday",
+   "correct": false
+  },
+  "conv-48-qa-022": {
+   "pred": "31 January 2023",
+   "correct": true
+  },
+  "conv-48-qa-026": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-48-qa-027": {
+   "pred": "Last summer",
+   "correct": false
+  },
+  "conv-48-qa-029": {
+   "pred": "At the retreat, I had time to reflect on what makes me happy. It made me realize the importance of incorporating relaxation, self-care, and balance in life alongside my engineering studies. The beauty of nature there was so inspiring and refreshing!",
+   "correct": false
+  },
+  "conv-48-qa-030": {
+   "pred": "4:12 pm on 22 February, 2023",
+   "correct": false
+  },
+  "conv-48-qa-031": {
+   "pred": "last summer",
+   "correct": false
+  },
+  "conv-48-qa-032": {
+   "pred": "2022",
+   "correct": true
+  },
+  "conv-48-qa-034": {
+   "pred": "2022",
+   "correct": false
+  },
+  "conv-48-qa-035": {
+   "pred": "24 February 2023",
+   "correct": true
+  },
+  "conv-48-qa-037": {
+   "pred": "last Sunday (the Sunday before 2 March 2023)",
+   "correct": true
+  },
+  "conv-48-qa-038": {
+   "pred": "So much has been going on lately. I started this yoga class in the neighborhood - it's such a good feeling! Now I get to share the exercise with my neighbors and watch it really transform them. [D9:3 on 11:22 am on 13 March, 2023]",
+   "correct": false
+  },
+  "conv-48-qa-043": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-48-qa-044": {
+   "pred": "Today",
+   "correct": false
+  },
+  "conv-48-qa-045": {
+   "pred": "The week before 1 February 2023",
+   "correct": false
+  },
+  "conv-48-qa-046": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-48-qa-047": {
+   "pred": "5 June 2023",
+   "correct": true
+  },
+  "conv-48-qa-050": {
+   "pred": "2003",
+   "correct": false
+  },
+  "conv-48-qa-051": {
+   "pred": "The day before yesterday (25 June 2023)",
+   "correct": false
+  },
+  "conv-48-qa-052": {
+   "pred": "The week before 1 August 2023",
+   "correct": false
+  },
+  "conv-48-qa-053": {
+   "pred": "Two years ago",
+   "correct": false
+  },
+  "conv-48-qa-054": {
+   "pred": "Susie",
+   "correct": true
+  },
+  "conv-48-qa-055": {
+   "pred": "Susie",
+   "correct": false
+  },
+  "conv-48-qa-056": {
+   "pred": "last week (the week before 16 August 2023)",
+   "correct": true
+  },
+  "conv-48-qa-057": {
+   "pred": "17th",
+   "correct": false
+  },
+  "conv-48-qa-060": {
+   "pred": "Last week (the week before 24 August 2023)",
+   "correct": true
+  },
+  "conv-48-qa-065": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-48-qa-066": {
+   "pred": "29 August 2023",
+   "correct": true
+  },
+  "conv-48-qa-068": {
+   "pred": "None (not mentioned in conversation).",
+   "correct": false
+  },
+  "conv-48-qa-071": {
+   "pred": "last Friday (the Friday before 3 September 2023)",
+   "correct": false
+  },
+  "conv-48-qa-076": {
+   "pred": "last Friday (the Friday before 17 September 2023)",
+   "correct": true
+  },
+  "conv-48-qa-078": {
+   "pred": "A meditation retreat in Phuket",
+   "correct": true
+  },
+  "conv-48-qa-081": {
+   "pred": "None (not mentioned in conversation).",
+   "correct": false
+  },
+  "conv-49-qa-004": {
+   "pred": "Painting",
+   "correct": true
+  },
+  "conv-49-qa-009": {
+   "pred": "the weekend before 24 May 2023",
+   "correct": true
+  },
+  "conv-49-qa-012": {
+   "pred": "D12:1 on 3:09 pm on 8 October, 2023",
+   "correct": false
+  },
+  "conv-49-qa-013": {
+   "pred": "the week before 6 June 2023",
+   "correct": false
+  },
+  "conv-49-qa-017": {
+   "pred": "the Friday before 27 July 2023",
+   "correct": true
+  },
+  "conv-49-qa-022": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-49-qa-023": {
+   "pred": "28 July 2023",
+   "correct": true
+  },
+  "conv-49-qa-024": {
+   "pred": "A health scare",
+   "correct": false
+  },
+  "conv-49-qa-025": {
+   "pred": "2023",
+   "correct": false
+  },
+  "conv-49-qa-030": {
+   "pred": "Canada",
+   "correct": false
+  },
+  "conv-49-qa-035": {
+   "pred": "the Saturday before 15 August 2023",
+   "correct": true
+  },
+  "conv-49-qa-039": {
+   "pred": "1 month",
+   "correct": false
+  },
+  "conv-49-qa-040": {
+   "pred": "A few days ago",
+   "correct": false
+  },
+  "conv-49-qa-041": {
+   "pred": "Painting classes",
+   "correct": true
+  },
+  "conv-49-qa-045": {
+   "pred": "He was visiting Canada.",
+   "correct": false
+  },
+  "conv-49-qa-047": {
+   "pred": "19 August, 2023",
+   "correct": false
+  },
+  "conv-49-qa-052": {
+   "pred": "Painting session",
+   "correct": true
+  },
+  "conv-49-qa-053": {
+   "pred": "Next Saturday",
+   "correct": false
+  },
+  "conv-49-qa-058": {
+   "pred": "One year ago from the conversation date, which is 8 October 2023. Therefore, Evan started lifting weights on 8 October 2022.",
+   "correct": true
+  },
+  "conv-49-qa-059": {
+   "pred": "14 October 2023",
+   "correct": true
+  },
+  "conv-49-qa-060": {
+   "pred": "Eating healthier",
+   "correct": false
+  },
+  "conv-49-qa-061": {
+   "pred": "Work stress",
+   "correct": false
+  },
+  "conv-49-qa-063": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-49-qa-066": {
+   "pred": "October 2023",
+   "correct": false
+  },
+  "conv-49-qa-067": {
+   "pred": "December 2023",
+   "correct": true
+  },
+  "conv-49-qa-068": {
+   "pred": "Not specified",
+   "correct": false
+  },
+  "conv-49-qa-070": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-49-qa-073": {
+   "pred": "Next summer",
+   "correct": false
+  },
+  "conv-49-qa-074": {
+   "pred": "the Tuesday before 17 December 2023",
+   "correct": false
+  },
+  "conv-49-qa-075": {
+   "pred": "5 January 2024",
+   "correct": true
+  },
+  "conv-49-qa-076": {
+   "pred": "17 December, 2023",
+   "correct": false
+  },
+  "conv-49-qa-079": {
+   "pred": "February 2024",
+   "correct": true
+  },
+  "conv-49-qa-080": {
+   "pred": "9 January 2024",
+   "correct": false
+  },
+  "conv-50-qa-000": {
+   "pred": "20 April, 2023",
+   "correct": false
+  },
+  "conv-50-qa-002": {
+   "pred": "26 March, 2023",
+   "correct": false
+  },
+  "conv-50-qa-008": {
+   "pred": "the week before 16 May 2023",
+   "correct": false
+  },
+  "conv-50-qa-009": {
+   "pred": "last week (the week before 16 May 2023)",
+   "correct": true
+  },
+  "conv-50-qa-010": {
+   "pred": "the week before 16 May 2023",
+   "correct": true
+  },
+  "conv-50-qa-012": {
+   "pred": "Last week (the week before 31 May 2023)",
+   "correct": true
+  },
+  "conv-50-qa-014": {
+   "pred": "8 June 2023",
+   "correct": true
+  },
+  "conv-50-qa-016": {
+   "pred": "July 2023",
+   "correct": true
+  },
+  "conv-50-qa-017": {
+   "pred": "last Friday (the Friday before 21 June 2023)",
+   "correct": true
+  },
+  "conv-50-qa-025": {
+   "pred": "last Friday (the Friday before 22 August 2023)",
+   "correct": true
+  },
+  "conv-50-qa-026": {
+   "pred": "21 August 2023",
+   "correct": true
+  },
+  "conv-50-qa-027": {
+   "pred": "Boston",
+   "correct": false
+  },
+  "conv-50-qa-031": {
+   "pred": "San Francisco",
+   "correct": true
+  },
+  "conv-50-qa-034": {
+   "pred": "1 September 2023",
+   "correct": true
+  },
+  "conv-50-qa-035": {
+   "pred": "the week before 2 September 2023",
+   "correct": false
+  },
+  "conv-50-qa-036": {
+   "pred": "11th",
+   "correct": false
+  },
+  "conv-50-qa-038": {
+   "pred": "Last night (the night before 15 September 2023)",
+   "correct": false
+  },
+  "conv-50-qa-043": {
+   "pred": "Boston",
+   "correct": true
+  },
+  "conv-50-qa-044": {
+   "pred": "3 October 2023",
+   "correct": true
+  },
+  "conv-50-qa-048": {
+   "pred": "He went to a music festival in Boston.",
+   "correct": false
+  },
+  "conv-50-qa-050": {
+   "pred": "25 March 2023",
+   "correct": false
+  },
+  "conv-50-qa-051": {
+   "pred": "August 2022",
+   "correct": true
+  },
+  "conv-50-qa-052": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-50-qa-055": {
+   "pred": "24 October 2023",
+   "correct": true
+  },
+  "conv-50-qa-057": {
+   "pred": "Photography",
+   "correct": true
+  },
+  "conv-50-qa-061": {
+   "pred": "I don't know.",
+   "correct": false
+  },
+  "conv-50-qa-062": {
+   "pred": "A week",
+   "correct": false
+  },
+  "conv-50-qa-065": {
+   "pred": "At sunset, but the exact date is not provided.",
+   "correct": false
+  },
+  "conv-50-qa-067": {
+   "pred": "Boston",
+   "correct": false
+  },
+  "conv-50-qa-068": {
+   "pred": "Ten years ago",
+   "correct": false
+  },
+  "conv-50-qa-069": {
+   "pred": "November 2023",
+   "correct": true
+  },
+  "conv-50-qa-070": {
+   "pred": "16 November 2023",
+   "correct": true
+  }
+ }
+}

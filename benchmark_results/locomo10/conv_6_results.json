@@ -1,0 +1,2580 @@
+{
+  "summary": {
+    "conv_idx": 6,
+    "sample_id": "conv-47",
+    "speakers": [
+      "James",
+      "John"
+    ],
+    "total_questions": 190,
+    "total_turns": 689,
+    "total_ir_records": 689,
+    "overall_accuracy": 0.3473684210526316,
+    "overall_oracle_recall": 0.41578947368421054,
+    "factual_accuracy": 0.36666666666666664,
+    "factual_oracle_recall": 0.47333333333333333,
+    "mean_tokens": 150.37894736842105,
+    "mean_latency_ms": 347.8707931566628,
+    "elapsed_seconds": 66.09900619997643,
+    "categories": {
+      "open-domain": {
+        "total": 13,
+        "correct": 1,
+        "oracle": 6
+      },
+      "temporal": {
+        "total": 34,
+        "correct": 11,
+        "oracle": 18
+      },
+      "multi-hop": {
+        "total": 20,
+        "correct": 5,
+        "oracle": 4
+      },
+      "single-hop": {
+        "total": 83,
+        "correct": 38,
+        "oracle": 43
+      },
+      "adversarial": {
+        "total": 40,
+        "correct": 11,
+        "oracle": 8
+      }
+    },
+    "failure_taxonomy_v2": {
+      "VERIFICATION_FAILURE": 7,
+      "TEMPORAL_FAILURE": 22,
+      "RETRIEVAL_FAILURE": 56,
+      "GROUNDING_FAILURE": 3,
+      "ABSTENTION_FAILURE": 31,
+      "COMPOSITION_FAILURE": 4,
+      "STATE_FAILURE": 1
+    },
+    "diagnoses": [
+      {
+        "question_id": "conv-47-qa-000",
+        "category": "VERIFICATION_FAILURE",
+        "explanation": "Verification failure: Extraneous hallucinated claim not grounded in context."
+      },
+      {
+        "question_id": "conv-47-qa-001",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-47-qa-002",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-004",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-47-qa-006",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-007",
+        "category": "GROUNDING_FAILURE",
+        "explanation": "Grounding failure: Evidence was present in context, but downstream LLM failed to extract exact answer."
+      },
+      {
+        "question_id": "conv-47-qa-009",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-011",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-47-qa-012",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-014",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-47-qa-015",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-47-qa-016",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False refusal: Evidence was present in context, but model abstained."
+      },
+      {
+        "question_id": "conv-47-qa-017",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-018",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-019",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-020",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-021",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-47-qa-022",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-023",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-47-qa-024",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-025",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-027",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-029",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-47-qa-031",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-47-qa-032",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-47-qa-033",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-034",
+        "category": "COMPOSITION_FAILURE",
+        "explanation": "Composition failure: Partial evidence retrieved, but multi-hop link to target slot broke."
+      },
+      {
+        "question_id": "conv-47-qa-035",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-036",
+        "category": "COMPOSITION_FAILURE",
+        "explanation": "Composition failure: Partial evidence retrieved, but multi-hop link to target slot broke."
+      },
+      {
+        "question_id": "conv-47-qa-037",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-47-qa-038",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-039",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-47-qa-040",
+        "category": "STATE_FAILURE",
+        "explanation": "State failure: Stale or superseded state selected instead of current state (or vice-versa)."
+      },
+      {
+        "question_id": "conv-47-qa-044",
+        "category": "COMPOSITION_FAILURE",
+        "explanation": "Composition failure: Partial evidence retrieved, but multi-hop link to target slot broke."
+      },
+      {
+        "question_id": "conv-47-qa-046",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-47-qa-048",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-47-qa-049",
+        "category": "COMPOSITION_FAILURE",
+        "explanation": "Composition failure: Partial evidence retrieved, but multi-hop link to target slot broke."
+      },
+      {
+        "question_id": "conv-47-qa-050",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-47-qa-051",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-052",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-47-qa-053",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-47-qa-054",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-055",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-47-qa-056",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-059",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-47-qa-060",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-061",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-47-qa-062",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-47-qa-064",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False refusal: Evidence was present in context, but model abstained."
+      },
+      {
+        "question_id": "conv-47-qa-065",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-47-qa-067",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-068",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-069",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-071",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-073",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-077",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-081",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-083",
+        "category": "VERIFICATION_FAILURE",
+        "explanation": "Verification failure: Extraneous hallucinated claim not grounded in context."
+      },
+      {
+        "question_id": "conv-47-qa-085",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-086",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-088",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-090",
+        "category": "VERIFICATION_FAILURE",
+        "explanation": "Verification failure: Extraneous hallucinated claim not grounded in context."
+      },
+      {
+        "question_id": "conv-47-qa-091",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-092",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-093",
+        "category": "GROUNDING_FAILURE",
+        "explanation": "Grounding failure: Evidence was present in context, but downstream LLM failed to extract exact answer."
+      },
+      {
+        "question_id": "conv-47-qa-094",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-096",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-097",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-098",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-105",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-107",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-108",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-109",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-111",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-112",
+        "category": "VERIFICATION_FAILURE",
+        "explanation": "Verification failure: Extraneous hallucinated claim not grounded in context."
+      },
+      {
+        "question_id": "conv-47-qa-113",
+        "category": "VERIFICATION_FAILURE",
+        "explanation": "Verification failure: Extraneous hallucinated claim not grounded in context."
+      },
+      {
+        "question_id": "conv-47-qa-115",
+        "category": "VERIFICATION_FAILURE",
+        "explanation": "Verification failure: Extraneous hallucinated claim not grounded in context."
+      },
+      {
+        "question_id": "conv-47-qa-117",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-118",
+        "category": "GROUNDING_FAILURE",
+        "explanation": "Grounding failure: Evidence was present in context, but downstream LLM failed to extract exact answer."
+      },
+      {
+        "question_id": "conv-47-qa-119",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-126",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-127",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-128",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-129",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-133",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-135",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-138",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-140",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-141",
+        "category": "VERIFICATION_FAILURE",
+        "explanation": "Verification failure: Extraneous hallucinated claim not grounded in context."
+      },
+      {
+        "question_id": "conv-47-qa-142",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-144",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-145",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-147",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-148",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-149",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-47-qa-150",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-47-qa-151",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-47-qa-152",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-47-qa-153",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-47-qa-155",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-47-qa-156",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-47-qa-158",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-47-qa-159",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-47-qa-160",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-47-qa-162",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-47-qa-163",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-47-qa-165",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-47-qa-166",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-47-qa-169",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-47-qa-170",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-47-qa-172",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-47-qa-174",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-47-qa-175",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-47-qa-176",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-47-qa-177",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-47-qa-178",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-47-qa-179",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-47-qa-180",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-47-qa-181",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-47-qa-182",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-47-qa-183",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-47-qa-184",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-47-qa-186",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-47-qa-189",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      }
+    ]
+  },
+  "results": [
+    {
+      "question_id": "conv-47-qa-000",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "John suspects he has big fingers and dislikes bowling.",
+      "ground_truth": "Obesity",
+      "tokens_used": 168,
+      "latency_ms": 432.1365999931004,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-001",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "Playing video games",
+      "ground_truth": "bowling",
+      "tokens_used": 120,
+      "latency_ms": 327.9622000118252,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-002",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "VR Club, McGee's, baseball game",
+      "tokens_used": 153,
+      "latency_ms": 323.8922999880742,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-003",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "No",
+      "tokens_used": 177,
+      "latency_ms": 367.31510001118295,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-004",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "February 2022",
+      "tokens_used": 123,
+      "latency_ms": 300.46699999365956,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-005",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "John's favorite games are Fortnite and other unspecified games. James' favorite games are not mentioned in the context.",
+      "ground_truth": "John's favorite game is CS:GO, and James's is Apex Legends.",
+      "tokens_used": 168,
+      "latency_ms": 534.6269000147004,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-006",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Likely yes",
+      "tokens_used": 130,
+      "latency_ms": 284.58480001427233,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-007",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "Stamford",
+      "ground_truth": "Connecticut.",
+      "tokens_used": 160,
+      "latency_ms": 323.28789998427965,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-008",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "James has three pets.",
+      "ground_truth": "Three dogs.",
+      "tokens_used": 136,
+      "latency_ms": 306.97149998741224,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-009",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "None",
+      "ground_truth": "Ned, Daisy, Max",
+      "tokens_used": 172,
+      "latency_ms": 268.375699990429,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-010",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Last week before 12 April 2022",
+      "ground_truth": "first week of April 2022",
+      "tokens_used": 140,
+      "latency_ms": 303.5068000026513,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-011",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "seeking solitude",
+      "tokens_used": 122,
+      "latency_ms": 507.39769998472184,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-012",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Presumably not",
+      "tokens_used": 125,
+      "latency_ms": 490.95540001871996,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-013",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "2021",
+      "ground_truth": "In 2021",
+      "tokens_used": 122,
+      "latency_ms": 263.05810001213104,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-014",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Two days ago",
+      "ground_truth": "April 26, 2022",
+      "tokens_used": 168,
+      "latency_ms": 309.94820001069456,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-015",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "March 2022",
+      "tokens_used": 175,
+      "latency_ms": 327.76680000824854,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-016",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "UNO",
+      "tokens_used": 144,
+      "latency_ms": 365.7194999977946,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-017",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "The game is \"Among Us\"",
+      "ground_truth": "Mafia",
+      "tokens_used": 147,
+      "latency_ms": 383.0295999941882,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-018",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Fantasy books",
+      "ground_truth": "The Name of the Wind, Stormlight Archive, Kingkiller Chronicles, Expanse",
+      "tokens_used": 143,
+      "latency_ms": 262.6925999938976,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-019",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Most likely yes, because he mentioned that the only creatures that gave him joy are dogs and he was actively trying to date.",
+      "tokens_used": 168,
+      "latency_ms": 322.8053000057116,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-020",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "two",
+      "tokens_used": 184,
+      "latency_ms": 332.97699998365715,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-021",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "May 7, 2022",
+      "tokens_used": 160,
+      "latency_ms": 342.459500010591,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-022",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "The context does not contain the answer.",
+      "ground_truth": "animal shelter, homeless, children's hospital",
+      "tokens_used": 167,
+      "latency_ms": 442.268899991177,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-023",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "The context does not contain the answer.",
+      "ground_truth": "In July, 2022",
+      "tokens_used": 162,
+      "latency_ms": 401.90749999601394,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-024",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Instrument learning",
+      "ground_truth": "football simulator, virtual world inspired by Witcher 3",
+      "tokens_used": 168,
+      "latency_ms": 439.1479000041727,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-025",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "No, James is a Liverpool fan and John is a Manchester City fan.",
+      "tokens_used": 139,
+      "latency_ms": 346.64339997107163,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-026",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Italy, Turkey, Mexico",
+      "ground_truth": "Italy, Mexico, Turkey, Canada, Greenland",
+      "tokens_used": 136,
+      "latency_ms": 327.04309999826364,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-027",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Online gaming classes",
+      "ground_truth": "game design course, cooking classes",
+      "tokens_used": 137,
+      "latency_ms": 308.76110002282076,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-028",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "May 2022",
+      "ground_truth": "May 2022",
+      "tokens_used": 159,
+      "latency_ms": 316.21740001719445,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-029",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "July 11, 2022",
+      "tokens_used": 159,
+      "latency_ms": 324.71599997370504,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-030",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "Canada",
+      "ground_truth": "Canada",
+      "tokens_used": 129,
+      "latency_ms": 299.3527000071481,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-031",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "19 days",
+      "tokens_used": 159,
+      "latency_ms": 384.63459999184124,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-032",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Toronto, Canada",
+      "tokens_used": 137,
+      "latency_ms": 333.6489000066649,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-033",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Yes",
+      "tokens_used": 143,
+      "latency_ms": 304.0229000034742,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-034",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "James visited Vancouver and Nuuk in July 2022.",
+      "ground_truth": "Canada, Greenland",
+      "tokens_used": 157,
+      "latency_ms": 433.42240000492893,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-035",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "Spain",
+      "ground_truth": "Greenland",
+      "tokens_used": 136,
+      "latency_ms": 234.96960001648404,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-036",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "John's wife",
+      "ground_truth": "Most likely John's partner.",
+      "tokens_used": 149,
+      "latency_ms": 300.2707000123337,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-037",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "July 21, 2022",
+      "tokens_used": 148,
+      "latency_ms": 292.09510001237504,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-038",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "John learned a new language and picked up great skills.",
+      "ground_truth": "quit his IT Job, secured his dream job, aspires to become an eSports competition organizer",
+      "tokens_used": 126,
+      "latency_ms": 414.13530000136234,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-039",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "John started his job in IT 3 years ago.",
+      "ground_truth": "2019",
+      "tokens_used": 153,
+      "latency_ms": 378.89480000012554,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-040",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "swimming, catching frisbees, balancing on a skateboard, sit, stay, paw, and rollover",
+      "tokens_used": 158,
+      "latency_ms": 311.1823000072036,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-041",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "Yesterday (3 September 2022)",
+      "ground_truth": "August 9, 2022",
+      "tokens_used": 171,
+      "latency_ms": 377.0168000191916,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-042",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "[D19:12 on 9:16 am on 10 August, 2022]",
+      "ground_truth": "August 9, 2022",
+      "tokens_used": 161,
+      "latency_ms": 567.6549000199884,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-043",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "September 2022",
+      "ground_truth": "In September, 2022",
+      "tokens_used": 148,
+      "latency_ms": 315.7620999845676,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-044",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "He preferred to have a beer somewhere else.",
+      "ground_truth": "Possibly because he likes to drink beer on his days off.",
+      "tokens_used": 120,
+      "latency_ms": 364.4448000122793,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-045",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Stout",
+      "ground_truth": "Stout, lager",
+      "tokens_used": 123,
+      "latency_ms": 313.79309998010285,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-046",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "August 27, 2022",
+      "tokens_used": 179,
+      "latency_ms": 240.62399999820627,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-047",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Yesterday (3 September 2022)",
+      "ground_truth": "September 3, 2022",
+      "tokens_used": 171,
+      "latency_ms": 302.161800005706,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-048",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Next Sunday",
+      "ground_truth": "September 11, 2022",
+      "tokens_used": 124,
+      "latency_ms": 261.4637999795377,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-049",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "New devices and a gaming desk",
+      "ground_truth": "Sennheiser headphones, Logitech mouse, gaming desk",
+      "tokens_used": 139,
+      "latency_ms": 319.43949998822063,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-050",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "September 2, 2022",
+      "tokens_used": 147,
+      "latency_ms": 307.76630001491867,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-051",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Strategy board games",
+      "ground_truth": "AC Valhalla, Witcher 3, FIFA 23, Dungeons of the Dragons, futuristic dystopian game",
+      "tokens_used": 171,
+      "latency_ms": 380.9443999780342,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-052",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "A few months ago.",
+      "ground_truth": "approximately summer of 2022",
+      "tokens_used": 149,
+      "latency_ms": 327.1843000256922,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-053",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "six months",
+      "tokens_used": 157,
+      "latency_ms": 355.4694000049494,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-054",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "online programming competition, programming seminar",
+      "tokens_used": 155,
+      "latency_ms": 345.10649999720044,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-055",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Last week before 13 October 2022.",
+      "tokens_used": 180,
+      "latency_ms": 294.9623000167776,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-056",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Josh and Mark",
+      "ground_truth": "mother, sister",
+      "tokens_used": 158,
+      "latency_ms": 319.8663000075612,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-057",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "19 October 2022",
+      "ground_truth": "October 19, 2022",
+      "tokens_used": 173,
+      "latency_ms": 346.83930000755936,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-058",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Yesterday (20 October 2022)",
+      "ground_truth": "October 20, 2022",
+      "tokens_used": 130,
+      "latency_ms": 373.41879997984506,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-059",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "On the night of October 30 to 31, 2022",
+      "tokens_used": 168,
+      "latency_ms": 281.1668000067584,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-060",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "CS:GO, Fortnite, Overwatch and Apex Legends",
+      "tokens_used": 179,
+      "latency_ms": 345.10199999203905,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-061",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "He decided to move in together.",
+      "ground_truth": "They decided to live together and rented an apartment not far from McGee's bar.",
+      "tokens_used": 147,
+      "latency_ms": 403.41189998434857,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-062",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "The context does not contain the answer.",
+      "ground_truth": "nearly three months",
+      "tokens_used": 146,
+      "latency_ms": 381.9845999823883,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-063",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "4 November 2022",
+      "ground_truth": "November 4, 2022",
+      "tokens_used": 159,
+      "latency_ms": 336.63949999026954,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-064",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "nearly four months",
+      "tokens_used": 123,
+      "latency_ms": 334.2695999890566,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-065",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "James and his family visited Mark and Josh before their road trip. The exact date is not provided in the context.",
+      "ground_truth": "November 7, 2022",
+      "tokens_used": 136,
+      "latency_ms": 604.6052000019699,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-066",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "7 November, 2022",
+      "ground_truth": "November 5-6, 2022",
+      "tokens_used": 159,
+      "latency_ms": 327.2518999874592,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-067",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Python and C++",
+      "tokens_used": 155,
+      "latency_ms": 330.56349999969825,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-068",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Gaming applications",
+      "ground_truth": "An app for dog walking and pet care",
+      "tokens_used": 157,
+      "latency_ms": 282.48699998948723,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-069",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "He plans to make it unique by offering a $10 per class rate and teaching dog owners how to make dough for meringue.",
+      "ground_truth": "By allowing users to customize their pup's preferences/needs",
+      "tokens_used": 133,
+      "latency_ms": 694.8792999901343,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-070",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Mostly bottle caps",
+      "ground_truth": "bottle caps",
+      "tokens_used": 145,
+      "latency_ms": 289.9848999804817,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-071",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "He offered to show John his cousin's dog.",
+      "ground_truth": "help find the perfect pet",
+      "tokens_used": 159,
+      "latency_ms": 391.9383000175003,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-072",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Drums",
+      "ground_truth": "Drums",
+      "tokens_used": 113,
+      "latency_ms": 315.57979999342933,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-073",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "One month",
+      "tokens_used": 125,
+      "latency_ms": 299.24389999359846,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-074",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "CS:GO",
+      "ground_truth": "CS:GO",
+      "tokens_used": 147,
+      "latency_ms": 331.4026999869384,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-075",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Apex Legends",
+      "ground_truth": "Apex Legends",
+      "tokens_used": 135,
+      "latency_ms": 330.93450000160374,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-076",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Voice chat",
+      "ground_truth": "voice chat",
+      "tokens_used": 132,
+      "latency_ms": 265.9861999854911,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-077",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "never put your ego above team success",
+      "tokens_used": 173,
+      "latency_ms": 337.2110999771394,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-078",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A pup named Ned",
+      "ground_truth": "a pup",
+      "tokens_used": 182,
+      "latency_ms": 317.54069999442436,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-079",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Ned",
+      "ground_truth": "Ned",
+      "tokens_used": 176,
+      "latency_ms": 318.16080000135116,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-080",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "He remembered her appearance and wanted to embody it in the game.",
+      "ground_truth": "He found her appearance and eyes amazing.",
+      "tokens_used": 187,
+      "latency_ms": 529.9795999890193,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-081",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Witcher 3",
+      "ground_truth": "Appearance of a woman he saw during a walk",
+      "tokens_used": 162,
+      "latency_ms": 332.89130000048317,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-082",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Italy",
+      "ground_truth": "Italy",
+      "tokens_used": 136,
+      "latency_ms": 247.670399985509,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-083",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "The megacities and their technological advancements.",
+      "ground_truth": "Technologically advanced megacities and tasty street food",
+      "tokens_used": 142,
+      "latency_ms": 357.484200008912,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-084",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A difficult coding assignment",
+      "ground_truth": "Coding assignment",
+      "tokens_used": 181,
+      "latency_ms": 328.9863999816589,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-085",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Labrador",
+      "tokens_used": 170,
+      "latency_ms": 357.5649000122212,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-086",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Cheese pizza",
+      "ground_truth": "Pepperoni",
+      "tokens_used": 134,
+      "latency_ms": 336.2984999839682,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-087",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Hawaiian pizza",
+      "ground_truth": "Hawaiian",
+      "tokens_used": 118,
+      "latency_ms": 294.7207000106573,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-088",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "A social event combining interests and friendly competition.",
+      "ground_truth": "A tournament for CS:GO",
+      "tokens_used": 170,
+      "latency_ms": 413.51769998436794,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-089",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "They bought groceries and cooked food for the homeless.",
+      "ground_truth": "Bought groceries and cooked food for the homeless",
+      "tokens_used": 175,
+      "latency_ms": 437.9291000077501,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-090",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "To support a dog shelter.",
+      "ground_truth": "Raise money for a dog shelter",
+      "tokens_used": 171,
+      "latency_ms": 404.95989998453297,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-091",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Streamlining their operations",
+      "ground_truth": "tracking inventory, resources, and donations",
+      "tokens_used": 189,
+      "latency_ms": 331.31029998185113,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-092",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "A software tool",
+      "ground_truth": "computer application on smartphones",
+      "tokens_used": 161,
+      "latency_ms": 293.20580000057817,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-093",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Some money",
+      "ground_truth": "money and a trophy",
+      "tokens_used": 183,
+      "latency_ms": 292.6529000105802,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-094",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "James is working on a difficult assignment that involves coding in his game design course.",
+      "ground_truth": "a new part of the football simulator, collecting player databases",
+      "tokens_used": 41,
+      "latency_ms": 338.91160000348464,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-095",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Liverpool",
+      "ground_truth": "Liverpool",
+      "tokens_used": 113,
+      "latency_ms": 281.8536000268068,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-096",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Manchester City",
+      "tokens_used": 122,
+      "latency_ms": 282.244299974991,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-097",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "debating on which team will perform better in the championship",
+      "tokens_used": 174,
+      "latency_ms": 324.36849997611716,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-098",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Max is good at bringing joy and cheerfulness.",
+      "ground_truth": "catching frisbees in mid-air",
+      "tokens_used": 149,
+      "latency_ms": 429.4911999895703,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-099",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Providing necessary items to those less fortunate",
+      "ground_truth": "providing necessary items to those who are less fortunate",
+      "tokens_used": 171,
+      "latency_ms": 342.9421999899205,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-100",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "No",
+      "tokens_used": 173,
+      "latency_ms": 269.9026999762282,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-101",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Reading",
+      "ground_truth": "Reading",
+      "tokens_used": 178,
+      "latency_ms": 272.23840000806376,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-102",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Reading under the covers",
+      "ground_truth": "Reading while snuggled under the covers",
+      "tokens_used": 140,
+      "latency_ms": 311.26009998843074,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-103",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Extreme sports",
+      "ground_truth": "Extreme sports",
+      "tokens_used": 171,
+      "latency_ms": 318.2049999886658,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-104",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Vancouver",
+      "ground_truth": "Vancouver",
+      "tokens_used": 140,
+      "latency_ms": 283.97489999770187,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-105",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "The context does not contain the answer.",
+      "ground_truth": "July 20",
+      "tokens_used": 160,
+      "latency_ms": 415.9427999984473,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-106",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Chess",
+      "ground_truth": "Chess",
+      "tokens_used": 162,
+      "latency_ms": 299.89609998301603,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-107",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "He wanted to make a difference.",
+      "ground_truth": "to focus on things that align with his values and passions",
+      "tokens_used": 168,
+      "latency_ms": 320.63259999267757,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-108",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Various computer games in our state",
+      "ground_truth": "Fortnite competitions",
+      "tokens_used": 163,
+      "latency_ms": 348.09829998994246,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-109",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "The context does not contain the answer.",
+      "ground_truth": "routine examination and vaccination",
+      "tokens_used": 163,
+      "latency_ms": 388.3705999760423,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-110",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Strategy and RPG games",
+      "ground_truth": "strategy and RPG games",
+      "tokens_used": 155,
+      "latency_ms": 335.850900009973,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-111",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "The Witcher 3",
+      "tokens_used": 168,
+      "latency_ms": 377.9211000073701,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-112",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "The immersive story and atmosphere",
+      "ground_truth": "shaping the world with choices",
+      "tokens_used": 131,
+      "latency_ms": 381.3905999995768,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-113",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "The beautiful girl's phone number.",
+      "ground_truth": "Samantha",
+      "tokens_used": 144,
+      "latency_ms": 338.6500000196975,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-114",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "He's planning to call her.",
+      "ground_truth": "call her",
+      "tokens_used": 171,
+      "latency_ms": 315.4283999756444,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-115",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A family gathering",
+      "ground_truth": "a gaming night",
+      "tokens_used": 149,
+      "latency_ms": 284.57040002103895,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-116",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Dark beer",
+      "ground_truth": "dark beer",
+      "tokens_used": 113,
+      "latency_ms": 252.31489998986945,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-117",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "He had a lot of tasks to do and started writing down everything in a notebook to remember to complete them.",
+      "ground_truth": "balancing mechanics and ensuring fairness",
+      "tokens_used": 146,
+      "latency_ms": 638.673999987077,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-118",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Programming",
+      "ground_truth": "coding",
+      "tokens_used": 144,
+      "latency_ms": 252.4523999891244,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-119",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Personal programs",
+      "ground_truth": "basic games and stories",
+      "tokens_used": 168,
+      "latency_ms": 256.3114000076894,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-120",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Sennheiser",
+      "ground_truth": "Sennheiser",
+      "tokens_used": 157,
+      "latency_ms": 328.2344000181183,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-121",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A good lager beer",
+      "ground_truth": "Lager beer",
+      "tokens_used": 101,
+      "latency_ms": 337.93660000083037,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-122",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "$10",
+      "ground_truth": "$10",
+      "tokens_used": 122,
+      "latency_ms": 274.35339998919517,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-123",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "He learned to make dough for meringue.",
+      "ground_truth": "Dough",
+      "tokens_used": 120,
+      "latency_ms": 412.4071999976877,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-124",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "To learn something new.",
+      "ground_truth": "He wanted to learn something new",
+      "tokens_used": 168,
+      "latency_ms": 340.9580999868922,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-125",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A great omelette",
+      "ground_truth": "Omelette",
+      "tokens_used": 137,
+      "latency_ms": 293.71790000004694,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-126",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "The name of the board game John tried in September 2022 is not provided in the conversation context.",
+      "ground_truth": "Dungeons of the Dragon",
+      "tokens_used": 150,
+      "latency_ms": 582.1692000026815,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-127",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "James gets his ideas from a walk with his dogs.",
+      "ground_truth": "books, movies, dreams",
+      "tokens_used": 190,
+      "latency_ms": 444.49799999711104,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-128",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "He had a dream about making his first game.",
+      "ground_truth": "a dream with a medieval castle full of puzzles and traps",
+      "tokens_used": 171,
+      "latency_ms": 418.19610001402907,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-129",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "electronic and rock music",
+      "tokens_used": 122,
+      "latency_ms": 307.68309999257326,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-130",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Guitar",
+      "ground_truth": "guitar",
+      "tokens_used": 159,
+      "latency_ms": 285.6391999812331,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-131",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Drums",
+      "ground_truth": "drums",
+      "tokens_used": 144,
+      "latency_ms": 286.1756000202149,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-132",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "He launched his first mobile game.",
+      "ground_truth": "making his first mobile game",
+      "tokens_used": 178,
+      "latency_ms": 401.7753999796696,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-133",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "A mobile game",
+      "ground_truth": "2D adventure",
+      "tokens_used": 134,
+      "latency_ms": 265.42870001867414,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-134",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "John watches tutorials and keeps up with developer forums.",
+      "ground_truth": "watch tutorials and keep up with developer forums",
+      "tokens_used": 146,
+      "latency_ms": 424.0094999840949,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-135",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "A volunteer gig",
+      "ground_truth": "programming mentor for game developers",
+      "tokens_used": 149,
+      "latency_ms": 307.154799986165,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-136",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "John is really excited to share his knowledge and motivate people.",
+      "ground_truth": "excited and inspired",
+      "tokens_used": 172,
+      "latency_ms": 441.60849999752827,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-137",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "RPGs",
+      "ground_truth": "RPGs",
+      "tokens_used": 143,
+      "latency_ms": 321.6353000025265,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-138",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "The nice comments from the gaming community.",
+      "ground_truth": "Witcher 3",
+      "tokens_used": 177,
+      "latency_ms": 432.6316000078805,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-139",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Playing Super Mario and The Legend of Zelda",
+      "ground_truth": "Super Mario and The Legend of Zelda games",
+      "tokens_used": 167,
+      "latency_ms": 396.7119999870192,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-140",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "a game",
+      "tokens_used": 154,
+      "latency_ms": 304.23539999173954,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-141",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Fortnite and a few other games",
+      "ground_truth": "Fortnite, Overwatch, Apex Legends",
+      "tokens_used": 123,
+      "latency_ms": 376.12530001206324,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-142",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "To raise funds for a local charity.",
+      "ground_truth": "To raise money for a children's hospital",
+      "tokens_used": 162,
+      "latency_ms": 624.7707000002265,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-143",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "They decided to move in together.",
+      "ground_truth": "To move in together",
+      "tokens_used": 138,
+      "latency_ms": 695.4985999909695,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-144",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "They decided to move in together on 31 October, 2022.",
+      "ground_truth": "In an apartment not far from McGee's bar",
+      "tokens_used": 136,
+      "latency_ms": 501.0337000130676,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-145",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "The context does not contain this information.",
+      "ground_truth": "They love spending time together at the bar",
+      "tokens_used": 171,
+      "latency_ms": 406.8656000017654,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-146",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "FIFA 23",
+      "ground_truth": "FIFA 23",
+      "tokens_used": 169,
+      "latency_ms": 326.6334000218194,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-147",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Practice a little first",
+      "ground_truth": "Control with a gamepad and timing",
+      "tokens_used": 196,
+      "latency_ms": 374.93970000650734,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-148",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "An online board game",
+      "tokens_used": 4,
+      "latency_ms": 13.716600020416081,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-149",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Luna",
+      "tokens_used": 133,
+      "latency_ms": 314.5778000180144,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-150",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "A new programming course",
+      "ground_truth": "",
+      "tokens_used": 131,
+      "latency_ms": 312.7348000125494,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-151",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Ned",
+      "ground_truth": "",
+      "tokens_used": 176,
+      "latency_ms": 238.33779999404214,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-152",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Real-life experiences",
+      "ground_truth": "",
+      "tokens_used": 159,
+      "latency_ms": 315.4151000198908,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-153",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Italy",
+      "ground_truth": "",
+      "tokens_used": 119,
+      "latency_ms": 241.18489999091253,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-154",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 163,
+      "latency_ms": 350.5161000066437,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-155",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "They went to a restaurant.",
+      "ground_truth": "",
+      "tokens_used": 124,
+      "latency_ms": 400.7264999963809,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-156",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "To raise money for a dog shelter.",
+      "ground_truth": "",
+      "tokens_used": 179,
+      "latency_ms": 444.82679999782704,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-157",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 145,
+      "latency_ms": 312.71830000332557,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-158",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "A software tool",
+      "ground_truth": "",
+      "tokens_used": 157,
+      "latency_ms": 345.7197000097949,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-159",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "John",
+      "ground_truth": "",
+      "tokens_used": 127,
+      "latency_ms": 262.96480000019073,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-160",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "John thinks Max is good at bringing happiness and love.",
+      "ground_truth": "",
+      "tokens_used": 171,
+      "latency_ms": 463.2982000184711,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-161",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 182,
+      "latency_ms": 364.1522999969311,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-162",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Surfing",
+      "ground_truth": "",
+      "tokens_used": 179,
+      "latency_ms": 377.61710002087057,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-163",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Reading",
+      "ground_truth": "",
+      "tokens_used": 135,
+      "latency_ms": 259.95330000296235,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-164",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 173,
+      "latency_ms": 271.1151000112295,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-165",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "He left to pursue his passion for game development.",
+      "ground_truth": "",
+      "tokens_used": 149,
+      "latency_ms": 398.9810000057332,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-166",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Other game genres",
+      "ground_truth": "",
+      "tokens_used": 126,
+      "latency_ms": 305.87630000081845,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-167",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 163,
+      "latency_ms": 352.59309998946264,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-168",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 139,
+      "latency_ms": 331.2263999832794,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-169",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "He plans to call her.",
+      "ground_truth": "",
+      "tokens_used": 145,
+      "latency_ms": 377.2302999859676,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-170",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Programming",
+      "ground_truth": "",
+      "tokens_used": 108,
+      "latency_ms": 299.4816999998875,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-171",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 122,
+      "latency_ms": 291.01729998365045,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-172",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Dough for meringue",
+      "ground_truth": "",
+      "tokens_used": 149,
+      "latency_ms": 325.70590000250377,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-173",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 170,
+      "latency_ms": 268.9210000098683,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-174",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "He prepared a dish.",
+      "ground_truth": "",
+      "tokens_used": 154,
+      "latency_ms": 325.0503999879584,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-175",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Civilization",
+      "ground_truth": "",
+      "tokens_used": 163,
+      "latency_ms": 315.9670000022743,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-176",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Online programming group",
+      "ground_truth": "",
+      "tokens_used": 173,
+      "latency_ms": 269.45059999707155,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-177",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Guitar",
+      "ground_truth": "",
+      "tokens_used": 168,
+      "latency_ms": 292.8855999780353,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-178",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "James reads a magazine as a source of information.",
+      "ground_truth": "",
+      "tokens_used": 139,
+      "latency_ms": 449.78769999579526,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-179",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Volunteering",
+      "ground_truth": "",
+      "tokens_used": 138,
+      "latency_ms": 330.93619998544455,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-180",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Excited and supportive.",
+      "ground_truth": "",
+      "tokens_used": 138,
+      "latency_ms": 350.60609999345616,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-181",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Seeing a virtual world inspired by Witcher 3.",
+      "ground_truth": "",
+      "tokens_used": 183,
+      "latency_ms": 454.4668000016827,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-182",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Fortnite and a few other games",
+      "ground_truth": "",
+      "tokens_used": 146,
+      "latency_ms": 384.6092000021599,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-183",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "To raise funds for a children's hospital.",
+      "ground_truth": "",
+      "tokens_used": 182,
+      "latency_ms": 374.5335999992676,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-184",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "They decided to move to a new place.",
+      "ground_truth": "",
+      "tokens_used": 188,
+      "latency_ms": 452.4420000088867,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-185",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 171,
+      "latency_ms": 349.40129998722114,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-186",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "They wanted to enjoy a good lager beer together.",
+      "ground_truth": "",
+      "tokens_used": 155,
+      "latency_ms": 398.98990001529455,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-47-qa-187",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 136,
+      "latency_ms": 360.6385000166483,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-188",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 4,
+      "latency_ms": 15.065599989611655,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-47-qa-189",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Ned",
+      "ground_truth": "",
+      "tokens_used": 162,
+      "latency_ms": 286.38259999570437,
+      "is_correct": false
+    }
+  ]
+}

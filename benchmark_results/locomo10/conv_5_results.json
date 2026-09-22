@@ -1,0 +1,2079 @@
+{
+  "summary": {
+    "conv_idx": 5,
+    "sample_id": "conv-44",
+    "speakers": [
+      "Andrew",
+      "Audrey"
+    ],
+    "total_questions": 158,
+    "total_turns": 675,
+    "total_ir_records": 675,
+    "overall_accuracy": 0.4430379746835443,
+    "overall_oracle_recall": 0.4430379746835443,
+    "factual_accuracy": 0.45528455284552843,
+    "factual_oracle_recall": 0.5040650406504065,
+    "mean_tokens": 156.48101265822785,
+    "mean_latency_ms": 377.26135189918347,
+    "elapsed_seconds": 59.61019649999798,
+    "categories": {
+      "temporal": {
+        "total": 24,
+        "correct": 12,
+        "oracle": 11
+      },
+      "multi-hop": {
+        "total": 30,
+        "correct": 7,
+        "oracle": 10
+      },
+      "open-domain": {
+        "total": 7,
+        "correct": 0,
+        "oracle": 0
+      },
+      "single-hop": {
+        "total": 62,
+        "correct": 37,
+        "oracle": 41
+      },
+      "adversarial": {
+        "total": 35,
+        "correct": 14,
+        "oracle": 8
+      }
+    },
+    "failure_taxonomy_v2": {
+      "TEMPORAL_FAILURE": 10,
+      "RETRIEVAL_FAILURE": 43,
+      "ABSTENTION_FAILURE": 24,
+      "COMPOSITION_FAILURE": 7,
+      "GROUNDING_FAILURE": 1,
+      "VERIFICATION_FAILURE": 3
+    },
+    "diagnoses": [
+      {
+        "question_id": "conv-44-qa-000",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-44-qa-002",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-44-qa-003",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-44-qa-004",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-44-qa-005",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False refusal: Evidence was present in context, but model abstained."
+      },
+      {
+        "question_id": "conv-44-qa-007",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False refusal: Evidence was present in context, but model abstained."
+      },
+      {
+        "question_id": "conv-44-qa-009",
+        "category": "COMPOSITION_FAILURE",
+        "explanation": "Composition failure: Partial evidence retrieved, but multi-hop link to target slot broke."
+      },
+      {
+        "question_id": "conv-44-qa-015",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-44-qa-016",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-44-qa-017",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-44-qa-018",
+        "category": "COMPOSITION_FAILURE",
+        "explanation": "Composition failure: Partial evidence retrieved, but multi-hop link to target slot broke."
+      },
+      {
+        "question_id": "conv-44-qa-019",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-44-qa-020",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-44-qa-021",
+        "category": "COMPOSITION_FAILURE",
+        "explanation": "Composition failure: Partial evidence retrieved, but multi-hop link to target slot broke."
+      },
+      {
+        "question_id": "conv-44-qa-022",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-44-qa-023",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-44-qa-024",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-44-qa-026",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-44-qa-027",
+        "category": "COMPOSITION_FAILURE",
+        "explanation": "Composition failure: Partial evidence retrieved, but multi-hop link to target slot broke."
+      },
+      {
+        "question_id": "conv-44-qa-028",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-44-qa-031",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-44-qa-033",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-44-qa-035",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-44-qa-036",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-44-qa-037",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-44-qa-039",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-44-qa-040",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-44-qa-041",
+        "category": "COMPOSITION_FAILURE",
+        "explanation": "Composition failure: Partial evidence retrieved, but multi-hop link to target slot broke."
+      },
+      {
+        "question_id": "conv-44-qa-043",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-44-qa-044",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-44-qa-045",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-44-qa-047",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-44-qa-048",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-44-qa-050",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-44-qa-051",
+        "category": "COMPOSITION_FAILURE",
+        "explanation": "Composition failure: Partial evidence retrieved, but multi-hop link to target slot broke."
+      },
+      {
+        "question_id": "conv-44-qa-052",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-44-qa-053",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-44-qa-054",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-44-qa-055",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-44-qa-057",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-44-qa-059",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-44-qa-060",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-44-qa-061",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-44-qa-063",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-44-qa-064",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-44-qa-065",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-44-qa-072",
+        "category": "COMPOSITION_FAILURE",
+        "explanation": "Composition failure: Partial evidence retrieved, but multi-hop link to target slot broke."
+      },
+      {
+        "question_id": "conv-44-qa-076",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-44-qa-079",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-44-qa-080",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-44-qa-084",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-44-qa-087",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-44-qa-088",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-44-qa-089",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-44-qa-092",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-44-qa-094",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-44-qa-095",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-44-qa-097",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-44-qa-098",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-44-qa-101",
+        "category": "GROUNDING_FAILURE",
+        "explanation": "Grounding failure: Evidence was present in context, but downstream LLM failed to extract exact answer."
+      },
+      {
+        "question_id": "conv-44-qa-104",
+        "category": "VERIFICATION_FAILURE",
+        "explanation": "Verification failure: Extraneous hallucinated claim not grounded in context."
+      },
+      {
+        "question_id": "conv-44-qa-105",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-44-qa-109",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False refusal: Evidence was present in context, but model abstained."
+      },
+      {
+        "question_id": "conv-44-qa-111",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-44-qa-115",
+        "category": "VERIFICATION_FAILURE",
+        "explanation": "Verification failure: Extraneous hallucinated claim not grounded in context."
+      },
+      {
+        "question_id": "conv-44-qa-119",
+        "category": "VERIFICATION_FAILURE",
+        "explanation": "Verification failure: Extraneous hallucinated claim not grounded in context."
+      },
+      {
+        "question_id": "conv-44-qa-122",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-44-qa-125",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-44-qa-128",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-44-qa-129",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-44-qa-132",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-44-qa-133",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-44-qa-134",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-44-qa-135",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-44-qa-137",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-44-qa-138",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-44-qa-140",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-44-qa-141",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-44-qa-142",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-44-qa-146",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-44-qa-147",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-44-qa-148",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-44-qa-150",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-44-qa-152",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-44-qa-153",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-44-qa-154",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-44-qa-155",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-44-qa-156",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      }
+    ]
+  },
+  "results": [
+    {
+      "question_id": "conv-44-qa-000",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "2023",
+      "ground_truth": "2020",
+      "tokens_used": 132,
+      "latency_ms": 290.83600000012666,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-001",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "The week before 27 March 2023",
+      "ground_truth": "The week before March 27, 2023",
+      "tokens_used": 184,
+      "latency_ms": 408.29829999711365,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-002",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "boardgames, volunteering at pet shelter, wine tasting, growing flowers",
+      "tokens_used": 147,
+      "latency_ms": 353.8315999903716,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-003",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Pet-friendly spots",
+      "ground_truth": "cafes, new places to eat, open space for hikes, pet shelter, wine tasting event, park",
+      "tokens_used": 160,
+      "latency_ms": 368.8239000039175,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-004",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "The week of April 3rd to 9th",
+      "tokens_used": 149,
+      "latency_ms": 398.159400006989,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-005",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "first week of May 2023",
+      "tokens_used": 164,
+      "latency_ms": 336.46729998872615,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-006",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "April 2, 2023",
+      "ground_truth": "around April 2, 2023",
+      "tokens_used": 147,
+      "latency_ms": 353.5015999805182,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-007",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "three years",
+      "tokens_used": 147,
+      "latency_ms": 365.2142000210006,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-008",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "No, Andrew did not have a pet dog during March 2023.",
+      "ground_truth": "No",
+      "tokens_used": 127,
+      "latency_ms": 496.17259998922236,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-009",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "A dog owners group and agility classes",
+      "ground_truth": "positive reinforcement training workshop to bond with pets, dog training course, agility training course, grooming course, dog-owners group",
+      "tokens_used": 169,
+      "latency_ms": 397.6664000074379,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-010",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "[D6:4 on 2:03 pm on 11 May, 2023]",
+      "ground_truth": "June, 2023",
+      "tokens_used": 149,
+      "latency_ms": 573.4184999892022,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-011",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Last Sunday before 13 June 2023",
+      "ground_truth": "June 11, 2023",
+      "tokens_used": 164,
+      "latency_ms": 357.3090999852866,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-012",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Rock climbing, kayaking, and bungee jumping",
+      "ground_truth": "rock climbing, fishing, camping",
+      "tokens_used": 151,
+      "latency_ms": 386.21120000607334,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-013",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "May 3, 2023",
+      "ground_truth": "June 2023",
+      "tokens_used": 169,
+      "latency_ms": 383.1850000133272,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-014",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "The peacefulness of being out on a hike",
+      "ground_truth": "being in nature",
+      "tokens_used": 132,
+      "latency_ms": 406.2029999913648,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-015",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Both find it challenging to balance outdoor activities with their lives.",
+      "ground_truth": "Not being able to find pet friendly spots.",
+      "tokens_used": 144,
+      "latency_ms": 480.8913000160828,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-016",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "August",
+      "tokens_used": 165,
+      "latency_ms": 326.0245000128634,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-017",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "three times",
+      "tokens_used": 172,
+      "latency_ms": 348.8581999845337,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-018",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "A shelter or rescue organization",
+      "ground_truth": "breeder",
+      "tokens_used": 147,
+      "latency_ms": 278.6926999979187,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-019",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "Watching TV or reading a book",
+      "ground_truth": "cook dog treats",
+      "tokens_used": 173,
+      "latency_ms": 372.2898999985773,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-020",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "chicken",
+      "tokens_used": 149,
+      "latency_ms": 222.70220000064,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-021",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Agility classes",
+      "ground_truth": "Positive reinforcement training class for bonding, dog training course, agility class",
+      "tokens_used": 113,
+      "latency_ms": 301.85469999560155,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-022",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "A nature reserve",
+      "ground_truth": "camping with girlfriend",
+      "tokens_used": 111,
+      "latency_ms": 315.4482999816537,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-023",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Work piling up and missing the peace and freedom of hiking.",
+      "ground_truth": "Finding the right dog and pet-friendly apartments close to open spaces",
+      "tokens_used": 162,
+      "latency_ms": 432.1461000072304,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-024",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Yes",
+      "tokens_used": 168,
+      "latency_ms": 308.6867000092752,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-025",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Last weekend before 24 August 2023",
+      "ground_truth": "weekend before August 24, 2023",
+      "tokens_used": 173,
+      "latency_ms": 366.17270001443103,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-026",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "work",
+      "tokens_used": 199,
+      "latency_ms": 373.8055000139866,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-027",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Stuck inside and missing peace and freedom",
+      "ground_truth": "Stressful",
+      "tokens_used": 117,
+      "latency_ms": 381.01719997939654,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-028",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Hats",
+      "tokens_used": 163,
+      "latency_ms": 330.4801000049338,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-029",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Pepper, Precious, and Panda",
+      "ground_truth": "Pepper, Precious, Panda, and Pixie",
+      "tokens_used": 125,
+      "latency_ms": 358.2546000252478,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-030",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "November 2023",
+      "ground_truth": "November 2023",
+      "tokens_used": 162,
+      "latency_ms": 309.9594000086654,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-031",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "He has managed to make it work with dogs while still living in the city.",
+      "ground_truth": "Taking walks and hiking",
+      "tokens_used": 174,
+      "latency_ms": 490.1581000012811,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-032",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "A tattoo of her four dogs",
+      "ground_truth": "Tattoos of her four dogs.",
+      "tokens_used": 158,
+      "latency_ms": 366.48860000423156,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-033",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "Andrew can explore new spots with a relaxing vibe for his dogs.",
+      "ground_truth": "Change to a hybrid or remote job so he can move away from the city to the suburbs to have a larger living space and be closer to nature.",
+      "tokens_used": 128,
+      "latency_ms": 501.50090001989156,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-034",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "3 months",
+      "ground_truth": "three months",
+      "tokens_used": 159,
+      "latency_ms": 332.15140001266263,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-035",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "The context does not contain the answer.",
+      "ground_truth": "Toby, Scout, Buddy",
+      "tokens_used": 126,
+      "latency_ms": 368.47169999964535,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-036",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Audrey likes cooking and eating food.",
+      "ground_truth": "chicken pot pie, chicken roast, blueberry muffins, sushi",
+      "tokens_used": 168,
+      "latency_ms": 410.0274999800604,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-037",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "between October 19 and 24, 2023",
+      "tokens_used": 176,
+      "latency_ms": 334.4601000135299,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-038",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Last weekend before 24 October 2023",
+      "ground_truth": "the weekend before October 24, 2023",
+      "tokens_used": 186,
+      "latency_ms": 422.33550001401454,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-039",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Joy and happiness",
+      "ground_truth": "Companionship",
+      "tokens_used": 169,
+      "latency_ms": 311.724500003038,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-040",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "A park",
+      "ground_truth": "The dog park",
+      "tokens_used": 169,
+      "latency_ms": 377.6398999907542,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-041",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Jack Russell mixes and Chihuahua mixes",
+      "ground_truth": "Mongrel mixed with Lab for Pepper and Panda. Mongrel mixed with Chihuahua for Precious and Pixie.",
+      "tokens_used": 135,
+      "latency_ms": 354.2038000014145,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-042",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Positive reinforcement",
+      "ground_truth": "Positive reinforcement",
+      "tokens_used": 145,
+      "latency_ms": 281.57890000147745,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-043",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Minnesota",
+      "tokens_used": 144,
+      "latency_ms": 328.8697999960277,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-044",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Voyageurs National Park",
+      "tokens_used": 144,
+      "latency_ms": 354.5342000143137,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-045",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "Andrew will have no pets as of December 2023.",
+      "ground_truth": "three",
+      "tokens_used": 163,
+      "latency_ms": 463.80160000990145,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-046",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "Andrew had at least one pet, a dog.",
+      "ground_truth": "one",
+      "tokens_used": 124,
+      "latency_ms": 428.0084999918472,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-047",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "7 months",
+      "ground_truth": "one month",
+      "tokens_used": 150,
+      "latency_ms": 302.5148999877274,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-048",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "A source of joy and reward",
+      "ground_truth": "Family",
+      "tokens_used": 177,
+      "latency_ms": 755.8851999929175,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-049",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Family members",
+      "ground_truth": "Family",
+      "tokens_used": 187,
+      "latency_ms": 353.29109997837804,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-050",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Joining a dog owners group to learn better care.",
+      "ground_truth": "Grooming",
+      "tokens_used": 153,
+      "latency_ms": 412.47400001157075,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-051",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Toys and personalized tags",
+      "ground_truth": "dog tags, toys, dog beds, collars",
+      "tokens_used": 143,
+      "latency_ms": 339.9669999780599,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-052",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "He could go birdwatching sometimes.",
+      "ground_truth": "Install a bird feeder outside where he can see the birds without going outdoors.",
+      "tokens_used": 157,
+      "latency_ms": 389.52289998997,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-053",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "Wildlife Conservationist",
+      "ground_truth": "Park ranger or a similar position working for the National Park Services.",
+      "tokens_used": 165,
+      "latency_ms": 345.1584999857005,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-054",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "Play fetch with ball and frisbee, run around and meet other dogs",
+      "tokens_used": 162,
+      "latency_ms": 363.84999999427237,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-055",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "few days before November 22, 2023",
+      "tokens_used": 147,
+      "latency_ms": 313.09830001555383,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-056",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "No",
+      "tokens_used": 151,
+      "latency_ms": 318.83649999508634,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-057",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "few days before November 2023",
+      "tokens_used": 138,
+      "latency_ms": 290.5971000145655,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-058",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "Sushi",
+      "ground_truth": "sushi",
+      "tokens_used": 188,
+      "latency_ms": 336.5730000077747,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-059",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "Andrew adopted his first pet 7 days ago.",
+      "ground_truth": "4 months",
+      "tokens_used": 176,
+      "latency_ms": 457.86409999709576,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-060",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Andrew has at least one dog.",
+      "ground_truth": "3",
+      "tokens_used": 167,
+      "latency_ms": 342.27379999356344,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-061",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Hummingbird",
+      "ground_truth": "Eagles",
+      "tokens_used": 147,
+      "latency_ms": 292.0276000222657,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-062",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "The peaceful moments and connection with nature.",
+      "ground_truth": "The peaceful moments",
+      "tokens_used": 153,
+      "latency_ms": 407.19080000417307,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-063",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "The context does not contain the answer.",
+      "ground_truth": "croissants, muffins, and tarts",
+      "tokens_used": 158,
+      "latency_ms": 402.71120000397786,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-064",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "sunflowers",
+      "tokens_used": 164,
+      "latency_ms": 315.6144999957178,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-065",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Explores new parks and trails with her dogs.",
+      "ground_truth": "chat with people while dogs make new friends",
+      "tokens_used": 159,
+      "latency_ms": 384.0201999992132,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-066",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "A dog that can live in an apartment or small space.",
+      "ground_truth": "smaller dog",
+      "tokens_used": 138,
+      "latency_ms": 476.96510000969283,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-067",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Near a park or woods",
+      "ground_truth": "near a park or woods",
+      "tokens_used": 138,
+      "latency_ms": 381.5259000111837,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-068",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "To learn new stuff and strengthen her bond with her pets.",
+      "ground_truth": "Strengthen the bond with her pets",
+      "tokens_used": 183,
+      "latency_ms": 473.23609999148175,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-069",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "She saw a flyer at her local pet store.",
+      "ground_truth": "Saw a workshop flyer at the local pet store",
+      "tokens_used": 187,
+      "latency_ms": 381.1295999912545,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-070",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Positive reinforcement training",
+      "ground_truth": "Positive reinforcement training",
+      "tokens_used": 185,
+      "latency_ms": 345.6027000211179,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-071",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Friendly and playful",
+      "ground_truth": "Friendly and playful",
+      "tokens_used": 211,
+      "latency_ms": 353.9127000258304,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-072",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "She believes punishment is never the proper way for pets.",
+      "ground_truth": "To have pets learn how to behave in a positive way",
+      "tokens_used": 165,
+      "latency_ms": 429.7292999981437,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-073",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Finding a pet-friendly spot in the city.",
+      "ground_truth": "Finding a pet-friendly spot in the city",
+      "tokens_used": 114,
+      "latency_ms": 411.52389999479055,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-074",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Determined but a bit discouraged",
+      "ground_truth": "Discouraged but determined",
+      "tokens_used": 139,
+      "latency_ms": 353.6034999997355,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-075",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Kayaking and bungee jumping",
+      "ground_truth": "kayaking and bungee jumping",
+      "tokens_used": 164,
+      "latency_ms": 328.8343000167515,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-076",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "The context does not contain the answer.",
+      "ground_truth": "about an hour",
+      "tokens_used": 179,
+      "latency_ms": 392.5206999992952,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-077",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A doggy play area with agility stuff and toys.",
+      "ground_truth": "a doggy play area with agility stuff and toys",
+      "tokens_used": 142,
+      "latency_ms": 452.65829999698326,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-078",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A stunning lake in the mountains.",
+      "ground_truth": "a stunning lake in the mountains",
+      "tokens_used": 132,
+      "latency_ms": 422.1671000123024,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-079",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "She doesn't share a specific recipe on 3 July, 2023.",
+      "ground_truth": "Chicken Pot Pie",
+      "tokens_used": 153,
+      "latency_ms": 552.8690000064671,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-080",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Garlic shrimp pasta",
+      "ground_truth": "Roasted Chicken",
+      "tokens_used": 178,
+      "latency_ms": 388.75569999800064,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-081",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "They volunteered at a pet shelter.",
+      "ground_truth": "volunteered at a pet shelter",
+      "tokens_used": 161,
+      "latency_ms": 418.9842000196222,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-082",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Max",
+      "ground_truth": "Max",
+      "tokens_used": 134,
+      "latency_ms": 295.58879998512566,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-083",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Long walks in the neighborhood and exploring new paths.",
+      "ground_truth": "Long walks in the neighborhood, exploring new paths, sharing worries and hopes",
+      "tokens_used": 160,
+      "latency_ms": 445.2961999922991,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-084",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "They always make her smile and give lots of love and companionship.",
+      "ground_truth": "oldest is relaxed, second is playful, third can be naughty but loves cuddles, youngest is full of life",
+      "tokens_used": 149,
+      "latency_ms": 472.17530000489205,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-085",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Agility classes at a dog park",
+      "ground_truth": "Agility classes",
+      "tokens_used": 139,
+      "latency_ms": 383.6963000067044,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-086",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Twice a week",
+      "ground_truth": "Twice a week",
+      "tokens_used": 146,
+      "latency_ms": 309.3288000090979,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-087",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Two hours",
+      "tokens_used": 166,
+      "latency_ms": 303.47990000154823,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-088",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Grooming slowly and gently, paying attention to sensitive areas like ears and paws. And remember to stay patient and positive throughout the grooming process.",
+      "tokens_used": 159,
+      "latency_ms": 354.5768999902066,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-089",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Regular grooming at the salon",
+      "ground_truth": "Daily brushing, regular baths, nail trims, and lots of love",
+      "tokens_used": 149,
+      "latency_ms": 343.98209999199025,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-090",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A doggy playdate",
+      "ground_truth": "a doggy playdate",
+      "tokens_used": 183,
+      "latency_ms": 366.08129998785444,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-091",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "She got them new beds.",
+      "ground_truth": "Got new beds for them",
+      "tokens_used": 199,
+      "latency_ms": 428.8185000186786,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-092",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Extra comfort for them as the weather cools down.",
+      "ground_truth": "Super cozy and comfy",
+      "tokens_used": 181,
+      "latency_ms": 463.56060000834987,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-093",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Audrey petted, hugged, and slowly walked her to relax.",
+      "ground_truth": "Petted, hugged, spoke calmly and slowly walked the dog",
+      "tokens_used": 121,
+      "latency_ms": 471.37370001291856,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-094",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Frequent walks.",
+      "ground_truth": "Multiple times a day",
+      "tokens_used": 162,
+      "latency_ms": 308.2150999980513,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-095",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Peruvian Lilies",
+      "tokens_used": 139,
+      "latency_ms": 337.2466999862809,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-096",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "He learned about animals, plants, and ecosystems.",
+      "ground_truth": "about animals, plants, and ecosystems and how they work together",
+      "tokens_used": 136,
+      "latency_ms": 430.6907999853138,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-097",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "He suggested looking into classes that could help reduce carbon footprint.",
+      "ground_truth": "biking or using public transport",
+      "tokens_used": 209,
+      "latency_ms": 548.5404999926686,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-098",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Andrew suggests cooking as a way to help the planet and de-stress while also being creative.",
+      "ground_truth": "by biking",
+      "tokens_used": 207,
+      "latency_ms": 696.3591999956407,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-099",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "She took them to the beach.",
+      "ground_truth": "Took them to the beach",
+      "tokens_used": 153,
+      "latency_ms": 464.539499982493,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-100",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A knee injury",
+      "ground_truth": "Knee injury",
+      "tokens_used": 177,
+      "latency_ms": 320.7107000052929,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-101",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Recycled jewelry",
+      "ground_truth": "Jewelry made from recycled objects",
+      "tokens_used": 167,
+      "latency_ms": 288.3758000098169,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-102",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "To show her love of creativity and sustainability.",
+      "ground_truth": "To show love for creativity and sustainability",
+      "tokens_used": 159,
+      "latency_ms": 371.2406000122428,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-103",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "An animal shelter",
+      "ground_truth": "Animal shelter",
+      "tokens_used": 157,
+      "latency_ms": 305.0146999885328,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-104",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "She donates to the animal shelter.",
+      "ground_truth": "By donating a portion of his profits frmo selling jwelery",
+      "tokens_used": 159,
+      "latency_ms": 373.681500001112,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-105",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "Fetch and Frisbee",
+      "tokens_used": 196,
+      "latency_ms": 285.80360001069494,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-106",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Goodies",
+      "ground_truth": "Goodies",
+      "tokens_used": 138,
+      "latency_ms": 392.9733999830205,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-107",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "They are confused and prefer sunny days.",
+      "ground_truth": "Confused",
+      "tokens_used": 150,
+      "latency_ms": 363.85180000797845,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-108",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "They are confused and prefer sunny days.",
+      "ground_truth": "They definitely prefer nice, sunny days in the grass.",
+      "tokens_used": 174,
+      "latency_ms": 410.33029998652637,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-109",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "Exploring the great outdoors",
+      "tokens_used": 174,
+      "latency_ms": 334.79709998937324,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-110",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Walking",
+      "ground_truth": "Walking",
+      "tokens_used": 125,
+      "latency_ms": 331.51039999211207,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-111",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Andrew and Buddy like spending time together and getting fresh air on walks.",
+      "ground_truth": "Checking out new hiking trails",
+      "tokens_used": 125,
+      "latency_ms": 368.33200001274236,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-112",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Sushi",
+      "ground_truth": "sushi",
+      "tokens_used": 148,
+      "latency_ms": 275.64110001549125,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-113",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "California or salmon roll",
+      "ground_truth": "California or salmon roll",
+      "tokens_used": 196,
+      "latency_ms": 383.1882000085898,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-114",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A picnic date",
+      "ground_truth": "picnic date",
+      "tokens_used": 147,
+      "latency_ms": 324.6072000183631,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-115",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "They planned to grab some snacks and explore.",
+      "ground_truth": "Go hiking",
+      "tokens_used": 112,
+      "latency_ms": 448.8499999861233,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-116",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "The beauty of autumn leaves changing color.",
+      "ground_truth": "The autumn colors",
+      "tokens_used": 130,
+      "latency_ms": 350.86790000787005,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-117",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Joined a dog owners group.",
+      "ground_truth": "Joined a dog owners group",
+      "tokens_used": 152,
+      "latency_ms": 374.886300007347,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-118",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Once a week",
+      "ground_truth": "Once a week",
+      "tokens_used": 153,
+      "latency_ms": 299.01539999991655,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-119",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A picture of toys and games in her house.",
+      "ground_truth": "photography of a basket full of stuffed animals",
+      "tokens_used": 157,
+      "latency_ms": 443.7846999790054,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-120",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Puzzles, training, hide-and-seek",
+      "ground_truth": "puzzles, training, hide-and-seek",
+      "tokens_used": 196,
+      "latency_ms": 498.648900014814,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-121",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Andrew is planning to take Scout, Toby, and Buddy to a nearby park.",
+      "ground_truth": "Take them to a nearby park",
+      "tokens_used": 140,
+      "latency_ms": 513.8283000269439,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-122",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "A crate",
+      "ground_truth": "essentials like a bed, toys, and puppy pads",
+      "tokens_used": 149,
+      "latency_ms": 274.8791999765672,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-123",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 128,
+      "latency_ms": 377.54379998659715,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-124",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 168,
+      "latency_ms": 340.32039999146946,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-125",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "A small dog",
+      "ground_truth": "",
+      "tokens_used": 120,
+      "latency_ms": 319.0408000082243,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-126",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 171,
+      "latency_ms": 292.1801999909803,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-127",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 127,
+      "latency_ms": 322.91909999912605,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-128",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Rock climbing",
+      "ground_truth": "",
+      "tokens_used": 154,
+      "latency_ms": 321.8056999903638,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-129",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "He described the dog as adorable.",
+      "ground_truth": "",
+      "tokens_used": 169,
+      "latency_ms": 417.6666999992449,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-130",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 157,
+      "latency_ms": 446.0504000016954,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-131",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 164,
+      "latency_ms": 253.84040002245456,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-132",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "A bigger backyard for the dogs to run around.",
+      "ground_truth": "",
+      "tokens_used": 145,
+      "latency_ms": 434.3349999981001,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-133",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "They went for a hike.",
+      "ground_truth": "",
+      "tokens_used": 151,
+      "latency_ms": 388.51590000558645,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-134",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Buddy",
+      "ground_truth": "",
+      "tokens_used": 127,
+      "latency_ms": 264.07580001978204,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-135",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Andrew has fond memories of love and energy with his childhood dog, Max.",
+      "ground_truth": "",
+      "tokens_used": 154,
+      "latency_ms": 502.11709999712184,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-136",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 133,
+      "latency_ms": 343.5977999761235,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-137",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Puppy training classes",
+      "ground_truth": "",
+      "tokens_used": 155,
+      "latency_ms": 373.8331999920774,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-138",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "A bed",
+      "ground_truth": "",
+      "tokens_used": 152,
+      "latency_ms": 300.5364999989979,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-139",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 157,
+      "latency_ms": 308.26630000956357,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-140",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "He provided them with a bed, toys, and puppy pads.",
+      "ground_truth": "",
+      "tokens_used": 177,
+      "latency_ms": 500.606899993727,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-141",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "He describes them as essentials for their comfort.",
+      "ground_truth": "",
+      "tokens_used": 174,
+      "latency_ms": 374.2690999933984,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-142",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "He kept the new addition on a leash while they got used to being outside.",
+      "ground_truth": "",
+      "tokens_used": 173,
+      "latency_ms": 539.8253999883309,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-143",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 163,
+      "latency_ms": 308.03869999363087,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-144",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 139,
+      "latency_ms": 250.13920001219958,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-145",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 136,
+      "latency_ms": 289.97670000535436,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-146",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "He had a broken leg.",
+      "ground_truth": "",
+      "tokens_used": 178,
+      "latency_ms": 359.3698000186123,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-147",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Jewelry made with recycled objects",
+      "ground_truth": "",
+      "tokens_used": 160,
+      "latency_ms": 343.51899998728186,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-148",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "The context does not contain the answer.",
+      "ground_truth": "",
+      "tokens_used": 156,
+      "latency_ms": 339.0959999815095,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-149",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "None / Not mentioned.",
+      "ground_truth": "",
+      "tokens_used": 143,
+      "latency_ms": 336.91579999867827,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-150",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "He made cookies.",
+      "ground_truth": "",
+      "tokens_used": 152,
+      "latency_ms": 342.3997999925632,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-151",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 184,
+      "latency_ms": 339.31829998618923,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-152",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "He didn't mention his dogs' response to snow.",
+      "ground_truth": "",
+      "tokens_used": 171,
+      "latency_ms": 488.2295000134036,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-153",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Exploring the great outdoors",
+      "ground_truth": "",
+      "tokens_used": 154,
+      "latency_ms": 370.39939998066984,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-154",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "They enjoy spending time together and getting fresh air.",
+      "ground_truth": "",
+      "tokens_used": 162,
+      "latency_ms": 448.34699999773875,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-155",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Sushi",
+      "ground_truth": "",
+      "tokens_used": 148,
+      "latency_ms": 268.68810001178645,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-156",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "California or salmon roll sushi",
+      "ground_truth": "",
+      "tokens_used": 191,
+      "latency_ms": 379.410800000187,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-157",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 145,
+      "latency_ms": 367.70370000158437,
+      "is_correct": true
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+[25] stored=52.0% plain_new=60.0% date_copy=68.0%
+[50] stored=66.0% plain_new=70.0% date_copy=76.0%
+[75] stored=66.7% plain_new=69.3% date_copy=76.0%
+[100] stored=59.0% plain_new=61.0% date_copy=67.0%
+[125] stored=49.6% plain_new=51.2% date_copy=56.0%
+[150] stored=49.3% plain_new=50.7% date_copy=55.3%
+[175] stored=48.0% plain_new=49.1% date_copy=53.1%
+[200] stored=47.5% plain_new=48.5% date_copy=50.5%
+[225] stored=46.7% plain_new=47.6% date_copy=48.4%
+[250] stored=45.2% plain_new=46.0% date_copy=46.4%
+[275] stored=45.1% plain_new=45.8% date_copy=46.2%
+[300] stored=45.0% plain_new=45.7% date_copy=46.3%
+
+===== FINAL (temporal, n=321) =====
+stored    : 45.2%
+plain_new : 45.8%
+date_copy : 46.1%
+date_copy vs plain_new: gain 9 / loss 8
+saved: benchmark_results\ab_temporal_date_copy.json

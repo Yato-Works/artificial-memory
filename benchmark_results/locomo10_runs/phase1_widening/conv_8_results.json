@@ -1,0 +1,2007 @@
+{
+  "summary": {
+    "conv_idx": 8,
+    "sample_id": "conv-49",
+    "mode": "retrieval_only",
+    "total_questions": 196,
+    "total_turns": 509,
+    "total_ir_records": 509,
+    "overall_accuracy": 0.0,
+    "overall_oracle_recall": 0.6428571428571429,
+    "factual_accuracy": 0.0,
+    "factual_oracle_recall": 0.717948717948718,
+    "mean_tokens": 385.4183673469388,
+    "mean_latency_ms": 0.0,
+    "elapsed_seconds": 68.5786783000076,
+    "categories": {
+      "multi-hop": {
+        "total": 37,
+        "correct": 0,
+        "oracle": 30
+      },
+      "temporal": {
+        "total": 33,
+        "correct": 0,
+        "oracle": 23
+      },
+      "open-domain": {
+        "total": 13,
+        "correct": 0,
+        "oracle": 4
+      },
+      "single-hop": {
+        "total": 73,
+        "correct": 0,
+        "oracle": 55
+      },
+      "adversarial": {
+        "total": 40,
+        "correct": 0,
+        "oracle": 14
+      }
+    },
+    "failure_taxonomy_v2": {}
+  },
+  "results": [
+    {
+      "question_id": "conv-49-qa-000",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "Prius",
+      "tokens_used": 346,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-001",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "His old Prius and his new Prius.",
+      "tokens_used": 313,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-002",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Rockies, Jasper",
+      "tokens_used": 401,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-003",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "two",
+      "tokens_used": 1220,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-004",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "painting",
+      "tokens_used": 324,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-005",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Canada",
+      "tokens_used": 290,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-006",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "two",
+      "tokens_used": 1199,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-007",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Painting, kayaking, hiking, cooking, running",
+      "tokens_used": 308,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-008",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Watercolor painting",
+      "tokens_used": 479,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-009",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "weekend before May 24, 2023",
+      "tokens_used": 379,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-010",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "camping trip in the outdoors",
+      "tokens_used": 397,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-011",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Weight problem",
+      "tokens_used": 321,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-012",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "A few days before May 24, 2023.",
+      "tokens_used": 346,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-013",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "first week of June 2023",
+      "tokens_used": 377,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-014",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Ginger snaps",
+      "tokens_used": 400,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-015",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "soda, candy",
+      "tokens_used": 318,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-016",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Malfunctioning self-checkout machines.",
+      "tokens_used": 379,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-017",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Friday before 27 July 2023",
+      "tokens_used": 275,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-018",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "flavored seltzer water, dark chocolate with high cocoa content, air-popped popcorn and fruit, veggies, healthy sandwich snacks, energy balls, grilled chicken salad with avocado",
+      "tokens_used": 480,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-019",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "Evan and Sam would likely advise embracing small, consistent changes​​, finding stress-relieving activities like hiking​​, painting, and road trips​​, and the importance of friendship and support in navigating challenges​​.",
+      "tokens_used": 381,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-020",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "a cookbook with healthy recipes or a subscription to a healthy meal delivery service.",
+      "tokens_used": 394,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-021",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "He says she's cool, incredible, like something out of a movie, and that he feels alive around her. Every moment with her is fun and energetic, also Evan feels really lucky to have someone who gets him.",
+      "tokens_used": 323,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-022",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "week before August 7, 2023.",
+      "tokens_used": 422,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-023",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "July 28, 2023",
+      "tokens_used": 318,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-024",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "He fell in love with a Canadian woman",
+      "tokens_used": 365,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-025",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "2021",
+      "tokens_used": 501,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-026",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "family, fitness tracker, thirst for adventure on interesting hikes",
+      "tokens_used": 452,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-027",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "fitness tracker",
+      "tokens_used": 357,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-028",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "journalling, creative writing",
+      "tokens_used": 409,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-029",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Evan met the woman he fell in love with and returned with her.",
+      "tokens_used": 334,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-030",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "August 13, 2023",
+      "tokens_used": 326,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-031",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "Their experiences likely lead them to view challenges as opportunities for growth and change. They both have embraced healthier lifestyles, indicating a proactive approach to managing stress and challenges.",
+      "tokens_used": 399,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-032",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "Evan consistently misplaces his keys every week.",
+      "tokens_used": 420,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-033",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "he's flying over a cityscape.",
+      "tokens_used": 313,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-034",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "injured at a soccer game, fell off his bike",
+      "tokens_used": 395,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-035",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Saturday before August 15, 2023.",
+      "tokens_used": 398,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-036",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "grilled vegetables, grilled chicken and veggie stir-fry, poutine",
+      "tokens_used": 316,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-037",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "salad, grilled salmon and vegetables, grilled chicken and veggie stir-fry, Beef Merlot, fruit bowl, smoothie bowl",
+      "tokens_used": 377,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-038",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "Nature and outdoor activities seem to be significant stress relievers and sources of joy for both Evan and Sam. These activities likely contribute positively to their mental well-being.",
+      "tokens_used": 325,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-039",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "three months",
+      "tokens_used": 1223,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-040",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Few days before 19 August, 2023.",
+      "tokens_used": 425,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-041",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "painting classes",
+      "tokens_used": 376,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-042",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "His friend got him into it by gifting him a painting and giving him some advice. The painting inspired Evan.",
+      "tokens_used": 295,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-043",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "every three months",
+      "tokens_used": 337,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-044",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "nature landscapes, portraits, abstract minimalism",
+      "tokens_used": 371,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-045",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "Banff, Rocky Mountains",
+      "tokens_used": 315,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-046",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "Evan and Sam use creative activities, like painting and writing, as therapeutic tools to express themselves and cope with stress.",
+      "tokens_used": 367,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-047",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "July 2023",
+      "tokens_used": 361,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-048",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Healthy eating, exercise routine, running, hiking",
+      "tokens_used": 305,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-049",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Evan's son and Evan himself",
+      "tokens_used": 314,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-050",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "painting, hiking, reading books, biking, skiing, snowboarding, ice skating, swimming, camping, kayaking",
+      "tokens_used": 343,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-051",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "Sam faces challenges like maintaining motivation and making dietary changes. He addresses them by enrolling in cooking classes and seeking support from friends like Evan.",
+      "tokens_used": 318,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-052",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "painting",
+      "tokens_used": 348,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-053",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "Saturday after 11 September, 2023.",
+      "tokens_used": 352,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-054",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "heart palpitations, twisted ankle, twisted ankle",
+      "tokens_used": 368,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-055",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Helping lost tourists and experiencing unexpected adventures in the city.",
+      "tokens_used": 402,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-056",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "His new phone malfunctioning, particularly with the navigation app.",
+      "tokens_used": 367,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-057",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "California",
+      "tokens_used": 338,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-058",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "October 2022",
+      "tokens_used": 458,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-059",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "October 14, 2023",
+      "tokens_used": 342,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-060",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "kayaking",
+      "tokens_used": 265,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-061",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "work-related stress",
+      "tokens_used": 368,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-062",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Sam faced a health scare with stomach pains that turned out to be gastritis, prompting him to rethink his health habits. Evan, on the other hand, experienced two separate incidents: a sudden heart palpitation incident and a different event involving a misunderstanding during a medical check-up. These experiences have significantly influenced their perspectives on health and well-being.",
+      "tokens_used": 465,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-063",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "weekend before 17 October, 2023.",
+      "tokens_used": 277,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-064",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "gastritis",
+      "tokens_used": 315,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-065",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "beach",
+      "tokens_used": 385,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-066",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "end of October 2023",
+      "tokens_used": 337,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-067",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "December, 2023",
+      "tokens_used": 396,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-068",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "Attending a Weight Watchers meeting",
+      "tokens_used": 260,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-069",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "his partner gets pregnant and they get married",
+      "tokens_used": 403,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-070",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "four months",
+      "tokens_used": 1216,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-071",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "Christmas",
+      "tokens_used": 283,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-072",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "hiking",
+      "tokens_used": 262,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-073",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Summer 2024",
+      "tokens_used": 362,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-074",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Thursday before December 17, 2023.",
+      "tokens_used": 369,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-075",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "January 5, 2024",
+      "tokens_used": 339,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-076",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "few days before 17 December, 2023.",
+      "tokens_used": 366,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-077",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "family get-together, honeymoon in Canada to see snowy landscapes, ski, taste local cuisine and do some snowshoeing",
+      "tokens_used": 310,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-078",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "To Sam, to his friends from work, and to his and his wife's families.",
+      "tokens_used": 338,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-079",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "February 2024",
+      "tokens_used": 350,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-080",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "January 9, 2023",
+      "tokens_used": 378,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-081",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Drawing, traveling, places with a beautiful view, yoga, sunsets or something comfortable for Evan",
+      "tokens_used": 317,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-082",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Unhealthy snacks, sweets, yoga, places with beautiful views",
+      "tokens_used": 314,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-083",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "new Prius",
+      "tokens_used": 369,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-084",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "friend's advice",
+      "tokens_used": 335,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-085",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "watercolor painting",
+      "tokens_used": 390,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-086",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "keep trying new things until something sparks excitement",
+      "tokens_used": 430,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-087",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Jasper",
+      "tokens_used": 317,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-088",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "fresh air, peacefulness, cozy cabin surrounded by mountains and forests",
+      "tokens_used": 382,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-089",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "consuming soda and candy",
+      "tokens_used": 368,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-090",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "try flavored seltzer water and dark chocolate with high cocoa content",
+      "tokens_used": 520,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-091",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "flavored seltzer water and dark chocolate with high cocoa content",
+      "tokens_used": 380,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-092",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "broken self-checkout machines",
+      "tokens_used": 355,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-093",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "The Great Gatsby",
+      "tokens_used": 381,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-094",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Flavored seltzer water",
+      "tokens_used": 475,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-095",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "tracks progress and serves as a constant reminder to keep going",
+      "tokens_used": 422,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-096",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "strength and resilience",
+      "tokens_used": 353,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-097",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "motivates him to keep going through tough times",
+      "tokens_used": 336,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-098",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "progress",
+      "tokens_used": 323,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-099",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "dream interpretation book",
+      "tokens_used": 474,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-100",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "his keys",
+      "tokens_used": 356,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-101",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "cooking class",
+      "tokens_used": 430,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-102",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "grilled dish with salmon and vegetables",
+      "tokens_used": 410,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-103",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "recipes with more vegetables",
+      "tokens_used": 351,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-104",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "bowl of spinach, avocado, and strawberries",
+      "tokens_used": 349,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-105",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "watercolor painting classes",
+      "tokens_used": 425,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-106",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "forest scene",
+      "tokens_used": 397,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-107",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "observing nature and painting what is seen",
+      "tokens_used": 323,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-108",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "sunsets over the ocean",
+      "tokens_used": 324,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-109",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "skiing",
+      "tokens_used": 300,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-110",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "Twisted knee",
+      "tokens_used": 319,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-111",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Swimming",
+      "tokens_used": 348,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-112",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "Consider low-impact exercises or physical therapy",
+      "tokens_used": 483,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-113",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "Painting",
+      "tokens_used": 479,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-114",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Acrylic paints, brushes, canvas/paper, palette",
+      "tokens_used": 373,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-115",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Watercolor painting",
+      "tokens_used": 372,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-116",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "a cactus in the desert",
+      "tokens_used": 441,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-117",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "creative writing",
+      "tokens_used": 326,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-118",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "malfunctioning navigation app on the new phone",
+      "tokens_used": 425,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-119",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "lifting weights",
+      "tokens_used": 444,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-120",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Find a trainer",
+      "tokens_used": 420,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-121",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "Lake Tahoe",
+      "tokens_used": 329,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-122",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "Gastritis",
+      "tokens_used": 390,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-123",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "helping lost tourists",
+      "tokens_used": 399,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-124",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "gaining strength",
+      "tokens_used": 346,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-125",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "Changed his diet and started walking regularly",
+      "tokens_used": 322,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-126",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "1968 Kustom K-200A vintage guitar",
+      "tokens_used": 370,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-127",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "Lost their job due to downsizing",
+      "tokens_used": 423,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-128",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "A happy place",
+      "tokens_used": 273,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-129",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "He relied on it for his active lifestyle and road trips",
+      "tokens_used": 380,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-130",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "As a chance to explore other ways of staying active and traveling",
+      "tokens_used": 491,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-131",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Yoga",
+      "tokens_used": 486,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-132",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "Support and tips",
+      "tokens_used": 287,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-133",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "partner is pregnant",
+      "tokens_used": 292,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-134",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "big family reunion",
+      "tokens_used": 326,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-135",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "'Bring it on Home'",
+      "tokens_used": 374,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-136",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Your worth is not defined by your weight",
+      "tokens_used": 375,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-137",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "a close friend",
+      "tokens_used": 364,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-138",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "running in the mornings",
+      "tokens_used": 314,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-139",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "put a GPS sensor on them",
+      "tokens_used": 462,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-140",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "a sense of joy and freedom",
+      "tokens_used": 374,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-141",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Keep trying new things",
+      "tokens_used": 484,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-142",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "embracing the creative process without restraint",
+      "tokens_used": 327,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-143",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "getting married",
+      "tokens_used": 321,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-144",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "a photo of a man standing on a rock looking out over a valley",
+      "tokens_used": 339,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-145",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "the recipes for cookies",
+      "tokens_used": 379,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-146",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "their marriage",
+      "tokens_used": 323,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-147",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "just two ginger snaps a day",
+      "tokens_used": 392,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-148",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Snowshoeing",
+      "tokens_used": 503,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-149",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "diet plan and low-impact exercises",
+      "tokens_used": 535,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-150",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "swimming, yoga, walking",
+      "tokens_used": 496,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-151",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "The Godfather",
+      "tokens_used": 340,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-152",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "Yoga",
+      "tokens_used": 378,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-153",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "a kayak",
+      "tokens_used": 418,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-154",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "for a drunken night",
+      "tokens_used": 411,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-155",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "peaceful",
+      "tokens_used": 354,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-156",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 340,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-157",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 335,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-158",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 335,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-159",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 353,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-160",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 391,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-161",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 405,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-162",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 407,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-163",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 332,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-164",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 381,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-165",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 291,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-166",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 376,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-167",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 407,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-168",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 456,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-169",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 327,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-170",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 390,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-171",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 297,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-172",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 306,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-173",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 449,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-174",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 381,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-175",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 332,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-176",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 367,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-177",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 451,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-178",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 323,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-179",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 379,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-180",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 322,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-181",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 275,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-182",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 257,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-183",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 382,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-184",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 332,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-185",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 332,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-186",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 333,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-187",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 374,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-188",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 327,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-189",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 323,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-190",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 358,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-191",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 503,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-192",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 488,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-193",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 328,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-194",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 336,
+      "latency_ms": 0.0,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-49-qa-195",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "",
+      "ground_truth": "",
+      "tokens_used": 302,
+      "latency_ms": 0.0,
+      "is_correct": false
+    }
+  ]
+}

@@ -1,0 +1,362 @@
+{
+  "num_questions": 32,
+  "accuracy": 81.25,
+  "num_correct": 26,
+  "mean_tokens": 382.53125,
+  "state_coverage_pct": 96.875,
+  "elapsed_s": 13.895029700001032,
+  "ladder": {
+    "baseline_no_state": {
+      "accuracy": 18.8,
+      "correct": 6,
+      "tokens": 361.2
+    },
+    "old_retrieved_state": {
+      "accuracy": 21.9,
+      "correct": 7,
+      "tokens": 362.4
+    },
+    "state_compiler_c5_c6": {
+      "accuracy": 43.8,
+      "correct": 14,
+      "tokens": 375.7
+    },
+    "phase_vitamin": {
+      "accuracy": 59.4,
+      "correct": 19,
+      "tokens": 375.4
+    },
+    "gold_state_upper_bound": {
+      "accuracy": 68.8,
+      "correct": 22,
+      "tokens": 368.3
+    },
+    "phase_immune": {
+      "accuracy": 81.25,
+      "correct": 26,
+      "tokens": 382.53125
+    }
+  },
+  "details": [
+    {
+      "question_id": "conv-26-qa-003",
+      "question": "What did Caroline research?",
+      "ground_truth": "Adoption agencies",
+      "predicted_answer": "Adoption agencies",
+      "is_correct": true,
+      "tokens_used": 269,
+      "compiled_state": "NONE",
+      "has_state": false
+    },
+    {
+      "question_id": "conv-26-qa-004",
+      "question": "What is Caroline's identity?",
+      "ground_truth": "Transgender woman",
+      "predicted_answer": "Transgender woman",
+      "is_correct": true,
+      "tokens_used": 434,
+      "compiled_state": "[STATE] Caroline's identity is Transgender woman. (supported_by: [D1:5, D3:1, D5:13, D9:6, D14:12, D14:19, D16:13, D17:19])",
+      "has_state": true
+    },
+    {
+      "question_id": "conv-26-qa-007",
+      "question": "What is Caroline's relationship status?",
+      "ground_truth": "Single",
+      "predicted_answer": "Single, single parent.",
+      "is_correct": true,
+      "tokens_used": 309,
+      "compiled_state": "[STATE] Caroline's relationship status is single, single parent. (supported_by: [D2:14])",
+      "has_state": true
+    },
+    {
+      "question_id": "conv-26-qa-011",
+      "question": "Where did Caroline move from 4 years ago?",
+      "ground_truth": "Sweden",
+      "predicted_answer": "Sweden",
+      "is_correct": true,
+      "tokens_used": 469,
+      "compiled_state": "[STATE] Caroline's home country is home country, Sweden. (supported_by: [D3:13, D4:3])",
+      "has_state": true
+    },
+    {
+      "question_id": "conv-26-qa-013",
+      "question": "What career path has Caroline decided to persue?",
+      "ground_truth": "counseling or mental health for Transgender people",
+      "predicted_answer": "Counseling and mental health",
+      "is_correct": true,
+      "tokens_used": 356,
+      "compiled_state": "[STATE] Caroline's career path is Transgender woman, counseling, mental health. (supported_by: [D1:5, D1:11, D2:1, D2:2, D3:1, D4:11, D4:12, D4:13, D4:14, D4:15, D5:3, D5:13, D6:3, D7:5, D7:6, D7:7, D7:24, D7:25, D7:26, D8:26, D9:6, D14:12, D14:19, D17:19])",
+      "has_state": true
+    },
+    {
+      "question_id": "conv-26-qa-015",
+      "question": "What activities does Melanie partake in?",
+      "ground_truth": "pottery, camping, painting, swimming",
+      "predicted_answer": "Painting, swimming, running, camping, pottery, hiking",
+      "is_correct": true,
+      "tokens_used": 319,
+      "compiled_state": "[STATE] Melanie's activities include painting, swimming, running, camping, pottery, hiking. (supported_by: [D1:6, D1:13, D1:15, D1:16, D1:18, D2:5, D2:7, D4:6, D5:4, D5:5, D5:6, D5:10, D5:12, D6:16, D7:19, D7:20, D7:21, D7:22, D7:23, D8:2, D8:5, D8:6, D8:7, D8:8, D8:32, D8:34, D9:1, D9:14, D9:15, D9:17, D10:12, D10:13, D10:14, D11:8, D11:11, D11:12, D12:2, D12:3, D12:6, D13:8, D13:9, D13:11, D13:12, D13:13, D14:1, D14:4, D14:5, D14:7, D14:30, D16:2, D16:8, D16:9, D16:11, D16:12, D16:13, D16:14, D17:8, D17:9, D17:10, D17:14, D17:16, D18:19, D18:20])",
+      "has_state": true
+    },
+    {
+      "question_id": "conv-26-qa-018",
+      "question": "Where has Melanie camped?",
+      "ground_truth": "beach, mountains, forest",
+      "predicted_answer": "Lake and mountains",
+      "is_correct": false,
+      "tokens_used": 348,
+      "compiled_state": "[STATE] Melanie's camping locations is lake, mountains. (supported_by: [D1:14, D4:6, D8:34])",
+      "has_state": true
+    },
+    {
+      "question_id": "conv-26-qa-019",
+      "question": "What do Melanie's kids like?",
+      "ground_truth": "dinosaurs, nature",
+      "predicted_answer": "Nature, pottery, outdoors.",
+      "is_correct": true,
+      "tokens_used": 431,
+      "compiled_state": "[STATE] Melanie's kids preferences is nature, pottery, outdoors. (supported_by: [D4:8, D5:4, D5:5, D5:6, D5:10, D5:12, D8:2, D8:5, D8:6, D8:7, D8:8, D8:9, D8:34, D8:35, D12:2, D12:3, D12:17, D14:4, D14:29, D14:30, D15:2, D15:3, D16:2, D16:4, D16:8, D16:9, D16:11, D17:8, D17:9, D18:18, D18:19, D18:21, D18:22, D18:23])",
+      "has_state": true
+    },
+    {
+      "question_id": "conv-26-qa-023",
+      "question": "What books has Melanie read?",
+      "ground_truth": "\"Nothing is Impossible\", \"Charlotte's Web\"",
+      "predicted_answer": "\"Becoming Nicole\"",
+      "is_correct": false,
+      "tokens_used": 258,
+      "compiled_state": "[STATE] Melanie's books read include \"Becoming Nicole\". (supported_by: [D7:11])",
+      "has_state": true
+    },
+    {
+      "question_id": "conv-26-qa-024",
+      "question": "What does Melanie do to destress?",
+      "ground_truth": "Running, pottery",
+      "predicted_answer": "Running, family time, pottery",
+      "is_correct": true,
+      "tokens_used": 278,
+      "compiled_state": "[STATE] Melanie's destress activities include running, family time, pottery. (supported_by: [D2:5, D4:10, D5:4, D5:5, D5:6, D5:10, D5:12, D7:19, D7:20, D7:21, D7:22, D7:23, D8:2, D8:5, D8:35, D12:2, D12:3, D14:4, D16:8, D16:9, D16:11, D17:8, D17:9])",
+      "has_state": true
+    },
+    {
+      "question_id": "conv-26-qa-032",
+      "question": "What LGBTQ+ events has Caroline participated in?",
+      "ground_truth": "Pride parade, school speech, support group",
+      "predicted_answer": "LGBTQ+ pride parade and an LGBTQ conference.",
+      "is_correct": false,
+      "tokens_used": 447,
+      "compiled_state": "[STATE] Caroline's events attended include support group, pride parade, conference. (supported_by: [D1:3, D1:7, D5:1, D5:13, D7:1, D8:17, D10:7, D11:4])",
+      "has_state": true
+    },
+    {
+      "question_id": "conv-26-qa-034",
+      "question": "What events has Caroline participated in to help children?",
+      "ground_truth": "Mentoring program, school speech",
+      "predicted_answer": "Mentoring program and school speech",
+      "is_correct": true,
+      "tokens_used": 426,
+      "compiled_state": "[STATE] Caroline participated in mentoring program and school speech to help children. (supported_by: [D1:18, D3:3, D3:6, D4:1, D6:1, D7:5, D9:2, D10:2, D15:3])",
+      "has_state": true
+    },
+    {
+      "question_id": "conv-26-qa-037",
+      "question": "What did Melanie paint recently?",
+      "ground_truth": "sunset",
+      "predicted_answer": "A painting inspired by sunsets",
+      "is_correct": true,
+      "tokens_used": 352,
+      "compiled_state": "[STATE] Melanie's recent paintings is sunrise, Sunsets. (supported_by: [D1:14, D14:6, D14:8, D17:13])",
+      "has_state": true
+    },
+    {
+      "question_id": "conv-26-qa-038",
+      "question": "What activities has Melanie done with her family?",
+      "ground_truth": "Pottery, painting, camping, museum, swimming, hiking",
+      "predicted_answer": "Painting, swimming, running, camping, pottery, hiking",
+      "is_correct": true,
+      "tokens_used": 378,
+      "compiled_state": "[STATE] Melanie's activities include painting, swimming, running, camping, pottery, hiking. (supported_by: [D1:6, D1:13, D1:15, D1:16, D1:18, D2:5, D2:7, D4:6, D5:4, D5:5, D5:6, D5:10, D5:12, D6:16, D7:19, D7:20, D7:21, D7:22, D7:23, D8:2, D8:5, D8:6, D8:7, D8:8, D8:32, D8:34, D9:1, D9:14, D9:15, D9:17, D10:12, D10:13, D10:14, D11:8, D11:11, D11:12, D12:2, D12:3, D12:6, D13:8, D13:9, D13:11, D13:12, D13:13, D14:1, D14:4, D14:5, D14:7, D14:30, D16:2, D16:8, D16:9, D16:11, D16:12, D16:13, D16:14, D17:8, D17:9, D17:10, D17:14, D17:16, D18:19, D18:20])",
+      "has_state": true
+    },
+    {
+      "question_id": "conv-26-qa-039",
+      "question": "In what ways is Caroline participating in the LGBTQ community?",
+      "ground_truth": "Joining activist group, going to pride parades, participating in an art show, mentoring program",
+      "predicted_answer": "Through an activist group, pride parades, an art show, and a mentoring program.",
+      "is_correct": true,
+      "tokens_used": 560,
+      "compiled_state": "[STATE] Caroline participates in the LGBTQ community through activist group, pride parades, art show, and mentoring program. (supported_by: [D9:12, D9:14, D10:3, D14:33])",
+      "has_state": true
+    },
+    {
+      "question_id": "conv-26-qa-040",
+      "question": "How many times has Melanie gone to the beach in 2023?",
+      "ground_truth": "2",
+      "predicted_answer": "2",
+      "is_correct": true,
+      "tokens_used": 459,
+      "compiled_state": "[STATE] Melanie has gone to the beach 2 times. (supported_by: [D4:8, D10:10])",
+      "has_state": true
+    },
+    {
+      "question_id": "conv-26-qa-043",
+      "question": "What kind of art does Caroline make?",
+      "ground_truth": "abstract art",
+      "predicted_answer": "Drawing",
+      "is_correct": false,
+      "tokens_used": 346,
+      "compiled_state": "[STATE] Caroline's art type is drawing. (supported_by: [D14:25, D14:29, D16:9])",
+      "has_state": true
+    },
+    {
+      "question_id": "conv-26-qa-047",
+      "question": "Who supports Caroline when she has a negative experience?",
+      "ground_truth": "Her mentors, family, and friends",
+      "predicted_answer": "Her mentors, family, and friends",
+      "is_correct": true,
+      "tokens_used": 596,
+      "compiled_state": "[STATE] Caroline is supported by her mentors, family, and friends when she has a negative experience. (supported_by: [D2:3, D2:6, D2:8, D2:9, D2:10, D2:14, D2:15, D3:10, D3:11, D3:13, D3:15, D3:18, D3:20, D3:22, D3:23, D4:3, D4:7, D4:8, D4:9, D4:10, D6:11, D6:12, D6:16, D7:11, D8:24, D8:28, D8:29, D8:31, D8:32, D8:33, D8:35, D10:12, D10:22, D10:23, D10:24, D12:15, D12:16, D12:17, D16:5, D16:15, D17:1, D17:5, D18:3, D18:4, D18:5, D18:12, D18:22, D19:1, D19:2, D19:3, D19:4, D19:9])",
+      "has_state": true
+    },
+    {
+      "question_id": "conv-26-qa-048",
+      "question": "What types of pottery have Melanie and her kids made?",
+      "ground_truth": "bowls, cup",
+      "predicted_answer": "Pots and bowls",
+      "is_correct": true,
+      "tokens_used": 401,
+      "compiled_state": "[STATE] Melanie's pottery types include pots, bowls. (supported_by: [D8:2, D16:9])",
+      "has_state": true
+    },
+    {
+      "question_id": "conv-26-qa-051",
+      "question": "What has Melanie painted?",
+      "ground_truth": "Horse, sunset, sunrise",
+      "predicted_answer": "Horse, sunset, sunrise",
+      "is_correct": true,
+      "tokens_used": 271,
+      "compiled_state": "[STATE] Melanie has painted horse, sunset, sunrise. (supported_by: [D1:14, D13:6, D13:8, D13:9, D14:6, D14:8, D17:13])",
+      "has_state": true
+    },
+    {
+      "question_id": "conv-26-qa-052",
+      "question": "What are Melanie's pets' names?",
+      "ground_truth": "Oliver, Luna, Bailey",
+      "predicted_answer": "Oliver, Luna, Bailey",
+      "is_correct": true,
+      "tokens_used": 339,
+      "compiled_state": "[STATE] Melanie's pets' names are Oliver, Luna, Bailey. (supported_by: [D7:18, D13:4, D13:5, D13:6])",
+      "has_state": true
+    },
+    {
+      "question_id": "conv-26-qa-055",
+      "question": "What subject have Caroline and Melanie both painted?",
+      "ground_truth": "Sunsets",
+      "predicted_answer": "Sunsets",
+      "is_correct": true,
+      "tokens_used": 446,
+      "compiled_state": "[STATE] Caroline and Melanie have both painted sunsets. (supported_by: [D14:6, D14:8, D17:12, D17:13])",
+      "has_state": true
+    },
+    {
+      "question_id": "conv-26-qa-056",
+      "question": "What symbols are important to Caroline?",
+      "ground_truth": "Rainbow flag, transgender symbol",
+      "predicted_answer": "Rainbow flag and transgender symbol",
+      "is_correct": true,
+      "tokens_used": 403,
+      "compiled_state": "[STATE] Caroline's important symbols include rainbow flag and transgender symbol. (supported_by: [D14:15])",
+      "has_state": true
+    },
+    {
+      "question_id": "conv-26-qa-060",
+      "question": "What instruments does Melanie play?",
+      "ground_truth": "clarinet and violin",
+      "predicted_answer": "Piano and guitar",
+      "is_correct": false,
+      "tokens_used": 284,
+      "compiled_state": "[STATE] Melanie's instruments played include piano, guitar. (supported_by: [D5:5, D15:19, D15:20, D15:21])",
+      "has_state": true
+    },
+    {
+      "question_id": "conv-26-qa-061",
+      "question": "What musical artists/bands has Melanie seen?",
+      "ground_truth": "Summer Sounds, Matt Patterson",
+      "predicted_answer": "Matt Patterson and Summer Sounds",
+      "is_correct": true,
+      "tokens_used": 271,
+      "compiled_state": "[STATE] Melanie's musical artists include matt patterson, summer sounds. (supported_by: [D11:3, D15:16])",
+      "has_state": true
+    },
+    {
+      "question_id": "conv-26-qa-065",
+      "question": "What are some changes Caroline has faced during her transition journey?",
+      "ground_truth": "Changes to her body, losing unsupportive friends",
+      "predicted_answer": "Changes to her body and losing unsupportive friends.",
+      "is_correct": true,
+      "tokens_used": 499,
+      "compiled_state": "[STATE] Caroline has faced changes to her body and losing unsupportive friends during her transition journey. (supported_by: [D2:10, D3:2, D3:11, D3:13, D6:11, D6:12, D6:15, D8:24, D8:25, D11:14, D12:15, D14:12, D16:5, D16:9, D16:15, D19:9])",
+      "has_state": true
+    },
+    {
+      "question_id": "conv-26-qa-066",
+      "question": "What does Melanie do with her family on hikes?",
+      "ground_truth": "Roast marshmallows, tell stories",
+      "predicted_answer": "Roasts marshmallows and tells stories.",
+      "is_correct": true,
+      "tokens_used": 341,
+      "compiled_state": "[STATE] Melanie's hike activities include roast marshmallows, tell stories. (supported_by: [D10:12])",
+      "has_state": true
+    },
+    {
+      "question_id": "conv-26-qa-070",
+      "question": "What transgender-specific events has Caroline attended?",
+      "ground_truth": "Poetry reading, conference",
+      "predicted_answer": "Support group for the trans community",
+      "is_correct": false,
+      "tokens_used": 417,
+      "compiled_state": "[STATE] Caroline's events attended include support group, conference, poetry reading. (supported_by: [D1:3, D1:7, D5:13, D7:1, D17:17, D17:19])",
+      "has_state": true
+    },
+    {
+      "question_id": "conv-26-qa-071",
+      "question": "What book did Melanie read from Caroline's suggestion?",
+      "ground_truth": "\"Becoming Nicole\"",
+      "predicted_answer": "\"Becoming Nicole\"",
+      "is_correct": true,
+      "tokens_used": 363,
+      "compiled_state": "[STATE] Melanie read the book \"Becoming Nicole\" from Caroline's suggestion. (supported_by: [D7:11])",
+      "has_state": true
+    },
+    {
+      "question_id": "conv-26-qa-075",
+      "question": "How many children does Melanie have?",
+      "ground_truth": "3",
+      "predicted_answer": "Melanie has 3 children.",
+      "is_correct": true,
+      "tokens_used": 372,
+      "compiled_state": "[STATE] Melanie's children count is 3. (supported_by: [D3:1])",
+      "has_state": true
+    },
+    {
+      "question_id": "conv-26-qa-076",
+      "question": "When did Melanie go on a hike after the roadtrip?",
+      "ground_truth": "19 October 2023",
+      "predicted_answer": "19 October 2023",
+      "is_correct": true,
+      "tokens_used": 523,
+      "compiled_state": "[STATE] Melanie went on a hike after the roadtrip on 19 October 2023. (supported_by: [D1:3, D3:16, D5:4, D6:4, D14:4, D14:10, D15:2, D18:17, D19:2])",
+      "has_state": true
+    },
+    {
+      "question_id": "conv-26-qa-078",
+      "question": "What items has Melanie bought?",
+      "ground_truth": "Figurines, shoes",
+      "predicted_answer": "Shoes and figurines",
+      "is_correct": true,
+      "tokens_used": 276,
+      "compiled_state": "[STATE] Melanie's items bought include shoes, figurines. (supported_by: [D7:18, D19:2])",
+      "has_state": true
+    }
+  ]
+}

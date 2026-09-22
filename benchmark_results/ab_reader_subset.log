@@ -1,0 +1,6 @@
+qid subset: 269 questions
+cached contexts: 1986  convs=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]  limit=None
+phi4-mini:latest       acc= 46.1% (124/269)  oracle= 95.5%  862s  single-hop= 58.6%  multi-hop= 23.2%
+qwen2.5-coder:7b       acc= 55.4% (149/269)  oracle= 95.5%  3478s  single-hop= 69.0%  multi-hop= 30.5%
+
+saved: benchmark_results\ab_reader_subset.json

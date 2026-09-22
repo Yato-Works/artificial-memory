@@ -31,6 +31,7 @@ from .context import (
     create_context_ir,
 )
 from .memory import MemoryIR
+from .structured import IRRelation, IRStatus, StructuredIR
 
 __all__ = [
     "MemoryType",
@@ -60,4 +61,7 @@ __all__ = [
     "ContextStats",
     "ContextIR",
     "create_context_ir",
+    "IRRelation",
+    "IRStatus",
+    "StructuredIR",
 ]

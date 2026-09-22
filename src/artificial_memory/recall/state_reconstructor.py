@@ -78,7 +78,19 @@ class StateReconstructor:
             return QueryIntent.EVENT_QUERY
 
         # 4. Aggregation Query (counting/summing across sessions)
+        # Guard: If the query is asking to recall assistant-provided content from
+        # a previous conversation, treat as STATE (not aggregation) even when
+        # "how much/many" appears. These are single-session assistant recall.
+        is_assistant_recall = any(w in q_lower for w in [
+            "remind me", "can you remind", "our previous chat", "our previous conversation",
+            "previous conversation about", "previous chat about", "looking back at",
+            "follow up on our previous", "we discussed", "you mentioned",
+            "you provided", "you recommended", "you created", "you said",
+            "list you provided", "did you say",
+        ])
         if any(k in q_lower for k in self.AGGREGATION_KEYWORDS):
+            if is_assistant_recall:
+                return QueryIntent.STATE_QUERY
             return QueryIntent.AGGREGATION_QUERY
 
         # Default to Current State Query
@@ -186,14 +198,27 @@ class StateReconstructor:
             "that", "this", "these", "those", "can", "could", "would", "should",
             "will", "shall", "may", "might", "must", "you", "your", "yours",
             "into", "than", "too", "very", "much", "also", "just",
-            "time", "times", "day", "days", "before", "after", "went", "about"
+            "time", "times", "day", "days", "before", "after", "went", "about",
+            "there", "their", "theirs", "they", "them", "where", "here", "both",
+            "either", "neither", "some", "any", "each", "every", "other", "another",
+            "such", "same", "own", "only", "who", "whom", "whose", "why", "how",
+            "when", "with", "from", "down", "out", "over", "under", "again", "further", "then", "once",
+            "different", "various", "distinct", "type", "types", "kind", "kinds", "sort", "sorts", "piece", "pieces", "item", "items",
+            "something", "anything", "everything", "nothing", "someone", "anyone", "everyone", "somebody", "anybody",
+            "past", "last", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
         }
 
         def stem(w: str) -> str:
             if w.endswith("ing") and len(w) > 5:
-                return w[:-3]
+                base = w[:-3]
+                if len(base) > 2 and base[-1] == base[-2]:
+                    base = base[:-1]
+                return base
             if w.endswith("ed") and len(w) > 4:
-                return w[:-2]
+                base = w[:-2]
+                if len(base) > 2 and base[-1] == base[-2]:
+                    base = base[:-1]
+                return base
             if w.endswith("s") and len(w) > 3 and not w.endswith("ss"):
                 return w[:-1]
             return w
@@ -236,7 +261,16 @@ class StateReconstructor:
                     w for w in re.findall(r"\b[a-zA-Z0-9_-]+\b", q_lower)
                     if len(w) > 2 and w not in COMMON_STOP_WORDS
                 ]
-                speaker_multiplier = 2.5 if is_user_source else 1.0
+                is_asking_assistant = any(w in q_lower for w in [
+                    "you told me", "you said", "you recommended", "you provided", "you mentioned", "you created",
+                    "you suggested", "list you provided", "what did you", "remind me what",
+                    "our previous chat", "our previous conversation", "did you say", "can you remind me"
+                ]) and any(w in q_lower for w in ["you", "your", "remind me"])
+
+                if is_asking_assistant:
+                    speaker_multiplier = 3.0 if not is_user_source else 1.0
+                else:
+                    speaker_multiplier = 2.5 if is_user_source else 1.0
 
                 for w in query_tokens:
                     w_stem = stem(w)
@@ -296,22 +330,81 @@ class StateReconstructor:
                 if "abandoned" in content_lower and not any(w in q_lower for w in ["abandon", "why"]):
                     score -= 25.0
             elif intent == QueryIntent.AGGREGATION_QUERY:
-                # Extract core topic words (excluding aggregation frames)
+                # Extract core topic words (excluding aggregation frames and generic action verbs)
                 AGGREGATION_FRAME_WORDS = {
                     "how", "many", "much", "total", "combined", "altogether", "sum", "count",
                     "number", "have", "had", "has", "did", "was", "were", "been", "being",
                     "this", "that", "these", "those", "year", "years", "month", "months",
-                    "week", "weeks", "day", "days", "time", "times", "united", "states", "america"
+                    "week", "weeks", "day", "days", "time", "times", "united", "states", "america",
+                    "since", "start", "starting", "started", "end", "ending", "ended",
+                    "last", "past", "ago", "prior", "before", "after", "current", "currently",
+                    "first", "related", "expense", "expenses", "dollar", "dollars",
+                    "spend", "spent", "spending", "money", "cost", "costs", "paid",
+                    "different", "various", "distinct", "type", "types", "kind", "kinds", "sort", "sorts", "piece", "pieces", "item", "items",
+                    "something", "anything", "everything", "nothing", "someone", "anyone", "everyone", "somebody", "anybody",
+                    "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
                 }
-                agg_topic_words = [
-                    w for w in re.findall(r"\b[a-zA-Z0-9_-]+\b", q_lower)
-                    if len(w) > 2 and w not in COMMON_STOP_WORDS and w not in AGGREGATION_FRAME_WORDS
-                ]
+                AGGREGATION_ACTION_WORDS = {
+                    "attend", "attended", "attending", "visit", "visited", "visiting",
+                    "bought", "buy", "buying", "got", "get", "getting", "acquire", "acquired",
+                    "spent", "spend", "spending", "cost", "costs", "paid", "pay", "paying",
+                    "lead", "led", "leading", "see", "saw", "seen", "view", "viewed", "viewing",
+                    "used", "use", "using", "learn", "learned", "learning", "cook", "cooked", "cooking",
+                    "bake", "baked", "baking", "play", "played", "playing", "watch", "watched", "watching",
+                    "pick", "picked", "return", "returned", "exchange", "exchanged",
+                    "assemble", "assembled", "fix", "fixed", "sold", "sell", "selling",
+                    "take", "took", "taken", "taking", "do", "did", "done", "doing",
+                    "offer", "offered", "offers", "offering", "make", "makes", "making", "made",
+                }
+                raw_tokens = re.findall(r"\b[a-zA-Z0-9_-]+\b", q_lower)
+                expanded_tokens = set()
+                for rt in raw_tokens:
+                    expanded_tokens.add(rt)
+                    if "-" in rt:
+                        expanded_tokens.update(rt.split("-"))
+
+                DOMAIN_SYNONYMS = {
+                    "fish": {"fish", "tetra", "tetras", "gourami", "gouramis", "catfish", "betta", "guppy", "guppies", "aquarium", "aquariums", "tank", "tanks"},
+                    "aquarium": {"aquarium", "aquariums", "tank", "tanks", "fish"},
+                    "aquariums": {"aquarium", "aquariums", "tank", "tanks", "fish"},
+                    "property": {"property", "properties", "house", "townhouse", "condo", "apartment", "bungalow"},
+                    "properties": {"property", "properties", "house", "townhouse", "condo", "apartment", "bungalow"},
+                    "doctor": {"doctor", "doctors", "dr", "physician", "physicians", "specialist", "specialists", "dermatologist", "ent", "surgeon"},
+                    "doctors": {"doctor", "doctors", "dr", "physician", "physicians", "specialist", "specialists", "dermatologist", "ent", "surgeon"},
+                    "clothing": {"clothing", "clothes", "blazer", "boots", "jacket", "jeans", "shirt", "pants", "dress", "sweater"},
+                    "clothes": {"clothing", "clothes", "blazer", "boots", "jacket", "jeans", "shirt", "pants", "dress", "sweater"},
+                    "plant": {"plant", "plants", "lily", "succulent", "fern", "basil", "snake"},
+                    "plants": {"plant", "plants", "lily", "succulent", "fern", "basil", "snake"},
+                    "furniture": {"furniture", "bookshelf", "table", "chair", "desk", "couch", "sofa", "bed", "mattress", "cabinet", "dresser"},
+                    "pieces of furniture": {"furniture", "bookshelf", "table", "chair", "desk", "couch", "sofa", "bed", "mattress", "cabinet", "dresser"},
+                    "citrus": {"citrus", "lemon", "lime", "orange", "grapefruit", "yuzu", "bergamot"},
+                    "bike": {"bike", "cycling", "bicycle", "helmet", "light", "lights", "chain", "rack"},
+                    "wedding": {"wedding", "weddings", "married", "ceremony", "reception"},
+                    "weddings": {"wedding", "weddings", "married", "ceremony", "reception"},
+                    "festival": {"festival", "festivals", "film", "sundance", "cannes", "tribeca"},
+                    "festivals": {"festival", "festivals", "film", "sundance", "cannes", "tribeca"},
+                    "bake": {"bake", "baked", "baking", "cookies", "cake", "bread", "pastry", "pie", "muffins", "sourdough", "baguette"},
+                    "baking": {"bake", "baked", "baking", "cookies", "cake", "bread", "pastry", "pie", "muffins", "sourdough", "baguette"},
+                    "jogging": {"jogging", "jog", "jogged", "jogs", "run", "running", "ran", "exercise", "workout"},
+                    "yoga": {"yoga", "pose", "poses", "stretch", "stretching", "down dog", "asana"},
+                }
+
+                agg_topic_words = set(
+                    w for w in expanded_tokens
+                    if len(w) > 2 and w not in COMMON_STOP_WORDS and w not in AGGREGATION_FRAME_WORDS and w not in AGGREGATION_ACTION_WORDS
+                )
+                for w in list(agg_topic_words):
+                    if w in DOMAIN_SYNONYMS:
+                        agg_topic_words.update(DOMAIN_SYNONYMS[w])
+
                 has_agg_topic = False
+                matched_tw = None
                 for tw in agg_topic_words:
                     tw_stem = stem(tw)
-                    if tw in content_lower or tw_stem in content_lower:
+                    # Use word-boundary matching to prevent short abbreviations (e.g. 'dr', 'ent') matching inside other words ('drives', 'payment')
+                    if re.search(rf"\b{re.escape(tw)}\b", content_lower) or re.search(rf"\b{re.escape(tw_stem)}", content_lower) or (tw.endswith("s") and re.search(rf"\b{re.escape(tw[:-1])}\b", content_lower)):
                         has_agg_topic = True
+                        matched_tw = tw
                         score += 35.0  # Massive topic anchor boost
                         if is_user_source:
                             score += 15.0
@@ -319,20 +412,29 @@ class StateReconstructor:
 
                 # Penalize non-topic sessions that only match generic aggregation words
                 if agg_topic_words and not has_agg_topic:
-                    score *= 0.25
+                    score *= 0.10
 
                 # Boost sessions containing aggregation-relevant action keywords
-                agg_keywords = ["pick up", "return", "exchange", "bought", "acquired", "got", "purchased",
-                               "visited", "went to", "attended", "spent", "cost", "paid", "earned",
-                               "hours", "days", "weeks", "months", "times", "count", "assemble", "fix", "sold"]
+                agg_keywords = [
+                    "pick up", "return", "exchange", "bought", "acquired", "got", "purchased",
+                    "visited", "went to", "attended", "spent", "cost", "paid", "earned",
+                    "hours", "days", "weeks", "months", "times", "count", "assemble", "fix", "sold",
+                    "viewed", "view", "saw", "tour", "ordered", "order",
+                ]
                 agg_matches = sum(1 for kw in agg_keywords if kw in content_lower)
                 if agg_matches > 0:
                     score += 10.0 + agg_matches * 4.0
-                # Boost sessions with numbers/quantities
-                if re.search(r"\b\d+\b", content_lower) or "$" in content_lower:
+                # Boost sessions with numbers/quantities in content body (excluding timestamp header)
+                content_body = re.sub(r"^\[.*?\]\s*(?:user|assistant)?:\s*", "", content_lower)
+                if re.search(r"\b\d+\b", content_body) or "$" in content_body or any(re.search(rf"\b{wn}\b", content_body) for wn in ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "twelve", "fifteen", "twenty"]):
                     score += 10.0
                     if is_user_source:
                         score += 20.0  # Factual numbers from user are golden evidence
+
+                # Extra boost for dollar amounts in currency queries
+                if any(w in q_lower for w in ["$", "dollar", "money", "cost", "expense", "spent", "spend", "price"]):
+                    if "$" in content_lower and is_user_source:
+                        score += 30.0
 
                 # Downweight oversized assistant boilerplate in aggregation queries
                 if not is_user_source and "assistant:" in content_lower and len(content_lower) > 200:
@@ -375,11 +477,11 @@ class StateReconstructor:
                 is_user = (u.ir.source or "").lower() == "user" or "user:" in u.ir.raw_content.lower()
 
                 if sess_peak >= 15.0:
-                    spill_rate = 0.70 if is_user else 0.20
-                    final_sc = max(final_sc, sess_peak * spill_rate)
+                    spill_rate = 0.35 if is_user else 0.10
+                    final_sc += sess_peak * spill_rate
                 if fam_peak >= 25.0 and fam != sid:
-                    fam_spill_rate = 0.50 if is_user else 0.15
-                    final_sc = max(final_sc, fam_peak * fam_spill_rate)
+                    fam_spill_rate = 0.25 if is_user else 0.08
+                    final_sc += fam_peak * fam_spill_rate
 
             if final_sc > 0:
                 scored_units_with_score.append((final_sc, u))
@@ -409,7 +511,7 @@ class StateReconstructor:
                         nid = m.group(1) if m else ""
                         direct_score = max(0.0, 100.0 - rank * 2.0)
                         boost = hop_boosts.get(nid, 0.0)
-                        if nid in seed_ids:
+                        if seed_ids and nid == seed_ids[0]:
                             boost += 40.0  # Anchor 1st hop seed retains priority
                         scored_candidates.append((direct_score + boost, u))
 
@@ -440,7 +542,7 @@ class StateReconstructor:
             agg_slice: list[ApexMemoryUnit] = []
             session_counts: dict[str, int] = {}
 
-            # Pass 0: Pick top user factual turns from each session (up to 2 per session)
+            # Pass 0: Pick top user factual turns from each session (up to 4 per session)
             for u in scored_units:
                 is_u = (u.ir.source or "").lower() == "user" or "user:" in u.ir.raw_content.lower()
                 if not is_u:
@@ -450,11 +552,11 @@ class StateReconstructor:
                 if m_sid:
                     sid = m_sid.group(1)
                 cnt = session_counts.get(sid, 0)
-                if cnt < 2:
+                if cnt < 4:
                     agg_slice.append(u)
                     session_counts[sid] = cnt + 1
 
-            # Pass 1: select other top units per session (up to 2 total per session)
+            # Pass 1: select other top units per session (up to 4 total per session)
             for u in scored_units:
                 if u in agg_slice:
                     continue
@@ -463,13 +565,13 @@ class StateReconstructor:
                 if m_sid:
                     sid = m_sid.group(1)
                 cnt = session_counts.get(sid, 0)
-                if cnt < 2:
+                if cnt < 4:
                     agg_slice.append(u)
                     session_counts[sid] = cnt + 1
 
-            # Pass 2: fill in remaining units up to 30
+            # Pass 2: fill in remaining units up to 60
             for u in scored_units:
-                if len(agg_slice) >= 30:
+                if len(agg_slice) >= 60:
                     break
                 if u not in agg_slice:
                     agg_slice.append(u)

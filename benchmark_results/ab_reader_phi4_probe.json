@@ -1,0 +1,26 @@
+[
+ {
+  "model": "phi4-mini:latest",
+  "n": 12,
+  "totals": {
+   "ALL": [
+    9,
+    12
+   ],
+   "temporal": [
+    5,
+    7
+   ],
+   "open-domain": [
+    1,
+    1
+   ],
+   "multi-hop": [
+    3,
+    4
+   ]
+  },
+  "oracle": 91.66666666666666,
+  "sec": 52.01760940000531
+ }
+]

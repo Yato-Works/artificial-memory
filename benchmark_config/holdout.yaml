@@ -1,0 +1,21 @@
+# LoCoMo Holdout Configuration
+# Conversations excluded from development/failure mining
+# These are used ONLY for final independent evaluation
+
+holdout:
+  conversations: [3, 7]
+  description: "Fixed holdout set - never used for failure analysis or targeted fixes"
+
+development:
+  conversations: [0, 1, 2, 4, 5, 6, 8, 9]
+  description: "Development set - used for failure mining, iterative improvement"
+
+notes: |
+  Holdout conversations are completely isolated from the development loop:
+  - Not included in --failed re-runs
+  - Not analyzed by failure_miner.py
+  - Not targeted by individual fixes
+  - Only evaluated at major milestones (e.g., after each significant improvement batch)
+  
+  This prevents overfitting to specific conversation patterns and ensures
+  reported improvements generalize beyond the development set.

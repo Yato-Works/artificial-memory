@@ -424,7 +424,8 @@ class SQLiteMemoryStore:
             params.append(topic_id)
         if status is not None:
             query += " AND status = ?"
-            params.append(status.value)
+            status_val = status.value if hasattr(status, "value") else status
+            params.append(status_val)
         query += " ORDER BY started_at DESC"
         rows = self._conn.execute(query, params).fetchall()
         return [self._row_to_conversation(r) for r in rows]
@@ -529,7 +530,8 @@ class SQLiteMemoryStore:
             params.append(resolution.value)
         if status is not None:
             query += " AND status = ?"
-            params.append(status.value)
+            status_val = status.value if hasattr(status, "value") else status
+            params.append(status_val)
         if is_current is not None:
             query += " AND is_current = ?"
             params.append(int(is_current))

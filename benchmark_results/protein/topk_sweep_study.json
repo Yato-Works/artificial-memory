@@ -1,0 +1,56 @@
+{
+  "Top-4": {
+    "k": 4,
+    "name": "Top-4 Evidence",
+    "accuracy": 32.5,
+    "evidence_recall": 50.0,
+    "mean_tokens": 667.95,
+    "latency_ms": 589.5557224999948,
+    "elapsed_seconds": 23.58222889999979
+  },
+  "Top-8": {
+    "k": 8,
+    "name": "Top-8 Evidence",
+    "accuracy": 40.0,
+    "evidence_recall": 60.0,
+    "mean_tokens": 1338.225,
+    "latency_ms": 932.2164549999911,
+    "elapsed_seconds": 37.288658199999645
+  },
+  "Top-10": {
+    "k": 10,
+    "name": "Top-10 Evidence",
+    "accuracy": 47.5,
+    "evidence_recall": 62.5,
+    "mean_tokens": 1624.25,
+    "latency_ms": 1354.7743699999955,
+    "elapsed_seconds": 54.19097479999982
+  },
+  "Top-12": {
+    "k": 12,
+    "name": "Top-12 Evidence",
+    "accuracy": 45.0,
+    "evidence_recall": 65.0,
+    "mean_tokens": 1932.15,
+    "latency_ms": 1589.3031024999914,
+    "elapsed_seconds": 63.572124099999655
+  },
+  "Top-16": {
+    "k": 16,
+    "name": "Top-16 Evidence",
+    "accuracy": 45.0,
+    "evidence_recall": 70.0,
+    "mean_tokens": 2494.225,
+    "latency_ms": 2014.9325900000008,
+    "elapsed_seconds": 80.59730360000003
+  },
+  "Top-20": {
+    "k": 20,
+    "name": "Top-20 Evidence",
+    "accuracy": 45.0,
+    "evidence_recall": 70.0,
+    "mean_tokens": 3045.4,
+    "latency_ms": 2101.0747150000043,
+    "elapsed_seconds": 84.04298860000017
+  }
+}

@@ -1,0 +1,58 @@
+================================================================================
+      LOCOMO EXPERIMENT RUNNER (Phase 0 Measurement Harness)
+================================================================================
+Mode: FULL (frozen LLM) | Convs: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] | Out: benchmark_results\locomo10_runs\directives_v3
+Frozen protocol: scorer / dataset / LLM config untouched.
+================================================================================
+
+===========================================================================
+--- STARTING CONVERSATION 0 (FULL (frozen LLM)) ---
+===========================================================================
+Sample ID: conv-26
+Ingested 419 turns into 419 StructuredIR records in 0.25s.
+Evaluating 199 questions...
+  [025/199] Acc:  88.0% | Ora:  92.0% | Tok/Q: 1664.0 | Q: What does Melanie do to destress
+  [050/199] Acc:  66.0% | Ora:  86.0% | Tok/Q: 1597.9 | Q: When did Caroline and Melanie go
+  [075/199] Acc:  70.7% | Ora:  82.7% | Tok/Q: 1593.9 | Q: When did Melanie's family go on 
+  [100/199] Acc:  78.0% | Ora:  85.0% | Tok/Q: 1601.1 | Q: What motivated Caroline to pursu
+  [125/199] Acc:  78.4% | Ora:  84.8% | Tok/Q: 1563.3 | Q: What pets does Melanie have?
+  [150/199] Acc:  80.7% | Ora:  84.0% | Tok/Q: 1557.6 | Q: What do Melanie's family give he
+  [175/199] Acc:  70.3% | Ora:  78.9% | Tok/Q: 1540.8 | Q: How often does Caroline go to th
+  [199/199] Acc:  61.8% | Ora:  74.9% | Tok/Q: 1535.3 | Q: What does Caroline love most abo
+
+>> CONV 0 COMPLETED in 326.6s:
+   * Oracle Recall:  74.9% (149/199)
+   * Accuracy:       61.8% (123/199)
+   * Mean Latency:   1640.9 ms
+   * Mean Tokens/Q:  1535.3 tok
+   * Saved to:       benchmark_results\locomo10_runs\directives_v3\conv_0_results.json
+
+===========================================================================
+--- STARTING CONVERSATION 1 (FULL (frozen LLM)) ---
+===========================================================================
+Sample ID: conv-30
+Ingested 369 turns into 369 StructuredIR records in 0.33s.
+Evaluating 105 questions...
+  [025/105] Acc:  68.0% | Ora:  84.0% | Tok/Q: 1469.4 | Q: Which events has Jon participate
+  [050/105] Acc:  66.0% | Ora:  80.0% | Tok/Q: 1457.8 | Q: What did Gina want her customers
+  [075/105] Acc:  69.3% | Ora:  74.7% | Tok/Q: 1442.8 | Q: What does Jon plan to do at the 
+  [100/105] Acc:  59.0% | Ora:  68.0% | Tok/Q: 1426.5 | Q: What book is Gina currently read
+  [105/105] Acc:  56.2% | Ora:  65.7% | Tok/Q: 1424.7 | Q: What plans does Gina have after 
+
+>> CONV 1 COMPLETED in 159.2s:
+   * Oracle Recall:  65.7% (69/105)
+   * Accuracy:       56.2% (59/105)
+   * Mean Latency:   1516.0 ms
+   * Mean Tokens/Q:  1424.7 tok
+   * Saved to:       benchmark_results\locomo10_runs\directives_v3\conv_1_results.json
+
+===========================================================================
+--- STARTING CONVERSATION 2 (FULL (frozen LLM)) ---
+===========================================================================
+Sample ID: conv-41
+Ingested 663 turns into 663 StructuredIR records in 0.49s.
+Evaluating 193 questions...
+  [025/193] Acc:  68.0% | Ora:  76.0% | Tok/Q: 1446.4 | Q: When did John start boot camp wi
+  [050/193] Acc:  62.0% | Ora:  76.0% | Tok/Q: 1454.7 | Q: What food item did Maria drop of
+  [075/193] Acc:  64.0% | Ora:  80.0% | Tok/Q: 1502.0 | Q: Why did Maria sit with the littl
+  [100/193] Acc:  69.0% | Ora:  81.0% | Tok/Q: 1495.5 | Q: What did John and the veterans d

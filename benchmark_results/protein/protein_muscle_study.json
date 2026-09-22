@@ -1,0 +1,65 @@
+{
+  "P0: Steroid Baseline": {
+    "stage": "P0: Steroid Baseline",
+    "accuracy": 37.5,
+    "evidence_recall": 60.0,
+    "estimated_precision": 30.135610246107483,
+    "mean_tokens": 149.325,
+    "latency_ms": 471.05524750004406,
+    "elapsed_seconds": 18.842209900001762
+  },
+  "P1: + Deduplication": {
+    "stage": "P1: + Deduplication",
+    "accuracy": 47.5,
+    "evidence_recall": 70.0,
+    "estimated_precision": 2.0781996853011906,
+    "mean_tokens": 2526.225,
+    "latency_ms": 1984.49841249967,
+    "elapsed_seconds": 79.3799364999868
+  },
+  "P2: + Entity/Relation Fusion": {
+    "stage": "P2: + Entity/Relation Fusion",
+    "accuracy": 47.5,
+    "evidence_recall": 70.0,
+    "estimated_precision": 2.0781996853011906,
+    "mean_tokens": 2526.225,
+    "latency_ms": 2031.528077499388,
+    "elapsed_seconds": 81.26112309997552
+  },
+  "P3: + Temporal Supersession": {
+    "stage": "P3: + Temporal Supersession",
+    "accuracy": 50.0,
+    "evidence_recall": 67.5,
+    "estimated_precision": 2.5970528259782233,
+    "mean_tokens": 1949.325,
+    "latency_ms": 1602.160030000232,
+    "elapsed_seconds": 64.08640120000928
+  },
+  "P4: + Evidence Ranker": {
+    "stage": "P4: + Evidence Ranker",
+    "accuracy": 62.5,
+    "evidence_recall": 85.0,
+    "estimated_precision": 3.2484904073989145,
+    "mean_tokens": 1962.45,
+    "latency_ms": 1679.2586675001075,
+    "elapsed_seconds": 67.1703467000043
+  },
+  "P5: + Context IR Compression": {
+    "stage": "P5: + Context IR Compression",
+    "accuracy": 32.5,
+    "evidence_recall": 60.0,
+    "estimated_precision": 16.987542468856176,
+    "mean_tokens": 264.9,
+    "latency_ms": 585.1033124999958,
+    "elapsed_seconds": 23.404132499999832
+  },
+  "P6: Full Protein Pipeline": {
+    "stage": "P6: Full Protein Pipeline",
+    "accuracy": 35.0,
+    "evidence_recall": 60.0,
+    "estimated_precision": 16.987542468856176,
+    "mean_tokens": 264.9,
+    "latency_ms": 424.74140749982325,
+    "elapsed_seconds": 16.98965629999293
+  }
+}

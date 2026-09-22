@@ -1,0 +1,531 @@
+{
+  "num_questions": 32,
+  "typology_counts": {
+    "MATCH_EXACT": 9,
+    "VALUE_PARTIAL_OR_MISSING": 1,
+    "PROPERTY_MISMATCH": 0,
+    "NOT_GENERATED": 22
+  },
+  "details": [
+    {
+      "question_id": "conv-26-qa-003",
+      "question": "What did Caroline research?",
+      "gold_state": {
+        "entity": "Caroline",
+        "property": "general",
+        "value": "Adoption agencies"
+      },
+      "generated_state": null,
+      "classification": "NOT_GENERATED",
+      "trigger_decision": {
+        "should_synthesize": false,
+        "reason": "Simple single-turn factual context sufficient"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-004",
+      "question": "What is Caroline's identity?",
+      "gold_state": {
+        "entity": "Caroline",
+        "property": "general",
+        "value": "Transgender woman"
+      },
+      "generated_state": null,
+      "classification": "NOT_GENERATED",
+      "trigger_decision": {
+        "should_synthesize": false,
+        "reason": "Simple single-turn factual context sufficient"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-007",
+      "question": "What is Caroline's relationship status?",
+      "gold_state": {
+        "entity": "Caroline",
+        "property": "relationship status",
+        "value": "Single"
+      },
+      "generated_state": {
+        "entity": "caroline",
+        "property": "relationship status",
+        "value": "single"
+      },
+      "classification": "MATCH_EXACT",
+      "trigger_decision": {
+        "should_synthesize": true,
+        "reason": "Matched composition pattern: \\brelationship\\s+status\\b"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-011",
+      "question": "Where did Caroline move from 4 years ago?",
+      "gold_state": {
+        "entity": "Caroline",
+        "property": "home country",
+        "value": "Sweden"
+      },
+      "generated_state": {
+        "entity": "caroline",
+        "property": "home country",
+        "value": "Sweden"
+      },
+      "classification": "MATCH_EXACT",
+      "trigger_decision": {
+        "should_synthesize": true,
+        "reason": "Matched composition pattern: \\b(?:move|moved|moving)\\s+from\\b"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-013",
+      "question": "What career path has Caroline decided to persue?",
+      "gold_state": {
+        "entity": "Caroline",
+        "property": "career path",
+        "value": "counseling or mental health for Transgender people"
+      },
+      "generated_state": {
+        "entity": "caroline",
+        "property": "career path",
+        "value": "counseling or mental health, counseling or mental health for transgender people"
+      },
+      "classification": "MATCH_EXACT",
+      "trigger_decision": {
+        "should_synthesize": true,
+        "reason": "Matched composition pattern: \\bcareer\\s+path\\b"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-015",
+      "question": "What activities does Melanie partake in?",
+      "gold_state": {
+        "entity": "Melanie",
+        "property": "activities",
+        "value": "pottery, camping, painting, swimming"
+      },
+      "generated_state": {
+        "entity": "melanie",
+        "property": "activities",
+        "value": "painting, swimming, camping, pottery, hiking"
+      },
+      "classification": "MATCH_EXACT",
+      "trigger_decision": {
+        "should_synthesize": true,
+        "reason": "Matched composition pattern: \\b(?:activities|hobbies)\\b"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-018",
+      "question": "Where has Melanie camped?",
+      "gold_state": {
+        "entity": "Melanie",
+        "property": "camping locations",
+        "value": "beach, mountains, forest"
+      },
+      "generated_state": null,
+      "classification": "NOT_GENERATED",
+      "trigger_decision": {
+        "should_synthesize": false,
+        "reason": "Simple single-turn factual context sufficient"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-019",
+      "question": "What do Melanie's kids like?",
+      "gold_state": {
+        "entity": "Melanie",
+        "property": "children count",
+        "value": "dinosaurs, nature"
+      },
+      "generated_state": null,
+      "classification": "NOT_GENERATED",
+      "trigger_decision": {
+        "should_synthesize": false,
+        "reason": "Simple single-turn factual context sufficient"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-023",
+      "question": "What books has Melanie read?",
+      "gold_state": {
+        "entity": "Melanie",
+        "property": "books read",
+        "value": "\"Nothing is Impossible\", \"Charlotte's Web\""
+      },
+      "generated_state": null,
+      "classification": "NOT_GENERATED",
+      "trigger_decision": {
+        "should_synthesize": false,
+        "reason": "Simple single-turn factual context sufficient"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-024",
+      "question": "What does Melanie do to destress?",
+      "gold_state": {
+        "entity": "Melanie",
+        "property": "destress activities",
+        "value": "Running, pottery"
+      },
+      "generated_state": null,
+      "classification": "NOT_GENERATED",
+      "trigger_decision": {
+        "should_synthesize": false,
+        "reason": "Simple single-turn factual context sufficient"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-032",
+      "question": "What LGBTQ+ events has Caroline participated in?",
+      "gold_state": {
+        "entity": "Caroline",
+        "property": "events attended",
+        "value": "Pride parade, school speech, support group"
+      },
+      "generated_state": null,
+      "classification": "NOT_GENERATED",
+      "trigger_decision": {
+        "should_synthesize": false,
+        "reason": "Simple single-turn factual context sufficient"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-034",
+      "question": "What events has Caroline participated in to help children?",
+      "gold_state": {
+        "entity": "Caroline",
+        "property": "children count",
+        "value": "Mentoring program, school speech"
+      },
+      "generated_state": null,
+      "classification": "NOT_GENERATED",
+      "trigger_decision": {
+        "should_synthesize": true,
+        "reason": "Matched composition pattern: \\bwhat\\s+events\\b"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-037",
+      "question": "What did Melanie paint recently?",
+      "gold_state": {
+        "entity": "Melanie",
+        "property": "paintings",
+        "value": "sunset"
+      },
+      "generated_state": null,
+      "classification": "NOT_GENERATED",
+      "trigger_decision": {
+        "should_synthesize": false,
+        "reason": "Simple single-turn factual context sufficient"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-038",
+      "question": "What activities has Melanie done with her family?",
+      "gold_state": {
+        "entity": "Melanie",
+        "property": "activities",
+        "value": "Pottery, painting, camping, museum, swimming, hiking"
+      },
+      "generated_state": {
+        "entity": "melanie",
+        "property": "activities",
+        "value": "painting, swimming, camping, pottery, hiking"
+      },
+      "classification": "MATCH_EXACT",
+      "trigger_decision": {
+        "should_synthesize": true,
+        "reason": "Matched composition pattern: \\b(?:activities|hobbies)\\b"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-039",
+      "question": "In what ways is Caroline participating in the LGBTQ community?",
+      "gold_state": {
+        "entity": "Caroline",
+        "property": "events attended",
+        "value": "Joining activist group, going to pride parades, participating in an art show, mentoring program"
+      },
+      "generated_state": null,
+      "classification": "NOT_GENERATED",
+      "trigger_decision": {
+        "should_synthesize": false,
+        "reason": "Simple single-turn factual context sufficient"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-040",
+      "question": "How many times has Melanie gone to the beach in 2023?",
+      "gold_state": {
+        "entity": "Melanie",
+        "property": "beach visits count",
+        "value": "2"
+      },
+      "generated_state": {
+        "entity": "melanie",
+        "property": "beach visits count",
+        "value": "2"
+      },
+      "classification": "VALUE_PARTIAL_OR_MISSING",
+      "trigger_decision": {
+        "should_synthesize": true,
+        "reason": "Matched composition pattern: \\bhow\\s+many\\s+(?:children|kids|times)\\b"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-043",
+      "question": "What kind of art does Caroline make?",
+      "gold_state": {
+        "entity": "Caroline",
+        "property": "general",
+        "value": "abstract art"
+      },
+      "generated_state": null,
+      "classification": "NOT_GENERATED",
+      "trigger_decision": {
+        "should_synthesize": false,
+        "reason": "Simple single-turn factual context sufficient"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-047",
+      "question": "Who supports Caroline when she has a negative experience?",
+      "gold_state": {
+        "entity": "Caroline",
+        "property": "support network",
+        "value": "Her mentors, family, and friends"
+      },
+      "generated_state": null,
+      "classification": "NOT_GENERATED",
+      "trigger_decision": {
+        "should_synthesize": true,
+        "reason": "Matched composition pattern: \\bwho\\s+supports\\b"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-048",
+      "question": "What types of pottery have Melanie and her kids made?",
+      "gold_state": {
+        "entity": "Melanie",
+        "property": "pottery types",
+        "value": "bowls, cup"
+      },
+      "generated_state": {
+        "entity": "melanie",
+        "property": "pottery types",
+        "value": "bowls, cups"
+      },
+      "classification": "MATCH_EXACT",
+      "trigger_decision": {
+        "should_synthesize": true,
+        "reason": "Matched composition pattern: \\btypes\\s+of\\s+pottery\\b"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-051",
+      "question": "What has Melanie painted?",
+      "gold_state": {
+        "entity": "Melanie",
+        "property": "paintings",
+        "value": "Horse, sunset, sunrise"
+      },
+      "generated_state": {
+        "entity": "melanie",
+        "property": "paintings",
+        "value": "sunrise, horse, sunset"
+      },
+      "classification": "MATCH_EXACT",
+      "trigger_decision": {
+        "should_synthesize": true,
+        "reason": "Matched composition pattern: \\bwhat\\s+has\\s+\\w+\\s+painted\\b"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-052",
+      "question": "What are Melanie's pets' names?",
+      "gold_state": {
+        "entity": "Melanie",
+        "property": "pets names",
+        "value": "Oliver, Luna, Bailey"
+      },
+      "generated_state": null,
+      "classification": "NOT_GENERATED",
+      "trigger_decision": {
+        "should_synthesize": false,
+        "reason": "Simple single-turn factual context sufficient"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-055",
+      "question": "What subject have Caroline and Melanie both painted?",
+      "gold_state": {
+        "entity": "Caroline",
+        "property": "paintings",
+        "value": "Sunsets"
+      },
+      "generated_state": null,
+      "classification": "NOT_GENERATED",
+      "trigger_decision": {
+        "should_synthesize": true,
+        "reason": "Multi-session evidence requiring cross-turn aggregation"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-056",
+      "question": "What symbols are important to Caroline?",
+      "gold_state": {
+        "entity": "Caroline",
+        "property": "symbols",
+        "value": "Rainbow flag, transgender symbol"
+      },
+      "generated_state": {
+        "entity": "caroline",
+        "property": "symbols",
+        "value": "rainbow flag"
+      },
+      "classification": "MATCH_EXACT",
+      "trigger_decision": {
+        "should_synthesize": true,
+        "reason": "Matched composition pattern: \\bwhat\\s+symbols\\b"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-060",
+      "question": "What instruments does Melanie play?",
+      "gold_state": {
+        "entity": "Melanie",
+        "property": "instruments played",
+        "value": "clarinet and violin"
+      },
+      "generated_state": null,
+      "classification": "NOT_GENERATED",
+      "trigger_decision": {
+        "should_synthesize": false,
+        "reason": "Simple single-turn factual context sufficient"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-061",
+      "question": "What musical artists/bands has Melanie seen?",
+      "gold_state": {
+        "entity": "Melanie",
+        "property": "musical artists",
+        "value": "Summer Sounds, Matt Patterson"
+      },
+      "generated_state": null,
+      "classification": "NOT_GENERATED",
+      "trigger_decision": {
+        "should_synthesize": true,
+        "reason": "Multi-session evidence requiring cross-turn aggregation"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-065",
+      "question": "What are some changes Caroline has faced during her transition journey?",
+      "gold_state": {
+        "entity": "Caroline",
+        "property": "transition changes",
+        "value": "Changes to her body, losing unsupportive friends"
+      },
+      "generated_state": null,
+      "classification": "NOT_GENERATED",
+      "trigger_decision": {
+        "should_synthesize": false,
+        "reason": "Simple single-turn factual context sufficient"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-066",
+      "question": "What does Melanie do with her family on hikes?",
+      "gold_state": {
+        "entity": "Melanie",
+        "property": "hike activities",
+        "value": "Roast marshmallows, tell stories"
+      },
+      "generated_state": null,
+      "classification": "NOT_GENERATED",
+      "trigger_decision": {
+        "should_synthesize": false,
+        "reason": "Simple single-turn factual context sufficient"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-070",
+      "question": "What transgender-specific events has Caroline attended?",
+      "gold_state": {
+        "entity": "Caroline",
+        "property": "events attended",
+        "value": "Poetry reading, conference"
+      },
+      "generated_state": null,
+      "classification": "NOT_GENERATED",
+      "trigger_decision": {
+        "should_synthesize": false,
+        "reason": "Simple single-turn factual context sufficient"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-071",
+      "question": "What book did Melanie read from Caroline's suggestion?",
+      "gold_state": {
+        "entity": "Caroline",
+        "property": "books read",
+        "value": "\"Becoming Nicole\""
+      },
+      "generated_state": null,
+      "classification": "NOT_GENERATED",
+      "trigger_decision": {
+        "should_synthesize": false,
+        "reason": "Simple single-turn factual context sufficient"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-075",
+      "question": "How many children does Melanie have?",
+      "gold_state": {
+        "entity": "Melanie",
+        "property": "children count",
+        "value": "3"
+      },
+      "generated_state": null,
+      "classification": "NOT_GENERATED",
+      "trigger_decision": {
+        "should_synthesize": true,
+        "reason": "Matched composition pattern: \\bhow\\s+many\\s+(?:children|kids|times)\\b"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-076",
+      "question": "When did Melanie go on a hike after the roadtrip?",
+      "gold_state": {
+        "entity": "Melanie",
+        "property": "hike activities",
+        "value": "19 October 2023"
+      },
+      "generated_state": null,
+      "classification": "NOT_GENERATED",
+      "trigger_decision": {
+        "should_synthesize": false,
+        "reason": "Simple single-turn factual context sufficient"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-078",
+      "question": "What items has Melanie bought?",
+      "gold_state": {
+        "entity": "Melanie",
+        "property": "items bought",
+        "value": "Figurines, shoes"
+      },
+      "generated_state": {
+        "entity": "melanie",
+        "property": "items bought",
+        "value": "shoes, figurines"
+      },
+      "classification": "MATCH_EXACT",
+      "trigger_decision": {
+        "should_synthesize": true,
+        "reason": "Matched composition pattern: \\bwhat\\s+(?:items|things)\\s+has\\s+\\w+\\s+bought\\b"
+      }
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+ "tag": "smoke",
+ "model": "qwen2.5:7b-instruct-q4_K_M",
+ "num_ctx": 8192,
+ "fixes": {
+  "global_ef": true,
+  "fix_ss_user": true,
+  "fix_multi": false,
+  "fix_temporal": false,
+  "fix_ku": false,
+  "fix_ss_assist": false
+ },
+ "n": 3,
+ "accuracy": 1.0,
+ "refusals": 0,
+ "flips_fixed": [
+  "51a45a95"
+ ],
+ "flips_broken": [],
+ "results": [
+  {
+   "qid": "e47becba",
+   "qtype": "single-session-user",
+   "question": "What degree did I graduate with?",
+   "gt": "Business Administration",
+   "predicted_answer": "Business Administration",
+   "is_correct": true,
+   "tokens_used": 1680
+  },
+  {
+   "qid": "118b2229",
+   "qtype": "single-session-user",
+   "question": "How long is my daily commute to work?",
+   "gt": "45 minutes each way",
+   "predicted_answer": "45 minutes",
+   "is_correct": true,
+   "tokens_used": 3271
+  },
+  {
+   "qid": "51a45a95",
+   "qtype": "single-session-user",
+   "question": "Where did I redeem a $5 coupon on coffee creamer?",
+   "gt": "Target",
+   "predicted_answer": "You redeemed a $5 coupon on coffee creamer at Target last Sunday.",
+   "is_correct": true,
+   "tokens_used": 3181
+  }
+ ]
+}

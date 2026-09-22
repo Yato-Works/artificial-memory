@@ -1,0 +1,7 @@
+cache rows: 500  selected: 500
+fixes: global_ef=True ss_user=True multi=True temporal=True ku=False ss_assist=False
+reader: qwen2.5:7b-instruct-q4_K_M num_ctx=8192
+
+  25/500  acc= 88.0%  (129s)
+  50/500  acc= 88.0%  (267s)
+  75/500  acc= 85.3%  (359s)

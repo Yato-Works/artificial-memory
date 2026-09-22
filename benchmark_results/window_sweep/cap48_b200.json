@@ -1,0 +1,877 @@
+[
+  {
+    "conv_idx": 0,
+    "n": 199,
+    "per_cat": {
+      "temporal": {
+        "n": 37,
+        "CORPUS": 37,
+        "WIDE_POOL": 33,
+        "EXP_POOL": 33,
+        "CAND_PRE": 37,
+        "CAND_POST": 37,
+        "CONTEXT": 35
+      },
+      "open-domain": {
+        "n": 13,
+        "CORPUS": 13,
+        "WIDE_POOL": 9,
+        "EXP_POOL": 9,
+        "CAND_PRE": 13,
+        "CAND_POST": 13,
+        "CONTEXT": 9
+      },
+      "multi-hop": {
+        "n": 32,
+        "CORPUS": 32,
+        "WIDE_POOL": 26,
+        "EXP_POOL": 28,
+        "CAND_PRE": 32,
+        "CAND_POST": 32,
+        "CONTEXT": 28
+      },
+      "single-hop": {
+        "n": 70,
+        "CORPUS": 70,
+        "WIDE_POOL": 62,
+        "EXP_POOL": 63,
+        "CAND_PRE": 67,
+        "CAND_POST": 70,
+        "CONTEXT": 60
+      },
+      "adversarial": {
+        "n": 47,
+        "CORPUS": 47,
+        "WIDE_POOL": 42,
+        "EXP_POOL": 43,
+        "CAND_PRE": 47,
+        "CAND_POST": 47,
+        "CONTEXT": 26
+      }
+    },
+    "rank_hist": {
+      "0-5": 110,
+      "6-19": 32,
+      "20-49": 14,
+      "50-+": 41
+    },
+    "reasons": {
+      "OK": 156,
+      "WINDOW_TOO_SMALL": 41
+    },
+    "reasons_by_cat": {
+      "temporal": {
+        "OK": 35,
+        "WINDOW_TOO_SMALL": 2
+      },
+      "open-domain": {
+        "OK": 7,
+        "WINDOW_TOO_SMALL": 4
+      },
+      "multi-hop": {
+        "OK": 28,
+        "WINDOW_TOO_SMALL": 4
+      },
+      "single-hop": {
+        "OK": 60,
+        "WINDOW_TOO_SMALL": 10
+      },
+      "adversarial": {
+        "OK": 26,
+        "WINDOW_TOO_SMALL": 21
+      }
+    },
+    "oracle_share": 0.7939698492462312,
+    "mean_candidates": 401.8274111675127,
+    "mean_tokens": 2900.3096446700506
+  },
+  {
+    "conv_idx": 1,
+    "n": 105,
+    "per_cat": {
+      "temporal": {
+        "n": 26,
+        "CORPUS": 26,
+        "WIDE_POOL": 24,
+        "EXP_POOL": 25,
+        "CAND_PRE": 26,
+        "CAND_POST": 26,
+        "CONTEXT": 24
+      },
+      "single-hop": {
+        "n": 44,
+        "CORPUS": 44,
+        "WIDE_POOL": 34,
+        "EXP_POOL": 35,
+        "CAND_PRE": 44,
+        "CAND_POST": 44,
+        "CONTEXT": 33
+      },
+      "multi-hop": {
+        "n": 11,
+        "CORPUS": 11,
+        "WIDE_POOL": 11,
+        "EXP_POOL": 11,
+        "CAND_PRE": 11,
+        "CAND_POST": 11,
+        "CONTEXT": 10
+      },
+      "adversarial": {
+        "n": 24,
+        "CORPUS": 24,
+        "WIDE_POOL": 23,
+        "EXP_POOL": 23,
+        "CAND_PRE": 24,
+        "CAND_POST": 24,
+        "CONTEXT": 11
+      }
+    },
+    "rank_hist": {
+      "0-5": 60,
+      "20-49": 12,
+      "50-+": 25,
+      "6-19": 8
+    },
+    "reasons": {
+      "OK": 78,
+      "WINDOW_TOO_SMALL": 27
+    },
+    "reasons_by_cat": {
+      "temporal": {
+        "OK": 24,
+        "WINDOW_TOO_SMALL": 2
+      },
+      "single-hop": {
+        "OK": 33,
+        "WINDOW_TOO_SMALL": 11
+      },
+      "multi-hop": {
+        "OK": 10,
+        "WINDOW_TOO_SMALL": 1
+      },
+      "adversarial": {
+        "OK": 11,
+        "WINDOW_TOO_SMALL": 13
+      }
+    },
+    "oracle_share": 0.7428571428571429,
+    "mean_candidates": 363.3047619047619,
+    "mean_tokens": 2742.9904761904763
+  },
+  {
+    "conv_idx": 2,
+    "n": 193,
+    "per_cat": {
+      "temporal": {
+        "n": 27,
+        "CORPUS": 27,
+        "WIDE_POOL": 26,
+        "EXP_POOL": 27,
+        "CAND_PRE": 27,
+        "CAND_POST": 27,
+        "CONTEXT": 25
+      },
+      "multi-hop": {
+        "n": 31,
+        "CORPUS": 31,
+        "WIDE_POOL": 28,
+        "EXP_POOL": 29,
+        "CAND_PRE": 31,
+        "CAND_POST": 31,
+        "CONTEXT": 29
+      },
+      "open-domain": {
+        "n": 8,
+        "CORPUS": 8,
+        "WIDE_POOL": 4,
+        "EXP_POOL": 4,
+        "CAND_PRE": 8,
+        "CAND_POST": 8,
+        "CONTEXT": 4
+      },
+      "single-hop": {
+        "n": 86,
+        "CORPUS": 86,
+        "WIDE_POOL": 73,
+        "EXP_POOL": 76,
+        "CAND_PRE": 86,
+        "CAND_POST": 86,
+        "CONTEXT": 75
+      },
+      "adversarial": {
+        "n": 41,
+        "CORPUS": 41,
+        "WIDE_POOL": 33,
+        "EXP_POOL": 35,
+        "CAND_PRE": 41,
+        "CAND_POST": 41,
+        "CONTEXT": 29
+      }
+    },
+    "rank_hist": {
+      "0-5": 125,
+      "6-19": 25,
+      "50-+": 31,
+      "20-49": 12
+    },
+    "reasons": {
+      "OK": 162,
+      "WINDOW_TOO_SMALL": 31
+    },
+    "reasons_by_cat": {
+      "temporal": {
+        "OK": 25,
+        "WINDOW_TOO_SMALL": 2
+      },
+      "multi-hop": {
+        "OK": 29,
+        "WINDOW_TOO_SMALL": 2
+      },
+      "open-domain": {
+        "WINDOW_TOO_SMALL": 4,
+        "OK": 4
+      },
+      "single-hop": {
+        "OK": 75,
+        "WINDOW_TOO_SMALL": 11
+      },
+      "adversarial": {
+        "OK": 29,
+        "WINDOW_TOO_SMALL": 12
+      }
+    },
+    "oracle_share": 0.8393782383419689,
+    "mean_candidates": 650.5388601036269,
+    "mean_tokens": 2892.880829015544
+  },
+  {
+    "conv_idx": 3,
+    "n": 260,
+    "per_cat": {
+      "open-domain": {
+        "n": 11,
+        "CORPUS": 11,
+        "WIDE_POOL": 6,
+        "EXP_POOL": 7,
+        "CAND_PRE": 11,
+        "CAND_POST": 11,
+        "CONTEXT": 6
+      },
+      "multi-hop": {
+        "n": 37,
+        "CORPUS": 37,
+        "WIDE_POOL": 32,
+        "EXP_POOL": 33,
+        "CAND_PRE": 37,
+        "CAND_POST": 37,
+        "CONTEXT": 32
+      },
+      "temporal": {
+        "n": 40,
+        "CORPUS": 40,
+        "WIDE_POOL": 35,
+        "EXP_POOL": 36,
+        "CAND_PRE": 39,
+        "CAND_POST": 40,
+        "CONTEXT": 34
+      },
+      "single-hop": {
+        "n": 111,
+        "CORPUS": 111,
+        "WIDE_POOL": 93,
+        "EXP_POOL": 95,
+        "CAND_PRE": 109,
+        "CAND_POST": 111,
+        "CONTEXT": 96
+      },
+      "adversarial": {
+        "n": 61,
+        "CORPUS": 61,
+        "WIDE_POOL": 53,
+        "EXP_POOL": 58,
+        "CAND_PRE": 59,
+        "CAND_POST": 61,
+        "CONTEXT": 43
+      }
+    },
+    "rank_hist": {
+      "50-+": 48,
+      "0-5": 146,
+      "6-19": 49,
+      "20-49": 17
+    },
+    "reasons": {
+      "WINDOW_TOO_SMALL": 49,
+      "OK": 211
+    },
+    "reasons_by_cat": {
+      "open-domain": {
+        "WINDOW_TOO_SMALL": 5,
+        "OK": 6
+      },
+      "multi-hop": {
+        "OK": 32,
+        "WINDOW_TOO_SMALL": 5
+      },
+      "temporal": {
+        "OK": 34,
+        "WINDOW_TOO_SMALL": 6
+      },
+      "single-hop": {
+        "OK": 96,
+        "WINDOW_TOO_SMALL": 15
+      },
+      "adversarial": {
+        "WINDOW_TOO_SMALL": 18,
+        "OK": 43
+      }
+    },
+    "oracle_share": 0.8115384615384615,
+    "mean_candidates": 582.8961538461539,
+    "mean_tokens": 2567.996153846154
+  },
+  {
+    "conv_idx": 4,
+    "n": 242,
+    "per_cat": {
+      "multi-hop": {
+        "n": 31,
+        "CORPUS": 31,
+        "WIDE_POOL": 27,
+        "EXP_POOL": 30,
+        "CAND_PRE": 31,
+        "CAND_POST": 31,
+        "CONTEXT": 30
+      },
+      "open-domain": {
+        "n": 14,
+        "CORPUS": 14,
+        "WIDE_POOL": 14,
+        "EXP_POOL": 14,
+        "CAND_PRE": 14,
+        "CAND_POST": 14,
+        "CONTEXT": 12
+      },
+      "temporal": {
+        "n": 26,
+        "CORPUS": 26,
+        "WIDE_POOL": 25,
+        "EXP_POOL": 25,
+        "CAND_PRE": 26,
+        "CAND_POST": 26,
+        "CONTEXT": 24
+      },
+      "single-hop": {
+        "n": 107,
+        "CORPUS": 107,
+        "WIDE_POOL": 87,
+        "EXP_POOL": 90,
+        "CAND_PRE": 105,
+        "CAND_POST": 107,
+        "CONTEXT": 93
+      },
+      "adversarial": {
+        "n": 64,
+        "CORPUS": 64,
+        "WIDE_POOL": 52,
+        "EXP_POOL": 53,
+        "CAND_PRE": 63,
+        "CAND_POST": 63,
+        "CONTEXT": 45
+      }
+    },
+    "rank_hist": {
+      "0-5": 149,
+      "6-19": 37,
+      "50-+": 38,
+      "20-49": 17,
+      "absent": 1
+    },
+    "reasons": {
+      "OK": 204,
+      "WINDOW_TOO_SMALL": 37,
+      "POOL_DROP": 1
+    },
+    "reasons_by_cat": {
+      "multi-hop": {
+        "OK": 30,
+        "WINDOW_TOO_SMALL": 1
+      },
+      "open-domain": {
+        "WINDOW_TOO_SMALL": 2,
+        "OK": 12
+      },
+      "temporal": {
+        "OK": 24,
+        "WINDOW_TOO_SMALL": 2
+      },
+      "single-hop": {
+        "OK": 93,
+        "WINDOW_TOO_SMALL": 14
+      },
+      "adversarial": {
+        "OK": 45,
+        "WINDOW_TOO_SMALL": 18,
+        "POOL_DROP": 1
+      }
+    },
+    "oracle_share": 0.8429752066115702,
+    "mean_candidates": 646.3429752066115,
+    "mean_tokens": 2901.2314049586776
+  },
+  {
+    "conv_idx": 5,
+    "n": 158,
+    "per_cat": {
+      "temporal": {
+        "n": 24,
+        "CORPUS": 24,
+        "WIDE_POOL": 19,
+        "EXP_POOL": 20,
+        "CAND_PRE": 24,
+        "CAND_POST": 24,
+        "CONTEXT": 21
+      },
+      "multi-hop": {
+        "n": 30,
+        "CORPUS": 30,
+        "WIDE_POOL": 22,
+        "EXP_POOL": 23,
+        "CAND_PRE": 30,
+        "CAND_POST": 30,
+        "CONTEXT": 22
+      },
+      "open-domain": {
+        "n": 7,
+        "CORPUS": 7,
+        "WIDE_POOL": 6,
+        "EXP_POOL": 6,
+        "CAND_PRE": 6,
+        "CAND_POST": 6,
+        "CONTEXT": 1
+      },
+      "single-hop": {
+        "n": 62,
+        "CORPUS": 62,
+        "WIDE_POOL": 53,
+        "EXP_POOL": 53,
+        "CAND_PRE": 62,
+        "CAND_POST": 62,
+        "CONTEXT": 59
+      },
+      "adversarial": {
+        "n": 35,
+        "CORPUS": 35,
+        "WIDE_POOL": 30,
+        "EXP_POOL": 30,
+        "CAND_PRE": 35,
+        "CAND_POST": 35,
+        "CONTEXT": 22
+      }
+    },
+    "rank_hist": {
+      "20-49": 14,
+      "0-5": 93,
+      "6-19": 18,
+      "50-+": 32,
+      "absent": 1
+    },
+    "reasons": {
+      "OK": 125,
+      "WINDOW_TOO_SMALL": 32,
+      "POOL_DROP": 1
+    },
+    "reasons_by_cat": {
+      "temporal": {
+        "OK": 21,
+        "WINDOW_TOO_SMALL": 3
+      },
+      "multi-hop": {
+        "OK": 22,
+        "WINDOW_TOO_SMALL": 8
+      },
+      "open-domain": {
+        "WINDOW_TOO_SMALL": 5,
+        "POOL_DROP": 1,
+        "OK": 1
+      },
+      "single-hop": {
+        "OK": 59,
+        "WINDOW_TOO_SMALL": 3
+      },
+      "adversarial": {
+        "WINDOW_TOO_SMALL": 13,
+        "OK": 22
+      }
+    },
+    "oracle_share": 0.7911392405063291,
+    "mean_candidates": 631.1392405063291,
+    "mean_tokens": 2788.6265822784812
+  },
+  {
+    "conv_idx": 6,
+    "n": 190,
+    "per_cat": {
+      "open-domain": {
+        "n": 13,
+        "CORPUS": 13,
+        "WIDE_POOL": 9,
+        "EXP_POOL": 9,
+        "CAND_PRE": 13,
+        "CAND_POST": 13,
+        "CONTEXT": 9
+      },
+      "temporal": {
+        "n": 34,
+        "CORPUS": 34,
+        "WIDE_POOL": 27,
+        "EXP_POOL": 28,
+        "CAND_PRE": 33,
+        "CAND_POST": 33,
+        "CONTEXT": 27
+      },
+      "multi-hop": {
+        "n": 20,
+        "CORPUS": 20,
+        "WIDE_POOL": 14,
+        "EXP_POOL": 16,
+        "CAND_PRE": 19,
+        "CAND_POST": 19,
+        "CONTEXT": 13
+      },
+      "single-hop": {
+        "n": 83,
+        "CORPUS": 83,
+        "WIDE_POOL": 68,
+        "EXP_POOL": 70,
+        "CAND_PRE": 81,
+        "CAND_POST": 82,
+        "CONTEXT": 69
+      },
+      "adversarial": {
+        "n": 40,
+        "CORPUS": 40,
+        "WIDE_POOL": 33,
+        "EXP_POOL": 34,
+        "CAND_PRE": 39,
+        "CAND_POST": 40,
+        "CONTEXT": 26
+      }
+    },
+    "rank_hist": {
+      "20-49": 8,
+      "0-5": 108,
+      "50-+": 43,
+      "6-19": 28,
+      "absent": 3
+    },
+    "reasons": {
+      "OK": 144,
+      "WINDOW_TOO_SMALL": 43,
+      "POOL_DROP": 2,
+      "POOL_MISS": 1
+    },
+    "reasons_by_cat": {
+      "open-domain": {
+        "OK": 9,
+        "WINDOW_TOO_SMALL": 4
+      },
+      "temporal": {
+        "OK": 27,
+        "WINDOW_TOO_SMALL": 6,
+        "POOL_DROP": 1
+      },
+      "multi-hop": {
+        "WINDOW_TOO_SMALL": 6,
+        "OK": 13,
+        "POOL_DROP": 1
+      },
+      "single-hop": {
+        "OK": 69,
+        "WINDOW_TOO_SMALL": 13,
+        "POOL_MISS": 1
+      },
+      "adversarial": {
+        "OK": 26,
+        "WINDOW_TOO_SMALL": 14
+      }
+    },
+    "oracle_share": 0.7578947368421053,
+    "mean_candidates": 648.9894736842106,
+    "mean_tokens": 2729.8947368421054
+  },
+  {
+    "conv_idx": 7,
+    "n": 239,
+    "per_cat": {
+      "temporal": {
+        "n": 42,
+        "CORPUS": 42,
+        "WIDE_POOL": 37,
+        "EXP_POOL": 39,
+        "CAND_PRE": 40,
+        "CAND_POST": 41,
+        "CONTEXT": 32
+      },
+      "multi-hop": {
+        "n": 21,
+        "CORPUS": 21,
+        "WIDE_POOL": 20,
+        "EXP_POOL": 20,
+        "CAND_PRE": 21,
+        "CAND_POST": 21,
+        "CONTEXT": 19
+      },
+      "open-domain": {
+        "n": 10,
+        "CORPUS": 10,
+        "WIDE_POOL": 7,
+        "EXP_POOL": 9,
+        "CAND_PRE": 10,
+        "CAND_POST": 10,
+        "CONTEXT": 9
+      },
+      "single-hop": {
+        "n": 118,
+        "CORPUS": 118,
+        "WIDE_POOL": 104,
+        "EXP_POOL": 105,
+        "CAND_PRE": 114,
+        "CAND_POST": 116,
+        "CONTEXT": 104
+      },
+      "adversarial": {
+        "n": 48,
+        "CORPUS": 48,
+        "WIDE_POOL": 42,
+        "EXP_POOL": 43,
+        "CAND_PRE": 48,
+        "CAND_POST": 48,
+        "CONTEXT": 36
+      }
+    },
+    "rank_hist": {
+      "absent": 3,
+      "0-5": 160,
+      "50-+": 33,
+      "6-19": 24,
+      "20-49": 19
+    },
+    "reasons": {
+      "POOL_DROP": 2,
+      "OK": 200,
+      "WINDOW_TOO_SMALL": 36,
+      "POOL_MISS": 1
+    },
+    "reasons_by_cat": {
+      "temporal": {
+        "POOL_DROP": 1,
+        "WINDOW_TOO_SMALL": 9,
+        "OK": 32
+      },
+      "multi-hop": {
+        "OK": 19,
+        "WINDOW_TOO_SMALL": 2
+      },
+      "open-domain": {
+        "OK": 9,
+        "WINDOW_TOO_SMALL": 1
+      },
+      "single-hop": {
+        "OK": 104,
+        "WINDOW_TOO_SMALL": 12,
+        "POOL_DROP": 1,
+        "POOL_MISS": 1
+      },
+      "adversarial": {
+        "WINDOW_TOO_SMALL": 12,
+        "OK": 36
+      }
+    },
+    "oracle_share": 0.8368200836820083,
+    "mean_candidates": 649.9121338912134,
+    "mean_tokens": 2621.192468619247
+  },
+  {
+    "conv_idx": 8,
+    "n": 196,
+    "per_cat": {
+      "multi-hop": {
+        "n": 37,
+        "CORPUS": 37,
+        "WIDE_POOL": 32,
+        "EXP_POOL": 35,
+        "CAND_PRE": 36,
+        "CAND_POST": 37,
+        "CONTEXT": 34
+      },
+      "temporal": {
+        "n": 33,
+        "CORPUS": 33,
+        "WIDE_POOL": 27,
+        "EXP_POOL": 29,
+        "CAND_PRE": 33,
+        "CAND_POST": 33,
+        "CONTEXT": 28
+      },
+      "open-domain": {
+        "n": 13,
+        "CORPUS": 10,
+        "WIDE_POOL": 7,
+        "EXP_POOL": 8,
+        "CAND_PRE": 9,
+        "CAND_POST": 9,
+        "CONTEXT": 6
+      },
+      "single-hop": {
+        "n": 73,
+        "CORPUS": 73,
+        "WIDE_POOL": 61,
+        "EXP_POOL": 67,
+        "CAND_PRE": 68,
+        "CAND_POST": 71,
+        "CONTEXT": 64
+      },
+      "adversarial": {
+        "n": 40,
+        "CORPUS": 40,
+        "WIDE_POOL": 37,
+        "EXP_POOL": 39,
+        "CAND_PRE": 36,
+        "CAND_POST": 39,
+        "CONTEXT": 27
+      }
+    },
+    "rank_hist": {
+      "6-19": 22,
+      "0-5": 125,
+      "absent": 7,
+      "50-+": 29,
+      "20-49": 13
+    },
+    "reasons": {
+      "OK": 159,
+      "POOL_DROP": 3,
+      "WINDOW_TOO_SMALL": 30,
+      "POOL_MISS": 4
+    },
+    "reasons_by_cat": {
+      "multi-hop": {
+        "OK": 34,
+        "WINDOW_TOO_SMALL": 3
+      },
+      "temporal": {
+        "OK": 28,
+        "WINDOW_TOO_SMALL": 5
+      },
+      "open-domain": {
+        "OK": 6,
+        "POOL_DROP": 1,
+        "WINDOW_TOO_SMALL": 3,
+        "POOL_MISS": 3
+      },
+      "single-hop": {
+        "OK": 64,
+        "WINDOW_TOO_SMALL": 7,
+        "POOL_DROP": 1,
+        "POOL_MISS": 1
+      },
+      "adversarial": {
+        "OK": 27,
+        "WINDOW_TOO_SMALL": 12,
+        "POOL_DROP": 1
+      }
+    },
+    "oracle_share": 0.8112244897959183,
+    "mean_candidates": 472.30102040816325,
+    "mean_tokens": 2794.581632653061
+  },
+  {
+    "conv_idx": 9,
+    "n": 204,
+    "per_cat": {
+      "temporal": {
+        "n": 32,
+        "CORPUS": 31,
+        "WIDE_POOL": 28,
+        "EXP_POOL": 28,
+        "CAND_PRE": 31,
+        "CAND_POST": 31,
+        "CONTEXT": 28
+      },
+      "multi-hop": {
+        "n": 32,
+        "CORPUS": 32,
+        "WIDE_POOL": 28,
+        "EXP_POOL": 30,
+        "CAND_PRE": 32,
+        "CAND_POST": 32,
+        "CONTEXT": 28
+      },
+      "open-domain": {
+        "n": 7,
+        "CORPUS": 7,
+        "WIDE_POOL": 6,
+        "EXP_POOL": 7,
+        "CAND_PRE": 7,
+        "CAND_POST": 7,
+        "CONTEXT": 7
+      },
+      "single-hop": {
+        "n": 87,
+        "CORPUS": 87,
+        "WIDE_POOL": 71,
+        "EXP_POOL": 71,
+        "CAND_PRE": 86,
+        "CAND_POST": 87,
+        "CONTEXT": 68
+      },
+      "adversarial": {
+        "n": 46,
+        "CORPUS": 46,
+        "WIDE_POOL": 37,
+        "EXP_POOL": 38,
+        "CAND_PRE": 46,
+        "CAND_POST": 46,
+        "CONTEXT": 32
+      }
+    },
+    "rank_hist": {
+      "0-5": 111,
+      "6-19": 29,
+      "20-49": 22,
+      "50-+": 39,
+      "absent": 1
+    },
+    "reasons": {
+      "OK": 161,
+      "WINDOW_TOO_SMALL": 40,
+      "POOL_MISS": 1
+    },
+    "reasons_by_cat": {
+      "temporal": {
+        "OK": 28,
+        "WINDOW_TOO_SMALL": 3,
+        "POOL_MISS": 1
+      },
+      "multi-hop": {
+        "OK": 28,
+        "WINDOW_TOO_SMALL": 4
+      },
+      "open-domain": {
+        "OK": 5
+      },
+      "single-hop": {
+        "OK": 68,
+        "WINDOW_TOO_SMALL": 19
+      },
+      "adversarial": {
+        "OK": 32,
+        "WINDOW_TOO_SMALL": 14
+      }
+    },
+    "oracle_share": 0.7990196078431373,
+    "mean_candidates": 549.990099009901,
+    "mean_tokens": 2891.490099009901
+  }
+]

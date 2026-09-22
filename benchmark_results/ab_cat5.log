@@ -1,0 +1,12 @@
+cat5 questions: 446
+[50/446] baseline=86.0% directive=86.0%
+[100/446] baseline=57.0% directive=60.0%
+[150/446] baseline=48.0% directive=54.0%
+[200/446] baseline=47.0% directive=53.0%
+[250/446] baseline=42.8% directive=48.4%
+[300/446] baseline=39.3% directive=45.7%
+[350/446] baseline=39.4% directive=45.7%
+[400/446] baseline=38.2% directive=45.2%
+
+cat5: n=446 baseline 36.3% -> directive 43.7% (+7.4pp, gain 36 / loss 3)
+saved: benchmark_results\ab_cat5_prompt.json

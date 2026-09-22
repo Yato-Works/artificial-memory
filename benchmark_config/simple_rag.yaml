@@ -1,0 +1,24 @@
+# Simple RAG Player Configuration
+# Frozen naive baseline using turn-chunked vector search
+
+player:
+  name: "Simple RAG"
+  class: "controlled"
+  version: "naive-rag-0.1"
+
+architecture:
+  type: "naive_chunk_vector_search"
+  chunk_unit: "turn_text"
+
+retrieval:
+  top_k: 10
+  metric: "cosine"
+  reranking: "none"
+
+budget:
+  context_budget_tokens: 2000
+  enforcement: "strict"
+
+llm_accounting:
+  count_write_calls: true
+  count_read_calls: true

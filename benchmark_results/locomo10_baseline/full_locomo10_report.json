@@ -1,0 +1,125 @@
+{
+  "total_conversations": 2,
+  "total_questions": 304,
+  "micro_accuracy": 0.4342105263157895,
+  "macro_accuracy": 0.44862407274467575,
+  "micro_oracle_recall": 0.45723684210526316,
+  "macro_oracle_recall": 0.4639626704953338,
+  "mean_tokens": 155.04276315789474,
+  "mean_latency_ms": 311.67529703931285,
+  "total_time_seconds": 94.87257869998575,
+  "category_breakdown": {
+    "temporal": {
+      "total": 63,
+      "correct": 46,
+      "oracle": 49
+    },
+    "open-domain": {
+      "total": 13,
+      "correct": 2,
+      "oracle": 6
+    },
+    "multi-hop": {
+      "total": 43,
+      "correct": 14,
+      "oracle": 20
+    },
+    "single-hop": {
+      "total": 114,
+      "correct": 46,
+      "oracle": 53
+    },
+    "adversarial": {
+      "total": 71,
+      "correct": 24,
+      "oracle": 11
+    }
+  },
+  "conversations": [
+    {
+      "conv_idx": 0,
+      "sample_id": "conv-26",
+      "speakers": [
+        "Caroline",
+        "Melanie"
+      ],
+      "total_questions": 199,
+      "total_turns": 419,
+      "total_ir_records": 419,
+      "overall_accuracy": 0.4020100502512563,
+      "overall_oracle_recall": 0.44221105527638194,
+      "factual_accuracy": 0.4473684210526316,
+      "factual_oracle_recall": 0.5394736842105263,
+      "mean_tokens": 153.47236180904522,
+      "mean_latency_ms": 315.4320271351391,
+      "elapsed_seconds": 62.77473510001437,
+      "categories": {
+        "temporal": {
+          "total": 37,
+          "correct": 24,
+          "oracle": 28
+        },
+        "open-domain": {
+          "total": 13,
+          "correct": 2,
+          "oracle": 6
+        },
+        "multi-hop": {
+          "total": 32,
+          "correct": 12,
+          "oracle": 15
+        },
+        "single-hop": {
+          "total": 70,
+          "correct": 30,
+          "oracle": 33
+        },
+        "adversarial": {
+          "total": 47,
+          "correct": 12,
+          "oracle": 6
+        }
+      }
+    },
+    {
+      "conv_idx": 1,
+      "sample_id": "conv-30",
+      "speakers": [
+        "Gina",
+        "Jon"
+      ],
+      "total_questions": 105,
+      "total_turns": 369,
+      "total_ir_records": 369,
+      "overall_accuracy": 0.49523809523809526,
+      "overall_oracle_recall": 0.4857142857142857,
+      "factual_accuracy": 0.49382716049382713,
+      "factual_oracle_recall": 0.5679012345679012,
+      "mean_tokens": 158.01904761904763,
+      "mean_latency_ms": 304.5553990481754,
+      "elapsed_seconds": 31.980293300002813,
+      "categories": {
+        "temporal": {
+          "total": 26,
+          "correct": 22,
+          "oracle": 21
+        },
+        "single-hop": {
+          "total": 44,
+          "correct": 16,
+          "oracle": 20
+        },
+        "multi-hop": {
+          "total": 11,
+          "correct": 2,
+          "oracle": 5
+        },
+        "adversarial": {
+          "total": 24,
+          "correct": 12,
+          "oracle": 5
+        }
+      }
+    }
+  ]
+}

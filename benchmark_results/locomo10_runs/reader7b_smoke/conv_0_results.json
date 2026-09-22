@@ -1,0 +1,62 @@
+{
+  "summary": {
+    "conv_idx": 0,
+    "sample_id": "conv-26",
+    "mode": "full",
+    "total_questions": 3,
+    "total_turns": 419,
+    "total_ir_records": 419,
+    "overall_accuracy": 1.0,
+    "overall_oracle_recall": 1.0,
+    "factual_accuracy": 1.0,
+    "factual_oracle_recall": 1.0,
+    "mean_tokens": 2067.3333333333335,
+    "mean_latency_ms": 3684.6383000083733,
+    "elapsed_seconds": 11.055186199984746,
+    "categories": {
+      "temporal": {
+        "total": 2,
+        "correct": 2,
+        "oracle": 2
+      },
+      "open-domain": {
+        "total": 1,
+        "correct": 1,
+        "oracle": 1
+      }
+    },
+    "failure_taxonomy_v2": {}
+  },
+  "results": [
+    {
+      "question_id": "conv-26-qa-000",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "7 May 2023",
+      "ground_truth": "7 May 2023",
+      "tokens_used": 2204,
+      "latency_ms": 5369.953100016573,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-001",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Melanie painted a sunrise last year (2022).",
+      "ground_truth": "2022",
+      "tokens_used": 1875,
+      "latency_ms": 2783.4884999901988,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-002",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "Counseling and mental health",
+      "ground_truth": "Psychology, counseling certification",
+      "tokens_used": 2123,
+      "latency_ms": 2900.473300018348,
+      "is_correct": true
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+================================================================================
+      LOCOMO EXPERIMENT RUNNER (Phase 0 Measurement Harness)
+================================================================================
+Mode: FULL (frozen LLM) | Convs: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] | Out: benchmark_results\locomo10_runs\reader7b_cap32
+Frozen protocol: scorer / dataset / LLM config untouched.
+================================================================================
+A/B OVERRIDE: window_cap=32 token_bonus=130
+A/B READER OVERRIDE: model=qwen2.5-coder:7b
+
+===========================================================================
+--- STARTING CONVERSATION 0 (FULL (frozen LLM)) ---
+===========================================================================
+Sample ID: conv-26
+Ingested 419 turns into 419 StructuredIR records in 0.15s.
+Evaluating 199 questions...
+  [025/199] Acc:  84.0% | Ora:  96.0% | Tok/Q: 2100.0 | Q: What does Melanie do to destress
+  [050/199] Acc:  74.0% | Ora:  88.0% | Tok/Q: 2042.9 | Q: When did Caroline and Melanie go
+  [075/199] Acc:  72.0% | Ora:  84.0% | Tok/Q: 2038.5 | Q: When did Melanie's family go on 
+  [100/199] Acc:  76.0% | Ora:  86.0% | Tok/Q: 2049.3 | Q: What motivated Caroline to pursu
+  [125/199] Acc:  77.6% | Ora:  85.6% | Tok/Q: 2010.0 | Q: What pets does Melanie have?
+  [150/199] Acc:  80.0% | Ora:  85.3% | Tok/Q: 2006.1 | Q: What do Melanie's family give he
+  [175/199] Acc:  82.3% | Ora:  80.6% | Tok/Q: 1994.7 | Q: How often does Caroline go to th
+  [199/199] Acc:  82.9% | Ora:  76.4% | Tok/Q: 1993.5 | Q: What does Caroline love most abo
+
+>> CONV 0 COMPLETED in 606.4s:
+   * Oracle Recall:  76.4% (152/199)
+   * Accuracy:       82.9% (165/199)
+   * Mean Latency:   3047.1 ms
+   * Mean Tokens/Q:  1993.5 tok
+   * Saved to:       benchmark_results\locomo10_runs\reader7b_cap32\conv_0_results.json
+
+===========================================================================
+--- STARTING CONVERSATION 1 (FULL (frozen LLM)) ---
+===========================================================================
+Sample ID: conv-30
+Ingested 369 turns into 369 StructuredIR records in 0.08s.
+Evaluating 105 questions...
+  [025/105] Acc:  68.0% | Ora:  92.0% | Tok/Q: 1906.2 | Q: Which events has Jon participate
+  [050/105] Acc:  64.0% | Ora:  86.0% | Tok/Q: 1898.9 | Q: What did Gina want her customers
+  [075/105] Acc:  66.7% | Ora:  80.0% | Tok/Q: 1889.1 | Q: What does Jon plan to do at the 
+  [100/105] Acc:  71.0% | Ora:  74.0% | Tok/Q: 1872.0 | Q: What book is Gina currently read
+  [105/105] Acc:  71.4% | Ora:  71.4% | Tok/Q: 1866.9 | Q: What plans does Gina have after 
+
+>> CONV 1 COMPLETED in 307.8s:
+   * Oracle Recall:  71.4% (75/105)
+   * Accuracy:       71.4% (75/105)
+   * Mean Latency:   2931.7 ms
+   * Mean Tokens/Q:  1866.9 tok
+   * Saved to:       benchmark_results\locomo10_runs\reader7b_cap32\conv_1_results.json
+
+===========================================================================
+--- STARTING CONVERSATION 2 (FULL (frozen LLM)) ---
+===========================================================================
+Sample ID: conv-41
+Ingested 663 turns into 663 StructuredIR records in 0.31s.
+Evaluating 193 questions...
+  [025/193] Acc:  68.0% | Ora:  80.0% | Tok/Q: 1917.9 | Q: When did John start boot camp wi
+  [050/193] Acc:  66.0% | Ora:  80.0% | Tok/Q: 1924.9 | Q: What food item did Maria drop of
+  [075/193] Acc:  65.3% | Ora:  84.0% | Tok/Q: 1961.0 | Q: Why did Maria sit with the littl
+  [100/193] Acc:  69.0% | Ora:  85.0% | Tok/Q: 1962.6 | Q: What did John and the veterans d
+  [125/193] Acc:  71.2% | Ora:  84.8% | Tok/Q: 1976.8 | Q: What kind of activities did Mari
+  [150/193] Acc:  73.3% | Ora:  84.7% | Tok/Q: 1969.6 | Q: What is John currently doing as 
+  [175/193] Acc:  74.9% | Ora:  82.9% | Tok/Q: 1970.7 | Q: What does John say she feels whe
+  [193/193] Acc:  75.6% | Ora:  81.3% | Tok/Q: 1966.7 | Q: How is John's new puppy adjustin
+
+>> CONV 2 COMPLETED in 563.2s:
+   * Oracle Recall:  81.3% (157/193)
+   * Accuracy:       75.6% (146/193)
+   * Mean Latency:   2918.0 ms
+   * Mean Tokens/Q:  1966.7 tok
+   * Saved to:       benchmark_results\locomo10_runs\reader7b_cap32\conv_2_results.json
+
+===========================================================================
+--- STARTING CONVERSATION 3 (FULL (frozen LLM)) ---
+===========================================================================
+Sample ID: conv-42
+Ingested 629 turns into 629 StructuredIR records in 0.32s.
+Evaluating 260 questions...
+  [025/260] Acc:  44.0% | Ora:  84.0% | Tok/Q: 1797.1 | Q: When is Nate hosting a gaming pa
+  [050/260] Acc:  44.0% | Ora:  86.0% | Tok/Q: 1835.5 | Q: How many times has Joanna's scri
+  [075/260] Acc:  37.3% | Ora:  76.0% | Tok/Q: 1879.9 | Q: What recommendations has Nate re
+  [100/260] Acc:  40.0% | Ora:  78.0% | Tok/Q: 1875.9 | Q: What are Joanna's plans for her 
+  [125/260] Acc:  48.0% | Ora:  80.0% | Tok/Q: 1845.4 | Q: What event is Nate organizing in
+  [150/260] Acc:  52.7% | Ora:  82.0% | Tok/Q: 1849.0 | Q: What did Joanna share with her w
+  [175/260] Acc:  57.1% | Ora:  82.3% | Tok/Q: 1846.3 | Q: What does Nate rely on for cheer
+  [200/260] Acc:  61.5% | Ora:  82.0% | Tok/Q: 1836.7 | Q: What color did Joanna choose for
+  [225/260] Acc:  64.0% | Ora:  80.0% | Tok/Q: 1827.9 | Q: What did Joanna discover at the 
+  [250/260] Acc:  66.4% | Ora:  78.8% | Tok/Q: 1825.7 | Q: What game is Joanna currently pl
+  [260/260] Acc:  66.9% | Ora:  79.2% | Tok/Q: 1818.8 | Q: What does Joanna love most about
+
+>> CONV 3 COMPLETED in 732.5s:
+   * Oracle Recall:  79.2% (206/260)
+   * Accuracy:       66.9% (174/260)
+   * Mean Latency:   2817.4 ms
+   * Mean Tokens/Q:  1818.8 tok
+   * Saved to:       benchmark_results\locomo10_runs\reader7b_cap32\conv_3_results.json
+
+===========================================================================
+--- STARTING CONVERSATION 4 (FULL (frozen LLM)) ---
+===========================================================================
+Sample ID: conv-43
+Ingested 680 turns into 680 StructuredIR records in 0.14s.
+Evaluating 242 questions...
+  [025/242] Acc:  48.0% | Ora:  92.0% | Tok/Q: 2101.2 | Q: Where was John between August 11
+  [050/242] Acc:  52.0% | Ora:  88.0% | Tok/Q: 2091.7 | Q: How many times has John injured 
+  [075/242] Acc:  53.3% | Ora:  90.7% | Tok/Q: 2036.7 | Q: What aspects of the Harry Potter
+  [100/242] Acc:  56.0% | Ora:  90.0% | Tok/Q: 2051.2 | Q: What tradition does Tim mention 
+  [125/242] Acc:  59.2% | Ora:  87.2% | Tok/Q: 2068.6 | Q: Who is one of Tim's sources of i
+  [150/242] Acc:  63.3% | Ora:  88.7% | Tok/Q: 2064.7 | Q: What book did Tim just finish re
+  [175/242] Acc:  64.6% | Ora:  87.4% | Tok/Q: 2047.7 | Q: What charity event did John orga
+Traceback (most recent call last):
+  File "C:\Users\smily\artificial_memory\scripts\run_locomo_smoke.py", line 287, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\smily\artificial_memory\scripts\run_locomo_smoke.py", line 264, in main
+    run_conversation(
+    ~~~~~~~~~~~~~~~~^
+        adapter, answerer, weights, c_idx,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        limit=args.limit,
+        ^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\smily\artificial_memory\scripts\run_locomo_smoke.py", line 82, in run_conversation
+    res = adapter.evaluate_question(q, turns, ir_records, answerer, weights=weights)
+  File "C:\Users\smily\artificial_memory\src\artificial_memory\research\benchmarks\external\locomo_adapter.py", line 518, in evaluate_question
+    ans = answerer.answer(question.question, prompt)
+  File "C:\Users\smily\artificial_memory\src\artificial_memory\research\benchmarks\llm.py", line 248, in answer
+    return self._chat(messages, FROZEN_ANSWER_MAX_TOKENS)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\smily\artificial_memory\src\artificial_memory\research\benchmarks\llm.py", line 228, in _chat
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\smily\artificial_memory\.venv\Lib\site-packages\httpx\_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Server error '500 Internal Server Error' for url 'http://localhost:11434/api/chat'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500

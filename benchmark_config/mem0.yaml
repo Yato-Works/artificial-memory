@@ -1,0 +1,44 @@
+# Mem0-style Memory Player Configuration
+# Frozen configuration adhering to Mem0 OSS v0.1.x principles
+
+player:
+  name: "Mem0-style"
+  class: "controlled"
+  version: "0.1.x-compat"
+
+architecture:
+  type: "graph_vector_hybrid"
+  memory_unit: "semantic_fact"
+  write_strategy: "single_pass_add_only"
+
+extraction:
+  llm_calls_per_turn: 1
+  system_prompt: |
+    You are a personal memory extraction assistant.
+    Extract key facts, preferences, dates, tools, locations, and statements about the user or system from the given exchange.
+    Output each fact as a bullet point. Do not add commentary.
+  temperature: 0.0
+  max_tokens: 256
+
+storage:
+  vector_store: "faiss_in_memory"
+  relational_store: "sqlite_in_memory"
+  entity_index: "inverted_case_sensitive"
+
+retrieval:
+  top_k: 10
+  reranking: "multi_signal_fusion"
+  weights:
+    semantic_similarity: 0.5
+    keyword_jaccard: 0.3
+    entity_overlap: 0.2
+  filter_strategy: "none"
+
+budget:
+  context_budget_tokens: 2000
+  enforcement: "strict"
+
+llm_accounting:
+  count_write_calls: true
+  count_read_calls: true
+  count_retrieval_as_llm: false

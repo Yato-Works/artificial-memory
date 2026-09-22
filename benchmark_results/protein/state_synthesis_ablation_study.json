@@ -1,0 +1,959 @@
+{
+  "num_questions": 32,
+  "conditions": {
+    "A": {
+      "accuracy": 18.75,
+      "oracle": 25.0,
+      "tokens": 361.21875,
+      "elapsed": 7.893105400000422
+    },
+    "B": {
+      "accuracy": 12.5,
+      "oracle": 28.125,
+      "tokens": 463.96875,
+      "elapsed": 7.824570099999619
+    },
+    "C": {
+      "accuracy": 21.875,
+      "oracle": 25.0,
+      "tokens": 362.375,
+      "elapsed": 5.55556930000057
+    },
+    "D": {
+      "accuracy": 15.625,
+      "oracle": 28.125,
+      "tokens": 465.15625,
+      "elapsed": 7.682344700000613
+    }
+  },
+  "questions": [
+    {
+      "question_id": "conv-26-qa-003",
+      "question": "What did Caroline research?",
+      "ground_truth": "Adoption agencies",
+      "cond_a": {
+        "correct": true,
+        "oracle": false,
+        "pred": "Adoption agencies",
+        "tokens": 269
+      },
+      "cond_b": {
+        "correct": true,
+        "oracle": true,
+        "pred": "Adoption agencies",
+        "tokens": 406
+      },
+      "cond_c": {
+        "correct": true,
+        "oracle": false,
+        "pred": "Adoption agencies",
+        "tokens": 269
+      },
+      "cond_d": {
+        "correct": true,
+        "oracle": true,
+        "pred": "Adoption agencies",
+        "tokens": 406
+      }
+    },
+    {
+      "question_id": "conv-26-qa-004",
+      "question": "What is Caroline's identity?",
+      "ground_truth": "Transgender woman",
+      "cond_a": {
+        "correct": false,
+        "oracle": false,
+        "pred": "Not mentioned.",
+        "tokens": 419
+      },
+      "cond_b": {
+        "correct": false,
+        "oracle": false,
+        "pred": "Not mentioned.",
+        "tokens": 543
+      },
+      "cond_c": {
+        "correct": false,
+        "oracle": false,
+        "pred": "Not mentioned.",
+        "tokens": 419
+      },
+      "cond_d": {
+        "correct": false,
+        "oracle": false,
+        "pred": "Not mentioned.",
+        "tokens": 543
+      }
+    },
+    {
+      "question_id": "conv-26-qa-007",
+      "question": "What is Caroline's relationship status?",
+      "ground_truth": "Single",
+      "cond_a": {
+        "correct": false,
+        "oracle": false,
+        "pred": "I don't know.",
+        "tokens": 299
+      },
+      "cond_b": {
+        "correct": false,
+        "oracle": false,
+        "pred": "I don't know.",
+        "tokens": 392
+      },
+      "cond_c": {
+        "correct": false,
+        "oracle": false,
+        "pred": "I don't know.",
+        "tokens": 299
+      },
+      "cond_d": {
+        "correct": false,
+        "oracle": false,
+        "pred": "I don't know.",
+        "tokens": 392
+      }
+    },
+    {
+      "question_id": "conv-26-qa-011",
+      "question": "Where did Caroline move from 4 years ago?",
+      "ground_truth": "Sweden",
+      "cond_a": {
+        "correct": false,
+        "oracle": true,
+        "pred": "Her home country",
+        "tokens": 458
+      },
+      "cond_b": {
+        "correct": false,
+        "oracle": true,
+        "pred": "Her home country",
+        "tokens": 514
+      },
+      "cond_c": {
+        "correct": false,
+        "oracle": true,
+        "pred": "Her home country",
+        "tokens": 458
+      },
+      "cond_d": {
+        "correct": false,
+        "oracle": true,
+        "pred": "Her home country",
+        "tokens": 514
+      }
+    },
+    {
+      "question_id": "conv-26-qa-013",
+      "question": "What career path has Caroline decided to persue?",
+      "ground_truth": "counseling or mental health for Transgender people",
+      "cond_a": {
+        "correct": true,
+        "oracle": false,
+        "pred": "Counseling and mental health",
+        "tokens": 321
+      },
+      "cond_b": {
+        "correct": true,
+        "oracle": false,
+        "pred": "Counseling and mental health",
+        "tokens": 402
+      },
+      "cond_c": {
+        "correct": true,
+        "oracle": false,
+        "pred": "Counseling or mental health",
+        "tokens": 330
+      },
+      "cond_d": {
+        "correct": true,
+        "oracle": false,
+        "pred": "Counseling or mental health",
+        "tokens": 411
+      }
+    },
+    {
+      "question_id": "conv-26-qa-015",
+      "question": "What activities does Melanie partake in?",
+      "ground_truth": "pottery, camping, painting, swimming",
+      "cond_a": {
+        "correct": false,
+        "oracle": false,
+        "pred": "Family time and work.",
+        "tokens": 245
+      },
+      "cond_b": {
+        "correct": false,
+        "oracle": false,
+        "pred": "Working and spending time with her kids.",
+        "tokens": 321
+      },
+      "cond_c": {
+        "correct": true,
+        "oracle": false,
+        "pred": "Painting",
+        "tokens": 250
+      },
+      "cond_d": {
+        "correct": true,
+        "oracle": false,
+        "pred": "Painting",
+        "tokens": 326
+      }
+    },
+    {
+      "question_id": "conv-26-qa-018",
+      "question": "Where has Melanie camped?",
+      "ground_truth": "beach, mountains, forest",
+      "cond_a": {
+        "correct": false,
+        "oracle": false,
+        "pred": "I don't know.",
+        "tokens": 337
+      },
+      "cond_b": {
+        "correct": false,
+        "oracle": false,
+        "pred": "I don't know.",
+        "tokens": 421
+      },
+      "cond_c": {
+        "correct": false,
+        "oracle": false,
+        "pred": "I don't know.",
+        "tokens": 337
+      },
+      "cond_d": {
+        "correct": false,
+        "oracle": false,
+        "pred": "I don't know.",
+        "tokens": 421
+      }
+    },
+    {
+      "question_id": "conv-26-qa-019",
+      "question": "What do Melanie's kids like?",
+      "ground_truth": "dinosaurs, nature",
+      "cond_a": {
+        "correct": false,
+        "oracle": false,
+        "pred": "None (not mentioned in conversation).",
+        "tokens": 388
+      },
+      "cond_b": {
+        "correct": false,
+        "oracle": false,
+        "pred": "None (not mentioned in conversation).",
+        "tokens": 471
+      },
+      "cond_c": {
+        "correct": false,
+        "oracle": false,
+        "pred": "None (not mentioned in conversation).",
+        "tokens": 388
+      },
+      "cond_d": {
+        "correct": false,
+        "oracle": false,
+        "pred": "None (not mentioned in conversation).",
+        "tokens": 471
+      }
+    },
+    {
+      "question_id": "conv-26-qa-023",
+      "question": "What books has Melanie read?",
+      "ground_truth": "\"Nothing is Impossible\", \"Charlotte's Web\"",
+      "cond_a": {
+        "correct": false,
+        "oracle": false,
+        "pred": "I don't know.",
+        "tokens": 249
+      },
+      "cond_b": {
+        "correct": false,
+        "oracle": false,
+        "pred": "I don't know.",
+        "tokens": 324
+      },
+      "cond_c": {
+        "correct": false,
+        "oracle": false,
+        "pred": "I don't know.",
+        "tokens": 249
+      },
+      "cond_d": {
+        "correct": false,
+        "oracle": false,
+        "pred": "I don't know.",
+        "tokens": 324
+      }
+    },
+    {
+      "question_id": "conv-26-qa-024",
+      "question": "What does Melanie do to destress?",
+      "ground_truth": "Running, pottery",
+      "cond_a": {
+        "correct": false,
+        "oracle": false,
+        "pred": "Family time",
+        "tokens": 245
+      },
+      "cond_b": {
+        "correct": false,
+        "oracle": false,
+        "pred": "Family time",
+        "tokens": 321
+      },
+      "cond_c": {
+        "correct": false,
+        "oracle": false,
+        "pred": "Family time",
+        "tokens": 245
+      },
+      "cond_d": {
+        "correct": false,
+        "oracle": false,
+        "pred": "Family time",
+        "tokens": 321
+      }
+    },
+    {
+      "question_id": "conv-26-qa-032",
+      "question": "What LGBTQ+ events has Caroline participated in?",
+      "ground_truth": "Pride parade, school speech, support group",
+      "cond_a": {
+        "correct": false,
+        "oracle": true,
+        "pred": "Attending an LGBTQ+ pride parade and an LGBTQ conference.",
+        "tokens": 428
+      },
+      "cond_b": {
+        "correct": false,
+        "oracle": true,
+        "pred": "An LGBTQ+ pride parade and an LGBTQ conference.",
+        "tokens": 539
+      },
+      "cond_c": {
+        "correct": false,
+        "oracle": true,
+        "pred": "An LGBTQ+ pride parade and an LGBTQ conference.",
+        "tokens": 428
+      },
+      "cond_d": {
+        "correct": false,
+        "oracle": true,
+        "pred": "An LGBTQ+ pride parade and an LGBTQ conference.",
+        "tokens": 539
+      }
+    },
+    {
+      "question_id": "conv-26-qa-034",
+      "question": "What events has Caroline participated in to help children?",
+      "ground_truth": "Mentoring program, school speech",
+      "cond_a": {
+        "correct": false,
+        "oracle": false,
+        "pred": "Applied to adoption agencies",
+        "tokens": 404
+      },
+      "cond_b": {
+        "correct": false,
+        "oracle": false,
+        "pred": "Applied to adoption agencies",
+        "tokens": 519
+      },
+      "cond_c": {
+        "correct": false,
+        "oracle": false,
+        "pred": "Applied to adoption agencies",
+        "tokens": 404
+      },
+      "cond_d": {
+        "correct": false,
+        "oracle": false,
+        "pred": "Applied to adoption agencies",
+        "tokens": 519
+      }
+    },
+    {
+      "question_id": "conv-26-qa-037",
+      "question": "What did Melanie paint recently?",
+      "ground_truth": "sunset",
+      "cond_a": {
+        "correct": true,
+        "oracle": false,
+        "pred": "A painting inspired by sunsets",
+        "tokens": 340
+      },
+      "cond_b": {
+        "correct": true,
+        "oracle": false,
+        "pred": "A painting inspired by sunsets",
+        "tokens": 416
+      },
+      "cond_c": {
+        "correct": true,
+        "oracle": false,
+        "pred": "A painting inspired by sunsets",
+        "tokens": 340
+      },
+      "cond_d": {
+        "correct": true,
+        "oracle": false,
+        "pred": "A painting inspired by sunsets",
+        "tokens": 416
+      }
+    },
+    {
+      "question_id": "conv-26-qa-038",
+      "question": "What activities has Melanie done with her family?",
+      "ground_truth": "Pottery, painting, camping, museum, swimming, hiking",
+      "cond_a": {
+        "correct": false,
+        "oracle": false,
+        "pred": "Spending quality time and cherishing moments with her family.",
+        "tokens": 304
+      },
+      "cond_b": {
+        "correct": false,
+        "oracle": false,
+        "pred": "Spending time together and appreciating life.",
+        "tokens": 405
+      },
+      "cond_c": {
+        "correct": false,
+        "oracle": false,
+        "pred": "Painting and cherishing time with family.",
+        "tokens": 309
+      },
+      "cond_d": {
+        "correct": false,
+        "oracle": false,
+        "pred": "Painting and pottery",
+        "tokens": 411
+      }
+    },
+    {
+      "question_id": "conv-26-qa-039",
+      "question": "In what ways is Caroline participating in the LGBTQ community?",
+      "ground_truth": "Joining activist group, going to pride parades, participating in an art show, mentoring program",
+      "cond_a": {
+        "correct": true,
+        "oracle": true,
+        "pred": "Joining a mentorship program for LGBTQ youth, participating in an LGBTQ activist group, and representing inclusivity and diversity in her art.",
+        "tokens": 538
+      },
+      "cond_b": {
+        "correct": false,
+        "oracle": true,
+        "pred": "Joining a mentorship program, participating in an LGBTQ activist group, giving talks, attending conferences, and applying to adoption agencies.",
+        "tokens": 701
+      },
+      "cond_c": {
+        "correct": true,
+        "oracle": true,
+        "pred": "Joining a mentorship program for LGBTQ youth, participating in an LGBTQ activist group, and representing inclusivity and diversity in her art.",
+        "tokens": 538
+      },
+      "cond_d": {
+        "correct": false,
+        "oracle": true,
+        "pred": "Joining a mentorship program, participating in an LGBTQ activist group, giving talks, attending conferences, and applying to adoption agencies.",
+        "tokens": 701
+      }
+    },
+    {
+      "question_id": "conv-26-qa-040",
+      "question": "How many times has Melanie gone to the beach in 2023?",
+      "ground_truth": "2",
+      "cond_a": {
+        "correct": false,
+        "oracle": false,
+        "pred": "Once",
+        "tokens": 447
+      },
+      "cond_b": {
+        "correct": false,
+        "oracle": false,
+        "pred": "Once",
+        "tokens": 571
+      },
+      "cond_c": {
+        "correct": false,
+        "oracle": false,
+        "pred": "Twice",
+        "tokens": 454
+      },
+      "cond_d": {
+        "correct": false,
+        "oracle": false,
+        "pred": "Twice",
+        "tokens": 578
+      }
+    },
+    {
+      "question_id": "conv-26-qa-043",
+      "question": "What kind of art does Caroline make?",
+      "ground_truth": "abstract art",
+      "cond_a": {
+        "correct": false,
+        "oracle": false,
+        "pred": "Drawing",
+        "tokens": 336
+      },
+      "cond_b": {
+        "correct": false,
+        "oracle": false,
+        "pred": "Drawing",
+        "tokens": 436
+      },
+      "cond_c": {
+        "correct": false,
+        "oracle": false,
+        "pred": "Drawing",
+        "tokens": 336
+      },
+      "cond_d": {
+        "correct": false,
+        "oracle": false,
+        "pred": "Drawing",
+        "tokens": 436
+      }
+    },
+    {
+      "question_id": "conv-26-qa-047",
+      "question": "Who supports Caroline when she has a negative experience?",
+      "ground_truth": "Her mentors, family, and friends",
+      "cond_a": {
+        "correct": false,
+        "oracle": true,
+        "pred": "Melanie",
+        "tokens": 527
+      },
+      "cond_b": {
+        "correct": false,
+        "oracle": true,
+        "pred": "Mel",
+        "tokens": 669
+      },
+      "cond_c": {
+        "correct": false,
+        "oracle": true,
+        "pred": "Melanie",
+        "tokens": 527
+      },
+      "cond_d": {
+        "correct": false,
+        "oracle": true,
+        "pred": "Mel",
+        "tokens": 669
+      }
+    },
+    {
+      "question_id": "conv-26-qa-048",
+      "question": "What types of pottery have Melanie and her kids made?",
+      "ground_truth": "bowls, cup",
+      "cond_a": {
+        "correct": false,
+        "oracle": true,
+        "pred": "Clay pots",
+        "tokens": 391
+      },
+      "cond_b": {
+        "correct": false,
+        "oracle": true,
+        "pred": "Clay pots",
+        "tokens": 518
+      },
+      "cond_c": {
+        "correct": false,
+        "oracle": true,
+        "pred": "Clay pots",
+        "tokens": 391
+      },
+      "cond_d": {
+        "correct": false,
+        "oracle": true,
+        "pred": "Clay pots",
+        "tokens": 518
+      }
+    },
+    {
+      "question_id": "conv-26-qa-051",
+      "question": "What has Melanie painted?",
+      "ground_truth": "Horse, sunset, sunrise",
+      "cond_a": {
+        "correct": false,
+        "oracle": false,
+        "pred": "A lake sunrise",
+        "tokens": 256
+      },
+      "cond_b": {
+        "correct": false,
+        "oracle": false,
+        "pred": "A lake sunrise",
+        "tokens": 325
+      },
+      "cond_c": {
+        "correct": false,
+        "oracle": false,
+        "pred": "A lake sunrise",
+        "tokens": 261
+      },
+      "cond_d": {
+        "correct": false,
+        "oracle": false,
+        "pred": "A lake sunrise",
+        "tokens": 330
+      }
+    },
+    {
+      "question_id": "conv-26-qa-052",
+      "question": "What are Melanie's pets' names?",
+      "ground_truth": "Oliver, Luna, Bailey",
+      "cond_a": {
+        "correct": false,
+        "oracle": false,
+        "pred": "None / Not mentioned.",
+        "tokens": 326
+      },
+      "cond_b": {
+        "correct": false,
+        "oracle": false,
+        "pred": "None / Not mentioned.",
+        "tokens": 410
+      },
+      "cond_c": {
+        "correct": false,
+        "oracle": false,
+        "pred": "None / Not mentioned.",
+        "tokens": 326
+      },
+      "cond_d": {
+        "correct": false,
+        "oracle": false,
+        "pred": "None / Not mentioned.",
+        "tokens": 410
+      }
+    },
+    {
+      "question_id": "conv-26-qa-055",
+      "question": "What subject have Caroline and Melanie both painted?",
+      "ground_truth": "Sunsets",
+      "cond_a": {
+        "correct": false,
+        "oracle": false,
+        "pred": "They haven't painted; Caroline is interested in pottery.",
+        "tokens": 433
+      },
+      "cond_b": {
+        "correct": false,
+        "oracle": false,
+        "pred": "Painting",
+        "tokens": 531
+      },
+      "cond_c": {
+        "correct": false,
+        "oracle": false,
+        "pred": "They haven't painted; Caroline is interested in pottery.",
+        "tokens": 433
+      },
+      "cond_d": {
+        "correct": false,
+        "oracle": false,
+        "pred": "Painting",
+        "tokens": 531
+      }
+    },
+    {
+      "question_id": "conv-26-qa-056",
+      "question": "What symbols are important to Caroline?",
+      "ground_truth": "Rainbow flag, transgender symbol",
+      "cond_a": {
+        "correct": false,
+        "oracle": false,
+        "pred": "Transgender identity and inclusion",
+        "tokens": 391
+      },
+      "cond_b": {
+        "correct": false,
+        "oracle": false,
+        "pred": "Sunsets and murals",
+        "tokens": 498
+      },
+      "cond_c": {
+        "correct": false,
+        "oracle": false,
+        "pred": "Transgender identity and inclusion",
+        "tokens": 391
+      },
+      "cond_d": {
+        "correct": false,
+        "oracle": false,
+        "pred": "Sunsets and murals",
+        "tokens": 498
+      }
+    },
+    {
+      "question_id": "conv-26-qa-060",
+      "question": "What instruments does Melanie play?",
+      "ground_truth": "clarinet and violin",
+      "cond_a": {
+        "correct": false,
+        "oracle": false,
+        "pred": "I don't know.",
+        "tokens": 272
+      },
+      "cond_b": {
+        "correct": false,
+        "oracle": false,
+        "pred": "The context does not contain the answer.",
+        "tokens": 394
+      },
+      "cond_c": {
+        "correct": false,
+        "oracle": false,
+        "pred": "I don't know.",
+        "tokens": 272
+      },
+      "cond_d": {
+        "correct": false,
+        "oracle": false,
+        "pred": "The context does not contain the answer.",
+        "tokens": 394
+      }
+    },
+    {
+      "question_id": "conv-26-qa-061",
+      "question": "What musical artists/bands has Melanie seen?",
+      "ground_truth": "Summer Sounds, Matt Patterson",
+      "cond_a": {
+        "correct": false,
+        "oracle": false,
+        "pred": "I don't know.",
+        "tokens": 259
+      },
+      "cond_b": {
+        "correct": false,
+        "oracle": false,
+        "pred": "I don't know.",
+        "tokens": 335
+      },
+      "cond_c": {
+        "correct": false,
+        "oracle": false,
+        "pred": "I don't know.",
+        "tokens": 259
+      },
+      "cond_d": {
+        "correct": false,
+        "oracle": false,
+        "pred": "I don't know.",
+        "tokens": 335
+      }
+    },
+    {
+      "question_id": "conv-26-qa-065",
+      "question": "What are some changes Caroline has faced during her transition journey?",
+      "ground_truth": "Changes to her body, losing unsupportive friends",
+      "cond_a": {
+        "correct": false,
+        "oracle": false,
+        "pred": "She's developed a lot and faced struggles.",
+        "tokens": 466
+      },
+      "cond_b": {
+        "correct": false,
+        "oracle": false,
+        "pred": "She has developed a lot and faced struggles.",
+        "tokens": 597
+      },
+      "cond_c": {
+        "correct": false,
+        "oracle": false,
+        "pred": "She's developed a lot and faced struggles.",
+        "tokens": 466
+      },
+      "cond_d": {
+        "correct": false,
+        "oracle": false,
+        "pred": "She has developed a lot and faced struggles.",
+        "tokens": 597
+      }
+    },
+    {
+      "question_id": "conv-26-qa-066",
+      "question": "What does Melanie do with her family on hikes?",
+      "ground_truth": "Roast marshmallows, tell stories",
+      "cond_a": {
+        "correct": true,
+        "oracle": true,
+        "pred": "Roasts marshmallows and shares stories around the campfire.",
+        "tokens": 330
+      },
+      "cond_b": {
+        "correct": false,
+        "oracle": true,
+        "pred": "Melanie goes hiking with her family.",
+        "tokens": 430
+      },
+      "cond_c": {
+        "correct": true,
+        "oracle": true,
+        "pred": "Roasts marshmallows and shares stories around the campfire.",
+        "tokens": 330
+      },
+      "cond_d": {
+        "correct": false,
+        "oracle": true,
+        "pred": "Melanie goes hiking with her family.",
+        "tokens": 430
+      }
+    },
+    {
+      "question_id": "conv-26-qa-070",
+      "question": "What transgender-specific events has Caroline attended?",
+      "ground_truth": "Poetry reading, conference",
+      "cond_a": {
+        "correct": false,
+        "oracle": false,
+        "pred": "She attended an adoption advice/assistance group.",
+        "tokens": 400
+      },
+      "cond_b": {
+        "correct": false,
+        "oracle": false,
+        "pred": "Caroline attended a support group for transgender individuals.",
+        "tokens": 529
+      },
+      "cond_c": {
+        "correct": false,
+        "oracle": false,
+        "pred": "Caroline attended an adoption advice/assistance group.",
+        "tokens": 400
+      },
+      "cond_d": {
+        "correct": false,
+        "oracle": false,
+        "pred": "Caroline attended a support group for transgender individuals.",
+        "tokens": 529
+      }
+    },
+    {
+      "question_id": "conv-26-qa-071",
+      "question": "What book did Melanie read from Caroline's suggestion?",
+      "ground_truth": "\"Becoming Nicole\"",
+      "cond_a": {
+        "correct": false,
+        "oracle": false,
+        "pred": "I don't know.",
+        "tokens": 351
+      },
+      "cond_b": {
+        "correct": false,
+        "oracle": false,
+        "pred": "A book that reminds to always pursue dreams.",
+        "tokens": 457
+      },
+      "cond_c": {
+        "correct": false,
+        "oracle": false,
+        "pred": "I don't know.",
+        "tokens": 351
+      },
+      "cond_d": {
+        "correct": false,
+        "oracle": false,
+        "pred": "A book that reminds to always pursue dreams.",
+        "tokens": 457
+      }
+    },
+    {
+      "question_id": "conv-26-qa-075",
+      "question": "How many children does Melanie have?",
+      "ground_truth": "3",
+      "cond_a": {
+        "correct": false,
+        "oracle": false,
+        "pred": "I don't know.",
+        "tokens": 364
+      },
+      "cond_b": {
+        "correct": false,
+        "oracle": false,
+        "pred": "I don't know.",
+        "tokens": 525
+      },
+      "cond_c": {
+        "correct": false,
+        "oracle": false,
+        "pred": "I don't know.",
+        "tokens": 364
+      },
+      "cond_d": {
+        "correct": false,
+        "oracle": false,
+        "pred": "I don't know.",
+        "tokens": 525
+      }
+    },
+    {
+      "question_id": "conv-26-qa-076",
+      "question": "When did Melanie go on a hike after the roadtrip?",
+      "ground_truth": "19 October 2023",
+      "cond_a": {
+        "correct": false,
+        "oracle": true,
+        "pred": "Yesterday",
+        "tokens": 500
+      },
+      "cond_b": {
+        "correct": false,
+        "oracle": true,
+        "pred": "Yesterday",
+        "tokens": 585
+      },
+      "cond_c": {
+        "correct": false,
+        "oracle": true,
+        "pred": "Yesterday",
+        "tokens": 500
+      },
+      "cond_d": {
+        "correct": false,
+        "oracle": true,
+        "pred": "Yesterday",
+        "tokens": 585
+      }
+    },
+    {
+      "question_id": "conv-26-qa-078",
+      "question": "What items has Melanie bought?",
+      "ground_truth": "Figurines, shoes",
+      "cond_a": {
+        "correct": true,
+        "oracle": true,
+        "pred": "Figurines",
+        "tokens": 266
+      },
+      "cond_b": {
+        "correct": true,
+        "oracle": true,
+        "pred": "Figurines",
+        "tokens": 342
+      },
+      "cond_c": {
+        "correct": true,
+        "oracle": true,
+        "pred": "Figurines",
+        "tokens": 272
+      },
+      "cond_d": {
+        "correct": true,
+        "oracle": true,
+        "pred": "Figurines",
+        "tokens": 348
+      }
+    }
+  ]
+}

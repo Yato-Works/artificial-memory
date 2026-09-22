@@ -1,0 +1,79 @@
+{
+  "timestamp": "2026-09-19T20:04:58.154444",
+  "run_id": "controlled_20260919_200135",
+  "elapsed_seconds": 202.98,
+  "aggregates": [
+    {
+      "player": "Simple RAG",
+      "accuracy": 0.6,
+      "pass_count": 6,
+      "partial_count": 1,
+      "fail_count": 2,
+      "gt_coverage": 0.75,
+      "abstention_accuracy": 0.0,
+      "forbidden_violation_rate": 0.1
+    },
+    {
+      "player": "MemoryBank-style",
+      "accuracy": 0.6,
+      "pass_count": 6,
+      "partial_count": 1,
+      "fail_count": 2,
+      "gt_coverage": 0.75,
+      "abstention_accuracy": 0.0,
+      "forbidden_violation_rate": 0.1
+    },
+    {
+      "player": "MemGPT-style",
+      "accuracy": 0.5,
+      "pass_count": 5,
+      "partial_count": 1,
+      "fail_count": 3,
+      "gt_coverage": 0.65,
+      "abstention_accuracy": 0.0,
+      "forbidden_violation_rate": 0.1
+    },
+    {
+      "player": "Mem0-style",
+      "accuracy": 0.5,
+      "pass_count": 5,
+      "partial_count": 1,
+      "fail_count": 3,
+      "gt_coverage": 0.65,
+      "abstention_accuracy": 0.0,
+      "forbidden_violation_rate": 0.1
+    },
+    {
+      "player": "AM v0.2.0",
+      "accuracy": 0.1,
+      "pass_count": 1,
+      "partial_count": 0,
+      "fail_count": 9,
+      "gt_coverage": 0.1,
+      "abstention_accuracy": 1.0,
+      "forbidden_violation_rate": 0.0
+    },
+    {
+      "player": "AM v0.2.0 (Hardened)",
+      "accuracy": 0.4,
+      "pass_count": 4,
+      "partial_count": 1,
+      "fail_count": 4,
+      "gt_coverage": 0.55,
+      "abstention_accuracy": 0.0,
+      "forbidden_violation_rate": 0.1
+    }
+  ],
+  "questions": [
+    "factual_recall-00",
+    "multi_session_recall-00",
+    "temporal_reasoning-00",
+    "knowledge_updates-00",
+    "contradiction_handling-00",
+    "indirect_recall-00",
+    "distractor_resistance-00",
+    "abstention-00",
+    "compression_recovery-00",
+    "reflection_reinterpretation-00"
+  ]
+}

@@ -1,0 +1,2475 @@
+{
+  "summary": {
+    "conv_idx": 4,
+    "sample_id": "conv-43",
+    "mode": "full",
+    "total_questions": 242,
+    "total_turns": 680,
+    "total_ir_records": 680,
+    "overall_accuracy": 0.6157024793388429,
+    "overall_oracle_recall": 0.7727272727272727,
+    "factual_accuracy": 0.6157024793388429,
+    "factual_oracle_recall": 0.8426966292134831,
+    "mean_tokens": 1564.6611570247933,
+    "mean_latency_ms": 1735.6134685955908,
+    "elapsed_seconds": 420.1018245999876,
+    "categories": {
+      "multi-hop": {
+        "total": 31,
+        "correct": 20,
+        "oracle": 27
+      },
+      "open-domain": {
+        "total": 14,
+        "correct": 4,
+        "oracle": 11
+      },
+      "temporal": {
+        "total": 26,
+        "correct": 11,
+        "oracle": 23
+      },
+      "single-hop": {
+        "total": 107,
+        "correct": 89,
+        "oracle": 89
+      },
+      "adversarial": {
+        "total": 64,
+        "correct": 25,
+        "oracle": 37
+      }
+    },
+    "failure_taxonomy_v2": {
+      "COMPOSITION_FAILURE": 7,
+      "RETRIEVAL_FAILURE": 13,
+      "VERIFICATION_FAILURE": 13,
+      "TEMPORAL_FAILURE": 15,
+      "ENTITY_FAILURE": 1,
+      "GROUNDING_FAILURE": 4,
+      "ABSTENTION_FAILURE": 40
+    }
+  },
+  "results": [
+    {
+      "question_id": "conv-43-qa-000",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "To improve his shooting percentage and become a consistent performer on the court. Off the court, he aims to build his brand, secure endorsements, and make a positive impact through charity work and possibly starting a foundation.",
+      "ground_truth": "improve shooting percentage, win a championship",
+      "tokens_used": 1648,
+      "latency_ms": 2384.5723000122234,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-001",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "To make a difference away from the court, like through charity or inspiring people.",
+      "ground_truth": "get endorsements, build his brand, do charity work",
+      "tokens_used": 1717,
+      "latency_ms": 2006.1936000129208,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-002",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Sneaker collection and Harry Potter books",
+      "ground_truth": "sneakers, fantasy movie DVDs, jerseys",
+      "tokens_used": 1562,
+      "latency_ms": 1485.4538000072353,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-003",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "Likely yes. Both Tim and John have expressed a love for fantasy novels and books that transport them to other worlds, which aligns with the themes often found in C. S. Lewis's \"The Chronicles of Narnia\" and John Greene's \"The Martian\" series.",
+      "ground_truth": "C. S.Lewis",
+      "tokens_used": 1439,
+      "latency_ms": 2509.63009998668,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-004",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "\"The Name of the Wind\" by Patrick Rothfuss, \"The Hobbit\", a popular fantasy series, Harry Potter, Game of Thrones, and a book about castles in the UK.",
+      "ground_truth": "Harry Potter, Game of Thrones, the Name of the Wind, The Alchemist, The Hobbit, A Dance with Dragons, and the Wheel of Time.",
+      "tokens_used": 1323,
+      "latency_ms": 2096.738899999764,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-005",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "A bookstore",
+      "ground_truth": "House of MinaLima",
+      "tokens_used": 1390,
+      "latency_ms": 1635.2889999980107,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-006",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "June 2023",
+      "ground_truth": "June 2023",
+      "tokens_used": 1614,
+      "latency_ms": 1640.7329000066966,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-007",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "London and California",
+      "ground_truth": "California, London, the Smoky Mountains",
+      "tokens_used": 1404,
+      "latency_ms": 1523.7187999882735,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-008",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "A renowned outdoor gear company",
+      "ground_truth": "Under Armour",
+      "tokens_used": 1597,
+      "latency_ms": 1473.5128000029363,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-009",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Nike, Gatorade, and a renowned outdoor gear company",
+      "ground_truth": "basketball shoes and gear deal with Nike, potential sponsorship with Gatorade, Moxie a popular beverage company, outdoor gear company",
+      "tokens_used": 1616,
+      "latency_ms": 1506.028600007994,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-010",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "August 2023",
+      "ground_truth": "early August, 2023",
+      "tokens_used": 1715,
+      "latency_ms": 1312.5359000114258,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-011",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "John doesn't mention liking any sports besides basketball.",
+      "ground_truth": "surfing",
+      "tokens_used": 1773,
+      "latency_ms": 2500.509100005729,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-012",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Five years ago from 2023, which would be 2018.",
+      "ground_truth": "2018",
+      "tokens_used": 1369,
+      "latency_ms": 1471.6543999966234,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-013",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Escaping reality by going on road trips, exploring and hiking, playing board games, curling up with a good book, and surfing.",
+      "ground_truth": "Read fantasy books.",
+      "tokens_used": 1360,
+      "latency_ms": 2118.0592000018805,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-014",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Fantasy novels",
+      "ground_truth": "comments on favorite books in a fantasy literature forum, articles on fantasy novels, studying characters, themes, and making book recommendations, writing a fantasy novel",
+      "tokens_used": 1546,
+      "latency_ms": 1646.0905999992974,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-015",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "John's friend",
+      "ground_truth": "likely John's friend, colleague or family",
+      "tokens_used": 1460,
+      "latency_ms": 1400.251400016714,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-016",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "2 weeks",
+      "ground_truth": "three weeks",
+      "tokens_used": 3085,
+      "latency_ms": 2714.735700021265,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-017",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "1",
+      "ground_truth": "6",
+      "tokens_used": 3305,
+      "latency_ms": 3459.5595999853685,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-018",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "J.K. Rowling, Patrick Rothfuss, and an unnamed author of a book about castles in the UK.",
+      "ground_truth": "J.K. Rowling, R.R. Martin, Patrick Rothfuss, Paulo Coelho, and J. R. R. Tolkien.",
+      "tokens_used": 1408,
+      "latency_ms": 2123.787500022445,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-019",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "A prominent charity organization that John might want to work with is one that helps disadvantaged kids with sports and school, as he plans to use his platform to have a positive impact on the community and inspire others.",
+      "ground_truth": "Good Sports, because they work with Nike, Gatorade, and Under Armour and they aim toprovide youth sports opportunities for kids ages 3-18 in high-need communities.",
+      "tokens_used": 1735,
+      "latency_ms": 2478.5393999773078,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-020",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "New York City",
+      "ground_truth": "Seattle",
+      "tokens_used": 1436,
+      "latency_ms": 1350.8444000035524,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-021",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Seattle and New York City",
+      "ground_truth": "Seattle, Chicago, New York",
+      "tokens_used": 1495,
+      "latency_ms": 1648.3663000108209,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-022",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "15th",
+      "ground_truth": "August 15, 2023",
+      "tokens_used": 1631,
+      "latency_ms": 1496.1046999960672,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-023",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Next month (September 2023)",
+      "ground_truth": "September 2023",
+      "tokens_used": 1402,
+      "latency_ms": 1682.2053999931086,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-024",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "He was on a trip.",
+      "ground_truth": "Chicago",
+      "tokens_used": 1506,
+      "latency_ms": 1906.0100999777205,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-025",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Harry Potter collectibles",
+      "ground_truth": "signed basketball",
+      "tokens_used": 1534,
+      "latency_ms": 1669.444700004533,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-026",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "\"The Wheel of Time\" and \"That\" fantasy series",
+      "ground_truth": "That, Wheel of Time",
+      "tokens_used": 1379,
+      "latency_ms": 1758.750399982091,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-027",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "Breaking it down into smaller parts",
+      "ground_truth": "Pomodoro technique",
+      "tokens_used": 1330,
+      "latency_ms": 1808.786700014025,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-028",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "Hans Zimmer",
+      "ground_truth": "John Williams",
+      "tokens_used": 1439,
+      "latency_ms": 1577.621000004001,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-029",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "4",
+      "ground_truth": "Middle school, high school, and college and he was with his high school team for 4 years.",
+      "tokens_used": 3510,
+      "latency_ms": 3429.6153000032064,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-030",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Seattle and New York City",
+      "ground_truth": "Seattle, Chicago, New York, and Paris.",
+      "tokens_used": 1595,
+      "latency_ms": 1820.0307999795768,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-031",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "September 2023",
+      "ground_truth": "September, 2023",
+      "tokens_used": 1346,
+      "latency_ms": 1500.7972000166774,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-032",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "California or Florida",
+      "ground_truth": "California or Florida",
+      "tokens_used": 1356,
+      "latency_ms": 1595.6420000002254,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-033",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Next month (October 2023)",
+      "ground_truth": "October, 2023",
+      "tokens_used": 1608,
+      "latency_ms": 1634.7589999786578,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-034",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "He could work with brands, focus on charity, or inspire others.",
+      "ground_truth": "become a basketball coach since he likes giving back and leadership",
+      "tokens_used": 1805,
+      "latency_ms": 1901.7148000129964,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-035",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Hiking and enjoying nature's beauty.",
+      "ground_truth": "Hiking, surfing",
+      "tokens_used": 1444,
+      "latency_ms": 1633.5033000214025,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-036",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "John's favorite basketball player is LeBron. Tim's favorite basketball player is not mentioned in the provided context.",
+      "ground_truth": "LeBron James",
+      "tokens_used": 1669,
+      "latency_ms": 2052.704100002302,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-037",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "The week before 13 October 2023",
+      "ground_truth": "The week before October 13th, 2023.",
+      "tokens_used": 1497,
+      "latency_ms": 1901.9338000216521,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-038",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Italy",
+      "ground_truth": "UK",
+      "tokens_used": 1327,
+      "latency_ms": 1548.81999999634,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-039",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "2022",
+      "ground_truth": "2022",
+      "tokens_used": 1337,
+      "latency_ms": 1336.6655000136234,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-040",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Yes",
+      "tokens_used": 1488,
+      "latency_ms": 1580.3593999880832,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-041",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Fantasy fiction stories",
+      "ground_truth": "Fantasy stories with plot twists",
+      "tokens_used": 1442,
+      "latency_ms": 1811.4092999894638,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-042",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Honey garlic chicken with roasted vegetables",
+      "ground_truth": "Soup, a slow cooker meal, and honey garlic chicken with roasted veg.",
+      "tokens_used": 1599,
+      "latency_ms": 1603.0727000033949,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-043",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "His heart, determination, skills, and leadership.",
+      "tokens_used": 1600,
+      "latency_ms": 1959.4177000108175,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-044",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Short but sweet. The exact date is not provided in the context.",
+      "ground_truth": "November, 2023.",
+      "tokens_used": 1629,
+      "latency_ms": 1813.1161000055727,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-045",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "United Kingdom",
+      "ground_truth": "UK",
+      "tokens_used": 1555,
+      "latency_ms": 1640.2706000080798,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-046",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "He was in the UK.",
+      "ground_truth": "UK",
+      "tokens_used": 1495,
+      "latency_ms": 1611.7518999963067,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-047",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Last week (the week before 2 October 2023)",
+      "ground_truth": "last week of September 2023",
+      "tokens_used": 1671,
+      "latency_ms": 1770.0038999901153,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-048",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Last season",
+      "ground_truth": "around November 16, 2023",
+      "tokens_used": 1555,
+      "latency_ms": 1603.5978000145406,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-049",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "1",
+      "ground_truth": "two times",
+      "tokens_used": 3193,
+      "latency_ms": 2642.7319000067655,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-050",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "\"The Alchemist\"",
+      "ground_truth": "The Alchemist",
+      "tokens_used": 1488,
+      "latency_ms": 2248.994399997173,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-051",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "Hatha Yoga",
+      "ground_truth": "Hatha Yoga",
+      "tokens_used": 1715,
+      "latency_ms": 2079.8102999979164,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-052",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "John signs up for Nike for a basketball shoe and gear deal and is in talks with Gatorade about a potential sponsorship.",
+      "ground_truth": "Yoga, strength training",
+      "tokens_used": 1739,
+      "latency_ms": 2261.98659997317,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-053",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "Strength training, agility drills, and cardio workouts.",
+      "ground_truth": "Sprinting, long-distance running, and boxing.",
+      "tokens_used": 1697,
+      "latency_ms": 1737.6175999816041,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-054",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Last year (2022)",
+      "ground_truth": "2022",
+      "tokens_used": 1544,
+      "latency_ms": 1585.78920000582,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-055",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "After college, he was drafted by a team.",
+      "ground_truth": "May, 2023",
+      "tokens_used": 1576,
+      "latency_ms": 1684.3389999994542,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-056",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "About four months ago",
+      "ground_truth": "August 2023",
+      "tokens_used": 1430,
+      "latency_ms": 1586.7158999899402,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-057",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Violin and piano",
+      "ground_truth": "piano, violin",
+      "tokens_used": 1454,
+      "latency_ms": 1679.2845999880228,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-058",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Last August",
+      "ground_truth": "August 2023.",
+      "tokens_used": 1441,
+      "latency_ms": 1565.2047999901697,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-059",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "A career-high in assists in a big game against a rival on the Friday before 11 December 2023.",
+      "ground_truth": "highest point score, highest assist",
+      "tokens_used": 1586,
+      "latency_ms": 2140.3386000019964,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-060",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "The Friday before 11 December 2023",
+      "ground_truth": "December 11, 2023",
+      "tokens_used": 1582,
+      "latency_ms": 1754.8008000012487,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-061",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "\"The Alchemist\" and a fantasy book by Patrick Rothfuss. He also mentioned George R. R. Martin's \"A Song of Ice and Fire\" series, specifically \"A Dance with Dragons.\" Additionally, he read a book that changed his perspective on his goals, but the title is not specified.",
+      "ground_truth": "inpsiring book on dreaming big, The Alchemist, fantasy series, non-fiction books on personal development, Dune",
+      "tokens_used": 1323,
+      "latency_ms": 2535.338000016054,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-062",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Mentors younger players on his team.",
+      "ground_truth": "gives seminars, mentors younger players.",
+      "tokens_used": 1536,
+      "latency_ms": 1291.5403000079095,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-063",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Last summer",
+      "ground_truth": "summer 2023",
+      "tokens_used": 1678,
+      "latency_ms": 1401.4718000253197,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-064",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "December 2023",
+      "ground_truth": "December, 2023",
+      "tokens_used": 1533,
+      "latency_ms": 1642.188099998748,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-065",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Star Wars",
+      "ground_truth": "Lord of the Rings, Harry Potter, and Star Wars.",
+      "tokens_used": 1405,
+      "latency_ms": 1847.4846000026446,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-066",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "A high fantasy novel with space adventures",
+      "ground_truth": "Star Wars: Jedi Apprentice by Judy Blundell and David Farland. It is a highly rated and immersive series about his favorite movies.",
+      "tokens_used": 1342,
+      "latency_ms": 1643.0744999961462,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-067",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "Learning a musical instrument",
+      "ground_truth": "Writing a travel blog.",
+      "tokens_used": 1341,
+      "latency_ms": 1536.1765999987256,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-068",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "February 2024",
+      "ground_truth": "Januarty 5, 2024",
+      "tokens_used": 1444,
+      "latency_ms": 1621.506799972849,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-069",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "February 2024",
+      "ground_truth": "February, 2024",
+      "tokens_used": 1334,
+      "latency_ms": 1430.8934999862686,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-070",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "Hobbits' Shire",
+      "ground_truth": "Skellig Michael, Malin Head, Loop Head, Ceann Sibéal, and Brow Head because they are Star Wars filming locations.",
+      "tokens_used": 1315,
+      "latency_ms": 1445.329199981643,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-071",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "The Minnesota Wolves",
+      "ground_truth": "The Minnesota Wolves",
+      "tokens_used": 1355,
+      "latency_ms": 1333.597999997437,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-072",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Shooting guard",
+      "ground_truth": "shooting guard",
+      "tokens_used": 1564,
+      "latency_ms": 1430.0453000178095,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-073",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Fitting into the new team's style of play",
+      "ground_truth": "fitting into the new team's style of play",
+      "tokens_used": 1629,
+      "latency_ms": 1744.253699987894,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-074",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Characters, spells, and magical creatures",
+      "ground_truth": "characters, spells, magical creatures",
+      "tokens_used": 760,
+      "latency_ms": 892.2375999973156,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-075",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A fantasy literature forum",
+      "ground_truth": "fantasy literature forum",
+      "tokens_used": 1602,
+      "latency_ms": 1423.5268000047654,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-076",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A picture from MinaLima, the creators of the Harry Potter film props",
+      "ground_truth": "MinaLima's creation from the Harry Potter films",
+      "tokens_used": 1447,
+      "latency_ms": 1700.8383000211325,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-077",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "40 points",
+      "ground_truth": "40 points",
+      "tokens_used": 1696,
+      "latency_ms": 1418.7378000060562,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-078",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A local restaurant meeting",
+      "ground_truth": "a tough win",
+      "tokens_used": 1615,
+      "latency_ms": 1614.7807000088505,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-079",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Endorsement deals",
+      "ground_truth": "basketball shoe and gear deal with Nike, potential sponsorship deal with Gatorade",
+      "tokens_used": 1537,
+      "latency_ms": 1518.3405000134371,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-080",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Seattle",
+      "ground_truth": "Seattle",
+      "tokens_used": 1574,
+      "latency_ms": 1405.1436000154354,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-081",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Five years",
+      "ground_truth": "five years",
+      "tokens_used": 3047,
+      "latency_ms": 3114.3790000060108,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-082",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Unreal feeling",
+      "ground_truth": "super exciting and free-feeling",
+      "tokens_used": 1516,
+      "latency_ms": 1677.0500999991782,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-083",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Fantasy novels",
+      "ground_truth": "different fantasy novels, characters, themes, and book recommendations",
+      "tokens_used": 1484,
+      "latency_ms": 1620.2167999872472,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-084",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "\"The Name of the Wind\" and Harry Potter",
+      "ground_truth": "Harry Potter and Game of Thrones",
+      "tokens_used": 1557,
+      "latency_ms": 1840.0439999822993,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-085",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Harry Potter trivia contest",
+      "ground_truth": "an intense Harry Potter trivia contest",
+      "tokens_used": 1700,
+      "latency_ms": 1746.6575999860652,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-086",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "He skyped with a Harry Potter fan he met in California.",
+      "ground_truth": "Characters from Harry Potter",
+      "tokens_used": 1546,
+      "latency_ms": 1761.7498000035994,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-087",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Awesome and makes hard work worth it.",
+      "ground_truth": "Awesome",
+      "tokens_used": 1503,
+      "latency_ms": 1803.2833999895956,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-088",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "His dad signed him up for a local league when he turned ten.",
+      "ground_truth": "Dad signed him up for a local league",
+      "tokens_used": 1670,
+      "latency_ms": 1858.4021000133362,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-089",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Winning a championship",
+      "ground_truth": "Winning a championship",
+      "tokens_used": 1718,
+      "latency_ms": 1900.2475999877788,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-090",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A local organization that helps disadvantaged kids with sports and school.",
+      "ground_truth": "A local organization helping disadvantaged kids with sports and school",
+      "tokens_used": 1619,
+      "latency_ms": 1813.897599990014,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-091",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "15th August, 2023",
+      "ground_truth": "Aug 15th",
+      "tokens_used": 1526,
+      "latency_ms": 1856.4808999944944,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-092",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A ball",
+      "ground_truth": "a basketball with autographs on it",
+      "tokens_used": 1762,
+      "latency_ms": 1695.51279998268,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-093",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "As a sign of friendship and love.",
+      "ground_truth": "to show their friendship and appreciation",
+      "tokens_used": 1713,
+      "latency_ms": 1721.5589999977965,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-094",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "To learn more about literature and strengthen his bond to it.",
+      "ground_truth": "to learn more about literature and create a stronger bond to it",
+      "tokens_used": 1468,
+      "latency_ms": 1785.7606000034139,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-095",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Playing the piano",
+      "ground_truth": "play the piano",
+      "tokens_used": 1418,
+      "latency_ms": 1840.031799976714,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-096",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A theme from a movie Tim enjoys.",
+      "ground_truth": "\"Harry Potter and the Philosopher's Stone\"",
+      "tokens_used": 1512,
+      "latency_ms": 1671.6493999992963,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-097",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "It was the first movie from the series and brings back great memories.",
+      "ground_truth": "Watching it with his family",
+      "tokens_used": 1433,
+      "latency_ms": 1727.7525999816135,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-098",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Home Alone",
+      "ground_truth": "\"Home Alone\"",
+      "tokens_used": 1312,
+      "latency_ms": 1411.6413000156172,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-099",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Prepping the feast and talking about what they're thankful for.",
+      "ground_truth": "Prepping the feast and talking about what they're thankful for",
+      "tokens_used": 1469,
+      "latency_ms": 1694.1224999900442,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-100",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Four years",
+      "ground_truth": "Four years",
+      "tokens_used": 3354,
+      "latency_ms": 3213.584700017236,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-101",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "He loved the energy, diversity, and food.",
+      "ground_truth": "Amazing",
+      "tokens_used": 1471,
+      "latency_ms": 2147.2718000004534,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-102",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "He mentioned NYC as a must-visit city.",
+      "ground_truth": "It's got so much to check out - the culture, food - you won't regret it.",
+      "tokens_used": 1510,
+      "latency_ms": 1746.8561999849044,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-103",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A tasty soup with sage",
+      "ground_truth": "tasty soup with sage",
+      "tokens_used": 1542,
+      "latency_ms": 1726.464399980614,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-104",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Sage",
+      "ground_truth": "sage",
+      "tokens_used": 1586,
+      "latency_ms": 1771.7637000023387,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-105",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Harry Potter stuff",
+      "ground_truth": "The Harry Potter stuff",
+      "tokens_used": 1364,
+      "latency_ms": 1543.3788000082131,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-106",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A new city",
+      "ground_truth": "a new city",
+      "tokens_used": 1416,
+      "latency_ms": 1451.6988999966998,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-107",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "New York City",
+      "ground_truth": "Edinburgh, Scotland",
+      "tokens_used": 2970,
+      "latency_ms": 2825.6338000064716,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-108",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Make a difference through charity or inspiring people.",
+      "ground_truth": "positively influence and inspire others, potentially start a foundation and engage in charity work",
+      "tokens_used": 1729,
+      "latency_ms": 2208.3571999974083,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-109",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Align them with your values and brand. Look for a company that shares your desire to make a change and help others.",
+      "ground_truth": "Ensure they align with values and brand, look for companies that share the desire to make a change and help others, make sure the endorsement feels authentic",
+      "tokens_used": 1635,
+      "latency_ms": 1913.7913000013214,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-110",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A fantasy novel by Patrick Rothfuss",
+      "ground_truth": "A fantasy novel by Patrick Rothfuss",
+      "tokens_used": 1329,
+      "latency_ms": 1612.5336000113748,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-111",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A greenhouse venue",
+      "ground_truth": "Greenhouse",
+      "tokens_used": 1636,
+      "latency_ms": 1749.5539999799803,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-112",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A cozy restaurant",
+      "ground_truth": "Cozy restaurant",
+      "tokens_used": 1610,
+      "latency_ms": 1749.4762999995146,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-113",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Minnesota Wolves",
+      "ground_truth": "The Wolves",
+      "tokens_used": 1401,
+      "latency_ms": 1618.4716999996454,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-114",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Fantasy stuff",
+      "ground_truth": "passion for fantasy stuff",
+      "tokens_used": 1585,
+      "latency_ms": 1617.473999998765,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-115",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Intense with both tough losses and great wins. Overall, they did pretty well.",
+      "ground_truth": "intense with tough losses and great wins",
+      "tokens_used": 1480,
+      "latency_ms": 2007.396200002404,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-116",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "They back each other up and won't quit.",
+      "ground_truth": "by backing each other up and not quitting",
+      "tokens_used": 1661,
+      "latency_ms": 1679.5776000071783,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-117",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Backing each other up",
+      "ground_truth": "facing tough opponents",
+      "tokens_used": 1600,
+      "latency_ms": 1702.1321000065655,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-118",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "A tough game",
+      "ground_truth": "a trophy",
+      "tokens_used": 1616,
+      "latency_ms": 1436.5790000010747,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-119",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "The Smoky Mountains",
+      "ground_truth": "Smoky Mountains",
+      "tokens_used": 1256,
+      "latency_ms": 1508.13069997821,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-120",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Very rewarding",
+      "ground_truth": "It feels great",
+      "tokens_used": 1592,
+      "latency_ms": 1414.492000010796,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-121",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Seeing their growth and making a positive impact",
+      "ground_truth": "Seeing their growth, improvement, and confidence",
+      "tokens_used": 1654,
+      "latency_ms": 1612.9364999942482,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-122",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Improvement and confidence",
+      "ground_truth": "reach their goals",
+      "tokens_used": 1659,
+      "latency_ms": 1682.7391999831889,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-123",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Fantasy",
+      "ground_truth": "Fantasy",
+      "tokens_used": 1552,
+      "latency_ms": 1670.7659999956377,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-124",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "J.K. Rowling",
+      "ground_truth": "J.K. Rowling",
+      "tokens_used": 1549,
+      "latency_ms": 1646.8177000060678,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-125",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "\"Turn on the light - happiness hides in the darkest of times.\"",
+      "ground_truth": "\"Turn on the light - happiness hides in the darkest of times.\"",
+      "tokens_used": 1388,
+      "latency_ms": 1668.158400018001,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-126",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Motivational quotes and strategies",
+      "ground_truth": "motivational quotes and strategies",
+      "tokens_used": 1615,
+      "latency_ms": 1654.6225000056438,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-127",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Cooking",
+      "ground_truth": "Cooking",
+      "tokens_used": 1746,
+      "latency_ms": 1740.0659999984782,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-128",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Honey garlic chicken with roasted vegetables",
+      "ground_truth": "honey garlic chicken with roasted veg",
+      "tokens_used": 1576,
+      "latency_ms": 1765.7042999926489,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-129",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "He will write it down and mail it to them.",
+      "ground_truth": "write it down and mail it",
+      "tokens_used": 1479,
+      "latency_ms": 1861.2312000186648,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-130",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "He got stuck on a plot twist.",
+      "ground_truth": "He got stuck on a plot twist",
+      "tokens_used": 1658,
+      "latency_ms": 1792.601499997545,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-131",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A basketball signed by his favorite player.",
+      "ground_truth": "a basketball signed by his favorite player",
+      "tokens_used": 1446,
+      "latency_ms": 1667.2917999967467,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-132",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "LeBron's determination, heart, and leadership on the basketball court.",
+      "ground_truth": "LeBron's determination and the epic block in Game 7 of the '16 Finals",
+      "tokens_used": 1530,
+      "latency_ms": 1773.4982999973,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-133",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Spectacular and beautiful",
+      "ground_truth": "Spectacular",
+      "tokens_used": 1466,
+      "latency_ms": 1768.7536000157706,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-134",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "\"That\" fantasy series",
+      "ground_truth": "\"That\"",
+      "tokens_used": 1448,
+      "latency_ms": 1492.3724999825936,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-135",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "He breaks up studying into smaller parts, 25 minutes on, then 5 minutes off for something fun.",
+      "ground_truth": "Visualizing goals and success",
+      "tokens_used": 1364,
+      "latency_ms": 1682.6969000103418,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-136",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "He mentioned it was a bummer.",
+      "ground_truth": "The doctor said it's not too serious",
+      "tokens_used": 1548,
+      "latency_ms": 1665.8752000075765,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-137",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "He tried writing a story based on his experiences in the UK, but it didn't go as planned.",
+      "ground_truth": "Story based on experiences in the UK didn't go as planned",
+      "tokens_used": 880,
+      "latency_ms": 1053.0810999916866,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-138",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "He focused on recovery and strengthened his body.",
+      "ground_truth": "stayed focused on recovery and worked hard to strengthen his body",
+      "tokens_used": 1632,
+      "latency_ms": 1742.161300004227,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-139",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "His love for writing and reading.",
+      "ground_truth": "Love for writing and reading",
+      "tokens_used": 1515,
+      "latency_ms": 1608.2376000122167,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-140",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "He worked hard to get better.",
+      "ground_truth": "Worked hard to get better and focused on growth",
+      "tokens_used": 1839,
+      "latency_ms": 1953.4649999986868,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-141",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "\"The Alchemist\"",
+      "ground_truth": "The Alchemist",
+      "tokens_used": 1437,
+      "latency_ms": 1531.9714000215754,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-142",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "It motivated him to keep chasing his dreams and trust the process.",
+      "ground_truth": "made him think again about following dreams and searching for personal legends",
+      "tokens_used": 1473,
+      "latency_ms": 1750.6173999863677,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-143",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Yoga",
+      "ground_truth": "yoga",
+      "tokens_used": 1646,
+      "latency_ms": 1643.5079000075348,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-144",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "30-60 seconds",
+      "ground_truth": "30-60 seconds",
+      "tokens_used": 3097,
+      "latency_ms": 3065.2521000010893,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-145",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Near his hometown",
+      "ground_truth": "near his hometown",
+      "tokens_used": 1539,
+      "latency_ms": 1750.9254000033252,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-146",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Learning an instrument.",
+      "ground_truth": "an instrument",
+      "tokens_used": 1583,
+      "latency_ms": 1864.5932999788783,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-147",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Violin",
+      "ground_truth": "violin",
+      "tokens_used": 1304,
+      "latency_ms": 1555.2209000161383,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-148",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "About four months",
+      "ground_truth": "about four months",
+      "tokens_used": 2867,
+      "latency_ms": 2554.0405999927316,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-149",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A Dance with Dragons",
+      "ground_truth": "\"A Dance with Dragons\"",
+      "tokens_used": 1228,
+      "latency_ms": 1748.0544999998529,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-150",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "\"A Dance with Dragons\"",
+      "ground_truth": "\"A Dance with Dragons\"",
+      "tokens_used": 1302,
+      "latency_ms": 1574.4914000097197,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-151",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Harry Potter party",
+      "ground_truth": "Academic achievements and sports successes",
+      "tokens_used": 1518,
+      "latency_ms": 1757.1622999967076,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-152",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Basketball",
+      "ground_truth": "basketball",
+      "tokens_used": 1558,
+      "latency_ms": 1531.6060000041034,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-153",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Practicing basketball outside for hours",
+      "ground_truth": "practicing basketball outside for hours",
+      "tokens_used": 1690,
+      "latency_ms": 1869.0474999893922,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-154",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Electric and thrilling",
+      "ground_truth": "electric and intense",
+      "tokens_used": 1539,
+      "latency_ms": 1639.5157000224572,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-155",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Relieved and successful",
+      "ground_truth": "It was a huge success.",
+      "tokens_used": 1463,
+      "latency_ms": 1631.0582000005525,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-156",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A deal with a renowned outdoor gear company",
+      "ground_truth": "Deal with a renowned outdoor gear company",
+      "tokens_used": 1398,
+      "latency_ms": 1498.17219999386,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-157",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "In a forest",
+      "ground_truth": "In a gorgeous forest",
+      "tokens_used": 1563,
+      "latency_ms": 1535.1676999998745,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-158",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Communication and bonding",
+      "ground_truth": "Communication and bonding",
+      "tokens_used": 1547,
+      "latency_ms": 1685.3222000063397,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-159",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Sports and marketing seminars",
+      "ground_truth": "Sports and marketing seminars",
+      "tokens_used": 1494,
+      "latency_ms": 1645.3098000201862,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-160",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "He used it to plan his next adventure.",
+      "ground_truth": "visited a travel agency",
+      "tokens_used": 1306,
+      "latency_ms": 1681.0744999966118,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-161",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Supporting youth sports and fighting for fair chances in sports for underserved communities.",
+      "ground_truth": "youth sports and fair chances in sports",
+      "tokens_used": 1556,
+      "latency_ms": 1788.2722000067588,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-162",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A new fantasy TV series coming out in January 2024",
+      "ground_truth": "\"The Wheel of Time\"",
+      "tokens_used": 1468,
+      "latency_ms": 1760.688400012441,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-163",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "German",
+      "ground_truth": "German",
+      "tokens_used": 1466,
+      "latency_ms": 1263.6047000123654,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-164",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Spanish",
+      "ground_truth": "Spanish",
+      "tokens_used": 1387,
+      "latency_ms": 1365.85910001304,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-165",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "An awesome book about Italy",
+      "ground_truth": "a cooking book",
+      "tokens_used": 1514,
+      "latency_ms": 1746.2398000061512,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-166",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Harry Potter",
+      "ground_truth": "Harry Potter",
+      "tokens_used": 1303,
+      "latency_ms": 1730.4488999943715,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-167",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Aragorn",
+      "ground_truth": "Aragorn",
+      "tokens_used": 1528,
+      "latency_ms": 1624.4839999999385,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-168",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Aragorn's brave, selfless, and inspiring journey.",
+      "ground_truth": "brave, selfless, down-to-earth attitude",
+      "tokens_used": 1586,
+      "latency_ms": 1783.8840000040364,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-169",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A painting to remind him to stay true and be a leader.",
+      "ground_truth": "a painting of Aragorn",
+      "tokens_used": 1635,
+      "latency_ms": 1729.3570000038017,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-170",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "To stay true and be a leader",
+      "ground_truth": "be a leader",
+      "tokens_used": 1542,
+      "latency_ms": 1505.8839000121225,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-171",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "A map of Middle-earth",
+      "ground_truth": "a map of Middle-earth from LOTR",
+      "tokens_used": 1470,
+      "latency_ms": 1508.7829999974929,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-172",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Ireland",
+      "ground_truth": "Ireland",
+      "tokens_used": 1329,
+      "latency_ms": 1407.8372000076342,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-173",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Galway",
+      "ground_truth": "Galway",
+      "tokens_used": 1307,
+      "latency_ms": 1399.5750000176486,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-174",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A benefit basketball game",
+      "ground_truth": "benefit basketball game",
+      "tokens_used": 1522,
+      "latency_ms": 1543.113199993968,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-175",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "He joined a group of globetrotters.",
+      "ground_truth": "endorsement with a popular beverage company",
+      "tokens_used": 1308,
+      "latency_ms": 1633.284299983643,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-176",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "It felt crazy.",
+      "ground_truth": "crazy feeling, sense of accomplishment",
+      "tokens_used": 1268,
+      "latency_ms": 1581.9600000104401,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-177",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Barcelona",
+      "ground_truth": "Barcelona",
+      "tokens_used": 1248,
+      "latency_ms": 1123.6161999986507,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-178",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 1166,
+      "latency_ms": 1572.5019999954384,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-179",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1322,
+      "latency_ms": 1137.1396000031382,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-180",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Fitting into the new team's style of play was a challenge during pre-season.",
+      "ground_truth": "",
+      "tokens_used": 1285,
+      "latency_ms": 1324.539299996104,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-181",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 1588,
+      "latency_ms": 1387.841900024796,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-182",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 1545,
+      "latency_ms": 1650.123800005531,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-183",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "A dance",
+      "ground_truth": "",
+      "tokens_used": 1364,
+      "latency_ms": 1635.3944000147749,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-184",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Endorsement deals",
+      "ground_truth": "",
+      "tokens_used": 1403,
+      "latency_ms": 1519.7552000172436,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-185",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Blissful and connected to another world",
+      "ground_truth": "",
+      "tokens_used": 1355,
+      "latency_ms": 1578.92100000754,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-186",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Fantasy novels",
+      "ground_truth": "",
+      "tokens_used": 1610,
+      "latency_ms": 1532.061000005342,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-187",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Harry Potter and Game of Thrones",
+      "ground_truth": "",
+      "tokens_used": 1542,
+      "latency_ms": 1699.5996999903582,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-188",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "A game of basketball",
+      "ground_truth": "",
+      "tokens_used": 1623,
+      "latency_ms": 1699.8028999951202,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-189",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "He watched NBA games with his dad.",
+      "ground_truth": "",
+      "tokens_used": 1477,
+      "latency_ms": 1565.3737999964505,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-190",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Winning a championship",
+      "ground_truth": "",
+      "tokens_used": 1372,
+      "latency_ms": 1709.6616000053473,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-191",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1399,
+      "latency_ms": 1756.691199989291,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-192",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "A ball to remind him of the bond and support.",
+      "ground_truth": "",
+      "tokens_used": 1550,
+      "latency_ms": 1780.0175000156742,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-193",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "As a sign of friendship and love.",
+      "ground_truth": "",
+      "tokens_used": 1648,
+      "latency_ms": 1770.8931999804918,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-194",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "To meet new people and share his passion for books.",
+      "ground_truth": "",
+      "tokens_used": 1428,
+      "latency_ms": 1778.4194000123534,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-195",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Learning how to play the piano",
+      "ground_truth": "",
+      "tokens_used": 1477,
+      "latency_ms": 1737.8668999881484,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-196",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1591,
+      "latency_ms": 2163.527199998498,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-197",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1395,
+      "latency_ms": 1717.6471999846399,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-198",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1485,
+      "latency_ms": 1636.8721000035293,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-199",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Four years",
+      "ground_truth": "",
+      "tokens_used": 3182,
+      "latency_ms": 3071.7698999796994,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-200",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1485,
+      "latency_ms": 1984.9309000128414,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-201",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1288,
+      "latency_ms": 1455.0240999960806,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-202",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1378,
+      "latency_ms": 1601.7061999882571,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-203",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "They are not planning to avoid any specific location on the team trip.",
+      "ground_truth": "",
+      "tokens_used": 1459,
+      "latency_ms": 1712.4160999956075,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-204",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "He wants to focus on life after basketball.",
+      "ground_truth": "",
+      "tokens_used": 1496,
+      "latency_ms": 1713.8844000000972,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-205",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "A greenhouse venue",
+      "ground_truth": "",
+      "tokens_used": 1639,
+      "latency_ms": 1780.222200002754,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-206",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Traveling and experiencing different cultures",
+      "ground_truth": "",
+      "tokens_used": 1642,
+      "latency_ms": 1836.4415999967605,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-207",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "They back each other up and won't quit.",
+      "ground_truth": "",
+      "tokens_used": 1327,
+      "latency_ms": 1651.399800000945,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-208",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 1251,
+      "latency_ms": 1334.9636000057217,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-209",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1439,
+      "latency_ms": 1469.1746000025887,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-210",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Mentoring",
+      "ground_truth": "",
+      "tokens_used": 1491,
+      "latency_ms": 1794.7529000230134,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-211",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Fantasy",
+      "ground_truth": "",
+      "tokens_used": 1563,
+      "latency_ms": 1698.8274000177626,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-212",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "LeBron James",
+      "ground_truth": "",
+      "tokens_used": 1451,
+      "latency_ms": 1626.1305999942124,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-213",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Motivational quotes and strategies",
+      "ground_truth": "",
+      "tokens_used": 1424,
+      "latency_ms": 1617.360899981577,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-214",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Cooking",
+      "ground_truth": "",
+      "tokens_used": 1355,
+      "latency_ms": 1621.5427999850363,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-215",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1448,
+      "latency_ms": 1496.4494000014383,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-216",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1450,
+      "latency_ms": 1772.7058999880683,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-217",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "NCIS",
+      "ground_truth": "",
+      "tokens_used": 1459,
+      "latency_ms": 1610.3939000167884,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-218",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "He tried writing a story based on his experiences.",
+      "ground_truth": "",
+      "tokens_used": 874,
+      "latency_ms": 1148.5376000055112,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-219",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "He underwent physical therapy.",
+      "ground_truth": "",
+      "tokens_used": 1351,
+      "latency_ms": 1638.1852000195067,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-220",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "His passion for writing and reading.",
+      "ground_truth": "",
+      "tokens_used": 1561,
+      "latency_ms": 1809.0809999848716,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-221",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "He worked hard to get better.",
+      "ground_truth": "",
+      "tokens_used": 1602,
+      "latency_ms": 1914.2120000033174,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-222",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1418,
+      "latency_ms": 1618.9354000089224,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-223",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Learning an instrument",
+      "ground_truth": "",
+      "tokens_used": 1613,
+      "latency_ms": 1746.6497999848798,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-224",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Violin",
+      "ground_truth": "",
+      "tokens_used": 1448,
+      "latency_ms": 1507.0255000027828,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-225",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Less than a year",
+      "ground_truth": "",
+      "tokens_used": 3025,
+      "latency_ms": 2719.8232999944594,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-226",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "A Dance with Dragons",
+      "ground_truth": "",
+      "tokens_used": 1203,
+      "latency_ms": 1942.8476999746636,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-227",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Basketball",
+      "ground_truth": "",
+      "tokens_used": 1400,
+      "latency_ms": 1509.2955000000075,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-228",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Practicing basketball outside for hours",
+      "ground_truth": "",
+      "tokens_used": 1492,
+      "latency_ms": 1664.8382999992464,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-229",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "In a forest",
+      "ground_truth": "",
+      "tokens_used": 1547,
+      "latency_ms": 1729.7767999989446,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-230",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1270,
+      "latency_ms": 1588.939700013725,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-231",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Sports and motivational seminars",
+      "ground_truth": "",
+      "tokens_used": 1313,
+      "latency_ms": 1488.2109000172932,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-232",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 1666,
+      "latency_ms": 1674.7005000070203,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-233",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "The Wheel of Time",
+      "ground_truth": "",
+      "tokens_used": 1372,
+      "latency_ms": 1429.0711000212468,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-234",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "German",
+      "ground_truth": "",
+      "tokens_used": 1483,
+      "latency_ms": 1455.1461999944877,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-235",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 1528,
+      "latency_ms": 1618.821099982597,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-236",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Aragorn's brave, selfless, down-to-earth attitude inspires Tim.",
+      "ground_truth": "",
+      "tokens_used": 1488,
+      "latency_ms": 1863.8423999946099,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-237",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "A painting of an inspiring journey",
+      "ground_truth": "",
+      "tokens_used": 1375,
+      "latency_ms": 1551.3190999918152,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-238",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "True.",
+      "ground_truth": "",
+      "tokens_used": 1492,
+      "latency_ms": 1510.1211000001058,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-239",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1482,
+      "latency_ms": 1417.6165999961086,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-43-qa-240",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "A benefit basketball game",
+      "ground_truth": "",
+      "tokens_used": 1426,
+      "latency_ms": 1787.509499990847,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-43-qa-241",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1297,
+      "latency_ms": 1803.0377000104636,
+      "is_correct": true
+    }
+  ]
+}

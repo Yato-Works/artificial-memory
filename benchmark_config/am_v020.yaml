@@ -1,0 +1,37 @@
+# Artificial Memory (v0.2.0) Configuration
+# Frozen architecture specification
+
+player:
+  name: "Artificial Memory (AM v0.2.0)"
+  class: "controlled"
+  version: "0.2.0"
+
+architecture:
+  type: "hierarchical_cognitive_memory"
+  tiers:
+    - episodic: "conversation_turns_and_episodes"
+    - semantic: "extracted_facts_and_propositions"
+    - working: "active_context_buffer"
+
+write_pipeline:
+  llm_calls_per_turn: 0  # 100% deterministic local extraction and consolidation
+  entity_resolution: "deterministic_normalized"
+  memory_formation: "dual_store_sqlite_faiss"
+
+retrieval_pipeline:
+  strategy: "deepseek_session"
+  candidate_window: 1000
+  session_gate:
+    abstention_threshold: 6.15
+    pool_size: 40
+    max_sessions: 4
+  level: 2
+  reranking: "cross_attention_latent"
+
+budget:
+  context_budget_tokens: 2000
+  enforcement: "strict"
+
+llm_accounting:
+  count_write_calls: true
+  count_read_calls: true

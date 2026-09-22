@@ -1,0 +1,92 @@
+{
+  "P4-Full (All Signals)": {
+    "ablation": "P4-Full (All Signals)",
+    "weights": {
+      "w_s": 1.0,
+      "w_e": 2.5,
+      "w_t": 1.5,
+      "w_r": 1.2,
+      "w_g": 1.0
+    },
+    "accuracy": 47.5,
+    "evidence_recall": 62.5,
+    "mean_tokens": 1624.25,
+    "latency_ms": 1546.0366650000026,
+    "elapsed_seconds": 61.8414666000001
+  },
+  "P4 - Semantic (w_s=0)": {
+    "ablation": "P4 - Semantic (w_s=0)",
+    "weights": {
+      "w_s": 0.0,
+      "w_e": 2.5,
+      "w_t": 1.5,
+      "w_r": 1.2,
+      "w_g": 1.0
+    },
+    "accuracy": 45.0,
+    "evidence_recall": 60.0,
+    "mean_tokens": 1426.8,
+    "latency_ms": 1219.4346699999983,
+    "elapsed_seconds": 48.77738679999993
+  },
+  "P4 - Entity (w_e=0)": {
+    "ablation": "P4 - Entity (w_e=0)",
+    "weights": {
+      "w_s": 1.0,
+      "w_e": 0.0,
+      "w_t": 1.5,
+      "w_r": 1.2,
+      "w_g": 1.0
+    },
+    "accuracy": 47.5,
+    "evidence_recall": 62.5,
+    "mean_tokens": 1624.25,
+    "latency_ms": 1381.1156975000017,
+    "elapsed_seconds": 55.24462790000007
+  },
+  "P4 - Temporal (w_t=0)": {
+    "ablation": "P4 - Temporal (w_t=0)",
+    "weights": {
+      "w_s": 1.0,
+      "w_e": 2.5,
+      "w_t": 0.0,
+      "w_r": 1.2,
+      "w_g": 1.0
+    },
+    "accuracy": 47.5,
+    "evidence_recall": 62.5,
+    "mean_tokens": 1624.25,
+    "latency_ms": 1376.592037499995,
+    "elapsed_seconds": 55.0636814999998
+  },
+  "P4 - Relation (w_r=0)": {
+    "ablation": "P4 - Relation (w_r=0)",
+    "weights": {
+      "w_s": 1.0,
+      "w_e": 2.5,
+      "w_t": 1.5,
+      "w_r": 0.0,
+      "w_g": 1.0
+    },
+    "accuracy": 52.5,
+    "evidence_recall": 67.5,
+    "mean_tokens": 1598.65,
+    "latency_ms": 1359.246082499999,
+    "elapsed_seconds": 54.36984329999996
+  },
+  "P4 - Graph (w_g=0)": {
+    "ablation": "P4 - Graph (w_g=0)",
+    "weights": {
+      "w_s": 1.0,
+      "w_e": 2.5,
+      "w_t": 1.5,
+      "w_r": 1.2,
+      "w_g": 0.0
+    },
+    "accuracy": 47.5,
+    "evidence_recall": 62.5,
+    "mean_tokens": 1624.25,
+    "latency_ms": 1400.9558524999989,
+    "elapsed_seconds": 56.038234099999954
+  }
+}

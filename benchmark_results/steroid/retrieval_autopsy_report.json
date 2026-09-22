@@ -1,0 +1,389 @@
+{
+  "total_failures": 1423,
+  "combined_breakdown": {
+    "TEMPORAL_ANCHOR_MISMATCH": 106,
+    "MULTI_HOP_GAP": 235,
+    "LEXICAL_MISMATCH": 346,
+    "CANDIDATE_WINDOW_CUTOFF": 121,
+    "ENTITY_ALIAS_MISMATCH": 269,
+    "HAYSTACK_SESSION_DROP": 346
+  },
+  "locomo": {
+    "total": 1077,
+    "breakdown": {
+      "TEMPORAL_ANCHOR_MISMATCH": 106,
+      "MULTI_HOP_GAP": 235,
+      "LEXICAL_MISMATCH": 346,
+      "CANDIDATE_WINDOW_CUTOFF": 121,
+      "ENTITY_ALIAS_MISMATCH": 269
+    },
+    "samples": [
+      {
+        "conv_idx": 0,
+        "question_id": "conv-26-qa-001",
+        "question": "When did Melanie paint a sunrise?",
+        "ground_truth": "2022",
+        "evidence_ids": [
+          "D1:12"
+        ],
+        "cause": "TEMPORAL_ANCHOR_MISMATCH"
+      },
+      {
+        "conv_idx": 0,
+        "question_id": "conv-26-qa-002",
+        "question": "What fields would Caroline be likely to pursue in her educaton?",
+        "ground_truth": "Psychology, counseling certification",
+        "evidence_ids": [
+          "D1:9",
+          "D1:11"
+        ],
+        "cause": "MULTI_HOP_GAP"
+      },
+      {
+        "conv_idx": 0,
+        "question_id": "conv-26-qa-004",
+        "question": "What is Caroline's identity?",
+        "ground_truth": "Transgender woman",
+        "evidence_ids": [
+          "D1:5"
+        ],
+        "cause": "LEXICAL_MISMATCH"
+      },
+      {
+        "conv_idx": 0,
+        "question_id": "conv-26-qa-010",
+        "question": "How long has Caroline had her current group of friends for?",
+        "ground_truth": "4 years",
+        "evidence_ids": [
+          "D3:13"
+        ],
+        "cause": "CANDIDATE_WINDOW_CUTOFF"
+      },
+      {
+        "conv_idx": 0,
+        "question_id": "conv-26-qa-019",
+        "question": "What do Melanie's kids like?",
+        "ground_truth": "dinosaurs, nature",
+        "evidence_ids": [
+          "D6:6",
+          "D4:8"
+        ],
+        "cause": "MULTI_HOP_GAP"
+      },
+      {
+        "conv_idx": 0,
+        "question_id": "conv-26-qa-022",
+        "question": "Would Caroline likely have Dr. Seuss books on her bookshelf?",
+        "ground_truth": "Yes, since she collects classic children's books",
+        "evidence_ids": [
+          "D6:9"
+        ],
+        "cause": "LEXICAL_MISMATCH"
+      },
+      {
+        "conv_idx": 0,
+        "question_id": "conv-26-qa-024",
+        "question": "What does Melanie do to destress?",
+        "ground_truth": "Running, pottery",
+        "evidence_ids": [
+          "D7:22",
+          "D5:4"
+        ],
+        "cause": "MULTI_HOP_GAP"
+      },
+      {
+        "conv_idx": 0,
+        "question_id": "conv-26-qa-027",
+        "question": "Would Caroline pursue writing as a career option?",
+        "ground_truth": "LIkely no; though she likes reading, she wants to be a counselor",
+        "evidence_ids": [
+          "D7:5",
+          "D7:9"
+        ],
+        "cause": "MULTI_HOP_GAP"
+      },
+      {
+        "conv_idx": 0,
+        "question_id": "conv-26-qa-031",
+        "question": "When did Melanie go camping in June?",
+        "ground_truth": "The week before 27 June 2023",
+        "evidence_ids": [
+          "D4:8"
+        ],
+        "cause": "TEMPORAL_ANCHOR_MISMATCH"
+      },
+      {
+        "conv_idx": 0,
+        "question_id": "conv-26-qa-032",
+        "question": "What LGBTQ+ events has Caroline participated in?",
+        "ground_truth": "Pride parade, school speech, support group",
+        "evidence_ids": [
+          "D5:1",
+          "D8:17",
+          "D3:1",
+          "D1:3"
+        ],
+        "cause": "MULTI_HOP_GAP"
+      },
+      {
+        "conv_idx": 0,
+        "question_id": "conv-26-qa-034",
+        "question": "What events has Caroline participated in to help children?",
+        "ground_truth": "Mentoring program, school speech",
+        "evidence_ids": [
+          "D9:2",
+          "D3:3"
+        ],
+        "cause": "MULTI_HOP_GAP"
+      },
+      {
+        "conv_idx": 0,
+        "question_id": "conv-26-qa-037",
+        "question": "What did Melanie paint recently?",
+        "ground_truth": "sunset",
+        "evidence_ids": [
+          "D8:6; D9:17"
+        ],
+        "cause": "CANDIDATE_WINDOW_CUTOFF"
+      },
+      {
+        "conv_idx": 0,
+        "question_id": "conv-26-qa-038",
+        "question": "What activities has Melanie done with her family?",
+        "ground_truth": "Pottery, painting, camping, museum, swimming, hiking",
+        "evidence_ids": [
+          "D8:4",
+          "D8:6",
+          "D9:1",
+          "D6:4",
+          "D1:18",
+          "D3:14"
+        ],
+        "cause": "MULTI_HOP_GAP"
+      },
+      {
+        "conv_idx": 0,
+        "question_id": "conv-26-qa-040",
+        "question": "How many times has Melanie gone to the beach in 2023?",
+        "ground_truth": "2",
+        "evidence_ids": [
+          "D10:8",
+          "D6:16"
+        ],
+        "cause": "MULTI_HOP_GAP"
+      },
+      {
+        "conv_idx": 0,
+        "question_id": "conv-26-qa-042",
+        "question": "Would Melanie be more interested in going to a national park or a theme park?",
+        "ground_truth": "National park; she likes the outdoors",
+        "evidence_ids": [
+          "D10:12",
+          "D10:14"
+        ],
+        "cause": "MULTI_HOP_GAP"
+      },
+      {
+        "conv_idx": 0,
+        "question_id": "conv-26-qa-043",
+        "question": "What kind of art does Caroline make?",
+        "ground_truth": "abstract art",
+        "evidence_ids": [
+          "D11:12",
+          "D11:8",
+          "D9:14"
+        ],
+        "cause": "MULTI_HOP_GAP"
+      },
+      {
+        "conv_idx": 0,
+        "question_id": "conv-26-qa-049",
+        "question": "When did Caroline and Melanie go to a pride fesetival together?",
+        "ground_truth": "2022",
+        "evidence_ids": [
+          "D12:15"
+        ],
+        "cause": "TEMPORAL_ANCHOR_MISMATCH"
+      },
+      {
+        "conv_idx": 0,
+        "question_id": "conv-26-qa-050",
+        "question": "What would Caroline's political leaning likely be?",
+        "ground_truth": "Liberal",
+        "evidence_ids": [
+          "D12:1"
+        ],
+        "cause": "LEXICAL_MISMATCH"
+      },
+      {
+        "conv_idx": 0,
+        "question_id": "conv-26-qa-055",
+        "question": "What subject have Caroline and Melanie both painted?",
+        "ground_truth": "Sunsets",
+        "evidence_ids": [
+          "D14:5",
+          "D8:6"
+        ],
+        "cause": "MULTI_HOP_GAP"
+      },
+      {
+        "conv_idx": 0,
+        "question_id": "conv-26-qa-057",
+        "question": "When did Caroline encounter people on a hike and have a negative experience?",
+        "ground_truth": "The week before 25 August 2023",
+        "evidence_ids": [
+          "D14:1"
+        ],
+        "cause": "TEMPORAL_ANCHOR_MISMATCH"
+      }
+    ]
+  },
+  "longmemeval": {
+    "total": 346,
+    "breakdown": {
+      "HAYSTACK_SESSION_DROP": 346
+    },
+    "samples": [
+      {
+        "question_id": "118b2229",
+        "question_type": "single-session-user",
+        "question": "How long is my daily commute to work?",
+        "ground_truth": "45 minutes each way",
+        "cause": "HAYSTACK_SESSION_DROP"
+      },
+      {
+        "question_id": "58bf7951",
+        "question_type": "single-session-user",
+        "question": "What play did I attend at the local community theater?",
+        "ground_truth": "The Glass Menagerie",
+        "cause": "HAYSTACK_SESSION_DROP"
+      },
+      {
+        "question_id": "c5e8278d",
+        "question_type": "single-session-user",
+        "question": "What was my last name before I changed it?",
+        "ground_truth": "Johnson",
+        "cause": "HAYSTACK_SESSION_DROP"
+      },
+      {
+        "question_id": "6ade9755",
+        "question_type": "single-session-user",
+        "question": "Where do I take yoga classes?",
+        "ground_truth": "Serenity Yoga",
+        "cause": "HAYSTACK_SESSION_DROP"
+      },
+      {
+        "question_id": "58ef2f1c",
+        "question_type": "single-session-user",
+        "question": "When did I volunteer at the local animal shelter's fundraising dinner?",
+        "ground_truth": "February 14th",
+        "cause": "HAYSTACK_SESSION_DROP"
+      },
+      {
+        "question_id": "f8c5f88b",
+        "question_type": "single-session-user",
+        "question": "Where did I buy my new tennis racket from?",
+        "ground_truth": "the sports store downtown",
+        "cause": "HAYSTACK_SESSION_DROP"
+      },
+      {
+        "question_id": "5d3d2817",
+        "question_type": "single-session-user",
+        "question": "What was my previous occupation?",
+        "ground_truth": "Marketing specialist at a small startup",
+        "cause": "HAYSTACK_SESSION_DROP"
+      },
+      {
+        "question_id": "3b6f954b",
+        "question_type": "single-session-user",
+        "question": "Where did I attend for my study abroad program?",
+        "ground_truth": "University of Melbourne in Australia",
+        "cause": "HAYSTACK_SESSION_DROP"
+      },
+      {
+        "question_id": "66f24dbb",
+        "question_type": "single-session-user",
+        "question": "What did I buy for my sister's birthday gift?",
+        "ground_truth": "a yellow dress",
+        "cause": "HAYSTACK_SESSION_DROP"
+      },
+      {
+        "question_id": "ad7109d1",
+        "question_type": "single-session-user",
+        "question": "What speed is my new internet plan?",
+        "ground_truth": "500 Mbps",
+        "cause": "HAYSTACK_SESSION_DROP"
+      },
+      {
+        "question_id": "6b168ec8",
+        "question_type": "single-session-user",
+        "question": "How many bikes do I own?",
+        "ground_truth": "three",
+        "cause": "HAYSTACK_SESSION_DROP"
+      },
+      {
+        "question_id": "75499fd8",
+        "question_type": "single-session-user",
+        "question": "What breed is my dog?",
+        "ground_truth": "Golden Retriever",
+        "cause": "HAYSTACK_SESSION_DROP"
+      },
+      {
+        "question_id": "0862e8bf",
+        "question_type": "single-session-user",
+        "question": "What is the name of my cat?",
+        "ground_truth": "Luna",
+        "cause": "HAYSTACK_SESSION_DROP"
+      },
+      {
+        "question_id": "a06e4cfe",
+        "question_type": "single-session-user",
+        "question": "What is my preferred gin-to-vermouth ratio for a classic gin martini?",
+        "ground_truth": "3:1",
+        "cause": "HAYSTACK_SESSION_DROP"
+      },
+      {
+        "question_id": "37d43f65",
+        "question_type": "single-session-user",
+        "question": "How much RAM did I upgrade my laptop to?",
+        "ground_truth": "16GB",
+        "cause": "HAYSTACK_SESSION_DROP"
+      },
+      {
+        "question_id": "b86304ba",
+        "question_type": "single-session-user",
+        "question": "How much is the painting of a sunset worth in terms of the amount I paid for it?",
+        "ground_truth": "The painting is worth triple what I paid for it.",
+        "cause": "HAYSTACK_SESSION_DROP"
+      },
+      {
+        "question_id": "25e5aa4f",
+        "question_type": "single-session-user",
+        "question": "Where did I complete my Bachelor's degree in Computer Science?",
+        "ground_truth": "University of California, Los Angeles (UCLA)",
+        "cause": "HAYSTACK_SESSION_DROP"
+      },
+      {
+        "question_id": "ccb36322",
+        "question_type": "single-session-user",
+        "question": "What is the name of the music streaming service have I been using lately?",
+        "ground_truth": "Spotify",
+        "cause": "HAYSTACK_SESSION_DROP"
+      },
+      {
+        "question_id": "b320f3f8",
+        "question_type": "single-session-user",
+        "question": "What type of action figure did I buy from a thrift store?",
+        "ground_truth": "a blue Snaggletooth",
+        "cause": "HAYSTACK_SESSION_DROP"
+      },
+      {
+        "question_id": "4100d0a0",
+        "question_type": "single-session-user",
+        "question": "What is my ethnicity?",
+        "ground_truth": "A mix of Irish and Italian",
+        "cause": "HAYSTACK_SESSION_DROP"
+      }
+    ]
+  }
+}

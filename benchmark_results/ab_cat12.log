@@ -1,0 +1,18 @@
+questions: 603 (cat1=282, cat2=321)
+[50/603] baseline=62.0% temporal_v1=55.6% multihop_v1=69.6%
+[100/603] baseline=62.0% temporal_v1=63.2% multihop_v1=67.4%
+[150/603] baseline=63.3% temporal_v1=66.2% multihop_v1=67.1%
+[200/603] baseline=55.5% temporal_v1=53.0% multihop_v1=65.1%
+[250/603] baseline=52.0% temporal_v1=50.0% multihop_v1=58.5%
+[300/603] baseline=51.7% temporal_v1=49.4% multihop_v1=59.9%
+[350/603] baseline=49.7% temporal_v1=47.5% multihop_v1=56.7%
+[400/603] baseline=50.0% temporal_v1=45.7% multihop_v1=56.2%
+[450/603] baseline=48.7% temporal_v1=44.4% multihop_v1=56.9%
+[500/603] baseline=49.4% temporal_v1=44.6% multihop_v1=57.5%
+[550/603] baseline=48.5% temporal_v1=43.4% multihop_v1=58.4%
+[600/603] baseline=48.5% temporal_v1=43.7% multihop_v1=57.4%
+
+===== FINAL (production scorers) =====
+cat2: n=321 baseline 45.2% -> variant 43.9% (-1.2pp, gain 12 / loss 16)
+cat1: n=282 baseline 52.5% -> variant 57.4% (+5.0pp, gain 23 / loss 9)
+saved: benchmark_results\ab_cat12_prompt.json

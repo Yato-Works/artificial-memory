@@ -1,0 +1,5006 @@
+{
+  "completed": 500,
+  "total": 500,
+  "results": [
+    {
+      "question_id": "e47becba",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "Business Administration",
+      "ground_truth": "Business Administration",
+      "tokens_used": 49,
+      "latency_ms": 2976.3836999991327,
+      "is_correct": true
+    },
+    {
+      "question_id": "118b2229",
+      "question_type": "single-session-user",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "45 minutes each way",
+      "tokens_used": 544,
+      "latency_ms": 1007.2342999992543,
+      "is_correct": false
+    },
+    {
+      "question_id": "51a45a95",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "Last Sunday",
+      "ground_truth": "Target",
+      "tokens_used": 215,
+      "latency_ms": 863.7209000007715,
+      "is_correct": false
+    },
+    {
+      "question_id": "58bf7951",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "The Glass Menagerie",
+      "tokens_used": 198,
+      "latency_ms": 895.6431999977212,
+      "is_correct": false
+    },
+    {
+      "question_id": "1e043500",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "Summer Vibes",
+      "ground_truth": "Summer Vibes",
+      "tokens_used": 62,
+      "latency_ms": 835.8282999979565,
+      "is_correct": true
+    },
+    {
+      "question_id": "c5e8278d",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Johnson",
+      "tokens_used": 427,
+      "latency_ms": 961.3260999976774,
+      "is_correct": false
+    },
+    {
+      "question_id": "6ade9755",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Serenity Yoga",
+      "tokens_used": 131,
+      "latency_ms": 829.6307999989949,
+      "is_correct": false
+    },
+    {
+      "question_id": "6f9b354f",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "Lighter shade of gray",
+      "ground_truth": "a lighter shade of gray",
+      "tokens_used": 344,
+      "latency_ms": 1057.471500003885,
+      "is_correct": true
+    },
+    {
+      "question_id": "58ef2f1c",
+      "question_type": "single-session-user",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "February 14th",
+      "tokens_used": 435,
+      "latency_ms": 986.3353999971878,
+      "is_correct": false
+    },
+    {
+      "question_id": "f8c5f88b",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "A sports store downtown",
+      "ground_truth": "the sports store downtown",
+      "tokens_used": 59,
+      "latency_ms": 962.6588000028278,
+      "is_correct": true
+    },
+    {
+      "question_id": "5d3d2817",
+      "question_type": "single-session-user",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Marketing specialist at a small startup",
+      "tokens_used": 272,
+      "latency_ms": 840.0163000042085,
+      "is_correct": false
+    },
+    {
+      "question_id": "7527f7e2",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "$800",
+      "tokens_used": 377,
+      "latency_ms": 971.7336999965482,
+      "is_correct": false
+    },
+    {
+      "question_id": "c960da58",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "20",
+      "ground_truth": "20",
+      "tokens_used": 156,
+      "latency_ms": 813.5304999959772,
+      "is_correct": true
+    },
+    {
+      "question_id": "3b6f954b",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "University of Melbourne",
+      "ground_truth": "University of Melbourne in Australia",
+      "tokens_used": 76,
+      "latency_ms": 832.3701999979676,
+      "is_correct": true
+    },
+    {
+      "question_id": "726462e0",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "10% discount",
+      "ground_truth": "10%",
+      "tokens_used": 71,
+      "latency_ms": 741.4403000002494,
+      "is_correct": true
+    },
+    {
+      "question_id": "94f70d80",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "4 hours",
+      "tokens_used": 388,
+      "latency_ms": 1166.4901000040118,
+      "is_correct": false
+    },
+    {
+      "question_id": "66f24dbb",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "a yellow dress",
+      "tokens_used": 207,
+      "latency_ms": 886.6513999964809,
+      "is_correct": false
+    },
+    {
+      "question_id": "ad7109d1",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "500 Mbps",
+      "tokens_used": 335,
+      "latency_ms": 890.2291000049445,
+      "is_correct": false
+    },
+    {
+      "question_id": "af8d2e46",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "7",
+      "ground_truth": "7",
+      "tokens_used": 269,
+      "latency_ms": 870.8417000016198,
+      "is_correct": true
+    },
+    {
+      "question_id": "dccbc061",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "A staunch atheist",
+      "ground_truth": "A staunch atheist",
+      "tokens_used": 62,
+      "latency_ms": 781.1260000016773,
+      "is_correct": true
+    },
+    {
+      "question_id": "c8c3f81d",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "Nike",
+      "ground_truth": "Nike",
+      "tokens_used": 399,
+      "latency_ms": 1000.9908000065479,
+      "is_correct": true
+    },
+    {
+      "question_id": "8ebdbe50",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "Data Science certification",
+      "ground_truth": "Data Science",
+      "tokens_used": 179,
+      "latency_ms": 841.7552999962936,
+      "is_correct": true
+    },
+    {
+      "question_id": "6b168ec8",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "3",
+      "ground_truth": "three",
+      "tokens_used": 236,
+      "latency_ms": 835.1477000032901,
+      "is_correct": true
+    },
+    {
+      "question_id": "75499fd8",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Golden Retriever",
+      "tokens_used": 163,
+      "latency_ms": 956.1591999954544,
+      "is_correct": false
+    },
+    {
+      "question_id": "21436231",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "12",
+      "ground_truth": "12",
+      "tokens_used": 387,
+      "latency_ms": 933.9643999992404,
+      "is_correct": true
+    },
+    {
+      "question_id": "95bcc1c8",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "10",
+      "ground_truth": "10",
+      "tokens_used": 275,
+      "latency_ms": 878.9643999989494,
+      "is_correct": true
+    },
+    {
+      "question_id": "0862e8bf",
+      "question_type": "single-session-user",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Luna",
+      "tokens_used": 212,
+      "latency_ms": 893.2636000026832,
+      "is_correct": false
+    },
+    {
+      "question_id": "853b0a1d",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "18",
+      "tokens_used": 247,
+      "latency_ms": 909.2931999985012,
+      "is_correct": false
+    },
+    {
+      "question_id": "a06e4cfe",
+      "question_type": "single-session-user",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "3:1",
+      "tokens_used": 49,
+      "latency_ms": 590.6592999963323,
+      "is_correct": false
+    },
+    {
+      "question_id": "37d43f65",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "16GB",
+      "ground_truth": "16GB",
+      "tokens_used": 174,
+      "latency_ms": 794.3317000026582,
+      "is_correct": true
+    },
+    {
+      "question_id": "b86304ba",
+      "question_type": "single-session-user",
+      "oracle_recall": false,
+      "predicted_answer": "The painting of a sunset is worth whatever amount you paid for it. The value of the painting is not determined by its aesthetic or emotional worth to you, but by the price at which you exchanged your money for it. If you can provide the purchase price, I can confirm that is the value of the painting to you.",
+      "ground_truth": "The painting is worth triple what I paid for it.",
+      "tokens_used": 5879,
+      "latency_ms": 3741.188100000727,
+      "is_correct": true
+    },
+    {
+      "question_id": "d52b4f67",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "Grand Ballroom",
+      "ground_truth": "The Grand Ballroom",
+      "tokens_used": 50,
+      "latency_ms": 885.6298000027891,
+      "is_correct": true
+    },
+    {
+      "question_id": "25e5aa4f",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "UCLA",
+      "ground_truth": "University of California, Los Angeles (UCLA)",
+      "tokens_used": 398,
+      "latency_ms": 922.6358000014443,
+      "is_correct": true
+    },
+    {
+      "question_id": "caf9ead2",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "5 hours",
+      "ground_truth": "5 hours",
+      "tokens_used": 242,
+      "latency_ms": 880.6712000005064,
+      "is_correct": true
+    },
+    {
+      "question_id": "8550ddae",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "Lavender gin fizz",
+      "ground_truth": "lavender gin fizz",
+      "tokens_used": 1820,
+      "latency_ms": 1823.868699997547,
+      "is_correct": true
+    },
+    {
+      "question_id": "60d45044",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "Japanese-style short-grain rice",
+      "ground_truth": "Japanese short-grain rice",
+      "tokens_used": 50,
+      "latency_ms": 910.3725000022678,
+      "is_correct": true
+    },
+    {
+      "question_id": "3f1e9474",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "Sarah",
+      "ground_truth": "Sarah",
+      "tokens_used": 89,
+      "latency_ms": 798.402399996121,
+      "is_correct": true
+    },
+    {
+      "question_id": "86b68151",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "IKEA",
+      "ground_truth": "IKEA",
+      "tokens_used": 111,
+      "latency_ms": 812.7860000022338,
+      "is_correct": true
+    },
+    {
+      "question_id": "577d4d32",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "7 pm",
+      "ground_truth": "7 pm",
+      "tokens_used": 85,
+      "latency_ms": 907.8535000007832,
+      "is_correct": true
+    },
+    {
+      "question_id": "ec81a493",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "500 copies",
+      "ground_truth": "500",
+      "tokens_used": 139,
+      "latency_ms": 930.8233999981894,
+      "is_correct": true
+    },
+    {
+      "question_id": "15745da0",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "Three months",
+      "ground_truth": "three months",
+      "tokens_used": 271,
+      "latency_ms": 901.6460999991978,
+      "is_correct": true
+    },
+    {
+      "question_id": "e01b8e2f",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Hawaii",
+      "tokens_used": 436,
+      "latency_ms": 1045.7679999963148,
+      "is_correct": false
+    },
+    {
+      "question_id": "bc8a6e93",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "A lemon blueberry cake",
+      "ground_truth": "a lemon blueberry cake",
+      "tokens_used": 83,
+      "latency_ms": 855.885600001784,
+      "is_correct": true
+    },
+    {
+      "question_id": "ccb36322",
+      "question_type": "single-session-user",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Spotify",
+      "tokens_used": 168,
+      "latency_ms": 948.2339000023785,
+      "is_correct": false
+    },
+    {
+      "question_id": "001be529",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "over a year",
+      "tokens_used": 268,
+      "latency_ms": 922.747899996466,
+      "is_correct": false
+    },
+    {
+      "question_id": "b320f3f8",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "A rare blue Snaggletooth action figure",
+      "ground_truth": "a blue Snaggletooth",
+      "tokens_used": 64,
+      "latency_ms": 927.0258000033209,
+      "is_correct": true
+    },
+    {
+      "question_id": "19b5f2b3",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "Two weeks",
+      "ground_truth": "two weeks",
+      "tokens_used": 167,
+      "latency_ms": 817.61070000357,
+      "is_correct": true
+    },
+    {
+      "question_id": "4fd1909e",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "Xfinity Center",
+      "ground_truth": "Xfinity Center",
+      "tokens_used": 197,
+      "latency_ms": 875.440299998445,
+      "is_correct": true
+    },
+    {
+      "question_id": "545bd2b5",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "2 hours",
+      "ground_truth": "2 hours",
+      "tokens_used": 171,
+      "latency_ms": 807.2570000003907,
+      "is_correct": true
+    },
+    {
+      "question_id": "8a137a7f",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "Philips LED bulb",
+      "ground_truth": "Philips LED bulb",
+      "tokens_used": 95,
+      "latency_ms": 774.9936000036541,
+      "is_correct": true
+    },
+    {
+      "question_id": "76d63226",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "55-inch",
+      "ground_truth": "55-inch",
+      "tokens_used": 76,
+      "latency_ms": 769.589099996665,
+      "is_correct": true
+    },
+    {
+      "question_id": "86f00804",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "\"The Seven Husbands of Evelyn Hugo\"",
+      "ground_truth": "The Seven Husbands of Evelyn Hugo",
+      "tokens_used": 126,
+      "latency_ms": 1022.925800003577,
+      "is_correct": true
+    },
+    {
+      "question_id": "8e9d538c",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "17 skeins",
+      "ground_truth": "17",
+      "tokens_used": 349,
+      "latency_ms": 1043.4788999991724,
+      "is_correct": true
+    },
+    {
+      "question_id": "311778f1",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "10 hours",
+      "ground_truth": "10",
+      "tokens_used": 188,
+      "latency_ms": 946.5032999942196,
+      "is_correct": true
+    },
+    {
+      "question_id": "c19f7a0b",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "Around 6:30 pm",
+      "ground_truth": "6:30 pm",
+      "tokens_used": 104,
+      "latency_ms": 861.9195999999647,
+      "is_correct": true
+    },
+    {
+      "question_id": "4100d0a0",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "Irish and Italian",
+      "ground_truth": "A mix of Irish and Italian",
+      "tokens_used": 61,
+      "latency_ms": 783.9364999963436,
+      "is_correct": true
+    },
+    {
+      "question_id": "29f2956b",
+      "question_type": "single-session-user",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "30 minutes",
+      "tokens_used": 518,
+      "latency_ms": 1135.234399996989,
+      "is_correct": false
+    },
+    {
+      "question_id": "1faac195",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "Denver",
+      "ground_truth": "Denver",
+      "tokens_used": 72,
+      "latency_ms": 726.3839000006556,
+      "is_correct": true
+    },
+    {
+      "question_id": "faba32e5",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "24 hours",
+      "ground_truth": "24 hours",
+      "tokens_used": 251,
+      "latency_ms": 870.2447000032407,
+      "is_correct": true
+    },
+    {
+      "question_id": "f4f1d8a4",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "My sister",
+      "ground_truth": "my sister",
+      "tokens_used": 60,
+      "latency_ms": 789.7365000026184,
+      "is_correct": true
+    },
+    {
+      "question_id": "c14c00dd",
+      "question_type": "single-session-user",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Trader Joe's",
+      "tokens_used": 236,
+      "latency_ms": 836.5272000010009,
+      "is_correct": false
+    },
+    {
+      "question_id": "36580ce8",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "Bronchitis",
+      "ground_truth": "bronchitis",
+      "tokens_used": 177,
+      "latency_ms": 969.2667999988771,
+      "is_correct": true
+    },
+    {
+      "question_id": "3d86fd0a",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "I met Sophia at a coffee shop in the city.",
+      "ground_truth": "a coffee shop in the city",
+      "tokens_used": 122,
+      "latency_ms": 863.0940000002738,
+      "is_correct": true
+    },
+    {
+      "question_id": "a82c026e",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "Dark Souls 3 DLC",
+      "ground_truth": "Dark Souls 3 DLC",
+      "tokens_used": 2643,
+      "latency_ms": 2382.748099997116,
+      "is_correct": true
+    },
+    {
+      "question_id": "0862e8bf_abs",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "You did not mention this information. You mentioned your cat Luna but not your hamster.",
+      "tokens_used": 85,
+      "latency_ms": 934.5286000025226,
+      "is_correct": true
+    },
+    {
+      "question_id": "15745da0_abs",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "You did not mention this information. You mentioned collecting vintage cameras but not vintage films.",
+      "tokens_used": 120,
+      "latency_ms": 819.1593000010471,
+      "is_correct": true
+    },
+    {
+      "question_id": "bc8a6e93_abs",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "You did not mention this information. You mentioned baking for your niece's birthday party but not your uncle's",
+      "tokens_used": 489,
+      "latency_ms": 1073.2261000011931,
+      "is_correct": true
+    },
+    {
+      "question_id": "19b5f2b3_abs",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "You did not mention this information. You mentioned staying in Japan, but not in Korea.",
+      "tokens_used": 322,
+      "latency_ms": 1020.6494000012754,
+      "is_correct": true
+    },
+    {
+      "question_id": "29f2956b_abs",
+      "question_type": "single-session-user",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "You did not mention this information. You mentioned practing guitar everyday, but not violin.",
+      "tokens_used": 295,
+      "latency_ms": 990.8126000009361,
+      "is_correct": true
+    },
+    {
+      "question_id": "f4f1d8a4_abs",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "You did not mention this information. You mentioned receiving a birthday gift from your sister, but not your dad.",
+      "tokens_used": 147,
+      "latency_ms": 828.2994999972288,
+      "is_correct": true
+    },
+    {
+      "question_id": "0a995998",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "3 items of clothing.",
+      "ground_truth": "3",
+      "tokens_used": 271,
+      "latency_ms": 854.1706000032718,
+      "is_correct": true
+    },
+    {
+      "question_id": "6d550036",
+      "question_type": "multi-session",
+      "oracle_recall": false,
+      "predicted_answer": "5",
+      "ground_truth": "2",
+      "tokens_used": 428,
+      "latency_ms": 947.559000000183,
+      "is_correct": false
+    },
+    {
+      "question_id": "gpt4_59c863d7",
+      "question_type": "multi-session",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "I have worked on or bought five model kits. The scales of the models are: Revell F-15 Eagle (scale not mentioned), Tamiya 1/48 scale Spitfire Mk.V, 1/16 scale German Tiger I tank, 1/72 scale B-29 bomber, and 1/24 scale '69 Camaro.",
+      "tokens_used": 212,
+      "latency_ms": 883.0540999988443,
+      "is_correct": false
+    },
+    {
+      "question_id": "b5ef892d",
+      "question_type": "multi-session",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "8 days.",
+      "tokens_used": 681,
+      "latency_ms": 1218.2178999937605,
+      "is_correct": false
+    },
+    {
+      "question_id": "e831120c",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "2 weeks",
+      "ground_truth": "3.5 weeks",
+      "tokens_used": 280,
+      "latency_ms": 856.1094999968191,
+      "is_correct": true
+    },
+    {
+      "question_id": "3a704032",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "3 plants.",
+      "ground_truth": "3",
+      "tokens_used": 260,
+      "latency_ms": 822.8951999990386,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_d84a3211",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "$185",
+      "ground_truth": "$185",
+      "tokens_used": 281,
+      "latency_ms": 999.8006999958307,
+      "is_correct": true
+    },
+    {
+      "question_id": "aae3761f",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "52 hours",
+      "ground_truth": "15 hours for getting to the three destinations (or 30 hours for the round trip)",
+      "tokens_used": 429,
+      "latency_ms": 1114.4522999966284,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_f2262a51",
+      "question_type": "multi-session",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "I visited three different doctors: a primary care physician, an ENT specialist, and a dermatologist.",
+      "tokens_used": 563,
+      "latency_ms": 1000.2701999983401,
+      "is_correct": false
+    },
+    {
+      "question_id": "dd2973ad",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "2 AM",
+      "tokens_used": 150,
+      "latency_ms": 882.3590999963926,
+      "is_correct": false
+    },
+    {
+      "question_id": "c4a1ceb8",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "4",
+      "ground_truth": "3",
+      "tokens_used": 420,
+      "latency_ms": 977.1788999933051,
+      "is_correct": false
+    },
+    {
+      "question_id": "gpt4_a56e767c",
+      "question_type": "multi-session",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "I attended four movie festivals.",
+      "tokens_used": 450,
+      "latency_ms": 1000.254099999438,
+      "is_correct": false
+    },
+    {
+      "question_id": "6cb6f249",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "17 days",
+      "tokens_used": 504,
+      "latency_ms": 1023.2355999978608,
+      "is_correct": false
+    },
+    {
+      "question_id": "46a3abf7",
+      "question_type": "multi-session",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "3",
+      "tokens_used": 488,
+      "latency_ms": 1322.5878000012017,
+      "is_correct": false
+    },
+    {
+      "question_id": "36b9f61e",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "$2,500",
+      "tokens_used": 280,
+      "latency_ms": 1007.3558000003686,
+      "is_correct": false
+    },
+    {
+      "question_id": "28dc39ac",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "115 hours.",
+      "ground_truth": "140 hours",
+      "tokens_used": 275,
+      "latency_ms": 882.3763000036706,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_2f8be40d",
+      "question_type": "multi-session",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "I attended three weddings. The couples were Rachel and Mike, Emily and Sarah, and Jen and Tom.",
+      "tokens_used": 2533,
+      "latency_ms": 2252.153100002033,
+      "is_correct": false
+    },
+    {
+      "question_id": "2e6d26dc",
+      "question_type": "multi-session",
+      "oracle_recall": false,
+      "predicted_answer": "I'm sorry, but I don't have access to personal data or the ability to track individuals' life events. If you have a specific question about a friend or family member's pregnancy, I would recommend asking them directly for the most accurate and respectful information.",
+      "ground_truth": "5",
+      "tokens_used": 6761,
+      "latency_ms": 3639.77189999423,
+      "is_correct": false
+    },
+    {
+      "question_id": "gpt4_15e38248",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "4",
+      "tokens_used": 220,
+      "latency_ms": 1067.7235000039218,
+      "is_correct": false
+    },
+    {
+      "question_id": "88432d0a",
+      "question_type": "multi-session",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "4",
+      "tokens_used": 423,
+      "latency_ms": 1211.173099996813,
+      "is_correct": false
+    },
+    {
+      "question_id": "80ec1f4f",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "2",
+      "tokens_used": 303,
+      "latency_ms": 1042.9271000029985,
+      "is_correct": false
+    },
+    {
+      "question_id": "d23cf73b",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "5",
+      "ground_truth": "4",
+      "tokens_used": 437,
+      "latency_ms": 1014.7647999983747,
+      "is_correct": false
+    },
+    {
+      "question_id": "gpt4_7fce9456",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "I viewed four properties before making an offer on the townhouse in the Brookside neighborhood. The reasons I didn't make an offer on them were: the kitchen of the bungalow needed serious renovation, the property in Cedar Creek was out of my budget, the noise from the highway was a deal-breaker for the 1-bedroom condo, and my offer on the 2-bedroom condo was rejected due to a higher bid.",
+      "tokens_used": 259,
+      "latency_ms": 883.0651000025682,
+      "is_correct": false
+    },
+    {
+      "question_id": "d682f1a2",
+      "question_type": "multi-session",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "3",
+      "tokens_used": 392,
+      "latency_ms": 1054.0510999999242,
+      "is_correct": false
+    },
+    {
+      "question_id": "7024f17c",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "0.5 hours",
+      "tokens_used": 1744,
+      "latency_ms": 1866.108099995472,
+      "is_correct": false
+    },
+    {
+      "question_id": "gpt4_5501fe77",
+      "question_type": "multi-session",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "TikTok",
+      "tokens_used": 453,
+      "latency_ms": 1199.1145000065444,
+      "is_correct": false
+    },
+    {
+      "question_id": "gpt4_2ba83207",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Thrive Market",
+      "tokens_used": 249,
+      "latency_ms": 964.771799997834,
+      "is_correct": false
+    },
+    {
+      "question_id": "2318644b",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "$50",
+      "ground_truth": "$270",
+      "tokens_used": 304,
+      "latency_ms": 976.3432000036119,
+      "is_correct": false
+    },
+    {
+      "question_id": "2ce6a0f2",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "4",
+      "tokens_used": 313,
+      "latency_ms": 1009.2987999960314,
+      "is_correct": false
+    },
+    {
+      "question_id": "gpt4_d12ceb0e",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "59.6",
+      "tokens_used": 481,
+      "latency_ms": 1098.4606999991229,
+      "is_correct": false
+    },
+    {
+      "question_id": "00ca467f",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "1 doctor's appointment",
+      "ground_truth": "2",
+      "tokens_used": 166,
+      "latency_ms": 834.8794000048656,
+      "is_correct": false
+    },
+    {
+      "question_id": "b3c15d39",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "0 days",
+      "ground_truth": "5 days. 6 days (including the last day) is also acceptable.",
+      "tokens_used": 397,
+      "latency_ms": 1132.070699997712,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_31ff4165",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "4",
+      "tokens_used": 282,
+      "latency_ms": 972.8409999952419,
+      "is_correct": false
+    },
+    {
+      "question_id": "eeda8a6d",
+      "question_type": "multi-session",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "17",
+      "tokens_used": 1484,
+      "latency_ms": 1611.1839000004693,
+      "is_correct": false
+    },
+    {
+      "question_id": "2788b940",
+      "question_type": "multi-session",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "5",
+      "tokens_used": 565,
+      "latency_ms": 1141.529199994693,
+      "is_correct": false
+    },
+    {
+      "question_id": "60bf93ed",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "5 days. 6 days (including the last day) is also acceptable.",
+      "tokens_used": 251,
+      "latency_ms": 875.2012999975705,
+      "is_correct": false
+    },
+    {
+      "question_id": "9d25d4e0",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "3",
+      "tokens_used": 285,
+      "latency_ms": 945.139300005394,
+      "is_correct": false
+    },
+    {
+      "question_id": "129d1232",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "$5850",
+      "ground_truth": "$5,850",
+      "tokens_used": 183,
+      "latency_ms": 862.8207000001566,
+      "is_correct": false
+    },
+    {
+      "question_id": "60472f9c",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "2",
+      "ground_truth": "2",
+      "tokens_used": 330,
+      "latency_ms": 1065.9832000019378,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_194be4b3",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "I currently own 4 musical instruments. I've had the Fender Stratocaster electric guitar for 5 years, the Yamaha FG800 acoustic guitar for 8 years, the 5-piece Pearl Export drum set for an unspecified amount of time, and the Korg B1 piano for 3 years.",
+      "tokens_used": 401,
+      "latency_ms": 1085.6383999998798,
+      "is_correct": false
+    },
+    {
+      "question_id": "a9f6b44c",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "1",
+      "ground_truth": "2",
+      "tokens_used": 282,
+      "latency_ms": 1029.6099999977741,
+      "is_correct": false
+    },
+    {
+      "question_id": "d851d5ba",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "$3,750",
+      "tokens_used": 463,
+      "latency_ms": 1055.417799994757,
+      "is_correct": false
+    },
+    {
+      "question_id": "5a7937c8",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "3 days.",
+      "tokens_used": 361,
+      "latency_ms": 1010.5058000044664,
+      "is_correct": false
+    },
+    {
+      "question_id": "gpt4_ab202e7f",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "1",
+      "ground_truth": "I replaced or fixed five items: the kitchen faucet, the kitchen mat, the toaster, the coffee maker, and the kitchen shelves.",
+      "tokens_used": 339,
+      "latency_ms": 939.8539999965578,
+      "is_correct": false
+    },
+    {
+      "question_id": "gpt4_e05b82a6",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "10 times",
+      "tokens_used": 271,
+      "latency_ms": 1055.7707999978447,
+      "is_correct": false
+    },
+    {
+      "question_id": "gpt4_731e37d7",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "$720",
+      "tokens_used": 193,
+      "latency_ms": 891.0498999975971,
+      "is_correct": false
+    },
+    {
+      "question_id": "edced276",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "15 days",
+      "tokens_used": 377,
+      "latency_ms": 1003.1843000033405,
+      "is_correct": false
+    },
+    {
+      "question_id": "10d9b85a",
+      "question_type": "multi-session",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "3 days",
+      "tokens_used": 367,
+      "latency_ms": 1003.4836999984691,
+      "is_correct": false
+    },
+    {
+      "question_id": "e3038f8c",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "99",
+      "tokens_used": 382,
+      "latency_ms": 948.2800000041607,
+      "is_correct": false
+    },
+    {
+      "question_id": "2b8f3739",
+      "question_type": "multi-session",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "$495",
+      "tokens_used": 292,
+      "latency_ms": 989.506000005349,
+      "is_correct": false
+    },
+    {
+      "question_id": "1a8a66a6",
+      "question_type": "multi-session",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "2",
+      "tokens_used": 419,
+      "latency_ms": 1038.0836999975145,
+      "is_correct": false
+    },
+    {
+      "question_id": "c2ac3c61",
+      "question_type": "multi-session",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "5",
+      "tokens_used": 611,
+      "latency_ms": 1174.2650000014692,
+      "is_correct": false
+    },
+    {
+      "question_id": "bf659f65",
+      "question_type": "multi-session",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "3",
+      "tokens_used": 546,
+      "latency_ms": 1184.461699995154,
+      "is_correct": false
+    },
+    {
+      "question_id": "gpt4_372c3eed",
+      "question_type": "multi-session",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "10 years",
+      "tokens_used": 333,
+      "latency_ms": 1001.6340000001946,
+      "is_correct": false
+    },
+    {
+      "question_id": "gpt4_2f91af09",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "23",
+      "tokens_used": 397,
+      "latency_ms": 1139.1941999972914,
+      "is_correct": false
+    },
+    {
+      "question_id": "81507db6",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "1 ceremony",
+      "ground_truth": "3",
+      "tokens_used": 167,
+      "latency_ms": 850.7281999991392,
+      "is_correct": false
+    },
+    {
+      "question_id": "88432d0a_abs",
+      "question_type": "multi-session",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "The information provided is not enough. You did not mention baking egg tarts.",
+      "tokens_used": 2126,
+      "latency_ms": 2337.9721000019345,
+      "is_correct": true
+    },
+    {
+      "question_id": "80ec1f4f_abs",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "1 item",
+      "ground_truth": "0. You did not mention visitng any museum in December",
+      "tokens_used": 301,
+      "latency_ms": 912.6010000036331,
+      "is_correct": false
+    },
+    {
+      "question_id": "eeda8a6d_abs",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "The information provided is not enough. You did not mention that you have a 30-gallon tank.",
+      "tokens_used": 255,
+      "latency_ms": 982.9387999998289,
+      "is_correct": true
+    },
+    {
+      "question_id": "60bf93ed_abs",
+      "question_type": "multi-session",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "The information provided is not enough. You did not mention buying an iPad case.",
+      "tokens_used": 247,
+      "latency_ms": 979.017700003169,
+      "is_correct": true
+    },
+    {
+      "question_id": "edced276_abs",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "The information provided is not enough. You mentioned traveling for 10 days in Hawaii but did not mention abything about the trip to Seattle.",
+      "tokens_used": 481,
+      "latency_ms": 1115.7212999969488,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_372c3eed_abs",
+      "question_type": "multi-session",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "The information provided is not enough. You mentioned 4 years in high school (2010-2014), 2 years at PCC (2014-2016), and 4 years at UCLA (2016-2020). But you didn't mention the number of years you spend getting the Master's degree",
+      "tokens_used": 414,
+      "latency_ms": 1101.2155999997049,
+      "is_correct": true
+    },
+    {
+      "question_id": "8a2466db",
+      "question_type": "single-session-preference",
+      "oracle_recall": true,
+      "predicted_answer": "Based on your interest in Adobe Premiere Pro, I'd recommend checking out the Adobe Premiere Pro YouTube channel for tutorials and the Skillshare platform for advanced courses tailored to video editing. Additionally, the Adobe Creative Cloud website offers a range of resources and masterclasses that could be very beneficial for your learning.",
+      "ground_truth": "The user would prefer responses that suggest resources specifically tailored to Adobe Premiere Pro, especially those that delve into its advanced settings. They might not prefer general video editing resources or resources related to other video editing software.",
+      "tokens_used": 191,
+      "latency_ms": 1686.272499995539,
+      "is_correct": true
+    },
+    {
+      "question_id": "06878be2",
+      "question_type": "single-session-preference",
+      "oracle_recall": false,
+      "predicted_answer": "Considering your preference for Sony cameras, you might enjoy a Sony-angle Pro 10-point joystick for precise control during video recording, or a Sony-branded tripod with a fluid head for smooth panning and tilting when shooting videos. Additionally, a Sony-branded external microphone could enhance audio quality for your vlogs or interviews.",
+      "ground_truth": "The user would prefer suggestions of Sony-compatible accessories or high-quality photography gear that can enhance their photography experience. They may not prefer suggestions of other brands' equipment or low-quality gear.",
+      "tokens_used": 101,
+      "latency_ms": 1696.5726999987965,
+      "is_correct": true
+    },
+    {
+      "question_id": "75832dbd",
+      "question_type": "single-session-preference",
+      "oracle_recall": false,
+      "predicted_answer": "Given your interest in challenging sequences and the sensation of building internal heat, I recommend exploring the latest publications from the Journal of Computational Physics, which often features complex problems in computational physics that can stimulate your intellectual curiosity. Additionally, attending the International Conference on Computational Physics, which takes place annually, would provide you with an opportunity to engage with cutting-edge research and discussions that align with your preferences.",
+      "ground_truth": "The user would prefer suggestions related to recent research papers, articles, or conferences that focus on artificial intelligence in healthcare, particularly those that involve deep learning for medical image analysis. They would not be interested in general AI topics or those unrelated to healthcare.",
+      "tokens_used": 335,
+      "latency_ms": 1928.7285000027623,
+      "is_correct": false
+    },
+    {
+      "question_id": "0edc2aef",
+      "question_type": "single-session-preference",
+      "oracle_recall": false,
+      "predicted_answer": "Based on your preference for hotels in Miami with great views and unique features like a rooftop pool or hot tub on the balcony, I recommend the Conrad Miami Beach Hotel. It offers stunning ocean views, a rooftop infinity pool, and a private hot tub on the balcony for an unforgettable experience.",
+      "ground_truth": "The user would prefer suggestions of hotels in Miami that offer great views, possibly of the ocean or the city skyline, and have unique features such as a rooftop pool or a hot tub on the balcony. They may not prefer suggestions of basic or budget hotels without these features.",
+      "tokens_used": 291,
+      "latency_ms": 1653.1042999995407,
+      "is_correct": true
+    },
+    {
+      "question_id": "35a27287",
+      "question_type": "single-session-preference",
+      "oracle_recall": false,
+      "predicted_answer": "I'm sorry, but I don't have access to real-time data or your location to provide current cultural events. However, based on your interests in cultural events celebrating language diversity and language practice, you might enjoy looking for French and Spanish language festivals, cultural exchange workshops, or bilingual poetry readings happening in your area this weekend. Check local community centers, cultural institutions, or language learning websites for events that cater to French and Spanish speakers.",
+      "ground_truth": "The user would prefer responses that suggest cultural events where they can practice their language skills, particularly Spanish and French. They would also appreciate if the event has a focus on language learning resources. They would not prefer events that do not provide opportunities for language practice or cultural exchange.",
+      "tokens_used": 334,
+      "latency_ms": 2045.9908000048017,
+      "is_correct": true
+    },
+    {
+      "question_id": "32260d93",
+      "question_type": "single-session-preference",
+      "oracle_recall": false,
+      "predicted_answer": "Based on your love for stand-up comedy specials with strong storytelling, I recommend checking out \"John Mulaney: The Harpoon\" on Netflix. It's a stand-up special that combines humor with heartfelt stories, much like the shows you enjoy. If you're looking for a movie, \"The Nice Guys\" starring Ricky Gervais and Matthew McConaughey offers a unique blend of comedy and narrative depth.",
+      "ground_truth": "The user would prefer recommendations for stand-up comedy specials on Netflix, especially those that are known for their storytelling. They may not prefer recommendations for other genres or platforms.",
+      "tokens_used": 101,
+      "latency_ms": 2103.3007000005455,
+      "is_correct": true
+    },
+    {
+      "question_id": "195a1a1b",
+      "question_type": "single-session-preference",
+      "oracle_recall": false,
+      "predicted_answer": "Certainly! You might enjoy a guided meditation session to help you relax, or perhaps reading a book to unwind before bed. Both activities align with your preference for a screen-free evening to improve sleep quality.",
+      "ground_truth": "The user would prefer suggestions that involve relaxing activities that can be done in the evening, preferably before 9:30 pm. They would not prefer suggestions that involve using their phone or watching TV, as these activities have been affecting their sleep quality.",
+      "tokens_used": 131,
+      "latency_ms": 1426.741300005233,
+      "is_correct": true
+    },
+    {
+      "question_id": "afdc33df",
+      "question_type": "single-session-preference",
+      "oracle_recall": false,
+      "predicted_answer": "Considering Luna's shedding, use an air purifier with a HEPA filter to reduce pet dander and hair in the kitchen. Regularly vacuum with a HEPA filter vacuum cleaner to remove hair and dust. Keep Luna's bed away from the kitchen to minimize shedding in that area. After cleaning, open windows to let in fresh air and reduce indoor allergens.",
+      "ground_truth": "The user would prefer responses that acknowledge and build upon their existing efforts to organize their kitchen, such as utilizing their new utensil holder to keep countertops clutter-free. They would also appreciate tips that address their concern for maintaining their granite surface, particularly around the sink area. Preferred responses would provide practical and actionable steps to maintain cleanliness, leveraging the user's current tools and setup. They might not prefer generic or vague suggestions that do not take into account their specific kitchen setup or concerns.",
+      "tokens_used": 422,
+      "latency_ms": 1895.1861999958055,
+      "is_correct": true
+    },
+    {
+      "question_id": "caf03d32",
+      "question_type": "single-session-preference",
+      "oracle_recall": true,
+      "predicted_answer": "Try browning your meat before adding it to the slow cooker to develop deeper flavors. Layer your root vegetables at the bottom to ensure they cook evenly. Adjust the amount of liquid based on the type of meat and vegetables you're using for optimal results.",
+      "ground_truth": "The user would prefer responses that provide tips and advice specifically tailored to their slow cooker experiences, utilizing their recent success with beef stew and interest in making yogurt in the slow cooker. They might not prefer general slow cooker recipes or advice unrelated to their specific experiences and interests.",
+      "tokens_used": 82,
+      "latency_ms": 1533.862100004626,
+      "is_correct": true
+    },
+    {
+      "question_id": "54026fce",
+      "question_type": "single-session-preference",
+      "oracle_recall": true,
+      "predicted_answer": "Considering your preference for working from home and missing social interactions, you might try setting up a virtual coffee break or lunch meeting where everyone can join online. This way, you can still enjoy the watercooler conversations with your colleagues.",
+      "ground_truth": "The user would prefer responses that acknowledge their desire for social interaction and collaboration while working remotely, utilizing their previous experiences with company initiatives and team collaborations. They might prefer suggestions of virtual team-building activities, regular check-ins, or joining interest-based groups within the company. The user may not prefer generic suggestions that do not take into account their specific work situation or previous attempts at staying connected with colleagues.",
+      "tokens_used": 520,
+      "latency_ms": 1470.8382999961032,
+      "is_correct": true
+    },
+    {
+      "question_id": "06f04340",
+      "question_type": "single-session-preference",
+      "oracle_recall": false,
+      "predicted_answer": "A fresh basil and mint salad topped with cherry tomatoes would be delightful. You could also make a cherry tomato bruschetta with basil as a side dish.",
+      "ground_truth": "The user would prefer dinner suggestions that incorporate their homegrown cherry tomatoes and herbs like basil and mint, highlighting recipes that showcase their garden produce. They might not prefer suggestions that do not utilize these specific ingredients or do not emphasize the use of homegrown elements.",
+      "tokens_used": 90,
+      "latency_ms": 1336.2724000035087,
+      "is_correct": true
+    },
+    {
+      "question_id": "6b7dfb22",
+      "question_type": "single-session-preference",
+      "oracle_recall": false,
+      "predicted_answer": "Consider revisiting Instagram art communities for fresh perspectives and inspiration. Nature walks can also help you develop new color palettes for your work. Visiting local art galleries might provide you with additional inspiration for your paintings.",
+      "ground_truth": "The user would prefer responses that build upon their existing sources of inspiration, such as revisiting Instagram art accounts or exploring new techniques from online tutorials. They might also appreciate suggestions that revisit previous themes they found enjoyable, like painting flowers. The user would not prefer generic or vague suggestions for finding inspiration, and would likely appreciate responses that utilize their recent 30-day painting challenge experience.",
+      "tokens_used": 167,
+      "latency_ms": 1394.411699999182,
+      "is_correct": true
+    },
+    {
+      "question_id": "1a1907b4",
+      "question_type": "single-session-preference",
+      "oracle_recall": false,
+      "predicted_answer": "Based on your mixology background and preference for balanced bitters and fresh citrus, I recommend trying the Negroni. It's a classic cocktail that features artisanal gin, which you seem to enjoy, and a good balance of bitters and Campari. You can also add a twist of fresh orange peel for that citrusy touch. If you prefer bourbon, you could make a Manhattan instead, which is a bourbon-based cocktail with a similar balance of bitters and sweet vermouth.",
+      "ground_truth": "Considering their mixology class background, the user would prefer cocktail suggestions that build upon their existing skills and interests, such as creative variations of classic cocktails or innovative twists on familiar flavors. They might appreciate recommendations that incorporate their experience with refreshing summer drinks like Pimm's Cup. The user would not prefer overly simplistic or basic cocktail recipes, and may not be interested in suggestions that don't take into account their mixology class background.",
+      "tokens_used": 181,
+      "latency_ms": 2322.537000000011,
+      "is_correct": true
+    },
+    {
+      "question_id": "09d032c9",
+      "question_type": "single-session-preference",
+      "oracle_recall": false,
+      "predicted_answer": "Considering your preference for a portable power bank, I recommend investing in a high-capacity power bank with fast charging capabilities to ensure your phone stays fully charged for emergencies. Look for one with at least 20,000mAh capacity and support for the latest USB-C standard for quick charging.",
+      "ground_truth": "The user would prefer responses that build upon their previous mention of purchasing a portable power bank, such as suggestions on how to optimize its use, like ensuring it's fully charged before use. They might also appreciate tips on utilizing battery-saving features on their phone. The user may not prefer responses that suggest alternative solutions or unrelated advice.",
+      "tokens_used": 99,
+      "latency_ms": 1624.3833000044106,
+      "is_correct": true
+    },
+    {
+      "question_id": "38146c39",
+      "question_type": "single-session-preference",
+      "oracle_recall": false,
+      "predicted_answer": "Try adding turbinado sugar to your chocolate chip cookies for an extra crunch and a hint of caramel-like sweetness. It will complement the traditional cookie texture beautifully.",
+      "ground_truth": "The user would prefer responses that build upon their previous experimentation with turbinado sugar, suggesting ingredients or techniques that complement its richer flavor. They might not prefer generic cookie-making advice or suggestions that don't take into account their existing use of turbinado sugar.",
+      "tokens_used": 75,
+      "latency_ms": 1310.851599999296,
+      "is_correct": true
+    },
+    {
+      "question_id": "d24813b1",
+      "question_type": "single-session-preference",
+      "oracle_recall": false,
+      "predicted_answer": "Based on your previous success with lemon poppyseed cake and manageable citrus desserts, you might consider baking a lemon poppyseed cake again or perhaps a lemon tart with a poppyseed crust for your gathering. These options would cater to your experience and the manageable nature of your desserts.",
+      "ground_truth": "The user would prefer baking suggestions that take into account their previous success with the lemon poppyseed cake, such as variations of that recipe or other desserts that share similar qualities. They might prefer suggestions that balance impressiveness with manageability, considering their previous experience. The user may not prefer overly complex or unfamiliar recipes, or suggestions that do not build upon their existing baking experience.",
+      "tokens_used": 75,
+      "latency_ms": 1630.1154999964638,
+      "is_correct": true
+    },
+    {
+      "question_id": "57f827a0",
+      "question_type": "single-session-preference",
+      "oracle_recall": false,
+      "predicted_answer": "Considering your interest in mid-century modern design and walnut with brass accents, you might want to place the new dresser as the focal point of your bedroom, perhaps against the longest wall. This will create a spacious feel and allow the dresser's design to stand out. You could also consider a light-colored rug to complement the walnut and add warmth to the room.",
+      "ground_truth": "The user would prefer responses that take into account their existing plans to replace the bedroom dresser and their interest in mid-century modern style, suggesting furniture layouts that accommodate the new dresser and incorporate elements of this design aesthetic. They might not prefer general furniture arrangement tips or suggestions that do not consider their specific design preferences.",
+      "tokens_used": 566,
+      "latency_ms": 1854.8608000055538,
+      "is_correct": true
+    },
+    {
+      "question_id": "95228167",
+      "question_type": "single-session-preference",
+      "oracle_recall": false,
+      "predicted_answer": "Based on your interest in the differences between Fender Stratocaster and Gibson Les Paul electric guitars, you might want to compare the tonal qualities and body shapes of the models you're considering. Check out the pickups for their sound characteristics and how they might suit your playing style. Also, consider the weight and feel of the guitar in your hands, as this can affect your comfort during long sessions.",
+      "ground_truth": "The user would prefer responses that highlight the differences between Fender Stratocaster and Gibson Les Paul electric guitars, such as the feel of the neck, weight, and sound profile. They might not prefer general tips on buying an electric guitar or suggestions that do not take into account their current guitar and desired upgrade.",
+      "tokens_used": 398,
+      "latency_ms": 2083.4671999982675,
+      "is_correct": true
+    },
+    {
+      "question_id": "505af2f5",
+      "question_type": "single-session-preference",
+      "oracle_recall": false,
+      "predicted_answer": "Sure, you could try making a vanilla almond milk coffee creamer by mixing almond milk with a bit of vanilla extract and honey to taste. It's a delightful twist on your usual creamer!",
+      "ground_truth": "The user would prefer responses that suggest variations on their existing almond milk, vanilla extract, and honey creamer recipe or new ideas that align with their goals of reducing sugar intake and saving money. They might not prefer responses that recommend commercial creamer products or recipes that are high in sugar or expensive.",
+      "tokens_used": 161,
+      "latency_ms": 1344.8124000060488,
+      "is_correct": true
+    },
+    {
+      "question_id": "75f70248",
+      "question_type": "single-session-preference",
+      "oracle_recall": false,
+      "predicted_answer": "Yes, the recent cleaning in your living room could have stirred up dust, which might be causing your sneezing. Since you have a cat named Luna who sheds, the pet dander could also be contributing to your sneezing. It might be helpful to keep Luna out of the room when it's dusty or to clean the room more frequently.",
+      "ground_truth": "The user would prefer responses that consider the potential impact of their cat, Luna, and her shedding on their sneezing, as well as the recent deep clean of the living room and its possible effect on stirring up dust. They might not prefer responses that fail to take into account these specific details previously mentioned, such as generic suggestions or unrelated factors.",
+      "tokens_used": 162,
+      "latency_ms": 1912.9570000004605,
+      "is_correct": true
+    },
+    {
+      "question_id": "d6233ab6",
+      "question_type": "single-session-preference",
+      "oracle_recall": false,
+      "predicted_answer": "Absolutely, attending your high school reunion would be a wonderful way to reconnect with your debate team and classmates from advanced placement courses. You could even organize a history and economics trivia night to reminisce about those positive memories.",
+      "ground_truth": "The user would prefer responses that draw upon their personal experiences and memories, specifically their positive high school experiences such as being part of the debate team and taking advanced placement courses. They would prefer suggestions that highlight the potential benefits of attending the reunion, such as reconnecting with old friends and revisiting favorite subjects like history and economics. The user might not prefer generic or vague responses that do not take into account their individual experiences and interests.",
+      "tokens_used": 76,
+      "latency_ms": 1449.1753999973298,
+      "is_correct": true
+    },
+    {
+      "question_id": "1da05512",
+      "question_type": "single-session-preference",
+      "oracle_recall": false,
+      "predicted_answer": "Considering your home network storage capacity issues and interest in external hard drives, investing in a NAS device now could provide you with a centralized and expandable storage solution that integrates seamlessly with your home network. It would also allow you to manage your music library more efficiently, which aligns with your goal of creating a versatile playlist. Waiting might result in further storage challenges, but if you can manage your current capacity, it could be a temporary solution.",
+      "ground_truth": "The user would prefer responses that take into account their current home network storage capacity issues and recent reliance on external hard drives, highlighting the potential benefits of a NAS device in addressing these specific needs. They might not prefer responses that ignore their current storage challenges or fail to consider their recent tech upgrades and priorities. Preferred responses would utilize the user's previous mentions of storage capacity issues and tech investments to inform their decision.",
+      "tokens_used": 411,
+      "latency_ms": 2192.149900001823,
+      "is_correct": true
+    },
+    {
+      "question_id": "fca70973",
+      "question_type": "single-session-preference",
+      "oracle_recall": false,
+      "predicted_answer": "Based on your love for Disneyland, Knott's Berry Farm, Six Flags Magic Mountain, and Universal Studios, I'd recommend visiting Universal's Islands of Adventure for its thrilling rides and unique theming. You might also enjoy the Halloween season events at Knott's Berry Farm for a spooky twist on your favorite attractions.",
+      "ground_truth": "The user would prefer theme park suggestions that cater to their interest in both thrill rides and special events, utilizing their previous experiences at Disneyland, Knott's Berry Farm, Six Flags Magic Mountain, and Universal Studios Hollywood as a reference point. They would also appreciate recommendations that highlight unique food experiences and nighttime shows. The user might not prefer suggestions that focus solely on one aspect of theme parks, such as only thrill rides or only family-friendly attractions, and may not be interested in parks that lack special events or unique dining options.",
+      "tokens_used": 60,
+      "latency_ms": 1707.2322000021813,
+      "is_correct": true
+    },
+    {
+      "question_id": "b6025781",
+      "question_type": "single-session-preference",
+      "oracle_recall": false,
+      "predicted_answer": "Try quinoa-stuffed bell peppers with a side of roasted chicken and vegetables. For a new twist, you could also make a quinoa and black bean salad with avocado and cherry tomatoes. Both options align with your preference for healthy proteins and quinoa.",
+      "ground_truth": "The user would prefer responses that suggest healthy meal prep recipes, especially those that incorporate quinoa and roasted vegetables, and offer variations in protein sources. They might appreciate suggestions that build upon their existing preferences, such as new twists on chicken Caesar salads or turkey and avocado wraps. The user may not prefer responses that suggest unhealthy or high-calorie meal prep options, or those that deviate significantly from their established healthy eating habits.",
+      "tokens_used": 66,
+      "latency_ms": 1485.9928000005311,
+      "is_correct": true
+    },
+    {
+      "question_id": "a89d7624",
+      "question_type": "single-session-preference",
+      "oracle_recall": true,
+      "predicted_answer": "Definitely check out the Killers concert if you're a fan of Brandon Flowers! Denver also offers a variety of live music venues and unique dining experiences that cater to your love for live music.",
+      "ground_truth": "The user would prefer responses that take into account their previous experience in Denver, specifically their interest in live music and memorable encounter with Brandon Flowers. They might appreciate suggestions that revisit or build upon this experience, such as revisiting the same bar or exploring similar music venues in the area. The user may not prefer general tourist recommendations or activities unrelated to their interest in live music.",
+      "tokens_used": 397,
+      "latency_ms": 1317.623499999172,
+      "is_correct": true
+    },
+    {
+      "question_id": "b0479f84",
+      "question_type": "single-session-preference",
+      "oracle_recall": false,
+      "predicted_answer": "Based on your interest in nature and character documentaries like 'Our Planet', 'Free Solo', and 'Tiger King', you might enjoy 'The Last Expedition' for its adventurous spirit or 'The Cove' for its environmental angle.",
+      "ground_truth": "The user would prefer documentary recommendations that are similar in style and theme to 'Our Planet', 'Free Solo', and 'Tiger King', which they have previously enjoyed. They might not prefer recommendations of documentaries that are vastly different in tone or subject matter from these titles. The preferred response utilizes the user's previously mentioned viewing history to suggest documentaries that cater to their tastes.",
+      "tokens_used": 228,
+      "latency_ms": 1392.3641000001226,
+      "is_correct": true
+    },
+    {
+      "question_id": "1d4e3b97",
+      "question_type": "single-session-preference",
+      "oracle_recall": false,
+      "predicted_answer": "Your new Garmin bike computer might be providing better navigation and tracking, enhancing your ride experience.",
+      "ground_truth": "The user would prefer responses that reference specific details from their previous interactions, such as the replacement of the bike's chain and cassette, and the use of a new Garmin bike computer. They might prefer explanations that connect these details to the observed improvement in bike performance. The user may not prefer responses that fail to acknowledge these specific details or provide vague, general explanations for the improvement.",
+      "tokens_used": 406,
+      "latency_ms": 1037.165500005358,
+      "is_correct": true
+    },
+    {
+      "question_id": "07b6f563",
+      "question_type": "single-session-preference",
+      "oracle_recall": false,
+      "predicted_answer": "Considering your preference for durability and protection, I'd recommend the OtterBox protective case for your iPhone 13 Pro. Also, a tempered glass screen protector would be a great addition to safeguard your screen. For MagSafe accessories, you might like a MagSafe wallet for convenient storage and a MagSafe charger for quick charging. Lastly, a high-capacity portable power bank would ensure your phone stays charged during emergencies.",
+      "ground_truth": "The user would prefer suggestions of accessories that are compatible with an iPhone 13 Pro, such as high-quality screen protectors, durable cases, portable power banks, or phone wallet cases. They may not prefer suggestions of accessories that are not compatible with Apple products or do not enhance the functionality or protection of their phone.",
+      "tokens_used": 397,
+      "latency_ms": 2052.5324000045657,
+      "is_correct": true
+    },
+    {
+      "question_id": "1c0ddc50",
+      "question_type": "single-session-preference",
+      "oracle_recall": false,
+      "predicted_answer": "You could listen to history podcasts or audiobooks that explore topics beyond true crime and self-improvement, and perhaps even include some that discuss the history of art or the lives of famous artists. Additionally, you might consider sketching or jotting down ideas inspired by the podcasts or audiobooks during your commute.",
+      "ground_truth": "The user would prefer suggestions related to listening to new podcasts or audiobooks, especially the genre beyond true crime or self-improvement, such as history. They may not be interested in activities that require visual attention, such as reading or watching videos, as they are commuting. The user would not prefer general podcast topics such as true crime or self-improvement, as the user wants to explore other topics.",
+      "tokens_used": 320,
+      "latency_ms": 1744.3280999941635,
+      "is_correct": true
+    },
+    {
+      "question_id": "0a34ad58",
+      "question_type": "single-session-preference",
+      "oracle_recall": true,
+      "predicted_answer": "Considering your Suica card for Tokyo metro navigation, make sure to keep it topped up for seamless travel. Also, use the TripIt app to organize your Tokyo trip, which can help alleviate anxiety by having a clear itinerary.",
+      "ground_truth": "The user would prefer responses that utilize their existing resources, such as their Suica card and TripIt app, to provide personalized tips for navigating Tokyo's public transportation. They might not prefer general tips or recommendations that do not take into account their prior preparations.",
+      "tokens_used": 413,
+      "latency_ms": 1430.3534999999101,
+      "is_correct": true
+    },
+    {
+      "question_id": "d3ab962e",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "8 miles",
+      "tokens_used": 311,
+      "latency_ms": 991.8289999986882,
+      "is_correct": false
+    },
+    {
+      "question_id": "2311e44b",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "400 pages",
+      "ground_truth": "190",
+      "tokens_used": 238,
+      "latency_ms": 886.4427000007709,
+      "is_correct": false
+    },
+    {
+      "question_id": "cc06de0d",
+      "question_type": "multi-session",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "$6",
+      "tokens_used": 431,
+      "latency_ms": 861.0195000001113,
+      "is_correct": false
+    },
+    {
+      "question_id": "a11281a2",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "An increase of 350 followers",
+      "ground_truth": "100",
+      "tokens_used": 482,
+      "latency_ms": 1198.7353000004077,
+      "is_correct": false
+    },
+    {
+      "question_id": "4f54b7c9",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "2",
+      "ground_truth": "5",
+      "tokens_used": 340,
+      "latency_ms": 905.7453999994323,
+      "is_correct": false
+    },
+    {
+      "question_id": "85fa3a3f",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "$45",
+      "ground_truth": "$50",
+      "tokens_used": 160,
+      "latency_ms": 1029.8458999968716,
+      "is_correct": false
+    },
+    {
+      "question_id": "9aaed6a3",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "$0.75",
+      "ground_truth": "$0.75",
+      "tokens_used": 3178,
+      "latency_ms": 2803.630800000974,
+      "is_correct": true
+    },
+    {
+      "question_id": "1f2b8d4f",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "$200",
+      "ground_truth": "$750",
+      "tokens_used": 295,
+      "latency_ms": 1151.6800000026706,
+      "is_correct": false
+    },
+    {
+      "question_id": "e6041065",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "40%",
+      "tokens_used": 59,
+      "latency_ms": 864.7138999949675,
+      "is_correct": false
+    },
+    {
+      "question_id": "51c32626",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "2023/05/22 (Mon) 05:30",
+      "ground_truth": "February 1st",
+      "tokens_used": 59,
+      "latency_ms": 936.986100001377,
+      "is_correct": false
+    },
+    {
+      "question_id": "d905b33f",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "20%",
+      "tokens_used": 236,
+      "latency_ms": 893.8541000024998,
+      "is_correct": false
+    },
+    {
+      "question_id": "7405e8b1",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Yes.",
+      "tokens_used": 297,
+      "latency_ms": 1042.109599999094,
+      "is_correct": false
+    },
+    {
+      "question_id": "f35224e0",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "27",
+      "tokens_used": 322,
+      "latency_ms": 1082.5660999980755,
+      "is_correct": false
+    },
+    {
+      "question_id": "6456829e",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "5 tomato plants and 3 cucumber plants",
+      "ground_truth": "8",
+      "tokens_used": 153,
+      "latency_ms": 1041.566600004444,
+      "is_correct": false
+    },
+    {
+      "question_id": "a4996e51",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "50 hours",
+      "ground_truth": "50",
+      "tokens_used": 257,
+      "latency_ms": 1007.17540000187,
+      "is_correct": true
+    },
+    {
+      "question_id": "3c1045c8",
+      "question_type": "multi-session",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "2.5 years",
+      "tokens_used": 389,
+      "latency_ms": 1080.2934000021196,
+      "is_correct": false
+    },
+    {
+      "question_id": "60036106",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "12,000",
+      "tokens_used": 476,
+      "latency_ms": 1251.586500002304,
+      "is_correct": false
+    },
+    {
+      "question_id": "681a1674",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "1 movie",
+      "ground_truth": "2",
+      "tokens_used": 291,
+      "latency_ms": 803.8315000012517,
+      "is_correct": false
+    },
+    {
+      "question_id": "e25c3b8d",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "$200",
+      "ground_truth": "$300",
+      "tokens_used": 280,
+      "latency_ms": 820.604499996989,
+      "is_correct": false
+    },
+    {
+      "question_id": "4adc0475",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "4 items",
+      "ground_truth": "5",
+      "tokens_used": 168,
+      "latency_ms": 1044.173399997817,
+      "is_correct": false
+    },
+    {
+      "question_id": "4bc144e2",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "$15 and an unspecified amount for the parking ticket.",
+      "ground_truth": "$65",
+      "tokens_used": 263,
+      "latency_ms": 1123.0953999984195,
+      "is_correct": false
+    },
+    {
+      "question_id": "ef66a6e5",
+      "question_type": "multi-session",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "two",
+      "tokens_used": 519,
+      "latency_ms": 1080.3699000025517,
+      "is_correct": false
+    },
+    {
+      "question_id": "5025383b",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "Cooking and Food Enthusiast",
+      "ground_truth": "photography and cooking",
+      "tokens_used": 315,
+      "latency_ms": 942.7222000012989,
+      "is_correct": true
+    },
+    {
+      "question_id": "a1cc6108",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "11",
+      "tokens_used": 399,
+      "latency_ms": 969.425900002534,
+      "is_correct": false
+    },
+    {
+      "question_id": "9ee3ecd6",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "100",
+      "tokens_used": 188,
+      "latency_ms": 890.1417000015499,
+      "is_correct": false
+    },
+    {
+      "question_id": "3fdac837",
+      "question_type": "multi-session",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "11 days (or 12 days, if April 15th to 22nd is considered as 8 days)",
+      "tokens_used": 465,
+      "latency_ms": 1032.3750999959884,
+      "is_correct": false
+    },
+    {
+      "question_id": "91b15a6e",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "$5,150",
+      "tokens_used": 53,
+      "latency_ms": 912.6178000005893,
+      "is_correct": false
+    },
+    {
+      "question_id": "27016adc",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "10%",
+      "tokens_used": 529,
+      "latency_ms": 1108.3983999997145,
+      "is_correct": false
+    },
+    {
+      "question_id": "720133ac",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "$75",
+      "ground_truth": "$75",
+      "tokens_used": 253,
+      "latency_ms": 971.7396999985795,
+      "is_correct": true
+    },
+    {
+      "question_id": "77eafa52",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "$300",
+      "ground_truth": "$300",
+      "tokens_used": 190,
+      "latency_ms": 876.6305000026478,
+      "is_correct": true
+    },
+    {
+      "question_id": "8979f9ec",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "6 meals",
+      "ground_truth": "8 meals",
+      "tokens_used": 230,
+      "latency_ms": 883.2504000019981,
+      "is_correct": true
+    },
+    {
+      "question_id": "0100672e",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "$12",
+      "tokens_used": 427,
+      "latency_ms": 1149.1313000005903,
+      "is_correct": false
+    },
+    {
+      "question_id": "a96c20ee",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "Harvard University",
+      "ground_truth": "Harvard University",
+      "tokens_used": 100,
+      "latency_ms": 854.529399999592,
+      "is_correct": true
+    },
+    {
+      "question_id": "92a0aa75",
+      "question_type": "multi-session",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "1 year and 5 months",
+      "tokens_used": 3063,
+      "latency_ms": 2329.114699998172,
+      "is_correct": false
+    },
+    {
+      "question_id": "3fe836c9",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "$25,000",
+      "ground_truth": "$25,000",
+      "tokens_used": 223,
+      "latency_ms": 1054.427900002338,
+      "is_correct": true
+    },
+    {
+      "question_id": "1c549ce4",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "$45",
+      "ground_truth": "$140",
+      "tokens_used": 326,
+      "latency_ms": 963.4395999964909,
+      "is_correct": false
+    },
+    {
+      "question_id": "6c49646a",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "4 trips",
+      "ground_truth": "3,000 miles",
+      "tokens_used": 124,
+      "latency_ms": 784.6446999974432,
+      "is_correct": false
+    },
+    {
+      "question_id": "1192316e",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "an hour and a half",
+      "tokens_used": 402,
+      "latency_ms": 1227.964499994414,
+      "is_correct": false
+    },
+    {
+      "question_id": "0ea62687",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "2 months",
+      "ground_truth": "2",
+      "tokens_used": 106,
+      "latency_ms": 964.5818999997573,
+      "is_correct": true
+    },
+    {
+      "question_id": "67e0d0f2",
+      "question_type": "multi-session",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "20",
+      "tokens_used": 503,
+      "latency_ms": 1468.1236000033095,
+      "is_correct": false
+    },
+    {
+      "question_id": "bb7c3b45",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "1 item",
+      "ground_truth": "$300",
+      "tokens_used": 178,
+      "latency_ms": 933.2953000048292,
+      "is_correct": false
+    },
+    {
+      "question_id": "ba358f49",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "1 year",
+      "ground_truth": "33",
+      "tokens_used": 58,
+      "latency_ms": 860.477099995478,
+      "is_correct": false
+    },
+    {
+      "question_id": "61f8c8f8",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "10 minutes",
+      "tokens_used": 436,
+      "latency_ms": 1413.3986999950139,
+      "is_correct": false
+    },
+    {
+      "question_id": "60159905",
+      "question_type": "multi-session",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "three",
+      "tokens_used": 2212,
+      "latency_ms": 2225.816500002111,
+      "is_correct": false
+    },
+    {
+      "question_id": "ef9cf60a",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "$200",
+      "ground_truth": "$300",
+      "tokens_used": 214,
+      "latency_ms": 1018.1022000033408,
+      "is_correct": false
+    },
+    {
+      "question_id": "73d42213",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "9:00 AM",
+      "tokens_used": 238,
+      "latency_ms": 1015.3368000028422,
+      "is_correct": false
+    },
+    {
+      "question_id": "bc149d6b",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "70 pounds",
+      "tokens_used": 144,
+      "latency_ms": 831.2468000003719,
+      "is_correct": false
+    },
+    {
+      "question_id": "099778bb",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "20%",
+      "tokens_used": 325,
+      "latency_ms": 954.8237999988487,
+      "is_correct": false
+    },
+    {
+      "question_id": "09ba9854",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "$50",
+      "tokens_used": 548,
+      "latency_ms": 1120.831599997473,
+      "is_correct": false
+    },
+    {
+      "question_id": "d6062bb9",
+      "question_type": "multi-session",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "1,998",
+      "tokens_used": 313,
+      "latency_ms": 1167.978099998436,
+      "is_correct": false
+    },
+    {
+      "question_id": "157a136e",
+      "question_type": "multi-session",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "43",
+      "tokens_used": 432,
+      "latency_ms": 1047.3144999996293,
+      "is_correct": false
+    },
+    {
+      "question_id": "c18a7dc8",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "7",
+      "tokens_used": 474,
+      "latency_ms": 1218.3471999960602,
+      "is_correct": false
+    },
+    {
+      "question_id": "a3332713",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "$775",
+      "ground_truth": "$200",
+      "tokens_used": 246,
+      "latency_ms": 885.0746000025538,
+      "is_correct": false
+    },
+    {
+      "question_id": "55241a1f",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "12 items",
+      "ground_truth": "33",
+      "tokens_used": 509,
+      "latency_ms": 1022.0896000028006,
+      "is_correct": false
+    },
+    {
+      "question_id": "a08a253f",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "You attend fitness classes 2 days a week.",
+      "ground_truth": "4 days.",
+      "tokens_used": 168,
+      "latency_ms": 1144.5638000004692,
+      "is_correct": true
+    },
+    {
+      "question_id": "f0e564bc",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "$1,300",
+      "tokens_used": 393,
+      "latency_ms": 1004.991699999664,
+      "is_correct": false
+    },
+    {
+      "question_id": "078150f1",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "$50",
+      "tokens_used": 430,
+      "latency_ms": 1097.6865000047837,
+      "is_correct": false
+    },
+    {
+      "question_id": "8cf4d046",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "1 item",
+      "ground_truth": "3.83",
+      "tokens_used": 97,
+      "latency_ms": 885.9130999990157,
+      "is_correct": false
+    },
+    {
+      "question_id": "a346bb18",
+      "question_type": "multi-session",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "12",
+      "tokens_used": 475,
+      "latency_ms": 1162.6977999985684,
+      "is_correct": false
+    },
+    {
+      "question_id": "37f165cf",
+      "question_type": "multi-session",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "856",
+      "tokens_used": 154,
+      "latency_ms": 965.5291000017314,
+      "is_correct": false
+    },
+    {
+      "question_id": "8e91e7d9",
+      "question_type": "multi-session",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "4",
+      "tokens_used": 300,
+      "latency_ms": 1043.2813000006718,
+      "is_correct": false
+    },
+    {
+      "question_id": "87f22b4a",
+      "question_type": "multi-session",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "$120",
+      "tokens_used": 400,
+      "latency_ms": 981.642799997644,
+      "is_correct": false
+    },
+    {
+      "question_id": "e56a43b9",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "$5",
+      "ground_truth": "$5",
+      "tokens_used": 186,
+      "latency_ms": 862.0254999987083,
+      "is_correct": true
+    },
+    {
+      "question_id": "efc3f7c2",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "You wake up 30 minutes earlier on Fridays.",
+      "ground_truth": "30 minutes",
+      "tokens_used": 216,
+      "latency_ms": 1044.546099998115,
+      "is_correct": true
+    },
+    {
+      "question_id": "21d02d0d",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "2",
+      "tokens_used": 221,
+      "latency_ms": 1055.8455999998841,
+      "is_correct": false
+    },
+    {
+      "question_id": "2311e44b_abs",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "The information provided is not enough. You did not mention how many paged do you have left to read in 'Sapiens'.",
+      "tokens_used": 362,
+      "latency_ms": 1035.1257000002079,
+      "is_correct": true
+    },
+    {
+      "question_id": "6456829e_abs",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "5 tomato plants and 2 chili pepper plants",
+      "ground_truth": "The information provided is not enough. You mentioned planting 5 plants for tomatoes but you did not mention chili peppers.",
+      "tokens_used": 188,
+      "latency_ms": 1080.0202999962494,
+      "is_correct": false
+    },
+    {
+      "question_id": "e5ba910e_abs",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "$378",
+      "ground_truth": "The information provided is not enough. You mentioned purchasing a headphone, but you did not mention the iPad.",
+      "tokens_used": 227,
+      "latency_ms": 810.9980000008363,
+      "is_correct": false
+    },
+    {
+      "question_id": "a96c20ee_abs",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "Harvard University",
+      "ground_truth": "The information provided is not enough. You did not mention presenting a poster for your undergrad course research project.",
+      "tokens_used": 474,
+      "latency_ms": 1081.4386999991257,
+      "is_correct": false
+    },
+    {
+      "question_id": "ba358f49_abs",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "The information provided is not enough. You did not mention how old Rachel is right now, nor when will you get married.",
+      "tokens_used": 58,
+      "latency_ms": 841.1472999941907,
+      "is_correct": true
+    },
+    {
+      "question_id": "09ba9854_abs",
+      "question_type": "multi-session",
+      "oracle_recall": true,
+      "predicted_answer": "Around ¥10,000-20,000 (around $180-270 USD)",
+      "ground_truth": "The information provided is not enough. You did not mention how much will the bus take.",
+      "tokens_used": 552,
+      "latency_ms": 1365.7194000043091,
+      "is_correct": false
+    },
+    {
+      "question_id": "gpt4_59149c77",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "7 days",
+      "ground_truth": "7 days. 8 days (including the last day) is also acceptable.",
+      "tokens_used": 318,
+      "latency_ms": 1060.9775999982958,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_f49edff3",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "First, I helped my friend prepare the nursery. Second, I helped my cousin pick out stuff for her baby shower. Third, I ordered a customized phone case for my friend's birthday.",
+      "ground_truth": "First, I helped my friend prepare the nursery, then I helped my cousin pick out stuff for her baby shower, and lastly, I ordered a customized phone case for my friend's birthday.",
+      "tokens_used": 175,
+      "latency_ms": 1727.9791999972076,
+      "is_correct": true
+    },
+    {
+      "question_id": "71017276",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "4 weeks ago",
+      "ground_truth": "4",
+      "tokens_used": 308,
+      "latency_ms": 892.0264999978826,
+      "is_correct": true
+    },
+    {
+      "question_id": "b46e15ed",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": false,
+      "predicted_answer": "Approximately 2 months have passed.",
+      "ground_truth": "2",
+      "tokens_used": 1851,
+      "latency_ms": 914.5134999998845,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_fa19884c",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": false,
+      "predicted_answer": "6 days",
+      "ground_truth": "6 days. 7 days (including the last day) is also acceptable.",
+      "tokens_used": 381,
+      "latency_ms": 942.5185000000056,
+      "is_correct": true
+    },
+    {
+      "question_id": "0bc8ad92",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "Approximately 5 months",
+      "ground_truth": "5",
+      "tokens_used": 347,
+      "latency_ms": 834.764900006121,
+      "is_correct": true
+    },
+    {
+      "question_id": "af082822",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "2 weeks ago",
+      "ground_truth": "2",
+      "tokens_used": 295,
+      "latency_ms": 854.6448999986751,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_4929293a",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "Michael's engagement party happened first.",
+      "ground_truth": "Michael's engagement party",
+      "tokens_used": 81,
+      "latency_ms": 1066.4982000016607,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_b5700ca9",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "4 days ago",
+      "ground_truth": "4 days.",
+      "tokens_used": 293,
+      "latency_ms": 915.2040999979363,
+      "is_correct": true
+    },
+    {
+      "question_id": "9a707b81",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "21 days ago",
+      "ground_truth": "21 days. 22 days (including the last day) is also acceptable.",
+      "tokens_used": 318,
+      "latency_ms": 1033.6091999997734,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_1d4ab0c9",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "24 days",
+      "ground_truth": "24 days. 25 days (including the last day) is also acceptable.",
+      "tokens_used": 298,
+      "latency_ms": 910.4041000027792,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_e072b769",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "3 weeks ago",
+      "ground_truth": "3 weeks ago",
+      "tokens_used": 341,
+      "latency_ms": 850.0521999958437,
+      "is_correct": true
+    },
+    {
+      "question_id": "0db4c65d",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "18 days",
+      "ground_truth": "18 days. 19 days (including the last day) is also acceptable.",
+      "tokens_used": 306,
+      "latency_ms": 1254.6166999964043,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_1d80365e",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "2 days",
+      "ground_truth": "2 days. 3 days (including the last day) is also acceptable.",
+      "tokens_used": 300,
+      "latency_ms": 833.7933000002522,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_7f6b06db",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": false,
+      "predicted_answer": "Muir Woods National Monument, Yosemite National Park, Sequoia National Park",
+      "ground_truth": "I went on a day hike to Muir Woods National Monument with my family, then I went on a road trip with friends to Big Sur and Monterey, and finally I started my solo camping trip to Yosemite National Park.",
+      "tokens_used": 464,
+      "latency_ms": 1195.418300005258,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_6dc9b45b",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "4 months ago",
+      "ground_truth": "4 months ago",
+      "tokens_used": 160,
+      "latency_ms": 992.4936999959755,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_8279ba02",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": false,
+      "predicted_answer": "10 days ago",
+      "ground_truth": "10 days ago. 11 days (including the last day) is also acceptable.",
+      "tokens_used": 412,
+      "latency_ms": 756.3071000040509,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_18c2b244",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "I used a Buy One Get One Free coupon on Luvs diapers at Walmart, I redeemed $12 cashback for a $10 Amazon gift card from Ibotta, I signed up for the rewards program at ShopRite.",
+      "ground_truth": "First, I used a Buy One Get One Free coupon on Luvs diapers at Walmart. Then, I redeemed $12 cashback for a $10 Amazon gift card from Ibotta. Finally, I signed up for the rewards program at ShopRite.",
+      "tokens_used": 311,
+      "latency_ms": 1895.7446999993408,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_a1b77f9c",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "2 weeks for 'The Nightingale', 4 weeks for 'Sapiens: A Brief History of Humankind', and 2 weeks for 'The Power', so a total of 8 weeks.",
+      "tokens_used": 216,
+      "latency_ms": 993.9034999988507,
+      "is_correct": false
+    },
+    {
+      "question_id": "gpt4_1916e0ea",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "54 days",
+      "ground_truth": "54 days. 55 days (including the last day) is also acceptable.",
+      "tokens_used": 309,
+      "latency_ms": 941.227199997229,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_7a0daae1",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "3 weeks",
+      "ground_truth": "1 week",
+      "tokens_used": 227,
+      "latency_ms": 991.746100000455,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_468eb063",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "39 days ago",
+      "ground_truth": "9 days ago. 10 days (including the last day) is also acceptable.",
+      "tokens_used": 286,
+      "latency_ms": 990.2896999992663,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_7abb270c",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "1. Science Museum (Space Exploration exhibition)\n2. Museum of History (conservation lab)",
+      "ground_truth": "Science Museum, Museum of Contemporary Art, Metropolitan Museum of Art, Museum of History, Modern Art Museum, Natural History Museum",
+      "tokens_used": 816,
+      "latency_ms": 1878.7709000025643,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_1e4a8aeb",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "6 days",
+      "ground_truth": "6 days. 7 days (including the last day) is also acceptable.",
+      "tokens_used": 156,
+      "latency_ms": 934.957099998428,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_4fc4f797",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "37 days",
+      "ground_truth": "38 days. 39 days (including the last day) is also acceptable.",
+      "tokens_used": 623,
+      "latency_ms": 963.3565000040107,
+      "is_correct": true
+    },
+    {
+      "question_id": "4dfccbf7",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "24 days",
+      "ground_truth": "24 days. 25 days (including the last day) is also acceptable.",
+      "tokens_used": 278,
+      "latency_ms": 953.2985999976518,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_61e13b3c",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "3 weeks",
+      "ground_truth": "3 weeks",
+      "tokens_used": 571,
+      "latency_ms": 998.8458000007086,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_45189cb4",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "1. On 2023-01-05: Lakers vs Chicago Bulls\n2. On 2023-01-15: College Football National Championship (Georgia vs Alabama)\n3. On 2023-01-22: Thinking of ordering food",
+      "ground_truth": "First, I attended a NBA game at the Staples Center, then I watched the College Football National Championship game, and finally, I watched the NFL playoffs.",
+      "tokens_used": 390,
+      "latency_ms": 1621.1968999996316,
+      "is_correct": true
+    },
+    {
+      "question_id": "2ebe6c90",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "21 days",
+      "ground_truth": "21 days. 22 days (including the last day) is also acceptable.",
+      "tokens_used": 280,
+      "latency_ms": 969.8126000002958,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_e061b84f",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "1. Spring Sprint Triathlon (June 2, 2023)\n2. Planning meals for the next week (June 17, 2023)\n3. Creating a personalized fitness plan (June 16, 2023)",
+      "ground_truth": "I first completed the Spring Sprint Triathlon, then took part in the Midsummer 5K Run, and finally participated in the company's annual charity soccer tournament.",
+      "tokens_used": 211,
+      "latency_ms": 1664.2747999940184,
+      "is_correct": true
+    },
+    {
+      "question_id": "370a8ff4",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "12 weeks",
+      "ground_truth": "15",
+      "tokens_used": 464,
+      "latency_ms": 910.464000000502,
+      "is_correct": false
+    },
+    {
+      "question_id": "gpt4_d6585ce8",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "1. On 2023-03-18: Billie Eilish concert at the Wells Fargo Center in Philly\n2. On 2023-03-19: George Washington had slaves?\n3. On 2023-03-21: Documentary recommendations\n4. On 2023-03-22: Considering building a vacation home on a plot of land\n5. On 2023-03-23: Looking for some documentary recommendations\n6. On 2023-03-24: Issues with dry skin\n7. On 2023-03-25: Attended a free outdoor concert series in the park\n8. On 2023-03-29: Need help finding a good recipe for homemade coffee\n9. On 2023-04-01: Listened to a lot of indie music at a music festival in Brooklyn\n10. On 2023-04-08: Trying to find some new music to listen to\n11. On 2023-04-09: Inquiring about the live music or nightlife scene in Mad\n12. On 2023-04-10: Example of how to organize\n13. On 2023-04-11: How does the United States government plan",
+      "ground_truth": "The order of the concerts I attended is: 1. Billie Eilish concert at the Wells Fargo Center in Philly, 2. Free outdoor concert series in the park, 3. Music festival in Brooklyn, 4. Jazz night at a local bar, 5. Queen + Adam Lambert concert at the Prudential Center in Newark, NJ.",
+      "tokens_used": 822,
+      "latency_ms": 5335.705699995742,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_4ef30696",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "1 day",
+      "ground_truth": "1 day. 2 days (including the last day) is also acceptable.",
+      "tokens_used": 322,
+      "latency_ms": 1110.5362999951467,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_ec93e27f",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "The information provided is not enough to answer this question.",
+      "ground_truth": "train",
+      "tokens_used": 74,
+      "latency_ms": 768.4841999944183,
+      "is_correct": false
+    },
+    {
+      "question_id": "6e984301",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "3 weeks",
+      "ground_truth": "3",
+      "tokens_used": 256,
+      "latency_ms": 856.2754999948083,
+      "is_correct": true
+    },
+    {
+      "question_id": "8077ef71",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "26 days ago",
+      "ground_truth": "26 days. 27 days (including the last day) is also acceptable.",
+      "tokens_used": 272,
+      "latency_ms": 862.0899000015925,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_f420262c",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "1. JetBlue\n2. (No specific airline mentioned before JetBlue in the provided context)",
+      "ground_truth": "JetBlue, Delta, United, American Airlines",
+      "tokens_used": 318,
+      "latency_ms": 1369.019900004787,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_8e165409",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "14 days",
+      "ground_truth": "14 days. 15 days (including the last day) is also acceptable.",
+      "tokens_used": 240,
+      "latency_ms": 959.252499997092,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_74aed68e",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "29 days",
+      "ground_truth": "29 days. 30 days (including the last day) is also acceptable.",
+      "tokens_used": 317,
+      "latency_ms": 939.4135999973514,
+      "is_correct": true
+    },
+    {
+      "question_id": "bcbe585f",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "4 weeks ago",
+      "ground_truth": "4",
+      "tokens_used": 218,
+      "latency_ms": 844.3312000017613,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_21adecb5",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": false,
+      "predicted_answer": "6 months",
+      "ground_truth": "6 months",
+      "tokens_used": 222,
+      "latency_ms": 933.239500001946,
+      "is_correct": true
+    },
+    {
+      "question_id": "5e1b23de",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": false,
+      "predicted_answer": "3 months ago",
+      "ground_truth": "3",
+      "tokens_used": 442,
+      "latency_ms": 954.8225000035018,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_98f46fc6",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "I participated in the charity bake sale first.",
+      "ground_truth": "I participated in the charity bake sale first.",
+      "tokens_used": 504,
+      "latency_ms": 1053.912900002615,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_af6db32f",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "17 days ago",
+      "ground_truth": "17 days ago. 18 days (including the last day) is also acceptable.",
+      "tokens_used": 234,
+      "latency_ms": 945.0912999964203,
+      "is_correct": true
+    },
+    {
+      "question_id": "eac54adc",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "19 days ago",
+      "ground_truth": "19 days ago. 20 days (including the last day) is also acceptable.",
+      "tokens_used": 592,
+      "latency_ms": 914.3419000029098,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_7ddcf75f",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "3 days ago",
+      "ground_truth": "3 days ago. 4 days (including the last day) is also acceptable.",
+      "tokens_used": 292,
+      "latency_ms": 878.629800005001,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_a2d1d1f6",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "3 days ago",
+      "ground_truth": "3 days ago. 4 days (including the last day) is also acceptable.",
+      "tokens_used": 405,
+      "latency_ms": 989.1139999963343,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_85da3956",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "3 weeks ago",
+      "ground_truth": "3 weeks ago",
+      "tokens_used": 239,
+      "latency_ms": 950.4840000008699,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_b0863698",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": false,
+      "predicted_answer": "16 days ago",
+      "ground_truth": "7 days ago. 8 days (including the last day) is also acceptable.",
+      "tokens_used": 437,
+      "latency_ms": 936.9815000027302,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_68e94287",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "Post about vegan chili recipe",
+      "ground_truth": "You posted a recipe for vegan chili on Instagram using the hashtag #FoodieAdventures first.",
+      "tokens_used": 86,
+      "latency_ms": 922.4621000030311,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_e414231e",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "4 days",
+      "ground_truth": "4 days. 5 days (including the last day) is also acceptable.",
+      "tokens_used": 193,
+      "latency_ms": 1011.9327000065823,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_7ca326fa",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "Rachel first, Emma second, Alex third.",
+      "ground_truth": "Emma graduated first, followed by Rachel and then Alex.",
+      "tokens_used": 141,
+      "latency_ms": 1143.5389000034775,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_7bc6cf22",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "12 days ago",
+      "ground_truth": "12 days ago. 13 days (including the last day) is also acceptable.",
+      "tokens_used": 240,
+      "latency_ms": 909.8836000048323,
+      "is_correct": true
+    },
+    {
+      "question_id": "2ebe6c92",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "'The Nightingale' by Kristin Hannah",
+      "tokens_used": 1399,
+      "latency_ms": 1478.7317000009352,
+      "is_correct": false
+    },
+    {
+      "question_id": "gpt4_e061b84g",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "The annual charity soccer tournament.",
+      "ground_truth": "The company's annual charity soccer tournament.",
+      "tokens_used": 3108,
+      "latency_ms": 2811.037999999826,
+      "is_correct": true
+    },
+    {
+      "question_id": "71017277",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "my aunt",
+      "tokens_used": 3074,
+      "latency_ms": 2700.532499999099,
+      "is_correct": false
+    },
+    {
+      "question_id": "b46e15ee",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "the 'Walk for Hunger' charity event",
+      "tokens_used": 2058,
+      "latency_ms": 1831.217300001299,
+      "is_correct": false
+    },
+    {
+      "question_id": "gpt4_d6585ce9",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "My parents",
+      "ground_truth": "my parents",
+      "tokens_used": 2795,
+      "latency_ms": 2372.800900004222,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_1e4a8aec",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "planting 12 new tomato saplings",
+      "tokens_used": 1202,
+      "latency_ms": 1316.72609999805,
+      "is_correct": false
+    },
+    {
+      "question_id": "gpt4_f420262d",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "American Airlines",
+      "ground_truth": "American Airlines",
+      "tokens_used": 2676,
+      "latency_ms": 2266.14160000463,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_59149c78",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "The Metropolitan Museum of Art.",
+      "tokens_used": 4634,
+      "latency_ms": 2438.239399998565,
+      "is_correct": false
+    },
+    {
+      "question_id": "gpt4_e414231f",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "I serviced my road bike.",
+      "ground_truth": "road bike",
+      "tokens_used": 2694,
+      "latency_ms": 2352.0066999990377,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_4929293b",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "Being a bridesmaid at my cousin's wedding.",
+      "ground_truth": "my cousin's wedding",
+      "tokens_used": 2652,
+      "latency_ms": 2241.1218999986886,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_468eb064",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "Emma, a freelance writer",
+      "ground_truth": "Emma",
+      "tokens_used": 3081,
+      "latency_ms": 2586.5143000046373,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_fa19884d",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "a bluegrass band that features a banjo player",
+      "tokens_used": 1452,
+      "latency_ms": 1591.0018000067794,
+      "is_correct": false
+    },
+    {
+      "question_id": "9a707b82",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "A chocolate cake with espresso powder to intensify the chocolate flavor.",
+      "ground_truth": "a chocolate cake",
+      "tokens_used": 2597,
+      "latency_ms": 2624.9314000015147,
+      "is_correct": true
+    },
+    {
+      "question_id": "eac54add",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "I signed a contract with my first client.",
+      "tokens_used": 909,
+      "latency_ms": 1341.0015999979805,
+      "is_correct": false
+    },
+    {
+      "question_id": "4dfccbf8",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": false,
+      "predicted_answer": "I went to the movies with Rachel.",
+      "ground_truth": "I started taking ukulele lessons with Rachel.",
+      "tokens_used": 3033,
+      "latency_ms": 2719.191399999545,
+      "is_correct": true
+    },
+    {
+      "question_id": "0bc8ad93",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "No, you did not visit with a friend.",
+      "tokens_used": 2671,
+      "latency_ms": 2517.6611999995657,
+      "is_correct": false
+    },
+    {
+      "question_id": "6e984302",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "A set of sculpting tools.",
+      "ground_truth": "I got my own set of sculpting tools.",
+      "tokens_used": 3427,
+      "latency_ms": 2856.4329000000726,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_8279ba03",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "a smoker",
+      "tokens_used": 3125,
+      "latency_ms": 2697.5745000017923,
+      "is_correct": false
+    },
+    {
+      "question_id": "gpt4_b5700ca0",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "the Episcopal Church",
+      "tokens_used": 3166,
+      "latency_ms": 6030.288499998278,
+      "is_correct": false
+    },
+    {
+      "question_id": "gpt4_68e94288",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "Participated in a social media challenge called #PlankChallenge.",
+      "ground_truth": "You participated in a social media challenge called #PlankChallenge.",
+      "tokens_used": 2882,
+      "latency_ms": 2696.5280000003986,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_2655b836",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "GPS system not functioning correctly",
+      "tokens_used": 236,
+      "latency_ms": 1098.5896999991382,
+      "is_correct": false
+    },
+    {
+      "question_id": "gpt4_2487a7cb",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": false,
+      "predicted_answer": "Data Analysis using Python webinar",
+      "ground_truth": "'Data Analysis using Python' webinar",
+      "tokens_used": 524,
+      "latency_ms": 1203.9099999965401,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_76048e76",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "The information provided is not enough to answer this question.",
+      "ground_truth": "bike",
+      "tokens_used": 151,
+      "latency_ms": 757.0085000043036,
+      "is_correct": false
+    },
+    {
+      "question_id": "gpt4_2312f94c",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "Dell XPS 13",
+      "ground_truth": "Samsung Galaxy S22",
+      "tokens_used": 102,
+      "latency_ms": 815.7533000048716,
+      "is_correct": false
+    },
+    {
+      "question_id": "0bb5a684",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "0 days",
+      "ground_truth": "7 days. 8 days (including the last day) is also acceptable.",
+      "tokens_used": 314,
+      "latency_ms": 998.3899999933783,
+      "is_correct": true
+    },
+    {
+      "question_id": "08f4fc43",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "0 days or 1 day inclusive",
+      "ground_truth": "30 days. 31 days (including the last day) is also acceptable.",
+      "tokens_used": 229,
+      "latency_ms": 1146.208199999819,
+      "is_correct": true
+    },
+    {
+      "question_id": "2c63a862",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "0 days",
+      "ground_truth": "14 days. 15 days (including the last day) is also acceptable.",
+      "tokens_used": 361,
+      "latency_ms": 983.9185000018915,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_385a5000",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": false,
+      "predicted_answer": "Marigolds",
+      "ground_truth": "Tomatoes",
+      "tokens_used": 315,
+      "latency_ms": 974.1768000021693,
+      "is_correct": false
+    },
+    {
+      "question_id": "2a1811e2",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "0 days or 1 day inclusive",
+      "ground_truth": "21 days. 22 days (including the last day) is also acceptable.",
+      "tokens_used": 287,
+      "latency_ms": 1107.772900002601,
+      "is_correct": true
+    },
+    {
+      "question_id": "bbf86515",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "0 days",
+      "ground_truth": "4 days.",
+      "tokens_used": 302,
+      "latency_ms": 968.7033000009251,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_5dcc0aab",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "white Adidas sneakers",
+      "tokens_used": 75,
+      "latency_ms": 1007.302999998501,
+      "is_correct": false
+    },
+    {
+      "question_id": "gpt4_0b2f1d21",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "The malfunction of the stand mixer happened first.",
+      "ground_truth": "The malfunction of the stand mixer",
+      "tokens_used": 456,
+      "latency_ms": 1166.6907999970135,
+      "is_correct": true
+    },
+    {
+      "question_id": "f0853d11",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "0 days or 1 day",
+      "ground_truth": "14 days. 8 days (including the last day) is also acceptable.",
+      "tokens_used": 448,
+      "latency_ms": 999.3974000026355,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_6ed717ea",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "The training pads for Luna",
+      "ground_truth": "Training pads for Luna",
+      "tokens_used": 464,
+      "latency_ms": 962.7829000019119,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_70e84552",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "Trimming the goats' hooves",
+      "ground_truth": "Fixing the fence",
+      "tokens_used": 499,
+      "latency_ms": 916.3136999995913,
+      "is_correct": true
+    },
+    {
+      "question_id": "a3838d2b",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "4",
+      "tokens_used": 360,
+      "latency_ms": 983.8963000001968,
+      "is_correct": false
+    },
+    {
+      "question_id": "gpt4_93159ced",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": false,
+      "predicted_answer": "0 days",
+      "ground_truth": "4 years and 9 months",
+      "tokens_used": 2140,
+      "latency_ms": 877.8606000050786,
+      "is_correct": false
+    },
+    {
+      "question_id": "gpt4_2d58bcd6",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "The Nightingale",
+      "ground_truth": "'The Hate U Give'",
+      "tokens_used": 186,
+      "latency_ms": 879.9285999994026,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_65aabe59",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": false,
+      "predicted_answer": "The mesh network system.",
+      "ground_truth": "Smart thermostat",
+      "tokens_used": 501,
+      "latency_ms": 914.9679999973159,
+      "is_correct": false
+    },
+    {
+      "question_id": "982b5123",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "1 month ago",
+      "ground_truth": "Five months ago",
+      "tokens_used": 175,
+      "latency_ms": 860.0547000023653,
+      "is_correct": true
+    },
+    {
+      "question_id": "b9cfe692",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "29 hours, 19 minutes",
+      "ground_truth": "5.5 weeks",
+      "tokens_used": 391,
+      "latency_ms": 1135.1018000059412,
+      "is_correct": false
+    },
+    {
+      "question_id": "gpt4_4edbafa2",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "June 3rd",
+      "ground_truth": "June 3rd",
+      "tokens_used": 142,
+      "latency_ms": 885.7033000022057,
+      "is_correct": true
+    },
+    {
+      "question_id": "c8090214",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "0 days",
+      "ground_truth": "7 days. 8 days (including the last day) is also acceptable.",
+      "tokens_used": 285,
+      "latency_ms": 1130.4095000014058,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_483dd43c",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": false,
+      "predicted_answer": "Game of Thrones",
+      "ground_truth": "'Game of Thrones'",
+      "tokens_used": 447,
+      "latency_ms": 898.5628000009456,
+      "is_correct": true
+    },
+    {
+      "question_id": "e4e14d04",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "0 days",
+      "ground_truth": "Two weeks",
+      "tokens_used": 294,
+      "latency_ms": 894.3444000033196,
+      "is_correct": false
+    },
+    {
+      "question_id": "c9f37c46",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "0 days",
+      "ground_truth": "2 months",
+      "tokens_used": 416,
+      "latency_ms": 1146.8687000015052,
+      "is_correct": false
+    },
+    {
+      "question_id": "gpt4_2c50253f",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "15 minutes earlier than usual",
+      "ground_truth": "6:45 AM",
+      "tokens_used": 143,
+      "latency_ms": 1004.9629999994067,
+      "is_correct": false
+    },
+    {
+      "question_id": "dcfa8644",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "0 days or 1 day",
+      "ground_truth": "14 days. 15 days (including the last day) is also acceptable.",
+      "tokens_used": 221,
+      "latency_ms": 978.7763999993331,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_b4a80587",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": false,
+      "predicted_answer": "The arrival of the new prime lens.",
+      "ground_truth": "The arrival of the new prime lens",
+      "tokens_used": 416,
+      "latency_ms": 967.8981999968528,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_9a159967",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "United Airlines",
+      "tokens_used": 218,
+      "latency_ms": 865.6216000017594,
+      "is_correct": false
+    },
+    {
+      "question_id": "cc6d1ec1",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "0 days",
+      "ground_truth": "Two months",
+      "tokens_used": 285,
+      "latency_ms": 957.7852000002167,
+      "is_correct": false
+    },
+    {
+      "question_id": "gpt4_8c8961ae",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "The solo trip to Thailand",
+      "ground_truth": "The solo trip to Thailand",
+      "tokens_used": 327,
+      "latency_ms": 1014.220999997633,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_d9af6064",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "The new router.",
+      "ground_truth": "new router",
+      "tokens_used": 462,
+      "latency_ms": 981.1712999944575,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_7de946e7",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "Skin tag removal",
+      "ground_truth": "Persistent cough",
+      "tokens_used": 471,
+      "latency_ms": 985.6272000033641,
+      "is_correct": false
+    },
+    {
+      "question_id": "d01c6aa8",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "27",
+      "tokens_used": 584,
+      "latency_ms": 1172.7373000030639,
+      "is_correct": false
+    },
+    {
+      "question_id": "993da5e2",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "0 days",
+      "ground_truth": "One week. Answers ranging from 7 days to 10 days are also acceptable.",
+      "tokens_used": 248,
+      "latency_ms": 982.8687999979593,
+      "is_correct": true
+    },
+    {
+      "question_id": "a3045048",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "0 days",
+      "ground_truth": "7 days. 8 days (including the last day) is also acceptable.",
+      "tokens_used": 302,
+      "latency_ms": 1003.8630999988527,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_d31cdae3",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "The family road trip across the American Southwest.",
+      "ground_truth": "The family road trip across the American Southwest",
+      "tokens_used": 98,
+      "latency_ms": 1189.4988999993075,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_cd90e484",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "0 days",
+      "ground_truth": "Two weeks",
+      "tokens_used": 188,
+      "latency_ms": 1135.989199996402,
+      "is_correct": false
+    },
+    {
+      "question_id": "gpt4_88806d6e",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "The information provided is not enough to answer this question.",
+      "ground_truth": "Tom",
+      "tokens_used": 335,
+      "latency_ms": 773.7769999948796,
+      "is_correct": false
+    },
+    {
+      "question_id": "gpt4_4cd9eba1",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "one week",
+      "tokens_used": 496,
+      "latency_ms": 1326.4427000030992,
+      "is_correct": false
+    },
+    {
+      "question_id": "gpt4_93f6379c",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "Marketing Professionals",
+      "ground_truth": "Page Turners",
+      "tokens_used": 115,
+      "latency_ms": 828.6108999964199,
+      "is_correct": false
+    },
+    {
+      "question_id": "b29f3365",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "0 days",
+      "ground_truth": "Four weeks",
+      "tokens_used": 215,
+      "latency_ms": 879.8263999997289,
+      "is_correct": false
+    },
+    {
+      "question_id": "gpt4_2f56ae70",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Disney+",
+      "tokens_used": 243,
+      "latency_ms": 1045.1998999997159,
+      "is_correct": false
+    },
+    {
+      "question_id": "6613b389",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "1 month",
+      "ground_truth": "2",
+      "tokens_used": 162,
+      "latency_ms": 777.116000004753,
+      "is_correct": false
+    },
+    {
+      "question_id": "gpt4_78cf46a3",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "The narrator receiving their new phone case happened first.",
+      "ground_truth": "Receiving the new phone case",
+      "tokens_used": 315,
+      "latency_ms": 1371.2346000029356,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_0a05b494",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "The tourist from Australia",
+      "ground_truth": "the woman selling jam at the farmer's market",
+      "tokens_used": 467,
+      "latency_ms": 885.3993000011542,
+      "is_correct": false
+    },
+    {
+      "question_id": "gpt4_1a1dc16d",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "The pride parade happened first.",
+      "ground_truth": "The meeting with Rachel",
+      "tokens_used": 125,
+      "latency_ms": 877.1787000005133,
+      "is_correct": false
+    },
+    {
+      "question_id": "gpt4_2f584639",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "The photo album for my mom.",
+      "ground_truth": "the photo album for my mom",
+      "tokens_used": 378,
+      "latency_ms": 906.1295999999857,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_213fd887",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "The charity 5K run to raise money for a local children's hospital.",
+      "ground_truth": "volleyball league",
+      "tokens_used": 402,
+      "latency_ms": 1274.747599993134,
+      "is_correct": false
+    },
+    {
+      "question_id": "gpt4_5438fa52",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": false,
+      "predicted_answer": "The start of my Spanish classes",
+      "ground_truth": "Spanish classes",
+      "tokens_used": 266,
+      "latency_ms": 925.5591999972239,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_c27434e8",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "The Japanese Zero fighter plane model",
+      "ground_truth": "Japanese Zero fighter plane model",
+      "tokens_used": 199,
+      "latency_ms": 915.4215000016848,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_fe651585",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": false,
+      "predicted_answer": "Alex",
+      "ground_truth": "Alex",
+      "tokens_used": 480,
+      "latency_ms": 689.8214999964694,
+      "is_correct": true
+    },
+    {
+      "question_id": "8c18457d",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "0 days or 1 day",
+      "ground_truth": "7 days. 8 days (including the last day) is also acceptable.",
+      "tokens_used": 311,
+      "latency_ms": 1043.727799995395,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_70e84552_abs",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "The information provided is not enough to answer this question.",
+      "ground_truth": "The information provided is not enough. You mentioned fixing the fence but did not mention purchasing cows from Peter.",
+      "tokens_used": 486,
+      "latency_ms": 743.8442999991821,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_93159ced_abs",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "0 days",
+      "ground_truth": "The information provided is not enough. From the information provided, You haven't started working at Google yet.",
+      "tokens_used": 425,
+      "latency_ms": 872.0410000023548,
+      "is_correct": false
+    },
+    {
+      "question_id": "982b5123_abs",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "The information provided is not enough to answer this question.",
+      "ground_truth": "The information provided is not enough. You only mentioned booking Airbnb in San Francisco.",
+      "tokens_used": 70,
+      "latency_ms": 682.0498000015505,
+      "is_correct": true
+    },
+    {
+      "question_id": "c8090214_abs",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "The information provided is not enough to answer this question.",
+      "ground_truth": "The information provided is not enough. You mentioned getting the iPhone 13 Pro and attending the market, but you did not mention buying an iPad.",
+      "tokens_used": 248,
+      "latency_ms": 779.7143999996479,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_c27434e8_abs",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "The information provided is not enough to answer this question.",
+      "ground_truth": "The information provided is not enough. You did not mention starting the Porsche 991 Turbo S model.",
+      "tokens_used": 539,
+      "latency_ms": 681.2205000023823,
+      "is_correct": true
+    },
+    {
+      "question_id": "gpt4_fe651585_abs",
+      "question_type": "temporal-reasoning",
+      "oracle_recall": true,
+      "predicted_answer": "The information provided is not enough to answer this question.",
+      "ground_truth": "The information provided is not enough. You mentioned Alex becoming a parent in January, but you didn't mention anything about Tom.",
+      "tokens_used": 79,
+      "latency_ms": 714.3400999993901,
+      "is_correct": true
+    },
+    {
+      "question_id": "6a1eabeb",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "25:50 (25 minutes and 50 seconds)",
+      "ground_truth": "25 minutes and 50 seconds (or 25:50)",
+      "tokens_used": 62,
+      "latency_ms": 1133.1494999976712,
+      "is_correct": true
+    },
+    {
+      "question_id": "6aeb4375",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "The information provided is not enough.",
+      "ground_truth": "four",
+      "tokens_used": 253,
+      "latency_ms": 1014.595200002077,
+      "is_correct": false
+    },
+    {
+      "question_id": "830ce83f",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "Rachel recently moved to a new apartment in the city.",
+      "ground_truth": "the suburbs",
+      "tokens_used": 186,
+      "latency_ms": 983.0010999939987,
+      "is_correct": true
+    },
+    {
+      "question_id": "852ce960",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "$350,000",
+      "ground_truth": "$400,000",
+      "tokens_used": 31,
+      "latency_ms": 796.4864000023226,
+      "is_correct": true
+    },
+    {
+      "question_id": "945e3d21",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "You attend yoga classes three times this week.",
+      "ground_truth": "Three times a week.",
+      "tokens_used": 333,
+      "latency_ms": 1075.0107999992906,
+      "is_correct": true
+    },
+    {
+      "question_id": "d7c942c3",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "Yes, my mom is using the same grocery list app as me.",
+      "ground_truth": "Yes.",
+      "tokens_used": 53,
+      "latency_ms": 992.5648999997065,
+      "is_correct": true
+    },
+    {
+      "question_id": "71315a70",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "10-12 hours",
+      "ground_truth": "10-12 hours",
+      "tokens_used": 212,
+      "latency_ms": 947.7880000049481,
+      "is_correct": true
+    },
+    {
+      "question_id": "89941a93",
+      "question_type": "knowledge-update",
+      "oracle_recall": false,
+      "predicted_answer": "The information provided is not enough.",
+      "ground_truth": "4",
+      "tokens_used": 346,
+      "latency_ms": 1064.9712000013096,
+      "is_correct": false
+    },
+    {
+      "question_id": "ce6d2d27",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "Friday",
+      "ground_truth": "Friday",
+      "tokens_used": 117,
+      "latency_ms": 869.8858999996446,
+      "is_correct": true
+    },
+    {
+      "question_id": "9ea5eabc",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "Paris",
+      "ground_truth": "Paris",
+      "tokens_used": 539,
+      "latency_ms": 755.6505999964429,
+      "is_correct": true
+    },
+    {
+      "question_id": "07741c44",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "Under my bed.",
+      "ground_truth": "under my bed",
+      "tokens_used": 47,
+      "latency_ms": 960.1126999987173,
+      "is_correct": true
+    },
+    {
+      "question_id": "a1eacc2a",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "Seven short stories",
+      "ground_truth": "seven",
+      "tokens_used": 421,
+      "latency_ms": 1214.1960000008112,
+      "is_correct": true
+    },
+    {
+      "question_id": "184da446",
+      "question_type": "knowledge-update",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "220",
+      "tokens_used": 215,
+      "latency_ms": 988.5708000001614,
+      "is_correct": false
+    },
+    {
+      "question_id": "031748ae",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "The information provided is not enough.",
+      "ground_truth": "When you just started your new role as Senior Software Engineer, you led 4 engineers. Now, you lead 5 engineers",
+      "tokens_used": 172,
+      "latency_ms": 1046.2611999973888,
+      "is_correct": false
+    },
+    {
+      "question_id": "4d6b87c8",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "25 titles",
+      "ground_truth": "25",
+      "tokens_used": 276,
+      "latency_ms": 923.1136000016704,
+      "is_correct": true
+    },
+    {
+      "question_id": "0f05491a",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "300 stars",
+      "ground_truth": "120",
+      "tokens_used": 245,
+      "latency_ms": 923.5205000004498,
+      "is_correct": false
+    },
+    {
+      "question_id": "08e075c7",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "9 months",
+      "ground_truth": "9 months",
+      "tokens_used": 143,
+      "latency_ms": 825.0439000039478,
+      "is_correct": true
+    },
+    {
+      "question_id": "f9e8c073",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "Five sessions",
+      "ground_truth": "five",
+      "tokens_used": 265,
+      "latency_ms": 895.0784999979078,
+      "is_correct": true
+    },
+    {
+      "question_id": "41698283",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "A 50mm prime lens",
+      "ground_truth": "a 70-200mm zoom lens",
+      "tokens_used": 157,
+      "latency_ms": 845.4480999935186,
+      "is_correct": true
+    },
+    {
+      "question_id": "2698e78f",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "Every week",
+      "ground_truth": "every week",
+      "tokens_used": 75,
+      "latency_ms": 738.3287000047858,
+      "is_correct": true
+    },
+    {
+      "question_id": "b6019101",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "5",
+      "ground_truth": "5",
+      "tokens_used": 118,
+      "latency_ms": 796.178399999917,
+      "is_correct": true
+    },
+    {
+      "question_id": "45dc21b6",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "I've tried out 3 of Emma's recipes.",
+      "ground_truth": "3",
+      "tokens_used": 203,
+      "latency_ms": 1140.5214999977034,
+      "is_correct": true
+    },
+    {
+      "question_id": "5a4f22c0",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "TechCorp",
+      "ground_truth": "TechCorp",
+      "tokens_used": 75,
+      "latency_ms": 866.2083000017446,
+      "is_correct": true
+    },
+    {
+      "question_id": "6071bd76",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "Less water per tablespoon of coffee.",
+      "ground_truth": "You switched to less water (5 ounces) per tablespoon of coffee.",
+      "tokens_used": 140,
+      "latency_ms": 1018.629600002896,
+      "is_correct": true
+    },
+    {
+      "question_id": "e493bb7c",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "Above the user's bed",
+      "ground_truth": "in my bedroom",
+      "tokens_used": 82,
+      "latency_ms": 867.1897000022,
+      "is_correct": true
+    },
+    {
+      "question_id": "618f13b2",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "Four times",
+      "ground_truth": "six",
+      "tokens_used": 195,
+      "latency_ms": 908.1826000037836,
+      "is_correct": false
+    },
+    {
+      "question_id": "72e3ee87",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "Episode 10",
+      "ground_truth": "50",
+      "tokens_used": 198,
+      "latency_ms": 872.6655999998911,
+      "is_correct": false
+    },
+    {
+      "question_id": "c4ea545c",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "No, you do not go to the gym more frequently; the frequency remains the same.",
+      "ground_truth": "Yes",
+      "tokens_used": 177,
+      "latency_ms": 1130.4235999996308,
+      "is_correct": false
+    },
+    {
+      "question_id": "01493427",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "17",
+      "ground_truth": "25",
+      "tokens_used": 133,
+      "latency_ms": 881.1264999967534,
+      "is_correct": false
+    },
+    {
+      "question_id": "6a27ffc2",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "30 videos",
+      "ground_truth": "30",
+      "tokens_used": 179,
+      "latency_ms": 900.7761000029859,
+      "is_correct": true
+    },
+    {
+      "question_id": "2133c1b5",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "3 months",
+      "ground_truth": "3 months",
+      "tokens_used": 200,
+      "latency_ms": 928.8432999965153,
+      "is_correct": true
+    },
+    {
+      "question_id": "18bc8abd",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "Kansas City Masterpiece BBQ sauce",
+      "ground_truth": "Kansas City Masterpiece",
+      "tokens_used": 115,
+      "latency_ms": 803.8536999956705,
+      "is_correct": true
+    },
+    {
+      "question_id": "db467c8c",
+      "question_type": "knowledge-update",
+      "oracle_recall": false,
+      "predicted_answer": "The information provided is not enough.",
+      "ground_truth": "nine months",
+      "tokens_used": 3063,
+      "latency_ms": 2461.7324999999255,
+      "is_correct": false
+    },
+    {
+      "question_id": "7a87bd0c",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "3 weeks",
+      "ground_truth": "4 weeks",
+      "tokens_used": 194,
+      "latency_ms": 1055.4084999967017,
+      "is_correct": true
+    },
+    {
+      "question_id": "e61a7584",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "The information provided is not enough.",
+      "ground_truth": "9 months",
+      "tokens_used": 394,
+      "latency_ms": 1040.8414000048651,
+      "is_correct": false
+    },
+    {
+      "question_id": "1cea1afa",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "600 followers",
+      "ground_truth": "600",
+      "tokens_used": 554,
+      "latency_ms": 1288.4746999989147,
+      "is_correct": true
+    },
+    {
+      "question_id": "ed4ddc30",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "20 dozen eggs",
+      "ground_truth": "20",
+      "tokens_used": 237,
+      "latency_ms": 975.2267000003485,
+      "is_correct": true
+    },
+    {
+      "question_id": "8fb83627",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "3 issues",
+      "ground_truth": "Five",
+      "tokens_used": 251,
+      "latency_ms": 888.3203000004869,
+      "is_correct": false
+    },
+    {
+      "question_id": "b01defab",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "The information provided is not enough.",
+      "ground_truth": "Yes",
+      "tokens_used": 284,
+      "latency_ms": 990.0874000013573,
+      "is_correct": false
+    },
+    {
+      "question_id": "22d2cb42",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "The information provided is not enough.",
+      "ground_truth": "The music shop on Main St.",
+      "tokens_used": 180,
+      "latency_ms": 937.19389999751,
+      "is_correct": false
+    },
+    {
+      "question_id": "0e4e4c46",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "124 points",
+      "ground_truth": "132 points",
+      "tokens_used": 300,
+      "latency_ms": 1008.0406999986735,
+      "is_correct": true
+    },
+    {
+      "question_id": "4b24c848",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "Five",
+      "ground_truth": "five",
+      "tokens_used": 276,
+      "latency_ms": 955.9204000033787,
+      "is_correct": true
+    },
+    {
+      "question_id": "7e974930",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "$350",
+      "ground_truth": "$420",
+      "tokens_used": 242,
+      "latency_ms": 970.0627999991411,
+      "is_correct": false
+    },
+    {
+      "question_id": "603deb26",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "10",
+      "ground_truth": "10",
+      "tokens_used": 263,
+      "latency_ms": 973.0354999992414,
+      "is_correct": true
+    },
+    {
+      "question_id": "59524333",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "Mondays, Wednesdays, and Fridays",
+      "ground_truth": "6:00 pm",
+      "tokens_used": 47,
+      "latency_ms": 867.6895999960834,
+      "is_correct": false
+    },
+    {
+      "question_id": "5831f84d",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "10",
+      "ground_truth": "15",
+      "tokens_used": 258,
+      "latency_ms": 866.4782999985619,
+      "is_correct": false
+    },
+    {
+      "question_id": "eace081b",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "The information provided is not enough.",
+      "ground_truth": "Oahu",
+      "tokens_used": 27,
+      "latency_ms": 858.1018000040785,
+      "is_correct": false
+    },
+    {
+      "question_id": "affe2881",
+      "question_type": "knowledge-update",
+      "oracle_recall": false,
+      "predicted_answer": "32 species",
+      "ground_truth": "32",
+      "tokens_used": 334,
+      "latency_ms": 836.3526999964961,
+      "is_correct": true
+    },
+    {
+      "question_id": "50635ada",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "The information provided is not enough.",
+      "ground_truth": "Premier Silver",
+      "tokens_used": 42,
+      "latency_ms": 1018.7513999990188,
+      "is_correct": false
+    },
+    {
+      "question_id": "e66b632c",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "27 minutes and 45 seconds (or 27:45)",
+      "ground_truth": "27 minutes and 45 seconds",
+      "tokens_used": 149,
+      "latency_ms": 961.7550000039046,
+      "is_correct": true
+    },
+    {
+      "question_id": "0ddfec37",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "15",
+      "ground_truth": "15",
+      "tokens_used": 213,
+      "latency_ms": 897.9126000049291,
+      "is_correct": true
+    },
+    {
+      "question_id": "f685340e",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "Previously every other week. Now, the frequency is not specified.",
+      "ground_truth": "Previously, you play tennis with your friends at the local park every week (on Sunday). Currently, you play tennis every other week (on Sunday).",
+      "tokens_used": 68,
+      "latency_ms": 1072.342799998296,
+      "is_correct": true
+    },
+    {
+      "question_id": "cc5ded98",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "Two hours",
+      "ground_truth": "about two hours",
+      "tokens_used": 271,
+      "latency_ms": 1029.1268000000855,
+      "is_correct": true
+    },
+    {
+      "question_id": "dfde3500",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "Wednesday",
+      "ground_truth": "Wednesday",
+      "tokens_used": 176,
+      "latency_ms": 891.2218999976176,
+      "is_correct": true
+    },
+    {
+      "question_id": "69fee5aa",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "38",
+      "ground_truth": "38",
+      "tokens_used": 267,
+      "latency_ms": 755.3791000027559,
+      "is_correct": true
+    },
+    {
+      "question_id": "7401057b",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "Two (2)",
+      "ground_truth": "Two",
+      "tokens_used": 269,
+      "latency_ms": 769.0933999983827,
+      "is_correct": true
+    },
+    {
+      "question_id": "cf22b7bf",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "10 pounds",
+      "ground_truth": "10 pounds",
+      "tokens_used": 252,
+      "latency_ms": 992.4450000034994,
+      "is_correct": true
+    },
+    {
+      "question_id": "a2f3aa27",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "1250 followers",
+      "ground_truth": "1300",
+      "tokens_used": 419,
+      "latency_ms": 950.3219000034733,
+      "is_correct": false
+    },
+    {
+      "question_id": "c7dc5443",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "5-2",
+      "ground_truth": "5-2",
+      "tokens_used": 47,
+      "latency_ms": 939.8635999968974,
+      "is_correct": true
+    },
+    {
+      "question_id": "06db6396",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "5",
+      "ground_truth": "5",
+      "tokens_used": 232,
+      "latency_ms": 1027.5576999993064,
+      "is_correct": true
+    },
+    {
+      "question_id": "3ba21379",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "The information provided is not enough.",
+      "ground_truth": "Ford F-150 pickup truck",
+      "tokens_used": 474,
+      "latency_ms": 1145.0956999979098,
+      "is_correct": false
+    },
+    {
+      "question_id": "9bbe84a2",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "The information provided is not enough.",
+      "ground_truth": "level 100",
+      "tokens_used": 454,
+      "latency_ms": 1218.8223999983165,
+      "is_correct": false
+    },
+    {
+      "question_id": "10e09553",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "The information provided is not enough.",
+      "ground_truth": "7",
+      "tokens_used": 335,
+      "latency_ms": 1074.3904000046314,
+      "is_correct": false
+    },
+    {
+      "question_id": "dad224aa",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "8:30 am",
+      "ground_truth": "7:30 am",
+      "tokens_used": 330,
+      "latency_ms": 1013.5943999994197,
+      "is_correct": true
+    },
+    {
+      "question_id": "ba61f0b9",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "10",
+      "ground_truth": "6",
+      "tokens_used": 113,
+      "latency_ms": 862.5060000049416,
+      "is_correct": false
+    },
+    {
+      "question_id": "42ec0761",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "The information provided is not enough.",
+      "ground_truth": "Yes",
+      "tokens_used": 39,
+      "latency_ms": 850.3211999995983,
+      "is_correct": false
+    },
+    {
+      "question_id": "5c40ec5b",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "Twice",
+      "ground_truth": "We've met up twice.",
+      "tokens_used": 279,
+      "latency_ms": 947.235500003444,
+      "is_correct": true
+    },
+    {
+      "question_id": "c6853660",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "Increased",
+      "ground_truth": "You increased the limit (from one cup to two cups)",
+      "tokens_used": 56,
+      "latency_ms": 834.6811000010348,
+      "is_correct": true
+    },
+    {
+      "question_id": "26bdc477",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "Five",
+      "ground_truth": "five",
+      "tokens_used": 179,
+      "latency_ms": 847.6021000024048,
+      "is_correct": true
+    },
+    {
+      "question_id": "0977f2af",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "Instant Pot",
+      "ground_truth": "Instant Pot",
+      "tokens_used": 389,
+      "latency_ms": 842.1105000015814,
+      "is_correct": true
+    },
+    {
+      "question_id": "6aeb4375_abs",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "The information provided is not enough.",
+      "ground_truth": "The information provided is not enough. You mentioned trying Korean restaurants but not Italian restaurants.",
+      "tokens_used": 279,
+      "latency_ms": 1088.6175999985426,
+      "is_correct": true
+    },
+    {
+      "question_id": "031748ae_abs",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "The information provided is not enough.",
+      "ground_truth": "The information provided is not enough. You mentioned starting the role as Senior Software Engineer but not Software Engineer Manager.",
+      "tokens_used": 219,
+      "latency_ms": 1071.6891000047326,
+      "is_correct": true
+    },
+    {
+      "question_id": "2698e78f_abs",
+      "question_type": "knowledge-update",
+      "oracle_recall": false,
+      "predicted_answer": "The information provided is not enough.",
+      "ground_truth": "The information provided is not enough. You mentioned seeing Dr. Smith but not Dr. Johnson.",
+      "tokens_used": 393,
+      "latency_ms": 999.0082000003895,
+      "is_correct": true
+    },
+    {
+      "question_id": "2133c1b5_abs",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "The information provided is not enough.",
+      "ground_truth": "The information provided is not enough. You mentioned living in Harajuku but not Shinjuku.",
+      "tokens_used": 291,
+      "latency_ms": 1030.5368999979692,
+      "is_correct": true
+    },
+    {
+      "question_id": "0ddfec37_abs",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "15",
+      "ground_truth": "The information provided is not enough. You mentioned collecting autographed baseball but not football.",
+      "tokens_used": 257,
+      "latency_ms": 911.452400003327,
+      "is_correct": false
+    },
+    {
+      "question_id": "f685340e_abs",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "The information provided is not enough.",
+      "ground_truth": "The information provided is not enough. You mentioned playing tennis but not table tennis.",
+      "tokens_used": 128,
+      "latency_ms": 987.9131999987294,
+      "is_correct": true
+    },
+    {
+      "question_id": "89941a94",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "Yes, you had a road bike and a hybrid bike before purchasing the gravel bike.",
+      "ground_truth": "Yes. (You have a road bike too.)",
+      "tokens_used": 108,
+      "latency_ms": 1173.1107000014163,
+      "is_correct": true
+    },
+    {
+      "question_id": "07741c45",
+      "question_type": "knowledge-update",
+      "oracle_recall": true,
+      "predicted_answer": "In a shoe rack in my closet.",
+      "ground_truth": "in a shoe rack in my closet",
+      "tokens_used": 173,
+      "latency_ms": 830.0195999981952,
+      "is_correct": true
+    },
+    {
+      "question_id": "7161e7e2",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "8 am - 4 pm (Day Shift)",
+      "ground_truth": "Admon was assigned to the 8 am - 4 pm (Day Shift) on Sundays.",
+      "tokens_used": 249,
+      "latency_ms": 1071.7513999989023,
+      "is_correct": true
+    },
+    {
+      "question_id": "c4f10528",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Miss Bee Providore",
+      "tokens_used": 240,
+      "latency_ms": 1056.0542000021087,
+      "is_correct": false
+    },
+    {
+      "question_id": "89527b6b",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "Blue",
+      "ground_truth": "The Plesiosaur had a blue scaly body.",
+      "tokens_used": 433,
+      "latency_ms": 1068.0232000013348,
+      "is_correct": true
+    },
+    {
+      "question_id": "e9327a54",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "The Sugar Factory",
+      "ground_truth": "The Sugar Factory at Icon Park.",
+      "tokens_used": 261,
+      "latency_ms": 995.6239000021014,
+      "is_correct": true
+    },
+    {
+      "question_id": "4c36ccef",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "Sora Margherita",
+      "ground_truth": "Roscioli",
+      "tokens_used": 230,
+      "latency_ms": 980.0046000018483,
+      "is_correct": false
+    },
+    {
+      "question_id": "6ae235be",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "Atmospheric distillation, fluid catalytic cracking (FCC), alkylation, and hydrotreating.",
+      "ground_truth": "Atmospheric distillation, fluid catalytic cracking (FCC), alkylation, and hydrotreating.",
+      "tokens_used": 360,
+      "latency_ms": 1360.1206000021193,
+      "is_correct": true
+    },
+    {
+      "question_id": "7e00a6cb",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "International Budget Hostel",
+      "ground_truth": "International Budget Hostel",
+      "tokens_used": 178,
+      "latency_ms": 1014.1995000012685,
+      "is_correct": true
+    },
+    {
+      "question_id": "1903aded",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Transcriptionist.",
+      "tokens_used": 15,
+      "latency_ms": 1075.8000999994692,
+      "is_correct": false
+    },
+    {
+      "question_id": "ceb54acb",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "1. Sexual fixations\n2. Problematic sexual behaviors\n3. Sexual impulsivity\n4. Compulsive sexuality\n5. Sexual addictions (added option based on the user's profile and preferences)",
+      "ground_truth": "I suggested 'sexual fixations', 'problematic sexual behaviors', 'sexual impulsivity', and 'compulsive sexuality'.",
+      "tokens_used": 137,
+      "latency_ms": 1714.1196000011405,
+      "is_correct": true
+    },
+    {
+      "question_id": "f523d9fe",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "Yes, you mentioned \"doc martin\" as an example.",
+      "ground_truth": "Doc Martin",
+      "tokens_used": 215,
+      "latency_ms": 1177.681200002553,
+      "is_correct": true
+    },
+    {
+      "question_id": "0e5e2d1a",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "38 subjects",
+      "ground_truth": "38 subjects",
+      "tokens_used": 276,
+      "latency_ms": 1175.6376999983331,
+      "is_correct": true
+    },
+    {
+      "question_id": "fea54f57",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Evolution",
+      "tokens_used": 40,
+      "latency_ms": 983.709899999667,
+      "is_correct": false
+    },
+    {
+      "question_id": "cc539528",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "I recommended learning Ruby, Python, or PHP as a back-end programming language.",
+      "tokens_used": 217,
+      "latency_ms": 1133.4502000026987,
+      "is_correct": false
+    },
+    {
+      "question_id": "dc439ea3",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "Hoop Dance",
+      "ground_truth": "Hoop Dance",
+      "tokens_used": 256,
+      "latency_ms": 1151.9331999952556,
+      "is_correct": true
+    },
+    {
+      "question_id": "18dcd5a5",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "4",
+      "ground_truth": "4",
+      "tokens_used": 530,
+      "latency_ms": 1198.2376000014483,
+      "is_correct": true
+    },
+    {
+      "question_id": "488d3006",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "The GR-90",
+      "ground_truth": "The GR-90 trail.",
+      "tokens_used": 173,
+      "latency_ms": 1103.2262000007904,
+      "is_correct": true
+    },
+    {
+      "question_id": "58470ed2",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "The center is any one of its hexagons, and the circumference is inaccessible.",
+      "ground_truth": "According to Borges, 'The Library is a sphere whose exact center is any one of its hexagons and whose circumference is inaccessible.'",
+      "tokens_used": 623,
+      "latency_ms": 1464.4584999987273,
+      "is_correct": true
+    },
+    {
+      "question_id": "8cf51dda",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "The three objectives were: 1) to identify molecular subtypes of endometrial cancer, 2) to investigate their clinical and biological significance, and 3) to develop biomarkers for early detection and prognosis.",
+      "tokens_used": 17,
+      "latency_ms": 1071.873200002301,
+      "is_correct": false
+    },
+    {
+      "question_id": "1d4da289",
+      "question_type": "single-session-assistant",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "I mentioned biometric authentication or one-time passwords (OTP) as examples of two-factor authentication methods.",
+      "tokens_used": 240,
+      "latency_ms": 1351.1484999980894,
+      "is_correct": false
+    },
+    {
+      "question_id": "8464fc84",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "Roscioli",
+      "ground_truth": "Roscioli",
+      "tokens_used": 204,
+      "latency_ms": 985.9684000039124,
+      "is_correct": true
+    },
+    {
+      "question_id": "8aef76bc",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "Mod Podge or another sealant",
+      "ground_truth": "Mod Podge or another sealant",
+      "tokens_used": 232,
+      "latency_ms": 1084.3741999997292,
+      "is_correct": true
+    },
+    {
+      "question_id": "71a3fd6b",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "+49 (0) 62 32 / 14 23 - 0",
+      "ground_truth": "+49 (0) 62 32 / 14 23 - 0",
+      "tokens_used": 167,
+      "latency_ms": 1205.0076999948942,
+      "is_correct": true
+    },
+    {
+      "question_id": "2bf43736",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "Chapter 4 of Book 1, titled \"Vocal Prayer and Meditation.\"",
+      "ground_truth": "Chapter 4 of Book 1, titled 'Vocal Prayer and Meditation'.",
+      "tokens_used": 108,
+      "latency_ms": 1237.5391999958083,
+      "is_correct": true
+    },
+    {
+      "question_id": "70b3e69b",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "Manolo Garcáí.",
+      "ground_truth": "Manolo García",
+      "tokens_used": 284,
+      "latency_ms": 1261.3323999976274,
+      "is_correct": true
+    },
+    {
+      "question_id": "8752c811",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "Soliloquy",
+      "ground_truth": "The 27th parameter was 'Sound effects (e.g., ambient, diegetic, non-diegetic, etc.)'.",
+      "tokens_used": 355,
+      "latency_ms": 1199.6201000001747,
+      "is_correct": false
+    },
+    {
+      "question_id": "3249768e",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "Triple Sec",
+      "ground_truth": "Absinthe",
+      "tokens_used": 202,
+      "latency_ms": 1034.7044000009191,
+      "is_correct": false
+    },
+    {
+      "question_id": "1b9b7252",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "Mindful.org",
+      "ground_truth": "Mindful.org.",
+      "tokens_used": 175,
+      "latency_ms": 1061.6138999976101,
+      "is_correct": true
+    },
+    {
+      "question_id": "1568498a",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "I made the move 28. Kf1.",
+      "ground_truth": "28. Kg3",
+      "tokens_used": 22,
+      "latency_ms": 1016.6857000003802,
+      "is_correct": true
+    },
+    {
+      "question_id": "6222b6eb",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "6S is implemented in the SIAC_GEE tool.",
+      "ground_truth": "The 6S algorithm is implemented in the SIAC_GEE tool.",
+      "tokens_used": 262,
+      "latency_ms": 1390.9661000070628,
+      "is_correct": true
+    },
+    {
+      "question_id": "e8a79c70",
+      "question_type": "single-session-assistant",
+      "oracle_recall": false,
+      "predicted_answer": "4",
+      "ground_truth": "2-3 eggs",
+      "tokens_used": 260,
+      "latency_ms": 1157.412900000054,
+      "is_correct": false
+    },
+    {
+      "question_id": "d596882b",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "By Chloe",
+      "ground_truth": "By Chloe",
+      "tokens_used": 196,
+      "latency_ms": 1022.1485000001849,
+      "is_correct": true
+    },
+    {
+      "question_id": "e3fc4d6e",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "Dr. Arati Prabhakar",
+      "ground_truth": "Dr. Arati Prabhakar",
+      "tokens_used": 186,
+      "latency_ms": 1185.4945000013686,
+      "is_correct": true
+    },
+    {
+      "question_id": "51b23612",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "Nu, pogodi!",
+      "ground_truth": "Nu, pogodi!",
+      "tokens_used": 307,
+      "latency_ms": 1305.6249999935972,
+      "is_correct": true
+    },
+    {
+      "question_id": "3e321797",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "10 minutes",
+      "ground_truth": "10 minutes",
+      "tokens_used": 268,
+      "latency_ms": 1261.6052000012132,
+      "is_correct": true
+    },
+    {
+      "question_id": "e982271f",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "The last venue recommended was Revolution Hall.",
+      "ground_truth": "Revolution Hall",
+      "tokens_used": 112,
+      "latency_ms": 1162.3921999998856,
+      "is_correct": true
+    },
+    {
+      "question_id": "352ab8bd",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "Approximately 20%",
+      "ground_truth": "The average improvement in framerate was approximately 20% when using the Hardware-Aware Modular Training (HAMT) agent.",
+      "tokens_used": 279,
+      "latency_ms": 1178.5372999947867,
+      "is_correct": true
+    },
+    {
+      "question_id": "fca762bc",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "Memrise",
+      "ground_truth": "Memrise",
+      "tokens_used": 132,
+      "latency_ms": 1110.3551000051084,
+      "is_correct": true
+    },
+    {
+      "question_id": "7a8d0b71",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "$2,000",
+      "ground_truth": "$2,000",
+      "tokens_used": 416,
+      "latency_ms": 1531.3060999978916,
+      "is_correct": true
+    },
+    {
+      "question_id": "a40e080f",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Patagonia and Southwest Airlines.",
+      "tokens_used": 65,
+      "latency_ms": 1145.2617999966606,
+      "is_correct": false
+    },
+    {
+      "question_id": "8b9d4367",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "Jaipur Rugs",
+      "ground_truth": "Jaipur Rugs",
+      "tokens_used": 250,
+      "latency_ms": 1125.8548000041628,
+      "is_correct": true
+    },
+    {
+      "question_id": "5809eb10",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "2014",
+      "ground_truth": "2014.",
+      "tokens_used": 857,
+      "latency_ms": 1428.9399000044796,
+      "is_correct": true
+    },
+    {
+      "question_id": "41275add",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "\"How to Sit Properly at a Desk to Avoid Back Pain\" by the Mayo Clinic: <https://www.youtube.com/watch?v=UfOvNlX9Hh0>",
+      "ground_truth": "The video is 'How to Sit Properly at a Desk to Avoid Back Pain' and the link is https://www.youtube.com/watch?v=UfOvNlX9Hh0.",
+      "tokens_used": 138,
+      "latency_ms": 1749.9364999966929,
+      "is_correct": true
+    },
+    {
+      "question_id": "4388e9dd",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "Andy was wearing an untidy, stained white shirt.",
+      "ground_truth": "Andy was wearing an untidy, stained white shirt.",
+      "tokens_used": 340,
+      "latency_ms": 1307.331999996677,
+      "is_correct": true
+    },
+    {
+      "question_id": "4baee567",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "12",
+      "ground_truth": "The Chiefs played the Jaguars 12 times at Arrowhead Stadium.",
+      "tokens_used": 264,
+      "latency_ms": 1157.6013000012608,
+      "is_correct": true
+    },
+    {
+      "question_id": "561fabcd",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Fissionator.",
+      "tokens_used": 206,
+      "latency_ms": 1028.327600004559,
+      "is_correct": false
+    },
+    {
+      "question_id": "b759caee",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "jessica_poole_jewellery",
+      "ground_truth": "@jessica_poole_jewellery",
+      "tokens_used": 428,
+      "latency_ms": 1556.0683000003337,
+      "is_correct": true
+    },
+    {
+      "question_id": "ac031881",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "LIV",
+      "ground_truth": "The designation on your jumpsuit was 'LIV'.",
+      "tokens_used": 160,
+      "latency_ms": 1056.2004000021261,
+      "is_correct": true
+    },
+    {
+      "question_id": "28bcfaac",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "MusicTheory.net",
+      "ground_truth": "MusicTheory.net",
+      "tokens_used": 190,
+      "latency_ms": 1010.4255000042031,
+      "is_correct": true
+    },
+    {
+      "question_id": "16c90bf4",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "Pilsner or lager",
+      "ground_truth": "I recommended using a Pilsner or Lager for the recipe.",
+      "tokens_used": 101,
+      "latency_ms": 1104.0109000023222,
+      "is_correct": true
+    },
+    {
+      "question_id": "c8f1aeed",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "Pennsylvania",
+      "ground_truth": "Pennsylvania",
+      "tokens_used": 259,
+      "latency_ms": 1355.799000004481,
+      "is_correct": true
+    },
+    {
+      "question_id": "eaca4986",
+      "question_type": "single-session-assistant",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "C D E F G A B A G F E D C",
+      "tokens_used": 387,
+      "latency_ms": 1161.60200000013,
+      "is_correct": false
+    },
+    {
+      "question_id": "c7cf7dfd",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "Nostalgia",
+      "ground_truth": "Nostalgia",
+      "tokens_used": 203,
+      "latency_ms": 1098.959900002228,
+      "is_correct": true
+    },
+    {
+      "question_id": "e48988bc",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "Patagonia",
+      "ground_truth": "Patagonia",
+      "tokens_used": 34,
+      "latency_ms": 1040.0058000013814,
+      "is_correct": true
+    },
+    {
+      "question_id": "1de5cff2",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "Veja",
+      "ground_truth": "Veja",
+      "tokens_used": 200,
+      "latency_ms": 1049.8290000032284,
+      "is_correct": true
+    },
+    {
+      "question_id": "65240037",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "1:10 ratio",
+      "ground_truth": "The recommended ratio is 1:10, meaning one part tea tree oil to ten parts carrier oil.",
+      "tokens_used": 162,
+      "latency_ms": 940.1540000035311,
+      "is_correct": true
+    },
+    {
+      "question_id": "778164c6",
+      "question_type": "single-session-assistant",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Grilled Snapper with Mango Salsa",
+      "tokens_used": 160,
+      "latency_ms": 1010.2251999996952,
+      "is_correct": false
+    }
+  ]
+}

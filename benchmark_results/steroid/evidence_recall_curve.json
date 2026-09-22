@@ -1,0 +1,40 @@
+{
+  "total_questions_evaluated": 495,
+  "frozen_baseline_recall": 57.17171717171718,
+  "curve_points": [
+    {
+      "hop": 0,
+      "stage": "R_0: Wide Slicing (Union)",
+      "recall": 76.16161616161617,
+      "found": 377,
+      "total": 495,
+      "delta_vs_baseline": 18.98989898989899
+    },
+    {
+      "hop": 1,
+      "stage": "R_1: 1-Hop Graph Expansion",
+      "recall": 80.2020202020202,
+      "found": 397,
+      "total": 495,
+      "delta_vs_baseline": 23.030303030303017
+    },
+    {
+      "hop": 2,
+      "stage": "R_2: 2-Hop Graph Expansion",
+      "recall": 83.23232323232324,
+      "found": 412,
+      "total": 495,
+      "delta_vs_baseline": 26.060606060606062
+    },
+    {
+      "hop": 3,
+      "stage": "R_3: 3-Hop Graph Expansion",
+      "recall": 85.05050505050505,
+      "found": 421,
+      "total": 495,
+      "delta_vs_baseline": 27.878787878787875
+    }
+  ],
+  "delta_wide_to_hop3": 8.888888888888886,
+  "elapsed_seconds": 13.931674299994484
+}

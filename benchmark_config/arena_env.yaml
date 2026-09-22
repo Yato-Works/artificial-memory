@@ -1,0 +1,31 @@
+# Arena Execution Environment Specification
+# Frozen environment metadata for reproducibility
+
+environment:
+  name: "Artificial Memory Arena"
+  version: "0.2.0"
+  date: "2026-09-19"
+  os: "Windows 11"
+
+llm_server:
+  provider: "ollama"
+  base_url: "http://localhost:11434"
+  model: "phi4-mini:latest"
+  temperature: 0.0
+  max_output_tokens: 256
+  timeout_seconds: 60.0
+
+embedding:
+  provider: "sentence-transformers"
+  model: "all-MiniLM-L6-v2"
+  dimension: 384
+  metric: "cosine"
+
+evaluation:
+  arena_class: "controlled"
+  context_budget_tokens: 2000
+  abstention_policy: "strict_lexicon"
+  abstention_marker: "I don't know."
+  categories_evaluated: 10
+  answer_repeats: 1
+  latency_repeats: 1

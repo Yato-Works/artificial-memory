@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "purpose": "AM Apex official benchmark laboratory registry. Pin code, snapshot data locally, and freeze every measured run.",
+  "benchmarks": {
+    "locomo": {
+      "display_name": "LoCoMo",
+      "official_repository": "https://github.com/snap-research/locomo",
+      "pinned_commit": "3eb6f2c585f5e1699204e3c3bdf7adc5c28cb376",
+      "checkout": "third_party/benchmarks/locomo",
+      "dataset_source": "repository:data/locomo10.json",
+      "dataset_paths": ["third_party/benchmarks/locomo/data/locomo10.json"],
+      "dataset_requirements": [{"path": "third_party/benchmarks/locomo/data/locomo10.json"}],
+      "official_evaluator": "third_party/benchmarks/locomo/evaluate.py",
+      "run_mode": "AM adapter produces answers; official data and official evaluation semantics are retained.",
+      "notes": "The upstream requirements file is a Linux conda export. Use the AM runner on Windows, or reproduce the upstream environment in Linux/WSL."
+    },
+    "longmemeval": {
+      "display_name": "LongMemEval (cleaned)",
+      "official_repository": "https://github.com/xiaowu0162/LongMemEval",
+      "pinned_commit": "9e0b455f4ef0e2ab8f2e582289761153549043fc",
+      "checkout": "third_party/benchmarks/longmemeval-official",
+      "dataset_source": "huggingface:xiaowu0162/longmemeval-cleaned",
+      "dataset_paths": [
+        "datasets/official/longmemeval/longmemeval_oracle.json",
+        "datasets/official/longmemeval/longmemeval_s_cleaned.json",
+        "datasets/official/longmemeval/longmemeval_m_cleaned.json"
+      ],
+      "dataset_requirements": [
+        {"path": "datasets/official/longmemeval/longmemeval_oracle.json"},
+        {"path": "datasets/official/longmemeval/longmemeval_s_cleaned.json"},
+        {"path": "datasets/official/longmemeval/longmemeval_m_cleaned.json"}
+      ],
+      "official_evaluator": "third_party/benchmarks/longmemeval-official/src/evaluation/evaluate_qa.py",
+      "run_mode": "Answers are judged by the upstream evaluator. Judge model, prompt, and credentials must be captured in the run manifest."
+    },
+    "beam": {
+      "display_name": "BEAM",
+      "official_repository": "https://github.com/mohammadtavakoli78/BEAM",
+      "pinned_commit": "b2da22eac88bb0874c64665f13457eb99835774a",
+      "checkout": "third_party/benchmarks/beam",
+      "dataset_source": "repository:chats plus huggingface:Mohammadta/BEAM and Mohammadta/BEAM-10M",
+      "dataset_paths": [
+        "third_party/benchmarks/beam/chats/100K",
+        "third_party/benchmarks/beam/chats/500K",
+        "third_party/benchmarks/beam/chats/1M",
+        "third_party/benchmarks/beam/chats/10M"
+      ],
+      "dataset_requirements": [
+        {"path": "third_party/benchmarks/beam/chats/100K", "minimum_file_count": 300},
+        {"path": "third_party/benchmarks/beam/chats/500K", "minimum_file_count": 450},
+        {"path": "third_party/benchmarks/beam/chats/1M", "minimum_file_count": 500},
+        {"path": "third_party/benchmarks/beam/chats/10M", "minimum_file_count": 1300}
+      ],
+      "official_evaluator": "third_party/benchmarks/beam/src/evaluation/run_evaluation.py",
+      "run_mode": "Use the official probing questions and LLM judge. Report each scale independently: 100K, 500K, 1M, and 10M."
+    },
+    "personamem": {
+      "display_name": "PersonaMem",
+      "official_repository": "https://github.com/bowen-upenn/PersonaMem",
+      "pinned_commit": "d07e6ade22e85e0e5d562247323a9c3e07553226",
+      "checkout": "third_party/benchmarks/personamem",
+      "dataset_source": "huggingface:bowen-upenn/PersonaMem",
+      "dataset_paths": ["datasets/official/personamem"],
+      "dataset_requirements": [{"path": "datasets/official/personamem", "minimum_file_count": 8}],
+      "official_evaluator": "third_party/benchmarks/personamem/inference.py",
+      "run_mode": "Evaluate 32K, 128K, and 1M separately; never mix their denominators in one score."
+    },
+    "personamem_v2": {
+      "display_name": "PersonaMem-v2 / ImplicitPersona",
+      "official_repository": "https://github.com/bowen-upenn/PersonaMem",
+      "pinned_commit": "d07e6ade22e85e0e5d562247323a9c3e07553226",
+      "checkout": "third_party/benchmarks/personamem",
+      "dataset_source": "huggingface:bowen-upenn/ImplicitPersona",
+      "dataset_paths": ["datasets/official/personamem-v2"],
+      "dataset_requirements": [
+        {"path": "datasets/official/personamem-v2/benchmark/text/benchmark.csv"},
+        {"path": "datasets/official/personamem-v2/data/chat_history_128k", "minimum_file_count": 1000}
+      ],
+      "official_evaluator": "Use the upstream PersonaMem inference protocol with the v2 dataset release.",
+      "run_mode": "Record the exact v2 data revision and model/judge configuration before comparing to published results."
+    },
+    "perma": {
+      "display_name": "PERMA",
+      "official_repository": "https://github.com/PolarisLiu1/PERMA",
+      "pinned_commit": "d678640987170e8cfbe9260b311e0493b9cd2c31",
+      "checkout": "third_party/benchmarks/perma",
+      "dataset_source": "huggingface:ustclsc/PERMA",
+      "dataset_paths": ["datasets/official/perma"],
+      "dataset_requirements": [{"path": "datasets/official/perma", "minimum_file_count": 1}],
+      "official_evaluator": "third_party/benchmarks/perma/code/src/evaluation.py",
+      "run_mode": "Start with the official MCQ smoke test, then run clean/noisy and single/multi-domain. Interactive evaluation requires a configured user-simulator model."
+    }
+  }
+}

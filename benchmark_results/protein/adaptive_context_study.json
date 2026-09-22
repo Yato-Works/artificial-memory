@@ -1,0 +1,26 @@
+{
+  "Precision Mode (P4: Natural Dialogue)": {
+    "policy": "Precision Mode (P4: Natural Dialogue)",
+    "accuracy": 47.5,
+    "evidence_recall": 62.5,
+    "mean_tokens": 1624.25,
+    "latency_ms": 1399.0533000000028,
+    "elapsed_seconds": 55.96213200000011
+  },
+  "Adaptive Mode (Tiered IR: Natural + Compact)": {
+    "policy": "Adaptive Mode (Tiered IR: Natural + Compact)",
+    "accuracy": 25.0,
+    "evidence_recall": 47.5,
+    "mean_tokens": 263.1,
+    "latency_ms": 445.45051500000454,
+    "elapsed_seconds": 17.81802060000018
+  },
+  "Compact Mode (P6: High-Density Context IR)": {
+    "policy": "Compact Mode (P6: High-Density Context IR)",
+    "accuracy": 22.5,
+    "evidence_recall": 40.0,
+    "mean_tokens": 257.575,
+    "latency_ms": 440.2966025000069,
+    "elapsed_seconds": 17.611864100000275
+  }
+}

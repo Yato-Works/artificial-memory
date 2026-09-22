@@ -1,0 +1,685 @@
+{
+  "num_questions": 32,
+  "summary": {
+    "accuracy_a_no_state": 18.75,
+    "accuracy_b_gold_state": 68.75,
+    "accuracy_c_retrieved_state": 21.875,
+    "accuracy_d_corrupted_state": 15.625,
+    "ceiling_gap_b_minus_c": 46.875,
+    "poison_drop_a_minus_d": 3.125
+  },
+  "questions": [
+    {
+      "question_id": "conv-26-qa-003",
+      "question": "What did Caroline research?",
+      "ground_truth": "Adoption agencies",
+      "cond_a": {
+        "correct": true,
+        "pred": "Adoption agencies"
+      },
+      "cond_b": {
+        "correct": true,
+        "pred": "Adoption agencies"
+      },
+      "cond_c": {
+        "correct": true,
+        "pred": "Adoption agencies"
+      },
+      "cond_d": {
+        "correct": true,
+        "pred": "Adoption agencies"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-004",
+      "question": "What is Caroline's identity?",
+      "ground_truth": "Transgender woman",
+      "cond_a": {
+        "correct": false,
+        "pred": "Not mentioned."
+      },
+      "cond_b": {
+        "correct": true,
+        "pred": "Transgender woman"
+      },
+      "cond_c": {
+        "correct": false,
+        "pred": "Not mentioned."
+      },
+      "cond_d": {
+        "correct": true,
+        "pred": "Transgender woman"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-007",
+      "question": "What is Caroline's relationship status?",
+      "ground_truth": "Single",
+      "cond_a": {
+        "correct": false,
+        "pred": "I don't know."
+      },
+      "cond_b": {
+        "correct": true,
+        "pred": "Single"
+      },
+      "cond_c": {
+        "correct": false,
+        "pred": "I don't know."
+      },
+      "cond_d": {
+        "correct": false,
+        "pred": "Married"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-011",
+      "question": "Where did Caroline move from 4 years ago?",
+      "ground_truth": "Sweden",
+      "cond_a": {
+        "correct": false,
+        "pred": "Her home country"
+      },
+      "cond_b": {
+        "correct": true,
+        "pred": "Sweden"
+      },
+      "cond_c": {
+        "correct": false,
+        "pred": "Her home country"
+      },
+      "cond_d": {
+        "correct": false,
+        "pred": "Norway"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-013",
+      "question": "What career path has Caroline decided to persue?",
+      "ground_truth": "counseling or mental health for Transgender people",
+      "cond_a": {
+        "correct": true,
+        "pred": "Counseling and mental health"
+      },
+      "cond_b": {
+        "correct": true,
+        "pred": "Counseling or mental health for Transgender people"
+      },
+      "cond_c": {
+        "correct": true,
+        "pred": "Counseling or mental health"
+      },
+      "cond_d": {
+        "correct": false,
+        "pred": "Counseling and mental health"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-015",
+      "question": "What activities does Melanie partake in?",
+      "ground_truth": "pottery, camping, painting, swimming",
+      "cond_a": {
+        "correct": false,
+        "pred": "Family time and work"
+      },
+      "cond_b": {
+        "correct": true,
+        "pred": "Pottery, camping, painting, swimming"
+      },
+      "cond_c": {
+        "correct": true,
+        "pred": "Painting"
+      },
+      "cond_d": {
+        "correct": false,
+        "pred": "Origami, scuba diving, wood carving, archery"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-018",
+      "question": "Where has Melanie camped?",
+      "ground_truth": "beach, mountains, forest",
+      "cond_a": {
+        "correct": false,
+        "pred": "I don't know."
+      },
+      "cond_b": {
+        "correct": false,
+        "pred": "I don't know."
+      },
+      "cond_c": {
+        "correct": false,
+        "pred": "I don't know."
+      },
+      "cond_d": {
+        "correct": false,
+        "pred": "I don't know."
+      }
+    },
+    {
+      "question_id": "conv-26-qa-019",
+      "question": "What do Melanie's kids like?",
+      "ground_truth": "dinosaurs, nature",
+      "cond_a": {
+        "correct": false,
+        "pred": "None (not mentioned in conversation)."
+      },
+      "cond_b": {
+        "correct": false,
+        "pred": "Exploring and playing outdoors"
+      },
+      "cond_c": {
+        "correct": false,
+        "pred": "None (not mentioned in conversation)."
+      },
+      "cond_d": {
+        "correct": false,
+        "pred": "Exploring and playing outdoors"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-023",
+      "question": "What books has Melanie read?",
+      "ground_truth": "\"Nothing is Impossible\", \"Charlotte's Web\"",
+      "cond_a": {
+        "correct": false,
+        "pred": "I don't know."
+      },
+      "cond_b": {
+        "correct": true,
+        "pred": "\"Nothing is Impossible\", \"Charlotte's Web\""
+      },
+      "cond_c": {
+        "correct": false,
+        "pred": "I don't know."
+      },
+      "cond_d": {
+        "correct": false,
+        "pred": "Nothing is Impossible, Charlotte's Web"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-024",
+      "question": "What does Melanie do to destress?",
+      "ground_truth": "Running, pottery",
+      "cond_a": {
+        "correct": false,
+        "pred": "Family time"
+      },
+      "cond_b": {
+        "correct": true,
+        "pred": "Melanie enjoys running and pottery."
+      },
+      "cond_c": {
+        "correct": false,
+        "pred": "Family time"
+      },
+      "cond_d": {
+        "correct": false,
+        "pred": "Melanie enjoys running and origami."
+      }
+    },
+    {
+      "question_id": "conv-26-qa-032",
+      "question": "What LGBTQ+ events has Caroline participated in?",
+      "ground_truth": "Pride parade, school speech, support group",
+      "cond_a": {
+        "correct": false,
+        "pred": "An LGBTQ+ pride parade and an LGBTQ conference."
+      },
+      "cond_b": {
+        "correct": true,
+        "pred": "Participated in an LGBTQ+ pride parade and an LGBTQ conference."
+      },
+      "cond_c": {
+        "correct": false,
+        "pred": "Attending an LGBTQ+ pride parade and an LGBTQ conference."
+      },
+      "cond_d": {
+        "correct": false,
+        "pred": "LGBTQ+ pride parade and an LGBTQ conference."
+      }
+    },
+    {
+      "question_id": "conv-26-qa-034",
+      "question": "What events has Caroline participated in to help children?",
+      "ground_truth": "Mentoring program, school speech",
+      "cond_a": {
+        "correct": false,
+        "pred": "Applied to adoption agencies"
+      },
+      "cond_b": {
+        "correct": true,
+        "pred": "Mentoring program and school speech"
+      },
+      "cond_c": {
+        "correct": false,
+        "pred": "Applied to adoption agencies"
+      },
+      "cond_d": {
+        "correct": false,
+        "pred": "Mentoring program and school speech for children."
+      }
+    },
+    {
+      "question_id": "conv-26-qa-037",
+      "question": "What did Melanie paint recently?",
+      "ground_truth": "sunset",
+      "cond_a": {
+        "correct": true,
+        "pred": "A painting inspired by sunsets"
+      },
+      "cond_b": {
+        "correct": true,
+        "pred": "A painting inspired by sunsets"
+      },
+      "cond_c": {
+        "correct": true,
+        "pred": "A painting inspired by sunsets"
+      },
+      "cond_d": {
+        "correct": true,
+        "pred": "A horse painting inspired by sunsets"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-038",
+      "question": "What activities has Melanie done with her family?",
+      "ground_truth": "Pottery, painting, camping, museum, swimming, hiking",
+      "cond_a": {
+        "correct": false,
+        "pred": "Spending quality time and cherishing moments with her family."
+      },
+      "cond_b": {
+        "correct": false,
+        "pred": "Camping and swimming"
+      },
+      "cond_c": {
+        "correct": false,
+        "pred": "Painting and cherishing time with family."
+      },
+      "cond_d": {
+        "correct": false,
+        "pred": "Origami, wood carving, scuba diving, museum visits, archery, hiking"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-039",
+      "question": "In what ways is Caroline participating in the LGBTQ community?",
+      "ground_truth": "Joining activist group, going to pride parades, participating in an art show, mentoring program",
+      "cond_a": {
+        "correct": true,
+        "pred": "Joining a mentorship program for LGBTQ youth, participating in an LGBTQ activist group, and representing inclusivity and diversity in her art."
+      },
+      "cond_b": {
+        "correct": true,
+        "pred": "Joining activist groups, participating in pride parades, mentoring, and representing inclusivity in art."
+      },
+      "cond_c": {
+        "correct": true,
+        "pred": "Joining a mentorship program for LGBTQ youth, participating in an LGBTQ activist group, and representing inclusivity and diversity in her art."
+      },
+      "cond_d": {
+        "correct": false,
+        "pred": "Joining activist groups, participating in pride parades, mentoring programs, and representing inclusivity in art."
+      }
+    },
+    {
+      "question_id": "conv-26-qa-040",
+      "question": "How many times has Melanie gone to the beach in 2023?",
+      "ground_truth": "2",
+      "cond_a": {
+        "correct": false,
+        "pred": "Once"
+      },
+      "cond_b": {
+        "correct": false,
+        "pred": "Twice"
+      },
+      "cond_c": {
+        "correct": false,
+        "pred": "Twice"
+      },
+      "cond_d": {
+        "correct": false,
+        "pred": "10"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-043",
+      "question": "What kind of art does Caroline make?",
+      "ground_truth": "abstract art",
+      "cond_a": {
+        "correct": false,
+        "pred": "Drawing"
+      },
+      "cond_b": {
+        "correct": true,
+        "pred": "Abstract art"
+      },
+      "cond_c": {
+        "correct": false,
+        "pred": "Drawing"
+      },
+      "cond_d": {
+        "correct": true,
+        "pred": "Abstract art"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-047",
+      "question": "Who supports Caroline when she has a negative experience?",
+      "ground_truth": "Her mentors, family, and friends",
+      "cond_a": {
+        "correct": false,
+        "pred": "Melanie"
+      },
+      "cond_b": {
+        "correct": false,
+        "pred": "Melanie"
+      },
+      "cond_c": {
+        "correct": false,
+        "pred": "Melanie"
+      },
+      "cond_d": {
+        "correct": false,
+        "pred": "Melanie"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-048",
+      "question": "What types of pottery have Melanie and her kids made?",
+      "ground_truth": "bowls, cup",
+      "cond_a": {
+        "correct": false,
+        "pred": "Clay pots"
+      },
+      "cond_b": {
+        "correct": true,
+        "pred": "Bowls and cups"
+      },
+      "cond_c": {
+        "correct": false,
+        "pred": "Clay pots"
+      },
+      "cond_d": {
+        "correct": false,
+        "pred": "Bowls and cups"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-051",
+      "question": "What has Melanie painted?",
+      "ground_truth": "Horse, sunset, sunrise",
+      "cond_a": {
+        "correct": false,
+        "pred": "A lake sunrise"
+      },
+      "cond_b": {
+        "correct": true,
+        "pred": "A lake sunrise"
+      },
+      "cond_c": {
+        "correct": false,
+        "pred": "A lake sunrise"
+      },
+      "cond_d": {
+        "correct": false,
+        "pred": "A lake sunrise"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-052",
+      "question": "What are Melanie's pets' names?",
+      "ground_truth": "Oliver, Luna, Bailey",
+      "cond_a": {
+        "correct": false,
+        "pred": "None / Not mentioned."
+      },
+      "cond_b": {
+        "correct": false,
+        "pred": "None / Not mentioned."
+      },
+      "cond_c": {
+        "correct": false,
+        "pred": "None / Not mentioned."
+      },
+      "cond_d": {
+        "correct": false,
+        "pred": "None / Not mentioned."
+      }
+    },
+    {
+      "question_id": "conv-26-qa-055",
+      "question": "What subject have Caroline and Melanie both painted?",
+      "ground_truth": "Sunsets",
+      "cond_a": {
+        "correct": false,
+        "pred": "They haven't painted; Caroline is interested in pottery."
+      },
+      "cond_b": {
+        "correct": true,
+        "pred": "Sunsets"
+      },
+      "cond_c": {
+        "correct": false,
+        "pred": "They haven't painted; Caroline is interested in pottery."
+      },
+      "cond_d": {
+        "correct": false,
+        "pred": "Painting"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-056",
+      "question": "What symbols are important to Caroline?",
+      "ground_truth": "Rainbow flag, transgender symbol",
+      "cond_a": {
+        "correct": false,
+        "pred": "Transgender identity and inclusion"
+      },
+      "cond_b": {
+        "correct": true,
+        "pred": "Rainbow flag, transgender symbol."
+      },
+      "cond_c": {
+        "correct": false,
+        "pred": "Transgender identity and inclusion"
+      },
+      "cond_d": {
+        "correct": false,
+        "pred": "Pirate skull, transgender symbol."
+      }
+    },
+    {
+      "question_id": "conv-26-qa-060",
+      "question": "What instruments does Melanie play?",
+      "ground_truth": "clarinet and violin",
+      "cond_a": {
+        "correct": false,
+        "pred": "I don't know."
+      },
+      "cond_b": {
+        "correct": true,
+        "pred": "Clarinet and violin."
+      },
+      "cond_c": {
+        "correct": false,
+        "pred": "I don't know."
+      },
+      "cond_d": {
+        "correct": true,
+        "pred": "Clarinet and violin."
+      }
+    },
+    {
+      "question_id": "conv-26-qa-061",
+      "question": "What musical artists/bands has Melanie seen?",
+      "ground_truth": "Summer Sounds, Matt Patterson",
+      "cond_a": {
+        "correct": false,
+        "pred": "I don't know."
+      },
+      "cond_b": {
+        "correct": false,
+        "pred": "I don't know."
+      },
+      "cond_c": {
+        "correct": false,
+        "pred": "I don't know."
+      },
+      "cond_d": {
+        "correct": false,
+        "pred": "I don't know."
+      }
+    },
+    {
+      "question_id": "conv-26-qa-065",
+      "question": "What are some changes Caroline has faced during her transition journey?",
+      "ground_truth": "Changes to her body, losing unsupportive friends",
+      "cond_a": {
+        "correct": false,
+        "pred": "She's developed a lot and faced struggles."
+      },
+      "cond_b": {
+        "correct": true,
+        "pred": "Changes to her body and losing unsupportive friends."
+      },
+      "cond_c": {
+        "correct": false,
+        "pred": "She's developed a lot and faced struggles."
+      },
+      "cond_d": {
+        "correct": false,
+        "pred": "Changes to her body and losing unsupportive friends."
+      }
+    },
+    {
+      "question_id": "conv-26-qa-066",
+      "question": "What does Melanie do with her family on hikes?",
+      "ground_truth": "Roast marshmallows, tell stories",
+      "cond_a": {
+        "correct": true,
+        "pred": "Roasts marshmallows and shares stories around the campfire."
+      },
+      "cond_b": {
+        "correct": true,
+        "pred": "Roasts marshmallows and shares stories"
+      },
+      "cond_c": {
+        "correct": true,
+        "pred": "Roasts marshmallows and shares stories around the campfire."
+      },
+      "cond_d": {
+        "correct": false,
+        "pred": "Roasts marshmallows and shares stories."
+      }
+    },
+    {
+      "question_id": "conv-26-qa-070",
+      "question": "What transgender-specific events has Caroline attended?",
+      "ground_truth": "Poetry reading, conference",
+      "cond_a": {
+        "correct": false,
+        "pred": "She attended an adoption advice/assistance group."
+      },
+      "cond_b": {
+        "correct": false,
+        "pred": "Caroline has not mentioned attending any transgender-specific events."
+      },
+      "cond_c": {
+        "correct": false,
+        "pred": "She attended an adoption advice/assistance group."
+      },
+      "cond_d": {
+        "correct": false,
+        "pred": "Caroline has not mentioned attending any transgender-specific events."
+      }
+    },
+    {
+      "question_id": "conv-26-qa-071",
+      "question": "What book did Melanie read from Caroline's suggestion?",
+      "ground_truth": "\"Becoming Nicole\"",
+      "cond_a": {
+        "correct": false,
+        "pred": "I don't know."
+      },
+      "cond_b": {
+        "correct": false,
+        "pred": "I don't know."
+      },
+      "cond_c": {
+        "correct": false,
+        "pred": "I don't know."
+      },
+      "cond_d": {
+        "correct": false,
+        "pred": "I don't know."
+      }
+    },
+    {
+      "question_id": "conv-26-qa-075",
+      "question": "How many children does Melanie have?",
+      "ground_truth": "3",
+      "cond_a": {
+        "correct": false,
+        "pred": "I don't know."
+      },
+      "cond_b": {
+        "correct": true,
+        "pred": "Melanie has 3 children."
+      },
+      "cond_c": {
+        "correct": false,
+        "pred": "I don't know."
+      },
+      "cond_d": {
+        "correct": false,
+        "pred": "Melanie has 5 children."
+      }
+    },
+    {
+      "question_id": "conv-26-qa-076",
+      "question": "When did Melanie go on a hike after the roadtrip?",
+      "ground_truth": "19 October 2023",
+      "cond_a": {
+        "correct": false,
+        "pred": "Yesterday"
+      },
+      "cond_b": {
+        "correct": false,
+        "pred": "Yesterday"
+      },
+      "cond_c": {
+        "correct": false,
+        "pred": "Yesterday"
+      },
+      "cond_d": {
+        "correct": false,
+        "pred": "Yesterday"
+      }
+    },
+    {
+      "question_id": "conv-26-qa-078",
+      "question": "What items has Melanie bought?",
+      "ground_truth": "Figurines, shoes",
+      "cond_a": {
+        "correct": true,
+        "pred": "Figurines"
+      },
+      "cond_b": {
+        "correct": true,
+        "pred": "Figurines and shoes"
+      },
+      "cond_c": {
+        "correct": true,
+        "pred": "Figurines"
+      },
+      "cond_d": {
+        "correct": false,
+        "pred": "Laptops and cameras"
+      }
+    }
+  ]
+}

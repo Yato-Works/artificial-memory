@@ -716,7 +716,160 @@ class TestDeepSeekSessionWiring:
         stats = runtime.recall_engine.plan_cache.stats_snapshot()
         assert stats[REUSE] >= 1
 
+class TestAbstentionThreshold:
+    """Phase 8.13: Query-relative top-1 abstention detector tests (ADR-0004)."""
 
+    @staticmethod
+    def _memories(texts: list[str]) -> list[Memory]:
+        from datetime import datetime, timedelta
+        from artificial_memory.core.models import Memory, MemoryType, ResolutionLevel
 
+        base = datetime(2026, 1, 1, 12, 0, 0)
+        memories = []
+        for i, text in enumerate(texts):
+            mem = Memory(
+                topic_id=1,
+                memory_type=MemoryType.SEMANTIC,
+                content=text,
+                resolution=ResolutionLevel.SEMANTIC,
+                created_at=base + timedelta(seconds=i),
+            )
+            mem.id = i + 1
+            memories.append(mem)
+        return memories
 
+    def test_abstention_threshold_drops_unevidenced_query(self):
+        from artificial_memory.recall.retrieval_cache import SessionGate
+
+        memories = self._memories([
+            "project atlas uses ripgrep for searching",
+            "gardening discussion with no mention of debuggers",
+            "cooking recipes and baking cakes",
+        ])
+        # A query with no keyword overlap has very low BM25 (e.g. 0.0)
+        gate = SessionGate(pool_size=10, abstention_threshold=5.0)
+        kept = gate.filter("what is the weather in antarctica?", memories)
+        assert kept == []
+        assert gate.abstention_drops == len(memories)
+
+    def test_abstention_threshold_passes_evidenced_query(self):
+        from artificial_memory.recall.retrieval_cache import SessionGate
+
+        memories = self._memories([
+            "project atlas uses ripgrep for searching",
+            "gardening discussion with no mention of debuggers",
+            "cooking recipes and baking cakes",
+        ])
+        # A query that directly matches evidence has top1 BM25 >= threshold
+        gate = SessionGate(pool_size=10, abstention_threshold=1.0)
+        kept = gate.filter("which tool does project atlas use for searching?", memories)
+        assert len(kept) > 0
+        assert any("atlas" in m.content for m in kept)
+        assert gate.abstention_drops == 0
+
+    def test_gate_swap_abstention_threshold_flushes_plan_cache(self):
+        import asyncio
+        from artificial_memory.recall.retrieval_cache import SessionGate
+
+        runtime = ArtificialMemoryRuntime(RuntimeConfig(
+            database_path=":memory:",
+            memory_files_path=None,
+            vector_index_path=None,
+            retrieval_strategy="deepseek_session",
+        ))
+        engine = runtime.recall_engine
+
+        async def scenario():
+            for i in range(1, 10):
+                await runtime.remember(
+                    f"turn {i}: project atlas uses ripgrep daily.", topic="T"
+                )
+            await runtime.recall("atlas ripgrep", topic="T", level=2)
+            old_cache = engine.plan_cache
+            # Swap in gate with abstention_threshold set
+            engine.gate = SessionGate(
+                pool_size=8,
+                corpus_provider=runtime._store_snapshot,
+                abstention_threshold=6.15,
+            )
+            await runtime.recall("atlas ripgrep", topic="T", level=2)
+            return old_cache
+
+        old_cache = asyncio.run(scenario())
+        assert engine.plan_cache is not old_cache
+
+    def test_normalized_bm25_abstention(self):
+        """Nemotron P0: Normalized BM25 in [0, 1] is invariant to query length."""
+        from artificial_memory.recall.retrieval_cache import SessionGate
+
+        memories = self._memories([
+            "project atlas uses ripgrep for searching",
+            "gardening discussion with no mention of debuggers",
+            "cooking recipes and baking cakes",
+        ])
+        # Normalized threshold of 0.20: unevidenced query has ratio 0.0 -> drops
+        gate = SessionGate(pool_size=10, abstention_threshold=0.20)
+        kept = gate.filter("completely unrelated astronaut spacecraft journey", memories)
+        assert kept == []
+        assert gate.abstention_drops == len(memories)
+
+        # Evidenced query has ratio > 0.20 -> passes
+        kept_ev = gate.filter("project atlas ripgrep", memories)
+        assert len(kept_ev) > 0
+        assert any("atlas" in m.content for m in kept_ev)
+
+    def test_robust_top_k_mean_prevents_trojan_horse(self):
+        """Nemotron P0: Top-k mean prevents a single accidental match from polluting context."""
+        from artificial_memory.recall.retrieval_cache import SessionGate
+
+        memories = self._memories([
+            # Session A (cohesive DB topic): 3 members all discussing database indexing
+            "postgresql index performance tuning",
+            "database btree index creation optimization",
+            "query planner using index scans",
+            # Session B (Trojan Horse): 1 accidental mention of 'index', rest is gardening
+            "gardening book index table of contents",
+            "planting tomato seeds in spring soil",
+            "watering tomato plants daily",
+        ])
+        session_by_id = {
+            1: 0, 2: 0, 3: 0,  # Session A (ID 0)
+            4: 1, 5: 1, 6: 1,  # Session B (ID 1)
+        }
+
+        # Under top_k_mean, Session A (all 3 match) averages high,
+        # Session B (only 1 matches, rest 0) averages low.
+        gate = SessionGate(
+            session_by_id=session_by_id,
+            pool_size=3,
+            max_sessions=1,
+            session_aggregation="top_k_mean",
+            aggregation_k=3,
+        )
+        kept = gate.filter("database index optimization", memories)
+        kept_ids = {m.id for m in kept}
+        # Session A should win the single session slot
+        assert 1 in kept_ids or 2 in kept_ids or 3 in kept_ids
+        assert 4 not in kept_ids and 5 not in kept_ids and 6 not in kept_ids
+
+    def test_plan_cache_invalidation_for_memory(self):
+        """Nemotron P0: Plan cache must invalidate when memory undergoes degradation."""
+        from artificial_memory.recall.retrieval_cache import RetrievalPlanCache
+
+        cache = RetrievalPlanCache()
+        # Seed cache with a query that returns memory IDs [1, 2, 3]
+        cache.lookup_or_plan("test query", lambda q: ([1, 2, 3], [1.0, 0.9, 0.8]))
+        assert cache.stats["full"] == 1
+
+        # Re-lookup hits cache (REUSE)
+        plan, mode = cache.lookup_or_plan("test query", lambda q: ([], []))
+        assert mode == "reuse"
+
+        # Memory 2 degrades (e.g. FULL -> DEEP_LONG_TERM)
+        invalidated = cache.invalidate_for_memory(2)
+        assert invalidated == 1
+
+        # Now lookup must be FULL miss (stale plan evicted)
+        plan_after, mode_after = cache.lookup_or_plan("test query", lambda q: ([1, 2, 3], [1.0, 0.9, 0.8]))
+        assert mode_after == "full"
 

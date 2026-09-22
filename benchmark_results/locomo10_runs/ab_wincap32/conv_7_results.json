@@ -1,0 +1,2443 @@
+{
+  "summary": {
+    "conv_idx": 7,
+    "sample_id": "conv-48",
+    "mode": "full",
+    "total_questions": 239,
+    "total_turns": 681,
+    "total_ir_records": 681,
+    "overall_accuracy": 0.6527196652719666,
+    "overall_oracle_recall": 0.8200836820083682,
+    "factual_accuracy": 0.6527196652719666,
+    "factual_oracle_recall": 0.8481675392670157,
+    "mean_tokens": 1821.9414225941423,
+    "mean_latency_ms": 16754.271759832187,
+    "elapsed_seconds": 4004.290654500015,
+    "categories": {
+      "temporal": {
+        "total": 42,
+        "correct": 18,
+        "oracle": 32
+      },
+      "multi-hop": {
+        "total": 21,
+        "correct": 10,
+        "oracle": 18
+      },
+      "open-domain": {
+        "total": 10,
+        "correct": 3,
+        "oracle": 8
+      },
+      "single-hop": {
+        "total": 118,
+        "correct": 102,
+        "oracle": 104
+      },
+      "adversarial": {
+        "total": 48,
+        "correct": 23,
+        "oracle": 34
+      }
+    },
+    "failure_taxonomy_v2": {
+      "TEMPORAL_FAILURE": 22,
+      "COMPOSITION_FAILURE": 10,
+      "ABSTENTION_FAILURE": 28,
+      "VERIFICATION_FAILURE": 13,
+      "RETRIEVAL_FAILURE": 10
+    }
+  },
+  "results": [
+    {
+      "question_id": "conv-48-qa-000",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "A yoga retreat",
+      "ground_truth": "electricity engineering project",
+      "tokens_used": 684,
+      "latency_ms": 1524.3595999781974,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-001",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Deborah's dad and her mom.",
+      "ground_truth": "mother, father, her friend Karlie",
+      "tokens_used": 1733,
+      "latency_ms": 2786.0597999824677,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-002",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "Deborah's mother passed away before 5:33 pm on 26 August, 2023.",
+      "ground_truth": "a few years before 2023",
+      "tokens_used": 1656,
+      "latency_ms": 2918.599399999948,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-003",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "2022",
+      "ground_truth": "in 2022",
+      "tokens_used": 1645,
+      "latency_ms": 2415.94669999904,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-004",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "2010",
+      "ground_truth": "in 2010",
+      "tokens_used": 1763,
+      "latency_ms": 2476.5091000008397,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-005",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "Paris",
+      "ground_truth": "In France",
+      "tokens_used": 1733,
+      "latency_ms": 2461.071700003231,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-006",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Deborah has a pendant that reminds her of her mother, and Jolene has a plant that represents freedom.",
+      "ground_truth": "pendants",
+      "tokens_used": 1742,
+      "latency_ms": 3473.9682000072207,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-007",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Paris",
+      "ground_truth": "France",
+      "tokens_used": 1784,
+      "latency_ms": 2696.6558000131045,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-008",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Meditation, yoga, spending time with family, cherishing memories, and connecting with nature.",
+      "ground_truth": "yoga, old photos, the roses and dahlias in a flower garden, nature",
+      "tokens_used": 1862,
+      "latency_ms": 3282.3915999906603,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-009",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "January 25, 2023",
+      "tokens_used": 1676,
+      "latency_ms": 2722.0976000244264,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-010",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "1993",
+      "ground_truth": "in 1993",
+      "tokens_used": 1651,
+      "latency_ms": 2434.993900009431,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-011",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "No, Deborah is not married.",
+      "ground_truth": "yes",
+      "tokens_used": 1650,
+      "latency_ms": 2741.422200022498,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-012",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "26 January 2023",
+      "ground_truth": "January 26, 2023",
+      "tokens_used": 1824,
+      "latency_ms": 2715.5893000017386,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-013",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "A park with a forest trail, a beach, her mother's old house, a garden, and a beach where she got married.",
+      "ground_truth": "sitting in a spot by the window in her Mom's house, sitting by the beach, Bali, forest trail in a nearby park",
+      "tokens_used": 1812,
+      "latency_ms": 2971.095200016862,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-014",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Sitting by the window and taking in the view.",
+      "ground_truth": "reading, traveling, art, cooking",
+      "tokens_used": 1695,
+      "latency_ms": 2991.5868999960367,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-015",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Cats and snakes",
+      "ground_truth": "snakes",
+      "tokens_used": 1693,
+      "latency_ms": 2664.8802000272553,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-016",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Susie and Seraphim",
+      "ground_truth": "Susie, Seraphim",
+      "tokens_used": 1686,
+      "latency_ms": 2676.0762000049,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-017",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "Last year (2022)",
+      "ground_truth": "in 2022",
+      "tokens_used": 1659,
+      "latency_ms": 2781.4358999894466,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-018",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "The context does not contain the answer.",
+      "ground_truth": "In France",
+      "tokens_used": 1804,
+      "latency_ms": 2831.8294000055175,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-019",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "two times",
+      "tokens_used": 2849,
+      "latency_ms": 3591.5782999945804,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-020",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Detroit, Overcooked 2, Walking Dead, and It takes two.",
+      "ground_truth": "Detroit, Walking Dead, Battlefield 1, It Takes Two, Overcooked 2",
+      "tokens_used": 1922,
+      "latency_ms": 3249.707600014517,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-021",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Next Saturday",
+      "ground_truth": "Saturday after 27 January, 2023",
+      "tokens_used": 1820,
+      "latency_ms": 2699.3298000015784,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-022",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "31 January 2023",
+      "ground_truth": "31 January, 2023",
+      "tokens_used": 1723,
+      "latency_ms": 2741.1341999832075,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-023",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "She was busy with engineering studies.",
+      "ground_truth": "She's more interested in playing video games",
+      "tokens_used": 1818,
+      "latency_ms": 2918.086299992865,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-024",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Dancer Pose (Natarajasana) and Warrior II",
+      "ground_truth": "Warrior II, Dancer Pose (Natarajasana), Tree pose",
+      "tokens_used": 1700,
+      "latency_ms": 2943.50559997838,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-025",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "\"Sapiens\" and a self-discovery book",
+      "ground_truth": "Sapiens, Avalanche by Neal Stephenson",
+      "tokens_used": 1732,
+      "latency_ms": 3102.2195999976248,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-026",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "A self-discovery book",
+      "ground_truth": "Avalanche by Neal Stephenson",
+      "tokens_used": 1432,
+      "latency_ms": 3743.5849999892525,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-027",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Last summer",
+      "ground_truth": "in summer 2022",
+      "tokens_used": 1695,
+      "latency_ms": 2692.0313999871723,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-028",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "Bogota",
+      "ground_truth": "Colombia",
+      "tokens_used": 1728,
+      "latency_ms": 2419.3589000205975,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-029",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "The Wednesday before 9 February 2023",
+      "ground_truth": "Wednesday before 9 February, 2023",
+      "tokens_used": 1761,
+      "latency_ms": 2823.76969998586,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-030",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "4:12 pm on 22 February, 2023",
+      "ground_truth": "21 February, 2023",
+      "tokens_used": 1746,
+      "latency_ms": 2941.775299987057,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-031",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Last summer",
+      "ground_truth": "in summer 2022",
+      "tokens_used": 2119,
+      "latency_ms": 2976.335100014694,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-032",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Last year (2022)",
+      "ground_truth": "in 2022",
+      "tokens_used": 1636,
+      "latency_ms": 2622.6577000052202,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-033",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Three years",
+      "ground_truth": "for three years",
+      "tokens_used": 2991,
+      "latency_ms": 3855.9432000038214,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-034",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "2022",
+      "ground_truth": "2020",
+      "tokens_used": 1816,
+      "latency_ms": 2996.007500012638,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-035",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Yesterday (24 February 2023)",
+      "ground_truth": "24 February, 2023",
+      "tokens_used": 1913,
+      "latency_ms": 2867.1563000243623,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-036",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "The context does not contain the answer.",
+      "ground_truth": "likely no more than 30; since she's in school",
+      "tokens_used": 1744,
+      "latency_ms": 3005.2525000064634,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-037",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Last Sunday before 2 March 2023",
+      "ground_truth": "Sunday before 2 March, 2023",
+      "tokens_used": 1789,
+      "latency_ms": 3053.7594000052195,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-038",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "So much has been going on lately. I started this yoga class in the neighborhood - it's such a good feeling! Now I get to share the exercise with my neighbors and watch it really transform them. - [D9:3 on 11:22 am on 13 March, 2023]",
+      "ground_truth": "Friday before 13 March, 2023",
+      "tokens_used": 1667,
+      "latency_ms": 3964.3724000197835,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-039",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Deborah uses the Pomodoro Technique, creating a daily schedule or to-do list, breaking tasks into smaller pieces, setting goals, and using planners or schedulers. Jolene uses the Pomodoro Technique as well.",
+      "ground_truth": "the Pomodoro Technique - 25 minutes work and 5-minute break, scheduler or to-do list, The Eisenhower Matrix, bullet journal",
+      "tokens_used": 1728,
+      "latency_ms": 3623.2718999963254,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-040",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "Close to the beach",
+      "ground_truth": "beach",
+      "tokens_used": 1733,
+      "latency_ms": 2960.8602999942377,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-041",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Deborah uses candles, essential oils, and soothing music; Jolene uses yoga, meditation, and playing \"It takes two.\"",
+      "ground_truth": "candles, music, essential oils",
+      "tokens_used": 1884,
+      "latency_ms": 3248.7919999985024,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-042",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Nils Frahm and Olafur Arnalds, and an album called 'Sleep'",
+      "ground_truth": "Savana, Sleep",
+      "tokens_used": 1840,
+      "latency_ms": 2970.9680000087246,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-043",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "first week of April, 2023",
+      "tokens_used": 1721,
+      "latency_ms": 3260.3220000164583,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-044",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Today",
+      "ground_truth": "on 9 April, 2023",
+      "tokens_used": 1881,
+      "latency_ms": 2704.412500024773,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-045",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "The week before 1 February 2023",
+      "ground_truth": "May 2023",
+      "tokens_used": 1777,
+      "latency_ms": 2731.8517999956384,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-046",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "The context does not contain the answer.",
+      "ground_truth": "four months",
+      "tokens_used": 634,
+      "latency_ms": 2258.9111999841407,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-047",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "5 June 2023",
+      "ground_truth": "on 5 June, 2023",
+      "tokens_used": 1775,
+      "latency_ms": 2534.635599993635,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-048",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "California",
+      "ground_truth": "Alaska",
+      "tokens_used": 1687,
+      "latency_ms": 2715.7002999738324,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-049",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Sporadically for about 3 years",
+      "ground_truth": "about 3 years",
+      "tokens_used": 2886,
+      "latency_ms": 13880.764700006694,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-050",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "Not specified",
+      "ground_truth": "2020",
+      "tokens_used": 1635,
+      "latency_ms": 23633.448100008536,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-051",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "The day before yesterday on 25 June 2023",
+      "ground_truth": "24 June, 2023",
+      "tokens_used": 1793,
+      "latency_ms": 25494.69309998676,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-052",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "The week before 1 August 2023",
+      "ground_truth": "last week of July 2023",
+      "tokens_used": 1856,
+      "latency_ms": 25590.310400002636,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-053",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Two years ago",
+      "ground_truth": "in 2021",
+      "tokens_used": 1641,
+      "latency_ms": 25616.15560000064,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-054",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Susie",
+      "ground_truth": "Susie",
+      "tokens_used": 1763,
+      "latency_ms": 2585.4855999932624,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-055",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Susie",
+      "ground_truth": "Seraphim",
+      "tokens_used": 1747,
+      "latency_ms": 26462.385800026823,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-056",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Last week before 16 August 2023",
+      "ground_truth": "week before 16 August, 2023",
+      "tokens_used": 1819,
+      "latency_ms": 26952.104099997086,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-057",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "The week before 21 August 2023",
+      "ground_truth": "17 August, 2023",
+      "tokens_used": 1767,
+      "latency_ms": 24807.096000004094,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-058",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Zelda BOTW for Switch and Animal Crossing: New Horizons",
+      "ground_truth": "Zelda BOTW for Switch , Animal Crossing: New Horizons, Overcooked 2",
+      "tokens_used": 1779,
+      "latency_ms": 24752.88559999899,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-059",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "They try to be as good a family as Deborah's parents were.",
+      "ground_truth": "play detective games together, spend time outdoors and explore nature",
+      "tokens_used": 1897,
+      "latency_ms": 23973.60289999051,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-060",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Last week before 24 August 2023",
+      "ground_truth": "a week before 24 August,2023",
+      "tokens_used": 1910,
+      "latency_ms": 24418.594600021606,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-061",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Playing \"Walking Dead\" and getting out in nature in October 2023.",
+      "ground_truth": "developing renewable energy finding ways to supply clean water to those with limited access",
+      "tokens_used": 1776,
+      "latency_ms": 27506.204200006323,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-062",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Shelter",
+      "ground_truth": "Luna is from the shelter and Max is her mother's cat",
+      "tokens_used": 1877,
+      "latency_ms": 24101.39620001428,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-063",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "8 years old",
+      "ground_truth": "Max is 8 years old and Luna is 5 years old",
+      "tokens_used": 1641,
+      "latency_ms": 27754.524299991317,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-064",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Yes, Deborah likes cats.",
+      "ground_truth": "Yes",
+      "tokens_used": 1811,
+      "latency_ms": 25448.707199975615,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-065",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Brazil",
+      "ground_truth": "Brazil",
+      "tokens_used": 2124,
+      "latency_ms": 24477.98719999264,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-066",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "29 August 2023",
+      "ground_truth": "29 August, 2023",
+      "tokens_used": 1754,
+      "latency_ms": 25292.33209998347,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-067",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Exploring temples and taking photos",
+      "ground_truth": "they went on excursions, checked out some cool yoga classes, visited a lot of delicious cafes, visited an old temple",
+      "tokens_used": 1867,
+      "latency_ms": 24422.16830002144,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-068",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "2020",
+      "tokens_used": 1769,
+      "latency_ms": 28957.104999979492,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-069",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Yes, Deborah and Jolene have been to Rio de Janeiro.",
+      "ground_truth": "yes",
+      "tokens_used": 1721,
+      "latency_ms": 25917.59529997944,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-070",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "Yes",
+      "ground_truth": "likely yes",
+      "tokens_used": 1690,
+      "latency_ms": 26101.67169998749,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-071",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "Last Friday before 3 September 2023",
+      "ground_truth": "last week of August 2023",
+      "tokens_used": 1720,
+      "latency_ms": 31967.283200006932,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-072",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "The context does not contain the answer.",
+      "ground_truth": "when she was 10",
+      "tokens_used": 1610,
+      "latency_ms": 24194.66169999214,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-073",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Yes, Jolene taught herself how to play the console.",
+      "ground_truth": "yes",
+      "tokens_used": 1737,
+      "latency_ms": 24741.87740002526,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-074",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "They plan to try fresh pastries.",
+      "ground_truth": "coffee and fresh pastries",
+      "tokens_used": 1670,
+      "latency_ms": 24568.351599999005,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-075",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "A card game about cats",
+      "ground_truth": "Exploding Kittens",
+      "tokens_used": 1724,
+      "latency_ms": 23678.47429998801,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-076",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "The Friday before 17 September 2023",
+      "ground_truth": "Friday before 17 September, 2023",
+      "tokens_used": 1890,
+      "latency_ms": 25399.431900004856,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-077",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Together",
+      "ground_truth": "Phuket",
+      "tokens_used": 1816,
+      "latency_ms": 26831.49140002206,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-078",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "Meditation retreat in Phuket",
+      "ground_truth": "Phuket",
+      "tokens_used": 1903,
+      "latency_ms": 24441.1928000045,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-079",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "No, Deborah has not tried surfing.",
+      "ground_truth": "yes",
+      "tokens_used": 1702,
+      "latency_ms": 25577.783899992937,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-080",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Yes, Jolene has tried surfing.",
+      "ground_truth": "no",
+      "tokens_used": 1736,
+      "latency_ms": 24994.95079999906,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-081",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "in October 2023",
+      "tokens_used": 1729,
+      "latency_ms": 27502.031400013948,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-082",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "One of the places where she does it and her neighbor's yoga class.",
+      "ground_truth": "at her mother's old home, park, yoga studio, beach",
+      "tokens_used": 1774,
+      "latency_ms": 23946.424900001148,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-083",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Interning at an engineering firm and planning and building a sustainable water purifier.",
+      "ground_truth": "present work at virtual conference, attend workshops  and intern at firms",
+      "tokens_used": 1826,
+      "latency_ms": 29707.216700015124,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-084",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Sustainable water purifiers and robotics projects",
+      "ground_truth": "electrical engineering, robotics, sustainable water purifier, productive and affordable aerial surveillance system",
+      "tokens_used": 1944,
+      "latency_ms": 25157.29219999048,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-085",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Running group and yoga event",
+      "ground_truth": "yoga, running",
+      "tokens_used": 1946,
+      "latency_ms": 25131.019099993864,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-086",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "A console and a pendant.",
+      "ground_truth": "an appreciate letter from her community, a flower bouqet from her friend, a motivational quote from a friend",
+      "tokens_used": 1648,
+      "latency_ms": 24865.715899999486,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-087",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Bali and Rio de Janeiro",
+      "ground_truth": "Thailand, Brazil",
+      "tokens_used": 1686,
+      "latency_ms": 26306.02810002165,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-088",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Teaching yoga, supporting the community, and spending time with loved ones.",
+      "ground_truth": "biking, going to art shows, running, organizing workshops to practice mindfulness and self-care, surfing, gardening",
+      "tokens_used": 1843,
+      "latency_ms": 24839.94029997848,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-089",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Susie and Seraphim",
+      "ground_truth": "Susie, Seraphim",
+      "tokens_used": 1686,
+      "latency_ms": 24548.180599987973,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-090",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "\"Sapiens\" and a self-discovery book",
+      "ground_truth": "Sapiens, Avalanche by Neal Stephenson",
+      "tokens_used": 1732,
+      "latency_ms": 25758.804899989627,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-091",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Nils Frahm and Olafur Arnalds, and an album called 'Sleep'",
+      "ground_truth": "Savana, Sleep",
+      "tokens_used": 1840,
+      "latency_ms": 26718.393099989044,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-092",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Zelda BOTW for Switch and Animal Crossing: New Horizons",
+      "ground_truth": "Zelda BOTW for Switch , Animal Crossing: New Horizons, Overcooked 2",
+      "tokens_used": 1779,
+      "latency_ms": 25532.09219998098,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-093",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Playing \"Walking Dead\" and getting out in nature in October 2023.",
+      "ground_truth": "developing renewable energy finding ways to supply clean water to those with limited access",
+      "tokens_used": 1776,
+      "latency_ms": 25483.964000013657,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-094",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Shelter",
+      "ground_truth": "Luna is from the shelter and Max is her mother's cat",
+      "tokens_used": 1877,
+      "latency_ms": 24762.07510000677,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-095",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "8 years old",
+      "ground_truth": "Max is 8 years old and Luna is 5 years old",
+      "tokens_used": 1641,
+      "latency_ms": 25418.717699998524,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-096",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Exploring temples and taking photos",
+      "ground_truth": "they went on excursions, checked out some cool yoga classes, visited a lot of delicious cafes, visited an old temple",
+      "tokens_used": 1867,
+      "latency_ms": 26911.22420001193,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-097",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Yes, Deborah and Jolene have been to Rio de Janeiro.",
+      "ground_truth": "yes",
+      "tokens_used": 1721,
+      "latency_ms": 24639.210900000762,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-098",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "The context does not contain the answer.",
+      "ground_truth": "when she was 10",
+      "tokens_used": 1610,
+      "latency_ms": 24031.589999998687,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-099",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "They plan to try fresh pastries.",
+      "ground_truth": "coffee and fresh pastries",
+      "tokens_used": 1670,
+      "latency_ms": 24160.61669998453,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-100",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "An electrical engineering project",
+      "ground_truth": "an electrical engineering project",
+      "tokens_used": 709,
+      "latency_ms": 23932.096800010186,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-101",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Last year (2022)",
+      "ground_truth": "A year ago",
+      "tokens_used": 1686,
+      "latency_ms": 24964.802500006044,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-102",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "A robotics project",
+      "ground_truth": "Robotics project",
+      "tokens_used": 638,
+      "latency_ms": 29708.477699983632,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-103",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Yesterday (31 January 2023)",
+      "ground_truth": "yoga in the park",
+      "tokens_used": 1762,
+      "latency_ms": 23555.09589999565,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-104",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Playing the console",
+      "ground_truth": "play the console",
+      "tokens_used": 1799,
+      "latency_ms": 24416.950899991207,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-105",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Designing and building a sustainable water purifier for a rural community.",
+      "ground_truth": "Design and build a sustainable water purifier for a rural community",
+      "tokens_used": 1663,
+      "latency_ms": 24564.94360000943,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-106",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "\"Sapiens\"",
+      "ground_truth": "\"Sapiens\"",
+      "tokens_used": 1656,
+      "latency_ms": 23312.102299998514,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-107",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "An amulet",
+      "ground_truth": "amulet",
+      "tokens_used": 2036,
+      "latency_ms": 28269.97590000974,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-108",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A new outlook on life",
+      "ground_truth": "A confidence boost",
+      "tokens_used": 1623,
+      "latency_ms": 24033.752199989976,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-109",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "She came up with neat solutions for her engineering project.",
+      "ground_truth": "Came up with neat solutions for her engineering project",
+      "tokens_used": 1605,
+      "latency_ms": 24352.562000014586,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-110",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A volunteer program where engineers teach STEM to underprivileged kids.",
+      "ground_truth": "A volunteer program where engineers teach STEM to underprivileged kids",
+      "tokens_used": 1661,
+      "latency_ms": 23606.669900007546,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-111",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "As guest speakers for workshops.",
+      "ground_truth": "As guest speakers for workshops",
+      "tokens_used": 1844,
+      "latency_ms": 23820.508899982087,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-112",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "The roses and dahlias",
+      "ground_truth": "Roses and dahlias",
+      "tokens_used": 1959,
+      "latency_ms": 24100.66850000294,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-113",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "To find comfort after losing a friend.",
+      "ground_truth": "to find comfort after losing a friend",
+      "tokens_used": 1746,
+      "latency_ms": 23956.602100020973,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-114",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "In an engineering class in college.",
+      "ground_truth": "In an engineering class in college",
+      "tokens_used": 1807,
+      "latency_ms": 23639.593899977626,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-115",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Meditation and yoga",
+      "ground_truth": "spending time with loved ones",
+      "tokens_used": 1891,
+      "latency_ms": 23598.696700006258,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-116",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Connected to her body",
+      "ground_truth": "connected to her body",
+      "tokens_used": 1826,
+      "latency_ms": 24949.675000010757,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-117",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "A beautiful couple",
+      "ground_truth": "a yellow coffee cup with a handwritten message",
+      "tokens_used": 1650,
+      "latency_ms": 31180.012400000123,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-118",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Lasagna",
+      "ground_truth": "lasagna",
+      "tokens_used": 1753,
+      "latency_ms": 25294.60839999956,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-119",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A photo of a new yoga pose.",
+      "ground_truth": "a photo of a desk with a notebook and a computer monitor",
+      "tokens_used": 1731,
+      "latency_ms": 29087.76890000445,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-120",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Breaking tasks into smaller pieces and using planners or schedulers.",
+      "ground_truth": "breaking tasks into smaller pieces and setting goals, using planners or schedulers",
+      "tokens_used": 1585,
+      "latency_ms": 22956.004800013034,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-121",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Time management",
+      "ground_truth": "time management",
+      "tokens_used": 1725,
+      "latency_ms": 23714.958399999887,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-122",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "The Eisenhower Matrix",
+      "ground_truth": "The Eisenhower Matrix",
+      "tokens_used": 2824,
+      "latency_ms": 25884.11939999787,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-123",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "They inspired each other.",
+      "ground_truth": "They realized they inspire each other",
+      "tokens_used": 1756,
+      "latency_ms": 23069.207499996992,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-124",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Watching videos, gathering information, and getting a beginners' guide to surfing. She needs to find the right time and place for a lesson.",
+      "ground_truth": "gathering information, watching videos, getting a beginners' guide",
+      "tokens_used": 1736,
+      "latency_ms": 25295.540400024038,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-125",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A candle",
+      "ground_truth": "candle",
+      "tokens_used": 1764,
+      "latency_ms": 26196.72440001159,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-126",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Instrumental tracks with mellow melodies and rhythms",
+      "ground_truth": "instrumental tracks with mellow melodies and rhythms",
+      "tokens_used": 1936,
+      "latency_ms": 25413.718700001482,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-127",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Nils Frahm and Olafur Arnalds",
+      "ground_truth": "Nils Frahm and Olafur Arnalds",
+      "tokens_used": 1778,
+      "latency_ms": 25072.767100005876,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-128",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "'Sleep'",
+      "ground_truth": "'Sleep'",
+      "tokens_used": 1681,
+      "latency_ms": 23870.28969998937,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-129",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "An art show",
+      "ground_truth": "an art show",
+      "tokens_used": 1866,
+      "latency_ms": 23702.522899984615,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-130",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Experiencing it together with her mom.",
+      "ground_truth": "It makes her feel like she's still experiencing it with her mom",
+      "tokens_used": 1846,
+      "latency_ms": 25907.315499993274,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-131",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Valuable, teaches self-tuning, brings happiness, and helps cope with tough times.",
+      "ground_truth": "Valuable and relaxing",
+      "tokens_used": 1842,
+      "latency_ms": 24128.44609998865,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-132",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Playing video games",
+      "ground_truth": "Playing video games",
+      "tokens_used": 1858,
+      "latency_ms": 23185.394300002372,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-133",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Interning at a well-known engineering firm.",
+      "ground_truth": "interning at a well-known engineering firm",
+      "tokens_used": 1562,
+      "latency_ms": 25433.040900010383,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-134",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Two years",
+      "ground_truth": "one year",
+      "tokens_used": 2682,
+      "latency_ms": 24221.699099987745,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-135",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Comforting and joyful",
+      "ground_truth": "comforted",
+      "tokens_used": 1890,
+      "latency_ms": 25110.78630000702,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-136",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Tree pose",
+      "ground_truth": "tree pose",
+      "tokens_used": 1744,
+      "latency_ms": 24755.644099990604,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-137",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A running group",
+      "ground_truth": "running group",
+      "tokens_used": 1853,
+      "latency_ms": 24069.10640001297,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-138",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Supportive group members helping and pushing each other during runs",
+      "ground_truth": "helping and pushing each other during runs",
+      "tokens_used": 1831,
+      "latency_ms": 23667.78419999173,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-139",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "To find peace and happiness.",
+      "ground_truth": "fascinated by reptiles and it felt like the perfect pet",
+      "tokens_used": 1768,
+      "latency_ms": 24429.56809999305,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-140",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "\"Detroit\" and \"It takes two\"",
+      "ground_truth": "It takes two",
+      "tokens_used": 1916,
+      "latency_ms": 25811.862399976235,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-141",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Watching them play and relax",
+      "ground_truth": "take them out for a run in the park every morning and evening",
+      "tokens_used": 1803,
+      "latency_ms": 2819.4574000081047,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-142",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Love and gratitude",
+      "ground_truth": "It really showed how much she loves her.",
+      "tokens_used": 1827,
+      "latency_ms": 2495.1144000224303,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-143",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Exercise and nature are important to her.",
+      "ground_truth": "Exercise and nature are important to her",
+      "tokens_used": 1846,
+      "latency_ms": 2917.071199975908,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-144",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Jolene adopted Susie two years ago when she was feeling lonely and wanted some company.",
+      "ground_truth": "She adopted her two years ago when feeling lonely.",
+      "tokens_used": 1688,
+      "latency_ms": 27960.938700009137,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-145",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Video games",
+      "ground_truth": "Video games and spending time with her pet, Susie",
+      "tokens_used": 1745,
+      "latency_ms": 33630.91559999157,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-146",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A gentle flow focusing on breathing and grounding.",
+      "ground_truth": "A gentle flow routine focused on breathing and grounding",
+      "tokens_used": 1712,
+      "latency_ms": 22667.64780000085,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-147",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Notebooks with elements like galaxies and circuitry",
+      "ground_truth": "Notebooks",
+      "tokens_used": 1864,
+      "latency_ms": 22952.028699975926,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-148",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Bullet journal",
+      "ground_truth": "bullet journal",
+      "tokens_used": 1849,
+      "latency_ms": 23086.22739999555,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-149",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Animal Crossing: New Horizons",
+      "ground_truth": "Animal Crossing: New Horizons",
+      "tokens_used": 1825,
+      "latency_ms": 21658.514899987495,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-150",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Zelda BOTW for Switch",
+      "ground_truth": "Zelda BOTW",
+      "tokens_used": 2931,
+      "latency_ms": 22594.53040000517,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-151",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Games",
+      "ground_truth": "video games",
+      "tokens_used": 1919,
+      "latency_ms": 24624.82940001064,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-152",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "It holds special memories for Deborah and her mom.",
+      "ground_truth": "It holds special memories of conversations with her mom",
+      "tokens_used": 2021,
+      "latency_ms": 21347.709499998018,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-153",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Dreams and life",
+      "ground_truth": "dreams and life",
+      "tokens_used": 2028,
+      "latency_ms": 27740.61450001318,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-154",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Peace and gratitude",
+      "ground_truth": "peace and gratitude",
+      "tokens_used": 1988,
+      "latency_ms": 24839.5708000171,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-155",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Yoga, meditation, and creating a serene space with soothing scents.",
+      "ground_truth": "yoga, meditation, walks, and mindfulness",
+      "tokens_used": 877,
+      "latency_ms": 23189.202200010186,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-156",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Savasana (Corpse Pose)",
+      "ground_truth": "savasana (the corpse pose)",
+      "tokens_used": 1694,
+      "latency_ms": 25236.112099984894,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-157",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "3 years",
+      "ground_truth": "3 years",
+      "tokens_used": 2668,
+      "latency_ms": 26042.73249997641,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-158",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A meditation retreat in Phuket",
+      "ground_truth": "presenting at a virtual conference",
+      "tokens_used": 1979,
+      "latency_ms": 25543.077800015453,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-159",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Thrilled and rewarded",
+      "ground_truth": "thrilled and rewarded",
+      "tokens_used": 1927,
+      "latency_ms": 24404.527000006055,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-160",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A virtual conference",
+      "ground_truth": "virtual conference",
+      "tokens_used": 1674,
+      "latency_ms": 25159.42469998845,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-161",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Helping others",
+      "ground_truth": "Helping others",
+      "tokens_used": 1935,
+      "latency_ms": 23958.897700009402,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-162",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Sustainable initiatives and environmental solutions",
+      "ground_truth": "Sustainable initiatives and developing innovative solutions for environmental issues",
+      "tokens_used": 1839,
+      "latency_ms": 24216.781600000104,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-163",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "From the shelter.",
+      "ground_truth": "From the shelter",
+      "tokens_used": 1653,
+      "latency_ms": 23091.492600011406,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-164",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "8 years old",
+      "ground_truth": "8 years old",
+      "tokens_used": 1734,
+      "latency_ms": 24046.94450000534,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-165",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Yoga classes",
+      "ground_truth": "Yoga classes",
+      "tokens_used": 2156,
+      "latency_ms": 24921.267599973362,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-166",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A tranquil spot",
+      "ground_truth": "A tranquil spot by a pond",
+      "tokens_used": 1641,
+      "latency_ms": 31916.458699997747,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-167",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Nurturing herself and embracing fresh starts",
+      "ground_truth": "To nurture herself and embrace fresh starts",
+      "tokens_used": 1928,
+      "latency_ms": 24919.67949998798,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-168",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "She picked it to create a good atmosphere for growth and improvement.",
+      "ground_truth": "As a reminder to nurture herself and embrace fresh starts",
+      "tokens_used": 1746,
+      "latency_ms": 26199.882399989292,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-169",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Teaching yoga and spending time with the community.",
+      "ground_truth": "relationship with her partner",
+      "tokens_used": 1878,
+      "latency_ms": 23889.415999990888,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-170",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "She'd often come to Deborah's classes with her.",
+      "ground_truth": "attended classes with her",
+      "tokens_used": 1922,
+      "latency_ms": 28796.363000001293,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-171",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A video game console",
+      "ground_truth": "nintendo game console",
+      "tokens_used": 1835,
+      "latency_ms": 24099.495500006014,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-172",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Monster Hunter: World",
+      "ground_truth": "Monster Hunter: World",
+      "tokens_used": 1893,
+      "latency_ms": 24232.579300005455,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-173",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A meditation course at a retreat near a lake.",
+      "ground_truth": "meditation",
+      "tokens_used": 1765,
+      "latency_ms": 24609.830499975942,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-174",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Jolene had to reschedule their meeting because Deborah already had plans for that day.",
+      "ground_truth": "Jolene already had plans",
+      "tokens_used": 1743,
+      "latency_ms": 25025.209200015524,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-175",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Phuket",
+      "ground_truth": "Phuket",
+      "tokens_used": 1851,
+      "latency_ms": 24599.445300002117,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-176",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Releasing expectations and judgments to appreciate the present.",
+      "ground_truth": "releasing expectations and judgments and savoring the present",
+      "tokens_used": 1864,
+      "latency_ms": 24591.387399996165,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-177",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Joy and happiness",
+      "ground_truth": "experiencing a new level of joy and happiness",
+      "tokens_used": 1862,
+      "latency_ms": 24741.75699998159,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-178",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Incorporating relaxation, self-care, and balance in life",
+      "ground_truth": "finding inner peace",
+      "tokens_used": 1960,
+      "latency_ms": 24640.376399998786,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-179",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Detroit on the console",
+      "ground_truth": "a card game about cats",
+      "tokens_used": 1893,
+      "latency_ms": 24230.737400008366,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-180",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Reminisced and looked through her photos.",
+      "ground_truth": "reminisced and looked through photos",
+      "tokens_used": 1972,
+      "latency_ms": 24543.65149998921,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-181",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "At a beach",
+      "ground_truth": "on the beach",
+      "tokens_used": 1851,
+      "latency_ms": 25925.528899999335,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-182",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Peace and relaxation",
+      "ground_truth": "a peaceful atmosphere",
+      "tokens_used": 1798,
+      "latency_ms": 23373.265200003516,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-183",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A haven for peace and rest.",
+      "ground_truth": "little haven for peace and rest",
+      "tokens_used": 1561,
+      "latency_ms": 21792.193100001896,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-184",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A free gardening class",
+      "ground_truth": "Free gardening class",
+      "tokens_used": 1989,
+      "latency_ms": 24665.131599991582,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-185",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Cooking",
+      "ground_truth": "Cooking",
+      "tokens_used": 1918,
+      "latency_ms": 22599.507599981735,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-186",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Pineapple birthday cakes",
+      "ground_truth": "Pineapple cakes",
+      "tokens_used": 1988,
+      "latency_ms": 23005.751099990448,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-187",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Cookies",
+      "ground_truth": "Chocolate chip cookies",
+      "tokens_used": 1688,
+      "latency_ms": 22566.08530000085,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-188",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Biking",
+      "ground_truth": "Surfing",
+      "tokens_used": 3024,
+      "latency_ms": 25216.671800008044,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-189",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Attending a music festival",
+      "ground_truth": "Dancing and bopping around",
+      "tokens_used": 1974,
+      "latency_ms": 23526.881600002525,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-190",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Dancing and bopping around",
+      "ground_truth": "Dancing and bopping around",
+      "tokens_used": 1889,
+      "latency_ms": 26419.21160000493,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-191",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Susie",
+      "ground_truth": "",
+      "tokens_used": 1610,
+      "latency_ms": 24005.487899994478,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-192",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "\"Sapiens\" and a book for self-discovery",
+      "ground_truth": "",
+      "tokens_used": 1666,
+      "latency_ms": 23322.117000003345,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-193",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Shelter",
+      "ground_truth": "",
+      "tokens_used": 1840,
+      "latency_ms": 23720.512200001394,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-194",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Luna is 5 years old. The age of Max is not mentioned in the context.",
+      "ground_truth": "",
+      "tokens_used": 1760,
+      "latency_ms": 24112.28860000847,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-195",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 1845,
+      "latency_ms": 25324.229200021364,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-196",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Last year (2022)",
+      "ground_truth": "",
+      "tokens_used": 1654,
+      "latency_ms": 23983.115700015333,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-197",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "In an engineering class in college.",
+      "ground_truth": "",
+      "tokens_used": 1698,
+      "latency_ms": 44114.337099978,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-198",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1652,
+      "latency_ms": 26018.881699972553,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-199",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Stepping outside her comfort zone and believing in herself.",
+      "ground_truth": "",
+      "tokens_used": 1670,
+      "latency_ms": 23318.212499987567,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-200",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1752,
+      "latency_ms": 23189.62239997927,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-201",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "A lost friend",
+      "ground_truth": "",
+      "tokens_used": 1934,
+      "latency_ms": 26023.80450000055,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-202",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "To find peace after losing a friend.",
+      "ground_truth": "",
+      "tokens_used": 1699,
+      "latency_ms": 3652.8847999870777,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-203",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "They met in an engineering class in college.",
+      "ground_truth": "",
+      "tokens_used": 1779,
+      "latency_ms": 3511.035000003176,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-204",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Teaching classes",
+      "ground_truth": "",
+      "tokens_used": 1893,
+      "latency_ms": 3053.8368000125047,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-205",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "The Eisenhower Matrix",
+      "ground_truth": "",
+      "tokens_used": 2911,
+      "latency_ms": 4901.363799988758,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-206",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 1780,
+      "latency_ms": 3012.1062000107486,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-207",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Jolene does not mention any authors she enjoys reading during her yoga practice.",
+      "ground_truth": "",
+      "tokens_used": 1787,
+      "latency_ms": 2858.3825000096112,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-208",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "An art show",
+      "ground_truth": "",
+      "tokens_used": 1816,
+      "latency_ms": 2930.6600999843795,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-209",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 1816,
+      "latency_ms": 2773.6536000156775,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-210",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "It brings them happiness and comfort.",
+      "ground_truth": "",
+      "tokens_used": 1829,
+      "latency_ms": 4147.556599986274,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-211",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 2699,
+      "latency_ms": 3357.0554000034463,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-212",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Comfort and happiness",
+      "ground_truth": "",
+      "tokens_used": 2061,
+      "latency_ms": 2861.888799990993,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-213",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Supportive group",
+      "ground_truth": "",
+      "tokens_used": 1900,
+      "latency_ms": 2644.85219999915,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-214",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 1787,
+      "latency_ms": 3097.800499992445,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-215",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "She adopted Susie two years ago.",
+      "ground_truth": "",
+      "tokens_used": 1687,
+      "latency_ms": 2217.4072999914642,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-216",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1843,
+      "latency_ms": 2237.981399986893,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-217",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1879,
+      "latency_ms": 2619.046200008597,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-218",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Animal Crossing: New Horizons",
+      "ground_truth": "",
+      "tokens_used": 1778,
+      "latency_ms": 2520.2159000036772,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-219",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 3073,
+      "latency_ms": 3737.514699983876,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-220",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "It holds a lot of special memories for her and her mom.",
+      "ground_truth": "",
+      "tokens_used": 1793,
+      "latency_ms": 2959.0903999924194,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-221",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1859,
+      "latency_ms": 2607.9511999851093,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-222",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1917,
+      "latency_ms": 3186.380500002997,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-223",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1878,
+      "latency_ms": 2786.9323999912012,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-224",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 2087,
+      "latency_ms": 2818.026099994313,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-225",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1988,
+      "latency_ms": 4084.343100024853,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-226",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 1601,
+      "latency_ms": 2837.6994999998715,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-227",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Yoga classes",
+      "ground_truth": "",
+      "tokens_used": 1975,
+      "latency_ms": 5017.852399992989,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-228",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "To improve her yoga practice.",
+      "ground_truth": "",
+      "tokens_used": 1833,
+      "latency_ms": 2649.9955999897793,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-229",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "She bought Jolene a candle.",
+      "ground_truth": "",
+      "tokens_used": 1790,
+      "latency_ms": 3077.9113000025973,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-230",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "A video game console",
+      "ground_truth": "",
+      "tokens_used": 1858,
+      "latency_ms": 2680.0124000001233,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-231",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1942,
+      "latency_ms": 2712.576899997657,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-232",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1779,
+      "latency_ms": 2721.410400001332,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-233",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "They reminisced and looked through her photos.",
+      "ground_truth": "",
+      "tokens_used": 1913,
+      "latency_ms": 3023.044400004437,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-234",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "The beach",
+      "ground_truth": "",
+      "tokens_used": 1715,
+      "latency_ms": 2717.834799987031,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-48-qa-235",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1984,
+      "latency_ms": 2897.105499985628,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-236",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "It's not specified what food Jolene's mom made for her on holidays.",
+      "ground_truth": "",
+      "tokens_used": 1956,
+      "latency_ms": 3339.1330000013113,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-237",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1773,
+      "latency_ms": 2355.5618000100367,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-48-qa-238",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Dancing and bopping around",
+      "ground_truth": "",
+      "tokens_used": 1963,
+      "latency_ms": 3268.9301000209525,
+      "is_correct": false
+    }
+  ]
+}

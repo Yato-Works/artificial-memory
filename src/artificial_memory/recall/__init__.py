@@ -7,6 +7,10 @@ from artificial_memory.recall.human_recall import (
     RecallMode,
     create_human_recall_engine,
 )
+from artificial_memory.recall.hierarchical_evidence_index import (
+    HierarchicalEvidenceIndex,
+    RetrievalTrace,
+)
 from artificial_memory.recall.predictive import (
     PredictiveRecallConfig,
     PredictiveRecallEngine,
@@ -25,6 +29,8 @@ __all__ = [
     "HumanRecallResult",
     "RecallMode",
     "create_human_recall_engine",
+    "HierarchicalEvidenceIndex",
+    "RetrievalTrace",
     "PrefetchCache",
     "PrefetchEntry",
     "PrefetchResult",

@@ -1,0 +1,2746 @@
+{
+  "summary": {
+    "conv_idx": 9,
+    "sample_id": "conv-50",
+    "speakers": [
+      "Calvin",
+      "Dave"
+    ],
+    "total_questions": 204,
+    "total_turns": 568,
+    "total_ir_records": 568,
+    "overall_accuracy": 0.36764705882352944,
+    "overall_oracle_recall": 0.44607843137254904,
+    "factual_accuracy": 0.37341772151898733,
+    "factual_oracle_recall": 0.5126582278481012,
+    "mean_tokens": 157.22549019607843,
+    "mean_latency_ms": 359.5972235300852,
+    "elapsed_seconds": 73.36167519999435,
+    "categories": {
+      "temporal": {
+        "total": 32,
+        "correct": 17,
+        "oracle": 19
+      },
+      "multi-hop": {
+        "total": 32,
+        "correct": 6,
+        "oracle": 15
+      },
+      "open-domain": {
+        "total": 7,
+        "correct": 1,
+        "oracle": 2
+      },
+      "single-hop": {
+        "total": 87,
+        "correct": 35,
+        "oracle": 45
+      },
+      "adversarial": {
+        "total": 46,
+        "correct": 16,
+        "oracle": 10
+      }
+    },
+    "failure_taxonomy_v2": {
+      "TEMPORAL_FAILURE": 13,
+      "COMPOSITION_FAILURE": 11,
+      "RETRIEVAL_FAILURE": 58,
+      "ABSTENTION_FAILURE": 37,
+      "STATE_FAILURE": 1,
+      "VERIFICATION_FAILURE": 4,
+      "ENTITY_FAILURE": 3,
+      "GROUNDING_FAILURE": 2
+    },
+    "diagnoses": [
+      {
+        "question_id": "conv-50-qa-000",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-50-qa-001",
+        "category": "COMPOSITION_FAILURE",
+        "explanation": "Composition failure: Partial evidence retrieved, but multi-hop link to target slot broke."
+      },
+      {
+        "question_id": "conv-50-qa-002",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-50-qa-003",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-004",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-005",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-007",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-010",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-50-qa-011",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-012",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False refusal: Evidence was present in context, but model abstained."
+      },
+      {
+        "question_id": "conv-50-qa-013",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-015",
+        "category": "COMPOSITION_FAILURE",
+        "explanation": "Composition failure: Partial evidence retrieved, but multi-hop link to target slot broke."
+      },
+      {
+        "question_id": "conv-50-qa-017",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-50-qa-018",
+        "category": "COMPOSITION_FAILURE",
+        "explanation": "Composition failure: Partial evidence retrieved, but multi-hop link to target slot broke."
+      },
+      {
+        "question_id": "conv-50-qa-019",
+        "category": "COMPOSITION_FAILURE",
+        "explanation": "Composition failure: Partial evidence retrieved, but multi-hop link to target slot broke."
+      },
+      {
+        "question_id": "conv-50-qa-020",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-021",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-023",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-024",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-027",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-50-qa-028",
+        "category": "COMPOSITION_FAILURE",
+        "explanation": "Composition failure: Partial evidence retrieved, but multi-hop link to target slot broke."
+      },
+      {
+        "question_id": "conv-50-qa-029",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-030",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-036",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-50-qa-037",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-039",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False refusal: Evidence was present in context, but model abstained."
+      },
+      {
+        "question_id": "conv-50-qa-040",
+        "category": "STATE_FAILURE",
+        "explanation": "State failure: Stale or superseded state selected instead of current state (or vice-versa)."
+      },
+      {
+        "question_id": "conv-50-qa-041",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-045",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-046",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-048",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-50-qa-049",
+        "category": "COMPOSITION_FAILURE",
+        "explanation": "Composition failure: Partial evidence retrieved, but multi-hop link to target slot broke."
+      },
+      {
+        "question_id": "conv-50-qa-051",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-50-qa-053",
+        "category": "COMPOSITION_FAILURE",
+        "explanation": "Composition failure: Partial evidence retrieved, but multi-hop link to target slot broke."
+      },
+      {
+        "question_id": "conv-50-qa-054",
+        "category": "COMPOSITION_FAILURE",
+        "explanation": "Composition failure: Partial evidence retrieved, but multi-hop link to target slot broke."
+      },
+      {
+        "question_id": "conv-50-qa-056",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-057",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-50-qa-058",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-059",
+        "category": "COMPOSITION_FAILURE",
+        "explanation": "Composition failure: Partial evidence retrieved, but multi-hop link to target slot broke."
+      },
+      {
+        "question_id": "conv-50-qa-060",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-061",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False refusal: Evidence was present in context, but model abstained."
+      },
+      {
+        "question_id": "conv-50-qa-062",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-50-qa-063",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-064",
+        "category": "COMPOSITION_FAILURE",
+        "explanation": "Composition failure: Partial evidence retrieved, but multi-hop link to target slot broke."
+      },
+      {
+        "question_id": "conv-50-qa-065",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-50-qa-067",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-50-qa-068",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-50-qa-071",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-072",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-075",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-077",
+        "category": "VERIFICATION_FAILURE",
+        "explanation": "Verification failure: Extraneous hallucinated claim not grounded in context."
+      },
+      {
+        "question_id": "conv-50-qa-078",
+        "category": "ENTITY_FAILURE",
+        "explanation": "Entity failure: Unresolved pronoun or generic hypernym in generated answer."
+      },
+      {
+        "question_id": "conv-50-qa-079",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-080",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-086",
+        "category": "VERIFICATION_FAILURE",
+        "explanation": "Verification failure: Extraneous hallucinated claim not grounded in context."
+      },
+      {
+        "question_id": "conv-50-qa-087",
+        "category": "ENTITY_FAILURE",
+        "explanation": "Entity failure: Unresolved pronoun or generic hypernym in generated answer."
+      },
+      {
+        "question_id": "conv-50-qa-088",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-089",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-091",
+        "category": "VERIFICATION_FAILURE",
+        "explanation": "Verification failure: Extraneous hallucinated claim not grounded in context."
+      },
+      {
+        "question_id": "conv-50-qa-092",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False refusal: Evidence was present in context, but model abstained."
+      },
+      {
+        "question_id": "conv-50-qa-093",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-096",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-097",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-098",
+        "category": "COMPOSITION_FAILURE",
+        "explanation": "Composition failure: Partial evidence retrieved, but multi-hop link to target slot broke."
+      },
+      {
+        "question_id": "conv-50-qa-102",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-103",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-105",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False refusal: Evidence was present in context, but model abstained."
+      },
+      {
+        "question_id": "conv-50-qa-107",
+        "category": "GROUNDING_FAILURE",
+        "explanation": "Grounding failure: Evidence was present in context, but downstream LLM failed to extract exact answer."
+      },
+      {
+        "question_id": "conv-50-qa-111",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-113",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-114",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False refusal: Evidence was present in context, but model abstained."
+      },
+      {
+        "question_id": "conv-50-qa-115",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-117",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-119",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-120",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-122",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-123",
+        "category": "ENTITY_FAILURE",
+        "explanation": "Entity failure: Unresolved pronoun or generic hypernym in generated answer."
+      },
+      {
+        "question_id": "conv-50-qa-124",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-128",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-130",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-132",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-133",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-134",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-137",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-138",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-139",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-140",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-141",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-145",
+        "category": "VERIFICATION_FAILURE",
+        "explanation": "Verification failure: Extraneous hallucinated claim not grounded in context."
+      },
+      {
+        "question_id": "conv-50-qa-146",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-147",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-148",
+        "category": "GROUNDING_FAILURE",
+        "explanation": "Grounding failure: Evidence was present in context, but downstream LLM failed to extract exact answer."
+      },
+      {
+        "question_id": "conv-50-qa-149",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False refusal: Evidence was present in context, but model abstained."
+      },
+      {
+        "question_id": "conv-50-qa-151",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-152",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-154",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-155",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-156",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-157",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-50-qa-158",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-50-qa-161",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-50-qa-162",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-50-qa-163",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-50-qa-164",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-50-qa-165",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-50-qa-166",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-50-qa-167",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-50-qa-169",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-50-qa-171",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-50-qa-172",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-50-qa-177",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-50-qa-178",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-50-qa-179",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-50-qa-180",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-50-qa-182",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-50-qa-185",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-50-qa-186",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-50-qa-187",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-50-qa-188",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-50-qa-189",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-50-qa-192",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-50-qa-193",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-50-qa-194",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-50-qa-196",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-50-qa-198",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-50-qa-199",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-50-qa-200",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-50-qa-201",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-50-qa-202",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      }
+    ]
+  },
+  "results": [
+    {
+      "question_id": "conv-50-qa-000",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "June 2023",
+      "ground_truth": "between 26 March and 20 April 2023",
+      "tokens_used": 162,
+      "latency_ms": 328.26310000382364,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-001",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "A mansion",
+      "ground_truth": "mansion in Japan, luxury car Ferrari 488 GTB",
+      "tokens_used": 125,
+      "latency_ms": 284.4228999747429,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-002",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Dave saw Aerosmith perform live on 26 March, 2023.",
+      "ground_truth": "on the weekend before March 26, 2023",
+      "tokens_used": 180,
+      "latency_ms": 519.2663999914657,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-003",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Boston",
+      "ground_truth": "Aerosmith, The Fireworks",
+      "tokens_used": 141,
+      "latency_ms": 296.3432999968063,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-004",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "Japan",
+      "ground_truth": "United States",
+      "tokens_used": 158,
+      "latency_ms": 285.36170002189465,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-005",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "open a car maintenance shop, work on classic cars, build a custom car from scratch",
+      "tokens_used": 159,
+      "latency_ms": 377.05549999373034,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-006",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Classic cars",
+      "ground_truth": "classic vintage cars",
+      "tokens_used": 181,
+      "latency_ms": 372.88100001751445,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-007",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Yes",
+      "tokens_used": 199,
+      "latency_ms": 352.1238999965135,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-008",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "On 1 May, 2023",
+      "ground_truth": "May 1, 2023",
+      "tokens_used": 153,
+      "latency_ms": 398.447399988072,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-009",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Last week before 16 May 2023",
+      "ground_truth": "On a week before 16 May, 2023",
+      "tokens_used": 175,
+      "latency_ms": 513.6516999918967,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-010",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "On a week before 16 May, 2023",
+      "tokens_used": 137,
+      "latency_ms": 319.78560000425205,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-011",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "His car is not running properly.",
+      "ground_truth": "flooding of his mansion, car accident",
+      "tokens_used": 165,
+      "latency_ms": 352.0606000092812,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-012",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "last week of May 2023",
+      "tokens_used": 177,
+      "latency_ms": 356.7456000018865,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-013",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Yes; because he enjoys the rush of performing onstage to large crowds",
+      "tokens_used": 164,
+      "latency_ms": 324.91769999614917,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-014",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "8 June 2023",
+      "ground_truth": "8 June, 2023",
+      "tokens_used": 181,
+      "latency_ms": 384.65020002331585,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-015",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "To relax and recharge",
+      "ground_truth": "because it relaxes and calms him",
+      "tokens_used": 172,
+      "latency_ms": 329.8281999886967,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-016",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "July 2023",
+      "ground_truth": "July 2023",
+      "tokens_used": 129,
+      "latency_ms": 308.8290999876335,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-017",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "on the Friday before 21 June, 2023",
+      "tokens_used": 170,
+      "latency_ms": 338.2858000113629,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-018",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Once",
+      "ground_truth": "two times",
+      "tokens_used": 162,
+      "latency_ms": 272.78410000144504,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-019",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "An awesome music thing and an upcoming performance",
+      "ground_truth": "music festival, car museum, Shibuya crossing, Shinjuku",
+      "tokens_used": 169,
+      "latency_ms": 346.3370999961626,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-020",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Cal",
+      "ground_truth": "His Dad",
+      "tokens_used": 157,
+      "latency_ms": 263.64929997362196,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-021",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Yes; he want's to grow his fanbase",
+      "tokens_used": 170,
+      "latency_ms": 322.90679999277927,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-022",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Yes, Calvin wants to expand his brand.",
+      "ground_truth": "yes",
+      "tokens_used": 155,
+      "latency_ms": 379.42489999113604,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-023",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Fixing up things and cars",
+      "ground_truth": "auto engineering",
+      "tokens_used": 163,
+      "latency_ms": 332.16109999921173,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-024",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "yes",
+      "tokens_used": 136,
+      "latency_ms": 297.5908999796957,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-025",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Last Friday before 22 August 2023",
+      "ground_truth": "on the Friday before 22 August, 2023",
+      "tokens_used": 143,
+      "latency_ms": 401.06130001368,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-026",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "21 August 2023",
+      "ground_truth": "21 August, 2023",
+      "tokens_used": 121,
+      "latency_ms": 305.46719999983907,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-027",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "The context does not contain the answer.",
+      "ground_truth": "Miami",
+      "tokens_used": 166,
+      "latency_ms": 384.62590001290664,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-028",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Calvin drives long trips in his car.",
+      "ground_truth": "take long drives in his car, embrace nature, fixing cars",
+      "tokens_used": 135,
+      "latency_ms": 418.093799991766,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-029",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Working with mechanics and sharing knowledge about cars.",
+      "ground_truth": "take a walk, go hiking, listen to favorite albums, live concerts, photography",
+      "tokens_used": 142,
+      "latency_ms": 393.1780999992043,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-030",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Vinyl records",
+      "ground_truth": "classic rock, Japanese music",
+      "tokens_used": 131,
+      "latency_ms": 297.7734000014607,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-031",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Dave was in San Francisco.",
+      "ground_truth": "San Francisco",
+      "tokens_used": 181,
+      "latency_ms": 365.1874999923166,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-032",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "San Francisco",
+      "ground_truth": "San Francisco",
+      "tokens_used": 158,
+      "latency_ms": 288.25670000514947,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-033",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "He went to a car workshop.",
+      "ground_truth": "attending a car modification workshop",
+      "tokens_used": 178,
+      "latency_ms": 349.12009999970905,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-034",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "1 September 2023",
+      "ground_truth": "September 1, 2023",
+      "tokens_used": 160,
+      "latency_ms": 302.0414000202436,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-035",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Last week before 2 September 2023",
+      "ground_truth": "last week of August 2023",
+      "tokens_used": 173,
+      "latency_ms": 422.8673000179697,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-036",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "September 11, 2023",
+      "tokens_used": 139,
+      "latency_ms": 290.7936000265181,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-037",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "yes",
+      "tokens_used": 161,
+      "latency_ms": 304.14809999638237,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-038",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "[D20:11 on 8:57 pm on 22 September, 2023]",
+      "ground_truth": "September 14, 2023",
+      "tokens_used": 161,
+      "latency_ms": 567.1903000038583,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-039",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Dodge Charger",
+      "tokens_used": 152,
+      "latency_ms": 215.888000006089,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-040",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "[There's no information provided in the conversation context about the artists Calvin used to listen to when he was a kid.]",
+      "ground_truth": "Tupac and Dr. Dre",
+      "tokens_used": 148,
+      "latency_ms": 628.6478000110947,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-041",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Their family members.",
+      "ground_truth": "Dad",
+      "tokens_used": 155,
+      "latency_ms": 312.16309999581426,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-042",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "No",
+      "ground_truth": "No",
+      "tokens_used": 164,
+      "latency_ms": 349.65960000408813,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-043",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Boston",
+      "ground_truth": "Boston",
+      "tokens_used": 150,
+      "latency_ms": 269.9604000081308,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-044",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "3 October 2023",
+      "ground_truth": "October 3, 2023",
+      "tokens_used": 185,
+      "latency_ms": 353.5857000097167,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-045",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "They have shared ideas, met at a music festival, recorded a song in a studio.",
+      "ground_truth": "Working on cars",
+      "tokens_used": 183,
+      "latency_ms": 529.1499999875668,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-046",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Immersing himself in concerts or favorite albums",
+      "ground_truth": "Restoring cars",
+      "tokens_used": 134,
+      "latency_ms": 787.4004000041168,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-047",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Dave has attended at least two car shows.",
+      "ground_truth": "two",
+      "tokens_used": 202,
+      "latency_ms": 413.1100999948103,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-048",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "He finished restoring a car.",
+      "ground_truth": "attending a car show",
+      "tokens_used": 166,
+      "latency_ms": 384.3918000056874,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-049",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Dave and his father tinkered with engines.",
+      "ground_truth": "tinkering with car engines, restoration and refurbishing cars",
+      "tokens_used": 187,
+      "latency_ms": 423.3994999958668,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-050",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Last week before 15 October 2023",
+      "ground_truth": "first week of October 2023",
+      "tokens_used": 150,
+      "latency_ms": 391.4937999797985,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-051",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "Before 31 May 2023",
+      "ground_truth": "August 2022",
+      "tokens_used": 166,
+      "latency_ms": 356.354800023837,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-052",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "November 2023",
+      "ground_truth": "November 2023",
+      "tokens_used": 175,
+      "latency_ms": 346.2477000139188,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-053",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Dave",
+      "ground_truth": "friends and team",
+      "tokens_used": 163,
+      "latency_ms": 252.1785999997519,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-054",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Watching music videos, concerts, and documentaries about artists and their creative process.",
+      "ground_truth": "Calvin stays connected to the creative process by always staying up-to-date on world events and watching documentaries about artists.",
+      "tokens_used": 140,
+      "latency_ms": 504.17460000608116,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-055",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "24 October 2023",
+      "ground_truth": "October 24, 2023",
+      "tokens_used": 146,
+      "latency_ms": 346.4113000081852,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-056",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Tokyo and the city with the night skyline",
+      "ground_truth": "San Francsico, Detroit",
+      "tokens_used": 116,
+      "latency_ms": 358.56610001064837,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-057",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "Restoring cars",
+      "ground_truth": "photography",
+      "tokens_used": 184,
+      "latency_ms": 323.198300000513,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-058",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "attending a car show with Dad, working on an old car in a neighbor's garage when he was young, spent a summer restoring an old car with Dad",
+      "tokens_used": 192,
+      "latency_ms": 513.8580000202637,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-059",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "One",
+      "ground_truth": "two",
+      "tokens_used": 148,
+      "latency_ms": 263.6943999968935,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-060",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "He received a guitar.",
+      "ground_truth": "gold chain, custom-made guitar with an octopus on it",
+      "tokens_used": 168,
+      "latency_ms": 332.0475000073202,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-061",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Not mentioned.",
+      "ground_truth": "nearly two months",
+      "tokens_used": 175,
+      "latency_ms": 318.46540002152324,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-062",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "The conversation context does not contain the answer.",
+      "ground_truth": "two weeks",
+      "tokens_used": 148,
+      "latency_ms": 372.2169999964535,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-063",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Calvin owns a unique, shiny-finished guitar that matches his personal style.",
+      "ground_truth": "custom-made yellow guitar with an octopus on it, shiny purple guitar",
+      "tokens_used": 153,
+      "latency_ms": 498.05880000349134,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-064",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Dave has opened a car shop, helped with car repairs, and gone on road trips with friends. He also hangs out with friends at parks for regular walks.",
+      "ground_truth": "weekly visits to local parks, countryside roadtrip, celebration of the opening of his car maintenance shop, card-playing nights",
+      "tokens_used": 171,
+      "latency_ms": 758.5665000078734,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-065",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "September 2023",
+      "tokens_used": 171,
+      "latency_ms": 339.09150000545196,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-066",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "No",
+      "tokens_used": 170,
+      "latency_ms": 322.24979999591596,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-067",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "Boston",
+      "ground_truth": "Tokyo",
+      "tokens_used": 169,
+      "latency_ms": 268.72150000417605,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-068",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "Before 5:46 pm on 2 November, 2023",
+      "ground_truth": "last week of October 2023",
+      "tokens_used": 174,
+      "latency_ms": 502.11460000718944,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-069",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "November 2023",
+      "ground_truth": "November 2023",
+      "tokens_used": 167,
+      "latency_ms": 311.5830000024289,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-070",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "16 November 2023",
+      "ground_truth": "November 16, 2023",
+      "tokens_used": 166,
+      "latency_ms": 324.7692000004463,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-071",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "The context does not contain the answer.",
+      "ground_truth": "A few months",
+      "tokens_used": 199,
+      "latency_ms": 405.10609999182634,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-072",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Calvin's favorite band at the music festival in April 2023 is not mentioned in the provided context.",
+      "ground_truth": "Aerosmith",
+      "tokens_used": 169,
+      "latency_ms": 643.7297000084072,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-073",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Tokyo",
+      "ground_truth": "Tokyo",
+      "tokens_used": 165,
+      "latency_ms": 288.1669000198599,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-074",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Stay true to yourself and sound unique.",
+      "ground_truth": "to stay true to himself and sound unique",
+      "tokens_used": 123,
+      "latency_ms": 366.0243999911472,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-075",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "Car maintenance shop",
+      "tokens_used": 157,
+      "latency_ms": 355.94249999849126,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-076",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Regular maintenance to full restorations of classic cars",
+      "ground_truth": "all kinds of cars, from regular maintenance to full restorations of classic cars",
+      "tokens_used": 174,
+      "latency_ms": 379.4480999931693,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-077",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A piece of artwork",
+      "ground_truth": "a gold necklace with a diamond pendant",
+      "tokens_used": 155,
+      "latency_ms": 307.2124999889638,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-078",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "His dedication to music",
+      "ground_truth": "why he keeps hustling as a musician",
+      "tokens_used": 146,
+      "latency_ms": 313.0460999964271,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-079",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "He fixes cars.",
+      "ground_truth": "immerse himself in something he loves",
+      "tokens_used": 162,
+      "latency_ms": 311.84829998528585,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-080",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Watching music videos, concerts, and documentaries about artists and their creative process.",
+      "ground_truth": "explore other things and have some fun",
+      "tokens_used": 178,
+      "latency_ms": 480.48840000410564,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-081",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "His music gear and favorite microphone.",
+      "ground_truth": "music gear and favorite microphone",
+      "tokens_used": 132,
+      "latency_ms": 355.13900002115406,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-082",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "A car maintenance shop",
+      "ground_truth": "a car shop",
+      "tokens_used": 143,
+      "latency_ms": 300.1619999995455,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-083",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Fixing up things and transforming non-working items into functioning ones.",
+      "ground_truth": "Fixing up things",
+      "tokens_used": 141,
+      "latency_ms": 456.684500008123,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-084",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Performing live",
+      "ground_truth": "Performing live",
+      "tokens_used": 128,
+      "latency_ms": 267.3009999853093,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-085",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Exploring parks",
+      "ground_truth": "exploring parks",
+      "tokens_used": 181,
+      "latency_ms": 283.91900000860915,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-086",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Visiting a snowy peak",
+      "ground_truth": "Skiing",
+      "tokens_used": 135,
+      "latency_ms": 362.1057000127621,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-087",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Cruising around in his car",
+      "ground_truth": "get back on the road",
+      "tokens_used": 163,
+      "latency_ms": 383.02069998462684,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-088",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "A picnic",
+      "ground_truth": "regular walks together",
+      "tokens_used": 147,
+      "latency_ms": 294.7470999788493,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-089",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Collaborative music with Japanese artists",
+      "ground_truth": "experimenting with different genres",
+      "tokens_used": 166,
+      "latency_ms": 327.9785999911837,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-090",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "It gives them a fresh vibe.",
+      "ground_truth": "gives them a fresh vibe",
+      "tokens_used": 158,
+      "latency_ms": 373.1493999948725,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-091",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Calvin's car brand is not specified in the provided context.",
+      "ground_truth": "Ferrari",
+      "tokens_used": 172,
+      "latency_ms": 483.854500023881,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-092",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "expand his brand worldwide and grow his fanbase",
+      "tokens_used": 160,
+      "latency_ms": 415.30900000361726,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-093",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Keep going for those dreams. You got this!",
+      "ground_truth": "to never forget his dreams",
+      "tokens_used": 172,
+      "latency_ms": 401.14569998695515,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-094",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A car mod workshop",
+      "ground_truth": "Car mod workshop",
+      "tokens_used": 176,
+      "latency_ms": 359.8057999915909,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-095",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Engine swaps and suspension modifications",
+      "ground_truth": "engine swaps, suspension modifications, and body modifications",
+      "tokens_used": 145,
+      "latency_ms": 329.4626999995671,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-096",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Unknown type of car",
+      "ground_truth": "classic muscle car",
+      "tokens_used": 156,
+      "latency_ms": 282.1993000106886,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-097",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "The unique charm of classic cars.",
+      "ground_truth": "attention to small details",
+      "tokens_used": 170,
+      "latency_ms": 405.5310000258032,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-098",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "They sang along with him.",
+      "ground_truth": "Everyone was so into it and sang along",
+      "tokens_used": 178,
+      "latency_ms": 423.7186999816913,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-099",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "At a music festival in Tokyo",
+      "ground_truth": "At a music festival in Tokyo",
+      "tokens_used": 151,
+      "latency_ms": 327.8177999891341,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-100",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "At Calvin's mansion",
+      "ground_truth": "In the studio at Calvin's mansion",
+      "tokens_used": 144,
+      "latency_ms": 290.19649999099784,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-101",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A podcast discussing the rap industry",
+      "ground_truth": "a podcast discussing the rap industry",
+      "tokens_used": 139,
+      "latency_ms": 380.298700009007,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-102",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Last weekend before 31 August 2023",
+      "ground_truth": "Miami",
+      "tokens_used": 136,
+      "latency_ms": 395.6010999972932,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-103",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "octopus",
+      "tokens_used": 114,
+      "latency_ms": 288.25519999372773,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-104",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "To give it a unique look that matches his style.",
+      "ground_truth": "unique look",
+      "tokens_used": 166,
+      "latency_ms": 396.4474000094924,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-105",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "purple",
+      "tokens_used": 170,
+      "latency_ms": 282.81309999874793,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-106",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "San Francisco",
+      "ground_truth": "San Francisco",
+      "tokens_used": 152,
+      "latency_ms": 302.1504000062123,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-107",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Pride",
+      "ground_truth": "Proud",
+      "tokens_used": 136,
+      "latency_ms": 301.46529999910854,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-108",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Boston",
+      "ground_truth": "Boston",
+      "tokens_used": 145,
+      "latency_ms": 276.87149998382665,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-109",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Exploring and growing his brand",
+      "ground_truth": "exploring and growing his brand",
+      "tokens_used": 176,
+      "latency_ms": 367.55429999902844,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-110",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Calvin plans to check out Dave's garage and possibly get ideas for future projects.",
+      "ground_truth": "Check out Dave's garage and maybe get some ideas for future projects",
+      "tokens_used": 184,
+      "latency_ms": 536.5449000091758,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-111",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "A movie that teaches about following dreams.",
+      "ground_truth": "Ratatouille",
+      "tokens_used": 169,
+      "latency_ms": 413.7617999804206,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-112",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Satisfying",
+      "ground_truth": "satisfying and worth the hard work",
+      "tokens_used": 151,
+      "latency_ms": 319.7900999803096,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-113",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Long drives in his car",
+      "ground_truth": "feeling the wind blowing through his hair",
+      "tokens_used": 144,
+      "latency_ms": 327.92799998424016,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-114",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "\"California Love\"",
+      "tokens_used": 162,
+      "latency_ms": 389.4426999904681,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-115",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "A shiny orange car",
+      "tokens_used": 4,
+      "latency_ms": 28.618000011192635,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-116",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Ford Mustang",
+      "ground_truth": "Ford Mustang",
+      "tokens_used": 149,
+      "latency_ms": 274.7330999991391,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-117",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Seeing the end result and knowing that it was done together",
+      "ground_truth": "Transforming something old and beat-up into something beautiful",
+      "tokens_used": 155,
+      "latency_ms": 436.3273000053596,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-118",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Hard work and dedication",
+      "ground_truth": "Hard work and determination",
+      "tokens_used": 163,
+      "latency_ms": 300.94159999862313,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-119",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "A therapeutic and fulfilling activity",
+      "ground_truth": "Therapy and a way to get away from everyday stress",
+      "tokens_used": 171,
+      "latency_ms": 340.64690000377595,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-120",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "He aims to share his passion and help others with car modifications.",
+      "ground_truth": "Take something broken and make it into something awesome",
+      "tokens_used": 158,
+      "latency_ms": 436.6280999965966,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-121",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A new Ferrari",
+      "ground_truth": "Ferrari",
+      "tokens_used": 147,
+      "latency_ms": 293.55189998750575,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-122",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "The Fireworks",
+      "tokens_used": 169,
+      "latency_ms": 339.1350000165403,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-123",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "By reminding himself of his passion, relying on supportive people, taking breaks for favorite activities, and staying connected to world events.",
+      "ground_truth": "Reminds himself of his passion for goals, gets help from others, and takes a break to recharge",
+      "tokens_used": 147,
+      "latency_ms": 638.8938000018243,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-124",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Dave finds meeting and recording a song fulfilling.",
+      "ground_truth": "fixing things",
+      "tokens_used": 171,
+      "latency_ms": 432.62780000804923,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-125",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "A music festival in Tokyo",
+      "ground_truth": "at a festival",
+      "tokens_used": 146,
+      "latency_ms": 357.13449999457225,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-126",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Shibuya Crossing",
+      "ground_truth": "Shibuya Crossing",
+      "tokens_used": 160,
+      "latency_ms": 355.4961999761872,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-127",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Shinjuku",
+      "ground_truth": "Shinjuku",
+      "tokens_used": 193,
+      "latency_ms": 333.1721000140533,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-128",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "ramen",
+      "tokens_used": 165,
+      "latency_ms": 324.1476999828592,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-129",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Performing and connecting with the crowd",
+      "ground_truth": "Performing and connecting with the crowd",
+      "tokens_used": 180,
+      "latency_ms": 396.0990000050515,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-130",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "He finds a balance between sticking to his sound and trying new stuff.",
+      "ground_truth": "Takes it one day at a time",
+      "tokens_used": 174,
+      "latency_ms": 469.01270002126694,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-131",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Struggles people go through",
+      "ground_truth": "Struggles that people go through",
+      "tokens_used": 123,
+      "latency_ms": 340.4906999785453,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-132",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Calvin describes his music as capturing feelings.",
+      "ground_truth": "Express himself and work through his emotions",
+      "tokens_used": 166,
+      "latency_ms": 563.5970000002999,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-133",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "He is passionate about working on cars.",
+      "ground_truth": "Fascinated with how machines work",
+      "tokens_used": 166,
+      "latency_ms": 365.5868000059854,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-134",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Paying extra attention to detail",
+      "tokens_used": 158,
+      "latency_ms": 346.5321999974549,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-135",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Paying attention to small details",
+      "ground_truth": "Paying attention to small details",
+      "tokens_used": 126,
+      "latency_ms": 359.89010002231225,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-136",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Dave sold the car he restored last year in 2022.",
+      "ground_truth": "Last year",
+      "tokens_used": 161,
+      "latency_ms": 454.5061999815516,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-137",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "at an early age",
+      "tokens_used": 118,
+      "latency_ms": 270.0075999891851,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-138",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "He found it amazing.",
+      "ground_truth": "Unreal, like a dream come true",
+      "tokens_used": 142,
+      "latency_ms": 319.5363999984693,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-139",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "He realized the importance of pursuing his passion for auto engineering.",
+      "ground_truth": "how much music means to him, it's like his passion and purpose",
+      "tokens_used": 179,
+      "latency_ms": 478.1193000089843,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-140",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "They agree that progress and hard work are essential for success.",
+      "ground_truth": "It's fulfilling and motivating",
+      "tokens_used": 148,
+      "latency_ms": 453.58989998931065,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-141",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Tokyo",
+      "ground_truth": "Boston",
+      "tokens_used": 142,
+      "latency_ms": 250.97740002092905,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-142",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "He threw a small party for his new album.",
+      "ground_truth": "Threw a small party for his new album",
+      "tokens_used": 179,
+      "latency_ms": 421.7601999989711,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-143",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Car mods",
+      "ground_truth": "Car mods",
+      "tokens_used": 151,
+      "latency_ms": 260.53610001690686,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-144",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Starting a blog on car mods",
+      "ground_truth": "Through a blog on car mods",
+      "tokens_used": 171,
+      "latency_ms": 319.46549998247065,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-145",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Music videos and concerts",
+      "ground_truth": "Music videos, concerts, documentaries about artists and their creative process",
+      "tokens_used": 158,
+      "latency_ms": 321.0990999941714,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-146",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Photography",
+      "ground_truth": "Classic rock",
+      "tokens_used": 140,
+      "latency_ms": 272.08249998511747,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-147",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "A Japanese mansion and collaborating with new talent",
+      "ground_truth": "Writing lyrics and notes",
+      "tokens_used": 178,
+      "latency_ms": 384.3482999945991,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-148",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Car modifications",
+      "ground_truth": "How he made his car look like a beast",
+      "tokens_used": 158,
+      "latency_ms": 323.9127999986522,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-149",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "It inspires others to start their DIY projects",
+      "tokens_used": 187,
+      "latency_ms": 436.0066000081133,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-150",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "His old high school buddy",
+      "ground_truth": "his old high school buddy",
+      "tokens_used": 174,
+      "latency_ms": 391.81589998770505,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-151",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Listening to music inspired by people's struggles",
+      "ground_truth": "Photography",
+      "tokens_used": 137,
+      "latency_ms": 333.19949998985976,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-152",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "A guitar",
+      "ground_truth": "A vintage camera",
+      "tokens_used": 138,
+      "latency_ms": 281.51359999901615,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-153",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Sunsets",
+      "ground_truth": "Nature - sunsets, beaches, waves",
+      "tokens_used": 148,
+      "latency_ms": 305.84640000597574,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-154",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "A music tour with Frank",
+      "ground_truth": "Fancy gala",
+      "tokens_used": 128,
+      "latency_ms": 328.62610000302084,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-155",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "They discussed music collaborations.",
+      "ground_truth": "Music and art",
+      "tokens_used": 168,
+      "latency_ms": 385.9066999866627,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-156",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "He took the photo at sunset.",
+      "ground_truth": "Nearby park",
+      "tokens_used": 151,
+      "latency_ms": 353.51830002036877,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-157",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "It has been really calming for him.",
+      "ground_truth": "Nature helps us appreciate life",
+      "tokens_used": 148,
+      "latency_ms": 370.0484000146389,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-158",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Calvin Harris",
+      "ground_truth": "",
+      "tokens_used": 142,
+      "latency_ms": 261.82700000936165,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-159",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 158,
+      "latency_ms": 310.4035999858752,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-160",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "None / Not mentioned.",
+      "ground_truth": "",
+      "tokens_used": 161,
+      "latency_ms": 345.89779999805614,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-161",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Cars",
+      "ground_truth": "",
+      "tokens_used": 169,
+      "latency_ms": 280.7698000106029,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-162",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "A photo",
+      "ground_truth": "",
+      "tokens_used": 170,
+      "latency_ms": 301.570100011304,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-163",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "His favorite Disney movie",
+      "ground_truth": "",
+      "tokens_used": 159,
+      "latency_ms": 331.4437000080943,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-164",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "A garage",
+      "ground_truth": "",
+      "tokens_used": 171,
+      "latency_ms": 303.0929999949876,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-165",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Fixing cars and making music",
+      "ground_truth": "",
+      "tokens_used": 146,
+      "latency_ms": 345.8004000131041,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-166",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Cycling",
+      "ground_truth": "",
+      "tokens_used": 146,
+      "latency_ms": 308.9876000012737,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-167",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "He describes it as an exciting process of self-discovery and growth.",
+      "ground_truth": "",
+      "tokens_used": 158,
+      "latency_ms": 399.98720001312904,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-168",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 136,
+      "latency_ms": 279.8624999995809,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-169",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Car mod workshop",
+      "ground_truth": "",
+      "tokens_used": 161,
+      "latency_ms": 301.0698999860324,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-170",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 178,
+      "latency_ms": 342.70660000038333,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-171",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "A car with a lot of work put into it.",
+      "ground_truth": "",
+      "tokens_used": 133,
+      "latency_ms": 678.6513999977615,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-172",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "A podcast discussing the rap industry",
+      "ground_truth": "",
+      "tokens_used": 164,
+      "latency_ms": 501.66139999055304,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-173",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 153,
+      "latency_ms": 320.8992000145372,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-174",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 135,
+      "latency_ms": 271.23320000828244,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-175",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 175,
+      "latency_ms": 348.3286999980919,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-176",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 129,
+      "latency_ms": 306.6654999856837,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-177",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "San Francisco",
+      "ground_truth": "",
+      "tokens_used": 157,
+      "latency_ms": 306.66530001326464,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-178",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Inspiration",
+      "ground_truth": "",
+      "tokens_used": 156,
+      "latency_ms": 319.5651000132784,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-179",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "He booked a flight ticket to Boston.",
+      "ground_truth": "",
+      "tokens_used": 163,
+      "latency_ms": 385.9596000111196,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-180",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "The Nightmare Before Christmas",
+      "ground_truth": "",
+      "tokens_used": 169,
+      "latency_ms": 347.8668000025209,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-181",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 155,
+      "latency_ms": 350.2280999964569,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-182",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Calvin's car",
+      "ground_truth": "",
+      "tokens_used": 133,
+      "latency_ms": 236.1279999895487,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-183",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 155,
+      "latency_ms": 303.8040999963414,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-184",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 165,
+      "latency_ms": 295.8863000094425,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-185",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "He aims to share his passion with others.",
+      "ground_truth": "",
+      "tokens_used": 171,
+      "latency_ms": 335.3277000132948,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-186",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "A new Ferrari",
+      "ground_truth": "",
+      "tokens_used": 147,
+      "latency_ms": 297.59020000346936,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-187",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Dave",
+      "ground_truth": "",
+      "tokens_used": 180,
+      "latency_ms": 289.23310001846403,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-188",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Shibuya",
+      "ground_truth": "",
+      "tokens_used": 128,
+      "latency_ms": 304.65259999618866,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-189",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Shinjuku",
+      "ground_truth": "",
+      "tokens_used": 193,
+      "latency_ms": 341.3871999946423,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-190",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 157,
+      "latency_ms": 325.20479999948293,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-191",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 177,
+      "latency_ms": 340.0885999726597,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-192",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "He realized the value of live music performances.",
+      "ground_truth": "",
+      "tokens_used": 140,
+      "latency_ms": 393.9698000031058,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-193",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "He joined a rock band and started practicing guitar.",
+      "ground_truth": "",
+      "tokens_used": 140,
+      "latency_ms": 402.93720000772737,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-194",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "He didn't start a blog; he started shooting a video for his new album.",
+      "ground_truth": "",
+      "tokens_used": 178,
+      "latency_ms": 502.65519999084063,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-195",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 150,
+      "latency_ms": 299.87919999985024,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-196",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Photography",
+      "ground_truth": "",
+      "tokens_used": 124,
+      "latency_ms": 268.60960002522916,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-197",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 158,
+      "latency_ms": 289.42250000545755,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-198",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "People are inspired to start their own DIY projects.",
+      "ground_truth": "",
+      "tokens_used": 156,
+      "latency_ms": 400.6484000128694,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-199",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "His old high school buddy",
+      "ground_truth": "",
+      "tokens_used": 143,
+      "latency_ms": 346.5959000168368,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-200",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "A new ride",
+      "ground_truth": "",
+      "tokens_used": 169,
+      "latency_ms": 283.1982999923639,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-201",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Photos of new talent in music",
+      "ground_truth": "",
+      "tokens_used": 142,
+      "latency_ms": 361.7989999765996,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-202",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "He discussed networking with other artists.",
+      "ground_truth": "",
+      "tokens_used": 142,
+      "latency_ms": 350.0585999863688,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-203",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 170,
+      "latency_ms": 315.7456000044476,
+      "is_correct": true
+    }
+  ]
+}

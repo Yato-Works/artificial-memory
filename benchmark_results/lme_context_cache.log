@@ -1,0 +1,27 @@
+loading dataset datasets/external/longmemeval_s_cleaned.json ...
+  500 items; compiling contexts (CPU only)
+  cached 25/500
+  cached 50/500
+  cached 75/500
+  cached 100/500
+  cached 125/500
+  cached 150/500
+  cached 175/500
+  cached 200/500
+  cached 225/500
+  cached 250/500
+  cached 275/500
+  cached 300/500
+  cached 325/500
+  cached 350/500
+  cached 375/500
+  cached 400/500
+  cached 425/500
+  cached 450/500
+  cached 475/500
+  cached 500/500
+
+cached 500 contexts -> benchmark_results\lme_context_cache.jsonl
+  mean tokens/Q : 3652.6
+  oracle recall : 98.2%
+  elapsed       : 851.4s (1.70s/Q)

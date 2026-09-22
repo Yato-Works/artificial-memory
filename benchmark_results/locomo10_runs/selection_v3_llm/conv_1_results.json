@@ -1,0 +1,1099 @@
+{
+  "summary": {
+    "conv_idx": 1,
+    "sample_id": "conv-30",
+    "mode": "full",
+    "total_questions": 105,
+    "total_turns": 369,
+    "total_ir_records": 369,
+    "overall_accuracy": 0.5523809523809524,
+    "overall_oracle_recall": 0.6571428571428571,
+    "factual_accuracy": 0.5523809523809524,
+    "factual_oracle_recall": 0.7530864197530864,
+    "mean_tokens": 1424.7047619047619,
+    "mean_latency_ms": 1548.983108570766,
+    "elapsed_seconds": 162.66433569999936,
+    "categories": {
+      "temporal": {
+        "total": 26,
+        "correct": 18,
+        "oracle": 23
+      },
+      "single-hop": {
+        "total": 44,
+        "correct": 34,
+        "oracle": 30
+      },
+      "multi-hop": {
+        "total": 11,
+        "correct": 4,
+        "oracle": 8
+      },
+      "adversarial": {
+        "total": 24,
+        "correct": 2,
+        "oracle": 8
+      }
+    },
+    "failure_taxonomy_v2": {
+      "COMPOSITION_FAILURE": 5,
+      "RETRIEVAL_FAILURE": 8,
+      "TEMPORAL_FAILURE": 8,
+      "GROUNDING_FAILURE": 1,
+      "VERIFICATION_FAILURE": 3,
+      "ABSTENTION_FAILURE": 22
+    }
+  },
+  "results": [
+    {
+      "question_id": "conv-30-qa-000",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "19 January 2023",
+      "ground_truth": "19 January, 2023",
+      "tokens_used": 1546,
+      "latency_ms": 1804.0351000090595,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-001",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "January 2023",
+      "ground_truth": "January, 2023",
+      "tokens_used": 1429,
+      "latency_ms": 1538.640500002657,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-002",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Jon likes to dance, Gina likes to dance.",
+      "ground_truth": "by dancing",
+      "tokens_used": 1516,
+      "latency_ms": 1682.7187000017148,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-003",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "They both have a passion for dance.",
+      "ground_truth": "They lost their jobs and decided to start their own businesses.",
+      "tokens_used": 1259,
+      "latency_ms": 1572.7543999964837,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-004",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Jon decided to start his dance studio because he wanted to share his passion for dancing with others.",
+      "ground_truth": "He lost his job and decided to start his own business to share his passion.",
+      "tokens_used": 1473,
+      "latency_ms": 1784.4493000011425,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-005",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Cozy and inviting",
+      "ground_truth": "By the water, with natural light and Marley flooring",
+      "tokens_used": 1586,
+      "latency_ms": 1587.923500002944,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-006",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "February 2023",
+      "ground_truth": "February, 2023",
+      "tokens_used": 1357,
+      "latency_ms": 1463.6335000104737,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-007",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "29 January, 2023",
+      "ground_truth": "29 January, 2023",
+      "tokens_used": 1437,
+      "latency_ms": 1611.703899994609,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-008",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "28 January 2023",
+      "ground_truth": "28 January 2023",
+      "tokens_used": 1336,
+      "latency_ms": 1483.544400005485,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-009",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "New York City",
+      "ground_truth": "Rome",
+      "tokens_used": 2251,
+      "latency_ms": 2121.4941999933217,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-010",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "8 February, 2023",
+      "ground_truth": "February, 2023",
+      "tokens_used": 1442,
+      "latency_ms": 1981.1288999917451,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-011",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "A few years ago",
+      "ground_truth": "A few years ago",
+      "tokens_used": 1438,
+      "latency_ms": 1444.3777999986196,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-012",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Last week before 16 March 2023",
+      "ground_truth": "March, 2023",
+      "tokens_used": 1401,
+      "latency_ms": 1493.5573999973712,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-013",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Not specified",
+      "ground_truth": "16 March, 2023",
+      "tokens_used": 1572,
+      "latency_ms": 1389.1115000005811,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-014",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "March 2023",
+      "ground_truth": "April, 2023",
+      "tokens_used": 1444,
+      "latency_ms": 1276.4093000005232,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-015",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "May 2023",
+      "ground_truth": "May, 2023",
+      "tokens_used": 1337,
+      "latency_ms": 1250.5396000051405,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-016",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "24 April, 2023",
+      "tokens_used": 1426,
+      "latency_ms": 1221.2045000051148,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-017",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "To take control of her own destiny after losing her job.",
+      "ground_truth": "She always loved fashion trends and finding unique pieces and she lost her job so decided it was time to start her own business.",
+      "tokens_used": 1556,
+      "latency_ms": 1384.6898000047076,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-018",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Yes, both Jon and Gina start businesses out of what they love. Jon loves dance and starting his own dance studio, while Gina loves dance and started her own dance studio and an online clothing store.",
+      "ground_truth": "Yes",
+      "tokens_used": 1440,
+      "latency_ms": 2175.3748999908566,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-019",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "10 May 2023",
+      "ground_truth": "10 May, 2023",
+      "tokens_used": 1334,
+      "latency_ms": 1487.6225999905728,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-020",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "10 May 2023",
+      "ground_truth": "27 May, 2023",
+      "tokens_used": 1463,
+      "latency_ms": 1459.9757000105456,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-021",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "D12:6 on 7:18 pm on 27 May, 2023",
+      "ground_truth": "May, 2023",
+      "tokens_used": 1378,
+      "latency_ms": 1762.7659999998286,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-022",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "8 February, 2023",
+      "ground_truth": "June, 2023",
+      "tokens_used": 1433,
+      "latency_ms": 1508.1095000059577,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-023",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "She launched an ad campaign.",
+      "ground_truth": "worked with an artist to make unique fashion pieces, made limited-edition sweatshirts, got some new offers and promotions for online store, developed a video presentation showing how to style her pieces",
+      "tokens_used": 1470,
+      "latency_ms": 1548.169899993809,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-024",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Attending networking events and going to a fair",
+      "ground_truth": "fair, networking events, dance competition",
+      "tokens_used": 1410,
+      "latency_ms": 1514.3420999957016,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-025",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Dance classes, workshops, one-on-one mentoring, and training.",
+      "ground_truth": "one-on-one metoring and training to dancers,  workshops and classes to local schools and centers",
+      "tokens_used": 1481,
+      "latency_ms": 1660.254200003692,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-026",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "16 March, 2023",
+      "ground_truth": "15 June, 2023",
+      "tokens_used": 1238,
+      "latency_ms": 1402.9659999941941,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-027",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Yes, both Jon and Gina participated in dance competitions.",
+      "ground_truth": "Yes",
+      "tokens_used": 1287,
+      "latency_ms": 1544.8846999934176,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-028",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "The week before 19 June 2023",
+      "ground_truth": "June 2023",
+      "tokens_used": 1293,
+      "latency_ms": 1438.5428999958094,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-029",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "New York City and Los Angeles",
+      "ground_truth": "Paris, Rome",
+      "tokens_used": 1248,
+      "latency_ms": 1364.7676999971736,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-030",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Tomorrow (20 June 2023)",
+      "ground_truth": "20 June, 2023",
+      "tokens_used": 1473,
+      "latency_ms": 1573.0916000029538,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-031",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "The exact time is not specified in the conversation.",
+      "ground_truth": "six months",
+      "tokens_used": 3108,
+      "latency_ms": 2919.587299998966,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-032",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "The week before 21 June 2023",
+      "ground_truth": "June 2023",
+      "tokens_used": 1396,
+      "latency_ms": 1753.3709999988787,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-033",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "June 20, 2023",
+      "ground_truth": "20 June, 2023",
+      "tokens_used": 1353,
+      "latency_ms": 1488.0093000101624,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-034",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Last week before 9 July 2023",
+      "ground_truth": "July 2023",
+      "tokens_used": 1407,
+      "latency_ms": 1520.924999989802,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-035",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Today",
+      "ground_truth": "July, 2023",
+      "tokens_used": 1360,
+      "latency_ms": 1376.4000999944983,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-036",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "21 July, 2023",
+      "ground_truth": "21 July 2023",
+      "tokens_used": 1362,
+      "latency_ms": 1449.1814999928465,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-037",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "6:46 pm on 23 July, 2023",
+      "ground_truth": " 23 July, 2023",
+      "tokens_used": 1236,
+      "latency_ms": 1499.6804999973392,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-038",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Last Friday before 23 July 2023",
+      "ground_truth": "21 July 2023",
+      "tokens_used": 1326,
+      "latency_ms": 1502.706399987801,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-039",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Not specified",
+      "ground_truth": "Contemporary",
+      "tokens_used": 1320,
+      "latency_ms": 1398.2997999992222,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-040",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Contemporary",
+      "ground_truth": "Contemporary",
+      "tokens_used": 1401,
+      "latency_ms": 1396.0946000006516,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-041",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Winning first place at a regionals at age fifteen.",
+      "ground_truth": "Winning first place at a regionals dance competition",
+      "tokens_used": 1338,
+      "latency_ms": 1590.3867000015453,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-042",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Contemporary",
+      "ground_truth": "\"Finding Freedom\"",
+      "tokens_used": 1310,
+      "latency_ms": 1305.181799994898,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-043",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Jon and Gina",
+      "ground_truth": "They are performing at the festival",
+      "tokens_used": 1477,
+      "latency_ms": 1514.6619000006467,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-044",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "They are so graceful.",
+      "ground_truth": "They look graceful",
+      "tokens_used": 1377,
+      "latency_ms": 1434.9598000117112,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-045",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Jon found the dance festival to be awesome and a great reminder of his passion for dancing.",
+      "ground_truth": "Glad",
+      "tokens_used": 1486,
+      "latency_ms": 1763.1005000002915,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-046",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Marley flooring",
+      "ground_truth": "Marley flooring",
+      "tokens_used": 1559,
+      "latency_ms": 1519.6103000052972,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-047",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A perfect spot for her store.",
+      "ground_truth": "The perfect spot for her store",
+      "tokens_used": 1382,
+      "latency_ms": 1528.4576999983983,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-048",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A cozy and inviting space with trendy pieces.",
+      "ground_truth": "the space, furniture, and decor",
+      "tokens_used": 1395,
+      "latency_ms": 1406.0337000119034,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-049",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Cozy and inviting",
+      "ground_truth": "cozy and comfortable",
+      "tokens_used": 1544,
+      "latency_ms": 1582.5579999946058,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-050",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Jon expressed admiration for Gina's progress with her store.",
+      "ground_truth": "hard work's paying off",
+      "tokens_used": 1427,
+      "latency_ms": 1764.6767999976873,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-051",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "To make the place look like her own style and make customers feel cozy.",
+      "ground_truth": "personal style and customer comfort",
+      "tokens_used": 1452,
+      "latency_ms": 1830.2965000038967,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-052",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Creating a special experience for customers is the key to making them feel welcome and coming back.",
+      "ground_truth": "It's the key to making them feel welcome and coming back",
+      "tokens_used": 1462,
+      "latency_ms": 1794.8342000017874,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-053",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Creating a special shopping experience for customers.",
+      "ground_truth": "making them want to come back",
+      "tokens_used": 1598,
+      "latency_ms": 1663.4387999947648,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-054",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Going good, keeping up with fashion trends.",
+      "ground_truth": "The store is doing great.",
+      "tokens_used": 1472,
+      "latency_ms": 1632.9212000127882,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-055",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Freedom - dancing without worrying what people think.",
+      "ground_truth": "Freedom and expressing herself through dance",
+      "tokens_used": 1364,
+      "latency_ms": 1485.9812000067905,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-056",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "A rollercoaster",
+      "ground_truth": "dancing together and supporting each other",
+      "tokens_used": 1311,
+      "latency_ms": 1404.8546999983955,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-057",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Don't be scared to reach out for help and contacts; networking is crucial. Stay positive, and focus on your big goal and why you started your business. Think of the big picture and why you're doing it, get help from your support system, and dance it out. Stay motivated by reminding yourself of your successes and progress. Have faith in yourself.",
+      "ground_truth": "build relationships with customers, create a strong brand image, stay positive",
+      "tokens_used": 1569,
+      "latency_ms": 2684.3642000021646,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-058",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "To start his own business.",
+      "ground_truth": "for his business",
+      "tokens_used": 1250,
+      "latency_ms": 1439.4777999987127,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-059",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "To show her creativity and share her love for both dance and fashion.",
+      "ground_truth": "she is passionate about dance and fashion",
+      "tokens_used": 1564,
+      "latency_ms": 1742.0356999937212,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-060",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "A stress-buster",
+      "ground_truth": "happy",
+      "tokens_used": 1406,
+      "latency_ms": 1433.5090999957174,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-061",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A trophy",
+      "ground_truth": "a trophy",
+      "tokens_used": 1308,
+      "latency_ms": 1402.432899994892,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-062",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "By reminding herself of her successes and progress.",
+      "ground_truth": "By reminding herself of her successes and progress, having a support system, and focusing on why she started",
+      "tokens_used": 1495,
+      "latency_ms": 1583.5843999957433,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-063",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Fashion internship",
+      "ground_truth": "fashion internship",
+      "tokens_used": 1428,
+      "latency_ms": 1408.828400002676,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-064",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Part-time position in the fashion department of an international company.",
+      "ground_truth": "fashion department of an international company",
+      "tokens_used": 1421,
+      "latency_ms": 1576.3071000110358,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-065",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "\"The Lean Startup\"",
+      "ground_truth": "The Lean Startup",
+      "tokens_used": 1303,
+      "latency_ms": 1384.7703999927035,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-066",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "One-on-one mentoring and training",
+      "ground_truth": "One-on-one mentoring and training",
+      "tokens_used": 1468,
+      "latency_ms": 1534.2010000022128,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-067",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "He uses it to stay on track, visualize goals, and tokenize successes.",
+      "ground_truth": "To set goals, track achievements, and find areas for improvement",
+      "tokens_used": 1329,
+      "latency_ms": 1635.9321000054479,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-068",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "He won't quit.",
+      "ground_truth": "quit",
+      "tokens_used": 1268,
+      "latency_ms": 1380.1511999918148,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-069",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "To clear his mind",
+      "ground_truth": "To clear his mind",
+      "tokens_used": 1358,
+      "latency_ms": 1345.7764000049792,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-070",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "A dance studio",
+      "ground_truth": "a dance studio",
+      "tokens_used": 1360,
+      "latency_ms": 1403.985199998715,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-071",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Jon's studio looks amazing and is a result of a lot of hard work.",
+      "ground_truth": "amazing",
+      "tokens_used": 1413,
+      "latency_ms": 1728.7053000036394,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-072",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Excited and determined.",
+      "ground_truth": "excited",
+      "tokens_used": 1462,
+      "latency_ms": 1687.354099994991,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-073",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A magical feeling",
+      "ground_truth": "magical",
+      "tokens_used": 1386,
+      "latency_ms": 1418.8200999924447,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-074",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Show off the dance studio's stuff",
+      "ground_truth": "savor all the good vibes",
+      "tokens_used": 1442,
+      "latency_ms": 1513.0422999936854,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-075",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Can't wait to make more memories at your dance studio!",
+      "ground_truth": "Let's live it up and make some great memories",
+      "tokens_used": 1286,
+      "latency_ms": 1362.519300004351,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-076",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Excitement and anticipation",
+      "ground_truth": "excitement",
+      "tokens_used": 1170,
+      "latency_ms": 1390.8563000004506,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-077",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A hoodie",
+      "ground_truth": "Hoodies",
+      "tokens_used": 1492,
+      "latency_ms": 1449.9847999977646,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-078",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Jon's positivity and determination.",
+      "ground_truth": "His positivity and determination",
+      "tokens_used": 1492,
+      "latency_ms": 1510.2914000017336,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-079",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "A temp job to help cover expenses while looking for investors.",
+      "ground_truth": "",
+      "tokens_used": 1359,
+      "latency_ms": 1631.350299998303,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-080",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Sprucing up his business plan, tweaking his pitch to investors, working on an online platform, and seeking marketing strategies.",
+      "ground_truth": "Sprucing up his business plan, tweaking his pitch to investors, and working on an online platform.",
+      "tokens_used": 1427,
+      "latency_ms": 1867.9853999929037,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-081",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "To help Jon with marketing strategies and possibly manage his social media accounts.",
+      "ground_truth": "Helping with making content and managing his social media accounts.",
+      "tokens_used": 1533,
+      "latency_ms": 1758.6416999984067,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-082",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 1272,
+      "latency_ms": 1451.0394999961136,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-083",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Winning first place at a regionals",
+      "ground_truth": "",
+      "tokens_used": 1559,
+      "latency_ms": 1454.7328000044217,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-084",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Contemporary",
+      "ground_truth": "",
+      "tokens_used": 1497,
+      "latency_ms": 1498.4366999997292,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-085",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "She is excited and supportive.",
+      "ground_truth": "",
+      "tokens_used": 1290,
+      "latency_ms": 1326.891799995792,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-086",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Marley flooring",
+      "ground_truth": "",
+      "tokens_used": 1380,
+      "latency_ms": 1156.8875999946613,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-087",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "A new fashion piece",
+      "ground_truth": "",
+      "tokens_used": 1360,
+      "latency_ms": 1391.6960999922594,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-088",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "A cozy and inviting space",
+      "ground_truth": "",
+      "tokens_used": 1358,
+      "latency_ms": 1422.1699000045191,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-089",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Cozy and comfortable",
+      "ground_truth": "",
+      "tokens_used": 1398,
+      "latency_ms": 1386.5179999993416,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-090",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Jon wanted to make the place look like his own style and make his customers feel cozy.",
+      "ground_truth": "",
+      "tokens_used": 1376,
+      "latency_ms": 1654.7238000057405,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-091",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Jon's store is doing great.",
+      "ground_truth": "",
+      "tokens_used": 1342,
+      "latency_ms": 1494.965100006084,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-092",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Freedom and dancing without worrying about what others think.",
+      "ground_truth": "",
+      "tokens_used": 1380,
+      "latency_ms": 1533.4370999917155,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-093",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "To fund her business.",
+      "ground_truth": "",
+      "tokens_used": 1375,
+      "latency_ms": 1469.7439999872586,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-094",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "To share his passion for dance and fashion.",
+      "ground_truth": "",
+      "tokens_used": 1453,
+      "latency_ms": 1483.3722000039415,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-095",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "A trophy",
+      "ground_truth": "",
+      "tokens_used": 1308,
+      "latency_ms": 1312.8571999986889,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-096",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "A fashion internship",
+      "ground_truth": "",
+      "tokens_used": 1334,
+      "latency_ms": 1351.8107999989297,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-097",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Unknown",
+      "ground_truth": "",
+      "tokens_used": 1239,
+      "latency_ms": 1351.1024999897927,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-098",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "The fashion department of an in-store location.",
+      "ground_truth": "",
+      "tokens_used": 1425,
+      "latency_ms": 1389.751199996681,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-099",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "\"The Lean Startup\"",
+      "ground_truth": "",
+      "tokens_used": 1335,
+      "latency_ms": 1510.257099987939,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-100",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "To write down goals and keep them motivated.",
+      "ground_truth": "",
+      "tokens_used": 1400,
+      "latency_ms": 1652.9448000073899,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-101",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Visiting his girlfriend.",
+      "ground_truth": "",
+      "tokens_used": 1356,
+      "latency_ms": 1483.7529999931576,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-102",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "A hoodie",
+      "ground_truth": "",
+      "tokens_used": 1363,
+      "latency_ms": 1383.6094999860507,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-103",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Online clothing store owner",
+      "ground_truth": "",
+      "tokens_used": 1358,
+      "latency_ms": 1402.9947000090033,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-104",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Tweaking her pitch to investors and working on an online platform.",
+      "ground_truth": "",
+      "tokens_used": 1470,
+      "latency_ms": 1745.6307000102242,
+      "is_correct": false
+    }
+  ]
+}

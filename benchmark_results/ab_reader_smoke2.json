@@ -1,0 +1,44 @@
+[
+ {
+  "model": "phi4-mini:latest",
+  "n": 3,
+  "totals": {
+   "ALL": [
+    3,
+    3
+   ],
+   "temporal": [
+    2,
+    2
+   ],
+   "open-domain": [
+    1,
+    1
+   ]
+  },
+  "oracle": 100.0,
+  "sec": 10.578551200014772,
+  "failures": []
+ },
+ {
+  "model": "qwen2.5:7b-instruct-q4_K_M",
+  "n": 3,
+  "totals": {
+   "ALL": [
+    3,
+    3
+   ],
+   "temporal": [
+    2,
+    2
+   ],
+   "open-domain": [
+    1,
+    1
+   ]
+  },
+  "oracle": 100.0,
+  "sec": 15.629559699998936,
+  "failures": []
+ }
+]

@@ -1,0 +1,4832 @@
+{
+ "baseline": {
+  "conv-26-qa-000": {
+   "correct": true,
+   "pred": "7 May 2023"
+  },
+  "conv-26-qa-001": {
+   "correct": true,
+   "pred": "Last year (2022)"
+  },
+  "conv-26-qa-003": {
+   "correct": true,
+   "pred": "Adoption agencies"
+  },
+  "conv-26-qa-004": {
+   "correct": true,
+   "pred": "Transgender"
+  },
+  "conv-26-qa-005": {
+   "correct": false,
+   "pred": "Saturday before 25 May 2023"
+  },
+  "conv-26-qa-006": {
+   "correct": true,
+   "pred": "Next month (June 2023)"
+  },
+  "conv-26-qa-007": {
+   "correct": false,
+   "pred": "Married"
+  },
+  "conv-26-qa-008": {
+   "correct": true,
+   "pred": "Last week before 9 June 2023"
+  },
+  "conv-26-qa-009": {
+   "correct": false,
+   "pred": "The week before 6 July 2023"
+  },
+  "conv-26-qa-010": {
+   "correct": true,
+   "pred": "Four years"
+  },
+  "conv-26-qa-011": {
+   "correct": true,
+   "pred": "Her home country, Sweden"
+  },
+  "conv-26-qa-012": {
+   "correct": true,
+   "pred": "10 years ago"
+  },
+  "conv-26-qa-013": {
+   "correct": true,
+   "pred": "Counseling or working in mental health"
+  },
+  "conv-26-qa-015": {
+   "correct": true,
+   "pred": "Pottery and painting"
+  },
+  "conv-26-qa-016": {
+   "correct": true,
+   "pred": "July 2, 2023"
+  },
+  "conv-26-qa-017": {
+   "correct": true,
+   "pred": "July 2023"
+  },
+  "conv-26-qa-018": {
+   "correct": true,
+   "pred": "The beach and the mountains"
+  },
+  "conv-26-qa-019": {
+   "correct": false,
+   "pred": "Getting their hands dirty and making something with clay"
+  },
+  "conv-26-qa-020": {
+   "correct": true,
+   "pred": "Yesterday (5 July 2023)"
+  },
+  "conv-26-qa-021": {
+   "correct": true,
+   "pred": "The week before 6 July 2023"
+  },
+  "conv-26-qa-023": {
+   "correct": true,
+   "pred": "\"Charlotte's Web\" and a book from 2022."
+  },
+  "conv-26-qa-024": {
+   "correct": true,
+   "pred": "Running and painting"
+  },
+  "conv-26-qa-025": {
+   "correct": true,
+   "pred": "10 July 2023"
+  },
+  "conv-26-qa-026": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-26-qa-028": {
+   "correct": true,
+   "pred": "Last Friday before 15 July 2023"
+  },
+  "conv-26-qa-029": {
+   "correct": false,
+   "pred": "Last Friday"
+  },
+  "conv-26-qa-031": {
+   "correct": false,
+   "pred": "June 2023"
+  },
+  "conv-26-qa-032": {
+   "correct": true,
+   "pred": "LGBTQ support group, school event, LGBTQ conference, pride event, LGBTQ+ counseling workshop."
+  },
+  "conv-26-qa-033": {
+   "correct": false,
+   "pred": "Last Friday before 14 August 2023"
+  },
+  "conv-26-qa-034": {
+   "correct": false,
+   "pred": "Adoption council meeting and planning a talent show for kids"
+  },
+  "conv-26-qa-035": {
+   "correct": false,
+   "pred": "July 15, 2023"
+  },
+  "conv-26-qa-036": {
+   "correct": true,
+   "pred": "The weekend before 17 July 2023"
+  },
+  "conv-26-qa-037": {
+   "correct": true,
+   "pred": "A painting inspired by sunsets"
+  },
+  "conv-26-qa-038": {
+   "correct": true,
+   "pred": "Camping and hiking in the mountains"
+  },
+  "conv-26-qa-039": {
+   "correct": true,
+   "pred": "Joining activist groups, volunteering, attending conferences, speaking at events, and creating art."
+  },
+  "conv-26-qa-040": {
+   "correct": true,
+   "pred": "2"
+  },
+  "conv-26-qa-041": {
+   "correct": false,
+   "pred": "Last Tuesday"
+  },
+  "conv-26-qa-043": {
+   "correct": false,
+   "pred": "Painting and pottery"
+  },
+  "conv-26-qa-044": {
+   "correct": false,
+   "pred": "The weekend before 17 July 2023"
+  },
+  "conv-26-qa-045": {
+   "correct": false,
+   "pred": "August 7, 2023"
+  },
+  "conv-26-qa-047": {
+   "correct": false,
+   "pred": "Melanie"
+  },
+  "conv-26-qa-048": {
+   "correct": false,
+   "pred": "Clay pots"
+  },
+  "conv-26-qa-049": {
+   "correct": false,
+   "pred": "June 2023"
+  },
+  "conv-26-qa-051": {
+   "correct": true,
+   "pred": "Lake sunrise, unity and strength painting, beach sunset, abstract painting, hand-painted bowl, painting for the art show, painting to show her path as a trans woman, nature-inspired paintings, painting landscapes and still life"
+  },
+  "conv-26-qa-052": {
+   "correct": true,
+   "pred": "Luna and Oliver"
+  },
+  "conv-26-qa-053": {
+   "correct": false,
+   "pred": "Last Friday before 25 May 2023"
+  },
+  "conv-26-qa-054": {
+   "correct": true,
+   "pred": "Last week before 23 August 2023"
+  },
+  "conv-26-qa-055": {
+   "correct": false,
+   "pred": "Abstract painting"
+  },
+  "conv-26-qa-056": {
+   "correct": true,
+   "pred": "Rainbow flag mural, eagle"
+  },
+  "conv-26-qa-057": {
+   "correct": true,
+   "pred": "The week before 25 August 2023"
+  },
+  "conv-26-qa-058": {
+   "correct": true,
+   "pred": "24 August 2023"
+  },
+  "conv-26-qa-060": {
+   "correct": true,
+   "pred": "Clarinet and violin"
+  },
+  "conv-26-qa-061": {
+   "correct": true,
+   "pred": "Summer Sounds"
+  },
+  "conv-26-qa-062": {
+   "correct": true,
+   "pred": "27 August 2023"
+  },
+  "conv-26-qa-063": {
+   "correct": true,
+   "pred": "September 2023"
+  },
+  "conv-26-qa-065": {
+   "correct": false,
+   "pred": "She has faced struggles but also developed a lot. She is happier being around those who accept and love her. Her relationships feel more genuine."
+  },
+  "conv-26-qa-066": {
+   "correct": false,
+   "pred": "Explores nature and connects with each other."
+  },
+  "conv-26-qa-067": {
+   "correct": true,
+   "pred": "The weekend before 13 September 2023"
+  },
+  "conv-26-qa-068": {
+   "correct": false,
+   "pred": "Seven years"
+  },
+  "conv-26-qa-070": {
+   "correct": true,
+   "pred": "Transgender conference"
+  },
+  "conv-26-qa-071": {
+   "correct": true,
+   "pred": "\"Becoming Nicole\" by Amy Ellis Nutt"
+  },
+  "conv-26-qa-072": {
+   "correct": true,
+   "pred": "Last year (2022)"
+  },
+  "conv-26-qa-073": {
+   "correct": true,
+   "pred": "September 2023"
+  },
+  "conv-26-qa-074": {
+   "correct": false,
+   "pred": "The past weekend"
+  },
+  "conv-26-qa-075": {
+   "correct": false,
+   "pred": "2"
+  },
+  "conv-26-qa-076": {
+   "correct": false,
+   "pred": "Two weekends ago"
+  },
+  "conv-26-qa-078": {
+   "correct": true,
+   "pred": "Figurines"
+  },
+  "conv-26-qa-079": {
+   "correct": true,
+   "pred": "Friday before 22 October 2023"
+  },
+  "conv-26-qa-080": {
+   "correct": true,
+   "pred": "21 October 2023"
+  },
+  "conv-30-qa-000": {
+   "correct": true,
+   "pred": "19 January 2023"
+  },
+  "conv-30-qa-001": {
+   "correct": true,
+   "pred": "January 2023"
+  },
+  "conv-30-qa-003": {
+   "correct": false,
+   "pred": "They both have a passion for dance."
+  },
+  "conv-30-qa-005": {
+   "correct": false,
+   "pred": "Cozy and inviting"
+  },
+  "conv-30-qa-006": {
+   "correct": true,
+   "pred": "February 2023"
+  },
+  "conv-30-qa-007": {
+   "correct": true,
+   "pred": "29 January, 2023"
+  },
+  "conv-30-qa-008": {
+   "correct": true,
+   "pred": "28 January 2023"
+  },
+  "conv-30-qa-009": {
+   "correct": false,
+   "pred": "None (not mentioned in conversation)."
+  },
+  "conv-30-qa-010": {
+   "correct": true,
+   "pred": "8 February, 2023"
+  },
+  "conv-30-qa-011": {
+   "correct": true,
+   "pred": "A few years ago"
+  },
+  "conv-30-qa-012": {
+   "correct": true,
+   "pred": "Last week before 16 March 2023"
+  },
+  "conv-30-qa-013": {
+   "correct": false,
+   "pred": "Not specified"
+  },
+  "conv-30-qa-014": {
+   "correct": false,
+   "pred": "March 2023"
+  },
+  "conv-30-qa-015": {
+   "correct": true,
+   "pred": "May 2023"
+  },
+  "conv-30-qa-016": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-30-qa-017": {
+   "correct": false,
+   "pred": "To take control of her own destiny after losing her job."
+  },
+  "conv-30-qa-018": {
+   "correct": true,
+   "pred": "Yes, both Jon and Gina start businesses out of what they love. Jon loves dance and starting his own dance studio, while Gina loves dance and started her own dance studio and an online clothing store."
+  },
+  "conv-30-qa-019": {
+   "correct": true,
+   "pred": "10 May 2023"
+  },
+  "conv-30-qa-020": {
+   "correct": false,
+   "pred": "10 May 2023"
+  },
+  "conv-30-qa-021": {
+   "correct": true,
+   "pred": "D12:6 on 7:18 pm on 27 May, 2023"
+  },
+  "conv-30-qa-022": {
+   "correct": false,
+   "pred": "8 February, 2023"
+  },
+  "conv-30-qa-023": {
+   "correct": false,
+   "pred": "She launched an ad campaign."
+  },
+  "conv-30-qa-024": {
+   "correct": true,
+   "pred": "Attending networking events and going to a fair"
+  },
+  "conv-30-qa-025": {
+   "correct": true,
+   "pred": "Dance classes, workshops, one-on-one mentoring, and training."
+  },
+  "conv-30-qa-026": {
+   "correct": false,
+   "pred": "16 March, 2023"
+  },
+  "conv-30-qa-027": {
+   "correct": true,
+   "pred": "Yes, both Jon and Gina participated in dance competitions."
+  },
+  "conv-30-qa-028": {
+   "correct": true,
+   "pred": "The week before 19 June 2023"
+  },
+  "conv-30-qa-029": {
+   "correct": false,
+   "pred": "New York City and Los Angeles"
+  },
+  "conv-30-qa-030": {
+   "correct": true,
+   "pred": "Tomorrow (20 June 2023)"
+  },
+  "conv-30-qa-031": {
+   "correct": false,
+   "pred": "The exact time is not specified in the conversation."
+  },
+  "conv-30-qa-032": {
+   "correct": true,
+   "pred": "The week before 21 June 2023"
+  },
+  "conv-30-qa-033": {
+   "correct": true,
+   "pred": "June 20, 2023"
+  },
+  "conv-30-qa-034": {
+   "correct": true,
+   "pred": "Last week before 9 July 2023"
+  },
+  "conv-30-qa-035": {
+   "correct": false,
+   "pred": "Today"
+  },
+  "conv-30-qa-036": {
+   "correct": true,
+   "pred": "21 July, 2023"
+  },
+  "conv-30-qa-037": {
+   "correct": true,
+   "pred": "6:46 pm on 23 July, 2023"
+  },
+  "conv-30-qa-038": {
+   "correct": false,
+   "pred": "Last Friday before 23 July 2023"
+  },
+  "conv-41-qa-000": {
+   "correct": false,
+   "pred": "John"
+  },
+  "conv-41-qa-001": {
+   "correct": true,
+   "pred": "21 December 2022"
+  },
+  "conv-41-qa-002": {
+   "correct": true,
+   "pred": "Kickboxing"
+  },
+  "conv-41-qa-003": {
+   "correct": true,
+   "pred": "Volunteering at a homeless shelter"
+  },
+  "conv-41-qa-004": {
+   "correct": true,
+   "pred": "Last week before 1 January 2023"
+  },
+  "conv-41-qa-005": {
+   "correct": true,
+   "pred": "December 2022"
+  },
+  "conv-41-qa-006": {
+   "correct": true,
+   "pred": "Volunteering at a homeless shelter"
+  },
+  "conv-41-qa-007": {
+   "correct": true,
+   "pred": "A little doll"
+  },
+  "conv-41-qa-009": {
+   "correct": true,
+   "pred": "Her auntie"
+  },
+  "conv-41-qa-010": {
+   "correct": true,
+   "pred": "24 February 2023"
+  },
+  "conv-41-qa-011": {
+   "correct": false,
+   "pred": "Veterans and homeless people."
+  },
+  "conv-41-qa-012": {
+   "correct": true,
+   "pred": "Military aptitude test"
+  },
+  "conv-41-qa-013": {
+   "correct": false,
+   "pred": "6 March 2023"
+  },
+  "conv-41-qa-015": {
+   "correct": true,
+   "pred": "Creative writing classes"
+  },
+  "conv-41-qa-016": {
+   "correct": true,
+   "pred": "Last week before 2 April 2023"
+  },
+  "conv-41-qa-018": {
+   "correct": false,
+   "pred": "A colleague"
+  },
+  "conv-41-qa-019": {
+   "correct": false,
+   "pred": "Potholes"
+  },
+  "conv-41-qa-020": {
+   "correct": true,
+   "pred": "Last year (2022)"
+  },
+  "conv-41-qa-021": {
+   "correct": true,
+   "pred": "East Coast"
+  },
+  "conv-41-qa-022": {
+   "correct": true,
+   "pred": "Last month (March 2023)"
+  },
+  "conv-41-qa-023": {
+   "correct": true,
+   "pred": "Peach cobbler and a banana split sundae"
+  },
+  "conv-41-qa-024": {
+   "correct": true,
+   "pred": "Last month (April 2023)"
+  },
+  "conv-41-qa-025": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-41-qa-026": {
+   "correct": true,
+   "pred": "Joined a nearby church and bought a cross necklace."
+  },
+  "conv-41-qa-027": {
+   "correct": true,
+   "pred": "Last Friday before 20 May 2023"
+  },
+  "conv-41-qa-028": {
+   "correct": true,
+   "pred": "Education and infrastructure improvement, veterans' rights, and community support."
+  },
+  "conv-41-qa-029": {
+   "correct": true,
+   "pred": "A ring-toss tournament"
+  },
+  "conv-41-qa-030": {
+   "correct": true,
+   "pred": "A homeless shelter"
+  },
+  "conv-41-qa-031": {
+   "correct": false,
+   "pred": "10 years ago"
+  },
+  "conv-41-qa-032": {
+   "correct": false,
+   "pred": "Attending a convention"
+  },
+  "conv-41-qa-033": {
+   "correct": true,
+   "pred": "Kundalini yoga and beginner yoga"
+  },
+  "conv-41-qa-034": {
+   "correct": true,
+   "pred": "Last week before 16 June 2023"
+  },
+  "conv-41-qa-035": {
+   "correct": true,
+   "pred": "Florida"
+  },
+  "conv-41-qa-036": {
+   "correct": true,
+   "pred": "A violin concert and a live music event."
+  },
+  "conv-41-qa-037": {
+   "correct": true,
+   "pred": "A marching event for veterans' rights and a 5K charity run for a homeless shelter."
+  },
+  "conv-41-qa-038": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-41-qa-040": {
+   "correct": true,
+   "pred": "Kyle"
+  },
+  "conv-41-qa-042": {
+   "correct": false,
+   "pred": "John's old area"
+  },
+  "conv-41-qa-043": {
+   "correct": true,
+   "pred": "The week before 7 July 2023"
+  },
+  "conv-41-qa-044": {
+   "correct": false,
+   "pred": "Camping, hiking, and attending a community event with arts and crafts"
+  },
+  "conv-41-qa-046": {
+   "correct": false,
+   "pred": "The weekend before 12 June 2023"
+  },
+  "conv-41-qa-047": {
+   "correct": false,
+   "pred": "Boot camps"
+  },
+  "conv-41-qa-048": {
+   "correct": false,
+   "pred": "last Sunday before 31 July 2023"
+  },
+  "conv-41-qa-049": {
+   "correct": false,
+   "pred": "Baked goods"
+  },
+  "conv-41-qa-051": {
+   "correct": false,
+   "pred": "About a year ago"
+  },
+  "conv-41-qa-052": {
+   "correct": true,
+   "pred": "Cindy and Laura"
+  },
+  "conv-41-qa-053": {
+   "correct": true,
+   "pred": "2022"
+  },
+  "conv-41-qa-054": {
+   "correct": true,
+   "pred": "Yesterday (4 August 2023)"
+  },
+  "conv-41-qa-055": {
+   "correct": true,
+   "pred": "Last week before 9 August 2023"
+  },
+  "conv-41-qa-056": {
+   "correct": false,
+   "pred": "The weekend before 7 April 2023"
+  },
+  "conv-41-qa-057": {
+   "correct": false,
+   "pred": "Domestic abuse, homelessness, veterans' rights, and education/infrastructure improvement."
+  },
+  "conv-41-qa-058": {
+   "correct": false,
+   "pred": "Two weeks ago from 11 August 2023"
+  },
+  "conv-41-qa-059": {
+   "correct": false,
+   "pred": "Last summer"
+  },
+  "conv-41-qa-060": {
+   "correct": true,
+   "pred": "Shadow and Coco"
+  },
+  "conv-41-qa-061": {
+   "correct": true,
+   "pred": "Last week before 13 August 2023"
+  },
+  "conv-41-qa-062": {
+   "correct": false,
+   "pred": "1"
+  },
+  "conv-41-qa-063": {
+   "correct": false,
+   "pred": "0 weeks"
+  },
+  "conv-41-qa-091": {
+   "correct": false,
+   "pred": "A violin concert"
+  },
+  "conv-42-qa-001": {
+   "correct": false,
+   "pred": "Video games and movies"
+  },
+  "conv-42-qa-002": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-42-qa-003": {
+   "correct": false,
+   "pred": "The week before 21 January 2022"
+  },
+  "conv-42-qa-005": {
+   "correct": false,
+   "pred": "Reading, watching movies, exploring nature, writing, playing video games, making ice cream"
+  },
+  "conv-42-qa-006": {
+   "correct": true,
+   "pred": "3 years"
+  },
+  "conv-42-qa-007": {
+   "correct": false,
+   "pred": "Last Friday before 23 January 2022"
+  },
+  "conv-42-qa-008": {
+   "correct": false,
+   "pred": "Nate did not specify when he got his first two turtles."
+  },
+  "conv-42-qa-009": {
+   "correct": false,
+   "pred": "Finished her first full screenplay."
+  },
+  "conv-42-qa-010": {
+   "correct": true,
+   "pred": "Excitement and anxiety"
+  },
+  "conv-42-qa-011": {
+   "correct": true,
+   "pred": "Most reptiles and animals with fur."
+  },
+  "conv-42-qa-013": {
+   "correct": true,
+   "pred": "23 March 2022"
+  },
+  "conv-42-qa-015": {
+   "correct": false,
+   "pred": "7:37 pm on 15 April, 2022"
+  },
+  "conv-42-qa-016": {
+   "correct": false,
+   "pred": "He dyed his hair."
+  },
+  "conv-42-qa-017": {
+   "correct": true,
+   "pred": "The Lord of the Rings Trilogy"
+  },
+  "conv-42-qa-018": {
+   "correct": false,
+   "pred": "Whispering Falls"
+  },
+  "conv-42-qa-019": {
+   "correct": false,
+   "pred": "None (not mentioned in conversation)."
+  },
+  "conv-42-qa-020": {
+   "correct": false,
+   "pred": "The conversation context does not contain the answer."
+  },
+  "conv-42-qa-021": {
+   "correct": true,
+   "pred": "Max"
+  },
+  "conv-42-qa-022": {
+   "correct": false,
+   "pred": "She didn't specify a date for starting her third screenplay."
+  },
+  "conv-42-qa-023": {
+   "correct": false,
+   "pred": "Both A and B"
+  },
+  "conv-42-qa-024": {
+   "correct": false,
+   "pred": "Two weekends later from the conversation on 5:44 pm on 3 June, 2022."
+  },
+  "conv-42-qa-025": {
+   "correct": false,
+   "pred": "This weekend"
+  },
+  "conv-42-qa-026": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-42-qa-027": {
+   "correct": true,
+   "pred": "Film festivals"
+  },
+  "conv-42-qa-028": {
+   "correct": false,
+   "pred": "The Friday before 24 June 2022"
+  },
+  "conv-42-qa-029": {
+   "correct": false,
+   "pred": "This weekend"
+  },
+  "conv-42-qa-030": {
+   "correct": false,
+   "pred": "Screenplays and movie scripts"
+  },
+  "conv-42-qa-031": {
+   "correct": false,
+   "pred": "Friday, before 10 July 2022"
+  },
+  "conv-42-qa-032": {
+   "correct": true,
+   "pred": "Woodhaven"
+  },
+  "conv-42-qa-033": {
+   "correct": false,
+   "pred": "Last week before 14 August 2022"
+  },
+  "conv-42-qa-034": {
+   "correct": true,
+   "pred": "A trilogy with adventures, magic, and great characters. A series with action scenes and a great plot. A suspenseful thriller set in a small Midwestern town. A series of fantasy books to read for relaxation. Little Women. A series of books with stories and sketches from the 1900s. An old book collection from Woodhaven. A bookmark for a lady at her writing club. An old notebook with early writings. A screenplay that she finished."
+  },
+  "conv-42-qa-035": {
+   "correct": false,
+   "pred": "22 August, 2022"
+  },
+  "conv-42-qa-036": {
+   "correct": false,
+   "pred": "The week before 22 August 2022"
+  },
+  "conv-42-qa-037": {
+   "correct": true,
+   "pred": "21 August 2022"
+  },
+  "conv-42-qa-038": {
+   "correct": false,
+   "pred": "Last Friday before 14 September 2022"
+  },
+  "conv-42-qa-039": {
+   "correct": false,
+   "pred": "Last Monday before 14 September 2022"
+  },
+  "conv-42-qa-040": {
+   "correct": false,
+   "pred": "The week before 14 September 2022"
+  },
+  "conv-42-qa-041": {
+   "correct": false,
+   "pred": "The exact date is not provided in the context."
+  },
+  "conv-42-qa-042": {
+   "correct": false,
+   "pred": "A few times"
+  },
+  "conv-42-qa-043": {
+   "correct": false,
+   "pred": "A few weeks"
+  },
+  "conv-42-qa-044": {
+   "correct": false,
+   "pred": "Last week before 6 October 2022"
+  },
+  "conv-42-qa-045": {
+   "correct": false,
+   "pred": "The week before 6 October 2022"
+  },
+  "conv-42-qa-046": {
+   "correct": true,
+   "pred": "Catan and Street Fighter"
+  },
+  "conv-42-qa-047": {
+   "correct": true,
+   "pred": "Game conventions and a cooking show"
+  },
+  "conv-42-qa-048": {
+   "correct": false,
+   "pred": "Last Friday before 9 October 2022"
+  },
+  "conv-42-qa-049": {
+   "correct": false,
+   "pred": "1"
+  },
+  "conv-42-qa-050": {
+   "correct": true,
+   "pred": "A stuffed animal dog named Tilly"
+  },
+  "conv-42-qa-051": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-42-qa-052": {
+   "correct": false,
+   "pred": "None (not mentioned in conversation)."
+  },
+  "conv-42-qa-053": {
+   "correct": false,
+   "pred": "1"
+  },
+  "conv-42-qa-054": {
+   "correct": false,
+   "pred": "Sunday before 25 October 2022"
+  },
+  "conv-42-qa-055": {
+   "correct": true,
+   "pred": "Personal experiences and her own journey of self-discovery."
+  },
+  "conv-42-qa-056": {
+   "correct": false,
+   "pred": "Animals"
+  },
+  "conv-42-qa-057": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-42-qa-058": {
+   "correct": false,
+   "pred": "Having pets and hanging out with friends"
+  },
+  "conv-42-qa-059": {
+   "correct": false,
+   "pred": "Joanna writes down her favorite memories."
+  },
+  "conv-42-qa-061": {
+   "correct": false,
+   "pred": "Video games and computer games"
+  },
+  "conv-42-qa-062": {
+   "correct": false,
+   "pred": "1"
+  },
+  "conv-42-qa-063": {
+   "correct": false,
+   "pred": "CS:GO, Street Fighter, Xeonoblade Chronicles"
+  },
+  "conv-42-qa-064": {
+   "correct": false,
+   "pred": "Last Saturday before 7 November 2022"
+  },
+  "conv-42-qa-065": {
+   "correct": true,
+   "pred": "Valorant tournament"
+  },
+  "conv-42-qa-067": {
+   "correct": true,
+   "pred": "Dogs and turtles"
+  },
+  "conv-42-qa-069": {
+   "correct": true,
+   "pred": "3"
+  },
+  "conv-42-qa-070": {
+   "correct": false,
+   "pred": "He takes them for walks and experiments with flavors."
+  },
+  "conv-42-qa-071": {
+   "correct": true,
+   "pred": "Nature"
+  },
+  "conv-42-qa-072": {
+   "correct": true,
+   "pred": "10 November 2022"
+  },
+  "conv-42-qa-074": {
+   "correct": false,
+   "pred": "A movie series with adventures, magic, and great characters. A screenplay that Joanna finished. A cookbook for making coconut milk ice cream. A cooking show about vegan ice cream."
+  },
+  "conv-42-qa-075": {
+   "correct": true,
+   "pred": "Coconut milk ice cream and dairy-free chocolate mousse"
+  },
+  "conv-42-qa-076": {
+   "correct": true,
+   "pred": "He taught people on his cooking show."
+  },
+  "conv-42-qa-077": {
+   "correct": true,
+   "pred": "The week before 2 May 2022"
+  },
+  "conv-42-qa-078": {
+   "correct": false,
+   "pred": "At least 4"
+  },
+  "conv-42-qa-079": {
+   "correct": false,
+   "pred": "2"
+  },
+  "conv-42-qa-080": {
+   "correct": false,
+   "pred": "4"
+  },
+  "conv-42-qa-081": {
+   "correct": true,
+   "pred": "Dairy-free chocolate cake with berries, coconut milk ice cream, and a gluten-free crust dessert"
+  },
+  "conv-42-qa-082": {
+   "correct": true,
+   "pred": "Coconut milk ice cream and dairy-free chocolate mousse"
+  },
+  "conv-42-qa-083": {
+   "correct": false,
+   "pred": "Using his gaming skills to make a difference."
+  },
+  "conv-42-qa-086": {
+   "correct": true,
+   "pred": "10 November 2022"
+  },
+  "conv-43-qa-000": {
+   "correct": true,
+   "pred": "To improve his shooting percentage and become a consistent performer on the court. Off the court, he aims to build his brand, get endorsements, and make a positive impact through charity work."
+  },
+  "conv-43-qa-001": {
+   "correct": false,
+   "pred": "Making a difference through charity and inspiring people."
+  },
+  "conv-43-qa-002": {
+   "correct": false,
+   "pred": "Sneaker collection and Harry Potter books"
+  },
+  "conv-43-qa-004": {
+   "correct": true,
+   "pred": "\"The Name of the Wind\" by Patrick Rothfuss, \"The Hobbit\", a popular fantasy series, Harry Potter, Game of Thrones, and a book about castles in the UK."
+  },
+  "conv-43-qa-006": {
+   "correct": true,
+   "pred": "June 2023"
+  },
+  "conv-43-qa-007": {
+   "correct": true,
+   "pred": "London and California"
+  },
+  "conv-43-qa-009": {
+   "correct": false,
+   "pred": "Nike and Gatorade"
+  },
+  "conv-43-qa-010": {
+   "correct": false,
+   "pred": "August 2023"
+  },
+  "conv-43-qa-011": {
+   "correct": false,
+   "pred": "He doesn't mention liking any sports besides basketball."
+  },
+  "conv-43-qa-012": {
+   "correct": true,
+   "pred": "Five years ago from 2023, which would be 2018."
+  },
+  "conv-43-qa-013": {
+   "correct": true,
+   "pred": "Reads fantasy books"
+  },
+  "conv-43-qa-014": {
+   "correct": true,
+   "pred": "Fantasy novels"
+  },
+  "conv-43-qa-016": {
+   "correct": false,
+   "pred": "2 weeks"
+  },
+  "conv-43-qa-017": {
+   "correct": false,
+   "pred": "2"
+  },
+  "conv-43-qa-018": {
+   "correct": true,
+   "pred": "J.K. Rowling, Patrick Rothfuss, and others not specifically named"
+  },
+  "conv-43-qa-020": {
+   "correct": false,
+   "pred": "New York City"
+  },
+  "conv-43-qa-021": {
+   "correct": true,
+   "pred": "Seattle and New York City"
+  },
+  "conv-43-qa-022": {
+   "correct": false,
+   "pred": "15th"
+  },
+  "conv-43-qa-023": {
+   "correct": true,
+   "pred": "Next month (September 2023)"
+  },
+  "conv-43-qa-024": {
+   "correct": false,
+   "pred": "He was on a trip."
+  },
+  "conv-43-qa-025": {
+   "correct": false,
+   "pred": "Harry Potter collectibles"
+  },
+  "conv-43-qa-026": {
+   "correct": true,
+   "pred": "\"The Wheel of Time\""
+  },
+  "conv-43-qa-029": {
+   "correct": true,
+   "pred": "4"
+  },
+  "conv-43-qa-030": {
+   "correct": true,
+   "pred": "Seattle and New York City"
+  },
+  "conv-43-qa-031": {
+   "correct": true,
+   "pred": "September 2023"
+  },
+  "conv-43-qa-033": {
+   "correct": true,
+   "pred": "Next month (October 2023)"
+  },
+  "conv-43-qa-035": {
+   "correct": true,
+   "pred": "Hiking and being outdoors"
+  },
+  "conv-43-qa-036": {
+   "correct": true,
+   "pred": "LeBron James"
+  },
+  "conv-43-qa-037": {
+   "correct": false,
+   "pred": "The week before 13 October 2023"
+  },
+  "conv-43-qa-038": {
+   "correct": false,
+   "pred": "Italy"
+  },
+  "conv-43-qa-039": {
+   "correct": true,
+   "pred": "2022"
+  },
+  "conv-43-qa-040": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-43-qa-041": {
+   "correct": false,
+   "pred": "Fantasy fiction"
+  },
+  "conv-43-qa-042": {
+   "correct": true,
+   "pred": "Honey garlic chicken with roasted veg"
+  },
+  "conv-43-qa-043": {
+   "correct": false,
+   "pred": "None (not mentioned in conversation)."
+  },
+  "conv-43-qa-044": {
+   "correct": false,
+   "pred": "Short but sweet."
+  },
+  "conv-43-qa-045": {
+   "correct": false,
+   "pred": "United Kingdom"
+  },
+  "conv-43-qa-046": {
+   "correct": true,
+   "pred": "He was in the UK."
+  },
+  "conv-43-qa-047": {
+   "correct": false,
+   "pred": "Last week (the week before 2 October 2023)"
+  },
+  "conv-43-qa-048": {
+   "correct": false,
+   "pred": "Last season"
+  },
+  "conv-43-qa-049": {
+   "correct": false,
+   "pred": "1"
+  },
+  "conv-43-qa-050": {
+   "correct": true,
+   "pred": "\"The Alchemist\""
+  },
+  "conv-43-qa-052": {
+   "correct": false,
+   "pred": "He signs up for Nike for a basketball shoe and gear deal and is in talks with Gatorade about a potential sponsorship."
+  },
+  "conv-43-qa-054": {
+   "correct": true,
+   "pred": "Last year (2022)"
+  },
+  "conv-43-qa-055": {
+   "correct": false,
+   "pred": "After college, he was drafted by a team."
+  },
+  "conv-43-qa-056": {
+   "correct": false,
+   "pred": "About four months ago"
+  },
+  "conv-43-qa-057": {
+   "correct": true,
+   "pred": "Violin and piano"
+  },
+  "conv-43-qa-058": {
+   "correct": false,
+   "pred": "Last August"
+  },
+  "conv-43-qa-059": {
+   "correct": false,
+   "pred": "Assists in a big game against a rival on the Friday before 11 December 2023"
+  },
+  "conv-43-qa-060": {
+   "correct": true,
+   "pred": "The Friday before 11 December 2023"
+  },
+  "conv-43-qa-061": {
+   "correct": false,
+   "pred": "\"The Alchemist\" and \"A Dance with Dragons\""
+  },
+  "conv-43-qa-062": {
+   "correct": true,
+   "pred": "Mentoring younger players on his team"
+  },
+  "conv-43-qa-063": {
+   "correct": false,
+   "pred": "Last summer"
+  },
+  "conv-43-qa-064": {
+   "correct": true,
+   "pred": "December 2023"
+  },
+  "conv-43-qa-065": {
+   "correct": true,
+   "pred": "Star Wars"
+  },
+  "conv-43-qa-068": {
+   "correct": false,
+   "pred": "February 2024"
+  },
+  "conv-43-qa-069": {
+   "correct": true,
+   "pred": "February 2024"
+  },
+  "conv-44-qa-000": {
+   "correct": false,
+   "pred": "2023"
+  },
+  "conv-44-qa-001": {
+   "correct": true,
+   "pred": "The week before 27 March 2023"
+  },
+  "conv-44-qa-002": {
+   "correct": false,
+   "pred": "Rock climbing classes"
+  },
+  "conv-44-qa-003": {
+   "correct": false,
+   "pred": "New cafes and parks"
+  },
+  "conv-44-qa-004": {
+   "correct": false,
+   "pred": "Last week before 16 April 2023"
+  },
+  "conv-44-qa-005": {
+   "correct": false,
+   "pred": "Last week before 3 May 2023"
+  },
+  "conv-44-qa-006": {
+   "correct": false,
+   "pred": "2 April, 2023"
+  },
+  "conv-44-qa-007": {
+   "correct": true,
+   "pred": "3 years"
+  },
+  "conv-44-qa-008": {
+   "correct": true,
+   "pred": "No, Andrew did not have a pet dog during March 2023."
+  },
+  "conv-44-qa-009": {
+   "correct": false,
+   "pred": "Dog training and owners group"
+  },
+  "conv-44-qa-010": {
+   "correct": false,
+   "pred": "11 May, 2023"
+  },
+  "conv-44-qa-011": {
+   "correct": false,
+   "pred": "Last Sunday before 13 June 2023"
+  },
+  "conv-44-qa-012": {
+   "correct": true,
+   "pred": "Rock climbing, kayaking, bungee jumping"
+  },
+  "conv-44-qa-013": {
+   "correct": true,
+   "pred": "June 26, 2023"
+  },
+  "conv-44-qa-014": {
+   "correct": false,
+   "pred": "The peace and feeling of freedom that comes with going for a hike."
+  },
+  "conv-44-qa-015": {
+   "correct": false,
+   "pred": "Finding dog-friendly housing in the city."
+  },
+  "conv-44-qa-016": {
+   "correct": false,
+   "pred": "Saturday"
+  },
+  "conv-44-qa-017": {
+   "correct": false,
+   "pred": "None (not mentioned in conversation)."
+  },
+  "conv-44-qa-018": {
+   "correct": false,
+   "pred": "None (not mentioned in conversation)."
+  },
+  "conv-44-qa-021": {
+   "correct": false,
+   "pred": "Dog grooming and bonding workshops"
+  },
+  "conv-44-qa-022": {
+   "correct": false,
+   "pred": "He went camping."
+  },
+  "conv-44-qa-023": {
+   "correct": false,
+   "pred": "Busy work schedule and feeling of confinement."
+  },
+  "conv-44-qa-024": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-44-qa-025": {
+   "correct": true,
+   "pred": "The weekend before 24 August 2023"
+  },
+  "conv-44-qa-026": {
+   "correct": true,
+   "pred": "Work stress"
+  },
+  "conv-44-qa-027": {
+   "correct": true,
+   "pred": "Tough and stressful"
+  },
+  "conv-44-qa-028": {
+   "correct": false,
+   "pred": "Collars and tags"
+  },
+  "conv-44-qa-029": {
+   "correct": true,
+   "pred": "Pepper, Precious, and Panda"
+  },
+  "conv-44-qa-030": {
+   "correct": true,
+   "pred": "November 2023"
+  },
+  "conv-44-qa-031": {
+   "correct": false,
+   "pred": "He has adopted another dog from a shelter."
+  },
+  "conv-44-qa-032": {
+   "correct": true,
+   "pred": "A tattoo of her four dogs"
+  },
+  "conv-44-qa-034": {
+   "correct": false,
+   "pred": "1 month"
+  },
+  "conv-44-qa-035": {
+   "correct": false,
+   "pred": "Andrew doesn't mention the names of his dogs in the provided conversation context."
+  },
+  "conv-44-qa-036": {
+   "correct": false,
+   "pred": "Sushi and healthy meals"
+  },
+  "conv-44-qa-037": {
+   "correct": false,
+   "pred": "Last Friday before 24 September 2023"
+  },
+  "conv-44-qa-038": {
+   "correct": true,
+   "pred": "The weekend before 24 October 2023"
+  },
+  "conv-44-qa-039": {
+   "correct": false,
+   "pred": "None (not mentioned in conversation)."
+  },
+  "conv-44-qa-040": {
+   "correct": true,
+   "pred": "A park or a dog owners group"
+  },
+  "conv-44-qa-041": {
+   "correct": false,
+   "pred": "Jack Russell mixes and Chihuahua mixes"
+  },
+  "conv-44-qa-042": {
+   "correct": true,
+   "pred": "Positive reinforcement"
+  },
+  "conv-44-qa-045": {
+   "correct": false,
+   "pred": "None (not mentioned in conversation)."
+  },
+  "conv-44-qa-046": {
+   "correct": false,
+   "pred": "2"
+  },
+  "conv-44-qa-047": {
+   "correct": true,
+   "pred": "1 month"
+  },
+  "conv-44-qa-048": {
+   "correct": true,
+   "pred": "Family"
+  },
+  "conv-44-qa-049": {
+   "correct": false,
+   "pred": "A source of joy and happiness"
+  },
+  "conv-44-qa-050": {
+   "correct": true,
+   "pred": "Grooming"
+  },
+  "conv-44-qa-051": {
+   "correct": true,
+   "pred": "Collars, tags, toys, personalized tags, and goodies for neighbors."
+  },
+  "conv-44-qa-054": {
+   "correct": true,
+   "pred": "Playing fetch and Frisbee"
+  },
+  "conv-44-qa-055": {
+   "correct": false,
+   "pred": "[D9:8 on 1:51 pm on 26 June, 2023]"
+  },
+  "conv-44-qa-056": {
+   "correct": true,
+   "pred": "No"
+  },
+  "conv-44-qa-057": {
+   "correct": false,
+   "pred": "Andrew adopted Scout after deciding on a name for his new pup, which was mentioned in the conversation on 9:02 am on 22 November, 2023. However, the exact date of the adoption is not specified in the provided context."
+  },
+  "conv-44-qa-058": {
+   "correct": false,
+   "pred": "None (not mentioned in conversation)."
+  },
+  "conv-44-qa-059": {
+   "correct": false,
+   "pred": "Andrew adopted his first pet in 2023."
+  },
+  "conv-44-qa-060": {
+   "correct": false,
+   "pred": "None (not mentioned in conversation)."
+  },
+  "conv-47-qa-001": {
+   "correct": true,
+   "pred": "Bowling"
+  },
+  "conv-47-qa-002": {
+   "correct": false,
+   "pred": "Starbucks and a beer somewhere"
+  },
+  "conv-47-qa-003": {
+   "correct": true,
+   "pred": "Yes, James has pets. John does not have pets."
+  },
+  "conv-47-qa-004": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-47-qa-005": {
+   "correct": true,
+   "pred": "John's favorite game is CS:GO, and James enjoys playing Apex Legends."
+  },
+  "conv-47-qa-008": {
+   "correct": false,
+   "pred": "2"
+  },
+  "conv-47-qa-009": {
+   "correct": true,
+   "pred": "Ned and his sister (name not provided)"
+  },
+  "conv-47-qa-010": {
+   "correct": false,
+   "pred": "Last week before 12 April 2022"
+  },
+  "conv-47-qa-011": {
+   "correct": false,
+   "pred": "Busy with work and stuff"
+  },
+  "conv-47-qa-013": {
+   "correct": true,
+   "pred": "2021"
+  },
+  "conv-47-qa-014": {
+   "correct": false,
+   "pred": "Three days ago from 29 April 2022"
+  },
+  "conv-47-qa-015": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-47-qa-018": {
+   "correct": true,
+   "pred": "\"The Stormlight Archive\" and \"Kingkiller Chronicle\""
+  },
+  "conv-47-qa-020": {
+   "correct": false,
+   "pred": "None (not mentioned in conversation)."
+  },
+  "conv-47-qa-021": {
+   "correct": true,
+   "pred": "7 May 2022"
+  },
+  "conv-47-qa-022": {
+   "correct": true,
+   "pred": "Children's hospital and charitable foundation"
+  },
+  "conv-47-qa-023": {
+   "correct": true,
+   "pred": "Next month (July 2022)"
+  },
+  "conv-47-qa-024": {
+   "correct": false,
+   "pred": "Video games"
+  },
+  "conv-47-qa-026": {
+   "correct": true,
+   "pred": "Italy, Turkey, and Mexico"
+  },
+  "conv-47-qa-027": {
+   "correct": false,
+   "pred": "Programming classes"
+  },
+  "conv-47-qa-028": {
+   "correct": true,
+   "pred": "May 2022"
+  },
+  "conv-47-qa-029": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-47-qa-031": {
+   "correct": false,
+   "pred": "None (not mentioned in conversation)."
+  },
+  "conv-47-qa-032": {
+   "correct": false,
+   "pred": "He was at work."
+  },
+  "conv-47-qa-034": {
+   "correct": true,
+   "pred": "Canada and Greenland"
+  },
+  "conv-47-qa-037": {
+   "correct": true,
+   "pred": "Yesterday (21 July 2022)"
+  },
+  "conv-47-qa-038": {
+   "correct": false,
+   "pred": "He got his dream job."
+  },
+  "conv-47-qa-039": {
+   "correct": false,
+   "pred": "3 years ago"
+  },
+  "conv-47-qa-040": {
+   "correct": true,
+   "pred": "Sit, stay, paw, and rollover"
+  },
+  "conv-47-qa-041": {
+   "correct": false,
+   "pred": "Yesterday (3 September 2022)"
+  },
+  "conv-47-qa-042": {
+   "correct": true,
+   "pred": "Yesterday (9 August 2022)"
+  },
+  "conv-47-qa-043": {
+   "correct": true,
+   "pred": "September 2022"
+  },
+  "conv-47-qa-045": {
+   "correct": true,
+   "pred": "Stout"
+  },
+  "conv-47-qa-046": {
+   "correct": true,
+   "pred": "They met at McGee's bar on 27 August 2022."
+  },
+  "conv-47-qa-047": {
+   "correct": true,
+   "pred": "3 September 2022"
+  },
+  "conv-47-qa-048": {
+   "correct": false,
+   "pred": "Next Sunday"
+  },
+  "conv-47-qa-049": {
+   "correct": true,
+   "pred": "New devices and a refurbished gaming desk. He also bought new gaming equipment and headphones."
+  },
+  "conv-47-qa-050": {
+   "correct": false,
+   "pred": "27 March 2022"
+  },
+  "conv-47-qa-051": {
+   "correct": true,
+   "pred": "AC Valhalla, FIFA 23, and an RPG that resembles a futuristic dystopia."
+  },
+  "conv-47-qa-052": {
+   "correct": false,
+   "pred": "Last Tuesday"
+  },
+  "conv-47-qa-053": {
+   "correct": false,
+   "pred": "A few months"
+  },
+  "conv-47-qa-054": {
+   "correct": false,
+   "pred": "Video game competitions"
+  },
+  "conv-47-qa-055": {
+   "correct": true,
+   "pred": "Last week before 13 October 2022"
+  },
+  "conv-47-qa-056": {
+   "correct": true,
+   "pred": "His sister"
+  },
+  "conv-47-qa-057": {
+   "correct": true,
+   "pred": "19 October 2022"
+  },
+  "conv-47-qa-058": {
+   "correct": true,
+   "pred": "Yesterday (20 October 2022)"
+  },
+  "conv-47-qa-059": {
+   "correct": false,
+   "pred": "The week before 13 October 2022"
+  },
+  "conv-47-qa-060": {
+   "correct": true,
+   "pred": "Fortnite, Overwatch, Apex Legends"
+  },
+  "conv-47-qa-061": {
+   "correct": false,
+   "pred": "He asked her to become his girlfriend."
+  },
+  "conv-47-qa-062": {
+   "correct": false,
+   "pred": "A few days"
+  },
+  "conv-47-qa-063": {
+   "correct": true,
+   "pred": "4 November 2022"
+  },
+  "conv-47-qa-064": {
+   "correct": false,
+   "pred": "He had been playing for a month before winning the chess tournament."
+  },
+  "conv-47-qa-065": {
+   "correct": false,
+   "pred": "Before starting their road trip on 4 November 2022."
+  },
+  "conv-47-qa-066": {
+   "correct": false,
+   "pred": "7 November, 2022"
+  },
+  "conv-48-qa-000": {
+   "correct": false,
+   "pred": "A yoga retreat"
+  },
+  "conv-48-qa-001": {
+   "correct": true,
+   "pred": "Her father"
+  },
+  "conv-48-qa-002": {
+   "correct": false,
+   "pred": "Deborah's mother passed away before 23 January 2023."
+  },
+  "conv-48-qa-003": {
+   "correct": true,
+   "pred": "2022"
+  },
+  "conv-48-qa-004": {
+   "correct": true,
+   "pred": "2010"
+  },
+  "conv-48-qa-006": {
+   "correct": true,
+   "pred": "Deborah has a pendant that reminds her of her mother, and Jolene has a necklace with a locket that holds a picture of her mother."
+  },
+  "conv-48-qa-007": {
+   "correct": false,
+   "pred": "Paris"
+  },
+  "conv-48-qa-008": {
+   "correct": false,
+   "pred": "Meditation, yoga, and spending time with loved ones"
+  },
+  "conv-48-qa-009": {
+   "correct": false,
+   "pred": "None (not mentioned in conversation)."
+  },
+  "conv-48-qa-010": {
+   "correct": true,
+   "pred": "1993"
+  },
+  "conv-48-qa-012": {
+   "correct": true,
+   "pred": "26 January 2023"
+  },
+  "conv-48-qa-013": {
+   "correct": true,
+   "pred": "A park with a forest trail, a beach, her old home, and a garden with roses and dahlias."
+  },
+  "conv-48-qa-014": {
+   "correct": false,
+   "pred": "Sitting by the window and taking in the view."
+  },
+  "conv-48-qa-017": {
+   "correct": true,
+   "pred": "Last year (2022)"
+  },
+  "conv-48-qa-019": {
+   "correct": false,
+   "pred": "None (not mentioned in conversation)."
+  },
+  "conv-48-qa-020": {
+   "correct": true,
+   "pred": "Detroit, Overcooked 2, It takes two, Walking Dead"
+  },
+  "conv-48-qa-021": {
+   "correct": false,
+   "pred": "Next Saturday"
+  },
+  "conv-48-qa-022": {
+   "correct": true,
+   "pred": "31 January 2023"
+  },
+  "conv-48-qa-024": {
+   "correct": true,
+   "pred": "Dancer Pose (Natarajasana) and Tree Pose"
+  },
+  "conv-48-qa-026": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-48-qa-027": {
+   "correct": false,
+   "pred": "Last summer"
+  },
+  "conv-48-qa-029": {
+   "correct": false,
+   "pred": "The week before 3 September 2023"
+  },
+  "conv-48-qa-030": {
+   "correct": false,
+   "pred": "4:12 pm on 22 February, 2023"
+  },
+  "conv-48-qa-031": {
+   "correct": false,
+   "pred": "Last summer"
+  },
+  "conv-48-qa-032": {
+   "correct": true,
+   "pred": "Last year (2022)"
+  },
+  "conv-48-qa-034": {
+   "correct": false,
+   "pred": "2022"
+  },
+  "conv-48-qa-035": {
+   "correct": true,
+   "pred": "Yesterday (24 February 2023)"
+  },
+  "conv-48-qa-037": {
+   "correct": true,
+   "pred": "Last Sunday before 2 March 2023"
+  },
+  "conv-48-qa-038": {
+   "correct": false,
+   "pred": "So much has been going on lately. I started this yoga class in the neighborhood - it's such a good feeling! Now I get to share the exercise with my neighbors and watch it really transform them. [D9:3 on 11:22 am on 13 March, 2023]"
+  },
+  "conv-48-qa-039": {
+   "correct": false,
+   "pred": "Deborah uses the Pomodoro Technique and creating a daily schedule or to-do list. Jolene uses the Pomodoro Technique and creating a daily schedule or to-do list."
+  },
+  "conv-48-qa-041": {
+   "correct": true,
+   "pred": "Using calming scents like lavender and rosemary, candles, essential oils, soft music, meditation, and connecting with nature."
+  },
+  "conv-48-qa-043": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-48-qa-044": {
+   "correct": false,
+   "pred": "Today"
+  },
+  "conv-48-qa-045": {
+   "correct": false,
+   "pred": "The week before 1 February 2023"
+  },
+  "conv-48-qa-046": {
+   "correct": false,
+   "pred": "The context does not contain the answer."
+  },
+  "conv-48-qa-047": {
+   "correct": true,
+   "pred": "5 June 2023"
+  },
+  "conv-48-qa-050": {
+   "correct": false,
+   "pred": "Not specified"
+  },
+  "conv-48-qa-051": {
+   "correct": false,
+   "pred": "The day before yesterday on 25 June 2023"
+  },
+  "conv-48-qa-052": {
+   "correct": false,
+   "pred": "The week before 1 August 2023"
+  },
+  "conv-48-qa-053": {
+   "correct": false,
+   "pred": "Two years ago"
+  },
+  "conv-48-qa-054": {
+   "correct": true,
+   "pred": "Susie"
+  },
+  "conv-48-qa-055": {
+   "correct": false,
+   "pred": "Susie"
+  },
+  "conv-48-qa-056": {
+   "correct": true,
+   "pred": "Last week before 16 August 2023"
+  },
+  "conv-48-qa-057": {
+   "correct": false,
+   "pred": "The week before 21 August 2023"
+  },
+  "conv-48-qa-060": {
+   "correct": true,
+   "pred": "Last week before 24 August 2023"
+  },
+  "conv-48-qa-065": {
+   "correct": true,
+   "pred": "Brazil"
+  },
+  "conv-48-qa-066": {
+   "correct": true,
+   "pred": "Yesterday (29 August 2023)"
+  },
+  "conv-48-qa-068": {
+   "correct": false,
+   "pred": "None (not mentioned in conversation)."
+  },
+  "conv-48-qa-071": {
+   "correct": false,
+   "pred": "Last Friday before 3 September 2023"
+  },
+  "conv-48-qa-073": {
+   "correct": true,
+   "pred": "Yes, Jolene taught herself how to play the console."
+  },
+  "conv-48-qa-076": {
+   "correct": true,
+   "pred": "The Friday before 17 September 2023"
+  },
+  "conv-48-qa-077": {
+   "correct": false,
+   "pred": "Deborah"
+  },
+  "conv-48-qa-078": {
+   "correct": true,
+   "pred": "A meditation retreat in Phuket"
+  },
+  "conv-48-qa-079": {
+   "correct": false,
+   "pred": "No, Deborah has not tried surfing."
+  },
+  "conv-48-qa-080": {
+   "correct": false,
+   "pred": "Yes, Jolene has tried surfing."
+  },
+  "conv-48-qa-081": {
+   "correct": false,
+   "pred": "None (not mentioned in conversation)."
+  },
+  "conv-48-qa-082": {
+   "correct": true,
+   "pred": "Various places, including a neighborhood yoga class and her mother's old house."
+  },
+  "conv-48-qa-083": {
+   "correct": false,
+   "pred": "Internships and presenting at conferences"
+  },
+  "conv-48-qa-084": {
+   "correct": false,
+   "pred": "Sustainable solutions and environmental initiatives"
+  },
+  "conv-48-qa-085": {
+   "correct": true,
+   "pred": "Running group, yoga, mindfulness workshops, and community cleanup project"
+  },
+  "conv-48-qa-086": {
+   "correct": false,
+   "pred": "A console for her partner and a pendant that reminds her of her mother."
+  },
+  "conv-48-qa-087": {
+   "correct": false,
+   "pred": "Bali and Rio de Janeiro"
+  },
+  "conv-48-qa-088": {
+   "correct": false,
+   "pred": "Meditating, jogging, spending time with loved ones, and teaching yoga."
+  },
+  "conv-49-qa-000": {
+   "correct": true,
+   "pred": "A Prius"
+  },
+  "conv-49-qa-001": {
+   "correct": true,
+   "pred": "His new Prius"
+  },
+  "conv-49-qa-002": {
+   "correct": true,
+   "pred": "Jasper and Banff"
+  },
+  "conv-49-qa-003": {
+   "correct": true,
+   "pred": "2"
+  },
+  "conv-49-qa-004": {
+   "correct": true,
+   "pred": "Painting"
+  },
+  "conv-49-qa-006": {
+   "correct": true,
+   "pred": "2"
+  },
+  "conv-49-qa-007": {
+   "correct": true,
+   "pred": "Painting and kayaking"
+  },
+  "conv-49-qa-008": {
+   "correct": true,
+   "pred": "Painting"
+  },
+  "conv-49-qa-009": {
+   "correct": true,
+   "pred": "Last weekend before 24 May 2023"
+  },
+  "conv-49-qa-011": {
+   "correct": false,
+   "pred": "A health scare"
+  },
+  "conv-49-qa-012": {
+   "correct": false,
+   "pred": "Monday before 27 July 2023"
+  },
+  "conv-49-qa-013": {
+   "correct": false,
+   "pred": "The week before 6 June 2023"
+  },
+  "conv-49-qa-014": {
+   "correct": true,
+   "pred": "Ginger snaps"
+  },
+  "conv-49-qa-015": {
+   "correct": true,
+   "pred": "Soda and candy"
+  },
+  "conv-49-qa-016": {
+   "correct": true,
+   "pred": "Self-checkout machines malfunctioning"
+  },
+  "conv-49-qa-017": {
+   "correct": true,
+   "pred": "The Friday before 27 July 2023"
+  },
+  "conv-49-qa-018": {
+   "correct": true,
+   "pred": "Low-impact exercises and healthy snacks like flavored seltzer with air-popped popcorn or fruit."
+  },
+  "conv-49-qa-021": {
+   "correct": false,
+   "pred": "He describes her as incredible and being with her makes him feel alive. He was in love with her at first sight."
+  },
+  "conv-49-qa-022": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-49-qa-023": {
+   "correct": true,
+   "pred": "28 July 2023"
+  },
+  "conv-49-qa-024": {
+   "correct": false,
+   "pred": "A health scare"
+  },
+  "conv-49-qa-025": {
+   "correct": false,
+   "pred": "2023"
+  },
+  "conv-49-qa-026": {
+   "correct": false,
+   "pred": "His family"
+  },
+  "conv-49-qa-028": {
+   "correct": true,
+   "pred": "Journal writing and creative writing"
+  },
+  "conv-49-qa-029": {
+   "correct": true,
+   "pred": "Evan met an awesome Canadian woman on his trip to Canada and came back with his new significant other."
+  },
+  "conv-49-qa-030": {
+   "correct": false,
+   "pred": "Canada"
+  },
+  "conv-49-qa-032": {
+   "correct": false,
+   "pred": "Being mocked for his weight"
+  },
+  "conv-49-qa-033": {
+   "correct": true,
+   "pred": "Flying over skyscrapers"
+  },
+  "conv-49-qa-034": {
+   "correct": false,
+   "pred": "A soccer accident and a bike accident."
+  },
+  "conv-49-qa-035": {
+   "correct": true,
+   "pred": "Last Saturday before 15 August 2023"
+  },
+  "conv-49-qa-036": {
+   "correct": true,
+   "pred": "Healthy meals and recipes, including a grilled chicken and veggie stir-fry and homemade cookies."
+  },
+  "conv-49-qa-037": {
+   "correct": false,
+   "pred": "Nutritious and healthier meals"
+  },
+  "conv-49-qa-039": {
+   "correct": false,
+   "pred": "1 month"
+  },
+  "conv-49-qa-040": {
+   "correct": false,
+   "pred": "A few days ago"
+  },
+  "conv-49-qa-041": {
+   "correct": true,
+   "pred": "Painting classes"
+  },
+  "conv-49-qa-042": {
+   "correct": false,
+   "pred": "His friend introduced him to it."
+  },
+  "conv-49-qa-044": {
+   "correct": true,
+   "pred": "Landscapes and nature"
+  },
+  "conv-49-qa-045": {
+   "correct": false,
+   "pred": "Canada"
+  },
+  "conv-49-qa-047": {
+   "correct": true,
+   "pred": "Last month (July 2023)"
+  },
+  "conv-49-qa-048": {
+   "correct": false,
+   "pred": "A nutritious diet and regular exercise"
+  },
+  "conv-49-qa-049": {
+   "correct": true,
+   "pred": "Evan"
+  },
+  "conv-49-qa-050": {
+   "correct": false,
+   "pred": "Painting and helping lost tourists"
+  },
+  "conv-49-qa-052": {
+   "correct": true,
+   "pred": "Painting session"
+  },
+  "conv-49-qa-053": {
+   "correct": false,
+   "pred": "Next Saturday"
+  },
+  "conv-49-qa-054": {
+   "correct": true,
+   "pred": "A sudden heart palpitation incident and a knee injury playing basketball with the kids."
+  },
+  "conv-49-qa-055": {
+   "correct": true,
+   "pred": "Helping lost tourists find their way"
+  },
+  "conv-49-qa-056": {
+   "correct": true,
+   "pred": "The navigation app keeps malfunctioning."
+  },
+  "conv-49-qa-058": {
+   "correct": false,
+   "pred": "One year ago"
+  },
+  "conv-49-qa-059": {
+   "correct": true,
+   "pred": "14 October 2023"
+  },
+  "conv-49-qa-060": {
+   "correct": false,
+   "pred": "Eating healthier"
+  },
+  "conv-49-qa-061": {
+   "correct": false,
+   "pred": "Work stress"
+  },
+  "conv-49-qa-062": {
+   "correct": false,
+   "pred": "Sam had a health scare that resulted in an ER visit due to severe gastritis, and Evan had a health scare that led to a hospital visit due to a suspicious finding during a check-up."
+  },
+  "conv-49-qa-063": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-49-qa-064": {
+   "correct": false,
+   "pred": "Health risks"
+  },
+  "conv-49-qa-066": {
+   "correct": false,
+   "pred": "October 2023"
+  },
+  "conv-49-qa-067": {
+   "correct": true,
+   "pred": "December 2023"
+  },
+  "conv-49-qa-068": {
+   "correct": false,
+   "pred": "Not specified"
+  },
+  "conv-49-qa-069": {
+   "correct": true,
+   "pred": "Getting pregnant and getting married"
+  },
+  "conv-49-qa-070": {
+   "correct": false,
+   "pred": "They got married last week, so they dated for less than a week."
+  },
+  "conv-49-qa-072": {
+   "correct": true,
+   "pred": "Hiking"
+  },
+  "conv-49-qa-073": {
+   "correct": false,
+   "pred": "Next summer"
+  },
+  "conv-49-qa-074": {
+   "correct": false,
+   "pred": "Last Tuesday before 17 December 2023"
+  },
+  "conv-49-qa-075": {
+   "correct": true,
+   "pred": "5 January 2024"
+  },
+  "conv-49-qa-076": {
+   "correct": false,
+   "pred": "June 2023"
+  },
+  "conv-49-qa-077": {
+   "correct": false,
+   "pred": "He spends time in places like this, bringing back memories of road tripping in his trusty car."
+  },
+  "conv-49-qa-078": {
+   "correct": false,
+   "pred": "His extended family"
+  },
+  "conv-49-qa-079": {
+   "correct": true,
+   "pred": "February 2024"
+  },
+  "conv-49-qa-080": {
+   "correct": false,
+   "pred": "December 31, 2023"
+  },
+  "conv-49-qa-081": {
+   "correct": false,
+   "pred": "Painting"
+  },
+  "conv-49-qa-082": {
+   "correct": false,
+   "pred": "Painting"
+  },
+  "conv-50-qa-000": {
+   "correct": false,
+   "pred": "April 20, 2023"
+  },
+  "conv-50-qa-001": {
+   "correct": true,
+   "pred": "A mansion and a luxury car"
+  },
+  "conv-50-qa-002": {
+   "correct": false,
+   "pred": "26 March, 2023"
+  },
+  "conv-50-qa-003": {
+   "correct": true,
+   "pred": "Aerosmith"
+  },
+  "conv-50-qa-005": {
+   "correct": true,
+   "pred": "To open a car maintenance shop and work on classic cars."
+  },
+  "conv-50-qa-006": {
+   "correct": true,
+   "pred": "Classic cars"
+  },
+  "conv-50-qa-008": {
+   "correct": false,
+   "pred": "Last week before 16 May 2023"
+  },
+  "conv-50-qa-009": {
+   "correct": true,
+   "pred": "Last week before 16 May 2023"
+  },
+  "conv-50-qa-010": {
+   "correct": true,
+   "pred": "Last week before 16 May 2023"
+  },
+  "conv-50-qa-011": {
+   "correct": false,
+   "pred": "A flooded place"
+  },
+  "conv-50-qa-012": {
+   "correct": false,
+   "pred": "The week before 31 May 2023"
+  },
+  "conv-50-qa-014": {
+   "correct": true,
+   "pred": "Yesterday (8 June 2023)"
+  },
+  "conv-50-qa-015": {
+   "correct": true,
+   "pred": "To relax and recharge"
+  },
+  "conv-50-qa-016": {
+   "correct": true,
+   "pred": "July 2023"
+  },
+  "conv-50-qa-017": {
+   "correct": true,
+   "pred": "Last Friday (the Friday before 21 June 2023)"
+  },
+  "conv-50-qa-018": {
+   "correct": false,
+   "pred": "1"
+  },
+  "conv-50-qa-019": {
+   "correct": false,
+   "pred": "A music festival and a concert"
+  },
+  "conv-50-qa-020": {
+   "correct": false,
+   "pred": "An old car in a neighbor's garage"
+  },
+  "conv-50-qa-022": {
+   "correct": true,
+   "pred": "Yes, Calvin wants to expand his brand."
+  },
+  "conv-50-qa-023": {
+   "correct": false,
+   "pred": "Fixing cars"
+  },
+  "conv-50-qa-024": {
+   "correct": true,
+   "pred": "Yes, Dave can work with engines."
+  },
+  "conv-50-qa-025": {
+   "correct": true,
+   "pred": "Last Friday before 22 August 2023"
+  },
+  "conv-50-qa-026": {
+   "correct": true,
+   "pred": "Yesterday (21 August 2023)"
+  },
+  "conv-50-qa-027": {
+   "correct": false,
+   "pred": "Boston"
+  },
+  "conv-50-qa-028": {
+   "correct": true,
+   "pred": "Long drives in his car"
+  },
+  "conv-50-qa-029": {
+   "correct": false,
+   "pred": "Hanging out with friends at parks and arranging regular walks with friends."
+  },
+  "conv-50-qa-030": {
+   "correct": false,
+   "pred": "Vinyl records"
+  },
+  "conv-50-qa-031": {
+   "correct": true,
+   "pred": "He was in San Francisco."
+  },
+  "conv-50-qa-032": {
+   "correct": true,
+   "pred": "San Francisco"
+  },
+  "conv-50-qa-033": {
+   "correct": true,
+   "pred": "Attending a car workshop"
+  },
+  "conv-50-qa-034": {
+   "correct": true,
+   "pred": "1 September 2023"
+  },
+  "conv-50-qa-035": {
+   "correct": false,
+   "pred": "Last week before 2 September 2023"
+  },
+  "conv-50-qa-036": {
+   "correct": false,
+   "pred": "11th September 2023"
+  },
+  "conv-50-qa-038": {
+   "correct": false,
+   "pred": "Last night"
+  },
+  "conv-50-qa-040": {
+   "correct": true,
+   "pred": "Tupac and Dr. Dre's \"California Love\""
+  },
+  "conv-50-qa-041": {
+   "correct": true,
+   "pred": "Dave's dad"
+  },
+  "conv-50-qa-043": {
+   "correct": true,
+   "pred": "Boston"
+  },
+  "conv-50-qa-044": {
+   "correct": true,
+   "pred": "3 October 2023"
+  },
+  "conv-50-qa-045": {
+   "correct": false,
+   "pred": "Listening to music and jam sessions"
+  },
+  "conv-50-qa-046": {
+   "correct": true,
+   "pred": "Working on cars"
+  },
+  "conv-50-qa-047": {
+   "correct": false,
+   "pred": "At least 3"
+  },
+  "conv-50-qa-048": {
+   "correct": false,
+   "pred": "Attending a music festival in Boston"
+  },
+  "conv-50-qa-049": {
+   "correct": false,
+   "pred": "They spent one summer restoring an old car."
+  },
+  "conv-50-qa-050": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-50-qa-051": {
+   "correct": true,
+   "pred": "August 2022"
+  },
+  "conv-50-qa-052": {
+   "correct": false,
+   "pred": "He didn't specify a second trip to Tokyo."
+  },
+  "conv-50-qa-053": {
+   "correct": false,
+   "pred": "Dave"
+  },
+  "conv-50-qa-054": {
+   "correct": false,
+   "pred": "Writing lyrics and notes"
+  },
+  "conv-50-qa-055": {
+   "correct": true,
+   "pred": "24 October 2023"
+  },
+  "conv-50-qa-056": {
+   "correct": false,
+   "pred": "Tokyo and Boston"
+  },
+  "conv-50-qa-057": {
+   "correct": true,
+   "pred": "Photography"
+  },
+  "conv-50-qa-058": {
+   "correct": false,
+   "pred": "His first car show at age 10 and his father's influence."
+  },
+  "conv-50-qa-059": {
+   "correct": false,
+   "pred": "None (not mentioned in conversation)."
+  },
+  "conv-50-qa-060": {
+   "correct": true,
+   "pred": "A custom-made guitar and a necklace"
+  },
+  "conv-50-qa-061": {
+   "correct": false,
+   "pred": "Not specified"
+  },
+  "conv-50-qa-062": {
+   "correct": false,
+   "pred": "The context does not contain the answer."
+  },
+  "conv-50-qa-063": {
+   "correct": false,
+   "pred": "Custom guitars"
+  },
+  "conv-50-qa-064": {
+   "correct": false,
+   "pred": "Card night, recording a podcast, regular walks in the park, road trips, joining a rock band, attending a car show, and speaking with classic car owners."
+  },
+  "conv-50-qa-065": {
+   "correct": false,
+   "pred": "At sunset, as mentioned in the conversation on 27:7 on 10:49 am on 29 October, 2023."
+  },
+  "conv-50-qa-066": {
+   "correct": true,
+   "pred": "No, not all of Dave's car restoration projects go smoothly."
+  },
+  "conv-50-qa-067": {
+   "correct": true,
+   "pred": "Tokyo"
+  },
+  "conv-50-qa-068": {
+   "correct": false,
+   "pred": "A neighbor's garage"
+  },
+  "conv-50-qa-069": {
+   "correct": true,
+   "pred": "November 2023"
+  },
+  "conv-50-qa-070": {
+   "correct": true,
+   "pred": "16 November 2023"
+  }
+ },
+ "temporal_v1": {
+  "conv-26-qa-000": {
+   "correct": false,
+   "pred": "July 7, 2023"
+  },
+  "conv-26-qa-001": {
+   "correct": true,
+   "pred": "Last year (2022)"
+  },
+  "conv-26-qa-005": {
+   "correct": false,
+   "pred": "The Saturday before 25 May 2023"
+  },
+  "conv-26-qa-006": {
+   "correct": true,
+   "pred": "June 2023"
+  },
+  "conv-26-qa-008": {
+   "correct": true,
+   "pred": "The week before June 9, 2023"
+  },
+  "conv-26-qa-009": {
+   "correct": false,
+   "pred": "The week before 6 July 2023"
+  },
+  "conv-26-qa-010": {
+   "correct": true,
+   "pred": "Four years"
+  },
+  "conv-26-qa-012": {
+   "correct": true,
+   "pred": "10 years ago"
+  },
+  "conv-26-qa-016": {
+   "correct": true,
+   "pred": "July 2, 2023"
+  },
+  "conv-26-qa-017": {
+   "correct": true,
+   "pred": "July 2023"
+  },
+  "conv-26-qa-020": {
+   "correct": false,
+   "pred": "May 7, 2023"
+  },
+  "conv-26-qa-021": {
+   "correct": true,
+   "pred": "The week before 6 July 2023"
+  },
+  "conv-26-qa-025": {
+   "correct": true,
+   "pred": "10 July 2023"
+  },
+  "conv-26-qa-026": {
+   "correct": true,
+   "pred": "2022"
+  },
+  "conv-26-qa-028": {
+   "correct": true,
+   "pred": "The Friday before July 15, 2023"
+  },
+  "conv-26-qa-029": {
+   "correct": false,
+   "pred": "Last Friday"
+  },
+  "conv-26-qa-031": {
+   "correct": false,
+   "pred": "June 2023"
+  },
+  "conv-26-qa-033": {
+   "correct": false,
+   "pred": "Last Friday before 14 August 2023"
+  },
+  "conv-26-qa-035": {
+   "correct": false,
+   "pred": "July 15, 2023"
+  },
+  "conv-26-qa-036": {
+   "correct": true,
+   "pred": "The weekend before July 17, 2023"
+  },
+  "conv-26-qa-041": {
+   "correct": false,
+   "pred": "July 7, 2023"
+  },
+  "conv-26-qa-044": {
+   "correct": false,
+   "pred": "The context does not contain the answer."
+  },
+  "conv-26-qa-045": {
+   "correct": true,
+   "pred": "The Friday before August 14, 2023"
+  },
+  "conv-26-qa-049": {
+   "correct": false,
+   "pred": "June 2023"
+  },
+  "conv-26-qa-053": {
+   "correct": false,
+   "pred": "23 August, 2023"
+  },
+  "conv-26-qa-054": {
+   "correct": true,
+   "pred": "The week before 23 August 2023"
+  },
+  "conv-26-qa-057": {
+   "correct": true,
+   "pred": "The week before 25 August, 2023"
+  },
+  "conv-26-qa-058": {
+   "correct": false,
+   "pred": "May 7, 2022"
+  },
+  "conv-26-qa-062": {
+   "correct": true,
+   "pred": "27 August 2023"
+  },
+  "conv-26-qa-063": {
+   "correct": true,
+   "pred": "September 2023"
+  },
+  "conv-26-qa-067": {
+   "correct": true,
+   "pred": "The weekend before 13 September 2023"
+  },
+  "conv-26-qa-068": {
+   "correct": false,
+   "pred": "Seven years"
+  },
+  "conv-26-qa-072": {
+   "correct": true,
+   "pred": "Last year (2022)"
+  },
+  "conv-26-qa-073": {
+   "correct": true,
+   "pred": "September 2023"
+  },
+  "conv-26-qa-074": {
+   "correct": true,
+   "pred": "The past weekend before 20 October, 2023"
+  },
+  "conv-26-qa-079": {
+   "correct": true,
+   "pred": "The Friday before October 22, 2023"
+  },
+  "conv-26-qa-080": {
+   "correct": true,
+   "pred": "21 October 2023"
+  },
+  "conv-30-qa-000": {
+   "correct": true,
+   "pred": "19 January 2023"
+  },
+  "conv-30-qa-001": {
+   "correct": true,
+   "pred": "January 2023"
+  },
+  "conv-30-qa-006": {
+   "correct": true,
+   "pred": "February 2023"
+  },
+  "conv-30-qa-007": {
+   "correct": true,
+   "pred": "29 January, 2023"
+  },
+  "conv-30-qa-008": {
+   "correct": true,
+   "pred": "28 January 2023"
+  },
+  "conv-30-qa-010": {
+   "correct": false,
+   "pred": "May 2023"
+  },
+  "conv-30-qa-011": {
+   "correct": true,
+   "pred": "A few years ago"
+  },
+  "conv-30-qa-012": {
+   "correct": true,
+   "pred": "The week before March 16, 2023"
+  },
+  "conv-30-qa-013": {
+   "correct": false,
+   "pred": "Not specified"
+  },
+  "conv-30-qa-014": {
+   "correct": false,
+   "pred": "March 2023"
+  },
+  "conv-30-qa-015": {
+   "correct": true,
+   "pred": "May 2023"
+  },
+  "conv-30-qa-016": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-30-qa-019": {
+   "correct": true,
+   "pred": "10 May 2023"
+  },
+  "conv-30-qa-020": {
+   "correct": false,
+   "pred": "10 May 2023"
+  },
+  "conv-30-qa-021": {
+   "correct": true,
+   "pred": "D12:6 on 7:18 pm on 27 May, 2023"
+  },
+  "conv-30-qa-022": {
+   "correct": true,
+   "pred": "13 June, 2023"
+  },
+  "conv-30-qa-026": {
+   "correct": false,
+   "pred": "[No specific mentorship mentioned in the context]"
+  },
+  "conv-30-qa-028": {
+   "correct": true,
+   "pred": "The week before June 19, 2023"
+  },
+  "conv-30-qa-030": {
+   "correct": false,
+   "pred": "June 2023"
+  },
+  "conv-30-qa-032": {
+   "correct": true,
+   "pred": "The week before June 21, 2023"
+  },
+  "conv-30-qa-033": {
+   "correct": true,
+   "pred": "June 20, 2023"
+  },
+  "conv-30-qa-034": {
+   "correct": true,
+   "pred": "The week before July 9, 2023"
+  },
+  "conv-30-qa-035": {
+   "correct": true,
+   "pred": "July 9, 2023"
+  },
+  "conv-30-qa-036": {
+   "correct": true,
+   "pred": "21 July, 2023"
+  },
+  "conv-30-qa-037": {
+   "correct": true,
+   "pred": "23 July, 2023"
+  },
+  "conv-30-qa-038": {
+   "correct": false,
+   "pred": "The Friday before July 23, 2023"
+  },
+  "conv-41-qa-000": {
+   "correct": false,
+   "pred": "John"
+  },
+  "conv-41-qa-001": {
+   "correct": true,
+   "pred": "21 December 2022"
+  },
+  "conv-41-qa-004": {
+   "correct": true,
+   "pred": "The week before 1 January 2023"
+  },
+  "conv-41-qa-005": {
+   "correct": true,
+   "pred": "December 2022"
+  },
+  "conv-41-qa-010": {
+   "correct": true,
+   "pred": "24 February 2023"
+  },
+  "conv-41-qa-013": {
+   "correct": true,
+   "pred": "The week before 6 March 2023"
+  },
+  "conv-41-qa-016": {
+   "correct": true,
+   "pred": "The week before 2 April 2023"
+  },
+  "conv-41-qa-020": {
+   "correct": true,
+   "pred": "Last year (2022)"
+  },
+  "conv-41-qa-022": {
+   "correct": true,
+   "pred": "March 2023"
+  },
+  "conv-41-qa-024": {
+   "correct": true,
+   "pred": "April 2023"
+  },
+  "conv-41-qa-027": {
+   "correct": false,
+   "pred": "May 7, 2022"
+  },
+  "conv-41-qa-031": {
+   "correct": false,
+   "pred": "John got his dog Max 10 years ago."
+  },
+  "conv-41-qa-034": {
+   "correct": true,
+   "pred": "The week before 16 June 2023"
+  },
+  "conv-41-qa-038": {
+   "correct": false,
+   "pred": "April 2023"
+  },
+  "conv-41-qa-043": {
+   "correct": true,
+   "pred": "The week before 7 July 2023"
+  },
+  "conv-41-qa-046": {
+   "correct": true,
+   "pred": "The weekend before 22 July 2023"
+  },
+  "conv-41-qa-048": {
+   "correct": false,
+   "pred": "The Sunday before 31 July 2023"
+  },
+  "conv-41-qa-051": {
+   "correct": false,
+   "pred": "About a year ago from the last update on 3 August 2023."
+  },
+  "conv-41-qa-053": {
+   "correct": true,
+   "pred": "2022"
+  },
+  "conv-41-qa-054": {
+   "correct": false,
+   "pred": "May 7, 2023"
+  },
+  "conv-41-qa-055": {
+   "correct": true,
+   "pred": "The week before 9 August 2023"
+  },
+  "conv-41-qa-056": {
+   "correct": false,
+   "pred": "The weekend before 7 April 2023"
+  },
+  "conv-41-qa-058": {
+   "correct": false,
+   "pred": "Two weeks ago from August 11, 2023."
+  },
+  "conv-41-qa-059": {
+   "correct": false,
+   "pred": "Last summer"
+  },
+  "conv-41-qa-061": {
+   "correct": true,
+   "pred": "The week before 13 August 2023"
+  },
+  "conv-41-qa-063": {
+   "correct": false,
+   "pred": "0 weeks"
+  },
+  "conv-41-qa-091": {
+   "correct": false,
+   "pred": "A picnic in the park"
+  },
+  "conv-42-qa-002": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-42-qa-003": {
+   "correct": false,
+   "pred": "The week before January 21, 2022"
+  },
+  "conv-42-qa-006": {
+   "correct": true,
+   "pred": "3 years"
+  },
+  "conv-42-qa-007": {
+   "correct": false,
+   "pred": "The Friday before January 23, 2022"
+  },
+  "conv-42-qa-008": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-42-qa-009": {
+   "correct": false,
+   "pred": "Finished her first full screenplay."
+  },
+  "conv-42-qa-013": {
+   "correct": true,
+   "pred": "23 March 2022"
+  },
+  "conv-42-qa-015": {
+   "correct": false,
+   "pred": "The week before 15 April 2022"
+  },
+  "conv-42-qa-016": {
+   "correct": false,
+   "pred": "He dyed his hair."
+  },
+  "conv-42-qa-017": {
+   "correct": true,
+   "pred": "The Lord of the Rings Trilogy"
+  },
+  "conv-42-qa-018": {
+   "correct": false,
+   "pred": "Whispering Falls"
+  },
+  "conv-42-qa-020": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-42-qa-021": {
+   "correct": true,
+   "pred": "Max"
+  },
+  "conv-42-qa-022": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-42-qa-024": {
+   "correct": false,
+   "pred": "Two weekends after May 7, 2022"
+  },
+  "conv-42-qa-025": {
+   "correct": false,
+   "pred": "3 June, 2022"
+  },
+  "conv-42-qa-026": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-42-qa-028": {
+   "correct": false,
+   "pred": "June 2022"
+  },
+  "conv-42-qa-029": {
+   "correct": false,
+   "pred": "The weekend after June 24, 2022"
+  },
+  "conv-42-qa-031": {
+   "correct": false,
+   "pred": "Friday, May 6, 2022"
+  },
+  "conv-42-qa-032": {
+   "correct": true,
+   "pred": "Woodhaven"
+  },
+  "conv-42-qa-033": {
+   "correct": false,
+   "pred": "The week before August 14, 2022"
+  },
+  "conv-42-qa-035": {
+   "correct": false,
+   "pred": "22 August, 2022"
+  },
+  "conv-42-qa-036": {
+   "correct": false,
+   "pred": "The week before 22 August 2022"
+  },
+  "conv-42-qa-037": {
+   "correct": true,
+   "pred": "21 August 2022"
+  },
+  "conv-42-qa-038": {
+   "correct": false,
+   "pred": "Last Friday before September 14, 2022"
+  },
+  "conv-42-qa-039": {
+   "correct": false,
+   "pred": "14 September, 2022"
+  },
+  "conv-42-qa-040": {
+   "correct": false,
+   "pred": "The week before 14 September 2022"
+  },
+  "conv-42-qa-041": {
+   "correct": false,
+   "pred": "July 7, 2022"
+  },
+  "conv-42-qa-043": {
+   "correct": false,
+   "pred": "The week before 6 October 2022"
+  },
+  "conv-42-qa-044": {
+   "correct": false,
+   "pred": "The week before October 6, 2022"
+  },
+  "conv-42-qa-045": {
+   "correct": false,
+   "pred": "The week before 6 October 2022"
+  },
+  "conv-42-qa-048": {
+   "correct": false,
+   "pred": "September 9, 2022"
+  },
+  "conv-42-qa-054": {
+   "correct": false,
+   "pred": "Sunday, the Sunday before October 25, 2022"
+  },
+  "conv-42-qa-057": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-42-qa-064": {
+   "correct": false,
+   "pred": "Last Saturday before 7 November 2022"
+  },
+  "conv-42-qa-065": {
+   "correct": true,
+   "pred": "Valorant tournament"
+  },
+  "conv-42-qa-072": {
+   "correct": false,
+   "pred": "October 10, 2022"
+  },
+  "conv-42-qa-077": {
+   "correct": true,
+   "pred": "The week before 2 May 2022"
+  },
+  "conv-42-qa-086": {
+   "correct": true,
+   "pred": "10 November 2022"
+  },
+  "conv-43-qa-006": {
+   "correct": true,
+   "pred": "June 2023"
+  },
+  "conv-43-qa-010": {
+   "correct": false,
+   "pred": "August 2023"
+  },
+  "conv-43-qa-012": {
+   "correct": true,
+   "pred": "Five years ago from 2023, which is 2018."
+  },
+  "conv-43-qa-016": {
+   "correct": false,
+   "pred": "2 weeks"
+  },
+  "conv-43-qa-020": {
+   "correct": false,
+   "pred": "New York City"
+  },
+  "conv-43-qa-022": {
+   "correct": false,
+   "pred": "15th of August, 2023"
+  },
+  "conv-43-qa-023": {
+   "correct": true,
+   "pred": "September 2023"
+  },
+  "conv-43-qa-024": {
+   "correct": false,
+   "pred": "He was on a trip."
+  },
+  "conv-43-qa-031": {
+   "correct": true,
+   "pred": "September 2023"
+  },
+  "conv-43-qa-033": {
+   "correct": true,
+   "pred": "October 2023"
+  },
+  "conv-43-qa-037": {
+   "correct": false,
+   "pred": "The week before 13 October 2023"
+  },
+  "conv-43-qa-039": {
+   "correct": true,
+   "pred": "2022"
+  },
+  "conv-43-qa-040": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-43-qa-044": {
+   "correct": true,
+   "pred": "6 November, 2023"
+  },
+  "conv-43-qa-045": {
+   "correct": false,
+   "pred": "United Kingdom"
+  },
+  "conv-43-qa-046": {
+   "correct": true,
+   "pred": "He visited a castle in the UK."
+  },
+  "conv-43-qa-047": {
+   "correct": false,
+   "pred": "The week before 2 October 2023"
+  },
+  "conv-43-qa-054": {
+   "correct": true,
+   "pred": "2022"
+  },
+  "conv-43-qa-055": {
+   "correct": false,
+   "pred": "He was drafted by a team after college."
+  },
+  "conv-43-qa-056": {
+   "correct": false,
+   "pred": "About four months ago from December 6, 2023."
+  },
+  "conv-43-qa-058": {
+   "correct": false,
+   "pred": "Last August"
+  },
+  "conv-43-qa-060": {
+   "correct": true,
+   "pred": "The Friday before 11 December 2023"
+  },
+  "conv-43-qa-063": {
+   "correct": false,
+   "pred": "Last summer"
+  },
+  "conv-43-qa-064": {
+   "correct": true,
+   "pred": "December 2023"
+  },
+  "conv-43-qa-068": {
+   "correct": false,
+   "pred": "February 2024"
+  },
+  "conv-43-qa-069": {
+   "correct": true,
+   "pred": "February 2024"
+  },
+  "conv-44-qa-000": {
+   "correct": false,
+   "pred": "2023"
+  },
+  "conv-44-qa-001": {
+   "correct": true,
+   "pred": "The week before 27 March 2023"
+  },
+  "conv-44-qa-004": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-44-qa-005": {
+   "correct": false,
+   "pred": "The week before 3 May 2023"
+  },
+  "conv-44-qa-006": {
+   "correct": false,
+   "pred": "2 April, 2023"
+  },
+  "conv-44-qa-007": {
+   "correct": true,
+   "pred": "3 years"
+  },
+  "conv-44-qa-008": {
+   "correct": true,
+   "pred": "I don't know."
+  },
+  "conv-44-qa-010": {
+   "correct": false,
+   "pred": "May 11, 2023"
+  },
+  "conv-44-qa-011": {
+   "correct": false,
+   "pred": "The Sunday before June 13, 2023"
+  },
+  "conv-44-qa-013": {
+   "correct": true,
+   "pred": "June 2023"
+  },
+  "conv-44-qa-016": {
+   "correct": false,
+   "pred": "Saturday, after Andrew's picnic date with his girlfriend on Sunday. The exact date is not provided in the context."
+  },
+  "conv-44-qa-022": {
+   "correct": false,
+   "pred": "He went fishing at a nearby lake."
+  },
+  "conv-44-qa-025": {
+   "correct": true,
+   "pred": "last weekend before 24 August 2023"
+  },
+  "conv-44-qa-030": {
+   "correct": true,
+   "pred": "November 2023"
+  },
+  "conv-44-qa-034": {
+   "correct": false,
+   "pred": "1 month"
+  },
+  "conv-44-qa-037": {
+   "correct": false,
+   "pred": "The Friday before 24 September 2023"
+  },
+  "conv-44-qa-038": {
+   "correct": true,
+   "pred": "The weekend before 24 October 2023"
+  },
+  "conv-44-qa-045": {
+   "correct": false,
+   "pred": "None (not mentioned in conversation)."
+  },
+  "conv-44-qa-046": {
+   "correct": false,
+   "pred": "2"
+  },
+  "conv-44-qa-047": {
+   "correct": true,
+   "pred": "1 month"
+  },
+  "conv-44-qa-055": {
+   "correct": false,
+   "pred": "[9:48 am on 8 July, 2023]"
+  },
+  "conv-44-qa-057": {
+   "correct": false,
+   "pred": "November 22, 2023"
+  },
+  "conv-44-qa-058": {
+   "correct": false,
+   "pred": "None (not mentioned in conversation)."
+  },
+  "conv-44-qa-059": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-47-qa-001": {
+   "correct": true,
+   "pred": "Bowling"
+  },
+  "conv-47-qa-004": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-47-qa-010": {
+   "correct": false,
+   "pred": "Last week before 12 April 2022"
+  },
+  "conv-47-qa-011": {
+   "correct": false,
+   "pred": "John didn't make much progress with gaming."
+  },
+  "conv-47-qa-013": {
+   "correct": true,
+   "pred": "2021"
+  },
+  "conv-47-qa-014": {
+   "correct": false,
+   "pred": "Three days ago from 29 April 2022."
+  },
+  "conv-47-qa-015": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-47-qa-021": {
+   "correct": true,
+   "pred": "7 May 2022"
+  },
+  "conv-47-qa-023": {
+   "correct": true,
+   "pred": "July 2022"
+  },
+  "conv-47-qa-028": {
+   "correct": false,
+   "pred": "19 June, 2022"
+  },
+  "conv-47-qa-029": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-47-qa-031": {
+   "correct": false,
+   "pred": "None (not mentioned in conversation)."
+  },
+  "conv-47-qa-032": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-47-qa-037": {
+   "correct": true,
+   "pred": "July 21, 2022"
+  },
+  "conv-47-qa-039": {
+   "correct": false,
+   "pred": "March 17, 2022"
+  },
+  "conv-47-qa-041": {
+   "correct": false,
+   "pred": "3 September 2022"
+  },
+  "conv-47-qa-042": {
+   "correct": true,
+   "pred": "9 August 2022"
+  },
+  "conv-47-qa-043": {
+   "correct": true,
+   "pred": "September 2022"
+  },
+  "conv-47-qa-046": {
+   "correct": false,
+   "pred": "[D29:11 on 12:37 am on 31 October, 2022]"
+  },
+  "conv-47-qa-047": {
+   "correct": true,
+   "pred": "3 September 2022"
+  },
+  "conv-47-qa-048": {
+   "correct": false,
+   "pred": "Next Sunday after [D23:6 on 9:23 pm on 4 September, 2022]"
+  },
+  "conv-47-qa-050": {
+   "correct": false,
+   "pred": "March 27, 2022"
+  },
+  "conv-47-qa-052": {
+   "correct": false,
+   "pred": "The past few months before 20 September 2022"
+  },
+  "conv-47-qa-053": {
+   "correct": false,
+   "pred": "A few months"
+  },
+  "conv-47-qa-055": {
+   "correct": false,
+   "pred": "The week before 13 October 2022"
+  },
+  "conv-47-qa-057": {
+   "correct": true,
+   "pred": "19 October 2022"
+  },
+  "conv-47-qa-058": {
+   "correct": true,
+   "pred": "20 October 2022"
+  },
+  "conv-47-qa-059": {
+   "correct": false,
+   "pred": "The week before 13 October, 2022"
+  },
+  "conv-47-qa-061": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-47-qa-062": {
+   "correct": false,
+   "pred": "Two days"
+  },
+  "conv-47-qa-063": {
+   "correct": true,
+   "pred": "4 November 2022"
+  },
+  "conv-47-qa-064": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-47-qa-065": {
+   "correct": true,
+   "pred": "7 November 2022"
+  },
+  "conv-47-qa-066": {
+   "correct": false,
+   "pred": "November 7, 2022"
+  },
+  "conv-48-qa-000": {
+   "correct": false,
+   "pred": "A robotics project"
+  },
+  "conv-48-qa-002": {
+   "correct": false,
+   "pred": "Deborah's mother passed away on May 7, 2022."
+  },
+  "conv-48-qa-003": {
+   "correct": true,
+   "pred": "2022"
+  },
+  "conv-48-qa-004": {
+   "correct": true,
+   "pred": "2010"
+  },
+  "conv-48-qa-007": {
+   "correct": false,
+   "pred": "Paris"
+  },
+  "conv-48-qa-009": {
+   "correct": false,
+   "pred": "None (not mentioned in conversation)."
+  },
+  "conv-48-qa-010": {
+   "correct": true,
+   "pred": "1993"
+  },
+  "conv-48-qa-012": {
+   "correct": true,
+   "pred": "26 January 2023"
+  },
+  "conv-48-qa-017": {
+   "correct": true,
+   "pred": "Last year (2022)"
+  },
+  "conv-48-qa-021": {
+   "correct": false,
+   "pred": "Next Saturday"
+  },
+  "conv-48-qa-022": {
+   "correct": true,
+   "pred": "31 January 2023"
+  },
+  "conv-48-qa-026": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-48-qa-027": {
+   "correct": true,
+   "pred": "Last summer in 2022"
+  },
+  "conv-48-qa-029": {
+   "correct": false,
+   "pred": "The week before 3 September 2023"
+  },
+  "conv-48-qa-030": {
+   "correct": false,
+   "pred": "22 February, 2023"
+  },
+  "conv-48-qa-031": {
+   "correct": false,
+   "pred": "Last summer"
+  },
+  "conv-48-qa-032": {
+   "correct": true,
+   "pred": "2022"
+  },
+  "conv-48-qa-034": {
+   "correct": false,
+   "pred": "2022"
+  },
+  "conv-48-qa-035": {
+   "correct": true,
+   "pred": "24 February 2023"
+  },
+  "conv-48-qa-037": {
+   "correct": true,
+   "pred": "The Sunday before March 2, 2023"
+  },
+  "conv-48-qa-038": {
+   "correct": false,
+   "pred": "[In reply to Jolene: \"Hey Deb, yeah life can get chaotic. How's it been going lately?\"]"
+  },
+  "conv-48-qa-043": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-48-qa-044": {
+   "correct": true,
+   "pred": "April 9, 2023"
+  },
+  "conv-48-qa-045": {
+   "correct": false,
+   "pred": "The week before 1 February 2023"
+  },
+  "conv-48-qa-046": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-48-qa-047": {
+   "correct": false,
+   "pred": "May 5, 2023"
+  },
+  "conv-48-qa-050": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-48-qa-051": {
+   "correct": false,
+   "pred": "The day before yesterday on 25 June 2023"
+  },
+  "conv-48-qa-052": {
+   "correct": false,
+   "pred": "The week before 1 August 2023"
+  },
+  "conv-48-qa-053": {
+   "correct": false,
+   "pred": "Two years ago"
+  },
+  "conv-48-qa-054": {
+   "correct": true,
+   "pred": "Susie"
+  },
+  "conv-48-qa-055": {
+   "correct": false,
+   "pred": "Susie"
+  },
+  "conv-48-qa-056": {
+   "correct": true,
+   "pred": "The week before 16 August 2023"
+  },
+  "conv-48-qa-057": {
+   "correct": false,
+   "pred": "17th August, 2023"
+  },
+  "conv-48-qa-060": {
+   "correct": true,
+   "pred": "The week before 24 August 2023"
+  },
+  "conv-48-qa-065": {
+   "correct": true,
+   "pred": "Brazil"
+  },
+  "conv-48-qa-066": {
+   "correct": true,
+   "pred": "29 August 2023"
+  },
+  "conv-48-qa-068": {
+   "correct": false,
+   "pred": "None (not mentioned in conversation)."
+  },
+  "conv-48-qa-071": {
+   "correct": false,
+   "pred": "The Friday before 3 September 2023"
+  },
+  "conv-48-qa-076": {
+   "correct": true,
+   "pred": "The Friday before September 17, 2023"
+  },
+  "conv-48-qa-078": {
+   "correct": true,
+   "pred": "A meditation retreat in Phuket"
+  },
+  "conv-48-qa-081": {
+   "correct": false,
+   "pred": "None (not mentioned in conversation)."
+  },
+  "conv-49-qa-004": {
+   "correct": true,
+   "pred": "Painting"
+  },
+  "conv-49-qa-009": {
+   "correct": true,
+   "pred": "last weekend before 24 May 2023"
+  },
+  "conv-49-qa-012": {
+   "correct": false,
+   "pred": "May 7, 2023"
+  },
+  "conv-49-qa-013": {
+   "correct": false,
+   "pred": "The week before 6 June 2023"
+  },
+  "conv-49-qa-017": {
+   "correct": false,
+   "pred": "July 25, 2023"
+  },
+  "conv-49-qa-022": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-49-qa-023": {
+   "correct": true,
+   "pred": "28 July 2023"
+  },
+  "conv-49-qa-024": {
+   "correct": false,
+   "pred": "Sam took an epic hiking trip with friends."
+  },
+  "conv-49-qa-025": {
+   "correct": false,
+   "pred": "2023"
+  },
+  "conv-49-qa-030": {
+   "correct": false,
+   "pred": "June 2023"
+  },
+  "conv-49-qa-035": {
+   "correct": true,
+   "pred": "Saturday before 15 August 2023"
+  },
+  "conv-49-qa-039": {
+   "correct": false,
+   "pred": "1 months"
+  },
+  "conv-49-qa-040": {
+   "correct": false,
+   "pred": "A few days ago"
+  },
+  "conv-49-qa-041": {
+   "correct": true,
+   "pred": "Painting classes"
+  },
+  "conv-49-qa-045": {
+   "correct": false,
+   "pred": "Canada"
+  },
+  "conv-49-qa-047": {
+   "correct": false,
+   "pred": "19 August, 2023"
+  },
+  "conv-49-qa-052": {
+   "correct": true,
+   "pred": "Painting session"
+  },
+  "conv-49-qa-053": {
+   "correct": true,
+   "pred": "Next Saturday after 9:28 am on 11 September, 2023."
+  },
+  "conv-49-qa-058": {
+   "correct": false,
+   "pred": "One year ago from October 8, 2023"
+  },
+  "conv-49-qa-059": {
+   "correct": true,
+   "pred": "14 October 2023"
+  },
+  "conv-49-qa-060": {
+   "correct": false,
+   "pred": "Eating healthier"
+  },
+  "conv-49-qa-061": {
+   "correct": false,
+   "pred": "Work stress"
+  },
+  "conv-49-qa-063": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-49-qa-066": {
+   "correct": false,
+   "pred": "October 2023"
+  },
+  "conv-49-qa-067": {
+   "correct": true,
+   "pred": "December 2023"
+  },
+  "conv-49-qa-068": {
+   "correct": false,
+   "pred": "Reading a book"
+  },
+  "conv-49-qa-070": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-49-qa-073": {
+   "correct": false,
+   "pred": "Next summer"
+  },
+  "conv-49-qa-074": {
+   "correct": false,
+   "pred": "The Tuesday before 17 December 2023"
+  },
+  "conv-49-qa-075": {
+   "correct": true,
+   "pred": "5 January 2024"
+  },
+  "conv-49-qa-076": {
+   "correct": false,
+   "pred": "17 December, 2023"
+  },
+  "conv-49-qa-079": {
+   "correct": true,
+   "pred": "February 2024"
+  },
+  "conv-49-qa-080": {
+   "correct": false,
+   "pred": "December 31, 2023"
+  },
+  "conv-50-qa-000": {
+   "correct": false,
+   "pred": "April 20, 2023"
+  },
+  "conv-50-qa-002": {
+   "correct": false,
+   "pred": "26 March, 2023"
+  },
+  "conv-50-qa-008": {
+   "correct": false,
+   "pred": "The week before 16 May 2023"
+  },
+  "conv-50-qa-009": {
+   "correct": true,
+   "pred": "The week before 16 May 2023"
+  },
+  "conv-50-qa-010": {
+   "correct": true,
+   "pred": "The week before 16 May 2023"
+  },
+  "conv-50-qa-012": {
+   "correct": false,
+   "pred": "The week before 31 May 2023"
+  },
+  "conv-50-qa-014": {
+   "correct": true,
+   "pred": "8 June 2023"
+  },
+  "conv-50-qa-016": {
+   "correct": true,
+   "pred": "July 2023"
+  },
+  "conv-50-qa-017": {
+   "correct": false,
+   "pred": "May 9, 2023"
+  },
+  "conv-50-qa-025": {
+   "correct": true,
+   "pred": "The Friday before August 22, 2023"
+  },
+  "conv-50-qa-026": {
+   "correct": true,
+   "pred": "21 August 2023"
+  },
+  "conv-50-qa-027": {
+   "correct": false,
+   "pred": "Boston"
+  },
+  "conv-50-qa-031": {
+   "correct": true,
+   "pred": "San Francisco"
+  },
+  "conv-50-qa-034": {
+   "correct": true,
+   "pred": "1 September 2023"
+  },
+  "conv-50-qa-035": {
+   "correct": false,
+   "pred": "The week before 2 September 2023"
+  },
+  "conv-50-qa-036": {
+   "correct": false,
+   "pred": "November 11, 2023"
+  },
+  "conv-50-qa-038": {
+   "correct": false,
+   "pred": "September 15, 2023"
+  },
+  "conv-50-qa-043": {
+   "correct": true,
+   "pred": "Boston"
+  },
+  "conv-50-qa-044": {
+   "correct": false,
+   "pred": "April 3, 2023"
+  },
+  "conv-50-qa-048": {
+   "correct": false,
+   "pred": "Attending a music festival in Boston."
+  },
+  "conv-50-qa-050": {
+   "correct": false,
+   "pred": "March 25, 2023"
+  },
+  "conv-50-qa-051": {
+   "correct": true,
+   "pred": "August 2022"
+  },
+  "conv-50-qa-052": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-50-qa-055": {
+   "correct": true,
+   "pred": "24 October 2023"
+  },
+  "conv-50-qa-057": {
+   "correct": true,
+   "pred": "Photography"
+  },
+  "conv-50-qa-061": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-50-qa-062": {
+   "correct": false,
+   "pred": "A week"
+  },
+  "conv-50-qa-065": {
+   "correct": false,
+   "pred": "At sunset, but the specific date is not provided."
+  },
+  "conv-50-qa-067": {
+   "correct": true,
+   "pred": "Tokyo"
+  },
+  "conv-50-qa-068": {
+   "correct": false,
+   "pred": "Ten years ago"
+  },
+  "conv-50-qa-069": {
+   "correct": true,
+   "pred": "November 2023"
+  },
+  "conv-50-qa-070": {
+   "correct": true,
+   "pred": "16 November 2023"
+  }
+ },
+ "multihop_v1": {
+  "conv-26-qa-003": {
+   "correct": true,
+   "pred": "Researching adoption agencies and counseling or mental health as a career."
+  },
+  "conv-26-qa-004": {
+   "correct": true,
+   "pred": "Caroline is transgender."
+  },
+  "conv-26-qa-007": {
+   "correct": false,
+   "pred": "Married"
+  },
+  "conv-26-qa-011": {
+   "correct": true,
+   "pred": "Her home country, Sweden"
+  },
+  "conv-26-qa-013": {
+   "correct": true,
+   "pred": "Counseling or working in mental health"
+  },
+  "conv-26-qa-015": {
+   "correct": true,
+   "pred": "Melanie engages in pottery, painting, learning the piano, attending a pottery workshop with her kids, and participating in a mentorship program for LGBTQ youth."
+  },
+  "conv-26-qa-018": {
+   "correct": true,
+   "pred": "Melanie has camped at the beach and in the mountains."
+  },
+  "conv-26-qa-019": {
+   "correct": true,
+   "pred": "Getting their hands dirty and making something with clay. They also love painting, especially nature-inspired ones. They enjoy exploring nature, roasting marshmallows, hiking, and spending time at the beach."
+  },
+  "conv-26-qa-023": {
+   "correct": true,
+   "pred": "\"Charlotte's Web\" and a book from 2022."
+  },
+  "conv-26-qa-024": {
+   "correct": true,
+   "pred": "Running and playing the violin"
+  },
+  "conv-26-qa-032": {
+   "correct": true,
+   "pred": "Participated in a school event about her transgender journey, an LGBTQ conference, a pride event, a pottery workshop, and an LGBTQ+ counseling workshop."
+  },
+  "conv-26-qa-034": {
+   "correct": false,
+   "pred": "Caroline attended a council meeting for adoption and is putting together a talent show for kids. She also went to a pottery workshop with her kids. Additionally, she is researching adoption agencies and has been involved in LGBTQ advocacy events."
+  },
+  "conv-26-qa-037": {
+   "correct": true,
+   "pred": "A painting inspired by sunsets"
+  },
+  "conv-26-qa-038": {
+   "correct": true,
+   "pred": "Camping in the mountains, exploring nature, roasting marshmallows around the campfire, going on a hike."
+  },
+  "conv-26-qa-039": {
+   "correct": true,
+   "pred": "Caroline is joining an LGBTQ activist group, volunteering at a youth center, attending an LGBTQ conference, participating in an LGBTQ pride parade, giving talks about her transgender journey, and joining a mentorship program for LGBTQ youth."
+  },
+  "conv-26-qa-040": {
+   "correct": false,
+   "pred": "1"
+  },
+  "conv-26-qa-043": {
+   "correct": false,
+   "pred": "Caroline makes paintings and pottery."
+  },
+  "conv-26-qa-047": {
+   "correct": false,
+   "pred": "Melanie"
+  },
+  "conv-26-qa-048": {
+   "correct": false,
+   "pred": "Melanie and her kids have made pots."
+  },
+  "conv-26-qa-051": {
+   "correct": true,
+   "pred": "Melanie has painted a lake sunrise, a painting inspired by a visit to a LGBTQ center, a beach sunset, an abstract painting, a painting to show her path as a trans woman, and a painting with a peaceful blue streak. She has also painted a hand-painted bowl and a painting for an art show. Additionally, she has painted a painting to show her path as a trans woman."
+  },
+  "conv-26-qa-052": {
+   "correct": true,
+   "pred": "Luna, Oliver, and Bailey"
+  },
+  "conv-26-qa-055": {
+   "correct": false,
+   "pred": "Painting"
+  },
+  "conv-26-qa-056": {
+   "correct": true,
+   "pred": "The rainbow flag mural and the eagle"
+  },
+  "conv-26-qa-060": {
+   "correct": true,
+   "pred": "Melanie plays the clarinet and violin."
+  },
+  "conv-26-qa-061": {
+   "correct": true,
+   "pred": "Summer Sounds"
+  },
+  "conv-26-qa-065": {
+   "correct": true,
+   "pred": "Caroline has faced changes in her gender identity and expression, as well as the need for acceptance and support from her community. She has also experienced personal growth and development since coming out. Additionally, she has encountered both supportive and unsupportive reactions from friends and family."
+  },
+  "conv-26-qa-066": {
+   "correct": false,
+   "pred": "Explores nature and connects with each other."
+  },
+  "conv-26-qa-070": {
+   "correct": true,
+   "pred": "A pride event and a transgender conference."
+  },
+  "conv-26-qa-071": {
+   "correct": true,
+   "pred": "\"Becoming Nicole\" by Amy Ellis Nutt"
+  },
+  "conv-26-qa-075": {
+   "correct": true,
+   "pred": "3"
+  },
+  "conv-26-qa-076": {
+   "correct": true,
+   "pred": "The week before 27 June 2023"
+  },
+  "conv-26-qa-078": {
+   "correct": true,
+   "pred": "Figurines"
+  },
+  "conv-30-qa-003": {
+   "correct": false,
+   "pred": "Both Jon and Gina are passionate about dance."
+  },
+  "conv-30-qa-005": {
+   "correct": false,
+   "pred": "Jon thinks the ideal dance studio should be a cozy and inviting space."
+  },
+  "conv-30-qa-009": {
+   "correct": false,
+   "pred": "None (not mentioned in conversation)."
+  },
+  "conv-30-qa-017": {
+   "correct": true,
+   "pred": "Gina decided to start her own clothing store because she wanted to take control of her own destiny after losing her job at Door Dash in January 2023. She was passionate about fashion trends and wanted to blend her love for dance and fashion. Additionally, she wanted to offer unique pieces and expand her clothing store."
+  },
+  "conv-30-qa-018": {
+   "correct": true,
+   "pred": "Yes, Jon starts a dance studio and Gina starts an online clothing store. Both businesses are started out of their love for dance."
+  },
+  "conv-30-qa-023": {
+   "correct": false,
+   "pred": "Gina launched an ad campaign for her clothing store."
+  },
+  "conv-30-qa-024": {
+   "correct": true,
+   "pred": "Jon has participated in attending networking events and going to a fair to show off his studio."
+  },
+  "conv-30-qa-025": {
+   "correct": true,
+   "pred": "Dance classes, workshops, one-on-one mentoring and training, and a dance competition."
+  },
+  "conv-30-qa-027": {
+   "correct": true,
+   "pred": "Yes, Jon and Gina both participated in dance competitions. Gina mentioned winning first place at a regionals at age fifteen and participating in a few dance competitions and shows. Jon expressed excitement about winning first place in a dance comp."
+  },
+  "conv-30-qa-029": {
+   "correct": false,
+   "pred": "Jon has not mentioned visiting any specific cities in the provided conversation context."
+  },
+  "conv-30-qa-031": {
+   "correct": false,
+   "pred": "Jon mentioned that the official opening night for his studio was on 20 June 2023, but he did not specify how long it took to open the studio before that date. Therefore, I don't know."
+  },
+  "conv-41-qa-002": {
+   "correct": true,
+   "pred": "Kickboxing"
+  },
+  "conv-41-qa-003": {
+   "correct": true,
+   "pred": "Volunteering at a homeless shelter"
+  },
+  "conv-41-qa-006": {
+   "correct": true,
+   "pred": "A homeless shelter"
+  },
+  "conv-41-qa-007": {
+   "correct": true,
+   "pred": "A little doll"
+  },
+  "conv-41-qa-009": {
+   "correct": false,
+   "pred": "Auntie"
+  },
+  "conv-41-qa-011": {
+   "correct": false,
+   "pred": "Maria has met and helped Jean at the homeless shelter."
+  },
+  "conv-41-qa-012": {
+   "correct": true,
+   "pred": "Military aptitude test"
+  },
+  "conv-41-qa-015": {
+   "correct": true,
+   "pred": "Creative writing class"
+  },
+  "conv-41-qa-018": {
+   "correct": false,
+   "pred": "A colleague"
+  },
+  "conv-41-qa-019": {
+   "correct": false,
+   "pred": "Potholes"
+  },
+  "conv-41-qa-021": {
+   "correct": true,
+   "pred": "East Coast and West County"
+  },
+  "conv-41-qa-023": {
+   "correct": true,
+   "pred": "Peach cobbler and a banana split sundae"
+  },
+  "conv-41-qa-025": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-41-qa-026": {
+   "correct": true,
+   "pred": "Joined a nearby church and bought a cross necklace."
+  },
+  "conv-41-qa-028": {
+   "correct": true,
+   "pred": "Education and infrastructure improvement, supporting veterans, and using technology for good in the community."
+  },
+  "conv-41-qa-029": {
+   "correct": true,
+   "pred": "A ring-toss tournament"
+  },
+  "conv-41-qa-030": {
+   "correct": true,
+   "pred": "A homeless shelter and a local school shelter."
+  },
+  "conv-41-qa-032": {
+   "correct": true,
+   "pred": "Attending a convention and going on a hiking trip"
+  },
+  "conv-41-qa-033": {
+   "correct": true,
+   "pred": "Maria has practiced beginner yoga and kundalini yoga."
+  },
+  "conv-41-qa-035": {
+   "correct": true,
+   "pred": "Florida"
+  },
+  "conv-41-qa-036": {
+   "correct": true,
+   "pred": "John attended a violin concert and a live music event."
+  },
+  "conv-41-qa-037": {
+   "correct": true,
+   "pred": "John participated in a marching event for veterans' rights, a 5K charity run for a homeless shelter, and a community event to raise money for a good cause. He also worked on a project to support veterans and organized a small party inviting veterans to share their stories. Additionally, he helped victims of domestic abuse by raising awareness and funds at an event."
+  },
+  "conv-41-qa-040": {
+   "correct": true,
+   "pred": "Kyle"
+  },
+  "conv-41-qa-042": {
+   "correct": false,
+   "pred": "John's old area"
+  },
+  "conv-41-qa-044": {
+   "correct": false,
+   "pred": "Camping, hiking, and attending a community event with arts and crafts."
+  },
+  "conv-41-qa-047": {
+   "correct": false,
+   "pred": "Boot camps"
+  },
+  "conv-41-qa-049": {
+   "correct": false,
+   "pred": "Baked goods"
+  },
+  "conv-41-qa-052": {
+   "correct": true,
+   "pred": "Cindy and Laura"
+  },
+  "conv-41-qa-057": {
+   "correct": true,
+   "pred": "John has done events for causes related to helping victims of domestic abuse, supporting homeless shelters, raising money for veterans and their families, and improving education and infrastructure in the community."
+  },
+  "conv-41-qa-060": {
+   "correct": true,
+   "pred": "Shadow and Coco"
+  },
+  "conv-41-qa-062": {
+   "correct": false,
+   "pred": "1"
+  },
+  "conv-42-qa-001": {
+   "correct": false,
+   "pred": "Video games and movies"
+  },
+  "conv-42-qa-005": {
+   "correct": false,
+   "pred": "Reading, watching movies, exploring nature, writing, playing video games, and making coconut milk ice cream."
+  },
+  "conv-42-qa-010": {
+   "correct": true,
+   "pred": "Excitement, anxiety, relief, and hope."
+  },
+  "conv-42-qa-011": {
+   "correct": true,
+   "pred": "Joanna is allergic to most reptiles and animals with fur."
+  },
+  "conv-42-qa-019": {
+   "correct": false,
+   "pred": "None (not mentioned in conversation)."
+  },
+  "conv-42-qa-023": {
+   "correct": true,
+   "pred": "Her first screenplay and another screenplay sent to a film festival."
+  },
+  "conv-42-qa-027": {
+   "correct": true,
+   "pred": "Film festivals and producers"
+  },
+  "conv-42-qa-030": {
+   "correct": false,
+   "pred": "Joanna writes screenplays and movie scripts."
+  },
+  "conv-42-qa-034": {
+   "correct": false,
+   "pred": "A trilogy that is one of Joanna's favorites, a series with adventures, magic, and great characters, and a suspenseful thriller set in a small Midwestern town."
+  },
+  "conv-42-qa-042": {
+   "correct": false,
+   "pred": "A movie Joanna first watched around 3 years ago and a classic movie. The specific titles are not mentioned."
+  },
+  "conv-42-qa-046": {
+   "correct": true,
+   "pred": "Catan and Street Fighter"
+  },
+  "conv-42-qa-047": {
+   "correct": true,
+   "pred": "Game conventions and a cooking show."
+  },
+  "conv-42-qa-049": {
+   "correct": false,
+   "pred": "1"
+  },
+  "conv-42-qa-050": {
+   "correct": true,
+   "pred": "A stuffed animal dog named Tilly"
+  },
+  "conv-42-qa-051": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-42-qa-052": {
+   "correct": false,
+   "pred": "None (not mentioned in conversation)."
+  },
+  "conv-42-qa-053": {
+   "correct": false,
+   "pred": "2"
+  },
+  "conv-42-qa-055": {
+   "correct": false,
+   "pred": "Personal experiences, self-discovery, nature's beauty, writing, acting, supportive writing group, and completing screenplays."
+  },
+  "conv-42-qa-056": {
+   "correct": false,
+   "pred": "Both Nate and Joanna like animals."
+  },
+  "conv-42-qa-058": {
+   "correct": false,
+   "pred": "Having pets and hanging out with friends"
+  },
+  "conv-42-qa-059": {
+   "correct": false,
+   "pred": "Joanna writes down her favorite memories."
+  },
+  "conv-42-qa-061": {
+   "correct": false,
+   "pred": "Video games and computer games"
+  },
+  "conv-42-qa-062": {
+   "correct": true,
+   "pred": "2"
+  },
+  "conv-42-qa-063": {
+   "correct": false,
+   "pred": "CS:GO, Street Fighter, Xeonoblade Chronicles"
+  },
+  "conv-42-qa-067": {
+   "correct": true,
+   "pred": "Dogs, a stuffed animal dog named Tilly, and turtles."
+  },
+  "conv-42-qa-069": {
+   "correct": true,
+   "pred": "3"
+  },
+  "conv-42-qa-070": {
+   "correct": false,
+   "pred": "Nate takes his turtles for walks and experiments with flavors in cooking."
+  },
+  "conv-42-qa-071": {
+   "correct": true,
+   "pred": "Nature"
+  },
+  "conv-42-qa-074": {
+   "correct": false,
+   "pred": "Nate has received movie recommendations from Joanna."
+  },
+  "conv-42-qa-075": {
+   "correct": true,
+   "pred": "Coconut milk ice cream and dairy-free chocolate mousse."
+  },
+  "conv-42-qa-076": {
+   "correct": true,
+   "pred": "Nate has been teaching people how to make vegan ice cream on his own cooking show."
+  },
+  "conv-42-qa-078": {
+   "correct": false,
+   "pred": "Nate has participated in at least 4 video game tournaments."
+  },
+  "conv-42-qa-079": {
+   "correct": false,
+   "pred": "2"
+  },
+  "conv-42-qa-080": {
+   "correct": false,
+   "pred": "Nate has won a total of 6 video game tournaments."
+  },
+  "conv-42-qa-081": {
+   "correct": true,
+   "pred": "Dairy-free chocolate cake with berries, vegan ice cream, and a dessert made with blueberries, coconut milk, and a gluten-free crust."
+  },
+  "conv-42-qa-082": {
+   "correct": true,
+   "pred": "Coconut milk ice cream and dairy-free chocolate mousse."
+  },
+  "conv-42-qa-083": {
+   "correct": false,
+   "pred": "Using his skills to make a difference in gaming."
+  },
+  "conv-43-qa-000": {
+   "correct": true,
+   "pred": "To improve his shooting percentage and become a consistent performer on the court. Off the court, he aims to build his brand, secure endorsements, and make a positive impact through charity work and possibly starting a foundation."
+  },
+  "conv-43-qa-001": {
+   "correct": false,
+   "pred": "To make a difference away from the court, like through charity or inspiring people."
+  },
+  "conv-43-qa-002": {
+   "correct": false,
+   "pred": "Sneaker collection and Harry Potter books"
+  },
+  "conv-43-qa-004": {
+   "correct": true,
+   "pred": "\"The Name of the Wind\" by Patrick Rothfuss, \"The Hobbit\", a popular fantasy series, Harry Potter, Game of Thrones, and a book about castles in the UK."
+  },
+  "conv-43-qa-007": {
+   "correct": true,
+   "pred": "London, California, Chicago, and an unspecified hiking spot."
+  },
+  "conv-43-qa-009": {
+   "correct": true,
+   "pred": "Nike, Gatorade, and a renowned outdoor gear company."
+  },
+  "conv-43-qa-011": {
+   "correct": false,
+   "pred": "John doesn't mention liking any sports besides basketball."
+  },
+  "conv-43-qa-013": {
+   "correct": true,
+   "pred": "Escaping reality by imagining alternate realities, going on road trips, exploring, hiking, playing board games, curling up with a good book, surfing, and collecting fantasy novels."
+  },
+  "conv-43-qa-014": {
+   "correct": true,
+   "pred": "Fantasy novels"
+  },
+  "conv-43-qa-017": {
+   "correct": false,
+   "pred": "1"
+  },
+  "conv-43-qa-018": {
+   "correct": true,
+   "pred": "J.K. Rowling, Patrick Rothfuss, and an unnamed author of a book about castles in the UK."
+  },
+  "conv-43-qa-021": {
+   "correct": true,
+   "pred": "Seattle and New York City"
+  },
+  "conv-43-qa-025": {
+   "correct": false,
+   "pred": "Harry Potter collectibles"
+  },
+  "conv-43-qa-026": {
+   "correct": true,
+   "pred": "\"The Wheel of Time\" and \"That\" fantasy series"
+  },
+  "conv-43-qa-029": {
+   "correct": true,
+   "pred": "4"
+  },
+  "conv-43-qa-030": {
+   "correct": true,
+   "pred": "Seattle and New York City"
+  },
+  "conv-43-qa-035": {
+   "correct": true,
+   "pred": "Hiking and enjoying nature's beauty."
+  },
+  "conv-43-qa-036": {
+   "correct": true,
+   "pred": "John's favorite basketball player is LeBron. Tim's favorite basketball player is not mentioned in the provided context."
+  },
+  "conv-43-qa-038": {
+   "correct": false,
+   "pred": "Italy"
+  },
+  "conv-43-qa-041": {
+   "correct": true,
+   "pred": "Fantasy fiction stories"
+  },
+  "conv-43-qa-042": {
+   "correct": true,
+   "pred": "Honey garlic chicken with roasted vegetables"
+  },
+  "conv-43-qa-043": {
+   "correct": false,
+   "pred": "None (not mentioned in conversation)."
+  },
+  "conv-43-qa-048": {
+   "correct": false,
+   "pred": "Last season"
+  },
+  "conv-43-qa-049": {
+   "correct": false,
+   "pred": "1"
+  },
+  "conv-43-qa-050": {
+   "correct": true,
+   "pred": "\"The Alchemist\""
+  },
+  "conv-43-qa-052": {
+   "correct": false,
+   "pred": "John signs up for Nike for a basketball shoe and gear deal and is in talks with Gatorade about a potential sponsorship."
+  },
+  "conv-43-qa-057": {
+   "correct": true,
+   "pred": "Violin and piano"
+  },
+  "conv-43-qa-059": {
+   "correct": false,
+   "pred": "A career-high in assists in a big game against a rival on the Friday before 11 December 2023."
+  },
+  "conv-43-qa-061": {
+   "correct": true,
+   "pred": "\"The Alchemist\" and a fantasy book by Patrick Rothfuss. He also mentioned George R. R. Martin's \"A Song of Ice and Fire\" series, specifically \"A Dance with Dragons.\" Additionally, he read a book that changed his perspective on his goals, but the title is not specified."
+  },
+  "conv-43-qa-062": {
+   "correct": true,
+   "pred": "Mentors younger players on his team."
+  },
+  "conv-43-qa-065": {
+   "correct": true,
+   "pred": "Star Wars"
+  },
+  "conv-44-qa-002": {
+   "correct": false,
+   "pred": "Wine tasting and a picnic"
+  },
+  "conv-44-qa-003": {
+   "correct": false,
+   "pred": "They have checked out new cafes and parks."
+  },
+  "conv-44-qa-009": {
+   "correct": false,
+   "pred": "Dog training courses and a dog owners group"
+  },
+  "conv-44-qa-012": {
+   "correct": true,
+   "pred": "Rock climbing, kayaking, bungee jumping, exploring new places to eat, and camping."
+  },
+  "conv-44-qa-014": {
+   "correct": false,
+   "pred": "The peace and feeling of freedom that comes with going for a hike."
+  },
+  "conv-44-qa-015": {
+   "correct": true,
+   "pred": "Finding dog-friendly housing or spots in the city."
+  },
+  "conv-44-qa-017": {
+   "correct": false,
+   "pred": "None (not mentioned in conversation)."
+  },
+  "conv-44-qa-018": {
+   "correct": false,
+   "pred": "None (not mentioned in conversation)."
+  },
+  "conv-44-qa-021": {
+   "correct": false,
+   "pred": "Dog grooming and bonding with pets"
+  },
+  "conv-44-qa-023": {
+   "correct": false,
+   "pred": "Andrew faces problems with Toby getting used to the new environment and Toby needing time to get along with Andrew."
+  },
+  "conv-44-qa-024": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-44-qa-026": {
+   "correct": true,
+   "pred": "Work stress"
+  },
+  "conv-44-qa-027": {
+   "correct": true,
+   "pred": "Andrew finds his current work to be tough and stressful."
+  },
+  "conv-44-qa-028": {
+   "correct": false,
+   "pred": "Collars and tags"
+  },
+  "conv-44-qa-029": {
+   "correct": true,
+   "pred": "Pepper, Precious, and Panda"
+  },
+  "conv-44-qa-031": {
+   "correct": false,
+   "pred": "He has adopted another dog from a shelter."
+  },
+  "conv-44-qa-032": {
+   "correct": true,
+   "pred": "A tattoo of her four dogs"
+  },
+  "conv-44-qa-035": {
+   "correct": false,
+   "pred": "Andrew's dogs are named Pepper, Precious, and Panda."
+  },
+  "conv-44-qa-036": {
+   "correct": false,
+   "pred": "Andrew mentions enjoying trying new meal ideas, especially healthier ones. Audrey suggests a dish that Andrew finds delicious and healthy. Audrey also enjoys cooking and eating food as a form of self-care."
+  },
+  "conv-44-qa-039": {
+   "correct": false,
+   "pred": "None (not mentioned in conversation)."
+  },
+  "conv-44-qa-040": {
+   "correct": true,
+   "pred": "A park or a dog owners group."
+  },
+  "conv-44-qa-041": {
+   "correct": false,
+   "pred": "Jack Russell mixes and Chihuahua mixes"
+  },
+  "conv-44-qa-042": {
+   "correct": true,
+   "pred": "Positive reinforcement"
+  },
+  "conv-44-qa-048": {
+   "correct": true,
+   "pred": "Family"
+  },
+  "conv-44-qa-049": {
+   "correct": false,
+   "pred": "A source of joy and happiness"
+  },
+  "conv-44-qa-050": {
+   "correct": true,
+   "pred": "Grooming"
+  },
+  "conv-44-qa-051": {
+   "correct": true,
+   "pred": "New collars and tags, personalized tags, toys, goodies for neighbors, a tattoo of her dogs on her arm."
+  },
+  "conv-44-qa-054": {
+   "correct": true,
+   "pred": "Playing fetch and Frisbee"
+  },
+  "conv-44-qa-056": {
+   "correct": false,
+   "pred": "Yes, Andrew moved into a new apartment for his dogs."
+  },
+  "conv-44-qa-060": {
+   "correct": false,
+   "pred": "4"
+  },
+  "conv-47-qa-002": {
+   "correct": false,
+   "pred": "Starbucks and a beer somewhere."
+  },
+  "conv-47-qa-003": {
+   "correct": true,
+   "pred": "Yes, James has pets, as mentioned in [D2:18 on 9:26 pm on 20 March, 2022] where John talks about his dogs. John also mentions wanting a pet in [D2:20 on 9:26 pm on 20 March, 2022], indicating he doesn't have one yet but desires to. James does not have pets mentioned in the provided context."
+  },
+  "conv-47-qa-005": {
+   "correct": true,
+   "pred": "John's favorite game is CS:GO, and James enjoys Apex Legends."
+  },
+  "conv-47-qa-008": {
+   "correct": false,
+   "pred": "2"
+  },
+  "conv-47-qa-009": {
+   "correct": true,
+   "pred": "Ned and his sister (name not provided)"
+  },
+  "conv-47-qa-018": {
+   "correct": true,
+   "pred": "\"The Stormlight Archive\" and \"Kingkiller Chronicle\""
+  },
+  "conv-47-qa-020": {
+   "correct": false,
+   "pred": "None (not mentioned in conversation)."
+  },
+  "conv-47-qa-022": {
+   "correct": true,
+   "pred": "Children's hospital and charitable foundation"
+  },
+  "conv-47-qa-024": {
+   "correct": false,
+   "pred": "Video games"
+  },
+  "conv-47-qa-026": {
+   "correct": true,
+   "pred": "Italy, Turkey, and Mexico"
+  },
+  "conv-47-qa-027": {
+   "correct": false,
+   "pred": "A programming class"
+  },
+  "conv-47-qa-034": {
+   "correct": false,
+   "pred": "James visited Nuuk in July 2022."
+  },
+  "conv-47-qa-038": {
+   "correct": false,
+   "pred": "John got his dream job in 2022."
+  },
+  "conv-47-qa-040": {
+   "correct": true,
+   "pred": "Sit, stay, paw, and rollover"
+  },
+  "conv-47-qa-045": {
+   "correct": true,
+   "pred": "A great stout"
+  },
+  "conv-47-qa-049": {
+   "correct": true,
+   "pred": "John bought new devices and refurbished his gaming desk. He also bought new gaming equipment to improve his skills, including headphones."
+  },
+  "conv-47-qa-051": {
+   "correct": false,
+   "pred": "AC Valhalla, FIFA 23, and an unnamed new RPG"
+  },
+  "conv-47-qa-054": {
+   "correct": false,
+   "pred": "John has hosted gaming competitions."
+  },
+  "conv-47-qa-056": {
+   "correct": true,
+   "pred": "His sister"
+  },
+  "conv-47-qa-060": {
+   "correct": true,
+   "pred": "Fortnite, Overwatch, Apex Legends"
+  },
+  "conv-48-qa-001": {
+   "correct": true,
+   "pred": "Deborah's father and mother."
+  },
+  "conv-48-qa-006": {
+   "correct": true,
+   "pred": "Deborah has a pendant that reminds her of her mother, and Jolene has a necklace with a locket containing a picture of her mother."
+  },
+  "conv-48-qa-008": {
+   "correct": false,
+   "pred": "Meditation, yoga, spending time with family, cherishing memories, and connecting with nature."
+  },
+  "conv-48-qa-013": {
+   "correct": true,
+   "pred": "A park with a forest trail, a beach, her old home, a garden with roses and dahlias, and a spot by the sea."
+  },
+  "conv-48-qa-014": {
+   "correct": false,
+   "pred": "Sitting by the window and taking in the view."
+  },
+  "conv-48-qa-019": {
+   "correct": false,
+   "pred": "None (not mentioned in conversation)."
+  },
+  "conv-48-qa-020": {
+   "correct": true,
+   "pred": "Detroit, Overcooked 2, It takes two, Walking Dead, Zelda BOTW, Animal Crossing: New Horizons"
+  },
+  "conv-48-qa-024": {
+   "correct": true,
+   "pred": "Dancer Pose (Natarajasana) and a tree pose."
+  },
+  "conv-48-qa-039": {
+   "correct": true,
+   "pred": "Deborah uses the Pomodoro Technique and creating a daily schedule or to-do list. She also breaks tasks into smaller pieces and sets goals. She uses planners or schedulers to stay organized. She also visits places that hold a lot of memories for her. She also uses a method to figure out what's important and urgent when she's overloaded. She also visits a place that holds a lot of memories for her. She also visits a place that holds a lot of memories for her. She also visits a place that holds a lot of memories for her. She also visits a place that holds a lot of memories for her. She also visits a place that holds a lot of memories for her. She also visits a place that holds a lot of memories for her. She also visits a place that holds a lot of memories for her. She also visits a place that holds a lot of memories for her. She also visits a place that holds a lot of memories for her. She also visits a place that holds a lot of memories for her. She also visits a place that holds a lot of memories for her. She also visits a place that holds a lot of memories for her. She also visits a place that holds a lot of memories for her. She also visits a place that holds"
+  },
+  "conv-48-qa-041": {
+   "correct": true,
+   "pred": "Deborah uses candles, essential oils, and soothing music to enhance her yoga practice. She also enjoys listening to calming music, specifically instrumental tracks like \"Savana\" by Nils Frahm and Olafur Arnalds, and an album called 'Sleep' for meditation and deep relaxation. She finds that certain smells like lavender and rosemary can transport her to a place of peace. Deborah also incorporates morning meditation, yoga, and teaching classes into her daily routine. She enjoys connecting with nature and self-reflection to enhance her practice. Jolene finds calm through yoga, meditation, and listening to music. She also enjoys playing the team-strategy game \"It takes two\" with her partner. Both Deborah and Jolene use music, nature, and community connections to enhance their yoga practice."
+  },
+  "conv-48-qa-073": {
+   "correct": true,
+   "pred": "Yes, Jolene taught herself how to play the console."
+  },
+  "conv-48-qa-077": {
+   "correct": false,
+   "pred": "Together"
+  },
+  "conv-48-qa-079": {
+   "correct": false,
+   "pred": "No, Deborah has not tried surfing."
+  },
+  "conv-48-qa-080": {
+   "correct": false,
+   "pred": "Yes, Jolene has tried surfing."
+  },
+  "conv-48-qa-082": {
+   "correct": false,
+   "pred": "One of the places where she does it and her mom's old house."
+  },
+  "conv-48-qa-083": {
+   "correct": true,
+   "pred": "Interning at a well-known engineering firm and planning to get out in nature again."
+  },
+  "conv-48-qa-084": {
+   "correct": true,
+   "pred": "Sustainable water purifiers and green technology projects"
+  },
+  "conv-48-qa-085": {
+   "correct": true,
+   "pred": "Running group, yoga events, mindfulness workshops, and a community cleanup project."
+  },
+  "conv-48-qa-086": {
+   "correct": false,
+   "pred": "A console for her partner and a pendant that reminds her of her mother."
+  },
+  "conv-48-qa-087": {
+   "correct": false,
+   "pred": "Bali and Rio de Janeiro"
+  },
+  "conv-48-qa-088": {
+   "correct": false,
+   "pred": "Meditating, jogging, spending time with loved ones, and teaching yoga."
+  },
+  "conv-49-qa-000": {
+   "correct": true,
+   "pred": "A Prius"
+  },
+  "conv-49-qa-001": {
+   "correct": true,
+   "pred": "His new Prius."
+  },
+  "conv-49-qa-002": {
+   "correct": true,
+   "pred": "Jasper and Banff"
+  },
+  "conv-49-qa-003": {
+   "correct": true,
+   "pred": "2"
+  },
+  "conv-49-qa-006": {
+   "correct": true,
+   "pred": "2"
+  },
+  "conv-49-qa-007": {
+   "correct": true,
+   "pred": "Painting and kayaking"
+  },
+  "conv-49-qa-008": {
+   "correct": true,
+   "pred": "Painting"
+  },
+  "conv-49-qa-011": {
+   "correct": false,
+   "pred": "A health scare"
+  },
+  "conv-49-qa-014": {
+   "correct": false,
+   "pred": "I don't know."
+  },
+  "conv-49-qa-015": {
+   "correct": true,
+   "pred": "Candy and soda"
+  },
+  "conv-49-qa-016": {
+   "correct": true,
+   "pred": "Self-checkout machines malfunctioning"
+  },
+  "conv-49-qa-018": {
+   "correct": true,
+   "pred": "Low-impact exercises like swimming, yoga, and walking; flavored seltzer with air-popped popcorn or fruit; healthy snacks; grilled chicken and veggie stir-fry; salads; and healthy recipes."
+  },
+  "conv-49-qa-021": {
+   "correct": true,
+   "pred": "Evan describes the woman as \"incredible\" and being \"alive\" for him, indicating a deep connection and excitement. He mentions being \"in love with her at first sight\" and that every moment with her is \"really fun and energizing.\" He also expresses regret for not getting married before, saying, \"I don't know why we didn't get married before, because I was in love with her at first sight!\""
+  },
+  "conv-49-qa-026": {
+   "correct": false,
+   "pred": "Evan's family motivates him to stay healthy."
+  },
+  "conv-49-qa-028": {
+   "correct": true,
+   "pred": "Journal writing and creative writing"
+  },
+  "conv-49-qa-029": {
+   "correct": true,
+   "pred": "Evan met an awesome Canadian woman on his trip to Canada and came back with his new significant other."
+  },
+  "conv-49-qa-032": {
+   "correct": false,
+   "pred": "Being mocked for his weight"
+  },
+  "conv-49-qa-033": {
+   "correct": true,
+   "pred": "Flying over skyscrapers"
+  },
+  "conv-49-qa-034": {
+   "correct": false,
+   "pred": "A soccer accident and a bike accident."
+  },
+  "conv-49-qa-036": {
+   "correct": true,
+   "pred": "Sam recommended to Evan to eat healthier, including less processed food and sugary snacks, and shared a recipe for a grilled chicken and veggie stir-fry with homemade sauce. Sam also suggested trying new recipes and mentioned making healthier choices. Additionally, Sam recommended trying painting as a hobby for stress relief and creativity. Sam also shared a recipe for cookies packed with nutrients."
+  },
+  "conv-49-qa-037": {
+   "correct": false,
+   "pred": "Sam started eating healthier, focusing on nutritious diets."
+  },
+  "conv-49-qa-042": {
+   "correct": true,
+   "pred": "Evan got into painting after his friend gave him some advice and he was hooked right away."
+  },
+  "conv-49-qa-044": {
+   "correct": true,
+   "pred": "Landscapes and nature"
+  },
+  "conv-49-qa-048": {
+   "correct": true,
+   "pred": "Sam adopted a new diet and exercise routine, including reducing soda and candy intake, eating more vegetables and fruit, and engaging in regular walking and swimming. He also started a new diet and living healthier, and made changes diet-wise to deal with discomfort and health scares. He also sought advice on a balanced diet plan and low-impact exercises."
+  },
+  "conv-49-qa-049": {
+   "correct": true,
+   "pred": "Evan"
+  },
+  "conv-49-qa-050": {
+   "correct": false,
+   "pred": "Evan pursues hobbies such as watercolor painting, helping lost tourists, and possibly hiking, as indicated by his mention of adventures with his family and a dream about hiking. He also considers trying painting as a new hobby."
+  },
+  "conv-49-qa-054": {
+   "correct": true,
+   "pred": "A sudden heart palpitation incident in the week before 6 June 2023 and a knee injury while playing basketball with the kids in the week before 6 October 2023."
+  },
+  "conv-49-qa-055": {
+   "correct": true,
+   "pred": "Helping lost tourists find their way."
+  },
+  "conv-49-qa-056": {
+   "correct": true,
+   "pred": "The navigation app keeps malfunctioning."
+  },
+  "conv-49-qa-062": {
+   "correct": true,
+   "pred": "Sam experienced a severe stomal incident that required an ER visit and a heart palpitation incident. Evan had a heart palpitation incident, a health scare that led to a hospital visit, and an encounter with a lost tourist. Evan also had a health scare that resulted in a hospital visit due to a suspicious finding during a check-up, which turned out to be a misunderstanding."
+  },
+  "conv-49-qa-064": {
+   "correct": false,
+   "pred": "A serious health risk"
+  },
+  "conv-49-qa-069": {
+   "correct": true,
+   "pred": "Evan's partner is pregnant in December 2023, and Evan gets married in the week before December 26, 2023."
+  },
+  "conv-49-qa-072": {
+   "correct": true,
+   "pred": "Hiking"
+  },
+  "conv-49-qa-077": {
+   "correct": false,
+   "pred": "He spends time in places like this, bringing back memories of road tripping in his car."
+  },
+  "conv-49-qa-078": {
+   "correct": true,
+   "pred": "His work friends and extended family"
+  },
+  "conv-49-qa-081": {
+   "correct": false,
+   "pred": "Painting"
+  },
+  "conv-49-qa-082": {
+   "correct": false,
+   "pred": "Painting"
+  },
+  "conv-50-qa-001": {
+   "correct": true,
+   "pred": "A new mansion and a luxury car."
+  },
+  "conv-50-qa-003": {
+   "correct": true,
+   "pred": "Aerosmith"
+  },
+  "conv-50-qa-005": {
+   "correct": true,
+   "pred": "Dave's dreams include opening his own car maintenance shop, working on classic cars, building a custom car from scratch, and attending a car lover's paradise event. He also aspires to learn about Japanese culture."
+  },
+  "conv-50-qa-006": {
+   "correct": true,
+   "pred": "Dave is most interested in classic cars and muscle cars. He mentioned being thrilled to restore a classic car and working on a muscle car with modern twists. He also expressed his passion for classic cars, stating they have a unique charm."
+  },
+  "conv-50-qa-011": {
+   "correct": false,
+   "pred": "A flooded place"
+  },
+  "conv-50-qa-015": {
+   "correct": true,
+   "pred": "Dave regularly visits parks to relax and enjoy the peacefulness of nature."
+  },
+  "conv-50-qa-018": {
+   "correct": false,
+   "pred": "1"
+  },
+  "conv-50-qa-019": {
+   "correct": true,
+   "pred": "Calvin visited Shibuya Crossing, Shinjuku, and a music festival in Tokyo. He also explored the city, tried different local cuisines, and met artists and industry people at a festival. He took a concert photo in Tokyo and expressed excitement about visiting similar streets in the future."
+  },
+  "conv-50-qa-020": {
+   "correct": false,
+   "pred": "Dave's neighbor"
+  },
+  "conv-50-qa-022": {
+   "correct": true,
+   "pred": "Yes, Calvin wants to expand his brand."
+  },
+  "conv-50-qa-023": {
+   "correct": false,
+   "pred": "Fixing cars"
+  },
+  "conv-50-qa-024": {
+   "correct": true,
+   "pred": "Yes, Dave can work with engines."
+  },
+  "conv-50-qa-028": {
+   "correct": true,
+   "pred": "Calvin relaxes by taking long drives in his car, listening to vinyl music, and working on car projects."
+  },
+  "conv-50-qa-029": {
+   "correct": false,
+   "pred": "Hanging out with friends at parks and arranging regular walks with friends."
+  },
+  "conv-50-qa-030": {
+   "correct": false,
+   "pred": "Vinyl records"
+  },
+  "conv-50-qa-032": {
+   "correct": true,
+   "pred": "San Francisco"
+  },
+  "conv-50-qa-033": {
+   "correct": true,
+   "pred": "Attending a car workshop"
+  },
+  "conv-50-qa-040": {
+   "correct": true,
+   "pred": "Tupac and Dr. Dre's \"California Love\""
+  },
+  "conv-50-qa-041": {
+   "correct": true,
+   "pred": "Dave's dad"
+  },
+  "conv-50-qa-045": {
+   "correct": false,
+   "pred": "Dave and Calvin have shared activities such as jam sessions and music collaborations."
+  },
+  "conv-50-qa-046": {
+   "correct": true,
+   "pred": "Working on cars"
+  },
+  "conv-50-qa-047": {
+   "correct": false,
+   "pred": "3"
+  },
+  "conv-50-qa-049": {
+   "correct": true,
+   "pred": "Dave and his father spent one summer restoring an old car."
+  },
+  "conv-50-qa-053": {
+   "correct": false,
+   "pred": "Dave"
+  },
+  "conv-50-qa-054": {
+   "correct": false,
+   "pred": "Writing lyrics and notes"
+  },
+  "conv-50-qa-056": {
+   "correct": false,
+   "pred": "Tokyo and Boston"
+  },
+  "conv-50-qa-058": {
+   "correct": false,
+   "pred": "Dave's first trip to a car show at the age of 10 and his father's influence."
+  },
+  "conv-50-qa-059": {
+   "correct": false,
+   "pred": "None (not mentioned in conversation)."
+  },
+  "conv-50-qa-060": {
+   "correct": true,
+   "pred": "A custom-made guitar with an octopus design and a unique necklace."
+  },
+  "conv-50-qa-063": {
+   "correct": false,
+   "pred": "Calvin owns customized guitars with a unique, unique, and unique style."
+  },
+  "conv-50-qa-064": {
+   "correct": false,
+   "pred": "Dave has participated in a card night, recording a podcast, going on a road trip, and arranging regular walks with friends in the park."
+  },
+  "conv-50-qa-066": {
+   "correct": true,
+   "pred": "No, not all of Dave's car restoration projects go smoothly."
+  }
+ }
+}

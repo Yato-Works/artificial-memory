@@ -1,0 +1,4 @@
+cached contexts: 1986  convs=[0]  limit=12
+phi4-mini:latest       acc= 75.0% (9/12)  oracle= 91.7%  52s  multi-hop= 75.0%  temporal= 71.4%  open-domain=100.0%
+
+saved: benchmark_results\ab_reader_phi4_probe.json

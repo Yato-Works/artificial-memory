@@ -1,0 +1,14 @@
+cache rows: 500  selected: 17
+fixes: global_ef=True ss_user=False multi=False temporal=True ku=False ss_assist=False
+reader: qwen2.5:7b-instruct-q4_K_M num_ctx=8192
+
+
+=== ARM RESULT (n=17) ===
+  ALL               58.8%  (10/17)
+  temporal-reasoning           58.8%  (10/17)
+
+  refusals in arm : 3
+  fixed vs baseline : +10
+  broken vs baseline: -0
+  elapsed          : 95s (5.61s/Q)
+  saved: benchmark_results\ab_lme_temporal_v2.json

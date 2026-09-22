@@ -745,6 +745,185 @@ def _abstention_probe(runtime, engine, store_all, dataset, floors,
 
 
 # ---------------------------------------------------------------------------
+# Phase 8.13: abstention margin probe (query-relative abstention detector)
+# ---------------------------------------------------------------------------
+
+DEFAULT_TAUS = [0.5, 1.0, 2.0, 3.0, 5.0, 8.0, 12.0]
+
+
+class MarginProbe:
+    """Phase 8.13 probe: is abstention *separable* from answerable queries?
+
+    The Phase 8.12 audit proved abstention questions now have ZERO evidence in
+    the store, yet an absolute BM25 floor only empties them at floor=8.0 --
+    which also destroys 70% of GT retention.  A fixed floor is therefore the
+    wrong lever.
+
+    This probe measures whether the two query families separate on
+    *query-relative* statistics instead:
+
+      top1        = max own BM25 over the full store pool
+      top1_ratio  = top1 / (mean of the top-10)  -- peakiness
+      mass_above  = memories scoring >= tau (for a few tau)
+
+    If abstention top1 sits strictly below answerable top1, a *threshold on
+    the query's own top1* is a valid abstention detector (and the floor becomes
+    a per-query decision, not a constant).
+    """
+
+    def __init__(self, runtime, dataset, store_all, taus):
+        from artificial_memory.core.models import RecallLevel as RL
+        from artificial_memory.recall.deepseek_engine import DeepSeekRecallEngine
+        from artificial_memory.recall.retrieval_cache import SessionGate
+
+        self.runtime = runtime
+        self.dataset = dataset
+        self.store_all = store_all
+        self.TAUS = taus
+        theme = runtime.recall_engine
+        assert isinstance(theme, DeepSeekRecallEngine)
+        # Raw scorer with production corpus statistics (no gate narrowing).
+        self.probe_gate = SessionGate(
+            pool_size=10 ** 9,
+            corpus_provider=runtime._store_snapshot,
+                        score_floor=0.0,
+        )
+        self.probe_gate._ensure_corpus(store_all)
+
+    def _stats_for(self, question: str) -> dict:
+        scores = sorted(
+            (self.probe_gate._bm25(question, m) for m in self.store_all),
+            reverse=True,
+        )
+        top1 = scores[0] if scores else 0.0
+        top10 = scores[:10] or [0.0]
+        mean_top10 = sum(top10) / len(top10)
+        return {
+            "top1": round(top1, 4),
+            "top2": round(scores[1], 4) if len(scores) > 1 else 0.0,
+            "top10_mean": round(mean_top10, 4),
+            "top1_ratio": round(top1 / mean_top10, 3) if mean_top10 else 0.0,
+            "mass": {
+                str(t): sum(1 for s in scores if s >= t) for t in self.TAUS
+            },
+        }
+
+    def run(self) -> dict:
+        groups: dict = {}
+        abst = self.dataset.by_category(ArenaCategory.ABSTENTION)
+        groups["abstention"] = [
+            (q.question_id, self._stats_for(q.question)) for q in abst
+        ]
+
+        for cat in ArenaCategory:
+            if cat is ArenaCategory.ABSTENTION:
+                continue
+            qs = self.dataset.by_category(cat)
+            groups[cat.value] = [
+                (q.question_id, self._stats_for(q.question)) for q in qs
+            ]
+
+        flat = [
+            (name, qid, s["top1"]) for name, rows in groups.items() for qid, s in rows
+        ]
+        flat.sort(key=lambda r: r[2])
+
+        gt_tops = [t for n, _, t in flat if n != "abstention"]
+        ab_tops = [t for n, _, t in flat if n == "abstention"]
+
+        def _margin_of(vals_ab, vals_gt):
+            ab_max = max(vals_ab) if vals_ab else 0.0
+            gt_min = min(vals_gt) if vals_gt else 0.0
+            return {
+                "abstain_max": round(ab_max, 4),
+                "answer_min": round(gt_min, 4),
+                "gap": round(gt_min - ab_max, 4),
+                "rel_gap": round((gt_min - ab_max) / ab_max, 4) if ab_max else 0.0,
+            }
+
+        candidates: dict = {
+            "top1": _margin_of(
+                [s["top1"] for _, s in groups["abstention"]],
+                [s["top1"] for n, rows in groups.items() if n != "abstention" for _, s in rows],
+            ),
+            "top1_ratio": _margin_of(
+                [s["top1_ratio"] for _, s in groups["abstention"]],
+                [s["top1_ratio"] for n, rows in groups.items() if n != "abstention" for _, s in rows],
+            ),
+            "top1_minus_top10mean": _margin_of(
+                [s["top1"] - s["top10_mean"] for _, s in groups["abstention"]],
+                [s["top1"] - s["top10_mean"] for n, rows in groups.items() if n != "abstention" for _, s in rows],
+            ),
+        }
+        for tau in self.TAUS:
+            candidates[f"mass@{tau}"] = _margin_of(
+                [s["mass"][str(tau)] for _, s in groups["abstention"]],
+                [s["mass"][str(tau)] for n, rows in groups.items() if n != "abstention" for _, s in rows],
+            )
+
+        print("=== ALL QUESTIONS BY top1 (ascending) ===")
+        for name, qid, top1 in flat:
+            mark = "ABSTAIN" if name == "abstention" else "answer "
+            print(f"  {top1:>7.2f}  [{mark}] {name:<28} {qid}")
+
+        print()
+        for name, rows in groups.items():
+            tops = [r[1]["top1"] for r in rows]
+            print(f"=== {name}  (n={len(rows)}, top1 min={min(tops):.2f} "
+                  f"max={max(tops):.2f} mean={sum(tops)/len(tops):.2f})")
+
+        best = max(candidates.items(), key=lambda kv: kv[1]["rel_gap"])
+        print("\n=== DETECTOR STATISTIC COMPARISON (rel_gap = margin / abstain_max) ===")
+        for name, m in sorted(candidates.items(), key=lambda kv: -kv[1]["rel_gap"]):
+            print(f"  {name:<22} abstain_max={m['abstain_max']:>8} "
+                  f"answer_min={m['answer_min']:>8} gap={m['gap']:>8} "
+                  f"rel_gap={m['rel_gap']:>7.3f}")
+        print(f"\n  separation gap : {min(gt_tops) - max(ab_tops):+.2f} "
+              f"(>0 => a single top1 threshold separates perfectly)")
+        print(f"  best statistic : {best[0]} (rel_gap={best[1]['rel_gap']:.3f})")
+
+        return {
+            "taus": self.TAUS,
+            "groups": groups,
+            "flat_sorted_by_top1_asc": [
+                {"category": n, "question_id": qid, "top1": top1}
+                for n, qid, top1 in flat
+            ],
+            "abstention_top1": ab_tops,
+            "answerable_top1": gt_tops,
+            "separation_gap": round(min(gt_tops) - max(ab_tops), 4),
+            "statistic_comparison": candidates,
+            "best_statistic": {
+                "name": best[0],
+                "rel_gap": best[1]["rel_gap"],
+                "gap": best[1]["gap"],
+            },
+        }
+
+
+def abstention_margin(dataset, taus=None, candidate_window: int | None = None) -> dict:
+    """Phase 8.13 one-shot entry: build the store, run the margin probe."""
+    import asyncio
+    from artificial_memory.runtime import ArtificialMemoryRuntime, RuntimeConfig
+
+    taus = taus if taus is not None else DEFAULT_TAUS
+    runtime = ArtificialMemoryRuntime(RuntimeConfig(
+        database_path=":memory:",
+        memory_files_path=None,
+        vector_index_path=None,
+        retrieval_strategy="deepseek_session",
+        candidate_window=candidate_window if candidate_window else 450,
+    ))
+    for scenario in dataset.scenarios:
+        for turn in scenario.turns:
+            if turn.speaker == "user":
+                asyncio.run(runtime.remember(turn.content, topic="Arena"))
+    topic = runtime.conversation_manager.get_or_create_topic("Arena")
+    store_all = runtime.store.get_memories(topic_id=topic.id, limit=10000)
+    return MarginProbe(runtime, dataset, store_all, taus).run()
+
+
+# ---------------------------------------------------------------------------
 # Phase 8.7: cheap-recall scorer comparison (LLM-free offline sweep)
 # ---------------------------------------------------------------------------
 
@@ -1548,6 +1727,13 @@ def main() -> None:
     parser.add_argument("--floor-values", default="0,0.5,1,2,3,5,8",
                         help="comma list of score_floor values for "
                              "--abstention-audit")
+    parser.add_argument("--abstention-margin", action="store_true",
+                        help="Phase 8.13: query-relative top1 separation "
+                             "probe (query-relative abstention detector "
+                             "instead of absolute floor; LLM-free)")
+    parser.add_argument("--margin-taus", default="0.5,1,2,3,5,8,12",
+                        help="comma list of BM25 mass thresholds for "
+                             "--abstention-margin")
     parser.add_argument("--output-dir", default="benchmark/results")
     args = parser.parse_args()
 
@@ -1629,6 +1815,16 @@ def main() -> None:
         out_path = out_dir / f"abstention_audit_{stamp}.json"
         out_path.write_text(
             json.dumps(audit, indent=2, ensure_ascii=False), encoding="utf-8"
+        )
+        print(f"\nevidence written: {out_path}")
+        return
+
+    if args.abstention_margin:
+        taus = [float(t) for t in args.margin_taus.split(",") if t.strip()]
+        result = abstention_margin(dataset, taus=taus)
+        out_path = out_dir / f"abstention_margin_{stamp}.json"
+        out_path.write_text(
+            json.dumps(result, indent=2, ensure_ascii=False), encoding="utf-8"
         )
         print(f"\nevidence written: {out_path}")
         return

@@ -1,0 +1,2049 @@
+{
+  "summary": {
+    "conv_idx": 0,
+    "sample_id": "conv-26",
+    "mode": "full",
+    "total_questions": 199,
+    "total_turns": 419,
+    "total_ir_records": 419,
+    "overall_accuracy": 0.8040201005025126,
+    "overall_oracle_recall": 0.7638190954773869,
+    "factual_accuracy": 0.8040201005025126,
+    "factual_oracle_recall": 0.8486842105263158,
+    "mean_tokens": 1993.502512562814,
+    "mean_latency_ms": 2940.2250366827448,
+    "elapsed_seconds": 585.1186561000068,
+    "categories": {
+      "temporal": {
+        "total": 37,
+        "correct": 26,
+        "oracle": 35
+      },
+      "open-domain": {
+        "total": 13,
+        "correct": 10,
+        "oracle": 9
+      },
+      "multi-hop": {
+        "total": 32,
+        "correct": 19,
+        "oracle": 26
+      },
+      "single-hop": {
+        "total": 70,
+        "correct": 60,
+        "oracle": 59
+      },
+      "adversarial": {
+        "total": 47,
+        "correct": 45,
+        "oracle": 23
+      }
+    },
+    "failure_taxonomy_v2": {
+      "TEMPORAL_FAILURE": 9,
+      "ABSTENTION_FAILURE": 11,
+      "COMPOSITION_FAILURE": 4,
+      "RETRIEVAL_FAILURE": 10,
+      "VERIFICATION_FAILURE": 4,
+      "GROUNDING_FAILURE": 1
+    },
+    "reader": {
+      "reader_model": "qwen2.5:7b-instruct-q4_K_M",
+      "num_ctx": 8192,
+      "hints_enabled": false
+    }
+  },
+  "results": [
+    {
+      "question_id": "conv-26-qa-000",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Caroline went to the LGBTQ support group on 7 May 2023.",
+      "ground_truth": "7 May 2023",
+      "tokens_used": 2204,
+      "latency_ms": 5564.372499997262,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-001",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Melanie painted a sunrise last year (2022).",
+      "ground_truth": "2022",
+      "tokens_used": 1875,
+      "latency_ms": 2735.339400009252,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-002",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "Counseling or mental health.",
+      "ground_truth": "Psychology, counseling certification",
+      "tokens_used": 2123,
+      "latency_ms": 2964.6928000147454,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-003",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Caroline researched adoption agencies.",
+      "ground_truth": "Adoption agencies",
+      "tokens_used": 1915,
+      "latency_ms": 2784.5005999843124,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-004",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Caroline identifies as transgender.",
+      "ground_truth": "Transgender woman",
+      "tokens_used": 1968,
+      "latency_ms": 2737.998399999924,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-005",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "The Saturday before 25 May 2023.",
+      "ground_truth": "The sunday before 25 May 2023",
+      "tokens_used": 1781,
+      "latency_ms": 2617.1308000048157,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-26-qa-006",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Melanie went camping with her family a few weeks ago, but she hasn't mentioned any specific plans for future camping trips.",
+      "ground_truth": "June 2023",
+      "tokens_used": 1807,
+      "latency_ms": 3049.72879998968,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-26-qa-007",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Caroline is single.",
+      "ground_truth": "Single",
+      "tokens_used": 1874,
+      "latency_ms": 2708.9323999825865,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-008",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Caroline gave a speech at a school on the week before 9 June 2023.",
+      "ground_truth": "The week before 9 June 2023",
+      "tokens_used": 2052,
+      "latency_ms": 3235.677200020291,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-009",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "The week before 6 July 2023.",
+      "ground_truth": "The week before 9 June 2023",
+      "tokens_used": 2110,
+      "latency_ms": 3141.587099991739,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-26-qa-010",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "4 years",
+      "ground_truth": "4 years",
+      "tokens_used": 3475,
+      "latency_ms": 4569.736400007969,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-011",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "No information available (not mentioned in the conversation).",
+      "ground_truth": "Sweden",
+      "tokens_used": 1983,
+      "latency_ms": 3112.7646999957506,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-26-qa-012",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Ten years ago.",
+      "ground_truth": "10 years ago",
+      "tokens_used": 3186,
+      "latency_ms": 4218.977099983022,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-013",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Counseling or working in mental health.",
+      "ground_truth": "counseling or mental health for Transgender people",
+      "tokens_used": 3476,
+      "latency_ms": 4947.83930000267,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-014",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "No",
+      "ground_truth": "Likely no",
+      "tokens_used": 2139,
+      "latency_ms": 2998.112900007982,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-015",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Melanie partakes in pottery, painting, swimming, running, reading, and playing the violin.",
+      "ground_truth": "pottery, camping, painting, swimming",
+      "tokens_used": 1757,
+      "latency_ms": 3095.952200004831,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-016",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "2 July 2023",
+      "ground_truth": "2 July 2023",
+      "tokens_used": 1739,
+      "latency_ms": 2594.8066000128165,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-017",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "July 2023.",
+      "ground_truth": "July 2023",
+      "tokens_used": 1956,
+      "latency_ms": 2802.412799996091,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-018",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "The context mentions that Melanie has camped in the mountains and at the beach.",
+      "ground_truth": "beach, mountains, forest",
+      "tokens_used": 1720,
+      "latency_ms": 2909.3533999985084,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-019",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Melanie's kids like painting, exploring nature, and making pottery.",
+      "ground_truth": "dinosaurs, nature",
+      "tokens_used": 1875,
+      "latency_ms": 2924.073900008807,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-020",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "yesterday (5 July 2023)",
+      "ground_truth": "5 July 2023",
+      "tokens_used": 1797,
+      "latency_ms": 2730.6159999861848,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-021",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "The week before 6 July 2023.",
+      "ground_truth": "The week before 6 July 2023",
+      "tokens_used": 1957,
+      "latency_ms": 2964.8147999832872,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-022",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "Likely yes, as she has a collection of kids' books including classics.",
+      "ground_truth": "Yes, since she collects classic children's books",
+      "tokens_used": 2163,
+      "latency_ms": 3309.5338999992236,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-023",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Melanie read a book that reminded her to pursue her dreams.",
+      "ground_truth": "\"Nothing is Impossible\", \"Charlotte's Web\"",
+      "tokens_used": 1787,
+      "latency_ms": 2969.630400009919,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-26-qa-024",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Melanie runs to destress.",
+      "ground_truth": "Running, pottery",
+      "tokens_used": 1781,
+      "latency_ms": 2620.8031999995,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-26-qa-025",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Caroline went to the LGBTQ conference on 10 July 2023.",
+      "ground_truth": "10 July 2023",
+      "tokens_used": 2136,
+      "latency_ms": 3328.7165999936406,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-026",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "2022",
+      "tokens_used": 1832,
+      "latency_ms": 2758.2105999754276,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-26-qa-027",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "LIkely no; though she likes reading, she wants to be a counselor",
+      "tokens_used": 2012,
+      "latency_ms": 2859.152000019094,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-028",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Last Friday (the Friday before 15 July 2023).",
+      "ground_truth": "The friday before 15 July 2023",
+      "tokens_used": 1996,
+      "latency_ms": 3166.4709999749903,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-029",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Last Friday before 15 July 2023.",
+      "ground_truth": "The Friday before 15 July 2023",
+      "tokens_used": 1829,
+      "latency_ms": 2882.691800012253,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-030",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "No.",
+      "ground_truth": "Likely no, she does not refer to herself as part of it",
+      "tokens_used": 1781,
+      "latency_ms": 2540.2500000200234,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-031",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "The week before 27 June 2023.",
+      "ground_truth": "The week before 27 June 2023",
+      "tokens_used": 1969,
+      "latency_ms": 3000.570699980017,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-032",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Caroline participated in an LGBTQ+ support group, an LGBTQ conference, a pride parade, and an LGBTQ art show.",
+      "ground_truth": "Pride parade, school speech, support group",
+      "tokens_used": 2107,
+      "latency_ms": 3552.503200015053,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-033",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Caroline went to a pride parade last Friday (the Friday before 14 August 2023).",
+      "ground_truth": "The week before 3 July 2023",
+      "tokens_used": 1955,
+      "latency_ms": 3229.1099000140093,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-26-qa-034",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Caroline participated in a council meeting for adoption and is putting together a talent show for kids.",
+      "ground_truth": "Mentoring program, school speech",
+      "tokens_used": 2063,
+      "latency_ms": 3331.177599990042,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-26-qa-035",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Melanie went camping in the mountains the week before 27 June 2023, which would be around 20-24 June 2023.",
+      "ground_truth": "two weekends before 17 July 2023",
+      "tokens_used": 1800,
+      "latency_ms": 3564.5826999971177,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-26-qa-036",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "The weekend before 17 July 2023.",
+      "ground_truth": "The weekend before 17 July 2023",
+      "tokens_used": 1927,
+      "latency_ms": 3008.9716000074986,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-037",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Melanie painted a sunset-inspired piece and a horse.",
+      "ground_truth": "sunset",
+      "tokens_used": 1902,
+      "latency_ms": 3034.7996999917086,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-038",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Melanie has gone camping at the beach, hiking in the mountains, and taken her kids to a pottery workshop with her family.",
+      "ground_truth": "Pottery, painting, camping, museum, swimming, hiking",
+      "tokens_used": 1940,
+      "latency_ms": 3404.779400007101,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-039",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Caroline is participating in the LGBTQ community by joining an activist group, attending pride parades, giving talks about her journey, volunteering at a mentorship program for LGBTQ youth, attending conferences, and creating art that promotes the community.",
+      "ground_truth": "Joining activist group, going to pride parades, participating in an art show, mentoring program",
+      "tokens_used": 2116,
+      "latency_ms": 3997.5661000062246,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-040",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "1",
+      "ground_truth": "2",
+      "tokens_used": 3056,
+      "latency_ms": 4643.995899998117,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-26-qa-041",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Caroline joined a new activist group on the Tuesday before 20 July 2023.",
+      "ground_truth": "The Tuesday before 20 July 2023",
+      "tokens_used": 1933,
+      "latency_ms": 3262.7325000066776,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-042",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "National park.",
+      "ground_truth": "National park; she likes the outdoors",
+      "tokens_used": 1914,
+      "latency_ms": 2751.1928000021726,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-043",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Caroline makes paintings and drawings, specifically about her trans experience.",
+      "ground_truth": "abstract art",
+      "tokens_used": 1908,
+      "latency_ms": 3042.913100012811,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-26-qa-044",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "13 August",
+      "tokens_used": 1779,
+      "latency_ms": 2598.3043999876827,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-26-qa-045",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Caroline attended a pride parade last Friday (the Friday before 14 August 2023).",
+      "ground_truth": "The Friday before 14 August 2023",
+      "tokens_used": 1900,
+      "latency_ms": 3296.9801999861374,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-046",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "Yes",
+      "ground_truth": "Yes, she is supportive",
+      "tokens_used": 1867,
+      "latency_ms": 2621.1840999894775,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-047",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Caroline mentions that a group of religious conservatives who said upsetting things during a hike made her think about the work still needed for LGBTQ rights, but she does not specify who directly supported her in this situation. I don't know.",
+      "ground_truth": "Her mentors, family, and friends",
+      "tokens_used": 2181,
+      "latency_ms": 4196.721799991792,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-26-qa-048",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "The kids made pots at the workshop, and Melanie made a plate in a pottery class.",
+      "ground_truth": "bowls, cup",
+      "tokens_used": 1894,
+      "latency_ms": 3144.5198000001255,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-26-qa-049",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "2022",
+      "tokens_used": 1850,
+      "latency_ms": 2696.012000000337,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-26-qa-050",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "Liberal",
+      "ground_truth": "Liberal",
+      "tokens_used": 2133,
+      "latency_ms": 2923.388299997896,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-051",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Melanie has painted a lake sunrise, a beach sunset, an abstract painting, and nature-inspired paintings.",
+      "ground_truth": "Horse, sunset, sunrise",
+      "tokens_used": 1764,
+      "latency_ms": 3104.0625000023283,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-052",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Luna and Oliver.",
+      "ground_truth": "Oliver, Luna, Bailey",
+      "tokens_used": 1736,
+      "latency_ms": 2568.2698000164237,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-053",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Caroline applied to adoption agencies on 15 July 2023.",
+      "ground_truth": "The week of 23 August 2023",
+      "tokens_used": 1949,
+      "latency_ms": 3143.037900008494,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-26-qa-054",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Caroline drew a self-portrait the week before 23 August 2023.",
+      "ground_truth": "The week before 23 August 2023",
+      "tokens_used": 1932,
+      "latency_ms": 3220.794900000328,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-055",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "lake sunrise",
+      "ground_truth": "Sunsets",
+      "tokens_used": 1957,
+      "latency_ms": 2785.4925999999978,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-26-qa-056",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "The rainbow flag mural and the eagle symbol are important to Caroline.",
+      "ground_truth": "Rainbow flag, transgender symbol",
+      "tokens_used": 2231,
+      "latency_ms": 3197.5374999747146,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-057",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "On a hike, Caroline ran into a group of religious conservatives and had a negative experience.",
+      "ground_truth": "The week before 25 August 2023",
+      "tokens_used": 2211,
+      "latency_ms": 3392.2710999904666,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-26-qa-058",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "24 August 2023",
+      "ground_truth": "24 August 2023",
+      "tokens_used": 1716,
+      "latency_ms": 2657.4241000053007,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-059",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "No",
+      "ground_truth": "Somewhat, but not extremely religious",
+      "tokens_used": 1995,
+      "latency_ms": 2660.353400016902,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-060",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Melanie plays clarinet.",
+      "ground_truth": "clarinet and violin",
+      "tokens_used": 1580,
+      "latency_ms": 2600.3599999821745,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-061",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Summer Sounds",
+      "ground_truth": "Summer Sounds, Matt Patterson",
+      "tokens_used": 1842,
+      "latency_ms": 2683.2357000093907,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-062",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "27 August 2023",
+      "ground_truth": "27 August 2023",
+      "tokens_used": 1850,
+      "latency_ms": 2812.799699982861,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-063",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "September 2023",
+      "ground_truth": "September 2023",
+      "tokens_used": 2038,
+      "latency_ms": 2952.4095999950077,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-064",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Yes; it's classical music",
+      "tokens_used": 1836,
+      "latency_ms": 2830.720400001155,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-26-qa-065",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Caroline faced changes in relationships, as some friends couldn't handle her transition, and she formed a stronger bond with those who accepted and loved her. She also changed her career path, moving towards counseling and mental health to support others going through similar experiences.",
+      "ground_truth": "Changes to her body, losing unsupportive friends",
+      "tokens_used": 2269,
+      "latency_ms": 4421.793099987553,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-066",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Melanie hikes in the mountains with her family and enjoys exploring forests together.",
+      "ground_truth": "Roast marshmallows, tell stories",
+      "tokens_used": 1985,
+      "latency_ms": 3166.924100019969,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-26-qa-067",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "The weekend before 13 September 2023.",
+      "ground_truth": "The weekend before 13 September 2023",
+      "tokens_used": 2061,
+      "latency_ms": 3112.658800004283,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-068",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Since 2016.",
+      "ground_truth": "Since 2016",
+      "tokens_used": 2852,
+      "latency_ms": 3902.8728999837767,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-069",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "Supportive, open-minded, and passionate.",
+      "ground_truth": "Thoughtful, authentic, driven",
+      "tokens_used": 1865,
+      "latency_ms": 2743.6534000153188,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-26-qa-070",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Caroline attended a pride event and a transgender conference.",
+      "ground_truth": "Poetry reading, conference",
+      "tokens_used": 2016,
+      "latency_ms": 2954.952300002333,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-071",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "No information available (not mentioned in the conversation).",
+      "ground_truth": "\"Becoming Nicole\"",
+      "tokens_used": 3430,
+      "latency_ms": 4603.539000003366,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-26-qa-072",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "In 2022.",
+      "ground_truth": "2022",
+      "tokens_used": 1698,
+      "latency_ms": 2420.08340000757,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-073",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Last month (September 2023).",
+      "ground_truth": "September 2023",
+      "tokens_used": 1913,
+      "latency_ms": 2725.955200003227,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-074",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "On 20 October 2023.",
+      "ground_truth": "The weekend before 20 October 2023",
+      "tokens_used": 1881,
+      "latency_ms": 2746.4728000049945,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-26-qa-075",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "3",
+      "tokens_used": 2992,
+      "latency_ms": 4004.7121999959927,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-26-qa-076",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "No information available (not mentioned in the conversation).",
+      "ground_truth": "19 October 2023",
+      "tokens_used": 1791,
+      "latency_ms": 2655.7026999944355,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-26-qa-077",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Likely no; since this one went badly",
+      "tokens_used": 1779,
+      "latency_ms": 2503.9848999876995,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-078",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Melanie bought figurines yesterday (21 October 2023).",
+      "ground_truth": "Figurines, shoes",
+      "tokens_used": 1828,
+      "latency_ms": 2874.835800001165,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-079",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Caroline passed the adoption agency interviews last Friday (the Friday before 22 October 2023).",
+      "ground_truth": "The Friday before 22 October 2023",
+      "tokens_used": 1996,
+      "latency_ms": 3164.1961999994237,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-080",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "21 October 2023",
+      "ground_truth": "21 October 2023",
+      "tokens_used": 1801,
+      "latency_ms": 2540.6146000023,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-081",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "No; she's in the process of adopting children.",
+      "tokens_used": 2158,
+      "latency_ms": 2850.118400005158,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-26-qa-082",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "mental health",
+      "ground_truth": "mental health",
+      "tokens_used": 1737,
+      "latency_ms": 2331.1821999959648,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-083",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Melanie realized that self-care is really important.",
+      "ground_truth": "self-care is important",
+      "tokens_used": 1843,
+      "latency_ms": 2625.2875000063796,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-084",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Melanie prioritizes self-care by carving out time each day for activities like running, reading, or playing the violin, which refreshes her and helps her stay present for her family.",
+      "ground_truth": "by carving out some me-time each day for activities like running, reading, or playing the violin",
+      "tokens_used": 1799,
+      "latency_ms": 3285.764200001722,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-085",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Caroline plans to do a family outing and considers planning something special with Melanie.",
+      "ground_truth": "researching adoption agencies",
+      "tokens_used": 1943,
+      "latency_ms": 2907.2728999890387,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-26-qa-086",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "LGBTQ+ folks.",
+      "ground_truth": "LGBTQ+ individuals",
+      "tokens_used": 2189,
+      "latency_ms": 2808.0000999907497,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-087",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Because they help LGBTQ+ folks with adoption, their inclusivity and support spoke to Caroline.",
+      "ground_truth": "because of their inclusivity and support for LGBTQ+ individuals",
+      "tokens_used": 1960,
+      "latency_ms": 2919.069900002796,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-088",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Caroline is excited about starting the adoption process and giving a loving home to kids who need it.",
+      "ground_truth": "creating a family for kids who need one",
+      "tokens_used": 2040,
+      "latency_ms": 3108.872299984796,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-089",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Melanie thinks positively about Caroline's decision to adopt, supporting her and congratulating her on taking the step.",
+      "ground_truth": "she thinks Caroline is doing something amazing and will be an awesome mom",
+      "tokens_used": 3438,
+      "latency_ms": 4936.626999988221,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-090",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "5 years.",
+      "ground_truth": "Mel and her husband have been married for 5 years.",
+      "tokens_used": 2766,
+      "latency_ms": 3703.9709000091534,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-091",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Caroline's necklace stands for love, faith, and strength.",
+      "ground_truth": "love, faith, and strength",
+      "tokens_used": 2023,
+      "latency_ms": 2914.4994000089355,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-092",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Sweden.",
+      "ground_truth": "Sweden",
+      "tokens_used": 1959,
+      "latency_ms": 2524.3080999935046,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-093",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A necklace.",
+      "ground_truth": "necklace",
+      "tokens_used": 1995,
+      "latency_ms": 2501.616399997147,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-094",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "good connections and times",
+      "ground_truth": "art and self-expression",
+      "tokens_used": 1860,
+      "latency_ms": 2436.2344999972265,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-095",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "They roasted marshmallows, told stories around the campfire, explored nature, went on a hike, and watched the Perseid meteor shower.",
+      "ground_truth": "explored nature, roasted marshmallows, and went on a hike",
+      "tokens_used": 1967,
+      "latency_ms": 3297.999100002926,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-096",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Caroline is interested in working with trans people, helping them accept themselves and supporting their mental health. She is looking into counseling and mental health jobs.",
+      "ground_truth": "working with trans people, helping them accept themselves and supporting their mental health",
+      "tokens_used": 2000,
+      "latency_ms": 3324.858200008748,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-097",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Caroline attended an LGBTQ+ counseling workshop recently.",
+      "ground_truth": "LGBTQ+ counseling workshop",
+      "tokens_used": 2143,
+      "latency_ms": 2938.744899991434,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-098",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Different therapeutic methods and how to best work with trans people.",
+      "ground_truth": "therapeutic methods and how to best work with trans people",
+      "tokens_used": 2063,
+      "latency_ms": 2921.9445000053383,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-099",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Caroline was motivated to pursue counseling after struggling with mental health and receiving support that helped her, making her realize the importance of having a support system for others.",
+      "ground_truth": "her own journey and the support she received, and how counseling improved her life",
+      "tokens_used": 1971,
+      "latency_ms": 3371.8879999942146,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-100",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A safe, inviting place for people to grow.",
+      "ground_truth": "a safe and inviting place for people to grow",
+      "tokens_used": 2307,
+      "latency_ms": 3021.895099984249,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-101",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Yes.",
+      "ground_truth": "Yes",
+      "tokens_used": 1837,
+      "latency_ms": 2392.2892000118736,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-102",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Caroline has lots of kids' books including classics, stories from different cultures, and educational books.",
+      "ground_truth": "kids' books - classics, stories from different cultures, educational books",
+      "tokens_used": 2236,
+      "latency_ms": 3277.277999994112,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-103",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Melanie's favorite book from her childhood was \"Charlotte's Web\".",
+      "ground_truth": "\"Charlotte's Web\"",
+      "tokens_used": 1955,
+      "latency_ms": 2894.4834000139963,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-104",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "\"Becoming Nicole\" by Amy Ellis Nutt.",
+      "ground_truth": "\"Becoming Nicole\"",
+      "tokens_used": 1870,
+      "latency_ms": 2735.83890000009,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-105",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Caroline took away self-acceptance, the importance of finding support, and the lesson that tough times don't last, along with hope and love.",
+      "ground_truth": "Lessons on self-acceptance and finding support",
+      "tokens_used": 1984,
+      "latency_ms": 3312.637099996209,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-106",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Walking or running.",
+      "ground_truth": "Running",
+      "tokens_used": 1926,
+      "latency_ms": 2590.686599985929,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-107",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "To de-stress.",
+      "ground_truth": "To de-stress and clear her mind",
+      "tokens_used": 1738,
+      "latency_ms": 2388.8460000162013,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-108",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Melanie says running has been great for her mental health.",
+      "ground_truth": "Her mental health",
+      "tokens_used": 1914,
+      "latency_ms": 2681.9925000017975,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-109",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "They made their own pots.",
+      "ground_truth": "pots",
+      "tokens_used": 1888,
+      "latency_ms": 2716.262900008587,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-110",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "They made their own pots.",
+      "ground_truth": "a cup with a dog face on it",
+      "tokens_used": 2036,
+      "latency_ms": 2753.683599992655,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-26-qa-111",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "They go to the beach together.",
+      "ground_truth": "painting",
+      "tokens_used": 730,
+      "latency_ms": 1082.7062000171281,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-26-qa-112",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Nature-inspired paintings.",
+      "ground_truth": "a sunset with a palm tree",
+      "tokens_used": 712,
+      "latency_ms": 997.0313000085298,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-26-qa-113",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Caroline saw many people wanting to create loving homes for children in need.",
+      "ground_truth": "many people wanting to create loving homes for children in need",
+      "tokens_used": 2243,
+      "latency_ms": 3184.721700003138,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-114",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Sunflowers represent warmth and happiness.",
+      "ground_truth": "warmth and happiness",
+      "tokens_used": 1914,
+      "latency_ms": 2674.012000003131,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-115",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Flowers represent growth, beauty, and remind Melanie of her wedding, which is important to her.",
+      "ground_truth": "They remind her to appreciate the small moments and were a part of her wedding decor",
+      "tokens_used": 1827,
+      "latency_ms": 2897.7458000008482,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-116",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Caroline's painting for the art show was inspired by her own journey as a transgender woman and showing acceptance of growth and change.",
+      "ground_truth": "visiting an LGBTQ center and wanting to capture unity and strength",
+      "tokens_used": 2106,
+      "latency_ms": 3323.563699988881,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-26-qa-117",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Usually only once or twice a year.",
+      "ground_truth": "once or twice a year",
+      "tokens_used": 2027,
+      "latency_ms": 2774.486100010108,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-118",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "They saw the Perseid meteor shower.",
+      "ground_truth": "Perseid meteor shower",
+      "tokens_used": 1929,
+      "latency_ms": 2698.0010000115726,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-119",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Melanie felt at one with the universe while watching the meteor shower.",
+      "ground_truth": "in awe of the universe",
+      "tokens_used": 1794,
+      "latency_ms": 2754.758499999298,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-120",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Melanie celebrated her daughter's birthday recently.",
+      "ground_truth": "Melanie's daughter",
+      "tokens_used": 1755,
+      "latency_ms": 2504.2140999867115,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-121",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Matt Patterson",
+      "tokens_used": 1844,
+      "latency_ms": 2408.1736999796703,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-26-qa-122",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "To catch the eye and make people smile.",
+      "ground_truth": "She wanted to catch the eye and make people smile.",
+      "tokens_used": 2061,
+      "latency_ms": 2823.0775000120047,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-123",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Oscar, a guinea pig.",
+      "ground_truth": "guinea pig",
+      "tokens_used": 1925,
+      "latency_ms": 2673.773299989989,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-124",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Melanie has a dog and a cat.",
+      "ground_truth": "Two cats and a dog",
+      "tokens_used": 1767,
+      "latency_ms": 2482.358100009151,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-125",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "In Melanie's slipper.",
+      "ground_truth": "In Melanie's slipper",
+      "tokens_used": 1972,
+      "latency_ms": 2642.7481999853626,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-126",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Caroline used to go horseback riding with her dad.",
+      "ground_truth": "Horseback riding",
+      "tokens_used": 2144,
+      "latency_ms": 3014.426600013394,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-127",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "It was made for a local church and shows time changing our lives.",
+      "ground_truth": "a stained glass window",
+      "tokens_used": 1939,
+      "latency_ms": 2868.948800023645,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-26-qa-128",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Caroline found a cool rainbow sidewalk for Pride Month in her neighborhood.",
+      "ground_truth": "a rainbow sidewalk",
+      "tokens_used": 2122,
+      "latency_ms": 3048.6673999985214,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-129",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "\"Brave\" by Sara Bareilles.",
+      "ground_truth": "Brave by Sara Bareilles",
+      "tokens_used": 2002,
+      "latency_ms": 2784.618799982127,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-130",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Bach and Mozart.",
+      "ground_truth": "Bach and Mozart",
+      "tokens_used": 1735,
+      "latency_ms": 2382.0905000029597,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-131",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Melanie is a fan of Ed Sheeran's \"Perfect\".",
+      "ground_truth": "Ed Sheeran",
+      "tokens_used": 1639,
+      "latency_ms": 2457.421200000681,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-132",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Melanie has been creating art for seven years.",
+      "ground_truth": "7 years",
+      "tokens_used": 2878,
+      "latency_ms": 4079.1643999982625,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-133",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "The sign was just a precaution, I had a great time.",
+      "ground_truth": "A sign stating that someone is not being able to leave",
+      "tokens_used": 1816,
+      "latency_ms": 2799.274700024398,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-134",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Do your research and find an adoption agency or lawyer. They'll help with the process and provide all the info. Gather documents like references, financial info and medical checks. Don't forget to prepare emotionally, since the wait can be hard.",
+      "ground_truth": "Do research, find an adoption agency or lawyer, gather necessary documents, and prepare emotionally.",
+      "tokens_used": 2069,
+      "latency_ms": 3890.2514999790583,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-135",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Melanie had to take a break from pottery in September 2023 due to a setback.",
+      "ground_truth": "She got hurt and had to take a break from pottery.",
+      "tokens_used": 1919,
+      "latency_ms": 3115.3776999854017,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-136",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Melanie reads a book and paints during her pottery break.",
+      "ground_truth": "Read a book and paint.",
+      "tokens_used": 1988,
+      "latency_ms": 2920.98779999651,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-137",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Melanie showed Caroline a painting inspired by sunsets on October 13, 2023.",
+      "ground_truth": "A painting inspired by sunsets with a pink sky.",
+      "tokens_used": 1891,
+      "latency_ms": 3126.6840000171214,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-138",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Caroline shared an abstract painting with Melanie on October 13, 2023.",
+      "ground_truth": "An abstract painting with blue streaks on a wall.",
+      "tokens_used": 2023,
+      "latency_ms": 3084.163299994543,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-139",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "It was a transgender poetry reading where transgender people shared their stories through poetry.",
+      "ground_truth": "It was a transgender poetry reading where transgender people shared their stories.",
+      "tokens_used": 2006,
+      "latency_ms": 2938.5106000117958,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-140",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "\"Trans Lives Matter\"",
+      "tokens_used": 1835,
+      "latency_ms": 2589.5909999962896,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-26-qa-141",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Caroline's drawing symbolizes freedom and pride for her, representing her own resilience and that of the trans community.",
+      "ground_truth": "Freedom and being true to herself.",
+      "tokens_used": 2221,
+      "latency_ms": 3363.385599979665,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-142",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Melanie and Caroline describe their journey through life together as supportive and inspiring, with Caroline sharing her experiences to motivate Melanie and vice versa.",
+      "ground_truth": "An ongoing adventure of learning and growing.",
+      "tokens_used": 2063,
+      "latency_ms": 3307.515799999237,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-26-qa-143",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Melanie's son got into an accident on their road trip.",
+      "ground_truth": "He got into an accident",
+      "tokens_used": 1861,
+      "latency_ms": 2880.461400025524,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-144",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "They were scared but reassured and explained that their brother would be OK.",
+      "ground_truth": "He was scared but reassured by his family",
+      "tokens_used": 1888,
+      "latency_ms": 2915.701899997657,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-145",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Melanie felt that her family was very important to her, especially after the accident, and that they mean the world to her.",
+      "ground_truth": "They are important and mean the world to her",
+      "tokens_used": 1948,
+      "latency_ms": 3237.3446999990847,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-146",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "They were scared but reassured and explained that their brother would be OK.",
+      "ground_truth": "They were scared but resilient",
+      "tokens_used": 1882,
+      "latency_ms": 2918.4747000108473,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-147",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Melanie was scared but thankful that her son was okay.",
+      "ground_truth": "Grateful and thankful for her family",
+      "tokens_used": 1820,
+      "latency_ms": 2707.497900002636,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-148",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Melanie was thankful to have her children enjoy the Grand Canyon.",
+      "ground_truth": "She was happy and thankful",
+      "tokens_used": 2057,
+      "latency_ms": 2969.8553000052925,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-149",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "love and motivation.",
+      "ground_truth": "Strength and motivation",
+      "tokens_used": 1940,
+      "latency_ms": 2630.4944999865256,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-150",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Melanie felt that her family's love and support were crucial, especially during tough times.",
+      "ground_truth": "She appreciated them a lot",
+      "tokens_used": 1879,
+      "latency_ms": 2979.1464000009,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-26-qa-151",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Melanie went camping after the road trip to relax.",
+      "ground_truth": "Went on a nature walk or hike",
+      "tokens_used": 1784,
+      "latency_ms": 2670.4146999982186,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-152",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 2118,
+      "latency_ms": 3123.851600015769,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-153",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "None / Not mentioned.",
+      "ground_truth": "",
+      "tokens_used": 1811,
+      "latency_ms": 2543.4941000130493,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-154",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1735,
+      "latency_ms": 2483.7612999835983,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-155",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "No information available (not mentioned in the conversation).",
+      "ground_truth": "",
+      "tokens_used": 1886,
+      "latency_ms": 2589.4204000069294,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-156",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "No information available (not mentioned in the conversation).",
+      "ground_truth": "",
+      "tokens_used": 2034,
+      "latency_ms": 2889.630399993621,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-157",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "No information available (not mentioned in the conversation).",
+      "ground_truth": "",
+      "tokens_used": 1804,
+      "latency_ms": 2489.8366999987047,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-158",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "No information available (not mentioned in the conversation).",
+      "ground_truth": "",
+      "tokens_used": 1825,
+      "latency_ms": 2536.6496999922674,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-159",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "No information available (not mentioned in the conversation).",
+      "ground_truth": "",
+      "tokens_used": 1825,
+      "latency_ms": 295.2346999954898,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-160",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "No information available (not mentioned in the conversation).",
+      "ground_truth": "",
+      "tokens_used": 2015,
+      "latency_ms": 2693.159899994498,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-161",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "It reminds her of art and self-expression.",
+      "ground_truth": "",
+      "tokens_used": 1944,
+      "latency_ms": 2730.526200000895,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-26-qa-162",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "No information available (not mentioned in the conversation).",
+      "ground_truth": "",
+      "tokens_used": 1992,
+      "latency_ms": 2677.235200011637,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-163",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None / Not mentioned.",
+      "ground_truth": "",
+      "tokens_used": 1871,
+      "latency_ms": 2526.722799986601,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-164",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "No information available (not mentioned in the conversation).",
+      "ground_truth": "",
+      "tokens_used": 1882,
+      "latency_ms": 2685.11269998271,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-165",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "No information available (not mentioned in the conversation).",
+      "ground_truth": "",
+      "tokens_used": 1774,
+      "latency_ms": 2589.2308999900706,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-166",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "No information available (not mentioned in the conversation).",
+      "ground_truth": "",
+      "tokens_used": 1946,
+      "latency_ms": 2671.487299987348,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-167",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "No information available (not mentioned in the conversation).",
+      "ground_truth": "No",
+      "tokens_used": 1979,
+      "latency_ms": 2821.4397999981884,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-168",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "No information available (not mentioned in the conversation).",
+      "ground_truth": "",
+      "tokens_used": 2033,
+      "latency_ms": 2690.3929999971297,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-169",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None / Not mentioned.",
+      "ground_truth": "",
+      "tokens_used": 1919,
+      "latency_ms": 2692.7846999897156,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-170",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1912,
+      "latency_ms": 2626.7421999946237,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-171",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "No information available (not mentioned in the conversation).",
+      "ground_truth": "",
+      "tokens_used": 1884,
+      "latency_ms": 2659.3155000009574,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-172",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "No information available (not mentioned in the conversation).",
+      "ground_truth": "",
+      "tokens_used": 1952,
+      "latency_ms": 2677.0108999917284,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-173",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "No information available (not mentioned in the conversation).",
+      "ground_truth": "",
+      "tokens_used": 2143,
+      "latency_ms": 2811.759100004565,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-174",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None / Not mentioned.",
+      "ground_truth": "",
+      "tokens_used": 2217,
+      "latency_ms": 2951.6358000109904,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-175",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "No information available (not mentioned in the conversation).",
+      "ground_truth": "",
+      "tokens_used": 2051,
+      "latency_ms": 2736.8018999986816,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-176",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "No information available (not mentioned in the conversation).",
+      "ground_truth": "",
+      "tokens_used": 1985,
+      "latency_ms": 2680.994100024691,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-177",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "No information available (not mentioned in the conversation).",
+      "ground_truth": "",
+      "tokens_used": 2152,
+      "latency_ms": 2839.3101999827195,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-178",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "No information available (not mentioned in the conversation).",
+      "ground_truth": "No",
+      "tokens_used": 1869,
+      "latency_ms": 2711.9968999759294,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-179",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "No information available (not mentioned in the conversation).",
+      "ground_truth": "",
+      "tokens_used": 1996,
+      "latency_ms": 2767.7894000080414,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-180",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "No information available (not mentioned in the conversation).",
+      "ground_truth": "",
+      "tokens_used": 1938,
+      "latency_ms": 2657.1668999968097,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-181",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "No information available (not mentioned in the conversation).",
+      "ground_truth": "",
+      "tokens_used": 1808,
+      "latency_ms": 2505.6246999884024,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-182",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "No information available (not mentioned in the conversation).",
+      "ground_truth": "",
+      "tokens_used": 1988,
+      "latency_ms": 2854.8513000132516,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-183",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "None / Not mentioned.",
+      "ground_truth": "",
+      "tokens_used": 1737,
+      "latency_ms": 2661.876400001347,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-184",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1903,
+      "latency_ms": 2634.267400018871,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-185",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "No information available (not mentioned in the conversation).",
+      "ground_truth": "",
+      "tokens_used": 1947,
+      "latency_ms": 2833.5477999935392,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-186",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1912,
+      "latency_ms": 3042.480300005991,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-187",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "No information available (not mentioned in the conversation).",
+      "ground_truth": "",
+      "tokens_used": 2061,
+      "latency_ms": 2806.8167000019457,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-188",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "No information available (not mentioned in the conversation).",
+      "ground_truth": "",
+      "tokens_used": 2112,
+      "latency_ms": 2820.7352999888826,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-189",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "No information available (not mentioned in the conversation).",
+      "ground_truth": "",
+      "tokens_used": 2154,
+      "latency_ms": 2828.433299990138,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-190",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "No information available (not mentioned in the conversation).",
+      "ground_truth": "",
+      "tokens_used": 1815,
+      "latency_ms": 2629.9972999840975,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-191",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "No information available (not mentioned in the conversation).",
+      "ground_truth": "",
+      "tokens_used": 2053,
+      "latency_ms": 2967.23270000075,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-192",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "No information available (not mentioned in the conversation).",
+      "ground_truth": "",
+      "tokens_used": 1952,
+      "latency_ms": 2727.3457999981474,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-193",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "No information available (not mentioned in the conversation).",
+      "ground_truth": "",
+      "tokens_used": 1911,
+      "latency_ms": 2696.9431999896187,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-194",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "No information available (not mentioned in the conversation).",
+      "ground_truth": "",
+      "tokens_used": 2127,
+      "latency_ms": 2926.1348000145517,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-195",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "No information available (not mentioned in the conversation).",
+      "ground_truth": "",
+      "tokens_used": 2041,
+      "latency_ms": 2859.7384999739006,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-196",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "No information available (not mentioned in the conversation).",
+      "ground_truth": "",
+      "tokens_used": 2179,
+      "latency_ms": 2962.6583000062965,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-26-qa-197",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Caroline went camping after the road trip to relax.",
+      "ground_truth": "",
+      "tokens_used": 1961,
+      "latency_ms": 2954.4766999897547,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-26-qa-198",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1980,
+      "latency_ms": 3166.5272999962326,
+      "is_correct": true
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+# MemoryBank-style Memory Player Configuration
+# Frozen configuration adhering to Zhong et al. (2023) MemoryBank architecture
+
+player:
+  name: "MemoryBank-style"
+  class: "controlled"
+  version: "ebbinghaus-compat-0.1"
+
+architecture:
+  type: "forgetting_curve_memory"
+  curve: "ebbinghaus"
+  formula: "R = exp(-delta_t / S)"
+
+parameters:
+  alpha_similarity_weight: 0.6
+  decay_factor: 0.95
+  default_strength: 1.0
+
+extraction:
+  write_strategy: "turn_based_timestamped_store"
+  write_llm_calls_per_turn: 0
+
+retrieval:
+  top_k: 10
+  strategy: "ebbinghaus_weighted_vector_search"
+
+budget:
+  context_budget_tokens: 2000
+  enforcement: "strict"
+
+llm_accounting:
+  count_write_calls: true
+  count_read_calls: true

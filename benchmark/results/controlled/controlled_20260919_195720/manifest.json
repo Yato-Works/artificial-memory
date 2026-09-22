@@ -1,0 +1,16 @@
+{
+  "benchmark_version": "v0.2.0-arena-1",
+  "dataset_sha256": "eed68804ab279368a5e5e93cca11cdc20b353a9c37db5da7da19664109dac89f",
+  "dataset_version": "v0.2.0-arena-2",
+  "arena_class": "controlled",
+  "run_id": "controlled_20260919_195720",
+  "seed": 42,
+  "answer_repeats": 3,
+  "latency_repeats": 5,
+  "context_budget": 2000,
+  "question_count": 10,
+  "question_ids_sha256": "b51e0f79666f9cad3cc3c98d95020cf678d7f0efb9f355c345c3f71c8bed4d54",
+  "question_filter_active": true,
+  "started_at": "2026-09-19T19:57:20.768328",
+  "finished_at": "2026-09-19T19:57:23.089831"
+}

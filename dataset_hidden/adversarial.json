@@ -1,0 +1,248 @@
+{
+  "version": "v0.2.0-adversarial",
+  "created_at": "",
+  "scenarios": [
+    {
+      "scenario_id": "sc-adv-01-entity-collision",
+      "title": "Entity Collision",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For Project Atlas, the team selected ClickHouse as the primary database.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "Atlas Company, our key vendor, uses Oracle DB for their enterprise records.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "In our game project, the Atlas Character has a local inventory stored in SQLite.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The Atlas Dataset was generated and exported to Parquet files on S3.",
+          "day": 0
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-adv-02-semantic-collision",
+      "title": "Semantic Collision",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "In yesterday's meeting, the team had a long discussion about Redis.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "We tested Dragonfly as a Redis-compatible database, but latency was unstable.",
+          "day": 1
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The proposed Redis migration was officially abandoned due to memory overhead.",
+          "day": 2
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For our production environment, the active in-memory cache layer is Memcached.",
+          "day": 3
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-adv-03-temporal-collision",
+      "title": "Temporal Collision",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "In 2025, the system ran on PostgreSQL.",
+          "day": 0
+        },
+        {
+          "session_index": 2,
+          "speaker": "user",
+          "content": "On 2026-01-15, the team migrated the database to Redis.",
+          "day": 15
+        },
+        {
+          "session_index": 3,
+          "speaker": "user",
+          "content": "On 2026-03-01, the team migrated the database from Redis to ClickHouse.",
+          "day": 60
+        },
+        {
+          "session_index": 4,
+          "speaker": "user",
+          "content": "On 2026-06-01, due to unexpected query patterns, the team migrated back to PostgreSQL.",
+          "day": 150
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-adv-04-truth-vs-evidence",
+      "title": "Truth vs Evidence",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "Alice proposed: 'We must use Redis for the queue.'",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "assistant",
+          "content": "Bob responded: 'No, we formally decided on PostgreSQL.'",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "Alice replied later: 'Actually, Redis is back on the table, but Bob rejected it again. PostgreSQL remains the final decision.'",
+          "day": 1
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q-adv-01-entity-collision",
+      "category": "distractor_resistance",
+      "question": "Which database was selected for Project Atlas?",
+      "ground_truth": [
+        [
+          "ClickHouse"
+        ]
+      ],
+      "forbidden": [
+        "Oracle",
+        "SQLite",
+        "Parquet"
+      ],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "adversarial",
+      "notes": ""
+    },
+    {
+      "question_id": "q-adv-02-semantic-collision",
+      "category": "factual_recall",
+      "question": "What is the active in-memory cache layer currently in production?",
+      "ground_truth": [
+        [
+          "Memcached"
+        ]
+      ],
+      "forbidden": [
+        "Redis",
+        "Dragonfly"
+      ],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "adversarial",
+      "notes": ""
+    },
+    {
+      "question_id": "q-adv-03a-temporal-point-in-time",
+      "category": "temporal_reasoning",
+      "question": "Which database was active on 2026-04-10?",
+      "ground_truth": [
+        [
+          "ClickHouse"
+        ]
+      ],
+      "forbidden": [
+        "Redis",
+        "PostgreSQL"
+      ],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "adversarial",
+      "notes": ""
+    },
+    {
+      "question_id": "q-adv-03b-temporal-current-state",
+      "category": "knowledge_updates",
+      "question": "What is the current active database for the system?",
+      "ground_truth": [
+        [
+          "PostgreSQL"
+        ]
+      ],
+      "forbidden": [
+        "Redis",
+        "ClickHouse"
+      ],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "adversarial",
+      "notes": ""
+    },
+    {
+      "question_id": "q-adv-04a-truth-retrieval",
+      "category": "factual_recall",
+      "question": "What was the final decision regarding the queue technology?",
+      "ground_truth": [
+        [
+          "PostgreSQL"
+        ]
+      ],
+      "forbidden": [
+        "Redis"
+      ],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "adversarial",
+      "notes": ""
+    },
+    {
+      "question_id": "q-adv-04b-evidence-retrieval",
+      "category": "factual_recall",
+      "question": "Did Alice propose using Redis for the queue at any point?",
+      "ground_truth": [
+        [
+          "yes",
+          "proposed",
+          "did propose"
+        ]
+      ],
+      "forbidden": [
+        "no",
+        "never"
+      ],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "adversarial",
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,520 @@
+{
+  "num_questions": 50,
+  "overall_accuracy": 78.0,
+  "overall_oracle_recall": 78.0,
+  "overall_mean_tokens": 2940.26,
+  "elapsed_seconds": 121.5720149000008,
+  "baseline_accuracy": 78.0,
+  "delta_vs_baseline": 0.0,
+  "type_summary": {
+    "single-session-user": {
+      "num_questions": 50,
+      "accuracy": 78.0,
+      "num_correct": 39,
+      "oracle_recall": 78.0,
+      "num_oracle": 39
+    }
+  },
+  "details": [
+    {
+      "question_id": "e47becba",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "A degree in Business Administration.",
+      "ground_truth": "Business Administration",
+      "tokens_used": 1836,
+      "latency_ms": 3870.172499999171,
+      "is_correct": true
+    },
+    {
+      "question_id": "118b2229",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "45 minutes each way",
+      "ground_truth": "45 minutes each way",
+      "tokens_used": 2487,
+      "latency_ms": 1944.7174000015366,
+      "is_correct": true
+    },
+    {
+      "question_id": "51a45a95",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "Last Sunday",
+      "ground_truth": "Target",
+      "tokens_used": 2086,
+      "latency_ms": 1835.5714999997872,
+      "is_correct": false
+    },
+    {
+      "question_id": "58bf7951",
+      "question_type": "single-session-user",
+      "oracle_recall": false,
+      "predicted_answer": "A play at the local community theater.",
+      "ground_truth": "The Glass Menagerie",
+      "tokens_used": 4470,
+      "latency_ms": 3709.7833000007086,
+      "is_correct": false
+    },
+    {
+      "question_id": "1e043500",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "Summer Vibes",
+      "ground_truth": "Summer Vibes",
+      "tokens_used": 2501,
+      "latency_ms": 2161.733599998115,
+      "is_correct": true
+    },
+    {
+      "question_id": "c5e8278d",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "Johnson",
+      "ground_truth": "Johnson",
+      "tokens_used": 4042,
+      "latency_ms": 3025.259300000471,
+      "is_correct": true
+    },
+    {
+      "question_id": "6ade9755",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "You can take yoga classes at a studio, a gym, or through online platforms like apps or virtual classes.",
+      "ground_truth": "Serenity Yoga",
+      "tokens_used": 2342,
+      "latency_ms": 2363.432800000737,
+      "is_correct": true
+    },
+    {
+      "question_id": "6f9b354f",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "Lighter shade of gray",
+      "ground_truth": "a lighter shade of gray",
+      "tokens_used": 2121,
+      "latency_ms": 1863.6036999996577,
+      "is_correct": true
+    },
+    {
+      "question_id": "58ef2f1c",
+      "question_type": "single-session-user",
+      "oracle_recall": false,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "February 14th",
+      "tokens_used": 3289,
+      "latency_ms": 2471.488400002272,
+      "is_correct": false
+    },
+    {
+      "question_id": "f8c5f88b",
+      "question_type": "single-session-user",
+      "oracle_recall": false,
+      "predicted_answer": "A sports store downtown",
+      "ground_truth": "the sports store downtown",
+      "tokens_used": 3054,
+      "latency_ms": 2442.6127999977325,
+      "is_correct": true
+    },
+    {
+      "question_id": "5d3d2817",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "Marketing Specialist at a small startup",
+      "ground_truth": "Marketing specialist at a small startup",
+      "tokens_used": 2713,
+      "latency_ms": 2233.6797999996634,
+      "is_correct": true
+    },
+    {
+      "question_id": "7527f7e2",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "$800",
+      "ground_truth": "$800",
+      "tokens_used": 2771,
+      "latency_ms": 2225.3916000008758,
+      "is_correct": true
+    },
+    {
+      "question_id": "c960da58",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "20",
+      "ground_truth": "20",
+      "tokens_used": 2349,
+      "latency_ms": 1917.5787000021955,
+      "is_correct": true
+    },
+    {
+      "question_id": "3b6f954b",
+      "question_type": "single-session-user",
+      "oracle_recall": false,
+      "predicted_answer": "University of Melbourne",
+      "ground_truth": "University of Melbourne in Australia",
+      "tokens_used": 2837,
+      "latency_ms": 2272.9889000002004,
+      "is_correct": true
+    },
+    {
+      "question_id": "726462e0",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "10% discount",
+      "ground_truth": "10%",
+      "tokens_used": 2981,
+      "latency_ms": 2270.2993000020797,
+      "is_correct": true
+    },
+    {
+      "question_id": "94f70d80",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "4 hours",
+      "ground_truth": "4 hours",
+      "tokens_used": 3194,
+      "latency_ms": 2475.9674000015366,
+      "is_correct": true
+    },
+    {
+      "question_id": "66f24dbb",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "A yellow dress and a pair of earrings.",
+      "ground_truth": "a yellow dress",
+      "tokens_used": 1572,
+      "latency_ms": 1631.2620999997307,
+      "is_correct": true
+    },
+    {
+      "question_id": "ad7109d1",
+      "question_type": "single-session-user",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "500 Mbps",
+      "tokens_used": 3707,
+      "latency_ms": 2800.477699998737,
+      "is_correct": false
+    },
+    {
+      "question_id": "af8d2e46",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "7",
+      "ground_truth": "7",
+      "tokens_used": 3317,
+      "latency_ms": 2646.025699999882,
+      "is_correct": true
+    },
+    {
+      "question_id": "dccbc061",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "A staunch atheist",
+      "ground_truth": "A staunch atheist",
+      "tokens_used": 2405,
+      "latency_ms": 2009.1114999995625,
+      "is_correct": true
+    },
+    {
+      "question_id": "c8c3f81d",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "Adidas Superstars",
+      "ground_truth": "Nike",
+      "tokens_used": 4578,
+      "latency_ms": 3518.351700000494,
+      "is_correct": false
+    },
+    {
+      "question_id": "8ebdbe50",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "Certification in Data Science",
+      "ground_truth": "Data Science",
+      "tokens_used": 1701,
+      "latency_ms": 1624.0040000011504,
+      "is_correct": true
+    },
+    {
+      "question_id": "6b168ec8",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "three",
+      "tokens_used": 3185,
+      "latency_ms": 2524.692300001334,
+      "is_correct": false
+    },
+    {
+      "question_id": "75499fd8",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Golden Retriever",
+      "tokens_used": 3213,
+      "latency_ms": 2765.099799999007,
+      "is_correct": false
+    },
+    {
+      "question_id": "21436231",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "12",
+      "ground_truth": "12",
+      "tokens_used": 2175,
+      "latency_ms": 1857.0572000026004,
+      "is_correct": true
+    },
+    {
+      "question_id": "95bcc1c8",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "10",
+      "ground_truth": "10",
+      "tokens_used": 3203,
+      "latency_ms": 2346.51699999813,
+      "is_correct": true
+    },
+    {
+      "question_id": "0862e8bf",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "Luna",
+      "ground_truth": "Luna",
+      "tokens_used": 3093,
+      "latency_ms": 2438.9149000016914,
+      "is_correct": true
+    },
+    {
+      "question_id": "853b0a1d",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "18 years old",
+      "ground_truth": "18",
+      "tokens_used": 2066,
+      "latency_ms": 1736.4485999969475,
+      "is_correct": true
+    },
+    {
+      "question_id": "a06e4cfe",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "3:1 ratio with a dash of citrus bitters",
+      "ground_truth": "3:1",
+      "tokens_used": 3226,
+      "latency_ms": 2765.498100001423,
+      "is_correct": true
+    },
+    {
+      "question_id": "37d43f65",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "16GB",
+      "ground_truth": "16GB",
+      "tokens_used": 2294,
+      "latency_ms": 1876.6480000012962,
+      "is_correct": true
+    },
+    {
+      "question_id": "b86304ba",
+      "question_type": "single-session-user",
+      "oracle_recall": false,
+      "predicted_answer": "The value of a painting, including a sunset painting, is not solely determined by the amount you paid for it. The current market value can fluctuate based on several factors, including the artist's reputation, the painting's provenance, its condition, its rarity, and the current demand for similar works of art. If you are looking to sell the painting, you might want to consult with an art appraiser or an auction house to get an estimate of its current market value. If you are interested in the painting's historical value, you might also consider its age, the period in which it was created, and its significance within the artist's body of work. However, if you are asking about the sentimental or personal value you place on the painting, that is subjective and can be quite different from its market value.",
+      "ground_truth": "The painting is worth triple what I paid for it.",
+      "tokens_used": 8153,
+      "latency_ms": 5450.330399999075,
+      "is_correct": true
+    },
+    {
+      "question_id": "d52b4f67",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "Grand Ballroom",
+      "ground_truth": "The Grand Ballroom",
+      "tokens_used": 2608,
+      "latency_ms": 2211.224000002403,
+      "is_correct": true
+    },
+    {
+      "question_id": "25e5aa4f",
+      "question_type": "single-session-user",
+      "oracle_recall": false,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "University of California, Los Angeles (UCLA)",
+      "tokens_used": 3656,
+      "latency_ms": 2906.686599999375,
+      "is_correct": false
+    },
+    {
+      "question_id": "caf9ead2",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "5 hours",
+      "ground_truth": "5 hours",
+      "tokens_used": 3494,
+      "latency_ms": 2803.462699997908,
+      "is_correct": true
+    },
+    {
+      "question_id": "8550ddae",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "Lavender gin fizz",
+      "ground_truth": "lavender gin fizz",
+      "tokens_used": 2896,
+      "latency_ms": 2306.958000001032,
+      "is_correct": true
+    },
+    {
+      "question_id": "60d45044",
+      "question_type": "single-session-user",
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Japanese short-grain rice",
+      "tokens_used": 3033,
+      "latency_ms": 2437.648800001625,
+      "is_correct": false
+    },
+    {
+      "question_id": "3f1e9474",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "Sarah",
+      "ground_truth": "Sarah",
+      "tokens_used": 3475,
+      "latency_ms": 2816.7206999969494,
+      "is_correct": true
+    },
+    {
+      "question_id": "86b68151",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "IKEA",
+      "ground_truth": "IKEA",
+      "tokens_used": 3562,
+      "latency_ms": 2854.49790000348,
+      "is_correct": true
+    },
+    {
+      "question_id": "577d4d32",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "7 pm",
+      "ground_truth": "7 pm",
+      "tokens_used": 2752,
+      "latency_ms": 2347.8621000031126,
+      "is_correct": true
+    },
+    {
+      "question_id": "ec81a493",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "500 copies",
+      "ground_truth": "500",
+      "tokens_used": 1064,
+      "latency_ms": 1298.6438000007183,
+      "is_correct": true
+    },
+    {
+      "question_id": "15745da0",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "Three months",
+      "ground_truth": "three months",
+      "tokens_used": 1976,
+      "latency_ms": 1719.236799999635,
+      "is_correct": true
+    },
+    {
+      "question_id": "e01b8e2f",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "The Big Island",
+      "ground_truth": "Hawaii",
+      "tokens_used": 3524,
+      "latency_ms": 2844.7607999987667,
+      "is_correct": false
+    },
+    {
+      "question_id": "bc8a6e93",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "A lemon blueberry cake",
+      "ground_truth": "a lemon blueberry cake",
+      "tokens_used": 2750,
+      "latency_ms": 2307.9366000019945,
+      "is_correct": true
+    },
+    {
+      "question_id": "ccb36322",
+      "question_type": "single-session-user",
+      "oracle_recall": false,
+      "predicted_answer": "Spotify",
+      "ground_truth": "Spotify",
+      "tokens_used": 2946,
+      "latency_ms": 2428.208099998301,
+      "is_correct": true
+    },
+    {
+      "question_id": "001be529",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "Over a year",
+      "ground_truth": "over a year",
+      "tokens_used": 2801,
+      "latency_ms": 2248.5577000006742,
+      "is_correct": true
+    },
+    {
+      "question_id": "b320f3f8",
+      "question_type": "single-session-user",
+      "oracle_recall": false,
+      "predicted_answer": "A rare blue Snaggletooth action figure",
+      "ground_truth": "a blue Snaggletooth",
+      "tokens_used": 3223,
+      "latency_ms": 2719.9266999996325,
+      "is_correct": true
+    },
+    {
+      "question_id": "19b5f2b3",
+      "question_type": "single-session-user",
+      "oracle_recall": false,
+      "predicted_answer": "The conversation context does not contain information about the duration of the user's stay in Japan.",
+      "ground_truth": "two weeks",
+      "tokens_used": 2321,
+      "latency_ms": 2120.9861999996065,
+      "is_correct": false
+    },
+    {
+      "question_id": "4fd1909e",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "Xfinity Center",
+      "ground_truth": "Xfinity Center",
+      "tokens_used": 2912,
+      "latency_ms": 2091.9512000000395,
+      "is_correct": true
+    },
+    {
+      "question_id": "545bd2b5",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "2 hours",
+      "ground_truth": "2 hours",
+      "tokens_used": 2342,
+      "latency_ms": 1887.655900001846,
+      "is_correct": true
+    },
+    {
+      "question_id": "8a137a7f",
+      "question_type": "single-session-user",
+      "oracle_recall": true,
+      "predicted_answer": "Philips LED bulb",
+      "ground_truth": "Philips LED bulb",
+      "tokens_used": 2717,
+      "latency_ms": 2136.0587000017404,
+      "is_correct": true
+    }
+  ]
+}

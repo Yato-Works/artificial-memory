@@ -25,6 +25,7 @@ wheels/
 env/
 venv/
 ENV/
+.venv-benchmarks/
 
 # Testing & Linting
 .pytest_cache/
@@ -74,3 +75,8 @@ am_benchmarks/
 experiment_runs/
 redteam_results/
 
+# Official benchmark checkouts, data snapshots, and generated evaluation artifacts.
+# The reproducible registry and bootstrap scripts are committed; third-party payloads are not.
+/third_party/benchmarks/
+/datasets/official/
+/benchmark_results/official/

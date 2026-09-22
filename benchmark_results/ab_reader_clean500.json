@@ -1,0 +1,68 @@
+[
+ {
+  "model": "phi4-mini:latest",
+  "n": 500,
+  "totals": {
+   "ALL": [
+    319,
+    500
+   ],
+   "open-domain": [
+    13,
+    24
+   ],
+   "multi-hop": [
+    41,
+    71
+   ],
+   "temporal": [
+    37,
+    81
+   ],
+   "single-hop": [
+    179,
+    212
+   ],
+   "adversarial": [
+    49,
+    112
+   ]
+  },
+  "oracle": 78.8,
+  "sec": 760.4473944999918,
+  "failures": []
+ },
+ {
+  "model": "qwen2.5:7b-instruct-q4_K_M",
+  "n": 500,
+  "totals": {
+   "ALL": [
+    361,
+    500
+   ],
+   "open-domain": [
+    11,
+    24
+   ],
+   "multi-hop": [
+    43,
+    71
+   ],
+   "temporal": [
+    33,
+    81
+   ],
+   "single-hop": [
+    175,
+    212
+   ],
+   "adversarial": [
+    99,
+    112
+   ]
+  },
+  "oracle": 78.8,
+  "sec": 1214.531305899989,
+  "failures": []
+ }
+]

@@ -1,0 +1,2654 @@
+{
+  "summary": {
+    "conv_idx": 3,
+    "sample_id": "conv-42",
+    "mode": "full",
+    "total_questions": 260,
+    "total_turns": 629,
+    "total_ir_records": 629,
+    "overall_accuracy": 0.5615384615384615,
+    "overall_oracle_recall": 0.7692307692307693,
+    "factual_accuracy": 0.5615384615384615,
+    "factual_oracle_recall": 0.8090452261306532,
+    "mean_tokens": 1430.9923076923078,
+    "mean_latency_ms": 1657.9425646165664,
+    "elapsed_seconds": 431.1130235999881,
+    "categories": {
+      "open-domain": {
+        "total": 11,
+        "correct": 3,
+        "oracle": 5
+      },
+      "multi-hop": {
+        "total": 37,
+        "correct": 15,
+        "oracle": 27
+      },
+      "temporal": {
+        "total": 40,
+        "correct": 10,
+        "oracle": 34
+      },
+      "single-hop": {
+        "total": 111,
+        "correct": 93,
+        "oracle": 95
+      },
+      "adversarial": {
+        "total": 61,
+        "correct": 25,
+        "oracle": 39
+      }
+    },
+    "failure_taxonomy_v2": {
+      "COMPOSITION_FAILURE": 15,
+      "ABSTENTION_FAILURE": 39,
+      "TEMPORAL_FAILURE": 29,
+      "VERIFICATION_FAILURE": 11,
+      "RETRIEVAL_FAILURE": 19,
+      "GROUNDING_FAILURE": 1
+    }
+  },
+  "results": [
+    {
+      "question_id": "conv-42-qa-000",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "Likely yes.",
+      "ground_truth": "Yesteammates on hisvideo game team.",
+      "tokens_used": 1322,
+      "latency_ms": 1711.8835000146646,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-001",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Video games and movies",
+      "ground_truth": "Watching movies, making desserts",
+      "tokens_used": 1307,
+      "latency_ms": 1633.9734999928623,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-002",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "2019",
+      "tokens_used": 1297,
+      "latency_ms": 1517.7951000223402,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-003",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "The week before 21 January 2022",
+      "ground_truth": "the week before 21Janury, 2022",
+      "tokens_used": 1357,
+      "latency_ms": 2114.324800000759,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-004",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "Reptiles and animals with fur",
+      "ground_truth": "Hairless cats or pigs,since they don't have fur, which is one of the main causes of Joanna's allergy.",
+      "tokens_used": 1397,
+      "latency_ms": 1839.52209999552,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-005",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Reading, watching movies, exploring nature, writing, playing video games, and making coconut milk ice cream.",
+      "ground_truth": "Writing, watchingmovies, exploringnature, hanging withfriends.",
+      "tokens_used": 1203,
+      "latency_ms": 1656.3321000139695,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-006",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "3 years",
+      "ground_truth": "three years",
+      "tokens_used": 2831,
+      "latency_ms": 2621.8928000016604,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-007",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Last Friday before 23 January 2022",
+      "ground_truth": "The Friday before 23January, 2022",
+      "tokens_used": 1322,
+      "latency_ms": 1489.6275000064634,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-008",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "Nate did not specify when he got his first two turtles.",
+      "ground_truth": "2019",
+      "tokens_used": 1367,
+      "latency_ms": 1687.7664999919944,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-009",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Finished her first full screenplay.",
+      "ground_truth": "finished her screenplay and printed it",
+      "tokens_used": 1146,
+      "latency_ms": 1470.440500008408,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-010",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Excitement, anxiety, relief, and hope.",
+      "ground_truth": "Relief, excitement,worry, hope,anxiety.",
+      "tokens_used": 1437,
+      "latency_ms": 1699.5561000076123,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-011",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Joanna is allergic to most reptiles and animals with fur.",
+      "ground_truth": "Most reptiles,animals with fur,cockroaches, dairy",
+      "tokens_used": 1257,
+      "latency_ms": 1793.9494000165723,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-012",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "Allergic reactions to animals and reptiles",
+      "ground_truth": "asthma",
+      "tokens_used": 1395,
+      "latency_ms": 1784.8887000000104,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-013",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "23 March 2022",
+      "ground_truth": "23 March, 2022.",
+      "tokens_used": 1397,
+      "latency_ms": 1584.0928000106942,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-014",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "Tilly",
+      "ground_truth": "Jo",
+      "tokens_used": 1306,
+      "latency_ms": 1275.8932000142522,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-015",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "7:37 pm on 15 April, 2022",
+      "ground_truth": "The week before 15April, 2022.",
+      "tokens_used": 1377,
+      "latency_ms": 1687.2920999885537,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-016",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "He dyed his hair.",
+      "ground_truth": "dyed his hair purple",
+      "tokens_used": 1238,
+      "latency_ms": 1304.818200005684,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-017",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "The Lord of the Rings Trilogy",
+      "ground_truth": "Lord of the Rings",
+      "tokens_used": 1240,
+      "latency_ms": 1493.8003999996,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-018",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Whispering Falls",
+      "ground_truth": "Whispering Falls waterfall",
+      "tokens_used": 1279,
+      "latency_ms": 1574.303899978986,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-019",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "twice",
+      "tokens_used": 2789,
+      "latency_ms": 2505.7533000072,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-020",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "The conversation context does not contain the answer.",
+      "ground_truth": "May 2022",
+      "tokens_used": 1207,
+      "latency_ms": 1651.0881999856792,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-021",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Max",
+      "ground_truth": "Max",
+      "tokens_used": 1260,
+      "latency_ms": 1326.4539000228979,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-022",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "She didn't specify a date for starting her third screenplay.",
+      "ground_truth": "May 2022",
+      "tokens_used": 1329,
+      "latency_ms": 1602.351900015492,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-023",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Her first screenplay and another screenplay sent to a film festival.",
+      "ground_truth": "first screenplay on drama and romance, third screenplay on loss identity and connection",
+      "tokens_used": 1223,
+      "latency_ms": 1502.9980999825057,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-024",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Two weekends later from the conversation on 5:44 pm on 3 June, 2022.",
+      "ground_truth": "The weekend after 3June, 2022.",
+      "tokens_used": 1289,
+      "latency_ms": 1771.6375999734737,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-025",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "This weekend",
+      "ground_truth": "The weekend after 3June, 2022.",
+      "tokens_used": 1378,
+      "latency_ms": 1477.9775000060908,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-026",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "The week before 3June, 2022",
+      "tokens_used": 1303,
+      "latency_ms": 1479.5472999976482,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-027",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Film festivals and possibly producers and directors.",
+      "ground_truth": "film contest, film festival.",
+      "tokens_used": 1561,
+      "latency_ms": 1568.321200000355,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-028",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "The Friday before 24 June 2022",
+      "ground_truth": "The Friday before 24June, 2022.",
+      "tokens_used": 1313,
+      "latency_ms": 1706.2160999921616,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-029",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "This weekend",
+      "ground_truth": "The weekend of 24June, 2022.",
+      "tokens_used": 1330,
+      "latency_ms": 1487.2982999950182,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-030",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Joanna writes screenplays and movie scripts.",
+      "ground_truth": "Screenplays,books, online blog posts, journal",
+      "tokens_used": 1335,
+      "latency_ms": 1732.640399975935,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-031",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Friday, before 10 July 2022",
+      "ground_truth": "The Friday before 10July, 2022.",
+      "tokens_used": 1398,
+      "latency_ms": 1458.8684999907855,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-032",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Woodhaven",
+      "ground_truth": "Woodhaven",
+      "tokens_used": 1271,
+      "latency_ms": 1294.822900003055,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-033",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Last week before 14 August 2022",
+      "ground_truth": "The week before 14August, 2022.",
+      "tokens_used": 1343,
+      "latency_ms": 2019.4709000061266,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-034",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "A trilogy that is one of Joanna's favorites, a series with adventures, magic, and great characters, and a suspenseful thriller set in a small Midwestern town.",
+      "ground_truth": "\"Little Women\",'A Court of Thorns andRoses'.",
+      "tokens_used": 1377,
+      "latency_ms": 2199.2230000032578,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-035",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "22 August, 2022",
+      "ground_truth": "The weekend of 22August, 2022.",
+      "tokens_used": 1408,
+      "latency_ms": 1578.76319999923,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-036",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "The week before 22 August 2022",
+      "ground_truth": "The week before 22August, 2022.",
+      "tokens_used": 1439,
+      "latency_ms": 1680.1167000085115,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-037",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "21 August 2022",
+      "ground_truth": "21 August, 2022",
+      "tokens_used": 1358,
+      "latency_ms": 1566.6159999964293,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-038",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Last Friday before 14 September 2022",
+      "ground_truth": "The Friday before 14September, 2022",
+      "tokens_used": 1441,
+      "latency_ms": 1628.0941999866627,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-039",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Last Monday before 14 September 2022",
+      "ground_truth": "The Monday before 14September, 2022",
+      "tokens_used": 1221,
+      "latency_ms": 1511.6053999809083,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-040",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "The week before 14 September 2022",
+      "ground_truth": "The week before 14September, 2022",
+      "tokens_used": 1240,
+      "latency_ms": 1365.9571000025608,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-041",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "The exact date is not provided in the context.",
+      "ground_truth": "5 October, 2022",
+      "tokens_used": 1453,
+      "latency_ms": 1696.0696000023745,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-042",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "A movie Joanna first watched around 3 years ago and a classic movie. The specific titles are not mentioned.",
+      "ground_truth": "\"Little Women\", \"Lord of the Rings\"",
+      "tokens_used": 1189,
+      "latency_ms": 1946.0506000032183,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-043",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "A few weeks",
+      "ground_truth": "four months",
+      "tokens_used": 3034,
+      "latency_ms": 2734.6259000187274,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-044",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Last week before 6 October 2022",
+      "ground_truth": "September 2022",
+      "tokens_used": 1408,
+      "latency_ms": 1834.6346999751404,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-045",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "The week before 6 October 2022",
+      "ground_truth": "The week before 6October, 2022",
+      "tokens_used": 1528,
+      "latency_ms": 1612.2903999930713,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-046",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Catan and Street Fighter",
+      "ground_truth": "Chess, Catan.",
+      "tokens_used": 1228,
+      "latency_ms": 1643.6831000028178,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-047",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Game conventions and a cooking show.",
+      "ground_truth": "A tournament and agaming convention.",
+      "tokens_used": 1408,
+      "latency_ms": 1785.8708999992814,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-048",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Last Friday before 9 October 2022",
+      "ground_truth": "The Friday before 9October, 2022.",
+      "tokens_used": 1356,
+      "latency_ms": 1630.3814999992028,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-049",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "1",
+      "ground_truth": "Twice",
+      "tokens_used": 2886,
+      "latency_ms": 2753.736300015589,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-050",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "A stuffed animal dog named Tilly",
+      "ground_truth": "stuffed toy pup",
+      "tokens_used": 1256,
+      "latency_ms": 1720.1219999988098,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-051",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "25 May, 2022",
+      "tokens_used": 1396,
+      "latency_ms": 1588.827700004913,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-052",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "two",
+      "tokens_used": 3099,
+      "latency_ms": 2630.0636999949347,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-053",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "2",
+      "ground_truth": "Twice.",
+      "tokens_used": 2837,
+      "latency_ms": 2773.0850000225473,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-054",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "Sunday before 25 October 2022",
+      "ground_truth": "The Sunday before 25October, 2022.",
+      "tokens_used": 1414,
+      "latency_ms": 1740.8448999922257,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-055",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Personal experiences, self-discovery, nature's beauty, writing, acting, supportive writing group, and completing screenplays.",
+      "ground_truth": "Personal experiences,her own journey ofself discovery, Nate,nature, validation,stories about findingcourage and takingrisks, people she knows, stuff she sees, imagination",
+      "tokens_used": 1265,
+      "latency_ms": 1587.2993000084534,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-056",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Both Nate and Joanna like animals.",
+      "ground_truth": "Turtles.",
+      "tokens_used": 1273,
+      "latency_ms": 1643.5342000040691,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-057",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "5 November, 2022.",
+      "tokens_used": 1381,
+      "latency_ms": 1560.7117999752518,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-058",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Having pets and hanging out with friends",
+      "ground_truth": "A pet,\"The Lord of the Rings\" movies,a dragon book series,coconut flavoring,\"Project Hail Mary\" book,Xenoblade Chronicles, dairy-free margarine, coconut oil",
+      "tokens_used": 1254,
+      "latency_ms": 1559.8279999976512,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-059",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Joanna writes down her favorite memories.",
+      "ground_truth": "Hangs them on a corkboard, writes themin a notebook.",
+      "tokens_used": 1379,
+      "latency_ms": 2010.5470000125933,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-060",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "A Nintendo Switch; since the game \"Xenoblade 2\" is made for this console.",
+      "tokens_used": 1222,
+      "latency_ms": 1658.235799986869,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-061",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Video games and computer games",
+      "ground_truth": "Gamecube, PC,Playstation.",
+      "tokens_used": 1258,
+      "latency_ms": 1629.0616000187583,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-062",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "2",
+      "ground_truth": "Two",
+      "tokens_used": 2833,
+      "latency_ms": 2496.5097999956924,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-063",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "CS:GO, Street Fighter, Xeonoblade Chronicles",
+      "ground_truth": "Valorant, Counter Strike:Global Offensive,Xenoblade Chronicles, StreetFighter, Cyberpunk 2077",
+      "tokens_used": 1345,
+      "latency_ms": 2001.2340000248514,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-064",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Last Saturday before 7 November 2022",
+      "ground_truth": "The Saturday before 7November, 2022",
+      "tokens_used": 1410,
+      "latency_ms": 1639.2995000060182,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-065",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Valorant tournament",
+      "ground_truth": "Valorant",
+      "tokens_used": 1308,
+      "latency_ms": 1527.9965000227094,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-066",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "Acting",
+      "ground_truth": "an animalkeeper at a localzoo and workingwith turtles; as heknows a great dealabout turtles andhow to care for them,and he enjoys it.",
+      "tokens_used": 1396,
+      "latency_ms": 1354.2378999991342,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-067",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Dogs, a stuffed animal dog named Tilly, and turtles.",
+      "ground_truth": "A dog and threeturtles.",
+      "tokens_used": 1389,
+      "latency_ms": 1574.4313999894075,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-068",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "At least two",
+      "ground_truth": "Four",
+      "tokens_used": 2922,
+      "latency_ms": 2750.0094000133686,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-069",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "3",
+      "ground_truth": "Three",
+      "tokens_used": 2797,
+      "latency_ms": 2892.328500020085,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-070",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Nate takes his turtles for walks and experiments with flavors in cooking.",
+      "ground_truth": "takes them onwalks, holds them,feeds themstrawberries, givesthem baths.",
+      "tokens_used": 1286,
+      "latency_ms": 1628.52820000262,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-071",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Nature",
+      "ground_truth": "Nature",
+      "tokens_used": 1476,
+      "latency_ms": 1231.6085000056773,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-072",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "10 November 2022",
+      "ground_truth": "10 November, 2022",
+      "tokens_used": 1249,
+      "latency_ms": 1080.985500011593,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-073",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "Indiana",
+      "ground_truth": "Indiana",
+      "tokens_used": 1229,
+      "latency_ms": 1195.901099999901,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-074",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Nate has received movie recommendations from Joanna.",
+      "ground_truth": "\"Eternal Sunshine of the Spotless Mind\" movie, \"A Court of Thorns and Roses\" book, pointers for making living room comfy, starting a cork board for memories, \"Little Women\" movie",
+      "tokens_used": 1215,
+      "latency_ms": 1140.1531000155956,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-075",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Coconut milk ice cream and dairy-free chocolate mousse.",
+      "ground_truth": "coconut milk icecream, dairy-free chocolate cake with berries, chocolate and mixed-berry icecream, dairy-free chocolate mousse",
+      "tokens_used": 1269,
+      "latency_ms": 1468.6921999964397,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-076",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Nate has been teaching people how to make vegan ice cream on his own cooking show.",
+      "ground_truth": "teaching others, cooking show",
+      "tokens_used": 1273,
+      "latency_ms": 1484.6644999925047,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-077",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "The week before 2 May 2022",
+      "ground_truth": "The week before 2 May, 2022.",
+      "tokens_used": 1390,
+      "latency_ms": 1456.9025000091642,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-078",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Nate has participated in at least 4 video game tournaments.",
+      "ground_truth": "nine",
+      "tokens_used": 2759,
+      "latency_ms": 2450.9359000076074,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-079",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "2",
+      "ground_truth": "three",
+      "tokens_used": 2918,
+      "latency_ms": 4232.611300016288,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-080",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Nate has won a total of 6 video game tournaments.",
+      "ground_truth": "seven",
+      "tokens_used": 2797,
+      "latency_ms": 3078.051799995592,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-081",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Dairy-free chocolate cake with berries, vegan ice cream, and a dessert made with blueberries, coconut milk, and a gluten-free crust.",
+      "ground_truth": "dairy free vanilla cake with strawberry filling and coconut cream frosting, parfait, strawberry chocolate cake, chocolate coconut cupcakes, chocolate raspberry tart, chocolate cake with raspberries, blueberry cheesecake bars",
+      "tokens_used": 1332,
+      "latency_ms": 2360.024699999485,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-082",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Coconut milk ice cream and dairy-free chocolate mousse.",
+      "ground_truth": "coconut milk icecream, chocolate and vanilla swirl",
+      "tokens_used": 1474,
+      "latency_ms": 1722.527000005357,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-083",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Using his skills to make a difference in gaming.",
+      "ground_truth": "coconut milk ice cream recipe, reset high scores, tips to improve gaming skills",
+      "tokens_used": 1401,
+      "latency_ms": 1747.6797999988776,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-084",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "No",
+      "ground_truth": "No; because both of them faced setbacks in their career",
+      "tokens_used": 1510,
+      "latency_ms": 1479.7358000068925,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-085",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "Filmmaking",
+      "ground_truth": "filmmaker.",
+      "tokens_used": 1425,
+      "latency_ms": 1441.1406999861356,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-086",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "10 November 2022",
+      "ground_truth": "10 November, 2022",
+      "tokens_used": 1408,
+      "latency_ms": 1555.652100010775,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-087",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "Indiana",
+      "ground_truth": "Florida",
+      "tokens_used": 1243,
+      "latency_ms": 1466.4854999864474,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-088",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A road-trip script",
+      "ground_truth": "\"Eternal Sunshineof the Spotless Mind\"",
+      "tokens_used": 1285,
+      "latency_ms": 1421.0137000191025,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-089",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Bright and bold",
+      "ground_truth": "purple",
+      "tokens_used": 1214,
+      "latency_ms": 1253.0017000099178,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-090",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "The Lord of the Rings Trilogy",
+      "ground_truth": "Lord of the Rings",
+      "tokens_used": 1327,
+      "latency_ms": 1696.0634000133723,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-091",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A series with adventures, magic, and great characters.",
+      "ground_truth": "dragons",
+      "tokens_used": 1298,
+      "latency_ms": 1617.7397000137717,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-092",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Ironic lighting",
+      "ground_truth": "red and purple lighting",
+      "tokens_used": 1340,
+      "latency_ms": 1505.1449000020511,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-093",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Counter-Strike: Global Offensive",
+      "ground_truth": "Street Fighter",
+      "tokens_used": 1355,
+      "latency_ms": 1524.7474999923725,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-094",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Loss, identity, and connection.",
+      "ground_truth": "loss, identity, and connection",
+      "tokens_used": 1217,
+      "latency_ms": 1574.7357000072952,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-095",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Xeonoblade Chronicles",
+      "ground_truth": "Xenoblade Chronicles",
+      "tokens_used": 1312,
+      "latency_ms": 1563.2208999886643,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-096",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Action and sci-fi movies",
+      "ground_truth": "action and sci-fi",
+      "tokens_used": 1232,
+      "latency_ms": 1565.9129999985453,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-097",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Her first full screenplay",
+      "ground_truth": "screenplay",
+      "tokens_used": 1230,
+      "latency_ms": 1561.074400000507,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-098",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Drama and romcom",
+      "ground_truth": "drama and romance",
+      "tokens_used": 1258,
+      "latency_ms": 1433.3294999960344,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-099",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "She plans to submit it to film festivals and hope to get producers and directors to check it out.",
+      "ground_truth": "submit it to film festivals and get producers and directors to check it out",
+      "tokens_used": 1169,
+      "latency_ms": 1639.7115999716334,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-100",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "3 years",
+      "ground_truth": "3 years",
+      "tokens_used": 2724,
+      "latency_ms": 2408.0052000063006,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-101",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Super good! It was rich and creamy - might be my new favorite snack!",
+      "ground_truth": "Super good, rich and creamy",
+      "tokens_used": 1374,
+      "latency_ms": 1804.8933999962173,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-102",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Coconut milk, chocolate, and mixed berry",
+      "ground_truth": "chocolate and mixed berry",
+      "tokens_used": 1246,
+      "latency_ms": 1630.185599991819,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-103",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "\"Little Women\"",
+      "ground_truth": "\"Little Women\"",
+      "tokens_used": 1233,
+      "latency_ms": 1452.3694999807049,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-104",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A story about sisterhood, love, and reaching for your dreams.",
+      "ground_truth": "Sisterhood, love, and reaching for your dreams",
+      "tokens_used": 1327,
+      "latency_ms": 1728.9859000011347,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-105",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Chocolate and vanilla swirl",
+      "ground_truth": "chocolate and vanilla swirl",
+      "tokens_used": 1121,
+      "latency_ms": 1544.2776000127196,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-106",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Personal experiences and her own journey of self-discovery.",
+      "ground_truth": "personal experiences and her own journey of self-discovery",
+      "tokens_used": 1221,
+      "latency_ms": 1252.9677999846172,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-107",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "They bring him joy and peace.",
+      "ground_truth": "Their slow pace and calming nature",
+      "tokens_used": 1409,
+      "latency_ms": 1547.8727000008803,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-108",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "He describes it as bringing them into the kitchen and letting them watch him make food.",
+      "ground_truth": "Not tough; keep their area clean, feed them properly, give them enough light.",
+      "tokens_used": 1354,
+      "latency_ms": 2030.8497000078205,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-109",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A writing gig",
+      "ground_truth": "writing gig",
+      "tokens_used": 1166,
+      "latency_ms": 1334.4160999986343,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-110",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "He wanted to stand out from the regular options.",
+      "ground_truth": "Bright and bold - like him",
+      "tokens_used": 1231,
+      "latency_ms": 1537.655200023437,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-111",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Coconut milk, vanilla extract, sugar, and a pinch of salt",
+      "ground_truth": "Coconut milk, vanilla extract, sugar, salt",
+      "tokens_used": 1404,
+      "latency_ms": 1773.6118000175338,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-112",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "\"Finding Home\"",
+      "ground_truth": "\"Finding Home\"",
+      "tokens_used": 670,
+      "latency_ms": 1057.0306000008713,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-113",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Action and sci-fi",
+      "ground_truth": "Fantasy and sci-fi",
+      "tokens_used": 1330,
+      "latency_ms": 1393.3416999934707,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-114",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Adventure, magic, and great characters",
+      "ground_truth": "Adventures and magic",
+      "tokens_used": 1278,
+      "latency_ms": 1590.780700003961,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-115",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Dramas and emotionally-driven films",
+      "ground_truth": "Dramas and emotionally-driven films",
+      "tokens_used": 1403,
+      "latency_ms": 1534.6199999912642,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-116",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Playing video games",
+      "ground_truth": "watching fantasy and sci-fi movies",
+      "tokens_used": 1392,
+      "latency_ms": 1667.9229000001214,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-117",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Strawberry filling",
+      "ground_truth": "strawberry",
+      "tokens_used": 1293,
+      "latency_ms": 1664.421699999366,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-118",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Coconut cream frosting",
+      "ground_truth": "coconut cream",
+      "tokens_used": 1305,
+      "latency_ms": 980.2193999930751,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-119",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Write a whole movie",
+      "ground_truth": "write a whole movie",
+      "tokens_used": 1387,
+      "latency_ms": 1668.422400020063,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-120",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Writing a screenplay",
+      "ground_truth": "Start thinking about a drama and publish a screenplay",
+      "tokens_used": 1387,
+      "latency_ms": 1506.8811000091955,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-121",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Joanna",
+      "ground_truth": "Joanna",
+      "tokens_used": 1355,
+      "latency_ms": 1399.7715000004973,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-122",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "He took Max for a walk.",
+      "ground_truth": "get her a stuffed animal",
+      "tokens_used": 1277,
+      "latency_ms": 1492.6718999922741,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-123",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Like having joy in your pocket.",
+      "ground_truth": "A stuffed animal to remind you of the good vibes",
+      "tokens_used": 1338,
+      "latency_ms": 1586.6916000086349,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-124",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A gaming party",
+      "ground_truth": "A gaming party",
+      "tokens_used": 1170,
+      "latency_ms": 1398.6946999793872,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-125",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Tournament friends, old friends, and teammates from other tournaments.",
+      "ground_truth": "Tournament friends, old friends, teammates",
+      "tokens_used": 1245,
+      "latency_ms": 1736.5703000104986,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-126",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Custom controller decorations",
+      "ground_truth": "Custom controller decorations",
+      "tokens_used": 1404,
+      "latency_ms": 1442.017699999269,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-127",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A screenplay",
+      "ground_truth": "screenplay bits",
+      "tokens_used": 1487,
+      "latency_ms": 1552.0336999907158,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-128",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Spider-Man",
+      "ground_truth": "Spider-Man",
+      "tokens_used": 1254,
+      "latency_ms": 1613.738599990029,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-129",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Iron Man",
+      "ground_truth": "Iron Man",
+      "tokens_used": 1377,
+      "latency_ms": 1638.7844000128098,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-130",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Inspiring quotes and pictures",
+      "ground_truth": "inspiring quotes, photos, and little keepsakes",
+      "tokens_used": 1199,
+      "latency_ms": 1390.6588999961969,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-131",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "The love and encouragement from her family.",
+      "ground_truth": "love and encouragement from her family",
+      "tokens_used": 1366,
+      "latency_ms": 1438.8718000263907,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-132",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Vegan ice cream",
+      "ground_truth": "vegan ice cream",
+      "tokens_used": 1320,
+      "latency_ms": 1422.4551999941468,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-133",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "7 people",
+      "ground_truth": "7",
+      "tokens_used": 2677,
+      "latency_ms": 2685.547699977178,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-134",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Coconut milk ice cream",
+      "ground_truth": "vegan ice cream recipe",
+      "tokens_used": 1297,
+      "latency_ms": 1931.3534999964759,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-135",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "She planned to try making it.",
+      "ground_truth": "make it for her family",
+      "tokens_used": 1333,
+      "latency_ms": 1432.6778999820817,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-136",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Four",
+      "ground_truth": "Four",
+      "tokens_used": 2691,
+      "latency_ms": 2596.8235000036657,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-137",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Woodhaven",
+      "ground_truth": "Woodhaven",
+      "tokens_used": 1247,
+      "latency_ms": 1598.786899994593,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-138",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A cool old book collection",
+      "ground_truth": "cool old book collection",
+      "tokens_used": 1252,
+      "latency_ms": 1467.9675999796018,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-139",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Loss, redemption, and forgiveness",
+      "ground_truth": "loss, redemption, and forgiveness",
+      "tokens_used": 1375,
+      "latency_ms": 1489.2619000165723,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-140",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A road trip to Woodhaven",
+      "ground_truth": "Woodhaven's interesting past and people",
+      "tokens_used": 1356,
+      "latency_ms": 1700.6930999923497,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-141",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "He was winning a video game tournament.",
+      "ground_truth": "Won a video game tournament",
+      "tokens_used": 1456,
+      "latency_ms": 1609.8483000241686,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-142",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Competing in video game tournaments",
+      "ground_truth": "Competing in video game tournaments",
+      "tokens_used": 1288,
+      "latency_ms": 1543.073100008769,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-143",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Touched and inspired",
+      "ground_truth": "Touched",
+      "tokens_used": 1477,
+      "latency_ms": 1599.0328000043519,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-144",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "She hopes her writing can make a difference and change lives.",
+      "ground_truth": "share her stories and hopefully have an impact",
+      "tokens_used": 1430,
+      "latency_ms": 1740.0224000157323,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-145",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A blog post about a hard moment in her life",
+      "ground_truth": "A blog post about a hard moment in her life",
+      "tokens_used": 1504,
+      "latency_ms": 1679.694299993571,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-146",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Knowing that her writing can make a difference.",
+      "ground_truth": "Knowing that her writing can make a difference",
+      "tokens_used": 1445,
+      "latency_ms": 1501.1257999867667,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-147",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Coconut milk ice cream",
+      "ground_truth": "Coconut milk ice cream",
+      "tokens_used": 1331,
+      "latency_ms": 1181.8275000259746,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-148",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Happy to share",
+      "ground_truth": "Happy to share",
+      "tokens_used": 1344,
+      "latency_ms": 1730.581899988465,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-149",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A book",
+      "ground_truth": "her book",
+      "tokens_used": 1461,
+      "latency_ms": 1710.4537999839522,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-150",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "She felt an awesome feeling and celebrated the great feedback.",
+      "ground_truth": "making a delicious treat",
+      "tokens_used": 1493,
+      "latency_ms": 1666.357500012964,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-151",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "He shared the excitement with Joanna.",
+      "ground_truth": "Taking time off to chill with pets",
+      "tokens_used": 1327,
+      "latency_ms": 1534.9627000105102,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-152",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Joanna is lactose intolerant.",
+      "ground_truth": "lactose intolerance",
+      "tokens_used": 1326,
+      "latency_ms": 1576.6377999971155,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-153",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Dairy-free margarine or coconut oil",
+      "ground_truth": "dairy-free margarine or coconut oil",
+      "tokens_used": 2485,
+      "latency_ms": 3683.900400006678,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-154",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A cooking show",
+      "ground_truth": "a cooking show",
+      "tokens_used": 1352,
+      "latency_ms": 1771.3291000109166,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-155",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Coconut milk ice cream",
+      "ground_truth": "Coconut milk ice cream",
+      "tokens_used": 1372,
+      "latency_ms": 1432.8589999931864,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-156",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Dairy-free chocolate mousse",
+      "ground_truth": "dairy-free chocolate mousse",
+      "tokens_used": 1378,
+      "latency_ms": 1589.0291999967303,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-157",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A chocolate raspberry tart",
+      "ground_truth": "chocolate raspberry tart",
+      "tokens_used": 1271,
+      "latency_ms": 1522.709600016242,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-158",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A dairy-free chocolate cake with raspberries",
+      "ground_truth": "chocolate cake with raspberries",
+      "tokens_used": 1340,
+      "latency_ms": 1516.9103000080213,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-159",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Blueberries and coconut milk",
+      "ground_truth": "blueberries and coconut milk",
+      "tokens_used": 1386,
+      "latency_ms": 1639.2050000140443,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-160",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Little Women",
+      "ground_truth": "Little Women",
+      "tokens_used": 1357,
+      "latency_ms": 1726.9258000014815,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-161",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A cute little bookmark",
+      "ground_truth": "a bookmark",
+      "tokens_used": 1511,
+      "latency_ms": 1550.6278999964707,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-162",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Catan",
+      "ground_truth": "Catan",
+      "tokens_used": 1373,
+      "latency_ms": 1832.608500000788,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-163",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Inception",
+      "ground_truth": "\"Inception\"",
+      "tokens_used": 1302,
+      "latency_ms": 1741.9092000054661,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-164",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Cyberpunk 2077",
+      "ground_truth": "Cyberpunk 2077",
+      "tokens_used": 1303,
+      "latency_ms": 1555.1233000005595,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-165",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A photo holding a videogame controller",
+      "ground_truth": "a bookcase filled with dvds and movies",
+      "tokens_used": 1337,
+      "latency_ms": 1651.0745999985375,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-166",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Gripping story and great actors",
+      "ground_truth": "gripping with great actors",
+      "tokens_used": 1236,
+      "latency_ms": 1459.5877999963704,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-167",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A fluffy couch, a weighted blanket, and dimmable lights.",
+      "ground_truth": "couch for multiple people, fluffy blanket, lights that can be dimmed",
+      "tokens_used": 1488,
+      "latency_ms": 1843.7021999852732,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-168",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Stuffed animals and writing",
+      "ground_truth": "stuffed animal dog named Tilly",
+      "tokens_used": 1321,
+      "latency_ms": 1641.2180000043008,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-169",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "She keeps Tilly, a stuffed animal dog, by her side.",
+      "ground_truth": "have a stuffed animal dog named Tilly with her",
+      "tokens_used": 1378,
+      "latency_ms": 1714.6813999861479,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-170",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "She used to have a real dog named Tilly back in Michigan.",
+      "ground_truth": "after a dog she had in Michigan",
+      "tokens_used": 1350,
+      "latency_ms": 1701.0423000028823,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-171",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "She continues pursuing her passion for writing.",
+      "ground_truth": "keep grinding and moving ahead",
+      "tokens_used": 1186,
+      "latency_ms": 1476.5950000146404,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-172",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Nate respects Joanna's ability to bounce back from setbacks.",
+      "ground_truth": "respect Joanna for being able to bounce back",
+      "tokens_used": 1446,
+      "latency_ms": 1722.4584000068717,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-173",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "He assures her that she will bounce back and continue pushing forward.",
+      "ground_truth": "rejections don't define her, keep grinding and she'll find the perfect opportunity",
+      "tokens_used": 1295,
+      "latency_ms": 1649.1277999884915,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-174",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "His turtles",
+      "ground_truth": "his turtles",
+      "tokens_used": 1281,
+      "latency_ms": 1583.5734000138473,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-175",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A stuffed animal named Tilly",
+      "ground_truth": "naming a stuffed animal dog Tilly",
+      "tokens_used": 1415,
+      "latency_ms": 1589.5267000014428,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-176",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A movie script",
+      "ground_truth": "movie script",
+      "tokens_used": 1514,
+      "latency_ms": 1516.709700023057,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-177",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "To help bring them alive in her head for better writing.",
+      "ground_truth": "visuals to help bring the characters alive in her head so she can write better",
+      "tokens_used": 1369,
+      "latency_ms": 1950.7669000013266,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-178",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "People she knows, things she saw, and what she imagined.",
+      "ground_truth": "people she knows, things she saw, her imagination",
+      "tokens_used": 1452,
+      "latency_ms": 1890.450900013093,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-179",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Surreal and amazing",
+      "ground_truth": "surreal and cool",
+      "tokens_used": 1469,
+      "latency_ms": 1591.5256000007503,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-180",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "The context does not contain the answer.",
+      "ground_truth": "combination of vegetables, fruits, and insects",
+      "tokens_used": 1282,
+      "latency_ms": 1507.9491999931633,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-181",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Coconut milk",
+      "ground_truth": "coconut milk",
+      "tokens_used": 1325,
+      "latency_ms": 1568.9225000096485,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-182",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Old writings",
+      "ground_truth": "early writings",
+      "tokens_used": 1572,
+      "latency_ms": 1686.5387000143528,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-183",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Xeonoblade Chronicles",
+      "ground_truth": "\"Xenoblade Chronicles\"",
+      "tokens_used": 1343,
+      "latency_ms": 1846.7777000041679,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-184",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Cute notes",
+      "ground_truth": "a handwritten letter",
+      "tokens_used": 1405,
+      "latency_ms": 1509.4685999793,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-185",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Role-Playing Game (RPG)",
+      "ground_truth": "fantasy RPG",
+      "tokens_used": 1245,
+      "latency_ms": 1564.9334999907296,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-186",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Homemade coconut ice cream",
+      "ground_truth": "Homemade coconut ice cream",
+      "tokens_used": 1371,
+      "latency_ms": 1273.0378000123892,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-187",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A suspenseful thriller set in a small Midwestern town.",
+      "ground_truth": "A suspenseful thriller set in a small Midwestern town",
+      "tokens_used": 733,
+      "latency_ms": 933.6238999967463,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-188",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Gaming content",
+      "ground_truth": "gaming content",
+      "tokens_used": 1415,
+      "latency_ms": 1388.435600005323,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-189",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A desire to share his love of gaming and connect with others who enjoy it.",
+      "ground_truth": "Love of gaming and connecting with others who enjoy it too",
+      "tokens_used": 1359,
+      "latency_ms": 1681.928300007712,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-190",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Gaming videos",
+      "ground_truth": "Gaming videos",
+      "tokens_used": 1419,
+      "latency_ms": 1587.5898000085726,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-191",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Watch other people's videos first to understand audience preferences.",
+      "ground_truth": "Watch other people's videos to understand what the audience likes",
+      "tokens_used": 1356,
+      "latency_ms": 1642.0844999956898,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-192",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A sunset",
+      "ground_truth": "Sunset",
+      "tokens_used": 1358,
+      "latency_ms": 1491.9799999915995,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-193",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A hike and the beauty of nature.",
+      "ground_truth": "The incredible sunset and surrounding beauty",
+      "tokens_used": 1385,
+      "latency_ms": 1740.0931000011042,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-194",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "The tank is big enough for three.",
+      "ground_truth": "He saw another one at a pet store and wanted to get it",
+      "tokens_used": 1398,
+      "latency_ms": 1760.491599998204,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-195",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Try some of Joanna's cooking.",
+      "ground_truth": "Watch one of Joanna's movies together or go to the park",
+      "tokens_used": 1343,
+      "latency_ms": 1629.8583000025246,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-196",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "His turtles",
+      "ground_truth": "turtles",
+      "tokens_used": 1295,
+      "latency_ms": 1453.6144000012428,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-197",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Their unique nature, slow pace, and calming presence.",
+      "ground_truth": "They make him feel calm and don't require much looking after",
+      "tokens_used": 1232,
+      "latency_ms": 1462.7616000070702,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-198",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A photo holding a videogame controller",
+      "ground_truth": "colorful bowls of coconut milk ice cream",
+      "tokens_used": 1409,
+      "latency_ms": 1570.9873999876436,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-199",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1367,
+      "latency_ms": 1666.9499000126962,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-200",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "The Lord of the Rings Trilogy",
+      "ground_truth": "",
+      "tokens_used": 1256,
+      "latency_ms": 1574.2218999948818,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-201",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "A suspenseful thriller set in a small Midwestern town.",
+      "ground_truth": "",
+      "tokens_used": 1383,
+      "latency_ms": 1701.1569000023883,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-202",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Dimmable lights",
+      "ground_truth": "",
+      "tokens_used": 1335,
+      "latency_ms": 1531.573100015521,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-203",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "The context does not contain the answer.",
+      "ground_truth": "",
+      "tokens_used": 1392,
+      "latency_ms": 1694.3940999917686,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-204",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "The context does not contain the answer.",
+      "ground_truth": "",
+      "tokens_used": 1283,
+      "latency_ms": 1515.3604999941308,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-205",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 1213,
+      "latency_ms": 1381.5475000010338,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-206",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Dramas and romcoms",
+      "ground_truth": "",
+      "tokens_used": 1284,
+      "latency_ms": 1396.5492999996059,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-207",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "He hopes for positive feedback and new opportunities.",
+      "ground_truth": "",
+      "tokens_used": 1084,
+      "latency_ms": 1481.8996000103652,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-208",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "3 years",
+      "ground_truth": "",
+      "tokens_used": 2679,
+      "latency_ms": 2467.369799996959,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-209",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 1371,
+      "latency_ms": 1985.2948999905493,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-210",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Chocolate and vanilla swirl",
+      "ground_truth": "",
+      "tokens_used": 1094,
+      "latency_ms": 1326.218100002734,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-211",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 1218,
+      "latency_ms": 1412.492800009204,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-212",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1329,
+      "latency_ms": 1446.0459999972954,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-213",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Coconut milk, vanilla extract, sugar, and a pinch of salt",
+      "ground_truth": "",
+      "tokens_used": 1280,
+      "latency_ms": 1562.2257000068203,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-214",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 670,
+      "latency_ms": 893.9437000080943,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-215",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Playing video games",
+      "ground_truth": "",
+      "tokens_used": 1430,
+      "latency_ms": 1437.9290000069886,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-216",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Strawberry filling",
+      "ground_truth": "",
+      "tokens_used": 1330,
+      "latency_ms": 1538.893700024346,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-217",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Tournament friends and old friends and teammates from other tournaments.",
+      "ground_truth": "",
+      "tokens_used": 1333,
+      "latency_ms": 1623.383800004376,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-218",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Custom controller decorations",
+      "ground_truth": "",
+      "tokens_used": 1424,
+      "latency_ms": 1364.9628999992274,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-219",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 1209,
+      "latency_ms": 1432.2709999978542,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-220",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Iron Man",
+      "ground_truth": "",
+      "tokens_used": 1424,
+      "latency_ms": 1433.5228000127245,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-221",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1394,
+      "latency_ms": 1414.9629999883473,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-222",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "7 people",
+      "ground_truth": "",
+      "tokens_used": 2648,
+      "latency_ms": 2359.8456000036094,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-223",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1355,
+      "latency_ms": 1420.3223000222351,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-224",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "She discovered the town's interesting past and cool people.",
+      "ground_truth": "",
+      "tokens_used": 1252,
+      "latency_ms": 1453.971199982334,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-225",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Loss, redemption, and forgiveness",
+      "ground_truth": "",
+      "tokens_used": 1323,
+      "latency_ms": 1698.2311999890953,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-226",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Stoked",
+      "ground_truth": "",
+      "tokens_used": 1377,
+      "latency_ms": 1585.8907999936491,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-227",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "She hopes to make a difference.",
+      "ground_truth": "",
+      "tokens_used": 1463,
+      "latency_ms": 1531.395900005009,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-228",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1353,
+      "latency_ms": 1529.041400004644,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-229",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "He made a delicious treat.",
+      "ground_truth": "",
+      "tokens_used": 1261,
+      "latency_ms": 1607.0661999983713,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-230",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "She wished Nate luck and congratulated him.",
+      "ground_truth": "",
+      "tokens_used": 1413,
+      "latency_ms": 1366.454499977408,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-231",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Coconut sugar",
+      "ground_truth": "",
+      "tokens_used": 2473,
+      "latency_ms": 2193.8973999931477,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-232",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Cooking show",
+      "ground_truth": "",
+      "tokens_used": 1463,
+      "latency_ms": 1438.825999997789,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-233",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1467,
+      "latency_ms": 1580.6416000123136,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-234",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1254,
+      "latency_ms": 1462.048599991249,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-235",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Coconut milk and gluten-free crust",
+      "ground_truth": "",
+      "tokens_used": 1370,
+      "latency_ms": 1643.3213999844156,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-236",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1396,
+      "latency_ms": 1723.70360000059,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-237",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Chocolate and vanilla swirl.",
+      "ground_truth": "",
+      "tokens_used": 1301,
+      "latency_ms": 1433.5962999903131,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-238",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Cyberpunk 2077",
+      "ground_truth": "",
+      "tokens_used": 1402,
+      "latency_ms": 1771.3260000164155,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-239",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Gripping and the actors were great.",
+      "ground_truth": "",
+      "tokens_used": 1271,
+      "latency_ms": 1623.5796000109985,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-240",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "A couch that can sit multiple people, a fluffy blanket, and dimmable lights.",
+      "ground_truth": "",
+      "tokens_used": 1316,
+      "latency_ms": 1758.0600999935996,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-241",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Stuffed animals",
+      "ground_truth": "",
+      "tokens_used": 1356,
+      "latency_ms": 1730.1181000075303,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-242",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "He plays video games and watches movies.",
+      "ground_truth": "",
+      "tokens_used": 1247,
+      "latency_ms": 2068.625800020527,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-243",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "He continues to pursue his dreams and doesn't give up.",
+      "ground_truth": "",
+      "tokens_used": 1276,
+      "latency_ms": 1526.0793000052217,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-244",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Friends and writing",
+      "ground_truth": "",
+      "tokens_used": 1313,
+      "latency_ms": 1516.255499998806,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-245",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "A stuffed animal named Tilly",
+      "ground_truth": "",
+      "tokens_used": 1320,
+      "latency_ms": 1564.9145999923348,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-246",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 1459,
+      "latency_ms": 1583.6610000114888,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-247",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 1183,
+      "latency_ms": 1390.5860999948345,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-248",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1429,
+      "latency_ms": 1384.6323999750894,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-249",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1298,
+      "latency_ms": 1657.3148999887053,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-250",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1273,
+      "latency_ms": 1372.294900007546,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-251",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1248,
+      "latency_ms": 1430.6901000090875,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-252",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Creating gaming content for YouTube.",
+      "ground_truth": "",
+      "tokens_used": 733,
+      "latency_ms": 1274.3784000049345,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-253",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1432,
+      "latency_ms": 1563.6086000013165,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-254",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Being a fan of gaming and wanting to share her love of gaming and connect with others.",
+      "ground_truth": "",
+      "tokens_used": 1309,
+      "latency_ms": 1736.5234000026248,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-255",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "A suspenseful thriller set in a small Midwestern town.",
+      "ground_truth": "",
+      "tokens_used": 1413,
+      "latency_ms": 1404.4378999969922,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-256",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "A sunset",
+      "ground_truth": "",
+      "tokens_used": 1338,
+      "latency_ms": 1543.6641999986023,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-42-qa-257",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "She saw another at a pet store.",
+      "ground_truth": "",
+      "tokens_used": 1376,
+      "latency_ms": 1671.7271000088658,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-258",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1307,
+      "latency_ms": 1143.3511999784969,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-42-qa-259",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1336,
+      "latency_ms": 1380.6356999848504,
+      "is_correct": true
+    }
+  ]
+}

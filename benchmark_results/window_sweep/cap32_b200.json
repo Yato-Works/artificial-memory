@@ -1,0 +1,878 @@
+[
+  {
+    "conv_idx": 0,
+    "n": 199,
+    "per_cat": {
+      "temporal": {
+        "n": 37,
+        "CORPUS": 37,
+        "WIDE_POOL": 33,
+        "EXP_POOL": 33,
+        "CAND_PRE": 37,
+        "CAND_POST": 37,
+        "CONTEXT": 35
+      },
+      "open-domain": {
+        "n": 13,
+        "CORPUS": 13,
+        "WIDE_POOL": 9,
+        "EXP_POOL": 9,
+        "CAND_PRE": 13,
+        "CAND_POST": 13,
+        "CONTEXT": 9
+      },
+      "multi-hop": {
+        "n": 32,
+        "CORPUS": 32,
+        "WIDE_POOL": 26,
+        "EXP_POOL": 28,
+        "CAND_PRE": 32,
+        "CAND_POST": 32,
+        "CONTEXT": 27
+      },
+      "single-hop": {
+        "n": 70,
+        "CORPUS": 70,
+        "WIDE_POOL": 62,
+        "EXP_POOL": 63,
+        "CAND_PRE": 67,
+        "CAND_POST": 70,
+        "CONTEXT": 59
+      },
+      "adversarial": {
+        "n": 47,
+        "CORPUS": 47,
+        "WIDE_POOL": 42,
+        "EXP_POOL": 43,
+        "CAND_PRE": 47,
+        "CAND_POST": 47,
+        "CONTEXT": 23
+      }
+    },
+    "rank_hist": {
+      "0-5": 110,
+      "6-19": 32,
+      "20-49": 14,
+      "50-+": 41
+    },
+    "reasons": {
+      "OK": 151,
+      "WINDOW_TOO_SMALL": 46
+    },
+    "reasons_by_cat": {
+      "temporal": {
+        "OK": 35,
+        "WINDOW_TOO_SMALL": 2
+      },
+      "open-domain": {
+        "OK": 7,
+        "WINDOW_TOO_SMALL": 4
+      },
+      "multi-hop": {
+        "OK": 27,
+        "WINDOW_TOO_SMALL": 5
+      },
+      "single-hop": {
+        "OK": 59,
+        "WINDOW_TOO_SMALL": 11
+      },
+      "adversarial": {
+        "OK": 23,
+        "WINDOW_TOO_SMALL": 24
+      }
+    },
+    "oracle_share": 0.7688442211055276,
+    "mean_candidates": 401.8274111675127,
+    "mean_tokens": 1995.2233502538072
+  },
+  {
+    "conv_idx": 1,
+    "n": 105,
+    "per_cat": {
+      "temporal": {
+        "n": 26,
+        "CORPUS": 26,
+        "WIDE_POOL": 24,
+        "EXP_POOL": 25,
+        "CAND_PRE": 26,
+        "CAND_POST": 26,
+        "CONTEXT": 24
+      },
+      "single-hop": {
+        "n": 44,
+        "CORPUS": 44,
+        "WIDE_POOL": 34,
+        "EXP_POOL": 35,
+        "CAND_PRE": 44,
+        "CAND_POST": 44,
+        "CONTEXT": 31
+      },
+      "multi-hop": {
+        "n": 11,
+        "CORPUS": 11,
+        "WIDE_POOL": 11,
+        "EXP_POOL": 11,
+        "CAND_PRE": 11,
+        "CAND_POST": 11,
+        "CONTEXT": 10
+      },
+      "adversarial": {
+        "n": 24,
+        "CORPUS": 24,
+        "WIDE_POOL": 23,
+        "EXP_POOL": 23,
+        "CAND_PRE": 24,
+        "CAND_POST": 24,
+        "CONTEXT": 10
+      }
+    },
+    "rank_hist": {
+      "0-5": 60,
+      "20-49": 12,
+      "50-+": 25,
+      "6-19": 8
+    },
+    "reasons": {
+      "OK": 75,
+      "WINDOW_TOO_SMALL": 30
+    },
+    "reasons_by_cat": {
+      "temporal": {
+        "OK": 24,
+        "WINDOW_TOO_SMALL": 2
+      },
+      "single-hop": {
+        "WINDOW_TOO_SMALL": 13,
+        "OK": 31
+      },
+      "multi-hop": {
+        "OK": 10,
+        "WINDOW_TOO_SMALL": 1
+      },
+      "adversarial": {
+        "OK": 10,
+        "WINDOW_TOO_SMALL": 14
+      }
+    },
+    "oracle_share": 0.7142857142857143,
+    "mean_candidates": 363.3047619047619,
+    "mean_tokens": 1866.9333333333334
+  },
+  {
+    "conv_idx": 2,
+    "n": 193,
+    "per_cat": {
+      "temporal": {
+        "n": 27,
+        "CORPUS": 27,
+        "WIDE_POOL": 26,
+        "EXP_POOL": 27,
+        "CAND_PRE": 27,
+        "CAND_POST": 27,
+        "CONTEXT": 23
+      },
+      "multi-hop": {
+        "n": 31,
+        "CORPUS": 31,
+        "WIDE_POOL": 28,
+        "EXP_POOL": 29,
+        "CAND_PRE": 31,
+        "CAND_POST": 31,
+        "CONTEXT": 29
+      },
+      "open-domain": {
+        "n": 8,
+        "CORPUS": 8,
+        "WIDE_POOL": 4,
+        "EXP_POOL": 4,
+        "CAND_PRE": 8,
+        "CAND_POST": 8,
+        "CONTEXT": 3
+      },
+      "single-hop": {
+        "n": 86,
+        "CORPUS": 86,
+        "WIDE_POOL": 73,
+        "EXP_POOL": 76,
+        "CAND_PRE": 86,
+        "CAND_POST": 86,
+        "CONTEXT": 74
+      },
+      "adversarial": {
+        "n": 41,
+        "CORPUS": 41,
+        "WIDE_POOL": 33,
+        "EXP_POOL": 35,
+        "CAND_PRE": 41,
+        "CAND_POST": 41,
+        "CONTEXT": 28
+      }
+    },
+    "rank_hist": {
+      "0-5": 125,
+      "6-19": 25,
+      "50-+": 31,
+      "20-49": 12
+    },
+    "reasons": {
+      "OK": 157,
+      "WINDOW_TOO_SMALL": 36
+    },
+    "reasons_by_cat": {
+      "temporal": {
+        "OK": 23,
+        "WINDOW_TOO_SMALL": 4
+      },
+      "multi-hop": {
+        "OK": 29,
+        "WINDOW_TOO_SMALL": 2
+      },
+      "open-domain": {
+        "WINDOW_TOO_SMALL": 5,
+        "OK": 3
+      },
+      "single-hop": {
+        "OK": 74,
+        "WINDOW_TOO_SMALL": 12
+      },
+      "adversarial": {
+        "OK": 28,
+        "WINDOW_TOO_SMALL": 13
+      }
+    },
+    "oracle_share": 0.8134715025906736,
+    "mean_candidates": 650.5388601036269,
+    "mean_tokens": 1966.7150259067357
+  },
+  {
+    "conv_idx": 3,
+    "n": 260,
+    "per_cat": {
+      "open-domain": {
+        "n": 11,
+        "CORPUS": 11,
+        "WIDE_POOL": 6,
+        "EXP_POOL": 7,
+        "CAND_PRE": 11,
+        "CAND_POST": 11,
+        "CONTEXT": 5
+      },
+      "multi-hop": {
+        "n": 37,
+        "CORPUS": 37,
+        "WIDE_POOL": 32,
+        "EXP_POOL": 33,
+        "CAND_PRE": 37,
+        "CAND_POST": 37,
+        "CONTEXT": 29
+      },
+      "temporal": {
+        "n": 40,
+        "CORPUS": 40,
+        "WIDE_POOL": 35,
+        "EXP_POOL": 36,
+        "CAND_PRE": 39,
+        "CAND_POST": 40,
+        "CONTEXT": 34
+      },
+      "single-hop": {
+        "n": 111,
+        "CORPUS": 111,
+        "WIDE_POOL": 93,
+        "EXP_POOL": 95,
+        "CAND_PRE": 109,
+        "CAND_POST": 111,
+        "CONTEXT": 96
+      },
+      "adversarial": {
+        "n": 61,
+        "CORPUS": 61,
+        "WIDE_POOL": 53,
+        "EXP_POOL": 58,
+        "CAND_PRE": 59,
+        "CAND_POST": 61,
+        "CONTEXT": 42
+      }
+    },
+    "rank_hist": {
+      "50-+": 48,
+      "0-5": 146,
+      "6-19": 49,
+      "20-49": 17
+    },
+    "reasons": {
+      "WINDOW_TOO_SMALL": 54,
+      "OK": 206
+    },
+    "reasons_by_cat": {
+      "open-domain": {
+        "WINDOW_TOO_SMALL": 6,
+        "OK": 5
+      },
+      "multi-hop": {
+        "OK": 29,
+        "WINDOW_TOO_SMALL": 8
+      },
+      "temporal": {
+        "OK": 34,
+        "WINDOW_TOO_SMALL": 6
+      },
+      "single-hop": {
+        "OK": 96,
+        "WINDOW_TOO_SMALL": 15
+      },
+      "adversarial": {
+        "WINDOW_TOO_SMALL": 19,
+        "OK": 42
+      }
+    },
+    "oracle_share": 0.7923076923076923,
+    "mean_candidates": 582.8961538461539,
+    "mean_tokens": 1818.7730769230768
+  },
+  {
+    "conv_idx": 4,
+    "n": 242,
+    "per_cat": {
+      "multi-hop": {
+        "n": 31,
+        "CORPUS": 31,
+        "WIDE_POOL": 27,
+        "EXP_POOL": 30,
+        "CAND_PRE": 31,
+        "CAND_POST": 31,
+        "CONTEXT": 29
+      },
+      "open-domain": {
+        "n": 14,
+        "CORPUS": 14,
+        "WIDE_POOL": 14,
+        "EXP_POOL": 14,
+        "CAND_PRE": 14,
+        "CAND_POST": 14,
+        "CONTEXT": 11
+      },
+      "temporal": {
+        "n": 26,
+        "CORPUS": 26,
+        "WIDE_POOL": 25,
+        "EXP_POOL": 25,
+        "CAND_PRE": 26,
+        "CAND_POST": 26,
+        "CONTEXT": 24
+      },
+      "single-hop": {
+        "n": 107,
+        "CORPUS": 107,
+        "WIDE_POOL": 87,
+        "EXP_POOL": 90,
+        "CAND_PRE": 105,
+        "CAND_POST": 107,
+        "CONTEXT": 92
+      },
+      "adversarial": {
+        "n": 64,
+        "CORPUS": 64,
+        "WIDE_POOL": 52,
+        "EXP_POOL": 53,
+        "CAND_PRE": 63,
+        "CAND_POST": 63,
+        "CONTEXT": 43
+      }
+    },
+    "rank_hist": {
+      "0-5": 149,
+      "6-19": 37,
+      "50-+": 38,
+      "20-49": 17,
+      "absent": 1
+    },
+    "reasons": {
+      "OK": 199,
+      "WINDOW_TOO_SMALL": 42,
+      "POOL_DROP": 1
+    },
+    "reasons_by_cat": {
+      "multi-hop": {
+        "OK": 29,
+        "WINDOW_TOO_SMALL": 2
+      },
+      "open-domain": {
+        "WINDOW_TOO_SMALL": 3,
+        "OK": 11
+      },
+      "temporal": {
+        "OK": 24,
+        "WINDOW_TOO_SMALL": 2
+      },
+      "single-hop": {
+        "OK": 92,
+        "WINDOW_TOO_SMALL": 15
+      },
+      "adversarial": {
+        "OK": 43,
+        "WINDOW_TOO_SMALL": 20,
+        "POOL_DROP": 1
+      }
+    },
+    "oracle_share": 0.8223140495867769,
+    "mean_candidates": 646.3429752066115,
+    "mean_tokens": 2016.7231404958677
+  },
+  {
+    "conv_idx": 5,
+    "n": 158,
+    "per_cat": {
+      "temporal": {
+        "n": 24,
+        "CORPUS": 24,
+        "WIDE_POOL": 19,
+        "EXP_POOL": 20,
+        "CAND_PRE": 24,
+        "CAND_POST": 24,
+        "CONTEXT": 20
+      },
+      "multi-hop": {
+        "n": 30,
+        "CORPUS": 30,
+        "WIDE_POOL": 22,
+        "EXP_POOL": 23,
+        "CAND_PRE": 30,
+        "CAND_POST": 30,
+        "CONTEXT": 20
+      },
+      "open-domain": {
+        "n": 7,
+        "CORPUS": 7,
+        "WIDE_POOL": 6,
+        "EXP_POOL": 6,
+        "CAND_PRE": 6,
+        "CAND_POST": 6,
+        "CONTEXT": 1
+      },
+      "single-hop": {
+        "n": 62,
+        "CORPUS": 62,
+        "WIDE_POOL": 53,
+        "EXP_POOL": 53,
+        "CAND_PRE": 62,
+        "CAND_POST": 62,
+        "CONTEXT": 58
+      },
+      "adversarial": {
+        "n": 35,
+        "CORPUS": 35,
+        "WIDE_POOL": 30,
+        "EXP_POOL": 30,
+        "CAND_PRE": 35,
+        "CAND_POST": 35,
+        "CONTEXT": 20
+      }
+    },
+    "rank_hist": {
+      "20-49": 14,
+      "0-5": 93,
+      "6-19": 18,
+      "50-+": 32,
+      "absent": 1
+    },
+    "reasons": {
+      "OK": 119,
+      "WINDOW_TOO_SMALL": 38,
+      "POOL_DROP": 1
+    },
+    "reasons_by_cat": {
+      "temporal": {
+        "OK": 20,
+        "WINDOW_TOO_SMALL": 4
+      },
+      "multi-hop": {
+        "OK": 20,
+        "WINDOW_TOO_SMALL": 10
+      },
+      "open-domain": {
+        "WINDOW_TOO_SMALL": 5,
+        "POOL_DROP": 1,
+        "OK": 1
+      },
+      "single-hop": {
+        "OK": 58,
+        "WINDOW_TOO_SMALL": 4
+      },
+      "adversarial": {
+        "WINDOW_TOO_SMALL": 15,
+        "OK": 20
+      }
+    },
+    "oracle_share": 0.7531645569620253,
+    "mean_candidates": 631.1392405063291,
+    "mean_tokens": 1967.73417721519
+  },
+  {
+    "conv_idx": 6,
+    "n": 190,
+    "per_cat": {
+      "open-domain": {
+        "n": 13,
+        "CORPUS": 13,
+        "WIDE_POOL": 9,
+        "EXP_POOL": 9,
+        "CAND_PRE": 13,
+        "CAND_POST": 13,
+        "CONTEXT": 8
+      },
+      "temporal": {
+        "n": 34,
+        "CORPUS": 34,
+        "WIDE_POOL": 27,
+        "EXP_POOL": 28,
+        "CAND_PRE": 33,
+        "CAND_POST": 33,
+        "CONTEXT": 27
+      },
+      "multi-hop": {
+        "n": 20,
+        "CORPUS": 20,
+        "WIDE_POOL": 14,
+        "EXP_POOL": 16,
+        "CAND_PRE": 19,
+        "CAND_POST": 19,
+        "CONTEXT": 13
+      },
+      "single-hop": {
+        "n": 83,
+        "CORPUS": 83,
+        "WIDE_POOL": 68,
+        "EXP_POOL": 70,
+        "CAND_PRE": 81,
+        "CAND_POST": 82,
+        "CONTEXT": 69
+      },
+      "adversarial": {
+        "n": 40,
+        "CORPUS": 40,
+        "WIDE_POOL": 33,
+        "EXP_POOL": 34,
+        "CAND_PRE": 39,
+        "CAND_POST": 40,
+        "CONTEXT": 24
+      }
+    },
+    "rank_hist": {
+      "20-49": 8,
+      "0-5": 108,
+      "50-+": 43,
+      "6-19": 28,
+      "absent": 3
+    },
+    "reasons": {
+      "OK": 141,
+      "WINDOW_TOO_SMALL": 46,
+      "POOL_DROP": 2,
+      "POOL_MISS": 1
+    },
+    "reasons_by_cat": {
+      "open-domain": {
+        "OK": 8,
+        "WINDOW_TOO_SMALL": 5
+      },
+      "temporal": {
+        "OK": 27,
+        "WINDOW_TOO_SMALL": 6,
+        "POOL_DROP": 1
+      },
+      "multi-hop": {
+        "WINDOW_TOO_SMALL": 6,
+        "OK": 13,
+        "POOL_DROP": 1
+      },
+      "single-hop": {
+        "OK": 69,
+        "WINDOW_TOO_SMALL": 13,
+        "POOL_MISS": 1
+      },
+      "adversarial": {
+        "OK": 24,
+        "WINDOW_TOO_SMALL": 16
+      }
+    },
+    "oracle_share": 0.7421052631578947,
+    "mean_candidates": 648.9894736842106,
+    "mean_tokens": 1885.3105263157895
+  },
+  {
+    "conv_idx": 7,
+    "n": 239,
+    "per_cat": {
+      "temporal": {
+        "n": 42,
+        "CORPUS": 42,
+        "WIDE_POOL": 37,
+        "EXP_POOL": 39,
+        "CAND_PRE": 40,
+        "CAND_POST": 41,
+        "CONTEXT": 32
+      },
+      "multi-hop": {
+        "n": 21,
+        "CORPUS": 21,
+        "WIDE_POOL": 20,
+        "EXP_POOL": 20,
+        "CAND_PRE": 21,
+        "CAND_POST": 21,
+        "CONTEXT": 18
+      },
+      "open-domain": {
+        "n": 10,
+        "CORPUS": 10,
+        "WIDE_POOL": 7,
+        "EXP_POOL": 9,
+        "CAND_PRE": 10,
+        "CAND_POST": 10,
+        "CONTEXT": 8
+      },
+      "single-hop": {
+        "n": 118,
+        "CORPUS": 118,
+        "WIDE_POOL": 104,
+        "EXP_POOL": 105,
+        "CAND_PRE": 114,
+        "CAND_POST": 116,
+        "CONTEXT": 104
+      },
+      "adversarial": {
+        "n": 48,
+        "CORPUS": 48,
+        "WIDE_POOL": 42,
+        "EXP_POOL": 43,
+        "CAND_PRE": 48,
+        "CAND_POST": 48,
+        "CONTEXT": 34
+      }
+    },
+    "rank_hist": {
+      "absent": 3,
+      "0-5": 160,
+      "50-+": 33,
+      "6-19": 24,
+      "20-49": 19
+    },
+    "reasons": {
+      "POOL_DROP": 2,
+      "OK": 196,
+      "WINDOW_TOO_SMALL": 40,
+      "POOL_MISS": 1
+    },
+    "reasons_by_cat": {
+      "temporal": {
+        "POOL_DROP": 1,
+        "WINDOW_TOO_SMALL": 9,
+        "OK": 32
+      },
+      "multi-hop": {
+        "OK": 18,
+        "WINDOW_TOO_SMALL": 3
+      },
+      "open-domain": {
+        "OK": 8,
+        "WINDOW_TOO_SMALL": 2
+      },
+      "single-hop": {
+        "OK": 104,
+        "WINDOW_TOO_SMALL": 12,
+        "POOL_DROP": 1,
+        "POOL_MISS": 1
+      },
+      "adversarial": {
+        "WINDOW_TOO_SMALL": 14,
+        "OK": 34
+      }
+    },
+    "oracle_share": 0.8200836820083682,
+    "mean_candidates": 649.9121338912134,
+    "mean_tokens": 1821.9414225941423
+  },
+  {
+    "conv_idx": 8,
+    "n": 196,
+    "per_cat": {
+      "multi-hop": {
+        "n": 37,
+        "CORPUS": 37,
+        "WIDE_POOL": 32,
+        "EXP_POOL": 35,
+        "CAND_PRE": 36,
+        "CAND_POST": 37,
+        "CONTEXT": 34
+      },
+      "temporal": {
+        "n": 33,
+        "CORPUS": 33,
+        "WIDE_POOL": 27,
+        "EXP_POOL": 29,
+        "CAND_PRE": 33,
+        "CAND_POST": 33,
+        "CONTEXT": 26
+      },
+      "open-domain": {
+        "n": 13,
+        "CORPUS": 10,
+        "WIDE_POOL": 7,
+        "EXP_POOL": 8,
+        "CAND_PRE": 9,
+        "CAND_POST": 9,
+        "CONTEXT": 6
+      },
+      "single-hop": {
+        "n": 73,
+        "CORPUS": 73,
+        "WIDE_POOL": 61,
+        "EXP_POOL": 67,
+        "CAND_PRE": 68,
+        "CAND_POST": 71,
+        "CONTEXT": 64
+      },
+      "adversarial": {
+        "n": 40,
+        "CORPUS": 40,
+        "WIDE_POOL": 37,
+        "EXP_POOL": 39,
+        "CAND_PRE": 36,
+        "CAND_POST": 39,
+        "CONTEXT": 25
+      }
+    },
+    "rank_hist": {
+      "6-19": 22,
+      "0-5": 125,
+      "absent": 7,
+      "50-+": 29,
+      "20-49": 13
+    },
+    "reasons": {
+      "OK": 155,
+      "POOL_DROP": 3,
+      "WINDOW_TOO_SMALL": 34,
+      "POOL_MISS": 4
+    },
+    "reasons_by_cat": {
+      "multi-hop": {
+        "OK": 34,
+        "WINDOW_TOO_SMALL": 3
+      },
+      "temporal": {
+        "OK": 26,
+        "WINDOW_TOO_SMALL": 7
+      },
+      "open-domain": {
+        "OK": 6,
+        "POOL_DROP": 1,
+        "WINDOW_TOO_SMALL": 3,
+        "POOL_MISS": 3
+      },
+      "single-hop": {
+        "OK": 64,
+        "WINDOW_TOO_SMALL": 7,
+        "POOL_DROP": 1,
+        "POOL_MISS": 1
+      },
+      "adversarial": {
+        "WINDOW_TOO_SMALL": 14,
+        "OK": 25,
+        "POOL_DROP": 1
+      }
+    },
+    "oracle_share": 0.7908163265306123,
+    "mean_candidates": 472.30102040816325,
+    "mean_tokens": 1942.25
+  },
+  {
+    "conv_idx": 9,
+    "n": 204,
+    "per_cat": {
+      "temporal": {
+        "n": 32,
+        "CORPUS": 31,
+        "WIDE_POOL": 28,
+        "EXP_POOL": 28,
+        "CAND_PRE": 31,
+        "CAND_POST": 31,
+        "CONTEXT": 27
+      },
+      "multi-hop": {
+        "n": 32,
+        "CORPUS": 32,
+        "WIDE_POOL": 28,
+        "EXP_POOL": 30,
+        "CAND_PRE": 32,
+        "CAND_POST": 32,
+        "CONTEXT": 24
+      },
+      "open-domain": {
+        "n": 7,
+        "CORPUS": 7,
+        "WIDE_POOL": 6,
+        "EXP_POOL": 7,
+        "CAND_PRE": 7,
+        "CAND_POST": 7,
+        "CONTEXT": 6
+      },
+      "single-hop": {
+        "n": 87,
+        "CORPUS": 87,
+        "WIDE_POOL": 71,
+        "EXP_POOL": 71,
+        "CAND_PRE": 86,
+        "CAND_POST": 87,
+        "CONTEXT": 68
+      },
+      "adversarial": {
+        "n": 46,
+        "CORPUS": 46,
+        "WIDE_POOL": 37,
+        "EXP_POOL": 38,
+        "CAND_PRE": 46,
+        "CAND_POST": 46,
+        "CONTEXT": 29
+      }
+    },
+    "rank_hist": {
+      "0-5": 111,
+      "6-19": 29,
+      "20-49": 22,
+      "50-+": 39,
+      "absent": 1
+    },
+    "reasons": {
+      "OK": 152,
+      "WINDOW_TOO_SMALL": 49,
+      "POOL_MISS": 1
+    },
+    "reasons_by_cat": {
+      "temporal": {
+        "OK": 27,
+        "WINDOW_TOO_SMALL": 4,
+        "POOL_MISS": 1
+      },
+      "multi-hop": {
+        "OK": 24,
+        "WINDOW_TOO_SMALL": 8
+      },
+      "open-domain": {
+        "WINDOW_TOO_SMALL": 1,
+        "OK": 4
+      },
+      "single-hop": {
+        "OK": 68,
+        "WINDOW_TOO_SMALL": 19
+      },
+      "adversarial": {
+        "OK": 29,
+        "WINDOW_TOO_SMALL": 17
+      }
+    },
+    "oracle_share": 0.7549019607843137,
+    "mean_candidates": 549.990099009901,
+    "mean_tokens": 2010.59900990099
+  }
+]

@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "C:\Users\smily\artificial_memory\scripts\run_locomo_smoke.py", line 269, in <module>
+    main()
+  File "C:\Users\smily\artificial_memory\scripts\run_locomo_smoke.py", line 246, in main
+    run_conversation(
+  File "C:\Users\smily\artificial_memory\scripts\run_locomo_smoke.py", line 82, in run_conversation
+    res = adapter.evaluate_question(q, turns, ir_records, answerer, weights=weights)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\smily\artificial_memory\src\artificial_memory\research\benchmarks\external\locomo_adapter.py", line 386, in evaluate_question
+    ans = answerer.answer(question.question, pcc.context_text)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\smily\artificial_memory\src\artificial_memory\research\benchmarks\llm.py", line 228, in answer
+    return self._chat(messages, FROZEN_ANSWER_MAX_TOKENS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\smily\artificial_memory\src\artificial_memory\research\benchmarks\llm.py", line 208, in _chat
+    response.raise_for_status()
+  File "C:\Users\smily\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\httpx\_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Server error '500 Internal Server Error' for url 'http://localhost:11434/api/chat'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500

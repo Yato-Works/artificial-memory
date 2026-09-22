@@ -1,0 +1,252 @@
+{
+  "evidence_missing": [
+    {
+      "qid": "conv-26-qa-001",
+      "q": "When did Melanie paint a sunrise?",
+      "gt": "2022",
+      "pred": "Last year"
+    },
+    {
+      "qid": "conv-26-qa-028",
+      "q": "When did Caroline go to the adoption meeting?",
+      "gt": "The friday before 15 July 2023",
+      "pred": "[No specific date provided in the conversation context]"
+    },
+    {
+      "qid": "conv-26-qa-031",
+      "q": "When did Melanie go camping in June?",
+      "gt": "The week before 27 June 2023",
+      "pred": "June 27, 2023"
+    },
+    {
+      "qid": "conv-26-qa-049",
+      "q": "When did Caroline and Melanie go to a pride fesetival together?",
+      "gt": "2022",
+      "pred": "I don't know."
+    },
+    {
+      "qid": "conv-26-qa-062",
+      "q": "When did Melanie go to the park?",
+      "gt": "27 August 2023",
+      "pred": "I don't know."
+    },
+    {
+      "qid": "conv-26-qa-068",
+      "q": "How long has Melanie been practicing art?",
+      "gt": "Since 2016",
+      "pred": "Not specified"
+    },
+    {
+      "qid": "conv-26-qa-072",
+      "q": "When did Melanie's friend adopt a child?",
+      "gt": "2022",
+      "pred": "I don't know."
+    },
+    {
+      "qid": "conv-26-qa-073",
+      "q": "When did Melanie get hurt?",
+      "gt": "September 2023",
+      "pred": "I don't know."
+    }
+  ],
+  "evidence_present": {
+    "pass": [
+      {
+        "qid": "conv-26-qa-000",
+        "q": "When did Caroline go to the LGBTQ support group?",
+        "gt": "7 May 2023",
+        "pred": "[D1:7 on 1:56 pm on 8 May, 2023]"
+      },
+      {
+        "qid": "conv-26-qa-010",
+        "q": "How long has Caroline had her current group of friends for?",
+        "gt": "4 years",
+        "pred": "Four years"
+      },
+      {
+        "qid": "conv-26-qa-012",
+        "q": "How long ago was Caroline's 18th birthday?",
+        "gt": "10 years ago",
+        "pred": "10 years ago"
+      },
+      {
+        "qid": "conv-26-qa-025",
+        "q": "When did Caroline go to the LGBTQ conference?",
+        "gt": "10 July 2023",
+        "pred": "Two days ago from 12 July, 2023"
+      }
+    ],
+    "relative_vs_absolute": [
+      {
+        "qid": "conv-26-qa-009",
+        "q": "When did Caroline meet up with her friends, family, and mentors?",
+        "gt": "The week before 9 June 2023",
+        "pred": "Last week",
+        "sub_type": "pred_relative_gt_absolute"
+      },
+      {
+        "qid": "conv-26-qa-016",
+        "q": "When did Melanie sign up for a pottery class?",
+        "gt": "2 July 2023",
+        "pred": "Yesterday",
+        "sub_type": "pred_relative_gt_absolute"
+      },
+      {
+        "qid": "conv-26-qa-020",
+        "q": "When did Melanie go to the museum?",
+        "gt": "5 July 2023",
+        "pred": "Yesterday",
+        "sub_type": "pred_relative_gt_absolute"
+      },
+      {
+        "qid": "conv-26-qa-021",
+        "q": "When did Caroline have a picnic?",
+        "gt": "The week before 6 July 2023",
+        "pred": "Last week",
+        "sub_type": "pred_relative_gt_absolute"
+      },
+      {
+        "qid": "conv-26-qa-036",
+        "q": "When did Caroline join a mentorship program?",
+        "gt": "The weekend before 17 July 2023",
+        "pred": "Last weekend",
+        "sub_type": "pred_relative_gt_absolute"
+      },
+      {
+        "qid": "conv-26-qa-054",
+        "q": "When did Caroline draw a self-portrait?",
+        "gt": "The week before 23 August 2023",
+        "pred": "Last week",
+        "sub_type": "pred_relative_gt_absolute"
+      },
+      {
+        "qid": "conv-26-qa-058",
+        "q": "When did Melanie make a plate in pottery class?",
+        "gt": "24 August 2023",
+        "pred": "Yesterday",
+        "sub_type": "pred_relative_gt_absolute"
+      },
+      {
+        "qid": "conv-26-qa-067",
+        "q": "When did Caroline go biking with friends?",
+        "gt": "The weekend before 13 September 2023",
+        "pred": "Last weekend",
+        "sub_type": "pred_relative_gt_absolute"
+      },
+      {
+        "qid": "conv-26-qa-074",
+        "q": "When did Melanie's family go on a roadtrip?",
+        "gt": "The weekend before 20 October 2023",
+        "pred": "Last weekend",
+        "sub_type": "pred_relative_gt_absolute"
+      },
+      {
+        "qid": "conv-26-qa-080",
+        "q": "When did Melanie buy the figurines?",
+        "gt": "21 October 2023",
+        "pred": "Yesterday",
+        "sub_type": "pred_relative_gt_absolute"
+      }
+    ],
+    "date_calculation_failure": [
+      {
+        "qid": "conv-26-qa-035",
+        "q": "When did Melanie go camping in July?",
+        "gt": "two weekends before 17 July 2023",
+        "pred": "July 12, 2023",
+        "sub_type": "date_mismatch"
+      },
+      {
+        "qid": "conv-26-qa-045",
+        "q": "When did Caroline attend a pride parade in August?",
+        "gt": "The Friday before 14 August 2023",
+        "pred": "August 17, 2023",
+        "sub_type": "date_mismatch"
+      },
+      {
+        "qid": "conv-26-qa-053",
+        "q": "When did Caroline apply to adoption agencies?",
+        "gt": "The week of 23 August 2023",
+        "pred": "On 25 May, 2023",
+        "sub_type": "date_mismatch"
+      },
+      {
+        "qid": "conv-26-qa-057",
+        "q": "When did Caroline encounter people on a hike and have a negative experience?",
+        "gt": "The week before 25 August 2023",
+        "pred": "17 August, 2023",
+        "sub_type": "date_mismatch"
+      }
+    ],
+    "temporal_order_failure": [],
+    "duration_count_failure": [],
+    "other_llm_failure": [
+      {
+        "qid": "conv-26-qa-005",
+        "q": "When did Melanie run a charity race?",
+        "gt": "The sunday before 25 May 2023",
+        "pred": "Last Saturday"
+      },
+      {
+        "qid": "conv-26-qa-006",
+        "q": "When is Melanie planning on going camping?",
+        "gt": "June 2023",
+        "pred": "Next month"
+      },
+      {
+        "qid": "conv-26-qa-008",
+        "q": "When did Caroline give a speech at a school?",
+        "gt": "The week before 9 June 2023",
+        "pred": "I don't know."
+      },
+      {
+        "qid": "conv-26-qa-017",
+        "q": "When is Caroline going to the transgender conference?",
+        "gt": "July 2023",
+        "pred": "This month"
+      },
+      {
+        "qid": "conv-26-qa-026",
+        "q": "When did Melanie read the book \"nothing is impossible\"?",
+        "gt": "2022",
+        "pred": "I don't know."
+      },
+      {
+        "qid": "conv-26-qa-029",
+        "q": "When did Melanie go to the pottery workshop?",
+        "gt": "The Friday before 15 July 2023",
+        "pred": "Last Friday"
+      },
+      {
+        "qid": "conv-26-qa-033",
+        "q": "When did Caroline go to a pride parade during the summer?",
+        "gt": "The week before 3 July 2023",
+        "pred": "Last Friday"
+      },
+      {
+        "qid": "conv-26-qa-041",
+        "q": "When did Caroline join a new activist group?",
+        "gt": "The Tuesday before 20 July 2023",
+        "pred": "Last Tuesday"
+      },
+      {
+        "qid": "conv-26-qa-044",
+        "q": "When is Melanie's daughter's birthday?",
+        "gt": "13 August",
+        "pred": "The context does not contain the answer."
+      },
+      {
+        "qid": "conv-26-qa-063",
+        "q": "When is Caroline's youth center putting on a talent show?",
+        "gt": "September 2023",
+        "pred": "None (not mentioned in conversation)."
+      },
+      {
+        "qid": "conv-26-qa-079",
+        "q": "When did Caroline pass the adoption interview?",
+        "gt": "The Friday before 22 October 2023",
+        "pred": "Last Friday"
+      }
+    ]
+  }
+}

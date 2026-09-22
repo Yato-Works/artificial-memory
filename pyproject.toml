@@ -52,6 +52,7 @@ dependencies = [
     "psycopg-pool>=3.1",
     "pgvector>=0.2",
     "numpy>=1.24",
+    "faiss-cpu>=1.15.1",
 ]
 urls = {Homepage = "https://github.com/Yato-Works/artificial-memory", Repository = "https://github.com/Yato-Works/artificial-memory", Issues = "https://github.com/Yato-Works/artificial-memory/issues", Documentation = "https://github.com/Yato-Works/artificial-memory#readme"}
 
@@ -91,6 +92,12 @@ operator = [
 ]
 mcp = [
     "mcp>=1.0,<2.0",
+]
+benchmarks = [
+    # The pinned official LoCoMo scorer (third_party/benchmarks/locomo/task_eval/
+    # evaluation.py) computes F1 with an NLTK Porter stemmer.  Kept in an
+    # optional group so the runtime install stays lean.
+    "nltk>=3.8",
 ]
 nli = [
     "transformers>=4.40",

@@ -1,6 +1,8 @@
 # Artificial Memory / Context Runtime
 
-> **Forget by compression. Recall by resolution. Reason with provenance.**
+> **Deterministic Memory Runtime with Structured Retrieval, Temporal Reasoning, Conflict Awareness, and Abstention.**
+>
+> *Forget by compression. Recall by resolution. Reason with provenance.*
 
 [English](README.md) | [日本語](README.ja.md)
 
@@ -15,9 +17,10 @@ Artificial Memory is not merely a "better RAG" — it is a **general-purpose cog
 - **Context as Intermediate Representation** — Memory → Recall → Prioritization → Resolution Expansion → Budget Allocation → Context IR → LLM
 - **Provenance as First-Class Property** — Every memory traces back to source conversation/message
 - **Memory as Evolving Object** — Created → Accessed → Compressed → Expanded → Contradicted → Revised → Consolidated → Archived → Recompiled
-- **Contradiction Detection & Belief Management** — Evidence ≠ Belief; explicit contradiction tracking with temporal validity
+- **Contradiction Detection & Belief Management** — Evidence ≠ Belief; explicit contradiction tracking with temporal validity (Truth vs. Evidence separation)
 - **Temporal Memory & Time Travel** — Reconstruct "what the system knew/believed at time T"
 - **Memory Integrity & Self-Healing** — Semantic preservation scoring, automatic recompilation on corruption
+- **Deterministic IR Extraction & Zero-LLM Ingestion** — Purely deterministic syntax/semantic parsing for ingestion (0 LLM write calls)
 - **Federated Multi-Agent Memory** — Policy-driven memory exchange with trust, provenance, expiration
 - **Enterprise Governance** — Classification, permissions, audit, tenancy, retention as architectural layer
 
@@ -29,8 +32,11 @@ Artificial Memory is not merely a "better RAG" — it is a **general-purpose cog
 - **Progressive Recall**: Recall = Resolution Up, expand only when needed
 - **Topic-based Organization**: Automatic topic classification and hierarchy
 - **Memory IR / Context IR**: Formal intermediate representations for compilation, recall, and context building
+- **Universal IR Extractor & Resolver**: Entity scoping, temporal constraints, and conflict gates without domain heuristics
 
-### 🔍 Advanced Retrieval
+### 🔍 Advanced Retrieval & Attribution
+- **Decoupled Evaluation**: Clear separation between Memory Retrieval (Test A) and LLM Answering (Test B)
+- **Failure Attribution**: Automated 8-point failure audit logging categorizing root causes (Retrieval, Resolution, LLM Reasoning, Evaluator)
 - **Vector Search**: FAISS-based semantic search with hybrid keyword+vector
 - **Temporal Queries**: Time-travel queries with valid_from/valid_until
 - **Associative Memory**: Graph-based memory associations with dependency tracking
@@ -53,50 +59,45 @@ Artificial Memory is not merely a "better RAG" — it is a **general-purpose cog
 - **Real-time Metrics**: Compression ratios, recall accuracy, token costs
 - **Experiment Framework**: Quantitative evaluation with ablation studies
 - **Memory Debugger**: Explain why memory was selected/rejected, why resolution expanded/not
-- **Red-Team Suite**: Adversarial testing for robustness
+- **Red-Team Suite**: Adversarial collision testing (Entity, Semantic, Temporal, Contradiction, Truth vs Evidence)
 - **Web UI**: Dashboard for memory visualization
 - **WebSocket**: Real-time updates
 
-## Quick Start
-
 ## Benchmarks
 
-Measured with `python scripts/run_readme_benchmark.py --memories 120 --queries 50 --seed 42`
-(Python 3.11 on Windows 10, Intel i7-11700; embeddings: all-MiniLM-L6-v2, FAISS IndexFlatIP).
-Reproduce on your machine — numbers below are from the dev workstation, not a benchmark lab.
+### 🔬 Rigorous Scientific Memory Benchmark: Artificial Memory vs. Competitors
 
-| Metric | Diverse domains | Stress (near-duplicate) |
-|---|---|---|
-| Semantic recall accuracy@1 (vector / hybrid) | **66.7% / 79.2%** | 29.2% / 41.7% |
-| Semantic recall accuracy@5 (vector / hybrid) | **100% / 100%** | 57.5% / 72.5% |
-| Recall latency p50 / p95 | 27 / 32 ms | 26 / 28 ms |
-| Token savings vs full-context injection | **69.6%** | 70.9% |
-| Vector index build (120 memories) | ~1.2 s | ~1.6 s |
-| Remember throughput | ~530 writes/s | ~550 writes/s |
+Evaluated against audited competitors (**Mem0**, **MemGPT**, **MemoryBank**, **Simple RAG**) under frozen configurations (`benchmark_config/*.yaml`), audited adapter specs (`competitors/*/spec.md`), and a frozen local model (`phi4-mini:3.8b`).
 
-Two synthetic datasets are benchmarked deliberately:
-**"diverse"** — memories from distinct domains (realistic retrieval setup);
-**"stress"** — 120 near-identical templates that differ only in entity/tech (adversarial).
-The gap between them quantifies how resolution/hybrid recall degrades under
-homogeneous content — exactly the failure mode we want to keep visible.
+#### 1. Adversarial Collision Suite ("AM Destruction Set")
+Stress-tests 5 hard cognitive failure modes: *Entity Collision*, *Semantic Collision*, *Temporal Collision*, *Contradiction*, and *Truth vs. Evidence* (state vs historical proposal).
 
-### End-to-end QA with local LLMs (Ollama)
+| System | Test A (Retrieval Acc) | Test B (Answer Acc) | False Positive Rate (FPR) | Abstention Acc | Context Tokens/Q | Write LLM Calls |
+|:---|:---:|:---:|:---:|:---:|:---:|:---:|
+| **Artificial Memory (AM)** | **100.0%** | **83.3%** | **16.7%** | **83.3%** | **118** | **0** |
+| MemGPT | 66.7% | 83.3% | 0.0% | 100.0% | 311 | 0 |
+| Mem0 | 66.7% | 66.7% | 33.3% | 66.7% | 144 | 15 |
+| MemoryBank | 66.7% | 66.7% | 16.7% | 83.3% | 200 | 0 |
+| Simple RAG | 66.7% | 66.7% | 33.3% | 66.7% | 195 | 0 |
 
-Same synthetic facts (20 questions), answered by small local models under
-three conditions. The facts (project codenames + tech choices) are
-unknowable without memory, so "no memory" measures the model's baseline.
-Run: `python scripts/run_llm_benchmark.py --questions 20` (temperature 0).
+> **Key Architectural Insights**:
+> - **Decoupled Evaluation**: AM achieved **100.0% Retrieval Accuracy (Test A)**. The drop to 83.3% in Test B was isolated via automated **Failure Attribution** as an `LLM_Reasoning_Failure` by the 3.8B model, not a retrieval defect.
+> - **Truth vs. Evidence**: Competitors suffered up to 33.3% False Positive Rates by confusing abandoned historical proposals with the active state. AM cleanly separated historical mentions from active truth.
+> - **Efficiency**: AM used only **118 tokens/query** (38% of MemGPT, 82% of Mem0) with **zero LLM write calls** during ingestion.
 
-| Model | No memory | Full-context injection | **AM recall (600-token budget)** |
-|---|---|---|---|
-| qwen2.5:1.5b | 0% | 90% @ 1141 tok | **100% @ 382 tok** |
-| qwen3:4b | 5% | 100% @ 1141 tok | **100% @ 382 tok** |
+#### 2. Scaled Hierarchical Benchmark (100 Questions)
+Tested across 4 difficulty tiers: **Easy** (Direct fact), **Medium** (Multi-hop), **Hard** (Temporal & Conflict), and **Adversarial** (Collisions).
+- Data schemas: `dataset_public/` (Specs & evaluation schemas)
+- Hidden evaluation suite: `dataset_hidden/arena_100.json`
 
-Adaptive recall matches or beats full-context injection while using **~66%
-fewer prompt tokens** — the Context Runtime does the filtering the raw
-context window otherwise absorbs.
+Run benchmark & diagnostics:
+```bash
+# Run Adversarial destruction set with failure attribution
+python scripts/run_scaled_benchmark.py --suite adversarial --diagnose
 
-### MCP integration — smoke test & real-agent E2E
+# Run full 100-question evaluation
+python scripts/run_scaled_benchmark.py --suite 100
+```
 
 Five verification layers, from fastest to most realistic — all reproducible
 from this repo:

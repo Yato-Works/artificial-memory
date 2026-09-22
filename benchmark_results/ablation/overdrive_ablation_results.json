@@ -1,0 +1,50 @@
+{
+  "Full Overdrive Core": {
+    "overall": 72.5,
+    "multi_hop": 60.0,
+    "adversarial": 70.0,
+    "temporal": 90.0,
+    "knowledge_update": 70.0,
+    "elapsed_seconds": 24.033551999978954
+  },
+  "- Temporal Engine": {
+    "overall": 55.00000000000001,
+    "multi_hop": 60.0,
+    "adversarial": 70.0,
+    "temporal": 20.0,
+    "knowledge_update": 70.0,
+    "elapsed_seconds": 22.808637099980842
+  },
+  "- Adaptive Search": {
+    "overall": 72.5,
+    "multi_hop": 60.0,
+    "adversarial": 70.0,
+    "temporal": 90.0,
+    "knowledge_update": 70.0,
+    "elapsed_seconds": 21.30493040001602
+  },
+  "- Proposition Gate": {
+    "overall": 65.0,
+    "multi_hop": 80.0,
+    "adversarial": 20.0,
+    "temporal": 90.0,
+    "knowledge_update": 70.0,
+    "elapsed_seconds": 21.63204699999187
+  },
+  "- State Supersession": {
+    "overall": 72.5,
+    "multi_hop": 60.0,
+    "adversarial": 70.0,
+    "temporal": 90.0,
+    "knowledge_update": 70.0,
+    "elapsed_seconds": 21.496367699990515
+  },
+  "- Answer Verifier": {
+    "overall": 65.0,
+    "multi_hop": 60.0,
+    "adversarial": 40.0,
+    "temporal": 90.0,
+    "knowledge_update": 70.0,
+    "elapsed_seconds": 22.063793399982387
+  }
+}

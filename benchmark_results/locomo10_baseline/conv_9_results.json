@@ -1,0 +1,2089 @@
+{
+  "summary": {
+    "conv_idx": 9,
+    "sample_id": "conv-50",
+    "speakers": [
+      "Calvin",
+      "Dave"
+    ],
+    "total_questions": 204,
+    "total_turns": 568,
+    "total_ir_records": 568,
+    "overall_accuracy": 0.37745098039215685,
+    "overall_oracle_recall": 0.44607843137254904,
+    "factual_accuracy": 0.3987341772151899,
+    "factual_oracle_recall": 0.5126582278481012,
+    "mean_tokens": 155.98529411764707,
+    "mean_latency_ms": 359.5712499990637,
+    "elapsed_seconds": 73.35653829999501,
+    "categories": {
+      "temporal": {
+        "total": 32,
+        "correct": 18,
+        "oracle": 19
+      },
+      "multi-hop": {
+        "total": 32,
+        "correct": 6,
+        "oracle": 15
+      },
+      "open-domain": {
+        "total": 7,
+        "correct": 1,
+        "oracle": 2
+      },
+      "single-hop": {
+        "total": 87,
+        "correct": 38,
+        "oracle": 45
+      },
+      "adversarial": {
+        "total": 46,
+        "correct": 14,
+        "oracle": 10
+      }
+    }
+  },
+  "results": [
+    {
+      "question_id": "conv-50-qa-000",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "June 2023",
+      "ground_truth": "between 26 March and 20 April 2023",
+      "tokens_used": 162,
+      "latency_ms": 323.203799984185,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-001",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "He bought a mansion.",
+      "ground_truth": "mansion in Japan, luxury car Ferrari 488 GTB",
+      "tokens_used": 125,
+      "latency_ms": 350.9669000050053,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-002",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Dave saw Aerosmith perform live on 26 March, 2023.",
+      "ground_truth": "on the weekend before March 26, 2023",
+      "tokens_used": 180,
+      "latency_ms": 535.2324000268709,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-003",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Boston",
+      "ground_truth": "Aerosmith, The Fireworks",
+      "tokens_used": 141,
+      "latency_ms": 299.8483000264969,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-004",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "Japan",
+      "ground_truth": "United States",
+      "tokens_used": 158,
+      "latency_ms": 335.6625000014901,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-005",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Dave's dreams are to open his own car maintenance shop.",
+      "ground_truth": "open a car maintenance shop, work on classic cars, build a custom car from scratch",
+      "tokens_used": 136,
+      "latency_ms": 442.4324000137858,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-006",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Classic cars",
+      "ground_truth": "classic vintage cars",
+      "tokens_used": 181,
+      "latency_ms": 297.53720000735484,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-007",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Yes",
+      "tokens_used": 176,
+      "latency_ms": 334.18299999902956,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-008",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "May 1, 2023",
+      "ground_truth": "May 1, 2023",
+      "tokens_used": 153,
+      "latency_ms": 356.89250001451,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-009",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Last week before 16 May 2023",
+      "ground_truth": "On a week before 16 May, 2023",
+      "tokens_used": 175,
+      "latency_ms": 425.6351999938488,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-010",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "On a week before 16 May, 2023",
+      "tokens_used": 137,
+      "latency_ms": 365.4587999917567,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-011",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "His car is not running properly.",
+      "ground_truth": "flooding of his mansion, car accident",
+      "tokens_used": 165,
+      "latency_ms": 356.2935999943875,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-012",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Calvin's concert in Tokyo was on 14 August 2023.",
+      "ground_truth": "last week of May 2023",
+      "tokens_used": 154,
+      "latency_ms": 495.1027999923099,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-013",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Yes; because he enjoys the rush of performing onstage to large crowds",
+      "tokens_used": 164,
+      "latency_ms": 325.53030000417493,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-014",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "8 June 2023",
+      "ground_truth": "8 June, 2023",
+      "tokens_used": 181,
+      "latency_ms": 368.1423999951221,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-015",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "To relax and recharge",
+      "ground_truth": "because it relaxes and calms him",
+      "tokens_used": 172,
+      "latency_ms": 322.76559999445453,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-016",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "July 2023",
+      "ground_truth": "July 2023",
+      "tokens_used": 129,
+      "latency_ms": 330.4175999946892,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-017",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "on the Friday before 21 June, 2023",
+      "tokens_used": 170,
+      "latency_ms": 312.2573999862652,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-018",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Once",
+      "ground_truth": "two times",
+      "tokens_used": 162,
+      "latency_ms": 279.6362999943085,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-019",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "An awesome music thing and an upcoming performance",
+      "ground_truth": "music festival, car museum, Shibuya crossing, Shinjuku",
+      "tokens_used": 169,
+      "latency_ms": 347.2225999867078,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-020",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Cal",
+      "ground_truth": "His Dad",
+      "tokens_used": 157,
+      "latency_ms": 264.7755000216421,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-021",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Yes; he want's to grow his fanbase",
+      "tokens_used": 170,
+      "latency_ms": 334.4939000089653,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-022",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Yes, Calvin wants to expand his brand.",
+      "ground_truth": "yes",
+      "tokens_used": 155,
+      "latency_ms": 396.89089998137206,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-023",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Fixing up things",
+      "ground_truth": "auto engineering",
+      "tokens_used": 163,
+      "latency_ms": 311.5662999916822,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-024",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "yes",
+      "tokens_used": 136,
+      "latency_ms": 306.3741000078153,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-025",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Last Friday before 22 August 2023",
+      "ground_truth": "on the Friday before 22 August, 2023",
+      "tokens_used": 143,
+      "latency_ms": 397.6494999951683,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-026",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "21 August 2023",
+      "ground_truth": "21 August, 2023",
+      "tokens_used": 121,
+      "latency_ms": 306.2822999781929,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-027",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "The context does not contain the answer.",
+      "ground_truth": "Miami",
+      "tokens_used": 166,
+      "latency_ms": 373.37739998474717,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-028",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Calvin drives long distances in his car.",
+      "ground_truth": "take long drives in his car, embrace nature, fixing cars",
+      "tokens_used": 135,
+      "latency_ms": 372.5410000188276,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-029",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Working with mechanics and sharing knowledge about cars.",
+      "ground_truth": "take a walk, go hiking, listen to favorite albums, live concerts, photography",
+      "tokens_used": 142,
+      "latency_ms": 381.71019998844713,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-030",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Vinyl records",
+      "ground_truth": "classic rock, Japanese music",
+      "tokens_used": 131,
+      "latency_ms": 295.3111999959219,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-031",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Dave was in San Francisco.",
+      "ground_truth": "San Francisco",
+      "tokens_used": 181,
+      "latency_ms": 358.64959997707047,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-032",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "San Francisco",
+      "ground_truth": "San Francisco",
+      "tokens_used": 158,
+      "latency_ms": 287.53380000125617,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-033",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "He went to a car workshop.",
+      "ground_truth": "attending a car modification workshop",
+      "tokens_used": 178,
+      "latency_ms": 353.7967999873217,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-034",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "1 September 2023",
+      "ground_truth": "September 1, 2023",
+      "tokens_used": 160,
+      "latency_ms": 307.3224000108894,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-035",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Last week before 2 September 2023",
+      "ground_truth": "last week of August 2023",
+      "tokens_used": 173,
+      "latency_ms": 422.70060000009835,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-036",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "September 11, 2023",
+      "tokens_used": 139,
+      "latency_ms": 311.02669998654164,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-037",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "yes",
+      "tokens_used": 161,
+      "latency_ms": 313.3979999984149,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-038",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "[D20:11 on 8:57 pm on 22 September, 2023]",
+      "ground_truth": "September 14, 2023",
+      "tokens_used": 161,
+      "latency_ms": 571.4550999982748,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-039",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Dodge Charger",
+      "tokens_used": 152,
+      "latency_ms": 208.9906000182964,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-040",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Tupac and Dr. Dre",
+      "tokens_used": 148,
+      "latency_ms": 337.4181000108365,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-041",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Their family members.",
+      "ground_truth": "Dad",
+      "tokens_used": 155,
+      "latency_ms": 337.1638999960851,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-042",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "No",
+      "ground_truth": "No",
+      "tokens_used": 164,
+      "latency_ms": 341.53939998941496,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-043",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Boston",
+      "ground_truth": "Boston",
+      "tokens_used": 150,
+      "latency_ms": 264.37970000552014,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-044",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "3 October 2023",
+      "ground_truth": "October 3, 2023",
+      "tokens_used": 185,
+      "latency_ms": 331.0504999826662,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-045",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "They have shared activities like meeting Frank Ocean, recording a song in the studio, and reminiscing about past experiences.",
+      "ground_truth": "Working on cars",
+      "tokens_used": 183,
+      "latency_ms": 589.0201000147499,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-046",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Immersing himself in concerts or favorite albums",
+      "ground_truth": "Restoring cars",
+      "tokens_used": 134,
+      "latency_ms": 341.9463000027463,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-047",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Dave has attended at least two car shows.",
+      "ground_truth": "two",
+      "tokens_used": 202,
+      "latency_ms": 710.8984000224154,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-048",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "He finished restoring a car.",
+      "ground_truth": "attending a car show",
+      "tokens_used": 166,
+      "latency_ms": 568.5524000145961,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-049",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Dave and his father tinkered with engines.",
+      "ground_truth": "tinkering with car engines, restoration and refurbishing cars",
+      "tokens_used": 187,
+      "latency_ms": 429.5325999846682,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-050",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Last week before 15 October 2023",
+      "ground_truth": "first week of October 2023",
+      "tokens_used": 150,
+      "latency_ms": 390.10030002100393,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-051",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "November 2022",
+      "ground_truth": "August 2022",
+      "tokens_used": 166,
+      "latency_ms": 328.6608000053093,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-052",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "November 2023",
+      "ground_truth": "November 2023",
+      "tokens_used": 175,
+      "latency_ms": 351.648199983174,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-053",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Dave",
+      "ground_truth": "friends and team",
+      "tokens_used": 163,
+      "latency_ms": 259.1870999895036,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-054",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Watching music videos, concerts, and documentaries about artists and their creative process.",
+      "ground_truth": "Calvin stays connected to the creative process by always staying up-to-date on world events and watching documentaries about artists.",
+      "tokens_used": 140,
+      "latency_ms": 505.94569998793304,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-055",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "24 October 2023",
+      "ground_truth": "October 24, 2023",
+      "tokens_used": 146,
+      "latency_ms": 355.8972000028007,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-056",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Tokyo",
+      "ground_truth": "San Francsico, Detroit",
+      "tokens_used": 116,
+      "latency_ms": 242.92839999543503,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-057",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "Restoring cars",
+      "ground_truth": "photography",
+      "tokens_used": 184,
+      "latency_ms": 321.0434000066016,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-058",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Attending a car lover's paradise event and speaking with classic car owners.",
+      "ground_truth": "attending a car show with Dad, working on an old car in a neighbor's garage when he was young, spent a summer restoring an old car with Dad",
+      "tokens_used": 169,
+      "latency_ms": 517.1762999962084,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-059",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "One",
+      "ground_truth": "two",
+      "tokens_used": 148,
+      "latency_ms": 296.86939998646267,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-060",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "He received a guitar.",
+      "ground_truth": "gold chain, custom-made guitar with an octopus on it",
+      "tokens_used": 168,
+      "latency_ms": 359.93030000827275,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-061",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "The context does not contain the answer.",
+      "ground_truth": "nearly two months",
+      "tokens_used": 152,
+      "latency_ms": 395.66400001058355,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-062",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "The conversation context does not contain the answer.",
+      "ground_truth": "two weeks",
+      "tokens_used": 148,
+      "latency_ms": 380.2525000064634,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-063",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Calvin owns a customized guitar with a shiny finish.",
+      "ground_truth": "custom-made yellow guitar with an octopus on it, shiny purple guitar",
+      "tokens_used": 153,
+      "latency_ms": 417.64810000313446,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-064",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Dave has opened a car shop, helped with car repairs, and gone on road trips with friends. He also hangs out with friends at parks for regular walks.",
+      "ground_truth": "weekly visits to local parks, countryside roadtrip, celebration of the opening of his car maintenance shop, card-playing nights",
+      "tokens_used": 171,
+      "latency_ms": 788.2473999925423,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-065",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "September 2023",
+      "tokens_used": 171,
+      "latency_ms": 333.84940001997165,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-066",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "No",
+      "tokens_used": 147,
+      "latency_ms": 342.6790999947116,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-067",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "Boston",
+      "ground_truth": "Tokyo",
+      "tokens_used": 169,
+      "latency_ms": 273.54329999070615,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-068",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "Before 5:46 pm on 2 November, 2023",
+      "ground_truth": "last week of October 2023",
+      "tokens_used": 174,
+      "latency_ms": 510.6056999939028,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-069",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "November 2023",
+      "ground_truth": "November 2023",
+      "tokens_used": 167,
+      "latency_ms": 305.15850000665523,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-070",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "16 November 2023",
+      "ground_truth": "November 16, 2023",
+      "tokens_used": 166,
+      "latency_ms": 313.5019000037573,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-071",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "The context does not contain the answer.",
+      "ground_truth": "A few months",
+      "tokens_used": 199,
+      "latency_ms": 407.95759999309666,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-072",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Calvin's favorite band at the music festival in April 2023 is not mentioned in the provided context.",
+      "ground_truth": "Aerosmith",
+      "tokens_used": 169,
+      "latency_ms": 625.9237000194844,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-073",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Tokyo",
+      "ground_truth": "Tokyo",
+      "tokens_used": 165,
+      "latency_ms": 280.5985999875702,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-074",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Stay true to yourself and sound unique.",
+      "ground_truth": "to stay true to himself and sound unique",
+      "tokens_used": 123,
+      "latency_ms": 370.94920000527054,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-075",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "A local garage",
+      "ground_truth": "Car maintenance shop",
+      "tokens_used": 134,
+      "latency_ms": 300.1042999967467,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-076",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Regular maintenance to full restorations of classic cars",
+      "ground_truth": "all kinds of cars, from regular maintenance to full restorations of classic cars",
+      "tokens_used": 174,
+      "latency_ms": 428.8224999909289,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-077",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A piece of artwork",
+      "ground_truth": "a gold necklace with a diamond pendant",
+      "tokens_used": 155,
+      "latency_ms": 333.2620000001043,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-078",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "His dedication to music",
+      "ground_truth": "why he keeps hustling as a musician",
+      "tokens_used": 146,
+      "latency_ms": 313.5113000171259,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-079",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "He fixes cars.",
+      "ground_truth": "immerse himself in something he loves",
+      "tokens_used": 162,
+      "latency_ms": 324.00319998851046,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-080",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Watching music videos, concerts, and documentaries about artists and their creative process.",
+      "ground_truth": "explore other things and have some fun",
+      "tokens_used": 178,
+      "latency_ms": 506.76640000892803,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-081",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "His music gear and favorite microphone.",
+      "ground_truth": "music gear and favorite microphone",
+      "tokens_used": 132,
+      "latency_ms": 372.1607999759726,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-082",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "A car maintenance shop",
+      "ground_truth": "a car shop",
+      "tokens_used": 143,
+      "latency_ms": 300.7717999862507,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-083",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Fixing up things and transforming non-working items into functioning ones.",
+      "ground_truth": "Fixing up things",
+      "tokens_used": 141,
+      "latency_ms": 457.8814999840688,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-084",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Performing live",
+      "ground_truth": "Performing live",
+      "tokens_used": 128,
+      "latency_ms": 270.87459998438135,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-085",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Exploring parks",
+      "ground_truth": "exploring parks",
+      "tokens_used": 181,
+      "latency_ms": 301.27559998072684,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-086",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Visiting a snowy peak",
+      "ground_truth": "Skiing",
+      "tokens_used": 135,
+      "latency_ms": 365.05160000524484,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-087",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Cruising around in his car",
+      "ground_truth": "get back on the road",
+      "tokens_used": 163,
+      "latency_ms": 397.4422999890521,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-088",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "A picnic",
+      "ground_truth": "regular walks together",
+      "tokens_used": 147,
+      "latency_ms": 284.63079998618923,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-089",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Collaborative music with Japanese artists",
+      "ground_truth": "experimenting with different genres",
+      "tokens_used": 166,
+      "latency_ms": 328.4381999983452,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-090",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "It gives them a fresh vibe.",
+      "ground_truth": "gives them a fresh vibe",
+      "tokens_used": 158,
+      "latency_ms": 397.18509998056106,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-091",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Calvin's car brand is not specified in the conversation.",
+      "ground_truth": "Ferrari",
+      "tokens_used": 172,
+      "latency_ms": 469.1613999893889,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-092",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "To expand his brand worldwide and grow his fanbase.",
+      "ground_truth": "expand his brand worldwide and grow his fanbase",
+      "tokens_used": 137,
+      "latency_ms": 417.21590000088327,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-093",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Keep going for those dreams. You got this!",
+      "ground_truth": "to never forget his dreams",
+      "tokens_used": 172,
+      "latency_ms": 414.6626000001561,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-094",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A car mod workshop",
+      "ground_truth": "Car mod workshop",
+      "tokens_used": 176,
+      "latency_ms": 357.5256000040099,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-095",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Engine swaps and suspension modifications",
+      "ground_truth": "engine swaps, suspension modifications, and body modifications",
+      "tokens_used": 145,
+      "latency_ms": 330.9636999911163,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-096",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Unknown type of car",
+      "ground_truth": "classic muscle car",
+      "tokens_used": 156,
+      "latency_ms": 277.83830001135357,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-097",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "The unique charm of classic cars.",
+      "ground_truth": "attention to small details",
+      "tokens_used": 170,
+      "latency_ms": 378.32720001460984,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-098",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "They were so into it that they sang along.",
+      "ground_truth": "Everyone was so into it and sang along",
+      "tokens_used": 178,
+      "latency_ms": 472.6999999838881,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-099",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "At a music festival in Tokyo",
+      "ground_truth": "At a music festival in Tokyo",
+      "tokens_used": 151,
+      "latency_ms": 346.77919998648576,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-100",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "At Calvin's mansion",
+      "ground_truth": "In the studio at Calvin's mansion",
+      "tokens_used": 144,
+      "latency_ms": 298.14640001859516,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-101",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A podcast discussing the rap industry",
+      "ground_truth": "a podcast discussing the rap industry",
+      "tokens_used": 139,
+      "latency_ms": 350.5265999992844,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-102",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Last weekend before 31 August 2023",
+      "ground_truth": "Miami",
+      "tokens_used": 136,
+      "latency_ms": 362.75640001986176,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-103",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "octopus",
+      "tokens_used": 114,
+      "latency_ms": 289.77090000989847,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-104",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "To give it a unique look that matches his style.",
+      "ground_truth": "unique look",
+      "tokens_used": 166,
+      "latency_ms": 422.0537999935914,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-105",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Shiny finish",
+      "ground_truth": "purple",
+      "tokens_used": 170,
+      "latency_ms": 271.42730000196025,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-106",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "San Francisco",
+      "ground_truth": "San Francisco",
+      "tokens_used": 152,
+      "latency_ms": 301.3642999867443,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-107",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Pride",
+      "ground_truth": "Proud",
+      "tokens_used": 136,
+      "latency_ms": 313.48529999377206,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-108",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Boston",
+      "ground_truth": "Boston",
+      "tokens_used": 145,
+      "latency_ms": 269.67270000022836,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-109",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Exploring and growing his brand",
+      "ground_truth": "exploring and growing his brand",
+      "tokens_used": 176,
+      "latency_ms": 371.6720000084024,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-110",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Calvin plans to check out Dave's garage and get ideas for future projects.",
+      "ground_truth": "Check out Dave's garage and maybe get some ideas for future projects",
+      "tokens_used": 184,
+      "latency_ms": 530.9910000069067,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-111",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "A movie that teaches about following dreams.",
+      "ground_truth": "Ratatouille",
+      "tokens_used": 169,
+      "latency_ms": 383.4318000008352,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-112",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Satisfying",
+      "ground_truth": "satisfying and worth the hard work",
+      "tokens_used": 151,
+      "latency_ms": 311.0387999913655,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-113",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Relaxing on long drives in his car",
+      "ground_truth": "feeling the wind blowing through his hair",
+      "tokens_used": 144,
+      "latency_ms": 379.9554999859538,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-114",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "\"California Love\"",
+      "tokens_used": 162,
+      "latency_ms": 368.28190000960603,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-115",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "A shiny orange car",
+      "tokens_used": 4,
+      "latency_ms": 1.0482000070624053,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-116",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Ford Mustang",
+      "ground_truth": "Ford Mustang",
+      "tokens_used": 149,
+      "latency_ms": 263.9698999992106,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-117",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Seeing the end result and knowing that it was done together.",
+      "ground_truth": "Transforming something old and beat-up into something beautiful",
+      "tokens_used": 155,
+      "latency_ms": 458.90259998850524,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-118",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Hard work and dedication",
+      "ground_truth": "Hard work and determination",
+      "tokens_used": 163,
+      "latency_ms": 299.211200006539,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-119",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "A therapeutic and fulfilling activity",
+      "ground_truth": "Therapy and a way to get away from everyday stress",
+      "tokens_used": 171,
+      "latency_ms": 339.8463999910746,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-120",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "He aims to share his passion and help others with car modifications.",
+      "ground_truth": "Take something broken and make it into something awesome",
+      "tokens_used": 158,
+      "latency_ms": 445.1608000090346,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-121",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A new Ferrari",
+      "ground_truth": "Ferrari",
+      "tokens_used": 147,
+      "latency_ms": 286.09599999617785,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-122",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "The Fireworks",
+      "tokens_used": 169,
+      "latency_ms": 331.0339000017848,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-123",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "By reminding himself of his passion, relying on supportive people, taking breaks for favorite activities, and staying connected to world events.",
+      "ground_truth": "Reminds himself of his passion for goals, gets help from others, and takes a break to recharge",
+      "tokens_used": 147,
+      "latency_ms": 664.6171000029426,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-124",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Dave finds the journey of finding happiness and motivation in shared interests fulfilling.",
+      "ground_truth": "fixing things",
+      "tokens_used": 171,
+      "latency_ms": 507.82579998485744,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-125",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "A music festival in Tokyo",
+      "ground_truth": "at a festival",
+      "tokens_used": 146,
+      "latency_ms": 319.2972999822814,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-126",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Shibuya Crossing",
+      "ground_truth": "Shibuya Crossing",
+      "tokens_used": 160,
+      "latency_ms": 346.9399000168778,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-127",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Shinjuku",
+      "ground_truth": "Shinjuku",
+      "tokens_used": 193,
+      "latency_ms": 312.10849998751655,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-128",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "ramen",
+      "tokens_used": 165,
+      "latency_ms": 328.09110000380315,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-129",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Performing and connecting with the crowd",
+      "ground_truth": "Performing and connecting with the crowd",
+      "tokens_used": 180,
+      "latency_ms": 389.22749998164363,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-130",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "He finds a balance between sticking to his sound and trying new stuff.",
+      "ground_truth": "Takes it one day at a time",
+      "tokens_used": 174,
+      "latency_ms": 477.5167999905534,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-131",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Struggles people go through",
+      "ground_truth": "Struggles that people go through",
+      "tokens_used": 123,
+      "latency_ms": 352.14830000768416,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-132",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Calvin describes his music as capturing feelings.",
+      "ground_truth": "Express himself and work through his emotions",
+      "tokens_used": 166,
+      "latency_ms": 404.29010000661947,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-133",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "He is passionate about working on cars.",
+      "ground_truth": "Fascinated with how machines work",
+      "tokens_used": 166,
+      "latency_ms": 373.81879999884404,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-134",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Paying extra attention to detail",
+      "tokens_used": 158,
+      "latency_ms": 291.74590000184253,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-135",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Paying attention to small details",
+      "ground_truth": "Paying attention to small details",
+      "tokens_used": 126,
+      "latency_ms": 352.7761000150349,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-136",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Dave sold the car he restored last year in 2022.",
+      "ground_truth": "Last year",
+      "tokens_used": 161,
+      "latency_ms": 454.77770001161844,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-137",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "at an early age",
+      "tokens_used": 118,
+      "latency_ms": 274.03359999880195,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-138",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "He found it amazing.",
+      "ground_truth": "Unreal, like a dream come true",
+      "tokens_used": 142,
+      "latency_ms": 322.04790000105277,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-139",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "He realized the importance of pursuing his passion for auto engineering.",
+      "ground_truth": "how much music means to him, it's like his passion and purpose",
+      "tokens_used": 179,
+      "latency_ms": 472.78489999007434,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-140",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "They agree that progress and hard work are essential for success.",
+      "ground_truth": "It's fulfilling and motivating",
+      "tokens_used": 148,
+      "latency_ms": 453.2970000000205,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-141",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Tokyo",
+      "ground_truth": "Boston",
+      "tokens_used": 142,
+      "latency_ms": 259.18550000642426,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-142",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "He threw a small party for his new album.",
+      "ground_truth": "Threw a small party for his new album",
+      "tokens_used": 179,
+      "latency_ms": 429.688799980795,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-143",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Car mods",
+      "ground_truth": "Car mods",
+      "tokens_used": 151,
+      "latency_ms": 270.8539000013843,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-144",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Starting a blog on car mods",
+      "ground_truth": "Through a blog on car mods",
+      "tokens_used": 171,
+      "latency_ms": 326.6652000020258,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-145",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Music videos and concerts",
+      "ground_truth": "Music videos, concerts, documentaries about artists and their creative process",
+      "tokens_used": 158,
+      "latency_ms": 322.29839998763055,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-146",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Photography",
+      "ground_truth": "Classic rock",
+      "tokens_used": 140,
+      "latency_ms": 288.3254000043962,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-147",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "A Japanese mansion and collaborating with new talent",
+      "ground_truth": "Writing lyrics and notes",
+      "tokens_used": 178,
+      "latency_ms": 379.8685000219848,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-148",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Car modifications",
+      "ground_truth": "How he made his car look like a beast",
+      "tokens_used": 158,
+      "latency_ms": 364.05000000377186,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-149",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "It inspires others to start their own DIY projects.",
+      "ground_truth": "It inspires others to start their DIY projects",
+      "tokens_used": 164,
+      "latency_ms": 412.914999993518,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-150",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "His old high school buddy",
+      "ground_truth": "his old high school buddy",
+      "tokens_used": 174,
+      "latency_ms": 398.97759997984394,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-151",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Listening to music inspired by people's struggles",
+      "ground_truth": "Photography",
+      "tokens_used": 137,
+      "latency_ms": 359.8739999870304,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-152",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "A guitar",
+      "ground_truth": "A vintage camera",
+      "tokens_used": 138,
+      "latency_ms": 266.4550999761559,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-153",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Sunsets",
+      "ground_truth": "Nature - sunsets, beaches, waves",
+      "tokens_used": 148,
+      "latency_ms": 294.3617999844719,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-154",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "A music tour with Frank",
+      "ground_truth": "Fancy gala",
+      "tokens_used": 128,
+      "latency_ms": 326.06580000719987,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-155",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "They discussed music collaborations.",
+      "ground_truth": "Music and art",
+      "tokens_used": 168,
+      "latency_ms": 370.4417000117246,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-156",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "He took the photo at sunset.",
+      "ground_truth": "Nearby park",
+      "tokens_used": 151,
+      "latency_ms": 361.8924999900628,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-157",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "It has been really calming for him.",
+      "ground_truth": "Nature helps us appreciate life",
+      "tokens_used": 148,
+      "latency_ms": 386.9394000212196,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-158",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Calvin Harris",
+      "ground_truth": "",
+      "tokens_used": 142,
+      "latency_ms": 252.45180001365952,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-159",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 158,
+      "latency_ms": 306.85690001701005,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-160",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Calvin is teaming up with a local garage.",
+      "ground_truth": "",
+      "tokens_used": 138,
+      "latency_ms": 423.04359999252483,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-161",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Cars",
+      "ground_truth": "",
+      "tokens_used": 169,
+      "latency_ms": 270.90050000697374,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-162",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "A photo",
+      "ground_truth": "",
+      "tokens_used": 170,
+      "latency_ms": 302.9734999872744,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-163",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "His favorite Disney movie",
+      "ground_truth": "",
+      "tokens_used": 159,
+      "latency_ms": 335.55689998320304,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-164",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "A garage",
+      "ground_truth": "",
+      "tokens_used": 171,
+      "latency_ms": 290.970699978061,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-165",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Fixing cars and making music",
+      "ground_truth": "",
+      "tokens_used": 146,
+      "latency_ms": 338.21429999079555,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-166",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Cycling",
+      "ground_truth": "",
+      "tokens_used": 146,
+      "latency_ms": 308.64579998888075,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-167",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "He describes it as an exciting process of self-discovery and growth.",
+      "ground_truth": "",
+      "tokens_used": 158,
+      "latency_ms": 391.93620000150986,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-168",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 136,
+      "latency_ms": 284.42370000993833,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-169",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Car mod workshop",
+      "ground_truth": "",
+      "tokens_used": 161,
+      "latency_ms": 309.6825999964494,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-170",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Car repairs and insurance handling",
+      "ground_truth": "",
+      "tokens_used": 178,
+      "latency_ms": 362.8882000048179,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-171",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "A car with a lot of work put into it.",
+      "ground_truth": "",
+      "tokens_used": 133,
+      "latency_ms": 380.98830002127215,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-172",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "A podcast discussing the rapidly evolving rap industry",
+      "ground_truth": "",
+      "tokens_used": 164,
+      "latency_ms": 363.65959999966435,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-173",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 153,
+      "latency_ms": 697.2793999884743,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-174",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Classic cars",
+      "ground_truth": "",
+      "tokens_used": 112,
+      "latency_ms": 249.4153000006918,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-175",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 175,
+      "latency_ms": 340.2137999946717,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-176",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 129,
+      "latency_ms": 270.32159999362193,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-177",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "San Francisco",
+      "ground_truth": "",
+      "tokens_used": 157,
+      "latency_ms": 315.4573999927379,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-178",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Inspiration",
+      "ground_truth": "",
+      "tokens_used": 156,
+      "latency_ms": 324.0102999843657,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-179",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "He booked a flight ticket to Boston.",
+      "ground_truth": "",
+      "tokens_used": 163,
+      "latency_ms": 383.0176999908872,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-180",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "The Nightmare Before Christmas",
+      "ground_truth": "",
+      "tokens_used": 169,
+      "latency_ms": 345.65350000048056,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-181",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 155,
+      "latency_ms": 344.74539998336695,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-182",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Calvin worked on his own car in the junkyard.",
+      "ground_truth": "",
+      "tokens_used": 133,
+      "latency_ms": 371.66470001102425,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-183",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 155,
+      "latency_ms": 327.52130000153556,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-184",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 165,
+      "latency_ms": 325.5901000229642,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-185",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "He aims to share his passion with others.",
+      "ground_truth": "",
+      "tokens_used": 171,
+      "latency_ms": 386.66050002211705,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-186",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "A new Ferrari",
+      "ground_truth": "",
+      "tokens_used": 147,
+      "latency_ms": 325.02359998761676,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-187",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Dave",
+      "ground_truth": "",
+      "tokens_used": 180,
+      "latency_ms": 284.608499991009,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-188",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Shibuya",
+      "ground_truth": "",
+      "tokens_used": 128,
+      "latency_ms": 305.52920000627637,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-189",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Shinjuku",
+      "ground_truth": "",
+      "tokens_used": 193,
+      "latency_ms": 347.3694999993313,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-190",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 157,
+      "latency_ms": 342.91659999871626,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-191",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 177,
+      "latency_ms": 338.27649999875575,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-192",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "He realized the band was still active and performing live.",
+      "ground_truth": "",
+      "tokens_used": 140,
+      "latency_ms": 452.7469000022393,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-193",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "He joined a rock band and started practicing guitar.",
+      "ground_truth": "",
+      "tokens_used": 140,
+      "latency_ms": 400.3651999810245,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-194",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 178,
+      "latency_ms": 309.0964000148233,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-195",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 150,
+      "latency_ms": 313.38180002057925,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-196",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Photography",
+      "ground_truth": "",
+      "tokens_used": 124,
+      "latency_ms": 276.51239998522215,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-197",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 158,
+      "latency_ms": 283.772000024328,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-50-qa-198",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "People are inspired to start their own DIY projects.",
+      "ground_truth": "",
+      "tokens_used": 156,
+      "latency_ms": 409.6630999993067,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-199",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "His old high school buddy",
+      "ground_truth": "",
+      "tokens_used": 143,
+      "latency_ms": 355.2098000072874,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-200",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "A new ride",
+      "ground_truth": "",
+      "tokens_used": 169,
+      "latency_ms": 264.6367000124883,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-201",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Photos of new talent in music",
+      "ground_truth": "",
+      "tokens_used": 142,
+      "latency_ms": 354.08859999733977,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-202",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "He discussed networking with other artists.",
+      "ground_truth": "",
+      "tokens_used": 142,
+      "latency_ms": 359.21609998331405,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-50-qa-203",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 170,
+      "latency_ms": 304.2410000052769,
+      "is_correct": true
+    }
+  ]
+}

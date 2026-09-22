@@ -1,0 +1,25 @@
+Integrity-gate flag rates (context contains 'Proposition Integrity Warning'):
+  ('cat', 2, 'clean'): 90
+  ('cat', 5, 'clean'): 69
+  ('cat', 5, 'flagged'): 43
+
+Unflagged adversarial samples:
+  conv-26-qa-161: What is Caroline's hand-painted bowl a reminder of?
+  conv-26-qa-179: Where did Oscar hide his bone once?
+  conv-26-qa-190: What was the poetry reading that Melanie attended about?
+  conv-26-qa-197: What did Caroline do after the road trip to relax?
+  conv-30-qa-079: What temporary job did Jon take to cover expenses?
+  conv-30-qa-082: What is Jon's favorite style of painting?
+
+benchmark_results/locomo10: flagged/clean x correct
+  flagged=False correct=False: 31
+  flagged=False correct=True: 38
+  flagged=True correct=False: 23
+  flagged=True correct=True: 20
+
+benchmark_results/locomo10_runs/selection_v3_llm: flagged/clean x correct
+  flagged=False correct=False: 62
+  flagged=False correct=True: 7
+  flagged=True correct=True: 43
+
+Saved: benchmark_results\probe_adversarial_flags.json

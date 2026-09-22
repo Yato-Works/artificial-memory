@@ -175,6 +175,23 @@ class RetrievalPlanCache:
             self._order.clear()
             self.stats = {FULL: 0, REINDEX: 0, REUSE: 0}
 
+    def invalidate_for_memory(self, memory_id: int) -> int:
+        """Evict any cached plans whose candidate pool contains memory_id.
+
+        Prevents stale token-budget knapsack solving in ContextAllocator
+        when a memory undergoes resolution degradation (Nemotron P0 hardening).
+        """
+        with self._lock:
+            to_remove = [
+                sig for sig, plan in self._families.items()
+                if memory_id in plan.candidate_ids
+            ]
+            for sig in to_remove:
+                self._families.pop(sig, None)
+                if sig in self._order:
+                    self._order.remove(sig)
+            return len(to_remove)
+
     def stats_snapshot(self) -> dict[str, int]:
         with self._lock:
             return dict(self.stats)
@@ -333,6 +350,9 @@ class SessionGate:
         session_gap_seconds: float = 300.0,
         max_sessions: int | None = None,
         score_floor: float = 0.0,
+        abstention_threshold: float | None = None,
+        session_aggregation: str = "top_k_mean",
+        aggregation_k: int = 3,
     ):
         self._explicit_sessions = session_by_id
         self.pool_size = pool_size
@@ -349,6 +369,14 @@ class SessionGate:
         # accuracy 0.95 -> 0.00 when the gate always fills the pool).  0.0
         # keeps every scored session (the Phase 8.7/8.9 behaviour).
         self.score_floor = score_floor
+        # Phase 8.13 query-relative abstention detector (ADR-0004 / Nemotron P0):
+        # Supports both Normalized BM25 in [0, 1] (invariant to query length &
+        # corpus size) when threshold <= 1.0, and raw BM25 score when > 1.0.
+        self.abstention_threshold = abstention_threshold
+        # Nemotron P0 hardening: session aggregation mode ("top_k_mean" or "max")
+        # Top-k mean prevents Trojan Horse context pollution from single-token outliers.
+        self.session_aggregation = session_aggregation
+        self.aggregation_k = aggregation_k
         # Corpus caches (rebuilt when the snapshot grows).
         self._doc_tokens: dict[int, list[str]] = {}
         self._df: dict[str, int] = {}
@@ -359,6 +387,7 @@ class SessionGate:
         self.total_in = 0
         self.total_out = 0
         self.floor_drops = 0
+        self.abstention_drops = 0
 
     # -- corpus statistics ---------------------------------------------------
     def _ensure_corpus(self, memories: list[Memory]) -> None:
@@ -418,6 +447,25 @@ class SessionGate:
             score += idf * (tf[t] * (k1 + 1)) / (tf[t] + norm)
         return score
 
+    def _bm25_max_possible(self, query: str, k1: float = 1.5) -> float:
+        """Theoretical upper bound of BM25 score for the given query tokens.
+
+        Used for scale-invariant normalized BM25: score / max_possible in [0, 1].
+        """
+        import math
+
+        q_tokens = _tokenize(query)
+        if not q_tokens or not self._doc_tokens:
+            return 0.0
+        n_docs = len(self._doc_tokens)
+        score = 0.0
+        for t in set(q_tokens):
+            df = self._df.get(t, 0)
+            if df > 0:
+                idf = math.log(1 + (n_docs - df + 0.5) / (df + 0.5))
+                score += idf * (k1 + 1)
+        return score
+
     # -- gate interface (matches HierarchicalGate.filter) --------------------
     def filter(self, query: str, memories: list[Memory]) -> list[Memory]:
         """Narrow ``memories`` to at most ``pool_size``, sessions kept whole.
@@ -432,6 +480,23 @@ class SessionGate:
             return memories
         sessions = self._sessions_for(memories)
         own_scores = [self._bm25(query, m) for m in memories]
+
+        # Phase 8.13 query-relative abstention detector (ADR-0004 / Nemotron P0):
+        # Tests if highest BM25 score is below abstention_threshold.
+        # Supports Normalized BM25 (query-length & corpus-size invariant) when
+        # threshold <= 1.0, and raw BM25 score when > 1.0.
+        if self.abstention_threshold is not None:
+            max_score = max(own_scores) if own_scores else 0.0
+            if 0.0 < self.abstention_threshold < 1.0:
+                max_possible = self._bm25_max_possible(query)
+                ratio = (max_score / max_possible) if max_possible > 0 else 0.0
+                if ratio < self.abstention_threshold:
+                    self.abstention_drops += len(memories)
+                    return []
+            else:
+                if max_score < self.abstention_threshold:
+                    self.abstention_drops += len(memories)
+                    return []
 
         # Phase 8.11 abstention floor: memories whose own BM25 is below the
         # floor carry no lexical evidence for this query and are excluded
@@ -465,14 +530,22 @@ class SessionGate:
             self.total_out += len(kept)
             return kept
 
-        # Session score = MAX surviving-member BM25.
-        session_scores: dict[int, float] = {}
+        # Session scoring (Nemotron P0 hardening):
+        # Either robust top-k mean (default) or max (legacy mode).
+        session_member_scores: dict[int, list[float]] = {}
         for _, mem, own in survivors:
             sid = sessions.get(mem.id)
-            if sid is None:
-                continue
-            if own > session_scores.get(sid, float("-inf")):
-                session_scores[sid] = own
+            if sid is not None:
+                session_member_scores.setdefault(sid, []).append(own)
+
+        session_scores: dict[int, float] = {}
+        for sid, scs in session_member_scores.items():
+            if self.session_aggregation == "max":
+                session_scores[sid] = max(scs)
+            else:
+                scs_sorted = sorted(scs, reverse=True)
+                k = min(self.aggregation_k, len(scs_sorted))
+                session_scores[sid] = sum(scs_sorted[:k]) / k if k > 0 else 0.0
 
         scored: list[tuple[float, int, Memory]] = []
         for idx, mem, own in survivors:
@@ -527,6 +600,7 @@ class SessionGate:
             "total_in": self.total_in,
             "total_out": self.total_out,
             "floor_drops": self.floor_drops,
+            "abstention_drops": self.abstention_drops,
             "corpus_size": self._corpus_size,
         }
 

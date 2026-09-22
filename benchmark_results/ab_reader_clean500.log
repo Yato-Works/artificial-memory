@@ -1,0 +1,26 @@
+qid subset: 500 questions
+cached contexts: 1986  convs=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]  limit=None
+    [phi4-mini:latest] 50 done  acc= 84.0%  (61s)
+    [phi4-mini:latest] 100 done  acc= 80.0%  (134s)
+    [phi4-mini:latest] 150 done  acc= 70.0%  (212s)
+    [phi4-mini:latest] 200 done  acc= 68.0%  (285s)
+    [phi4-mini:latest] 250 done  acc= 66.0%  (370s)
+    [phi4-mini:latest] 300 done  acc= 65.3%  (447s)
+    [phi4-mini:latest] 350 done  acc= 63.4%  (517s)
+    [phi4-mini:latest] 400 done  acc= 65.0%  (589s)
+    [phi4-mini:latest] 450 done  acc= 64.7%  (667s)
+    [phi4-mini:latest] 500 done  acc= 63.8%  (760s)
+phi4-mini:latest       acc= 63.8% (319/500)  oracle= 78.8%  760s  single-hop= 84.4%  multi-hop= 57.7%  temporal= 45.7%  adversarial= 43.8%  open-domain= 54.2%
+    [qwen2.5:7b-instruct-q4_K_M] 50 done  acc= 84.0%  (125s)
+    [qwen2.5:7b-instruct-q4_K_M] 100 done  acc= 80.0%  (268s)
+    [qwen2.5:7b-instruct-q4_K_M] 150 done  acc= 71.3%  (388s)
+    [qwen2.5:7b-instruct-q4_K_M] 200 done  acc= 74.0%  (498s)
+    [qwen2.5:7b-instruct-q4_K_M] 250 done  acc= 72.8%  (619s)
+    [qwen2.5:7b-instruct-q4_K_M] 300 done  acc= 72.0%  (737s)
+    [qwen2.5:7b-instruct-q4_K_M] 350 done  acc= 71.4%  (841s)
+    [qwen2.5:7b-instruct-q4_K_M] 400 done  acc= 73.2%  (958s)
+    [qwen2.5:7b-instruct-q4_K_M] 450 done  acc= 71.1%  (1077s)
+    [qwen2.5:7b-instruct-q4_K_M] 500 done  acc= 72.2%  (1212s)
+qwen2.5:7b-instruct-q4_K_M acc= 72.2% (361/500)  oracle= 78.8%  1215s  single-hop= 82.5%  multi-hop= 60.6%  temporal= 40.7%  adversarial= 88.4%  open-domain= 45.8%
+
+saved: benchmark_results\ab_reader_clean500.json

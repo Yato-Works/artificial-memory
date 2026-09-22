@@ -1,0 +1,237 @@
+================================================================================
+      LOCOMO EXPERIMENT RUNNER (Phase 0 Measurement Harness)
+================================================================================
+Mode: FULL (frozen LLM) | Convs: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] | Out: benchmark_results\locomo10_runs\subject_binding_v2
+Frozen protocol: scorer / dataset / LLM config untouched.
+================================================================================
+
+===========================================================================
+--- STARTING CONVERSATION 0 (FULL (frozen LLM)) ---
+===========================================================================
+Sample ID: conv-26
+Ingested 419 turns into 419 StructuredIR records in 0.19s.
+Evaluating 199 questions...
+  [025/199] Acc:  84.0% | Ora:  92.0% | Tok/Q: 1664.0 | Q: What does Melanie do to destress
+  [050/199] Acc:  66.0% | Ora:  86.0% | Tok/Q: 1597.9 | Q: When did Caroline and Melanie go
+  [075/199] Acc:  69.3% | Ora:  82.7% | Tok/Q: 1593.9 | Q: When did Melanie's family go on 
+  [100/199] Acc:  75.0% | Ora:  85.0% | Tok/Q: 1601.1 | Q: What motivated Caroline to pursu
+  [125/199] Acc:  76.0% | Ora:  84.8% | Tok/Q: 1563.3 | Q: What pets does Melanie have?
+  [150/199] Acc:  78.7% | Ora:  84.0% | Tok/Q: 1557.6 | Q: What do Melanie's family give he
+  [175/199] Acc:  81.1% | Ora:  78.9% | Tok/Q: 1540.8 | Q: How often does Caroline go to th
+  [199/199] Acc:  82.4% | Ora:  74.9% | Tok/Q: 1535.3 | Q: What does Caroline love most abo
+
+>> CONV 0 COMPLETED in 320.2s:
+   * Oracle Recall:  74.9% (149/199)
+   * Accuracy:       82.4% (164/199)
+   * Mean Latency:   1609.0 ms
+   * Mean Tokens/Q:  1535.3 tok
+   * Saved to:       benchmark_results\locomo10_runs\subject_binding_v2\conv_0_results.json
+
+===========================================================================
+--- STARTING CONVERSATION 1 (FULL (frozen LLM)) ---
+===========================================================================
+Sample ID: conv-30
+Ingested 369 turns into 369 StructuredIR records in 0.16s.
+Evaluating 105 questions...
+  [025/105] Acc:  60.0% | Ora:  84.0% | Tok/Q: 1469.4 | Q: Which events has Jon participate
+  [050/105] Acc:  62.0% | Ora:  80.0% | Tok/Q: 1457.8 | Q: What did Gina want her customers
+  [075/105] Acc:  66.7% | Ora:  74.7% | Tok/Q: 1442.8 | Q: What does Jon plan to do at the 
+  [100/105] Acc:  60.0% | Ora:  68.0% | Tok/Q: 1426.5 | Q: What book is Gina currently read
+  [105/105] Acc:  58.1% | Ora:  65.7% | Tok/Q: 1424.7 | Q: What plans does Gina have after 
+
+>> CONV 1 COMPLETED in 155.8s:
+   * Oracle Recall:  65.7% (69/105)
+   * Accuracy:       58.1% (61/105)
+   * Mean Latency:   1483.2 ms
+   * Mean Tokens/Q:  1424.7 tok
+   * Saved to:       benchmark_results\locomo10_runs\subject_binding_v2\conv_1_results.json
+
+===========================================================================
+--- STARTING CONVERSATION 2 (FULL (frozen LLM)) ---
+===========================================================================
+Sample ID: conv-41
+Ingested 663 turns into 663 StructuredIR records in 0.22s.
+Evaluating 193 questions...
+  [025/193] Acc:  72.0% | Ora:  76.0% | Tok/Q: 1446.4 | Q: When did John start boot camp wi
+  [050/193] Acc:  62.0% | Ora:  76.0% | Tok/Q: 1454.7 | Q: What food item did Maria drop of
+  [075/193] Acc:  62.7% | Ora:  80.0% | Tok/Q: 1502.0 | Q: Why did Maria sit with the littl
+  [100/193] Acc:  68.0% | Ora:  81.0% | Tok/Q: 1495.5 | Q: What did John and the veterans d
+  [125/193] Acc:  72.0% | Ora:  81.6% | Tok/Q: 1510.1 | Q: What kind of activities did Mari
+  [150/193] Acc:  74.7% | Ora:  82.0% | Tok/Q: 1503.5 | Q: What is John currently doing as 
+  [175/193] Acc:  70.9% | Ora:  80.0% | Tok/Q: 1506.8 | Q: What does John say she feels whe
+  [193/193] Acc:  66.3% | Ora:  78.2% | Tok/Q: 1501.3 | Q: How is John's new puppy adjustin
+
+>> CONV 2 COMPLETED in 325.2s:
+   * Oracle Recall:  78.2% (151/193)
+   * Accuracy:       66.3% (128/193)
+   * Mean Latency:   1684.7 ms
+   * Mean Tokens/Q:  1501.3 tok
+   * Saved to:       benchmark_results\locomo10_runs\subject_binding_v2\conv_2_results.json
+
+===========================================================================
+--- STARTING CONVERSATION 3 (FULL (frozen LLM)) ---
+===========================================================================
+Sample ID: conv-42
+Ingested 629 turns into 629 StructuredIR records in 0.36s.
+Evaluating 260 questions...
+  [025/260] Acc:  28.0% | Ora:  84.0% | Tok/Q: 1422.9 | Q: When is Nate hosting a gaming pa
+  [050/260] Acc:  26.0% | Ora:  86.0% | Tok/Q: 1455.6 | Q: How many times has Joanna's scri
+  [075/260] Acc:  28.0% | Ora:  74.7% | Tok/Q: 1515.6 | Q: What recommendations has Nate re
+  [100/260] Acc:  36.0% | Ora:  76.0% | Tok/Q: 1511.0 | Q: What are Joanna's plans for her 
+  [125/260] Acc:  44.8% | Ora:  77.6% | Tok/Q: 1476.0 | Q: What event is Nate organizing in
+  [150/260] Acc:  53.3% | Ora:  80.0% | Tok/Q: 1474.1 | Q: What did Joanna share with her w
+  [175/260] Acc:  57.7% | Ora:  80.6% | Tok/Q: 1462.9 | Q: What does Nate rely on for cheer
+  [200/260] Acc:  61.0% | Ora:  80.5% | Tok/Q: 1449.2 | Q: What color did Joanna choose for
+  [225/260] Acc:  56.9% | Ora:  78.2% | Tok/Q: 1442.3 | Q: What did Joanna discover at the 
+  [250/260] Acc:  54.4% | Ora:  76.4% | Tok/Q: 1437.2 | Q: What game is Joanna currently pl
+  [260/260] Acc:  55.0% | Ora:  76.9% | Tok/Q: 1431.0 | Q: What does Joanna love most about
+
+>> CONV 3 COMPLETED in 422.6s:
+   * Oracle Recall:  76.9% (200/260)
+   * Accuracy:       55.0% (143/260)
+   * Mean Latency:   1625.0 ms
+   * Mean Tokens/Q:  1431.0 tok
+   * Saved to:       benchmark_results\locomo10_runs\subject_binding_v2\conv_3_results.json
+
+===========================================================================
+--- STARTING CONVERSATION 4 (FULL (frozen LLM)) ---
+===========================================================================
+Sample ID: conv-43
+Ingested 680 turns into 680 StructuredIR records in 0.36s.
+Evaluating 242 questions...
+  [025/242] Acc:  48.0% | Ora:  92.0% | Tok/Q: 1661.4 | Q: Where was John between August 11
+  [050/242] Acc:  46.0% | Ora:  86.0% | Tok/Q: 1658.8 | Q: How many times has John injured 
+  [075/242] Acc:  48.0% | Ora:  86.7% | Tok/Q: 1596.7 | Q: What aspects of the Harry Potter
+  [100/242] Acc:  56.0% | Ora:  85.0% | Tok/Q: 1601.9 | Q: What tradition does Tim mention 
+  [125/242] Acc:  59.2% | Ora:  82.4% | Tok/Q: 1615.6 | Q: Who is one of Tim's sources of i
+  [150/242] Acc:  64.7% | Ora:  84.7% | Tok/Q: 1615.0 | Q: What book did Tim just finish re
+  [175/242] Acc:  68.0% | Ora:  84.0% | Tok/Q: 1595.7 | Q: What charity event did John orga
+  [200/242] Acc:  65.0% | Ora:  82.0% | Tok/Q: 1584.4 | Q: How long did Tim and his high sc
+  [225/242] Acc:  60.4% | Ora:  78.7% | Tok/Q: 1568.0 | Q: What instrument is John learning
+  [242/242] Acc:  57.9% | Ora:  77.3% | Tok/Q: 1564.7 | Q: What was Tims's reaction to seal
+
+>> CONV 4 COMPLETED in 415.9s:
+   * Oracle Recall:  77.3% (187/242)
+   * Accuracy:       57.9% (140/242)
+   * Mean Latency:   1718.6 ms
+   * Mean Tokens/Q:  1564.7 tok
+   * Saved to:       benchmark_results\locomo10_runs\subject_binding_v2\conv_4_results.json
+
+===========================================================================
+--- STARTING CONVERSATION 5 (FULL (frozen LLM)) ---
+===========================================================================
+Sample ID: conv-44
+Ingested 675 turns into 675 StructuredIR records in 0.41s.
+Evaluating 158 questions...
+  [025/158] Acc:  20.0% | Ora:  64.0% | Tok/Q: 1535.2 | Q: Did Audrey and Andrew grow up wi
+  [050/158] Acc:  34.0% | Ora:  60.0% | Tok/Q: 1586.5 | Q: What does Audrey view her pets a
+  [075/158] Acc:  45.3% | Ora:  65.3% | Tok/Q: 1577.9 | Q: How does Andrew feel about their
+  [100/158] Acc:  58.0% | Ora:  73.0% | Tok/Q: 1590.1 | Q: What did Audrey do with her pups
+  [125/158] Acc:  64.0% | Ora:  76.0% | Tok/Q: 1572.6 | Q: What kind of flowers does Andrew
+  [150/158] Acc:  58.7% | Ora:  73.3% | Tok/Q: 1548.9 | Q: What type of games do Andrew's d
+  [158/158] Acc:  57.0% | Ora:  72.8% | Tok/Q: 1541.4 | Q: How often does Andrew meet up wi
+
+>> CONV 5 COMPLETED in 280.5s:
+   * Oracle Recall:  72.8% (115/158)
+   * Accuracy:       57.0% (90/158)
+   * Mean Latency:   1774.9 ms
+   * Mean Tokens/Q:  1541.4 tok
+   * Saved to:       benchmark_results\locomo10_runs\subject_binding_v2\conv_5_results.json
+
+===========================================================================
+--- STARTING CONVERSATION 6 (FULL (frozen LLM)) ---
+===========================================================================
+Sample ID: conv-47
+Ingested 689 turns into 689 StructuredIR records in 0.34s.
+Evaluating 190 questions...
+  [025/190] Acc:  40.0% | Ora:  64.0% | Tok/Q: 1498.0 | Q: What kind of games has James tri
+  [050/190] Acc:  48.0% | Ora:  68.0% | Tok/Q: 1453.2 | Q: What gaming equipments did John 
+  [075/190] Acc:  50.7% | Ora:  70.7% | Tok/Q: 1515.8 | Q: What game did John play in an in
+  [100/190] Acc:  55.0% | Ora:  71.0% | Tok/Q: 1476.5 | Q: What is the main focus of the or
+  [125/190] Acc:  59.2% | Ora:  74.4% | Tok/Q: 1474.1 | Q: Why did James sign up for a cook
+  [150/190] Acc:  62.0% | Ora:  76.0% | Tok/Q: 1466.5 | Q: What is the name of John's cousi
+  [175/190] Acc:  56.6% | Ora:  72.6% | Tok/Q: 1466.8 | Q: What did John prepare for the fi
+  [190/190] Acc:  54.2% | Ora:  72.6% | Tok/Q: 1457.4 | Q: What is the name of James's cous
+
+>> CONV 6 COMPLETED in 311.2s:
+   * Oracle Recall:  72.6% (138/190)
+   * Accuracy:       54.2% (103/190)
+   * Mean Latency:   1637.9 ms
+   * Mean Tokens/Q:  1457.4 tok
+   * Saved to:       benchmark_results\locomo10_runs\subject_binding_v2\conv_6_results.json
+
+===========================================================================
+--- STARTING CONVERSATION 7 (FULL (frozen LLM)) ---
+===========================================================================
+Sample ID: conv-48
+Ingested 681 turns into 681 StructuredIR records in 0.27s.
+Evaluating 239 questions...
+  [025/239] Acc:  56.0% | Ora:  80.0% | Tok/Q: 1354.3 | Q: What new yoga poses did Deborah 
+  [050/239] Acc:  50.0% | Ora:  80.0% | Tok/Q: 1397.1 | Q: How long has Jolene been doing y
+  [075/239] Acc:  50.7% | Ora:  82.7% | Tok/Q: 1382.1 | Q: What do Deborah and Jolene plan 
+  [100/239] Acc:  50.0% | Ora:  82.0% | Tok/Q: 1374.3 | Q: What do Deborah and Jolene plan 
+  [125/239] Acc:  55.2% | Ora:  80.8% | Tok/Q: 1364.6 | Q: How does Jolene plan to pursue h
+  [150/239] Acc:  60.7% | Ora:  82.7% | Tok/Q: 1372.3 | Q: What game did Jolene recommend f
+  [175/239] Acc:  65.1% | Ora:  84.0% | Tok/Q: 1390.5 | Q: Why did Jolene have to reschedul
+  [200/239] Acc:  64.5% | Ora:  82.5% | Tok/Q: 1395.3 | Q: What cool stuff did Deborah acco
+  [225/239] Acc:  62.2% | Ora:  81.8% | Tok/Q: 1412.3 | Q: What did Deborah's mom stress th
+  [239/239] Acc:  61.5% | Ora:  80.3% | Tok/Q: 1411.8 | Q: What activity did Jolene enjoy a
+
+>> CONV 7 COMPLETED in 384.9s:
+   * Oracle Recall:  80.3% (192/239)
+   * Accuracy:       61.5% (147/239)
+   * Mean Latency:   1610.4 ms
+   * Mean Tokens/Q:  1411.8 tok
+   * Saved to:       benchmark_results\locomo10_runs\subject_binding_v2\conv_7_results.json
+
+===========================================================================
+--- STARTING CONVERSATION 8 (FULL (frozen LLM)) ---
+===========================================================================
+Sample ID: conv-49
+Ingested 509 turns into 509 StructuredIR records in 0.27s.
+Evaluating 196 questions...
+  [025/196] Acc:  72.0% | Ora:  88.0% | Tok/Q: 1576.6 | Q: What significant event happened 
+  [050/196] Acc:  60.0% | Ora:  78.0% | Tok/Q: 1525.1 | Q: Who was injured in Evan's family
+  [075/196] Acc:  56.0% | Ora:  78.7% | Tok/Q: 1502.5 | Q: When did Evan's son fall off his
+  [100/196] Acc:  59.0% | Ora:  80.0% | Tok/Q: 1515.7 | Q: What did Evan suggest Sam to che
+  [125/196] Acc:  60.0% | Ora:  80.0% | Tok/Q: 1527.3 | Q: What does Evan mention about his
+  [150/196] Acc:  64.7% | Ora:  80.7% | Tok/Q: 1536.3 | Q: What advice did Evan suggest Sam
+  [175/196] Acc:  61.1% | Ora:  78.3% | Tok/Q: 1522.2 | Q: What activity does Sam do to kee
+  [196/196] Acc:  57.7% | Ora:  76.0% | Tok/Q: 1507.8 | Q: What did Sam share a photo of th
+
+>> CONV 8 COMPLETED in 318.9s:
+   * Oracle Recall:  76.0% (149/196)
+   * Accuracy:       57.7% (113/196)
+   * Mean Latency:   1626.7 ms
+   * Mean Tokens/Q:  1507.8 tok
+   * Saved to:       benchmark_results\locomo10_runs\subject_binding_v2\conv_8_results.json
+
+===========================================================================
+--- STARTING CONVERSATION 9 (FULL (frozen LLM)) ---
+===========================================================================
+Sample ID: conv-50
+Ingested 568 turns into 568 StructuredIR records in 0.33s.
+Evaluating 204 questions...
+  [025/204] Acc:  56.0% | Ora:  84.0% | Tok/Q: 1534.0 | Q: Can Dave work with engines?
+  [050/204] Acc:  56.0% | Ora:  84.0% | Tok/Q: 1533.5 | Q: When Dave was a child, what did 
+  [075/204] Acc:  53.3% | Ora:  78.7% | Tok/Q: 1610.0 | Q: What advice did Calvin receive f
+  [100/204] Acc:  59.0% | Ora:  80.0% | Tok/Q: 1583.7 | Q: How did Calvin meet Frank Ocean?
+  [125/204] Acc:  61.6% | Ora:  79.2% | Tok/Q: 1570.6 | Q: What activity does Dave find ful
+  [150/204] Acc:  62.0% | Ora:  76.7% | Tok/Q: 1562.8 | Q: What kind of impact does Dave's 
+  [175/204] Acc:  57.1% | Ora:  74.9% | Tok/Q: 1552.7 | Q: What design is featured on Dave'
+  [200/204] Acc:  53.5% | Ora:  74.0% | Tok/Q: 1550.3 | Q: Who did Dave invite to see him p
+  [204/204] Acc:  52.5% | Ora:  72.5% | Tok/Q: 1550.9 | Q: Where did Calvin take a stunning
+
+>> CONV 9 COMPLETED in 332.8s:
+   * Oracle Recall:  72.5% (148/204)
+   * Accuracy:       52.5% (107/204)
+   * Mean Latency:   1631.4 ms
+   * Mean Tokens/Q:  1550.9 tok
+   * Saved to:       benchmark_results\locomo10_runs\subject_binding_v2\conv_9_results.json
+
+================================================================================
+RUN TAG: subject_binding_v2 | Questions: 1986
+Micro Oracle Recall: 75.43% (1498/1986)
+Micro Accuracy:      60.22% (1196/1986)
+Total time: 3271.6s
+================================================================================

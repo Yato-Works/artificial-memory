@@ -1,0 +1,34 @@
+# MemGPT / Letta-style Memory Player Configuration
+# Frozen configuration adhering to Packer et al. (2023) MemGPT architecture
+
+player:
+  name: "MemGPT-style"
+  class: "controlled"
+  version: "letta-compat-0.1"
+
+architecture:
+  type: "hierarchical_os_memory"
+  tiers:
+    - name: "working_context"
+      type: "core_memory_fifo"
+      budget_tokens: 1000
+    - name: "archival_memory"
+      type: "vector_search"
+      budget_tokens: 1000
+
+extraction:
+  write_strategy: "fifo_working_context_with_archival_overflow"
+  write_llm_calls_per_turn: 0  # Ingest places into working context; archival via embeddings
+
+retrieval:
+  top_k: 10
+  strategy: "working_context_priority_plus_archival_search"
+  archival_metric: "cosine"
+
+budget:
+  context_budget_tokens: 2000
+  enforcement: "strict"
+
+llm_accounting:
+  count_write_calls: true
+  count_read_calls: true

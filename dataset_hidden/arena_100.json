@@ -1,0 +1,4476 @@
+{
+  "version": "v0.2.0-arena-100",
+  "created_at": "",
+  "scenarios": [
+    {
+      "scenario_id": "sc-001-fact-easy",
+      "title": "Scenario for atlas",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project atlas, the preferred editor toolchain is kitty.",
+          "day": 0
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-002-fact-easy",
+      "title": "Scenario for beacon",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project beacon, the preferred editor toolchain is batcat.",
+          "day": 0
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-003-fact-easy",
+      "title": "Scenario for cinder",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project cinder, the preferred editor toolchain is ripgrep.",
+          "day": 0
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-004-fact-medi",
+      "title": "Scenario for delta",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "We started discussing project delta today.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "assistant",
+          "content": "Acknowledged. What is the environment for delta?",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project delta, the user decided to adopt wezterm.",
+          "day": 1
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-005-fact-medi",
+      "title": "Scenario for ember",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "We started discussing project ember today.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "assistant",
+          "content": "Acknowledged. What is the environment for ember?",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project ember, the user decided to adopt emacs.",
+          "day": 1
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-006-fact-medi",
+      "title": "Scenario for fjord",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "We started discussing project fjord today.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "assistant",
+          "content": "Acknowledged. What is the environment for fjord?",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project fjord, the user decided to adopt helix.",
+          "day": 1
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-007-fact-hard",
+      "title": "Scenario for glacier",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project glacier, we considered emacs but ultimately settled on helix.",
+          "day": 0
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-008-fact-hard",
+      "title": "Scenario for harbor",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project harbor, we considered helix but ultimately settled on neovim.",
+          "day": 0
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-009-fact-adve",
+      "title": "Scenario for ivory",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project moss, the toolchain is tmux.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project ivory, the preferred editor toolchain is wezterm.",
+          "day": 1
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-010-fact-adve",
+      "title": "Scenario for juniper",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project nectar, the toolchain is neovim.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project juniper, the preferred editor toolchain is batcat.",
+          "day": 1
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-011-mult-easy",
+      "title": "Scenario for kelp",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project kelp, the user began studying Rust in the evenings.",
+          "day": 0
+        },
+        {
+          "session_index": 2,
+          "speaker": "user",
+          "content": "For project kelp, the user finished their first Rust exercise set.",
+          "day": 15
+        },
+        {
+          "session_index": 3,
+          "speaker": "user",
+          "content": "For project kelp, the user now recommends Rust to colleagues.",
+          "day": 30
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-012-mult-easy",
+      "title": "Scenario for lumen",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project lumen, the user began studying Rust in the evenings.",
+          "day": 0
+        },
+        {
+          "session_index": 2,
+          "speaker": "user",
+          "content": "For project lumen, the user finished their first Rust exercise set.",
+          "day": 15
+        },
+        {
+          "session_index": 3,
+          "speaker": "user",
+          "content": "For project lumen, the user now recommends Rust to colleagues.",
+          "day": 30
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-013-mult-easy",
+      "title": "Scenario for moss",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project moss, the user began studying Rust in the evenings.",
+          "day": 0
+        },
+        {
+          "session_index": 2,
+          "speaker": "user",
+          "content": "For project moss, the user finished their first Rust exercise set.",
+          "day": 15
+        },
+        {
+          "session_index": 3,
+          "speaker": "user",
+          "content": "For project moss, the user now recommends Rust to colleagues.",
+          "day": 30
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-014-mult-medi",
+      "title": "Scenario for nectar",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project nectar, the user began studying Rust in the evenings.",
+          "day": 0
+        },
+        {
+          "session_index": 2,
+          "speaker": "user",
+          "content": "For project nectar, the user finished their first Rust exercise set.",
+          "day": 15
+        },
+        {
+          "session_index": 3,
+          "speaker": "user",
+          "content": "For project nectar, the user now recommends Rust to colleagues.",
+          "day": 30
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-015-mult-medi",
+      "title": "Scenario for onyx",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project onyx, the user began studying Rust in the evenings.",
+          "day": 0
+        },
+        {
+          "session_index": 2,
+          "speaker": "user",
+          "content": "For project onyx, the user finished their first Rust exercise set.",
+          "day": 15
+        },
+        {
+          "session_index": 3,
+          "speaker": "user",
+          "content": "For project onyx, the user now recommends Rust to colleagues.",
+          "day": 30
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-016-mult-medi",
+      "title": "Scenario for prism",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project prism, the user began studying Rust in the evenings.",
+          "day": 0
+        },
+        {
+          "session_index": 2,
+          "speaker": "user",
+          "content": "For project prism, the user finished their first Rust exercise set.",
+          "day": 15
+        },
+        {
+          "session_index": 3,
+          "speaker": "user",
+          "content": "For project prism, the user now recommends Rust to colleagues.",
+          "day": 30
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-017-mult-hard",
+      "title": "Scenario for quartz",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project quartz, the user began studying Rust in the evenings.",
+          "day": 0
+        },
+        {
+          "session_index": 2,
+          "speaker": "user",
+          "content": "For project quartz, the user finished their first Rust exercise set.",
+          "day": 15
+        },
+        {
+          "session_index": 3,
+          "speaker": "user",
+          "content": "For project quartz, the user now recommends Rust to colleagues.",
+          "day": 30
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-018-mult-hard",
+      "title": "Scenario for reef",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project reef, the user began studying Rust in the evenings.",
+          "day": 0
+        },
+        {
+          "session_index": 2,
+          "speaker": "user",
+          "content": "For project reef, the user finished their first Rust exercise set.",
+          "day": 15
+        },
+        {
+          "session_index": 3,
+          "speaker": "user",
+          "content": "For project reef, the user now recommends Rust to colleagues.",
+          "day": 30
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-019-mult-adve",
+      "title": "Scenario for summit",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project summit, the user began studying Rust in the evenings.",
+          "day": 0
+        },
+        {
+          "session_index": 2,
+          "speaker": "user",
+          "content": "For project summit, the user finished their first Rust exercise set.",
+          "day": 15
+        },
+        {
+          "session_index": 3,
+          "speaker": "user",
+          "content": "For project summit, the user now recommends Rust to colleagues.",
+          "day": 30
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-020-mult-adve",
+      "title": "Scenario for tundra",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project tundra, the user began studying Rust in the evenings.",
+          "day": 0
+        },
+        {
+          "session_index": 2,
+          "speaker": "user",
+          "content": "For project tundra, the user finished their first Rust exercise set.",
+          "day": 15
+        },
+        {
+          "session_index": 3,
+          "speaker": "user",
+          "content": "For project tundra, the user now recommends Rust to colleagues.",
+          "day": 30
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-021-temp-easy",
+      "title": "Scenario for zenith",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project zenith, the user was working from Kyoto until 2026-02-03.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project zenith, the user relocated to Porto on 2026-02-03.",
+          "day": 28
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-022-temp-easy",
+      "title": "Scenario for vortex",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project vortex, the user was working from Kyoto until 2026-02-03.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project vortex, the user relocated to Porto on 2026-02-03.",
+          "day": 28
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-023-temp-easy",
+      "title": "Scenario for solstice",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project solstice, the user was working from Kyoto until 2026-02-03.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project solstice, the user relocated to Porto on 2026-02-03.",
+          "day": 28
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-024-temp-medi",
+      "title": "Scenario for polaris",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project polaris, the user was working from Kyoto until 2026-02-03.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project polaris, the user relocated to Porto on 2026-02-03.",
+          "day": 28
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-025-temp-medi",
+      "title": "Scenario for aurora",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project aurora, the user was working from Kyoto until 2026-02-03.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project aurora, the user relocated to Porto on 2026-02-03.",
+          "day": 28
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-026-temp-medi",
+      "title": "Scenario for cascade",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project cascade, the user was working from Kyoto until 2026-02-03.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project cascade, the user relocated to Porto on 2026-02-03.",
+          "day": 28
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-027-temp-hard",
+      "title": "Scenario for horizon",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project horizon, the user was working from Kyoto until 2026-02-03.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project horizon, the user relocated to Porto on 2026-02-03.",
+          "day": 28
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-028-temp-hard",
+      "title": "Scenario for atlas",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project atlas, the user was working from Kyoto until 2026-02-03.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project atlas, the user relocated to Porto on 2026-02-03.",
+          "day": 28
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-029-temp-adve",
+      "title": "Scenario for beacon",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project beacon, the user was working from Kyoto until 2026-02-03.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project beacon, the user relocated to Porto on 2026-02-03.",
+          "day": 28
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-030-temp-adve",
+      "title": "Scenario for cinder",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project cinder, the user was working from Kyoto until 2026-02-03.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project cinder, the user relocated to Porto on 2026-02-03.",
+          "day": 28
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-031-know-easy",
+      "title": "Scenario for delta",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project delta, the primary database was SQLite.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project delta, the user migrated the primary database from SQLite to ClickHouse.",
+          "day": 15
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-032-know-easy",
+      "title": "Scenario for ember",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project ember, the primary database was SQLite.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project ember, the user migrated the primary database from SQLite to ClickHouse.",
+          "day": 15
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-033-know-easy",
+      "title": "Scenario for fjord",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project fjord, the primary database was SQLite.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project fjord, the user migrated the primary database from SQLite to ClickHouse.",
+          "day": 15
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-034-know-medi",
+      "title": "Scenario for glacier",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project glacier, the primary database was SQLite.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project glacier, the user migrated the primary database from SQLite to ClickHouse.",
+          "day": 15
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-035-know-medi",
+      "title": "Scenario for harbor",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project harbor, the primary database was SQLite.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project harbor, the user migrated the primary database from SQLite to ClickHouse.",
+          "day": 15
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-036-know-medi",
+      "title": "Scenario for ivory",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project ivory, the primary database was SQLite.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project ivory, the user migrated the primary database from SQLite to ClickHouse.",
+          "day": 15
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-037-know-hard",
+      "title": "Scenario for juniper",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project juniper, the primary database was SQLite.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project juniper, the user migrated the primary database from SQLite to ClickHouse.",
+          "day": 15
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "Some legacy docs still mention SQLite, but ClickHouse is the current active system.",
+          "day": 16
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-038-know-hard",
+      "title": "Scenario for kelp",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project kelp, the primary database was SQLite.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project kelp, the user migrated the primary database from SQLite to ClickHouse.",
+          "day": 15
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "Some legacy docs still mention SQLite, but ClickHouse is the current active system.",
+          "day": 16
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-039-know-adve",
+      "title": "Scenario for lumen",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project lumen, the primary database was SQLite.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project lumen, the user migrated the primary database from SQLite to ClickHouse.",
+          "day": 15
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "Some legacy docs still mention SQLite, but ClickHouse is the current active system.",
+          "day": 16
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-040-know-adve",
+      "title": "Scenario for moss",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project moss, the primary database was SQLite.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project moss, the user migrated the primary database from SQLite to ClickHouse.",
+          "day": 15
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "Some legacy docs still mention SQLite, but ClickHouse is the current active system.",
+          "day": 16
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-041-cont-easy",
+      "title": "Scenario for nectar",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project nectar, the user reported the cache layer runs on SQLite.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "assistant",
+          "content": "For project nectar, a teammate reported the cache layer actually runs on Redis.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project nectar, the user has not verified which cache layer report is correct.",
+          "day": 1
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-042-cont-easy",
+      "title": "Scenario for onyx",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project onyx, the user reported the cache layer runs on SQLite.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "assistant",
+          "content": "For project onyx, a teammate reported the cache layer actually runs on Redis.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project onyx, the user has not verified which cache layer report is correct.",
+          "day": 1
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-043-cont-easy",
+      "title": "Scenario for prism",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project prism, the user reported the cache layer runs on SQLite.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "assistant",
+          "content": "For project prism, a teammate reported the cache layer actually runs on Redis.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project prism, the user has not verified which cache layer report is correct.",
+          "day": 1
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-044-cont-medi",
+      "title": "Scenario for quartz",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project quartz, the user reported the cache layer runs on SQLite.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "assistant",
+          "content": "For project quartz, a teammate reported the cache layer actually runs on Redis.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project quartz, the user has not verified which cache layer report is correct.",
+          "day": 1
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-045-cont-medi",
+      "title": "Scenario for reef",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project reef, the user reported the cache layer runs on SQLite.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "assistant",
+          "content": "For project reef, a teammate reported the cache layer actually runs on Redis.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project reef, the user has not verified which cache layer report is correct.",
+          "day": 1
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-046-cont-medi",
+      "title": "Scenario for summit",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project summit, the user reported the cache layer runs on SQLite.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "assistant",
+          "content": "For project summit, a teammate reported the cache layer actually runs on Redis.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project summit, the user has not verified which cache layer report is correct.",
+          "day": 1
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-047-cont-hard",
+      "title": "Scenario for tundra",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project tundra, the user reported the cache layer runs on SQLite.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "assistant",
+          "content": "For project tundra, a teammate reported the cache layer actually runs on Redis.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project tundra, the user has not verified which cache layer report is correct.",
+          "day": 1
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-048-cont-hard",
+      "title": "Scenario for zenith",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project zenith, the user reported the cache layer runs on SQLite.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "assistant",
+          "content": "For project zenith, a teammate reported the cache layer actually runs on Redis.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project zenith, the user has not verified which cache layer report is correct.",
+          "day": 1
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-049-cont-adve",
+      "title": "Scenario for vortex",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project vortex, the user reported the cache layer runs on SQLite.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "assistant",
+          "content": "For project vortex, a teammate reported the cache layer actually runs on Redis.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project vortex, the user has not verified which cache layer report is correct.",
+          "day": 1
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-050-cont-adve",
+      "title": "Scenario for solstice",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project solstice, the user reported the cache layer runs on SQLite.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "assistant",
+          "content": "For project solstice, a teammate reported the cache layer actually runs on Redis.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project solstice, the user has not verified which cache layer report is correct.",
+          "day": 1
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-051-indi-easy",
+      "title": "Scenario for polaris",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project polaris, the user settled on ripgrep as the daily driver.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The workstation in Porto is the only machine with ripgrep installed.",
+          "day": 0
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-052-indi-easy",
+      "title": "Scenario for aurora",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project aurora, the user settled on ripgrep as the daily driver.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The workstation in Porto is the only machine with ripgrep installed.",
+          "day": 0
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-053-indi-easy",
+      "title": "Scenario for cascade",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project cascade, the user settled on ripgrep as the daily driver.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The workstation in Porto is the only machine with ripgrep installed.",
+          "day": 0
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-054-indi-medi",
+      "title": "Scenario for horizon",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project horizon, the user settled on ripgrep as the daily driver.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The workstation in Porto is the only machine with ripgrep installed.",
+          "day": 0
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-055-indi-medi",
+      "title": "Scenario for atlas",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project atlas, the user settled on ripgrep as the daily driver.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The workstation in Porto is the only machine with ripgrep installed.",
+          "day": 0
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-056-indi-medi",
+      "title": "Scenario for beacon",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project beacon, the user settled on ripgrep as the daily driver.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The workstation in Porto is the only machine with ripgrep installed.",
+          "day": 0
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-057-indi-hard",
+      "title": "Scenario for cinder",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project cinder, the user settled on ripgrep as the daily driver.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The workstation in Porto is the only machine with ripgrep installed.",
+          "day": 0
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-058-indi-hard",
+      "title": "Scenario for delta",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project delta, the user settled on ripgrep as the daily driver.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The workstation in Porto is the only machine with ripgrep installed.",
+          "day": 0
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-059-indi-adve",
+      "title": "Scenario for ember",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project ember, the user settled on ripgrep as the daily driver.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The workstation in Porto is the only machine with ripgrep installed.",
+          "day": 0
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-060-indi-adve",
+      "title": "Scenario for fjord",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project fjord, the user settled on ripgrep as the daily driver.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The workstation in Porto is the only machine with ripgrep installed.",
+          "day": 0
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-061-dist-easy",
+      "title": "Scenario for glacier",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project glacier, the user pinned the file search tool to ripgrep.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on atlas.",
+          "day": 1
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on beacon.",
+          "day": 2
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on cinder.",
+          "day": 3
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on delta.",
+          "day": 4
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on ember.",
+          "day": 5
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on fjord.",
+          "day": 6
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on harbor.",
+          "day": 8
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-062-dist-easy",
+      "title": "Scenario for harbor",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project harbor, the user pinned the file search tool to ripgrep.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on atlas.",
+          "day": 1
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on beacon.",
+          "day": 2
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on cinder.",
+          "day": 3
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on delta.",
+          "day": 4
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on ember.",
+          "day": 5
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on fjord.",
+          "day": 6
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on glacier.",
+          "day": 7
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-063-dist-easy",
+      "title": "Scenario for ivory",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project ivory, the user pinned the file search tool to ripgrep.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on atlas.",
+          "day": 1
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on beacon.",
+          "day": 2
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on cinder.",
+          "day": 3
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on delta.",
+          "day": 4
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on ember.",
+          "day": 5
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on fjord.",
+          "day": 6
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on glacier.",
+          "day": 7
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on harbor.",
+          "day": 8
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-064-dist-medi",
+      "title": "Scenario for juniper",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project juniper, the user pinned the file search tool to ripgrep.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on atlas.",
+          "day": 1
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on beacon.",
+          "day": 2
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on cinder.",
+          "day": 3
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on delta.",
+          "day": 4
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on ember.",
+          "day": 5
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on fjord.",
+          "day": 6
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on glacier.",
+          "day": 7
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on harbor.",
+          "day": 8
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-065-dist-medi",
+      "title": "Scenario for kelp",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project kelp, the user pinned the file search tool to ripgrep.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on atlas.",
+          "day": 1
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on beacon.",
+          "day": 2
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on cinder.",
+          "day": 3
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on delta.",
+          "day": 4
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on ember.",
+          "day": 5
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on fjord.",
+          "day": 6
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on glacier.",
+          "day": 7
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on harbor.",
+          "day": 8
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-066-dist-medi",
+      "title": "Scenario for lumen",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project lumen, the user pinned the file search tool to ripgrep.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on atlas.",
+          "day": 1
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on beacon.",
+          "day": 2
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on cinder.",
+          "day": 3
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on delta.",
+          "day": 4
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on ember.",
+          "day": 5
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on fjord.",
+          "day": 6
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on glacier.",
+          "day": 7
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on harbor.",
+          "day": 8
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-067-dist-hard",
+      "title": "Scenario for moss",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project moss, the user pinned the file search tool to ripgrep.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on atlas.",
+          "day": 1
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on beacon.",
+          "day": 2
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on cinder.",
+          "day": 3
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on delta.",
+          "day": 4
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on ember.",
+          "day": 5
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on fjord.",
+          "day": 6
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on glacier.",
+          "day": 7
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on harbor.",
+          "day": 8
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-068-dist-hard",
+      "title": "Scenario for nectar",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project nectar, the user pinned the file search tool to ripgrep.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on atlas.",
+          "day": 1
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on beacon.",
+          "day": 2
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on cinder.",
+          "day": 3
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on delta.",
+          "day": 4
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on ember.",
+          "day": 5
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on fjord.",
+          "day": 6
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on glacier.",
+          "day": 7
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on harbor.",
+          "day": 8
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-069-dist-adve",
+      "title": "Scenario for onyx",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project onyx, the user pinned the file search tool to ripgrep.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on atlas.",
+          "day": 1
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on beacon.",
+          "day": 2
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on cinder.",
+          "day": 3
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on delta.",
+          "day": 4
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on ember.",
+          "day": 5
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on fjord.",
+          "day": 6
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on glacier.",
+          "day": 7
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on harbor.",
+          "day": 8
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-070-dist-adve",
+      "title": "Scenario for prism",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project prism, the user pinned the file search tool to ripgrep.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on atlas.",
+          "day": 1
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on beacon.",
+          "day": 2
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on cinder.",
+          "day": 3
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on delta.",
+          "day": 4
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on ember.",
+          "day": 5
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on fjord.",
+          "day": 6
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on glacier.",
+          "day": 7
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "The user usually drinks coffee while working on harbor.",
+          "day": 8
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-071-abst-easy",
+      "title": "Scenario for quartz",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project quartz, the user discussed scheduling and timelines.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project zenith, the user set the debugger to lldb.",
+          "day": 0
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-072-abst-easy",
+      "title": "Scenario for reef",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project reef, the user discussed scheduling and timelines.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project vortex, the user set the debugger to lldb.",
+          "day": 0
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-073-abst-easy",
+      "title": "Scenario for summit",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project summit, the user discussed scheduling and timelines.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project solstice, the user set the debugger to lldb.",
+          "day": 0
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-074-abst-medi",
+      "title": "Scenario for tundra",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project tundra, the user discussed scheduling and timelines.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project polaris, the user set the debugger to lldb.",
+          "day": 0
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-075-abst-medi",
+      "title": "Scenario for zenith",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project zenith, the user discussed scheduling and timelines.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project aurora, the user set the debugger to lldb.",
+          "day": 0
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-076-abst-medi",
+      "title": "Scenario for vortex",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project vortex, the user discussed scheduling and timelines.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project cascade, the user set the debugger to lldb.",
+          "day": 0
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-077-abst-hard",
+      "title": "Scenario for solstice",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project solstice, the user discussed scheduling and timelines.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project horizon, the user set the debugger to lldb.",
+          "day": 0
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-078-abst-hard",
+      "title": "Scenario for polaris",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project polaris, the user discussed scheduling and timelines.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project atlas, the user set the debugger to lldb.",
+          "day": 0
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-079-abst-adve",
+      "title": "Scenario for aurora",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project aurora, the user discussed scheduling and timelines.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project beacon, the user set the debugger to lldb.",
+          "day": 0
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-080-abst-adve",
+      "title": "Scenario for cascade",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project cascade, the user discussed scheduling and timelines.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project cinder, the user set the debugger to lldb.",
+          "day": 0
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-081-comp-easy",
+      "title": "Scenario for horizon",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project horizon, the user measured p99 latency as 12.5 ms and filed it under serial AM-1160.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project horizon, lots of other minor tests were conducted without issue.",
+          "day": 1
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-082-comp-easy",
+      "title": "Scenario for atlas",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project atlas, the user measured p99 latency as 12.5 ms and filed it under serial AM-1160.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project atlas, lots of other minor tests were conducted without issue.",
+          "day": 1
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-083-comp-easy",
+      "title": "Scenario for beacon",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project beacon, the user measured p99 latency as 12.5 ms and filed it under serial AM-1160.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project beacon, lots of other minor tests were conducted without issue.",
+          "day": 1
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-084-comp-medi",
+      "title": "Scenario for cinder",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project cinder, the user measured p99 latency as 12.5 ms and filed it under serial AM-1160.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project cinder, lots of other minor tests were conducted without issue.",
+          "day": 1
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-085-comp-medi",
+      "title": "Scenario for delta",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project delta, the user measured p99 latency as 12.5 ms and filed it under serial AM-1160.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project delta, lots of other minor tests were conducted without issue.",
+          "day": 1
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-086-comp-medi",
+      "title": "Scenario for ember",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project ember, the user measured p99 latency as 12.5 ms and filed it under serial AM-1160.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project ember, lots of other minor tests were conducted without issue.",
+          "day": 1
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-087-comp-hard",
+      "title": "Scenario for fjord",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project fjord, the user measured p99 latency as 12.5 ms and filed it under serial AM-1160.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project fjord, lots of other minor tests were conducted without issue.",
+          "day": 1
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-088-comp-hard",
+      "title": "Scenario for glacier",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project glacier, the user measured p99 latency as 12.5 ms and filed it under serial AM-1160.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project glacier, lots of other minor tests were conducted without issue.",
+          "day": 1
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-089-comp-adve",
+      "title": "Scenario for harbor",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project harbor, the user measured p99 latency as 12.5 ms and filed it under serial AM-1160.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project harbor, lots of other minor tests were conducted without issue.",
+          "day": 1
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-090-comp-adve",
+      "title": "Scenario for ivory",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project ivory, the user measured p99 latency as 12.5 ms and filed it under serial AM-1160.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project ivory, lots of other minor tests were conducted without issue.",
+          "day": 1
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-091-refl-easy",
+      "title": "Scenario for juniper",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project juniper, the user always reverts the build configuration to the last known good state.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project juniper, the user keeps an untouched backup of the previous schema.",
+          "day": 1
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project juniper, the user copies files by hand instead of symlinking them.",
+          "day": 2
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-092-refl-easy",
+      "title": "Scenario for kelp",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project kelp, the user always reverts the build configuration to the last known good state.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project kelp, the user keeps an untouched backup of the previous schema.",
+          "day": 1
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project kelp, the user copies files by hand instead of symlinking them.",
+          "day": 2
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-093-refl-easy",
+      "title": "Scenario for lumen",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project lumen, the user always reverts the build configuration to the last known good state.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project lumen, the user keeps an untouched backup of the previous schema.",
+          "day": 1
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project lumen, the user copies files by hand instead of symlinking them.",
+          "day": 2
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-094-refl-medi",
+      "title": "Scenario for moss",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project moss, the user always reverts the build configuration to the last known good state.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project moss, the user keeps an untouched backup of the previous schema.",
+          "day": 1
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project moss, the user copies files by hand instead of symlinking them.",
+          "day": 2
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-095-refl-medi",
+      "title": "Scenario for nectar",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project nectar, the user always reverts the build configuration to the last known good state.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project nectar, the user keeps an untouched backup of the previous schema.",
+          "day": 1
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project nectar, the user copies files by hand instead of symlinking them.",
+          "day": 2
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-096-refl-medi",
+      "title": "Scenario for onyx",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project onyx, the user always reverts the build configuration to the last known good state.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project onyx, the user keeps an untouched backup of the previous schema.",
+          "day": 1
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project onyx, the user copies files by hand instead of symlinking them.",
+          "day": 2
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-097-refl-hard",
+      "title": "Scenario for prism",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project prism, the user always reverts the build configuration to the last known good state.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project prism, the user keeps an untouched backup of the previous schema.",
+          "day": 1
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project prism, the user copies files by hand instead of symlinking them.",
+          "day": 2
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-098-refl-hard",
+      "title": "Scenario for quartz",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project quartz, the user always reverts the build configuration to the last known good state.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project quartz, the user keeps an untouched backup of the previous schema.",
+          "day": 1
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project quartz, the user copies files by hand instead of symlinking them.",
+          "day": 2
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-099-refl-adve",
+      "title": "Scenario for reef",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project reef, the user always reverts the build configuration to the last known good state.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project reef, the user keeps an untouched backup of the previous schema.",
+          "day": 1
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project reef, the user copies files by hand instead of symlinking them.",
+          "day": 2
+        }
+      ]
+    },
+    {
+      "scenario_id": "sc-100-refl-adve",
+      "title": "Scenario for summit",
+      "day": 0,
+      "turns": [
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project summit, the user always reverts the build configuration to the last known good state.",
+          "day": 0
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project summit, the user keeps an untouched backup of the previous schema.",
+          "day": 1
+        },
+        {
+          "session_index": 1,
+          "speaker": "user",
+          "content": "For project summit, the user copies files by hand instead of symlinking them.",
+          "day": 2
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q-001-fact-easy",
+      "category": "factual_recall",
+      "question": "For project atlas, what did the user say their preferred editor toolchain is?",
+      "ground_truth": [
+        [
+          "kitty"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "easy",
+      "notes": ""
+    },
+    {
+      "question_id": "q-002-fact-easy",
+      "category": "factual_recall",
+      "question": "For project beacon, what did the user say their preferred editor toolchain is?",
+      "ground_truth": [
+        [
+          "batcat"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "easy",
+      "notes": ""
+    },
+    {
+      "question_id": "q-003-fact-easy",
+      "category": "factual_recall",
+      "question": "For project cinder, what did the user say their preferred editor toolchain is?",
+      "ground_truth": [
+        [
+          "ripgrep"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "easy",
+      "notes": ""
+    },
+    {
+      "question_id": "q-004-fact-medi",
+      "category": "factual_recall",
+      "question": "Which tool did the user adopt for project delta?",
+      "ground_truth": [
+        [
+          "wezterm"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "medium",
+      "notes": ""
+    },
+    {
+      "question_id": "q-005-fact-medi",
+      "category": "factual_recall",
+      "question": "Which tool did the user adopt for project ember?",
+      "ground_truth": [
+        [
+          "emacs"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "medium",
+      "notes": ""
+    },
+    {
+      "question_id": "q-006-fact-medi",
+      "category": "factual_recall",
+      "question": "Which tool did the user adopt for project fjord?",
+      "ground_truth": [
+        [
+          "helix"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "medium",
+      "notes": ""
+    },
+    {
+      "question_id": "q-007-fact-hard",
+      "category": "factual_recall",
+      "question": "In project glacier, which tool was selected instead of emacs?",
+      "ground_truth": [
+        [
+          "helix"
+        ]
+      ],
+      "forbidden": [
+        "emacs"
+      ],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "hard",
+      "notes": ""
+    },
+    {
+      "question_id": "q-008-fact-hard",
+      "category": "factual_recall",
+      "question": "In project harbor, which tool was selected instead of helix?",
+      "ground_truth": [
+        [
+          "neovim"
+        ]
+      ],
+      "forbidden": [
+        "helix"
+      ],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "hard",
+      "notes": ""
+    },
+    {
+      "question_id": "q-009-fact-adve",
+      "category": "factual_recall",
+      "question": "Between moss and ivory, what is the toolchain for ivory?",
+      "ground_truth": [
+        [
+          "wezterm"
+        ]
+      ],
+      "forbidden": [
+        "tmux"
+      ],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "adversarial",
+      "notes": ""
+    },
+    {
+      "question_id": "q-010-fact-adve",
+      "category": "factual_recall",
+      "question": "Between nectar and juniper, what is the toolchain for juniper?",
+      "ground_truth": [
+        [
+          "batcat"
+        ]
+      ],
+      "forbidden": [
+        "neovim"
+      ],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "adversarial",
+      "notes": ""
+    },
+    {
+      "question_id": "q-011-mult-easy",
+      "category": "multi_session_recall",
+      "question": "Across our conversations about project kelp, which subject did the user begin studying, practise, and later recommend to colleagues?",
+      "ground_truth": [
+        [
+          "Rust"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "easy",
+      "notes": ""
+    },
+    {
+      "question_id": "q-012-mult-easy",
+      "category": "multi_session_recall",
+      "question": "Across our conversations about project lumen, which subject did the user begin studying, practise, and later recommend to colleagues?",
+      "ground_truth": [
+        [
+          "Rust"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "easy",
+      "notes": ""
+    },
+    {
+      "question_id": "q-013-mult-easy",
+      "category": "multi_session_recall",
+      "question": "Across our conversations about project moss, which subject did the user begin studying, practise, and later recommend to colleagues?",
+      "ground_truth": [
+        [
+          "Rust"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "easy",
+      "notes": ""
+    },
+    {
+      "question_id": "q-014-mult-medi",
+      "category": "multi_session_recall",
+      "question": "Across our conversations about project nectar, which subject did the user begin studying, practise, and later recommend to colleagues?",
+      "ground_truth": [
+        [
+          "Rust"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "medium",
+      "notes": ""
+    },
+    {
+      "question_id": "q-015-mult-medi",
+      "category": "multi_session_recall",
+      "question": "Across our conversations about project onyx, which subject did the user begin studying, practise, and later recommend to colleagues?",
+      "ground_truth": [
+        [
+          "Rust"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "medium",
+      "notes": ""
+    },
+    {
+      "question_id": "q-016-mult-medi",
+      "category": "multi_session_recall",
+      "question": "Across our conversations about project prism, which subject did the user begin studying, practise, and later recommend to colleagues?",
+      "ground_truth": [
+        [
+          "Rust"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "medium",
+      "notes": ""
+    },
+    {
+      "question_id": "q-017-mult-hard",
+      "category": "multi_session_recall",
+      "question": "Across our conversations about project quartz, which subject did the user begin studying, practise, and later recommend to colleagues?",
+      "ground_truth": [
+        [
+          "Rust"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "hard",
+      "notes": ""
+    },
+    {
+      "question_id": "q-018-mult-hard",
+      "category": "multi_session_recall",
+      "question": "Across our conversations about project reef, which subject did the user begin studying, practise, and later recommend to colleagues?",
+      "ground_truth": [
+        [
+          "Rust"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "hard",
+      "notes": ""
+    },
+    {
+      "question_id": "q-019-mult-adve",
+      "category": "multi_session_recall",
+      "question": "Across our conversations about project summit, which subject did the user begin studying, practise, and later recommend to colleagues?",
+      "ground_truth": [
+        [
+          "Rust"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "adversarial",
+      "notes": ""
+    },
+    {
+      "question_id": "q-020-mult-adve",
+      "category": "multi_session_recall",
+      "question": "Across our conversations about project tundra, which subject did the user begin studying, practise, and later recommend to colleagues?",
+      "ground_truth": [
+        [
+          "Rust"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "adversarial",
+      "notes": ""
+    },
+    {
+      "question_id": "q-021-temp-easy",
+      "category": "temporal_reasoning",
+      "question": "In which city was the user located before February 2026 for project zenith?",
+      "ground_truth": [
+        [
+          "Kyoto"
+        ]
+      ],
+      "forbidden": [
+        "Porto"
+      ],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "easy",
+      "notes": ""
+    },
+    {
+      "question_id": "q-022-temp-easy",
+      "category": "temporal_reasoning",
+      "question": "In which city was the user located before February 2026 for project vortex?",
+      "ground_truth": [
+        [
+          "Kyoto"
+        ]
+      ],
+      "forbidden": [
+        "Porto"
+      ],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "easy",
+      "notes": ""
+    },
+    {
+      "question_id": "q-023-temp-easy",
+      "category": "temporal_reasoning",
+      "question": "In which city was the user located before February 2026 for project solstice?",
+      "ground_truth": [
+        [
+          "Kyoto"
+        ]
+      ],
+      "forbidden": [
+        "Porto"
+      ],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "easy",
+      "notes": ""
+    },
+    {
+      "question_id": "q-024-temp-medi",
+      "category": "temporal_reasoning",
+      "question": "In which city was the user located before February 2026 for project polaris?",
+      "ground_truth": [
+        [
+          "Kyoto"
+        ]
+      ],
+      "forbidden": [
+        "Porto"
+      ],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "medium",
+      "notes": ""
+    },
+    {
+      "question_id": "q-025-temp-medi",
+      "category": "temporal_reasoning",
+      "question": "In which city was the user located before February 2026 for project aurora?",
+      "ground_truth": [
+        [
+          "Kyoto"
+        ]
+      ],
+      "forbidden": [
+        "Porto"
+      ],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "medium",
+      "notes": ""
+    },
+    {
+      "question_id": "q-026-temp-medi",
+      "category": "temporal_reasoning",
+      "question": "In which city was the user located before February 2026 for project cascade?",
+      "ground_truth": [
+        [
+          "Kyoto"
+        ]
+      ],
+      "forbidden": [
+        "Porto"
+      ],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "medium",
+      "notes": ""
+    },
+    {
+      "question_id": "q-027-temp-hard",
+      "category": "temporal_reasoning",
+      "question": "Where was the user working on 2026-01-27 while project horizon was active?",
+      "ground_truth": [
+        [
+          "Kyoto"
+        ]
+      ],
+      "forbidden": [
+        "Porto"
+      ],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "hard",
+      "notes": ""
+    },
+    {
+      "question_id": "q-028-temp-hard",
+      "category": "temporal_reasoning",
+      "question": "Where was the user working on 2026-01-27 while project atlas was active?",
+      "ground_truth": [
+        [
+          "Kyoto"
+        ]
+      ],
+      "forbidden": [
+        "Porto"
+      ],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "hard",
+      "notes": ""
+    },
+    {
+      "question_id": "q-029-temp-adve",
+      "category": "temporal_reasoning",
+      "question": "Where was the user working on 2026-01-27 while project beacon was active?",
+      "ground_truth": [
+        [
+          "Kyoto"
+        ]
+      ],
+      "forbidden": [
+        "Porto"
+      ],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "adversarial",
+      "notes": ""
+    },
+    {
+      "question_id": "q-030-temp-adve",
+      "category": "temporal_reasoning",
+      "question": "Where was the user working on 2026-01-27 while project cinder was active?",
+      "ground_truth": [
+        [
+          "Kyoto"
+        ]
+      ],
+      "forbidden": [
+        "Porto"
+      ],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "adversarial",
+      "notes": ""
+    },
+    {
+      "question_id": "q-031-know-easy",
+      "category": "knowledge_updates",
+      "question": "For project delta, which database is currently used as the primary database?",
+      "ground_truth": [
+        [
+          "ClickHouse"
+        ]
+      ],
+      "forbidden": [
+        "SQLite"
+      ],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "easy",
+      "notes": ""
+    },
+    {
+      "question_id": "q-032-know-easy",
+      "category": "knowledge_updates",
+      "question": "For project ember, which database is currently used as the primary database?",
+      "ground_truth": [
+        [
+          "ClickHouse"
+        ]
+      ],
+      "forbidden": [
+        "SQLite"
+      ],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "easy",
+      "notes": ""
+    },
+    {
+      "question_id": "q-033-know-easy",
+      "category": "knowledge_updates",
+      "question": "For project fjord, which database is currently used as the primary database?",
+      "ground_truth": [
+        [
+          "ClickHouse"
+        ]
+      ],
+      "forbidden": [
+        "SQLite"
+      ],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "easy",
+      "notes": ""
+    },
+    {
+      "question_id": "q-034-know-medi",
+      "category": "knowledge_updates",
+      "question": "For project glacier, which database is currently used as the primary database?",
+      "ground_truth": [
+        [
+          "ClickHouse"
+        ]
+      ],
+      "forbidden": [
+        "SQLite"
+      ],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "medium",
+      "notes": ""
+    },
+    {
+      "question_id": "q-035-know-medi",
+      "category": "knowledge_updates",
+      "question": "For project harbor, which database is currently used as the primary database?",
+      "ground_truth": [
+        [
+          "ClickHouse"
+        ]
+      ],
+      "forbidden": [
+        "SQLite"
+      ],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "medium",
+      "notes": ""
+    },
+    {
+      "question_id": "q-036-know-medi",
+      "category": "knowledge_updates",
+      "question": "For project ivory, which database is currently used as the primary database?",
+      "ground_truth": [
+        [
+          "ClickHouse"
+        ]
+      ],
+      "forbidden": [
+        "SQLite"
+      ],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "medium",
+      "notes": ""
+    },
+    {
+      "question_id": "q-037-know-hard",
+      "category": "knowledge_updates",
+      "question": "What is the current, active primary database for project juniper?",
+      "ground_truth": [
+        [
+          "ClickHouse"
+        ]
+      ],
+      "forbidden": [
+        "SQLite"
+      ],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "hard",
+      "notes": ""
+    },
+    {
+      "question_id": "q-038-know-hard",
+      "category": "knowledge_updates",
+      "question": "What is the current, active primary database for project kelp?",
+      "ground_truth": [
+        [
+          "ClickHouse"
+        ]
+      ],
+      "forbidden": [
+        "SQLite"
+      ],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "hard",
+      "notes": ""
+    },
+    {
+      "question_id": "q-039-know-adve",
+      "category": "knowledge_updates",
+      "question": "What is the current, active primary database for project lumen?",
+      "ground_truth": [
+        [
+          "ClickHouse"
+        ]
+      ],
+      "forbidden": [
+        "SQLite"
+      ],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "adversarial",
+      "notes": ""
+    },
+    {
+      "question_id": "q-040-know-adve",
+      "category": "knowledge_updates",
+      "question": "What is the current, active primary database for project moss?",
+      "ground_truth": [
+        [
+          "ClickHouse"
+        ]
+      ],
+      "forbidden": [
+        "SQLite"
+      ],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "adversarial",
+      "notes": ""
+    },
+    {
+      "question_id": "q-041-cont-easy",
+      "category": "contradiction_handling",
+      "question": "For project nectar, which cache layer should I assume the system runs on?",
+      "ground_truth": [
+        [
+          "SQLite",
+          "Redis"
+        ],
+        [
+          "conflict",
+          "conflicting",
+          "unresolved",
+          "contradict",
+          "both",
+          "disagree"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "easy",
+      "notes": ""
+    },
+    {
+      "question_id": "q-042-cont-easy",
+      "category": "contradiction_handling",
+      "question": "For project onyx, which cache layer should I assume the system runs on?",
+      "ground_truth": [
+        [
+          "SQLite",
+          "Redis"
+        ],
+        [
+          "conflict",
+          "conflicting",
+          "unresolved",
+          "contradict",
+          "both",
+          "disagree"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "easy",
+      "notes": ""
+    },
+    {
+      "question_id": "q-043-cont-easy",
+      "category": "contradiction_handling",
+      "question": "For project prism, which cache layer should I assume the system runs on?",
+      "ground_truth": [
+        [
+          "SQLite",
+          "Redis"
+        ],
+        [
+          "conflict",
+          "conflicting",
+          "unresolved",
+          "contradict",
+          "both",
+          "disagree"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "easy",
+      "notes": ""
+    },
+    {
+      "question_id": "q-044-cont-medi",
+      "category": "contradiction_handling",
+      "question": "For project quartz, which cache layer should I assume the system runs on?",
+      "ground_truth": [
+        [
+          "SQLite",
+          "Redis"
+        ],
+        [
+          "conflict",
+          "conflicting",
+          "unresolved",
+          "contradict",
+          "both",
+          "disagree"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "medium",
+      "notes": ""
+    },
+    {
+      "question_id": "q-045-cont-medi",
+      "category": "contradiction_handling",
+      "question": "For project reef, which cache layer should I assume the system runs on?",
+      "ground_truth": [
+        [
+          "SQLite",
+          "Redis"
+        ],
+        [
+          "conflict",
+          "conflicting",
+          "unresolved",
+          "contradict",
+          "both",
+          "disagree"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "medium",
+      "notes": ""
+    },
+    {
+      "question_id": "q-046-cont-medi",
+      "category": "contradiction_handling",
+      "question": "For project summit, which cache layer should I assume the system runs on?",
+      "ground_truth": [
+        [
+          "SQLite",
+          "Redis"
+        ],
+        [
+          "conflict",
+          "conflicting",
+          "unresolved",
+          "contradict",
+          "both",
+          "disagree"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "medium",
+      "notes": ""
+    },
+    {
+      "question_id": "q-047-cont-hard",
+      "category": "contradiction_handling",
+      "question": "For project tundra, which cache layer should I assume the system runs on?",
+      "ground_truth": [
+        [
+          "SQLite",
+          "Redis"
+        ],
+        [
+          "conflict",
+          "conflicting",
+          "unresolved",
+          "contradict",
+          "both",
+          "disagree"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "hard",
+      "notes": ""
+    },
+    {
+      "question_id": "q-048-cont-hard",
+      "category": "contradiction_handling",
+      "question": "For project zenith, which cache layer should I assume the system runs on?",
+      "ground_truth": [
+        [
+          "SQLite",
+          "Redis"
+        ],
+        [
+          "conflict",
+          "conflicting",
+          "unresolved",
+          "contradict",
+          "both",
+          "disagree"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "hard",
+      "notes": ""
+    },
+    {
+      "question_id": "q-049-cont-adve",
+      "category": "contradiction_handling",
+      "question": "For project vortex, which cache layer should I assume the system runs on?",
+      "ground_truth": [
+        [
+          "SQLite",
+          "Redis"
+        ],
+        [
+          "conflict",
+          "conflicting",
+          "unresolved",
+          "contradict",
+          "both",
+          "disagree"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "adversarial",
+      "notes": ""
+    },
+    {
+      "question_id": "q-050-cont-adve",
+      "category": "contradiction_handling",
+      "question": "For project solstice, which cache layer should I assume the system runs on?",
+      "ground_truth": [
+        [
+          "SQLite",
+          "Redis"
+        ],
+        [
+          "conflict",
+          "conflicting",
+          "unresolved",
+          "contradict",
+          "both",
+          "disagree"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "adversarial",
+      "notes": ""
+    },
+    {
+      "question_id": "q-051-indi-easy",
+      "category": "indirect_recall",
+      "question": "In which city is the machine that runs the daily driver toolchain of project polaris located?",
+      "ground_truth": [
+        [
+          "Porto"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "easy",
+      "notes": ""
+    },
+    {
+      "question_id": "q-052-indi-easy",
+      "category": "indirect_recall",
+      "question": "In which city is the machine that runs the daily driver toolchain of project aurora located?",
+      "ground_truth": [
+        [
+          "Porto"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "easy",
+      "notes": ""
+    },
+    {
+      "question_id": "q-053-indi-easy",
+      "category": "indirect_recall",
+      "question": "In which city is the machine that runs the daily driver toolchain of project cascade located?",
+      "ground_truth": [
+        [
+          "Porto"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "easy",
+      "notes": ""
+    },
+    {
+      "question_id": "q-054-indi-medi",
+      "category": "indirect_recall",
+      "question": "In which city is the machine that runs the daily driver toolchain of project horizon located?",
+      "ground_truth": [
+        [
+          "Porto"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "medium",
+      "notes": ""
+    },
+    {
+      "question_id": "q-055-indi-medi",
+      "category": "indirect_recall",
+      "question": "In which city is the machine that runs the daily driver toolchain of project atlas located?",
+      "ground_truth": [
+        [
+          "Porto"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "medium",
+      "notes": ""
+    },
+    {
+      "question_id": "q-056-indi-medi",
+      "category": "indirect_recall",
+      "question": "In which city is the machine that runs the daily driver toolchain of project beacon located?",
+      "ground_truth": [
+        [
+          "Porto"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "medium",
+      "notes": ""
+    },
+    {
+      "question_id": "q-057-indi-hard",
+      "category": "indirect_recall",
+      "question": "In which city is the machine that runs the daily driver toolchain of project cinder located?",
+      "ground_truth": [
+        [
+          "Porto"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "hard",
+      "notes": ""
+    },
+    {
+      "question_id": "q-058-indi-hard",
+      "category": "indirect_recall",
+      "question": "In which city is the machine that runs the daily driver toolchain of project delta located?",
+      "ground_truth": [
+        [
+          "Porto"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "hard",
+      "notes": ""
+    },
+    {
+      "question_id": "q-059-indi-adve",
+      "category": "indirect_recall",
+      "question": "In which city is the machine that runs the daily driver toolchain of project ember located?",
+      "ground_truth": [
+        [
+          "Porto"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "adversarial",
+      "notes": ""
+    },
+    {
+      "question_id": "q-060-indi-adve",
+      "category": "indirect_recall",
+      "question": "In which city is the machine that runs the daily driver toolchain of project fjord located?",
+      "ground_truth": [
+        [
+          "Porto"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "adversarial",
+      "notes": ""
+    },
+    {
+      "question_id": "q-061-dist-easy",
+      "category": "distractor_resistance",
+      "question": "Which file search tool is pinned for project glacier?",
+      "ground_truth": [
+        [
+          "ripgrep"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "easy",
+      "notes": ""
+    },
+    {
+      "question_id": "q-062-dist-easy",
+      "category": "distractor_resistance",
+      "question": "Which file search tool is pinned for project harbor?",
+      "ground_truth": [
+        [
+          "ripgrep"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "easy",
+      "notes": ""
+    },
+    {
+      "question_id": "q-063-dist-easy",
+      "category": "distractor_resistance",
+      "question": "Which file search tool is pinned for project ivory?",
+      "ground_truth": [
+        [
+          "ripgrep"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "easy",
+      "notes": ""
+    },
+    {
+      "question_id": "q-064-dist-medi",
+      "category": "distractor_resistance",
+      "question": "Which file search tool is pinned for project juniper?",
+      "ground_truth": [
+        [
+          "ripgrep"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "medium",
+      "notes": ""
+    },
+    {
+      "question_id": "q-065-dist-medi",
+      "category": "distractor_resistance",
+      "question": "Which file search tool is pinned for project kelp?",
+      "ground_truth": [
+        [
+          "ripgrep"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "medium",
+      "notes": ""
+    },
+    {
+      "question_id": "q-066-dist-medi",
+      "category": "distractor_resistance",
+      "question": "Which file search tool is pinned for project lumen?",
+      "ground_truth": [
+        [
+          "ripgrep"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "medium",
+      "notes": ""
+    },
+    {
+      "question_id": "q-067-dist-hard",
+      "category": "distractor_resistance",
+      "question": "Which file search tool is pinned for project moss?",
+      "ground_truth": [
+        [
+          "ripgrep"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "hard",
+      "notes": ""
+    },
+    {
+      "question_id": "q-068-dist-hard",
+      "category": "distractor_resistance",
+      "question": "Which file search tool is pinned for project nectar?",
+      "ground_truth": [
+        [
+          "ripgrep"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "hard",
+      "notes": ""
+    },
+    {
+      "question_id": "q-069-dist-adve",
+      "category": "distractor_resistance",
+      "question": "Which file search tool is pinned for project onyx?",
+      "ground_truth": [
+        [
+          "ripgrep"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "adversarial",
+      "notes": ""
+    },
+    {
+      "question_id": "q-070-dist-adve",
+      "category": "distractor_resistance",
+      "question": "Which file search tool is pinned for project prism?",
+      "ground_truth": [
+        [
+          "ripgrep"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "adversarial",
+      "notes": ""
+    },
+    {
+      "question_id": "q-071-abst-easy",
+      "category": "abstention",
+      "question": "Which debugger did the user configure for project quartz?",
+      "ground_truth": [
+        [
+          "I don't know.",
+          "not specified",
+          "never configured",
+          "unknown"
+        ]
+      ],
+      "forbidden": [
+        "lldb",
+        "gdb",
+        "vscode"
+      ],
+      "expected_abstention": true,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "easy",
+      "notes": ""
+    },
+    {
+      "question_id": "q-072-abst-easy",
+      "category": "abstention",
+      "question": "Which debugger did the user configure for project reef?",
+      "ground_truth": [
+        [
+          "I don't know.",
+          "not specified",
+          "never configured",
+          "unknown"
+        ]
+      ],
+      "forbidden": [
+        "lldb",
+        "gdb",
+        "vscode"
+      ],
+      "expected_abstention": true,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "easy",
+      "notes": ""
+    },
+    {
+      "question_id": "q-073-abst-easy",
+      "category": "abstention",
+      "question": "Which debugger did the user configure for project summit?",
+      "ground_truth": [
+        [
+          "I don't know.",
+          "not specified",
+          "never configured",
+          "unknown"
+        ]
+      ],
+      "forbidden": [
+        "lldb",
+        "gdb",
+        "vscode"
+      ],
+      "expected_abstention": true,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "easy",
+      "notes": ""
+    },
+    {
+      "question_id": "q-074-abst-medi",
+      "category": "abstention",
+      "question": "Which debugger did the user configure for project tundra?",
+      "ground_truth": [
+        [
+          "I don't know.",
+          "not specified",
+          "never configured",
+          "unknown"
+        ]
+      ],
+      "forbidden": [
+        "lldb",
+        "gdb",
+        "vscode"
+      ],
+      "expected_abstention": true,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "medium",
+      "notes": ""
+    },
+    {
+      "question_id": "q-075-abst-medi",
+      "category": "abstention",
+      "question": "Which debugger did the user configure for project zenith?",
+      "ground_truth": [
+        [
+          "I don't know.",
+          "not specified",
+          "never configured",
+          "unknown"
+        ]
+      ],
+      "forbidden": [
+        "lldb",
+        "gdb",
+        "vscode"
+      ],
+      "expected_abstention": true,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "medium",
+      "notes": ""
+    },
+    {
+      "question_id": "q-076-abst-medi",
+      "category": "abstention",
+      "question": "Which debugger did the user configure for project vortex?",
+      "ground_truth": [
+        [
+          "I don't know.",
+          "not specified",
+          "never configured",
+          "unknown"
+        ]
+      ],
+      "forbidden": [
+        "lldb",
+        "gdb",
+        "vscode"
+      ],
+      "expected_abstention": true,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "medium",
+      "notes": ""
+    },
+    {
+      "question_id": "q-077-abst-hard",
+      "category": "abstention",
+      "question": "Which debugger did the user configure for project solstice?",
+      "ground_truth": [
+        [
+          "I don't know.",
+          "not specified",
+          "never configured",
+          "unknown"
+        ]
+      ],
+      "forbidden": [
+        "lldb",
+        "gdb",
+        "vscode"
+      ],
+      "expected_abstention": true,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "hard",
+      "notes": ""
+    },
+    {
+      "question_id": "q-078-abst-hard",
+      "category": "abstention",
+      "question": "Which debugger did the user configure for project polaris?",
+      "ground_truth": [
+        [
+          "I don't know.",
+          "not specified",
+          "never configured",
+          "unknown"
+        ]
+      ],
+      "forbidden": [
+        "lldb",
+        "gdb",
+        "vscode"
+      ],
+      "expected_abstention": true,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "hard",
+      "notes": ""
+    },
+    {
+      "question_id": "q-079-abst-adve",
+      "category": "abstention",
+      "question": "Which debugger did the user configure for project aurora?",
+      "ground_truth": [
+        [
+          "I don't know.",
+          "not specified",
+          "never configured",
+          "unknown"
+        ]
+      ],
+      "forbidden": [
+        "lldb",
+        "gdb",
+        "vscode"
+      ],
+      "expected_abstention": true,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "adversarial",
+      "notes": ""
+    },
+    {
+      "question_id": "q-080-abst-adve",
+      "category": "abstention",
+      "question": "Which debugger did the user configure for project cascade?",
+      "ground_truth": [
+        [
+          "I don't know.",
+          "not specified",
+          "never configured",
+          "unknown"
+        ]
+      ],
+      "forbidden": [
+        "lldb",
+        "gdb",
+        "vscode"
+      ],
+      "expected_abstention": true,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "adversarial",
+      "notes": ""
+    },
+    {
+      "question_id": "q-081-comp-easy",
+      "category": "compression_recovery",
+      "question": "What serial number was filed for the p99 latency measurement of project horizon?",
+      "ground_truth": [
+        [
+          "AM-1160",
+          "1160"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "easy",
+      "notes": ""
+    },
+    {
+      "question_id": "q-082-comp-easy",
+      "category": "compression_recovery",
+      "question": "What serial number was filed for the p99 latency measurement of project atlas?",
+      "ground_truth": [
+        [
+          "AM-1160",
+          "1160"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "easy",
+      "notes": ""
+    },
+    {
+      "question_id": "q-083-comp-easy",
+      "category": "compression_recovery",
+      "question": "What serial number was filed for the p99 latency measurement of project beacon?",
+      "ground_truth": [
+        [
+          "AM-1160",
+          "1160"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "easy",
+      "notes": ""
+    },
+    {
+      "question_id": "q-084-comp-medi",
+      "category": "compression_recovery",
+      "question": "What serial number was filed for the p99 latency measurement of project cinder?",
+      "ground_truth": [
+        [
+          "AM-1160",
+          "1160"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "medium",
+      "notes": ""
+    },
+    {
+      "question_id": "q-085-comp-medi",
+      "category": "compression_recovery",
+      "question": "What serial number was filed for the p99 latency measurement of project delta?",
+      "ground_truth": [
+        [
+          "AM-1160",
+          "1160"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "medium",
+      "notes": ""
+    },
+    {
+      "question_id": "q-086-comp-medi",
+      "category": "compression_recovery",
+      "question": "What serial number was filed for the p99 latency measurement of project ember?",
+      "ground_truth": [
+        [
+          "AM-1160",
+          "1160"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "medium",
+      "notes": ""
+    },
+    {
+      "question_id": "q-087-comp-hard",
+      "category": "compression_recovery",
+      "question": "What serial number was filed for the p99 latency measurement of project fjord?",
+      "ground_truth": [
+        [
+          "AM-1160",
+          "1160"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "hard",
+      "notes": ""
+    },
+    {
+      "question_id": "q-088-comp-hard",
+      "category": "compression_recovery",
+      "question": "What serial number was filed for the p99 latency measurement of project glacier?",
+      "ground_truth": [
+        [
+          "AM-1160",
+          "1160"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "hard",
+      "notes": ""
+    },
+    {
+      "question_id": "q-089-comp-adve",
+      "category": "compression_recovery",
+      "question": "What serial number was filed for the p99 latency measurement of project harbor?",
+      "ground_truth": [
+        [
+          "AM-1160",
+          "1160"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "adversarial",
+      "notes": ""
+    },
+    {
+      "question_id": "q-090-comp-adve",
+      "category": "compression_recovery",
+      "question": "What serial number was filed for the p99 latency measurement of project ivory?",
+      "ground_truth": [
+        [
+          "AM-1160",
+          "1160"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "adversarial",
+      "notes": ""
+    },
+    {
+      "question_id": "q-091-refl-easy",
+      "category": "reflection_reinterpretation",
+      "question": "Considering everything the user said about project juniper, what recurring preference does the user consistently show?",
+      "ground_truth": [
+        [
+          "stability",
+          "stable",
+          "conservative",
+          "safe",
+          "revert",
+          "rollback"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "easy",
+      "notes": ""
+    },
+    {
+      "question_id": "q-092-refl-easy",
+      "category": "reflection_reinterpretation",
+      "question": "Considering everything the user said about project kelp, what recurring preference does the user consistently show?",
+      "ground_truth": [
+        [
+          "stability",
+          "stable",
+          "conservative",
+          "safe",
+          "revert",
+          "rollback"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "easy",
+      "notes": ""
+    },
+    {
+      "question_id": "q-093-refl-easy",
+      "category": "reflection_reinterpretation",
+      "question": "Considering everything the user said about project lumen, what recurring preference does the user consistently show?",
+      "ground_truth": [
+        [
+          "stability",
+          "stable",
+          "conservative",
+          "safe",
+          "revert",
+          "rollback"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "easy",
+      "notes": ""
+    },
+    {
+      "question_id": "q-094-refl-medi",
+      "category": "reflection_reinterpretation",
+      "question": "Considering everything the user said about project moss, what recurring preference does the user consistently show?",
+      "ground_truth": [
+        [
+          "stability",
+          "stable",
+          "conservative",
+          "safe",
+          "revert",
+          "rollback"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "medium",
+      "notes": ""
+    },
+    {
+      "question_id": "q-095-refl-medi",
+      "category": "reflection_reinterpretation",
+      "question": "Considering everything the user said about project nectar, what recurring preference does the user consistently show?",
+      "ground_truth": [
+        [
+          "stability",
+          "stable",
+          "conservative",
+          "safe",
+          "revert",
+          "rollback"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "medium",
+      "notes": ""
+    },
+    {
+      "question_id": "q-096-refl-medi",
+      "category": "reflection_reinterpretation",
+      "question": "Considering everything the user said about project onyx, what recurring preference does the user consistently show?",
+      "ground_truth": [
+        [
+          "stability",
+          "stable",
+          "conservative",
+          "safe",
+          "revert",
+          "rollback"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "medium",
+      "notes": ""
+    },
+    {
+      "question_id": "q-097-refl-hard",
+      "category": "reflection_reinterpretation",
+      "question": "Considering everything the user said about project prism, what recurring preference does the user consistently show?",
+      "ground_truth": [
+        [
+          "stability",
+          "stable",
+          "conservative",
+          "safe",
+          "revert",
+          "rollback"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "hard",
+      "notes": ""
+    },
+    {
+      "question_id": "q-098-refl-hard",
+      "category": "reflection_reinterpretation",
+      "question": "Considering everything the user said about project quartz, what recurring preference does the user consistently show?",
+      "ground_truth": [
+        [
+          "stability",
+          "stable",
+          "conservative",
+          "safe",
+          "revert",
+          "rollback"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "hard",
+      "notes": ""
+    },
+    {
+      "question_id": "q-099-refl-adve",
+      "category": "reflection_reinterpretation",
+      "question": "Considering everything the user said about project reef, what recurring preference does the user consistently show?",
+      "ground_truth": [
+        [
+          "stability",
+          "stable",
+          "conservative",
+          "safe",
+          "revert",
+          "rollback"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "adversarial",
+      "notes": ""
+    },
+    {
+      "question_id": "q-100-refl-adve",
+      "category": "reflection_reinterpretation",
+      "question": "Considering everything the user said about project summit, what recurring preference does the user consistently show?",
+      "ground_truth": [
+        [
+          "stability",
+          "stable",
+          "conservative",
+          "safe",
+          "revert",
+          "rollback"
+        ]
+      ],
+      "forbidden": [],
+      "expected_abstention": false,
+      "reference_timestamp": null,
+      "evidence_sessions": [],
+      "required_sessions": 1,
+      "difficulty": "adversarial",
+      "notes": ""
+    }
+  ]
+}

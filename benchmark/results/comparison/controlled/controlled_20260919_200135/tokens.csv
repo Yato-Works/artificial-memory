@@ -1,0 +1,7 @@
+player,write_llm_calls,write_prompt_tokens,write_completion_tokens,retrieval_calls,context_calls,answer_llm_calls,answer_prompt_tokens,answer_completion_tokens,total_tokens,context_budget,context_used,budget_violations
+Simple RAG,0,0,0,10,10,10,4604,104,4708,2000,3886,0
+MemoryBank-style,0,0,0,10,10,10,4604,104,4708,2000,3886,0
+MemGPT-style,0,0,0,10,10,10,5334,40,5374,2000,4776,0
+Mem0-style,520,56582,7358,10,10,10,3627,47,67614,2000,2988,0
+AM v0.2.0,0,0,0,10,10,10,4294,74,4368,2000,5183,0
+AM v0.2.0 (Hardened),0,0,0,10,10,10,12858,36,12894,2000,17931,0

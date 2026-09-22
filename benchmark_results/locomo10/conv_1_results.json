@@ -1,0 +1,1369 @@
+{
+  "summary": {
+    "conv_idx": 1,
+    "sample_id": "conv-30",
+    "speakers": [
+      "Gina",
+      "Jon"
+    ],
+    "total_questions": 105,
+    "total_turns": 369,
+    "total_ir_records": 369,
+    "overall_accuracy": 0.49523809523809526,
+    "overall_oracle_recall": 0.4857142857142857,
+    "factual_accuracy": 0.4691358024691358,
+    "factual_oracle_recall": 0.5679012345679012,
+    "mean_tokens": 160.42857142857142,
+    "mean_latency_ms": 320.8868352380315,
+    "elapsed_seconds": 33.695094199996674,
+    "categories": {
+      "temporal": {
+        "total": 26,
+        "correct": 21,
+        "oracle": 21
+      },
+      "single-hop": {
+        "total": 44,
+        "correct": 15,
+        "oracle": 20
+      },
+      "multi-hop": {
+        "total": 11,
+        "correct": 2,
+        "oracle": 5
+      },
+      "adversarial": {
+        "total": 24,
+        "correct": 14,
+        "oracle": 5
+      }
+    },
+    "failure_taxonomy_v2": {
+      "RETRIEVAL_FAILURE": 24,
+      "COMPOSITION_FAILURE": 4,
+      "ABSTENTION_FAILURE": 14,
+      "TEMPORAL_FAILURE": 4,
+      "VERIFICATION_FAILURE": 6,
+      "GROUNDING_FAILURE": 1
+    },
+    "diagnoses": [
+      {
+        "question_id": "conv-30-qa-002",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-30-qa-003",
+        "category": "COMPOSITION_FAILURE",
+        "explanation": "Composition failure: Partial evidence retrieved, but multi-hop link to target slot broke."
+      },
+      {
+        "question_id": "conv-30-qa-004",
+        "category": "COMPOSITION_FAILURE",
+        "explanation": "Composition failure: Partial evidence retrieved, but multi-hop link to target slot broke."
+      },
+      {
+        "question_id": "conv-30-qa-005",
+        "category": "COMPOSITION_FAILURE",
+        "explanation": "Composition failure: Partial evidence retrieved, but multi-hop link to target slot broke."
+      },
+      {
+        "question_id": "conv-30-qa-006",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False refusal: Evidence was present in context, but model abstained."
+      },
+      {
+        "question_id": "conv-30-qa-011",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-30-qa-013",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-30-qa-016",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-30-qa-017",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-30-qa-023",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-30-qa-024",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-30-qa-025",
+        "category": "COMPOSITION_FAILURE",
+        "explanation": "Composition failure: Partial evidence retrieved, but multi-hop link to target slot broke."
+      },
+      {
+        "question_id": "conv-30-qa-027",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False refusal: Evidence was present in context, but model abstained."
+      },
+      {
+        "question_id": "conv-30-qa-029",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-30-qa-030",
+        "category": "TEMPORAL_FAILURE",
+        "explanation": "Temporal failure: Inaccurate date arithmetic, duration calculation, or chronological ordering."
+      },
+      {
+        "question_id": "conv-30-qa-031",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-30-qa-039",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False refusal: Evidence was present in context, but model abstained."
+      },
+      {
+        "question_id": "conv-30-qa-041",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-30-qa-042",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-30-qa-043",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-30-qa-044",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-30-qa-045",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-30-qa-047",
+        "category": "VERIFICATION_FAILURE",
+        "explanation": "Verification failure: Extraneous hallucinated claim not grounded in context."
+      },
+      {
+        "question_id": "conv-30-qa-048",
+        "category": "VERIFICATION_FAILURE",
+        "explanation": "Verification failure: Extraneous hallucinated claim not grounded in context."
+      },
+      {
+        "question_id": "conv-30-qa-049",
+        "category": "VERIFICATION_FAILURE",
+        "explanation": "Verification failure: Extraneous hallucinated claim not grounded in context."
+      },
+      {
+        "question_id": "conv-30-qa-050",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-30-qa-051",
+        "category": "VERIFICATION_FAILURE",
+        "explanation": "Verification failure: Extraneous hallucinated claim not grounded in context."
+      },
+      {
+        "question_id": "conv-30-qa-053",
+        "category": "VERIFICATION_FAILURE",
+        "explanation": "Verification failure: Extraneous hallucinated claim not grounded in context."
+      },
+      {
+        "question_id": "conv-30-qa-054",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-30-qa-055",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False refusal: Evidence was present in context, but model abstained."
+      },
+      {
+        "question_id": "conv-30-qa-056",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-30-qa-057",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-30-qa-059",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-30-qa-060",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-30-qa-062",
+        "category": "VERIFICATION_FAILURE",
+        "explanation": "Verification failure: Extraneous hallucinated claim not grounded in context."
+      },
+      {
+        "question_id": "conv-30-qa-064",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-30-qa-067",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-30-qa-068",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-30-qa-071",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-30-qa-074",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-30-qa-075",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-30-qa-077",
+        "category": "GROUNDING_FAILURE",
+        "explanation": "Grounding failure: Evidence was present in context, but downstream LLM failed to extract exact answer."
+      },
+      {
+        "question_id": "conv-30-qa-079",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-30-qa-080",
+        "category": "RETRIEVAL_FAILURE",
+        "explanation": "Retrieval failure: Ground-truth turn/evidence was not retrieved into context."
+      },
+      {
+        "question_id": "conv-30-qa-085",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-30-qa-087",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-30-qa-088",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-30-qa-089",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-30-qa-095",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-30-qa-096",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-30-qa-102",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-30-qa-103",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      },
+      {
+        "question_id": "conv-30-qa-104",
+        "category": "ABSTENTION_FAILURE",
+        "explanation": "False positive: Model hallucinated an answer for an unanswerable/adversarial question."
+      }
+    ]
+  },
+  "results": [
+    {
+      "question_id": "conv-30-qa-000",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "19 January 2023",
+      "ground_truth": "19 January, 2023",
+      "tokens_used": 176,
+      "latency_ms": 293.1867000006605,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-001",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "January 2023",
+      "ground_truth": "January, 2023",
+      "tokens_used": 162,
+      "latency_ms": 253.33190002129413,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-002",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Both Jon and Gina like to destress through dance.",
+      "ground_truth": "by dancing",
+      "tokens_used": 179,
+      "latency_ms": 386.2315000151284,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-003",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Both have launched ad campaigns for their respective businesses.",
+      "ground_truth": "They lost their jobs and decided to start their own businesses.",
+      "tokens_used": 200,
+      "latency_ms": 362.72199999075383,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-004",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "To share his passion for dancing with others.",
+      "ground_truth": "He lost his job and decided to start his own business to share his passion.",
+      "tokens_used": 143,
+      "latency_ms": 350.33169999951497,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-005",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Grippy but still allows movement, tough, and easy to clean.",
+      "ground_truth": "By the water, with natural light and Marley flooring",
+      "tokens_used": 177,
+      "latency_ms": 440.3537000180222,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-006",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "February, 2023",
+      "tokens_used": 170,
+      "latency_ms": 263.57979999738745,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-007",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "29 January, 2023",
+      "ground_truth": "29 January, 2023",
+      "tokens_used": 145,
+      "latency_ms": 277.59020001394674,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-008",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "28 January 2023",
+      "ground_truth": "28 January 2023",
+      "tokens_used": 140,
+      "latency_ms": 249.98609998147003,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-009",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Rome",
+      "ground_truth": "Rome",
+      "tokens_used": 184,
+      "latency_ms": 221.79140002117492,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-010",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "[D5:7 on 9:32 am on 8 February, 2023]",
+      "ground_truth": "February, 2023",
+      "tokens_used": 156,
+      "latency_ms": 499.50360000366345,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-011",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "A few years ago",
+      "tokens_used": 118,
+      "latency_ms": 248.32049998803996,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-012",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Last week before 16 March 2023",
+      "ground_truth": "March, 2023",
+      "tokens_used": 153,
+      "latency_ms": 338.36840000003576,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-013",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Not specified in the provided context.",
+      "ground_truth": "16 March, 2023",
+      "tokens_used": 156,
+      "latency_ms": 310.3069000062533,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-014",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "April 2023",
+      "ground_truth": "April, 2023",
+      "tokens_used": 153,
+      "latency_ms": 269.1086999839172,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-015",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "May 2023",
+      "ground_truth": "May, 2023",
+      "tokens_used": 183,
+      "latency_ms": 219.10550000029616,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-016",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "24 April, 2023",
+      "tokens_used": 104,
+      "latency_ms": 245.40630000410601,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-017",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "To pursue her passion and take risks.",
+      "ground_truth": "She always loved fashion trends and finding unique pieces and she lost her job so decided it was time to start her own business.",
+      "tokens_used": 139,
+      "latency_ms": 299.39030000241473,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-018",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Yes, both Jon and Gina start businesses out of what they love.",
+      "ground_truth": "Yes",
+      "tokens_used": 179,
+      "latency_ms": 432.8895999933593,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-019",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "10 May 2023",
+      "ground_truth": "10 May, 2023",
+      "tokens_used": 179,
+      "latency_ms": 294.3968000181485,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-020",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "10 May 2023",
+      "ground_truth": "27 May, 2023",
+      "tokens_used": 157,
+      "latency_ms": 275.8183999976609,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-021",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "[D12:6 on 7:18 pm on 27 May, 2023]",
+      "ground_truth": "May, 2023",
+      "tokens_used": 153,
+      "latency_ms": 501.05429999530315,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-022",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "[D13:4 on 8:29 pm on 13 June, 2023]",
+      "ground_truth": "June, 2023",
+      "tokens_used": 176,
+      "latency_ms": 528.4502000140492,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-023",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "She launched an ad campaign.",
+      "ground_truth": "worked with an artist to make unique fashion pieces, made limited-edition sweatshirts, got some new offers and promotions for online store, developed a video presentation showing how to style her pieces",
+      "tokens_used": 177,
+      "latency_ms": 283.7371999921743,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-024",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Mentoring by a business professional and working on business plans.",
+      "ground_truth": "fair, networking events, dance competition",
+      "tokens_used": 149,
+      "latency_ms": 404.6536000096239,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-025",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Workshops, classes, and a dance competition",
+      "ground_truth": "one-on-one metoring and training to dancers,  workshops and classes to local schools and centers",
+      "tokens_used": 169,
+      "latency_ms": 312.5524999923073,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-026",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "D1:14 on 4:04 pm on 20 January, 2023",
+      "ground_truth": "15 June, 2023",
+      "tokens_used": 139,
+      "latency_ms": 471.5370000049006,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-027",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Yes",
+      "tokens_used": 164,
+      "latency_ms": 266.46669997717254,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-028",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Last week before 19 June 2023",
+      "ground_truth": "June 2023",
+      "tokens_used": 175,
+      "latency_ms": 353.49770000902936,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-029",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "The context does not contain the answer.",
+      "ground_truth": "Paris, Rome",
+      "tokens_used": 151,
+      "latency_ms": 326.17829999071546,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-030",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "He hasn't specified a date yet.",
+      "ground_truth": "20 June, 2023",
+      "tokens_used": 156,
+      "latency_ms": 309.71440000575967,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-031",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "six months",
+      "tokens_used": 179,
+      "latency_ms": 263.88919999590144,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-032",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "The week before 21 June 2023",
+      "ground_truth": "June 2023",
+      "tokens_used": 173,
+      "latency_ms": 353.50369999650866,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-033",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Yesterday (20 June 2023)",
+      "ground_truth": "20 June, 2023",
+      "tokens_used": 136,
+      "latency_ms": 290.85779999149963,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-034",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Last week before 9 July 2023",
+      "ground_truth": "July 2023",
+      "tokens_used": 154,
+      "latency_ms": 291.01000001537614,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-035",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "1:25 pm on 9 July, 2023",
+      "ground_truth": "July, 2023",
+      "tokens_used": 174,
+      "latency_ms": 363.3154999988619,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-036",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "[D18:13 on 5:44 pm on 21 July, 2023]",
+      "ground_truth": "21 July 2023",
+      "tokens_used": 158,
+      "latency_ms": 456.12360001541674,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-037",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "[D19:4 on 6:46 pm on 23 July, 2023]",
+      "ground_truth": " 23 July, 2023",
+      "tokens_used": 135,
+      "latency_ms": 445.27550000930205,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-038",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Last Friday before 23 July 2023",
+      "ground_truth": "21 July 2023",
+      "tokens_used": 168,
+      "latency_ms": 332.1674999897368,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-039",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "Contemporary",
+      "tokens_used": 145,
+      "latency_ms": 550.9635000198614,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-040",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Contemporary",
+      "ground_truth": "Contemporary",
+      "tokens_used": 149,
+      "latency_ms": 213.4729000099469,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-041",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "Winning first place at a regionals dance competition",
+      "tokens_used": 181,
+      "latency_ms": 815.5520000145771,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-042",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "\"Finding Freedom\"",
+      "tokens_used": 148,
+      "latency_ms": 317.7416000107769,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-043",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "The dancers in the photo represent the students at Jon's dance studio.",
+      "ground_truth": "They are performing at the festival",
+      "tokens_used": 185,
+      "latency_ms": 464.77630001027137,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-044",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "She feels inspired by their passion for dance.",
+      "ground_truth": "They look graceful",
+      "tokens_used": 161,
+      "latency_ms": 344.75439999368973,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-045",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Jon is excited and motivated about participating in the dance festival.",
+      "ground_truth": "Glad",
+      "tokens_used": 134,
+      "latency_ms": 368.2214999862481,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-046",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Marley flooring",
+      "ground_truth": "Marley flooring",
+      "tokens_used": 165,
+      "latency_ms": 257.0430999912787,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-047",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A cool new fashion piece",
+      "ground_truth": "The perfect spot for her store",
+      "tokens_used": 152,
+      "latency_ms": 273.35750000202097,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-048",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A cozy and inviting space",
+      "ground_truth": "the space, furniture, and decor",
+      "tokens_used": 157,
+      "latency_ms": 273.0314999935217,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-049",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Like they're in a cool oasis.",
+      "ground_truth": "cozy and comfortable",
+      "tokens_used": 156,
+      "latency_ms": 308.9279000123497,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-050",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "hard work's paying off",
+      "tokens_used": 204,
+      "latency_ms": 342.23810001276433,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-051",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "To make the place look like her own style and make customers feel cozy.",
+      "ground_truth": "personal style and customer comfort",
+      "tokens_used": 153,
+      "latency_ms": 413.92439999617636,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-052",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "He believes it's key to making them feel welcome and coming back.",
+      "ground_truth": "It's the key to making them feel welcome and coming back",
+      "tokens_used": 133,
+      "latency_ms": 384.745399991516,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-053",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "She wants them to feel like they're in a cool oasis.",
+      "ground_truth": "making them want to come back",
+      "tokens_used": 159,
+      "latency_ms": 368.82069997955114,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-054",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "The store is doing great.",
+      "tokens_used": 201,
+      "latency_ms": 390.0391000206582,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-055",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "Freedom and expressing herself through dance",
+      "tokens_used": 189,
+      "latency_ms": 324.65170000796206,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-056",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Their students' growth and success.",
+      "ground_truth": "dancing together and supporting each other",
+      "tokens_used": 150,
+      "latency_ms": 312.6619999820832,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-057",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Don't be scared to reach out to people in your field for help and contacts. Networking was a lifesaver for me and opened me up to amazing products that I might not have found otherwise.",
+      "ground_truth": "build relationships with customers, create a strong brand image, stay positive",
+      "tokens_used": 175,
+      "latency_ms": 796.310599980643,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-058",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "To start his own business.",
+      "ground_truth": "for his business",
+      "tokens_used": 168,
+      "latency_ms": 306.27289999392815,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-059",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "To create a dance studio that also sells her fashion pieces.",
+      "ground_truth": "she is passionate about dance and fashion",
+      "tokens_used": 174,
+      "latency_ms": 387.79960002284497,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-060",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "happy",
+      "tokens_used": 177,
+      "latency_ms": 325.2646000182722,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-061",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A trophy",
+      "ground_truth": "a trophy",
+      "tokens_used": 151,
+      "latency_ms": 210.93100000871345,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-062",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "By reminding herself of her successes and progress.",
+      "ground_truth": "By reminding herself of her successes and progress, having a support system, and focusing on why she started",
+      "tokens_used": 152,
+      "latency_ms": 332.0032999909017,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-063",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A fashion internship",
+      "ground_truth": "fashion internship",
+      "tokens_used": 125,
+      "latency_ms": 231.90290000638925,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-064",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Not mentioned.",
+      "ground_truth": "fashion department of an international company",
+      "tokens_used": 193,
+      "latency_ms": 263.7760000070557,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-065",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "\"The Lean Startup\"",
+      "ground_truth": "The Lean Startup",
+      "tokens_used": 159,
+      "latency_ms": 249.14759999956004,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-066",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "One-on-one mentoring and training",
+      "ground_truth": "One-on-one mentoring and training",
+      "tokens_used": 165,
+      "latency_ms": 263.8992000138387,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-067",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "He uses it to write down notes.",
+      "ground_truth": "To set goals, track achievements, and find areas for improvement",
+      "tokens_used": 163,
+      "latency_ms": 319.309999991674,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-068",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "He won't give up.",
+      "ground_truth": "quit",
+      "tokens_used": 155,
+      "latency_ms": 260.1596000022255,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-069",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "To clear his mind",
+      "ground_truth": "To clear his mind",
+      "tokens_used": 155,
+      "latency_ms": 247.64350001350977,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-070",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "A dance studio",
+      "ground_truth": "a dance studio",
+      "tokens_used": 180,
+      "latency_ms": 255.55219998932444,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-071",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Jon's dance studio is a huge success.",
+      "ground_truth": "amazing",
+      "tokens_used": 170,
+      "latency_ms": 340.72089998517185,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-072",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Jon is excited and looking forward to the opening night.",
+      "ground_truth": "excited",
+      "tokens_used": 177,
+      "latency_ms": 358.92849997617304,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-073",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Magical and joyful",
+      "ground_truth": "magical",
+      "tokens_used": 163,
+      "latency_ms": 265.81979999900796,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-074",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Jon plans to make some awesome memories at the grand opening of his dance studio.",
+      "ground_truth": "savor all the good vibes",
+      "tokens_used": 159,
+      "latency_ms": 439.99479999183677,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-075",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Let's live it up and make some great memories",
+      "tokens_used": 160,
+      "latency_ms": 248.51980002131313,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-076",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Excitement and anticipation",
+      "ground_truth": "excitement",
+      "tokens_used": 166,
+      "latency_ms": 338.77380000194535,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-077",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A hoodie",
+      "ground_truth": "Hoodies",
+      "tokens_used": 181,
+      "latency_ms": 217.40839999984019,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-078",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Jon's experience with losing a job and taking control of his own destiny.",
+      "ground_truth": "His positivity and determination",
+      "tokens_used": 166,
+      "latency_ms": 427.11119999876246,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-079",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "A temp job at a bank",
+      "ground_truth": "",
+      "tokens_used": 156,
+      "latency_ms": 300.76779998489656,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-080",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Jon plans to go after his goals.",
+      "ground_truth": "Sprucing up his business plan, tweaking his pitch to investors, and working on an online platform.",
+      "tokens_used": 159,
+      "latency_ms": 319.24810001510195,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-081",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "She offers to create cool content and manage his social media accounts.",
+      "ground_truth": "Helping with making content and managing his social media accounts.",
+      "tokens_used": 134,
+      "latency_ms": 388.1493000080809,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-082",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 140,
+      "latency_ms": 236.97859997628257,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-083",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 173,
+      "latency_ms": 248.36430000141263,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-084",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 157,
+      "latency_ms": 264.6246000076644,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-085",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Positive and supportive.",
+      "ground_truth": "",
+      "tokens_used": 136,
+      "latency_ms": 256.244299991522,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-086",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 185,
+      "latency_ms": 283.25320000294596,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-087",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "A new fashion piece",
+      "ground_truth": "",
+      "tokens_used": 150,
+      "latency_ms": 272.2670999937691,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-088",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "He designed cool designs.",
+      "ground_truth": "",
+      "tokens_used": 116,
+      "latency_ms": 232.78630001004785,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-089",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "A special experience",
+      "ground_truth": "",
+      "tokens_used": 172,
+      "latency_ms": 233.2289999758359,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-090",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 151,
+      "latency_ms": 258.1318999873474,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-091",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Not mentioned.",
+      "ground_truth": "",
+      "tokens_used": 159,
+      "latency_ms": 239.35759998857975,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-092",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 168,
+      "latency_ms": 251.3940999924671,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-093",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 177,
+      "latency_ms": 224.3717000237666,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-094",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 158,
+      "latency_ms": 257.7308999898378,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-095",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "A trophy",
+      "ground_truth": "",
+      "tokens_used": 151,
+      "latency_ms": 209.78930001729168,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-096",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Dance instructor",
+      "ground_truth": "",
+      "tokens_used": 125,
+      "latency_ms": 224.956399993971,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-097",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 169,
+      "latency_ms": 254.61010000435635,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-098",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Not mentioned.",
+      "ground_truth": "",
+      "tokens_used": 160,
+      "latency_ms": 243.05519997142255,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-099",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 114,
+      "latency_ms": 230.49359998549335,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-100",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 167,
+      "latency_ms": 238.50710000260733,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-101",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 155,
+      "latency_ms": 238.0018999974709,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-30-qa-102",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Limited edition dance shoes",
+      "ground_truth": "",
+      "tokens_used": 155,
+      "latency_ms": 240.90309999883175,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-103",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Online clothing store",
+      "ground_truth": "",
+      "tokens_used": 148,
+      "latency_ms": 226.21939997770824,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-30-qa-104",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Working with fashion bloggers and influencers, and doing more ads.",
+      "ground_truth": "",
+      "tokens_used": 215,
+      "latency_ms": 421.80429998552427,
+      "is_correct": false
+    }
+  ]
+}

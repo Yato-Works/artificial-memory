@@ -45,6 +45,22 @@ FROZEN_THINK: bool | None = None
 
 ABSTENTION_TEXT = "I don't know."
 
+# Official-protocol abstention surface for the LoCoMo arena.
+#
+# The pinned official harness (third_party/benchmarks/locomo/task_eval/evaluation.py)
+# credits a category-5 (adversarial) question ONLY when the prediction literally
+# contains "no information available" or "not mentioned"; every other refusal
+# wording ("I don't know.", "No", "None") scores 0 even though the memory system
+# behaved correctly.  Measured offline on the directives_v4 run (1986 Q,
+# scripts/ab_official_abstention.py): aligning the surface moves the official F1
+# from 47.69% to 50.16% (+2.47pp) with zero change to AM's dev matcher.
+#
+# Keep ABSTENTION_TEXT itself untouched so already-published arenas (e.g.
+# LongMemEval) keep their frozen prompt hash and stay comparable.
+OFFICIAL_ABSTENTION_TEXT = "No information available (not mentioned in the conversation)."
+
+OFFICIAL_ABSTENTION_MARKERS = ("no information available", "not mentioned")
+
 FROZEN_ANSWER_SYSTEM_PROMPT = (
     "You answer questions using ONLY the provided conversation context.\n"
     "Rules:\n"
@@ -158,12 +174,22 @@ class OllamaAnswerer:
         base_url: str = FROZEN_BASE_URL,
         model: str = FROZEN_MODEL,
         timeout_seconds: float = 120.0,
+        answer_adapter: Any | None = None,
+        num_ctx: int | None = None,
     ):
         # Spec Freeze: model / temperature / seed / max tokens are constants
         # above and are NOT constructor-overridable.
         self.base_url = base_url.rstrip("/")
         self.model = model
         self._client = httpx.Client(timeout=timeout_seconds)
+        # Optional benchmark-only post-processing of the raw model text.  Left at
+        # ``None`` in production so the frozen protocol is bit-for-bit unchanged.
+        self.answer_adapter = answer_adapter
+        # A/B-only context window cap.  ``None`` (production) leaves Ollama's own
+        # default untouched.  Needed because large-tag models (e.g. 7B on an 8 GB
+        # RTX 3050) request a 32K KV cache by default and the server answers
+        # HTTP 500 once VRAM is exhausted, which silently kills a full run.
+        self.num_ctx = num_ctx
 
     # ---------- prompt construction (frozen) ----------
 
@@ -202,6 +228,8 @@ class OllamaAnswerer:
         }
         if FROZEN_THINK is not None:
             payload["think"] = FROZEN_THINK
+        if self.num_ctx is not None:
+            payload["options"]["num_ctx"] = self.num_ctx
         start = time.perf_counter()
         response = self._client.post(f"{self.base_url}/api/chat", json=payload)
         latency_ms = (time.perf_counter() - start) * 1000

@@ -1,0 +1,6 @@
+temporal date_copy fails: 173
+  BINDING FAIL (GT expression already in a parenthetical): 20
+  partial (>=50% of GT terms in some parenthetical)      : 64
+  RESOLUTION GAP (correct expression not derivable)      : 89
+binding samples: ['conv-26-qa-009', 'conv-26-qa-031', 'conv-26-qa-033', 'conv-42-qa-020', 'conv-43-qa-044', 'conv-43-qa-056', 'conv-43-qa-058', 'conv-44-qa-016', 'conv-47-qa-015', 'conv-47-qa-028']
+absent samples : ['conv-26-qa-044', 'conv-26-qa-049', 'conv-26-qa-053', 'conv-26-qa-068', 'conv-30-qa-013', 'conv-30-qa-016', 'conv-30-qa-026', 'conv-41-qa-000', 'conv-41-qa-031', 'conv-41-qa-038']

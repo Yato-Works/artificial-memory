@@ -1,0 +1,5 @@
+cached contexts: 1986  convs=[0]  limit=3
+phi4-mini:latest       acc=100.0% (3/3)  oracle=100.0%  23s  temporal=100.0%  open-domain=100.0%
+qwen2.5-coder:7b       acc=100.0% (3/3)  oracle=100.0%  50s  temporal=100.0%  open-domain=100.0%
+
+saved: benchmark_results\ab_reader_model_smoke.json

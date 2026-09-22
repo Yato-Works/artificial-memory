@@ -1,0 +1,23 @@
+cache rows: 500  selected: 110
+fixes: global_ef=True ss_user=True multi=True temporal=True ku=False ss_assist=False
+reader: qwen2.5:7b-instruct-q4_K_M num_ctx=8192
+
+  25/110  acc= 84.0%  (104s)
+  50/110  acc= 78.0%  (138s)
+  75/110  acc= 76.0%  (194s)
+  100/110  acc= 71.0%  (262s)
+
+=== ARM RESULT (n=110) ===
+  ALL               73.6%  (81/110)
+  single-session-user          81.0%  (17/21)
+  multi-session                77.8%  (21/27)
+  temporal-reasoning           48.1%  (13/27)
+  knowledge-update             71.4%  (10/14)
+  single-session-assistant    100.0%  (10/10)
+  single-session-preference    90.9%  (10/11)
+
+  refusals in arm : 28
+  fixed vs baseline : +21
+  broken vs baseline: -0
+  elapsed          : 336s (3.06s/Q)
+  saved: benchmark_results\ab_lme_ef_v2_110.json

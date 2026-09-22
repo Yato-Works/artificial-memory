@@ -1,0 +1,426 @@
+........................................................................ [ 14%]
+.......E................................................................ [ 28%]
+.........................................EEE..E.EE..........sssssssssss. [ 42%]
+......................EEEE.............................................. [ 56%]
+........................................................................ [ 70%]
+........................................................................ [ 84%]
+........................EEEE............................................ [ 99%]
+.....                                                                    [100%]
+=================================== ERRORS ====================================
+_____________ ERROR at setup of test_migration_on_legacy_database _____________
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_migration_on_legacy_database>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        if (
+            fixturedef.argname == "event_loop_policy"
+            and fixturedef.func.__module__ != __name__
+        ):
+            warnings.warn(
+                PytestDeprecationWarning(_EVENT_LOOP_POLICY_FIXTURE_DEPRECATION_WARNING),
+            )
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+                return (yield)
+            if not _is_coroutine_or_asyncgen(fixturedef.func):
+>               return (yield)
+                        ^^^^^
+E               PermissionError: [WinError 5] Access is denied: 'C:\\Users\\smily\\AppData\\Local\\Temp\\pytest-of-MCJ'
+
+..\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\pytest_asyncio\plugin.py:926: PermissionError
+___________ ERROR at setup of TestArenaRunner.test_runner_executes ____________
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_runner_executes>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        if (
+            fixturedef.argname == "event_loop_policy"
+            and fixturedef.func.__module__ != __name__
+        ):
+            warnings.warn(
+                PytestDeprecationWarning(_EVENT_LOOP_POLICY_FIXTURE_DEPRECATION_WARNING),
+            )
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+                return (yield)
+            if not _is_coroutine_or_asyncgen(fixturedef.func):
+>               return (yield)
+                        ^^^^^
+E               PermissionError: [WinError 5] Access is denied: 'C:\\Users\\smily\\AppData\\Local\\Temp\\pytest-of-MCJ'
+
+..\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\pytest_asyncio\plugin.py:926: PermissionError
+__________ ERROR at setup of TestArenaRunner.test_failure_recording ___________
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_failure_recording>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        if (
+            fixturedef.argname == "event_loop_policy"
+            and fixturedef.func.__module__ != __name__
+        ):
+            warnings.warn(
+                PytestDeprecationWarning(_EVENT_LOOP_POLICY_FIXTURE_DEPRECATION_WARNING),
+            )
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+                return (yield)
+            if not _is_coroutine_or_asyncgen(fixturedef.func):
+>               return (yield)
+                        ^^^^^
+E               PermissionError: [WinError 5] Access is denied: 'C:\\Users\\smily\\AppData\\Local\\Temp\\pytest-of-MCJ'
+
+..\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\pytest_asyncio\plugin.py:926: PermissionError
+_ ERROR at setup of TestArenaRunner.test_runner_does_not_double_count_answer_costs _
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_runner_does_not_double_count_answer_costs>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        if (
+            fixturedef.argname == "event_loop_policy"
+            and fixturedef.func.__module__ != __name__
+        ):
+            warnings.warn(
+                PytestDeprecationWarning(_EVENT_LOOP_POLICY_FIXTURE_DEPRECATION_WARNING),
+            )
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+                return (yield)
+            if not _is_coroutine_or_asyncgen(fixturedef.func):
+>               return (yield)
+                        ^^^^^
+E               PermissionError: [WinError 5] Access is denied: 'C:\\Users\\smily\\AppData\\Local\\Temp\\pytest-of-MCJ'
+
+..\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\pytest_asyncio\plugin.py:926: PermissionError
+______ ERROR at setup of TestRepeatProtocol.test_runner_respects_repeats ______
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_runner_respects_repeats>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        if (
+            fixturedef.argname == "event_loop_policy"
+            and fixturedef.func.__module__ != __name__
+        ):
+            warnings.warn(
+                PytestDeprecationWarning(_EVENT_LOOP_POLICY_FIXTURE_DEPRECATION_WARNING),
+            )
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+                return (yield)
+            if not _is_coroutine_or_asyncgen(fixturedef.func):
+>               return (yield)
+                        ^^^^^
+E               PermissionError: [WinError 5] Access is denied: 'C:\\Users\\smily\\AppData\\Local\\Temp\\pytest-of-MCJ'
+
+..\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\pytest_asyncio\plugin.py:926: PermissionError
+___ ERROR at setup of TestBudgetEnforcement.test_budget_violation_recorded ____
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_budget_violation_recorded>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        if (
+            fixturedef.argname == "event_loop_policy"
+            and fixturedef.func.__module__ != __name__
+        ):
+            warnings.warn(
+                PytestDeprecationWarning(_EVENT_LOOP_POLICY_FIXTURE_DEPRECATION_WARNING),
+            )
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+                return (yield)
+            if not _is_coroutine_or_asyncgen(fixturedef.func):
+>               return (yield)
+                        ^^^^^
+E               PermissionError: [WinError 5] Access is denied: 'C:\\Users\\smily\\AppData\\Local\\Temp\\pytest-of-MCJ'
+
+..\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\pytest_asyncio\plugin.py:926: PermissionError
+_ ERROR at setup of TestRealSystemArena.test_real_player_no_budget_enforcement _
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_real_player_no_budget_enforcement>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        if (
+            fixturedef.argname == "event_loop_policy"
+            and fixturedef.func.__module__ != __name__
+        ):
+            warnings.warn(
+                PytestDeprecationWarning(_EVENT_LOOP_POLICY_FIXTURE_DEPRECATION_WARNING),
+            )
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+                return (yield)
+            if not _is_coroutine_or_asyncgen(fixturedef.func):
+>               return (yield)
+                        ^^^^^
+E               PermissionError: [WinError 5] Access is denied: 'C:\\Users\\smily\\AppData\\Local\\Temp\\pytest-of-MCJ'
+
+..\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\pytest_asyncio\plugin.py:926: PermissionError
+___________ ERROR at setup of TestRunReplay.test_scores_csv_written ___________
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_scores_csv_written>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        if (
+            fixturedef.argname == "event_loop_policy"
+            and fixturedef.func.__module__ != __name__
+        ):
+            warnings.warn(
+                PytestDeprecationWarning(_EVENT_LOOP_POLICY_FIXTURE_DEPRECATION_WARNING),
+            )
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+                return (yield)
+            if not _is_coroutine_or_asyncgen(fixturedef.func):
+>               return (yield)
+                        ^^^^^
+E               PermissionError: [WinError 5] Access is denied: 'C:\\Users\\smily\\AppData\\Local\\Temp\\pytest-of-MCJ'
+
+..\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\pytest_asyncio\plugin.py:926: PermissionError
+________ ERROR at setup of TestRunReplay.test_replay_is_deterministic _________
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_replay_is_deterministic>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        if (
+            fixturedef.argname == "event_loop_policy"
+            and fixturedef.func.__module__ != __name__
+        ):
+            warnings.warn(
+                PytestDeprecationWarning(_EVENT_LOOP_POLICY_FIXTURE_DEPRECATION_WARNING),
+            )
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+                return (yield)
+            if not _is_coroutine_or_asyncgen(fixturedef.func):
+>               return (yield)
+                        ^^^^^
+E               PermissionError: [WinError 5] Access is denied: 'C:\\Users\\smily\\AppData\\Local\\Temp\\pytest-of-MCJ'
+
+..\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\pytest_asyncio\plugin.py:926: PermissionError
+_________ ERROR at setup of TestRunReplay.test_hash_mismatch_rejected _________
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_hash_mismatch_rejected>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        if (
+            fixturedef.argname == "event_loop_policy"
+            and fixturedef.func.__module__ != __name__
+        ):
+            warnings.warn(
+                PytestDeprecationWarning(_EVENT_LOOP_POLICY_FIXTURE_DEPRECATION_WARNING),
+            )
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+                return (yield)
+            if not _is_coroutine_or_asyncgen(fixturedef.func):
+>               return (yield)
+                        ^^^^^
+E               PermissionError: [WinError 5] Access is denied: 'C:\\Users\\smily\\AppData\\Local\\Temp\\pytest-of-MCJ'
+
+..\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\pytest_asyncio\plugin.py:926: PermissionError
+_____ ERROR at setup of TestRunReplay.test_scores_csv_header_matches_spec _____
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_scores_csv_header_matches_spec>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        if (
+            fixturedef.argname == "event_loop_policy"
+            and fixturedef.func.__module__ != __name__
+        ):
+            warnings.warn(
+                PytestDeprecationWarning(_EVENT_LOOP_POLICY_FIXTURE_DEPRECATION_WARNING),
+            )
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+                return (yield)
+            if not _is_coroutine_or_asyncgen(fixturedef.func):
+>               return (yield)
+                        ^^^^^
+E               PermissionError: [WinError 5] Access is denied: 'C:\\Users\\smily\\AppData\\Local\\Temp\\pytest-of-MCJ'
+
+..\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\pytest_asyncio\plugin.py:926: PermissionError
+________ ERROR at setup of TestFreeze.test_write_read_verify_roundtrip ________
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_write_read_verify_roundtrip>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        if (
+            fixturedef.argname == "event_loop_policy"
+            and fixturedef.func.__module__ != __name__
+        ):
+            warnings.warn(
+                PytestDeprecationWarning(_EVENT_LOOP_POLICY_FIXTURE_DEPRECATION_WARNING),
+            )
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+                return (yield)
+            if not _is_coroutine_or_asyncgen(fixturedef.func):
+>               return (yield)
+                        ^^^^^
+E               PermissionError: [WinError 5] Access is denied: 'C:\\Users\\smily\\AppData\\Local\\Temp\\pytest-of-MCJ'
+
+..\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\pytest_asyncio\plugin.py:926: PermissionError
+_________ ERROR at setup of TestFreeze.test_verify_detects_stale_hash _________
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_verify_detects_stale_hash>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        if (
+            fixturedef.argname == "event_loop_policy"
+            and fixturedef.func.__module__ != __name__
+        ):
+            warnings.warn(
+                PytestDeprecationWarning(_EVENT_LOOP_POLICY_FIXTURE_DEPRECATION_WARNING),
+            )
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+                return (yield)
+            if not _is_coroutine_or_asyncgen(fixturedef.func):
+>               return (yield)
+                        ^^^^^
+E               PermissionError: [WinError 5] Access is denied: 'C:\\Users\\smily\\AppData\\Local\\Temp\\pytest-of-MCJ'
+
+..\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\pytest_asyncio\plugin.py:926: PermissionError
+__ ERROR at setup of TestFreeze.test_verify_without_freeze_reports_unfrozen ___
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_verify_without_freeze_reports_unfrozen>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        if (
+            fixturedef.argname == "event_loop_policy"
+            and fixturedef.func.__module__ != __name__
+        ):
+            warnings.warn(
+                PytestDeprecationWarning(_EVENT_LOOP_POLICY_FIXTURE_DEPRECATION_WARNING),
+            )
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+                return (yield)
+            if not _is_coroutine_or_asyncgen(fixturedef.func):
+>               return (yield)
+                        ^^^^^
+E               PermissionError: [WinError 5] Access is denied: 'C:\\Users\\smily\\AppData\\Local\\Temp\\pytest-of-MCJ'
+
+..\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\pytest_asyncio\plugin.py:926: PermissionError
+___________ ERROR at setup of TestFreeze.test_write_is_reproducible ___________
+
+fixturedef = <FixtureDef argname='tmp_path' scope='function' baseid=''>
+request = <SubRequest 'tmp_path' for <Function test_write_is_reproducible>>
+
+    @pytest.hookimpl(wrapper=True)
+    def pytest_fixture_setup(fixturedef: FixtureDef, request) -> object | None:
+        if (
+            fixturedef.argname == "event_loop_policy"
+            and fixturedef.func.__module__ != __name__
+        ):
+            warnings.warn(
+                PytestDeprecationWarning(_EVENT_LOOP_POLICY_FIXTURE_DEPRECATION_WARNING),
+            )
+        asyncio_mode = _get_asyncio_mode(request.config)
+        if not _is_asyncio_fixture_function(fixturedef.func):
+            if asyncio_mode == Mode.STRICT:
+                # Ignore async fixtures without explicit asyncio mark in strict mode
+                # This applies to pytest_trio fixtures, for example
+                return (yield)
+            if not _is_coroutine_or_asyncgen(fixturedef.func):
+>               return (yield)
+                        ^^^^^
+E               PermissionError: [WinError 5] Access is denied: 'C:\\Users\\smily\\AppData\\Local\\Temp\\pytest-of-MCJ'
+
+..\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\pytest_asyncio\plugin.py:926: PermissionError
+============================== warnings summary ===============================
+..\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\_pytest\cacheprovider.py:469
+  C:\Users\smily\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\_pytest\cacheprovider.py:469: PytestCacheWarning: could not create cache path C:\Users\smily\artificial_memory\.pytest_cache\v\cache\nodeids: [WinError 5] Access is denied: 'C:\\Users\\smily\\artificial_memory\\.pytest_cache\\v\\cache'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+..\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\_pytest\cacheprovider.py:423
+  C:\Users\smily\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\_pytest\cacheprovider.py:423: PytestCacheWarning: could not create cache path C:\Users\smily\artificial_memory\.pytest_cache\v\cache\lastfailed: [WinError 5] Access is denied: 'C:\\Users\\smily\\artificial_memory\\.pytest_cache\\v\\cache'
+    config.cache.set("cache/lastfailed", self.lastfailed)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+ERROR tests/test_p0_fixes.py::test_migration_on_legacy_database - PermissionE...
+ERROR tests/test_phase8_arena.py::TestArenaRunner::test_runner_executes - Per...
+ERROR tests/test_phase8_arena.py::TestArenaRunner::test_failure_recording - P...
+ERROR tests/test_phase8_arena.py::TestArenaRunner::test_runner_does_not_double_count_answer_costs
+ERROR tests/test_phase8_arena.py::TestRepeatProtocol::test_runner_respects_repeats
+ERROR tests/test_phase8_arena.py::TestBudgetEnforcement::test_budget_violation_recorded
+ERROR tests/test_phase8_arena.py::TestRealSystemArena::test_real_player_no_budget_enforcement
+ERROR tests/test_phase8_scorer.py::TestRunReplay::test_scores_csv_written - P...
+ERROR tests/test_phase8_scorer.py::TestRunReplay::test_replay_is_deterministic
+ERROR tests/test_phase8_scorer.py::TestRunReplay::test_hash_mismatch_rejected
+ERROR tests/test_phase8_scorer.py::TestRunReplay::test_scores_csv_header_matches_spec
+ERROR tests/test_v02_phase7.py::TestFreeze::test_write_read_verify_roundtrip
+ERROR tests/test_v02_phase7.py::TestFreeze::test_verify_detects_stale_hash - ...
+ERROR tests/test_v02_phase7.py::TestFreeze::test_verify_without_freeze_reports_unfrozen
+ERROR tests/test_v02_phase7.py::TestFreeze::test_write_is_reproducible - Perm...
+483 passed, 11 skipped, 2 warnings, 15 errors in 307.01s (0:05:07)

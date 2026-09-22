@@ -1,0 +1,2 @@
+cached contexts: 1986  convs=[0, 1, 2]  limit=None
+phi4-mini:latest       acc= 73.6% (366/497)  oracle= 74.2%  1491s  single-hop= 87.0%  multi-hop= 66.2%  temporal= 62.2%  adversarial= 63.4%  open-domain= 76.2%

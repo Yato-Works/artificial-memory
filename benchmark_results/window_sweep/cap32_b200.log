@@ -1,0 +1,70 @@
+
+### Diagnosing conv 0 ...
+  conv 0: n=199 mean_candidates=401.8 mean_tokens=1995.2
+
+### Diagnosing conv 1 ...
+  conv 1: n=105 mean_candidates=363.3 mean_tokens=1866.9
+
+### Diagnosing conv 2 ...
+  conv 2: n=193 mean_candidates=650.5 mean_tokens=1966.7
+
+### Diagnosing conv 3 ...
+  conv 3: n=260 mean_candidates=582.9 mean_tokens=1818.8
+
+### Diagnosing conv 4 ...
+  conv 4: n=242 mean_candidates=646.3 mean_tokens=2016.7
+
+### Diagnosing conv 5 ...
+  conv 5: n=158 mean_candidates=631.1 mean_tokens=1967.7
+
+### Diagnosing conv 6 ...
+  conv 6: n=190 mean_candidates=649.0 mean_tokens=1885.3
+
+### Diagnosing conv 7 ...
+  conv 7: n=239 mean_candidates=649.9 mean_tokens=1821.9
+
+### Diagnosing conv 8 ...
+  conv 8: n=196 mean_candidates=472.3 mean_tokens=1942.2
+
+### Diagnosing conv 9 ...
+  conv 9: n=204 mean_candidates=550.0 mean_tokens=2010.6
+
+================================================================================================
+STAGE ATTRIBUTION (share of questions where the gold turn is still present)
+================================================================================================
+category            n     CORPUS  WIDE_POOL   EXP_POOL   CAND_PRE  CAND_POST    CONTEXT
+single-hop        841     100.0%      83.9%      86.2%      97.7%      99.4%      85.0%
+adversarial       446     100.0%      85.7%      88.8%      98.2%      99.6%      62.3%
+temporal          321      99.7%      87.5%      90.3%      98.4%      99.1%      84.7%
+multi-hop         282     100.0%      85.1%      90.4%      99.3%      99.6%      82.6%
+open-domain        96      96.9%      70.8%      76.0%      94.8%      94.8%      59.4%
+------------------------------------------------------------------------------------------------
+ALL              1986      99.8%      84.4%      87.6%      98.0%      99.2%      78.3%
+
+------------------------------------------------------------------------------------------------
+FUNNEL LOSS (pp lost at each transition)
+------------------------------------------------------------------------------------------------
+  CORPUS       -> WIDE_POOL     +15.36pp  <== PRIMARY LOSS
+  WIDE_POOL    -> EXP_POOL       -3.12pp
+  EXP_POOL     -> CAND_PRE      -10.47pp
+  CAND_PRE     -> CAND_POST      -1.16pp
+  CAND_POST    -> CONTEXT       +20.90pp  <== PRIMARY LOSS
+
+------------------------------------------------------------------------------------------------
+ROOT CAUSE OF CONTEXT MISSES
+------------------------------------------------------------------------------------------------
+  OK                  1551   78.3%  #######################################
+  WINDOW_TOO_SMALL     415   20.9%  ##########
+  POOL_DROP              9    0.5%  
+  POOL_MISS              7    0.4%  
+
+------------------------------------------------------------------------------------------------
+RANK OF FIRST GOLD-BEARING CANDIDATE (after widening)
+------------------------------------------------------------------------------------------------
+  rank 0-5         1187   59.9%  #############################
+  rank 6-19         272   13.7%  ######
+  rank 20-49        148    7.5%  ###
+  rank 50-+         359   18.1%  #########
+  absent             16    0.8%  
+
+Saved: benchmark_results/window_sweep/cap32_b200.json

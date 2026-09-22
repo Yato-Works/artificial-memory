@@ -27,6 +27,279 @@ class VerificationResult:
 class AnswerVerifier:
     """Deterministic Answer Verifier."""
 
+    #: Content words that never signal attribution (kept in sync with the
+    #: benchmark probes that validated this guard).
+    _STOP_WORDS = frozenset({
+        "the", "and", "for", "with", "about", "from", "that", "this", "there",
+        "their", "his", "her", "its", "our", "your", "you", "she", "he", "they",
+        "was", "were", "is", "are", "not", "but", "yes", "no", "know", "don't",
+        "does", "did", "has", "had", "have", "very", "also", "just", "been",
+        "would", "could", "should", "mentioned", "mention", "information",
+        "context", "answer", "question", "doing", "because", "while", "when",
+        "what", "where", "which", "who", "how", "why", "some", "any", "all",
+        "more", "most", "other", "than", "then", "them", "these", "those",
+        "being", "into", "onto", "over", "under", "again", "him",
+    })
+
+    #: Greetings/addressee markers: a name right after one of these is a
+    #: vocative, NOT the owner of the asserted content.
+    _VOCATIVE_TAIL = re.compile(
+        r"\b(?:thanks|thank\s+you|hey|hi|oh|wow|yeah|aw|aww|congrats|congratulations|"
+        r"nope|yep|sure|okay|ok|right|haha|lol)\s*[,.!]*\s*$",
+        re.IGNORECASE,
+    )
+
+    #: First-person forms mark the speaker as the content owner.  The set was
+    #: extended from possessives (``my|mine|me|...``) to bare first-person
+    #: subjects (``i|we``) after an offline A/B on 1,986 LoCoMo rows
+    #: (``scripts/simulate_binding_variants.py``): a non-owner turn that asserts
+    #: content in the first person ("I have been to X") owns that content, and
+    #: treating it as the queried subject's attribute is the dominant bait form.
+    #: Measured on rows where the previous rule was silent: adversarial +33
+    #: recovered, single-hop -4, temporal -1 => net +28 questions.
+    _OWNER_PRONOUNS = re.compile(
+        r"\b(?:i|me|my|mine|myself|we|our|ours|us)\b", re.IGNORECASE
+    )
+
+    #: Alias kept for the offline A/B harness
+    #: (``scripts/simulate_binding_variants.py``), where variant R3 is defined as
+    #: ``_OWNER_PRONOUNS = AnswerVerifier._SELF_ASSERTION``.
+    _SELF_ASSERTION = _OWNER_PRONOUNS
+
+    #: Second-person binding (variant R2/R4): in a dyadic conversation a
+    #: non-subject speaker addressing the listener with "you/your" would bind the
+    #: content to the queried subject.  The offline A/B measured this as
+    #: net-negative against the self-assertion rule, so it is OFF in production
+    #: and only the harness flips it on.
+    _SECOND_PERSON_BINDING = False
+    _SECOND_PERSON = re.compile(
+        r"\b(?:you|your|yours|yourself|yourselves)\b", re.IGNORECASE
+    )
+
+    #: Answer forms that already refuse; the guards never touch them.
+    _REFUSAL_MARKERS = (
+        "i don't know", "i dont know", "not mentioned", "unknown",
+        "no information", "none", "unclear", "not specified",
+        "cannot determine", "no record", "does not mention",
+        "doesn't mention", "not in the conversation",
+    )
+
+    def __init__(self, subject_binding: bool = True) -> None:
+        self.subject_binding = subject_binding
+
+    # ---------- subject-binding helpers ----------
+
+    @staticmethod
+    def _stem(word: str) -> str:
+        w = word.lower()
+        for suffix in ("ies", "ing", "ed", "es", "s"):
+            if w.endswith(suffix) and len(w) > len(suffix) + 2:
+                return w[: -len(suffix)]
+        return w
+
+    def _content_stems(self, text: str) -> set[str]:
+        out = set()
+        for raw in text.lower().split():
+            w = raw.strip(".,!?;:'\"()[]")
+            if w and w not in self._STOP_WORDS and len(w) > 2:
+                out.add(self._stem(w))
+        return out
+
+    def _parse_turns(self, context: str) -> list[tuple[str, str]]:
+        turns = []
+        for line in context.splitlines():
+            # LoCoMo provenance format:
+            #   [D4:5 on 27 June, 2023] (In reply to Melanie: "...") Caroline: text
+            line = re.sub(r"^\[[^\]]*\]\s*", "", line)
+            line = re.sub(
+                r"^\(In reply to [^()]*(?:\([^()]*\)[^()]*)*\)\s*", "", line
+            )
+            if line.startswith("(In reply to "):
+                # fallback: the quote is always terminated by '")'
+                line = re.sub(r'^\(In reply to .*?"\)\s*', "", line)
+            m = re.match(r"\s*([A-Z][A-Za-z']+):\s*(.+)$", line)
+            if m:
+                turns.append((m.group(1), m.group(2)))
+        return turns
+
+    #: Date-like answers are events/points in time, not subject-bound
+    #: possessions; misattribution refusal does not apply to them.
+    _DATE_LIKE = re.compile(
+        r"\b(?:19|20)\d{2}\b|january|february|march|april|may|june|july|august|"
+        r"september|october|november|december|\b(?:last|next|this|a|two|three|"
+        r"four|five|\d+)\s+(?:week|month|year|day)s?\b|\bago\b|\byears?\b|\bweeks?\b",
+        re.IGNORECASE,
+    )
+
+    #: Temporal question forms.
+    _TEMPORAL_QUESTION = re.compile(
+        r"\b(?:when|how\s+(?:long|many\s+years|many\s+days|many\s+weeks|many\s+months)|"
+        r"what\s+year|how\s+old)\b",
+        re.IGNORECASE,
+    )
+
+    #: Question forms that bind an assertion to a subject: "X's car",
+    #: "Did X ...", "that X attended", "who X met".
+    @staticmethod
+    def _subject_bound_patterns(subject: str) -> list[re.Pattern]:
+        s = re.escape(subject)
+        return [
+            re.compile(rf"\b{s}'s\b", re.IGNORECASE),
+            re.compile(
+                rf"\b(?:did|does|is|was|were|has|have|had|can|could|will|would)\s+{s}\b",
+                re.IGNORECASE,
+            ),
+            re.compile(rf"\b(?:that|who|whom)\s+{s}\b", re.IGNORECASE),
+        ]
+
+    def check_subject_binding(
+        self, question: str, answer: str, context: str
+    ) -> VerificationResult | None:
+        """Detect answers asserting content the context attributes to someone else.
+
+        Long-haystack contexts make copy-style models assert bait content that
+        the conversation only attributes to the *other* speaker or to a different
+        attribute ("Melanie's necklace symbolises love..." is verbatim Caroline's
+        turn; "Oscar's bone" belongs to Oliver).  The guard refuses when
+          * a proper-noun entity of the question is absent from the whole
+            context (unasserted premise), or
+          * the matched evidence turns own the content only through
+            first-person possessives of a speaker other than the queried
+            subject, while no turn binds the content to the queried subject.
+        """
+        turns = self._parse_turns(context)
+        if len(turns) < 2:
+            return None
+        speakers = {s.lower() for s, _ in turns}
+        ans_lower = answer.lower().strip()
+        if any(m in ans_lower for m in self._REFUSAL_MARKERS):
+            return None
+        context_lower = context.lower()
+
+        # 0. Unasserted-entity guard: a proper-noun question entity that never
+        #    appears in the context makes every assertion a hallucination.
+        tokens = re.findall(r"\b[A-Z][a-z]{2,}\b", question)
+        for tok in tokens[1:]:
+            low = tok.lower()
+            if low in speakers or low in self._STOP_WORDS:
+                continue
+            if low not in context_lower:
+                note = f"Entity-presence guard: '{tok}' is never mentioned in the context."
+                return VerificationResult(
+                    is_verified=True,
+                    verified_answer="None (not mentioned in conversation).",
+                    hallucination_detected=True, notes=note,
+                )
+
+        # 1. Queried subject: prefer the possessive form ("Melanie's necklace"),
+        #    fall back to any speaker name mentioned in the question.
+        subject: str | None = None
+        for s in sorted(speakers, key=len, reverse=True):
+            if re.search(rf"\b{re.escape(s)}'s\b", question.lower()):
+                subject = s
+                break
+        if subject is None:
+            mentioned = [s for s in sorted(speakers, key=len, reverse=True)
+                         if re.search(rf"\b{re.escape(s)}\b", question.lower())]
+            if len(mentioned) >= 2:
+                return None  # both speakers in the question: attribution ambiguous
+            subject = mentioned[0] if mentioned else None
+        if subject is None:
+            return None
+
+        # 1b. Only subject-bound questions qualify: the premise must attribute an
+        #     action/possession to the subject ("X's car", "Did X ...",
+        #     "that X attended").  Plain mentions are not enough.
+        ql = question.lower()
+        if not any(p.search(ql) for p in self._subject_bound_patterns(subject)):
+            return None
+
+        # 1c. Date-like answers / temporal questions are events, not
+        #     subject-bound possessions: never refuse those on attribution.
+        if self._DATE_LIKE.search(answer) or self._TEMPORAL_QUESTION.search(question):
+            return None
+
+        # 2. Rank turns by answer-content overlap.
+        stems = self._content_stems(answer)
+        if not stems:
+            return None
+        attr_stems = self._content_stems(question)
+        attr_stems.discard(self._stem(subject))
+        attr_in_context = any(
+            st in self._content_stems(text) for st in attr_stems for _, text in turns
+        )
+        scored = []
+        for speaker, text in turns:
+            t_stems = self._content_stems(text)
+            ratio = sum(1 for st in stems if st in t_stems) / len(stems)
+            scored.append((ratio, speaker, text.lower()))
+        scored.sort(key=lambda x: -x[0])
+        matched = [s for s in scored if s[0] >= 0.5]
+        if not matched:
+            return None
+
+        bound = False
+        misattributed = False
+        for _, speaker, text in matched:
+            own = speaker.lower() == subject
+            content_sents = [
+                m.group(0).strip()
+                for m in re.finditer(r"[^\n.!?]+", text)
+                if any(st in self._content_stems(m.group(0)) for st in stems)
+            ]
+            for sent in content_sents:
+                if sent.rstrip().endswith("?"):
+                    continue  # echoed questions assert nothing
+                if not own:
+                    # bind_b: explicit non-vocative, non-final subject mention
+                    for m_subj in re.finditer(
+                        rf"\b{re.escape(subject)}\b", sent, re.IGNORECASE
+                    ):
+                        prefix = sent[: m_subj.start()].strip()
+                        if not prefix or self._VOCATIVE_TAIL.search(prefix):
+                            continue  # addressee ("Thanks, Melanie!")
+                        bound = True
+                    if f"{subject}'s" in text:
+                        bound = True
+                    if (
+                        self._SECOND_PERSON_BINDING
+                        and len(speakers) == 2
+                        and self._SECOND_PERSON.search(sent)
+                    ):
+                        # Dyadic conversation: the listener of a non-subject
+                        # speaker is the queried subject, so second-person
+                        # address binds the content to the subject.
+                        bound = True
+                    if self._OWNER_PRONOUNS.search(sent):
+                        misattributed = True
+                    continue
+                # bind_a: the subject's own assertive turn carries the content;
+                # when the queried attribute exists in the context the matched
+                # sentence must actually be about it (bowl vs necklace bait).
+                if attr_in_context and not any(
+                    st in self._content_stems(sent) for st in attr_stems
+                ):
+                    continue
+                bound = True
+
+        if misattributed and not bound:
+            q_clean = question.lower().strip()
+            is_boolean = any(
+                q_clean.startswith(w + " ")
+                for w in ["did", "is", "was", "has", "does", "were", "are", "do"]
+            )
+            note = "Subject-binding guard: content attributed to a different subject only."
+            if is_boolean:
+                return VerificationResult(
+                    is_verified=True, verified_answer="No",
+                    hallucination_detected=True, notes=note,
+                )
+            return VerificationResult(
+                is_verified=True, verified_answer="None (not mentioned in conversation).",
+                hallucination_detected=True, notes=note,
+            )
+        return None
+
     def verify(
         self,
         question: str,
@@ -37,6 +310,12 @@ class AnswerVerifier:
     ) -> VerificationResult:
         """Verify and post-process the answer."""
         ans = predicted_answer.strip()
+
+        # 0. Subject-Binding Guard (misattributed-evidence refusal)
+        if self.subject_binding:
+            binding = self.check_subject_binding(question, ans, context)
+            if binding is not None:
+                return binding
 
         # 1. Enforce Proposition Integrity Abstention
         if integrity_abstention_recommended:

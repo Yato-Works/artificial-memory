@@ -1,0 +1,30 @@
+ cat     n  mean cov   cov=0  cov<0.34  cov>=0.6
+   1    74      0.75       3         8        59
+   2    90      0.91       0         0        87
+   3    21      0.57       2         4        12
+   4   200      0.86       0         3       190
+   5   112      0.81       0         3       101
+
+BAND ANALYSIS (baseline correctness by coverage band)
+ cat          band     n  base correct
+   1     0.00-0.00     3         33.3%
+   1     0.01-0.33     1          0.0%
+   1     0.34-0.59     7         28.6%
+   1     0.60-1.00    59         25.4%
+   2     0.34-0.59     3        100.0%
+   2     0.60-1.00    87         70.1%
+   3     0.00-0.00     2          0.0%
+   3     0.01-0.33     1          0.0%
+   3     0.34-0.59     5         20.0%
+   3     0.60-1.00    12         16.7%
+   4     0.34-0.59     7         28.6%
+   4     0.60-1.00   190         44.7%
+   5     0.01-0.33     1          0.0%
+   5     0.34-0.59     8         87.5%
+   5     0.60-1.00   101         48.5%
+
+ADVERSARIAL (cat 5) flagged vs unflagged coverage
+  flagged=True: n=43 mean_cov=0.84 cov=0: 0
+  flagged=False: n=69 mean_cov=0.80 cov=0: 0
+
+Sample unflagged adversarial with zero topic coverage:

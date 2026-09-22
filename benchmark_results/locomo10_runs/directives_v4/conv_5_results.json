@@ -1,0 +1,1635 @@
+{
+  "summary": {
+    "conv_idx": 5,
+    "sample_id": "conv-44",
+    "mode": "full",
+    "total_questions": 158,
+    "total_turns": 675,
+    "total_ir_records": 675,
+    "overall_accuracy": 0.5886075949367089,
+    "overall_oracle_recall": 0.7278481012658228,
+    "factual_accuracy": 0.5886075949367089,
+    "factual_oracle_recall": 0.7723577235772358,
+    "mean_tokens": 1541.4113924050632,
+    "mean_latency_ms": 1771.180356327736,
+    "elapsed_seconds": 279.8761294000142,
+    "categories": {
+      "temporal": {
+        "total": 24,
+        "correct": 8,
+        "oracle": 17
+      },
+      "multi-hop": {
+        "total": 30,
+        "correct": 12,
+        "oracle": 19
+      },
+      "open-domain": {
+        "total": 7,
+        "correct": 1,
+        "oracle": 1
+      },
+      "single-hop": {
+        "total": 62,
+        "correct": 59,
+        "oracle": 58
+      },
+      "adversarial": {
+        "total": 35,
+        "correct": 13,
+        "oracle": 20
+      }
+    },
+    "failure_taxonomy_v2": {
+      "TEMPORAL_FAILURE": 15,
+      "COMPOSITION_FAILURE": 8,
+      "ABSTENTION_FAILURE": 25,
+      "RETRIEVAL_FAILURE": 13,
+      "GROUNDING_FAILURE": 2,
+      "VERIFICATION_FAILURE": 1,
+      "ENTITY_FAILURE": 1
+    }
+  },
+  "results": [
+    {
+      "question_id": "conv-44-qa-000",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "2023",
+      "ground_truth": "2020",
+      "tokens_used": 1425,
+      "latency_ms": 1538.2879999815486,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-001",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "The week before 27 March 2023",
+      "ground_truth": "The week before March 27, 2023",
+      "tokens_used": 1536,
+      "latency_ms": 1708.2677999860607,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-002",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Wine tasting and a picnic",
+      "ground_truth": "boardgames, volunteering at pet shelter, wine tasting, growing flowers",
+      "tokens_used": 1375,
+      "latency_ms": 1672.9821000189986,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-003",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "They have checked out new cafes and parks.",
+      "ground_truth": "cafes, new places to eat, open space for hikes, pet shelter, wine tasting event, park",
+      "tokens_used": 1420,
+      "latency_ms": 1396.0280000173952,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-004",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Last week before 16 April 2023",
+      "ground_truth": "The week of April 3rd to 9th",
+      "tokens_used": 1501,
+      "latency_ms": 1687.169900018489,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-005",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Last week before 3 May 2023",
+      "ground_truth": "first week of May 2023",
+      "tokens_used": 1370,
+      "latency_ms": 1375.363400002243,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-006",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "2 April, 2023",
+      "ground_truth": "around April 2, 2023",
+      "tokens_used": 1215,
+      "latency_ms": 1254.325300018536,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-007",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "3 years",
+      "ground_truth": "three years",
+      "tokens_used": 3090,
+      "latency_ms": 2572.128599975258,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-008",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "No, Andrew did not have a pet dog during March 2023.",
+      "ground_truth": "No",
+      "tokens_used": 1305,
+      "latency_ms": 1588.66529999068,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-009",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Dog training courses and a dog owners group",
+      "ground_truth": "positive reinforcement training workshop to bond with pets, dog training course, agility training course, grooming course, dog-owners group",
+      "tokens_used": 1485,
+      "latency_ms": 1413.8182000024244,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-010",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "11 May, 2023",
+      "ground_truth": "June, 2023",
+      "tokens_used": 1510,
+      "latency_ms": 1334.2570000095293,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-011",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Last Sunday before 13 June 2023",
+      "ground_truth": "June 11, 2023",
+      "tokens_used": 1260,
+      "latency_ms": 1256.090300012147,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-012",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Rock climbing, kayaking, bungee jumping, exploring new places to eat, and camping.",
+      "ground_truth": "rock climbing, fishing, camping",
+      "tokens_used": 1435,
+      "latency_ms": 1391.7275000130758,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-013",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "June 26, 2023",
+      "ground_truth": "June 2023",
+      "tokens_used": 1448,
+      "latency_ms": 1224.5665000227746,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-014",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "The peace and feeling of freedom that comes with going for a hike.",
+      "ground_truth": "being in nature",
+      "tokens_used": 1466,
+      "latency_ms": 1560.8954000053927,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-015",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Finding dog-friendly housing or spots in the city.",
+      "ground_truth": "Not being able to find pet friendly spots.",
+      "tokens_used": 1380,
+      "latency_ms": 1613.5733000119217,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-016",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "Saturday",
+      "ground_truth": "August",
+      "tokens_used": 1351,
+      "latency_ms": 1474.3545999808703,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-017",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "three times",
+      "tokens_used": 3057,
+      "latency_ms": 2735.8921999984886,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-018",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "breeder",
+      "tokens_used": 1463,
+      "latency_ms": 1925.833799992688,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-019",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "Doggy daycare",
+      "ground_truth": "cook dog treats",
+      "tokens_used": 1439,
+      "latency_ms": 2037.7827999764122,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-020",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "Pork",
+      "ground_truth": "chicken",
+      "tokens_used": 1031,
+      "latency_ms": 1065.9717000089586,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-021",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Dog grooming and bonding workshops",
+      "ground_truth": "Positive reinforcement training class for bonding, dog training course, agility class",
+      "tokens_used": 1601,
+      "latency_ms": 1761.717299988959,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-022",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "He went camping.",
+      "ground_truth": "camping with girlfriend",
+      "tokens_used": 1556,
+      "latency_ms": 1679.0443999925628,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-023",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Andrew faces problems with Toby getting used to the new environment and Toby needing time to get along with Andrew.",
+      "ground_truth": "Finding the right dog and pet-friendly apartments close to open spaces",
+      "tokens_used": 1309,
+      "latency_ms": 1871.3952999969479,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-024",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "Yes",
+      "tokens_used": 1352,
+      "latency_ms": 1460.0324000057299,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-025",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "The weekend before 24 August 2023",
+      "ground_truth": "weekend before August 24, 2023",
+      "tokens_used": 1285,
+      "latency_ms": 1568.4050999989267,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-026",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Work stress",
+      "ground_truth": "work",
+      "tokens_used": 1436,
+      "latency_ms": 1538.9721000101417,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-027",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Andrew finds his current work to be tough and stressful.",
+      "ground_truth": "Stressful",
+      "tokens_used": 1460,
+      "latency_ms": 1642.786199983675,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-028",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Collars and tags",
+      "ground_truth": "Hats",
+      "tokens_used": 1490,
+      "latency_ms": 1916.3857999956235,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-029",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Pepper, Precious, and Panda",
+      "ground_truth": "Pepper, Precious, Panda, and Pixie",
+      "tokens_used": 1392,
+      "latency_ms": 1802.6205000060145,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-030",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "November 2023",
+      "ground_truth": "November 2023",
+      "tokens_used": 1346,
+      "latency_ms": 1577.2441999870352,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-031",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "He has adopted another dog from a shelter.",
+      "ground_truth": "Taking walks and hiking",
+      "tokens_used": 1243,
+      "latency_ms": 1767.2387000056915,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-032",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "A tattoo of her four dogs",
+      "ground_truth": "Tattoos of her four dogs.",
+      "tokens_used": 1534,
+      "latency_ms": 1636.129799997434,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-033",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "Andrew could potentially take his dogs on hikes to bond and create memories together.",
+      "ground_truth": "Change to a hybrid or remote job so he can move away from the city to the suburbs to have a larger living space and be closer to nature.",
+      "tokens_used": 1292,
+      "latency_ms": 1767.9124000133015,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-034",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "1 month",
+      "ground_truth": "three months",
+      "tokens_used": 2728,
+      "latency_ms": 2625.3682999813464,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-035",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Andrew's dogs are named Pepper, Precious, and Panda.",
+      "ground_truth": "Toby, Scout, Buddy",
+      "tokens_used": 1263,
+      "latency_ms": 1878.787599998759,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-036",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Andrew mentions enjoying trying new meal ideas, especially healthier ones. Audrey suggests a dish that Andrew finds delicious and healthy. Audrey also enjoys cooking and eating food as a form of self-care.",
+      "ground_truth": "chicken pot pie, chicken roast, blueberry muffins, sushi",
+      "tokens_used": 1525,
+      "latency_ms": 2389.1827999905217,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-037",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Last Friday before 24 September 2023",
+      "ground_truth": "between October 19 and 24, 2023",
+      "tokens_used": 1714,
+      "latency_ms": 1746.6053999960423,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-038",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "The weekend before 24 October 2023",
+      "ground_truth": "the weekend before October 24, 2023",
+      "tokens_used": 1446,
+      "latency_ms": 1617.1387000067625,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-039",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "Companionship",
+      "tokens_used": 1604,
+      "latency_ms": 1783.5335999843664,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-040",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "A park or a dog owners group.",
+      "ground_truth": "The dog park",
+      "tokens_used": 1613,
+      "latency_ms": 1771.237300010398,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-041",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Jack Russell mixes and Chihuahua mixes",
+      "ground_truth": "Mongrel mixed with Lab for Pepper and Panda. Mongrel mixed with Chihuahua for Precious and Pixie.",
+      "tokens_used": 1465,
+      "latency_ms": 1585.7774000032805,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-042",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Positive reinforcement",
+      "ground_truth": "Positive reinforcement",
+      "tokens_used": 1471,
+      "latency_ms": 1999.610600003507,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-043",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "California",
+      "ground_truth": "Minnesota",
+      "tokens_used": 1249,
+      "latency_ms": 1561.205699981656,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-044",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "A national park they visited last week before 2 June 2023.",
+      "ground_truth": "Voyageurs National Park",
+      "tokens_used": 1481,
+      "latency_ms": 1766.667599993525,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-045",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "three",
+      "tokens_used": 2650,
+      "latency_ms": 2598.068699997384,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-046",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "2",
+      "ground_truth": "one",
+      "tokens_used": 2756,
+      "latency_ms": 2724.4288999936543,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-047",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "1 month",
+      "ground_truth": "one month",
+      "tokens_used": 2688,
+      "latency_ms": 2804.753599979449,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-048",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "Family",
+      "ground_truth": "Family",
+      "tokens_used": 1331,
+      "latency_ms": 2039.621600008104,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-049",
+      "category": 1,
+      "oracle_recall": false,
+      "predicted_answer": "A source of joy and happiness",
+      "ground_truth": "Family",
+      "tokens_used": 1483,
+      "latency_ms": 1991.7703999963123,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-050",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Grooming",
+      "ground_truth": "Grooming",
+      "tokens_used": 1602,
+      "latency_ms": 1829.985399992438,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-051",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "New collars and tags, personalized tags, toys, goodies for neighbors, a tattoo of her dogs on her arm.",
+      "ground_truth": "dog tags, toys, dog beds, collars",
+      "tokens_used": 1462,
+      "latency_ms": 1920.289599976968,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-052",
+      "category": 3,
+      "oracle_recall": false,
+      "predicted_answer": "He could try birdwatching during early mornings or evenings when it's less busy.",
+      "ground_truth": "Install a bird feeder outside where he can see the birds without going outdoors.",
+      "tokens_used": 1419,
+      "latency_ms": 2176.4346999989357,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-053",
+      "category": 3,
+      "oracle_recall": true,
+      "predicted_answer": "Wildlife Conservationist",
+      "ground_truth": "Park ranger or a similar position working for the National Park Services.",
+      "tokens_used": 1443,
+      "latency_ms": 1849.1236999980174,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-054",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Playing fetch and Frisbee",
+      "ground_truth": "Play fetch with ball and frisbee, run around and meet other dogs",
+      "tokens_used": 1675,
+      "latency_ms": 1971.1839999945369,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-055",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "[D9:8 on 1:51 pm on 26 June, 2023]",
+      "ground_truth": "few days before November 22, 2023",
+      "tokens_used": 1288,
+      "latency_ms": 1754.7897000040393,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-056",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "Yes, Andrew moved into a new apartment for his dogs.",
+      "ground_truth": "No",
+      "tokens_used": 1480,
+      "latency_ms": 1716.337099991506,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-057",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "Andrew adopted Scout after deciding on a name for his new pup, which was mentioned in the conversation on 9:02 am on 22 November, 2023. However, the exact date of the adoption is not specified in the provided context.",
+      "ground_truth": "few days before November 2023",
+      "tokens_used": 1248,
+      "latency_ms": 2344.0600000030827,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-058",
+      "category": 2,
+      "oracle_recall": false,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "sushi",
+      "tokens_used": 1550,
+      "latency_ms": 1292.8789999859873,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-059",
+      "category": 2,
+      "oracle_recall": true,
+      "predicted_answer": "Andrew adopted his first pet in 2023.",
+      "ground_truth": "4 months",
+      "tokens_used": 3020,
+      "latency_ms": 2489.799299975857,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-060",
+      "category": 1,
+      "oracle_recall": true,
+      "predicted_answer": "4",
+      "ground_truth": "3",
+      "tokens_used": 2803,
+      "latency_ms": 2528.3877999754623,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-061",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Eagles",
+      "ground_truth": "Eagles",
+      "tokens_used": 1372,
+      "latency_ms": 1593.150600005174,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-062",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "The peaceful moments out in nature.",
+      "ground_truth": "The peaceful moments",
+      "tokens_used": 1493,
+      "latency_ms": 1637.3798999993596,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-063",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Croissants, muffins, and tarts",
+      "ground_truth": "croissants, muffins, and tarts",
+      "tokens_used": 1363,
+      "latency_ms": 1743.7564999854658,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-064",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Peruvian Lilies",
+      "ground_truth": "sunflowers",
+      "tokens_used": 1126,
+      "latency_ms": 1303.812400001334,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-065",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Chat with people and helps dogs make new friends.",
+      "ground_truth": "chat with people while dogs make new friends",
+      "tokens_used": 1643,
+      "latency_ms": 1906.759699981194,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-066",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "A dog that can run around in a large open space near a park or woods.",
+      "ground_truth": "smaller dog",
+      "tokens_used": 1378,
+      "latency_ms": 1863.4996000037063,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-067",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Near a park or woods",
+      "ground_truth": "near a park or woods",
+      "tokens_used": 1558,
+      "latency_ms": 1989.6514999854844,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-068",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "To learn new stuff and strengthen her bond with her pets.",
+      "ground_truth": "Strengthen the bond with her pets",
+      "tokens_used": 1422,
+      "latency_ms": 1961.7814999946859,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-069",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A flyer at her local pet store",
+      "ground_truth": "Saw a workshop flyer at the local pet store",
+      "tokens_used": 1499,
+      "latency_ms": 1935.390600003302,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-070",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Positive reinforcement training",
+      "ground_truth": "Positive reinforcement training",
+      "tokens_used": 1483,
+      "latency_ms": 1871.0299000085797,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-071",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Friendly and playful",
+      "ground_truth": "Friendly and playful",
+      "tokens_used": 1469,
+      "latency_ms": 1711.7682000098284,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-072",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Punishment is never the proper way for pets.",
+      "ground_truth": "To have pets learn how to behave in a positive way",
+      "tokens_used": 1461,
+      "latency_ms": 1634.7449000168126,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-073",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Finding a dog-friendly place in the city",
+      "ground_truth": "Finding a pet-friendly spot in the city",
+      "tokens_used": 1312,
+      "latency_ms": 1696.5204000007361,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-074",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Determined but discouraged",
+      "ground_truth": "Discouraged but determined",
+      "tokens_used": 1445,
+      "latency_ms": 1597.624599991832,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-075",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Kayaking and bungee jumping",
+      "ground_truth": "kayaking and bungee jumping",
+      "tokens_used": 1499,
+      "latency_ms": 1776.7379000142682,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-076",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "About an hour",
+      "ground_truth": "about an hour",
+      "tokens_used": 3189,
+      "latency_ms": 2894.199700007448,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-077",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A doggy play area with agility stuff and toys",
+      "ground_truth": "a doggy play area with agility stuff and toys",
+      "tokens_used": 1299,
+      "latency_ms": 1736.8348000163678,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-078",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A stunning lake in the mountains.",
+      "ground_truth": "a stunning lake in the mountains",
+      "tokens_used": 1636,
+      "latency_ms": 1802.8530000010505,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-079",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Chicken Pot Pie",
+      "ground_truth": "Chicken Pot Pie",
+      "tokens_used": 1483,
+      "latency_ms": 1599.2179999884684,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-080",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Roasted Chicken",
+      "ground_truth": "Roasted Chicken",
+      "tokens_used": 1501,
+      "latency_ms": 1742.720600013854,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-081",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "They had a great experience volunteering at a pet shelter.",
+      "ground_truth": "volunteered at a pet shelter",
+      "tokens_used": 1562,
+      "latency_ms": 2038.8394000183325,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-082",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Max",
+      "ground_truth": "Max",
+      "tokens_used": 1395,
+      "latency_ms": 1618.573399988236,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-083",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Long walks in the neighborhood, exploring new paths, sniffing and marking territory, sharing worries and hopes.",
+      "ground_truth": "Long walks in the neighborhood, exploring new paths, sharing worries and hopes",
+      "tokens_used": 1693,
+      "latency_ms": 2228.388099989388,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-084",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "The oldest one is the most relaxed, like a wise old sage. The second one is always ready for a game. The third one can be naughty but loves a good cuddle. The youngest one is full of life and always up for an adventure.",
+      "ground_truth": "oldest is relaxed, second is playful, third can be naughty but loves cuddles, youngest is full of life",
+      "tokens_used": 1380,
+      "latency_ms": 2366.554799984442,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-085",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Agility classes at a dog park",
+      "ground_truth": "Agility classes",
+      "tokens_used": 1585,
+      "latency_ms": 1946.5642000141088,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-086",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Twice a week",
+      "ground_truth": "Twice a week",
+      "tokens_used": 1685,
+      "latency_ms": 1609.4777999969665,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-087",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Two hours",
+      "ground_truth": "Two hours",
+      "tokens_used": 3154,
+      "latency_ms": 2869.42539998563,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-088",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "Cool tips! I'll remember them if I ever get to groom Toby. Thanks!",
+      "ground_truth": "Grooming slowly and gently, paying attention to sensitive areas like ears and paws. And remember to stay patient and positive throughout the grooming process.",
+      "tokens_used": 1293,
+      "latency_ms": 2117.3508999927435,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-089",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Regular grooming",
+      "ground_truth": "Daily brushing, regular baths, nail trims, and lots of love",
+      "tokens_used": 1516,
+      "latency_ms": 1595.2615000132937,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-090",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A doggy playdate",
+      "ground_truth": "a doggy playdate",
+      "tokens_used": 1484,
+      "latency_ms": 1629.1420000197832,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-091",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "She got them new beds.",
+      "ground_truth": "Got new beds for them",
+      "tokens_used": 1610,
+      "latency_ms": 1784.8934000066947,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-092",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Super cozy and comfy.",
+      "ground_truth": "Super cozy and comfy",
+      "tokens_used": 1670,
+      "latency_ms": 1520.5189999833237,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-093",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "By petting, hugging, speaking calmly, and slowly walking her to relax.",
+      "ground_truth": "Petted, hugged, spoke calmly and slowly walked the dog",
+      "tokens_used": 1600,
+      "latency_ms": 1896.1307000136003,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-094",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Multiple times a day",
+      "ground_truth": "Multiple times a day",
+      "tokens_used": 1546,
+      "latency_ms": 1864.8960999853443,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-095",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Peruvian Lilies",
+      "ground_truth": "Peruvian Lilies",
+      "tokens_used": 1486,
+      "latency_ms": 1573.163699998986,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-096",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "The connections between different elements in nature.",
+      "ground_truth": "about animals, plants, and ecosystems and how they work together",
+      "tokens_used": 1293,
+      "latency_ms": 1588.023999996949,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-097",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Biking or using public transport",
+      "ground_truth": "biking or using public transport",
+      "tokens_used": 1379,
+      "latency_ms": 1580.8577999996487,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-098",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Biking",
+      "ground_truth": "by biking",
+      "tokens_used": 1245,
+      "latency_ms": 1505.3553000034299,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-099",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Took them to the beach",
+      "ground_truth": "Took them to the beach",
+      "tokens_used": 1490,
+      "latency_ms": 1713.3897000167053,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-100",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A knee injury",
+      "ground_truth": "Knee injury",
+      "tokens_used": 1547,
+      "latency_ms": 1583.5306999797467,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-101",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Jewelry made from recycled objects",
+      "ground_truth": "Jewelry made from recycled objects",
+      "tokens_used": 1664,
+      "latency_ms": 1806.20479999925,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-102",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "To show her love of creativity and sustainability.",
+      "ground_truth": "To show love for creativity and sustainability",
+      "tokens_used": 1574,
+      "latency_ms": 1717.211999988649,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-103",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "An animal shelter",
+      "ground_truth": "Animal shelter",
+      "tokens_used": 1463,
+      "latency_ms": 1654.8436000011861,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-104",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Donates money",
+      "ground_truth": "By donating a portion of his profits frmo selling jwelery",
+      "tokens_used": 1419,
+      "latency_ms": 1683.3264000015333,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-105",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Fetch and Frisbee",
+      "ground_truth": "Fetch and Frisbee",
+      "tokens_used": 1598,
+      "latency_ms": 1667.2944000165444,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-106",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Goodies",
+      "ground_truth": "Goodies",
+      "tokens_used": 1355,
+      "latency_ms": 1300.789500004612,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-107",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "They are confused.",
+      "ground_truth": "Confused",
+      "tokens_used": 1477,
+      "latency_ms": 1204.5194000238553,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-108",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Confused and prefer sunny days",
+      "ground_truth": "They definitely prefer nice, sunny days in the grass.",
+      "tokens_used": 1469,
+      "latency_ms": 1857.022500014864,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-109",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Exploring new trails and parks",
+      "ground_truth": "Exploring the great outdoors",
+      "tokens_used": 1423,
+      "latency_ms": 1961.5127999859396,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-110",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Walking and hiking",
+      "ground_truth": "Walking",
+      "tokens_used": 1315,
+      "latency_ms": 1559.1320999956224,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-111",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Walking and exploring new trails",
+      "ground_truth": "Checking out new hiking trails",
+      "tokens_used": 1369,
+      "latency_ms": 1478.817799972603,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-112",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Sushi",
+      "ground_truth": "sushi",
+      "tokens_used": 1586,
+      "latency_ms": 1725.2473999978974,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-113",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "California or salmon roll",
+      "ground_truth": "California or salmon roll",
+      "tokens_used": 1488,
+      "latency_ms": 1551.243499998236,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-114",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A picnic date",
+      "ground_truth": "picnic date",
+      "tokens_used": 1371,
+      "latency_ms": 1615.5662999954075,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-115",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Going hiking and seeing nature.",
+      "ground_truth": "Go hiking",
+      "tokens_used": 1396,
+      "latency_ms": 1800.8295000181533,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-116",
+      "category": 4,
+      "oracle_recall": false,
+      "predicted_answer": "The vibrant colors",
+      "ground_truth": "The autumn colors",
+      "tokens_used": 1287,
+      "latency_ms": 1551.9632000068668,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-117",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Joined a dog owners group.",
+      "ground_truth": "Joined a dog owners group",
+      "tokens_used": 1439,
+      "latency_ms": 1842.1514999936335,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-118",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Once a week",
+      "ground_truth": "Once a week",
+      "tokens_used": 1531,
+      "latency_ms": 1437.0537000067998,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-119",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A picture of her dogs playing fetch in the park.",
+      "ground_truth": "photography of a basket full of stuffed animals",
+      "tokens_used": 1609,
+      "latency_ms": 1659.4027999963146,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-120",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Puzzles, training, hide-and-seek",
+      "ground_truth": "puzzles, training, hide-and-seek",
+      "tokens_used": 2836,
+      "latency_ms": 2802.0371999882627,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-121",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "Take them to a nearby park.",
+      "ground_truth": "Take them to a nearby park",
+      "tokens_used": 1341,
+      "latency_ms": 1416.8515999917872,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-122",
+      "category": 4,
+      "oracle_recall": true,
+      "predicted_answer": "A bed, toys, and puppy pads",
+      "ground_truth": "essentials like a bed, toys, and puppy pads",
+      "tokens_used": 1452,
+      "latency_ms": 1463.3261999988463,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-123",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Hummingbirds",
+      "ground_truth": "",
+      "tokens_used": 1291,
+      "latency_ms": 1739.256500004558,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-124",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Dogs",
+      "ground_truth": "",
+      "tokens_used": 1261,
+      "latency_ms": 1757.408299978124,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-125",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "A dog that can live in an apartment or small space.",
+      "ground_truth": "",
+      "tokens_used": 1488,
+      "latency_ms": 1863.3525999903213,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-126",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 1509,
+      "latency_ms": 1668.1619999872055,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-127",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1456,
+      "latency_ms": 1638.1188999803271,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-128",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Positive reinforcement training",
+      "ground_truth": "",
+      "tokens_used": 1452,
+      "latency_ms": 1654.8872999846935,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-129",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1371,
+      "latency_ms": 1913.9959000167437,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-130",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Finding a dog-friendly place",
+      "ground_truth": "",
+      "tokens_used": 1432,
+      "latency_ms": 1782.9445000097621,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-131",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Kayaking and bungee jumping",
+      "ground_truth": "",
+      "tokens_used": 1425,
+      "latency_ms": 1649.6750000223983,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-132",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1354,
+      "latency_ms": 1684.6224999753758,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-133",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "They signed up for a workshop about bonding with their pet.",
+      "ground_truth": "",
+      "tokens_used": 1580,
+      "latency_ms": 1855.372999998508,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-134",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Max",
+      "ground_truth": "",
+      "tokens_used": 1326,
+      "latency_ms": 1324.8798999993596,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-135",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1433,
+      "latency_ms": 1749.5283000171185,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-136",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 1412,
+      "latency_ms": 1637.9125000094064,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-137",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1615,
+      "latency_ms": 2055.1014999800827,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-138",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Regular grooming",
+      "ground_truth": "",
+      "tokens_used": 1399,
+      "latency_ms": 1814.662099990528,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-139",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "A cat-friendly gathering",
+      "ground_truth": "",
+      "tokens_used": 1259,
+      "latency_ms": 1640.1442000060342,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-140",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "He got new beds for them.",
+      "ground_truth": "",
+      "tokens_used": 1499,
+      "latency_ms": 1703.7394999933895,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-141",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "He describes them as a nice surprise.",
+      "ground_truth": "",
+      "tokens_used": 1449,
+      "latency_ms": 1734.5003000227734,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-142",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1434,
+      "latency_ms": 1986.4115999953356,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-143",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Very often, multiple times a day even",
+      "ground_truth": "",
+      "tokens_used": 1360,
+      "latency_ms": 1557.3192999872845,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-144",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 1506,
+      "latency_ms": 1648.6467999930028,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-145",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "He learned about economic systems.",
+      "ground_truth": "",
+      "tokens_used": 1296,
+      "latency_ms": 1541.0662999784108,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-146",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "He couldn't get out more.",
+      "ground_truth": "",
+      "tokens_used": 1391,
+      "latency_ms": 1755.672200000845,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-147",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Jewelry made from recycled objects",
+      "ground_truth": "",
+      "tokens_used": 1360,
+      "latency_ms": 1570.5098999897018,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-148",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "To show his love of creativity and sustainability.",
+      "ground_truth": "",
+      "tokens_used": 1457,
+      "latency_ms": 1641.8084000179078,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-149",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Playing fetch with a ball or frisbee",
+      "ground_truth": "",
+      "tokens_used": 1499,
+      "latency_ms": 1745.1663999818265,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-150",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "Goodies",
+      "ground_truth": "",
+      "tokens_used": 1267,
+      "latency_ms": 1413.735899986932,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-151",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 1271,
+      "latency_ms": 1475.0925000116695,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-152",
+      "category": 5,
+      "oracle_recall": false,
+      "predicted_answer": "I don't know.",
+      "ground_truth": "",
+      "tokens_used": 1309,
+      "latency_ms": 1632.7052999986336,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-153",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Exploring new parks and trails",
+      "ground_truth": "",
+      "tokens_used": 1393,
+      "latency_ms": 1820.9068000141997,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-154",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Going for walks",
+      "ground_truth": "",
+      "tokens_used": 1486,
+      "latency_ms": 1640.164200012805,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-155",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Sushi",
+      "ground_truth": "",
+      "tokens_used": 1559,
+      "latency_ms": 1957.9710999969393,
+      "is_correct": false
+    },
+    {
+      "question_id": "conv-44-qa-156",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "None (not mentioned in conversation).",
+      "ground_truth": "",
+      "tokens_used": 1495,
+      "latency_ms": 1871.317100012675,
+      "is_correct": true
+    },
+    {
+      "question_id": "conv-44-qa-157",
+      "category": 5,
+      "oracle_recall": true,
+      "predicted_answer": "Once a week",
+      "ground_truth": "",
+      "tokens_used": 1428,
+      "latency_ms": 1758.7228999764193,
+      "is_correct": false
+    }
+  ]
+}
