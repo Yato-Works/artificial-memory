@@ -19,7 +19,7 @@ from typing import Any
 # Add project root to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from artificial_memory.research.benchmarks.failure_taxonomy_v2 import FailureClassifierV2, FailureCategory
+from artificial_memory.research.benchmarks.failure_taxonomy_v2 import FailureClassifierV2
 from artificial_memory.research.benchmarks.external.locomo_adapter import LoCoMoAdapter
 
 
@@ -50,10 +50,44 @@ def load_results(path: Path) -> dict:
 def extract_failures(data: dict) -> list[dict]:
     """Extract failed questions from results data."""
     failures = []
-    for r in data.get("results", []):
+    # Support both "results" and "details" keys
+    results = data.get("results", data.get("details", []))
+    for r in results:
         if not r.get("is_correct", True):
             failures.append(r)
     return failures
+
+
+def _load_question_index(adapter: LoCoMoAdapter) -> dict[str, str]:
+    """Build a question_id -> question_text map from the LoCoMo dataset."""
+    qmap: dict[str, str] = {}
+    try:
+        import json
+        from pathlib import Path
+        dataset_path = Path(adapter.dataset_path)
+        if not dataset_path.exists():
+            return qmap
+        with open(dataset_path, encoding="utf-8") as f:
+            data = json.load(f)
+        for conv in data:
+            sample_id = conv.get("sample_id", f"conv-{data.index(conv)}")
+            for i, qa in enumerate(conv.get("qa", [])):
+                qid = f"{sample_id}-qa-{i:03d}"
+                qmap[qid] = qa.get("question", "")
+    except Exception:
+        pass
+    return qmap
+
+
+_QIDX_CACHE: dict[str, str] = {}
+
+
+def _lookup_question_text(qid: str, adapter: LoCoMoAdapter) -> str:
+    """Look up question text from the dataset by question_id."""
+    global _QIDX_CACHE
+    if not _QIDX_CACHE:
+        _QIDX_CACHE.update(_load_question_index(adapter))
+    return _QIDX_CACHE.get(qid, "")
 
 
 def classify_failure(
@@ -62,8 +96,13 @@ def classify_failure(
     adapter: LoCoMoAdapter
 ) -> dict:
     """Classify a single failure using the failure taxonomy."""
+    # Load question text from dataset if not in results
+    question_text = question.get("question", "")
+    if not question_text:
+        question_text = _lookup_question_text(question.get("question_id", ""), adapter)
+
     diag = classifier.classify(
-        question=question.get("question", ""),
+        question=question_text,
         ground_truth=question.get("ground_truth", ""),
         predicted_answer=question.get("predicted_answer", ""),
         context="",
@@ -74,10 +113,9 @@ def classify_failure(
     if diag:
         return {
             "category": diag.category.value,
-            "confidence": diag.confidence,
-            "reasoning": diag.reasoning,
+            "reasoning": diag.explanation,
         }
-    return {"category": "UNKNOWN", "confidence": 0.0, "reasoning": ""}
+    return {"category": "UNKNOWN", "reasoning": ""}
 
 
 def analyze_retrieval(question: dict, adapter: LoCoMoAdapter) -> dict:
@@ -207,7 +245,7 @@ def generate_ledger_entry(
         commit=commit,
         before_fix=None,
         after_fix=None,
-        notes=f"Confidence: {failure_classification.get('confidence', 0):.2f}"
+        notes=f"Failure type: {failure_classification.get('category', 'UNKNOWN')}"
     )
 
 
