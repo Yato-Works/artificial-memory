@@ -287,6 +287,14 @@ class LoCoMoAdapter:
             # "Liberal" / "National park" / trait answers: refusal still wrong
             return False
 
+        # Polarity reversal check: when GT is "Likely no" and prediction confidently
+        # says "Yes" without any qualifying evidence of membership/interest, check
+        # if the answer's polarity matches the semantic intent. A "Yes" without
+        # supporting evidence for affirmative membership is a wrong polarity answer.
+        if "likely no" in gt_l and "yes" in pr_l:
+            # "Yes" for a "Likely no" question is a definitive wrong answer
+            return False
+
         gt_w = set(w for w in re.findall(r"\b[a-zA-Z0-9_-]+\b", gt_l) if len(w) > 2)
         pr_w = set(w for w in re.findall(r"\b[a-zA-Z0-9_-]+\b", pr_l) if len(w) > 2)
         if gt_w and pr_w and len(gt_w & pr_w) / len(gt_w) >= 0.25:
@@ -499,11 +507,16 @@ class LoCoMoAdapter:
                 f"Answer the question using the dialogue context AND persona summary below.\n"
                 f"- For 'would X likely ...' questions, use the character's known behaviors\n"
                 f"  and traits to make a reasoned yes/no/likely-no prediction.\n"
-                f"- State the reasoned answer directly and concisely (e.g. 'Yes', 'Likely no',\n"
-                f"  'Liberal', 'National park', 'Thoughtful, authentic, driven').\n"
-                f"- Do NOT say 'I don't know' or 'cannot determine'. Give your best reasoned deduction.\n"
-                f"- If the context contains zero relevant evidence, still answer based on the\n"
-                f"  closest persona signal (e.g. 'Unsure' if truly no evidence exists).\n\n"
+                f"- Check BOTH supporting AND contradicting evidence: if the evidence\n"
+                f"  only shows X supporting something, but the question asks IF X is THAT\n"
+                f"  thing (e.g., 'ally' vs 'member'), respond 'Likely no' — being supportive\n"
+                f"  of a community does NOT make someone a member of it.\n"
+                f"- Check for negative qualifiers: 'not', 'doesn't identify as', 'wouldn't want'\n"
+                f"  in the evidence — if present, lean 'Likely no'.\n"
+                f"- Check for explicit refusals: 'no', 'not interested', 'wouldn't enjoy'\n"
+                f"  in the evidence — if present, lean 'Likely no'.\n"
+                f"- State the reasoned answer directly: 'Yes', 'Likely no', 'No', 'Unsure'.\n"
+                f"- Do NOT say 'I don't know'. Give your best reasoned deduction.\n\n"
                 f"=== PERSONA SUMMARY ===\n{persona_summary}\n\n"
                 f"=== DIALOGUE CONTEXT ===\n{pcc.context_text}"
             )
