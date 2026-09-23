@@ -5,3 +5,35 @@ reader: qwen2.5:7b-instruct-q4_K_M num_ctx=8192
   25/500  acc= 88.0%  (129s)
   50/500  acc= 88.0%  (267s)
   75/500  acc= 85.3%  (359s)
+  100/500  acc= 83.0%  (373s)
+  125/500  acc= 80.8%  (398s)
+  150/500  acc= 81.3%  (418s)
+  175/500  acc= 83.4%  (462s)
+  200/500  acc= 83.0%  (510s)
+  225/500  acc= 84.0%  (552s)
+  250/500  acc= 85.6%  (623s)
+  275/500  acc= 85.5%  (738s)
+  300/500  acc= 84.0%  (882s)
+  325/500  acc= 83.1%  (983s)
+  350/500  acc= 82.3%  (1079s)
+  375/500  acc= 82.1%  (1144s)
+  400/500  acc= 81.5%  (1245s)
+  425/500  acc= 82.1%  (1323s)
+  450/500  acc= 81.6%  (1412s)
+  475/500  acc= 81.7%  (1590s)
+  500/500  acc= 81.6%  (1787s)
+
+=== ARM RESULT (n=500) ===
+  ALL               81.6%  (408/500)
+  single-session-user          84.3%  (59/70)
+  multi-session                84.2%  (112/133)
+  temporal-reasoning           77.4%  (103/133)
+  knowledge-update             80.8%  (63/78)
+  single-session-assistant     80.4%  (45/56)
+  single-session-preference    86.7%  (26/30)
+
+  refusals in arm : 50
+  fixed vs baseline : +39
+  broken vs baseline: -13
+  elapsed          : 1787s (3.57s/Q)
+  saved: benchmark_results\ab_lme_ef_v3_full.json

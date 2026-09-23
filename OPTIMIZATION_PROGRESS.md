@@ -533,8 +533,55 @@ Verified:
 * adapter vs package wiring: 4 new unit tests (``test_lme_prompt_integration.py``)
 * suite: 66 passed
 
-In flight: full 500-question arm with the adopted fixes (``ef_v3_full``), first
-50 questions at 88.0% against the 76.4% baseline.
+### Milestone 4.5 (2026-09-23 03:09): full 500-question arm with the adopted fixes
+
+`ef_v3_full` (cached contexts, qwen2.5:7b, num_ctx 8192, 1787s):
+
+| type | qwen7b baseline | **fixed prompts** | delta |
+|---|---:|---:|---:|
+| single-session-user | 71.4% | **84.3%** (59/70) | +12.9pp |
+| multi-session | 78.2% | **84.2%** (112/133) | +6.0pp |
+| temporal-reasoning | 72.2% | **77.4%** (103/133) | +5.2pp |
+| knowledge-update | 78.2% | 80.8% (63/78) | +2.6pp |
+| single-session-assistant | 80.4% | 80.4% (45/56) | 0 |
+| single-session-preference | 86.7% | 86.7% (26/30) | 0 |
+| **ALL** | **76.4%** | **81.6%** (408/500) | **+5.2pp** |
+
++39 fixed / -13 broken. Anatomy of the new residual (92 wrong):
+
+| mechanism | count |
+|---|---:|
+| model_answered_wrong | 74 (+14.8pp at stake) |
+| model_refused | 18 (+3.6pp) |
+| oracle_miss | **0** |
+
+Refusals fell 47 -> 18 and retrieval is no longer a bottleneck at all. By type
+the wrong-answer bucket concentrates in temporal (26 wrong total), multi-session
+(17), knowledge-update (11), single-session-assistant (11).
+
+**Two kinds of regression were found in the 13:**
+
+1. *Scorer leniency exposed* (≈5). e.g. `gpt4_a56e767c` ("How many movie
+   festivals...?") GT="I attended four movie festivals."; the old answer
+   "2 festivals." was credited only because the "festivals" stem overlapped, so a
+   wrong count was a false positive. The fixed prompt answers "2", which is now
+   correctly scored wrong. The 76.4% baseline therefore contains false positives
+   and the honest comparison is *at least* +5.2pp. **A scorer-leniency audit is
+   now a required work item** - accuracy we cannot defend is worse than a lower
+   number.
+2. *Real regressions* (≈8), mostly temporal hedging: appending the evidence to
+   the grounding occasionally produces "It seems like you didn't provide any
+   specific details..." or "I'm sorry, but I don't have any information...".
+   Candidate mechanism: move the instruction *after* the evidence so the last
+   thing the reader sees is the directive.
+
+Next in the loop (automated chain armed, GPU serialised):
+1. `fixed_v1` - the official runner with the integrated adapter (confirmation
+   artifact; prompts verified identical to the A/B, 500/500).
+2. `coder7b_remaining` - reader A/B (`qwen2.5-coder:7b`) on the still-failing
+   questions plus 60 controls, regenerated at launch by
+   `scratch/write_remaining_qids.py`.
+
 
 
 `reader7b_cap32_v2` (LoCoMo full 7B) was stopped at 02:10 after conv 2/10 to

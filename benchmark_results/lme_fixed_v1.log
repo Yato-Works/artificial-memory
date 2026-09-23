@@ -1,0 +1,144 @@
+=====================================================================================
+        AM APEX: LONGMEMEVAL FROZEN BENCHMARK SUITE (500 QUESTIONS)
+=====================================================================================
+Rule: STRICTLY FROZEN CONFIGURATION. Zero in-flight tuning.
+=====================================================================================
+Loading LongMemEval dataset (277 MB)...
+Loaded 500 evaluation items in 7.61s.
+
+Targeting 500 questions.
+READER: model=qwen2.5:7b-instruct-q4_K_M num_ctx=8192 (A/B override)
+  [005/500] [PASS] Acc: 100.0% | Ora: 100.0% | Tok: 3800 | Type: single-session-u | Q: What is the name of the play
+  [010/500] [FAIL] Acc:  90.0% | Ora: 100.0% | Tok: 3715 | Type: single-session-u | Q: Where did I buy my new tenni
+  [015/500] [PASS] Acc:  93.3% | Ora: 100.0% | Tok: 3793 | Type: single-session-u | Q: What was the discount I got 
+  [020/500] [FAIL] Acc:  90.0% | Ora: 100.0% | Tok: 3817 | Type: single-session-u | Q: What was my previous stance 
+  [025/500] [PASS] Acc:  88.0% | Ora: 100.0% | Tok: 3865 | Type: single-session-u | Q: How many largemouth bass did
+  [030/500] [PASS] Acc:  90.0% | Ora: 100.0% | Tok: 3747 | Type: single-session-u | Q: How much RAM did I upgrade m
+  [035/500] [FAIL] Acc:  85.7% | Ora: 100.0% | Tok: 4072 | Type: single-session-u | Q: What type of cocktail recipe
+  [040/500] [PASS] Acc:  85.0% | Ora: 100.0% | Tok: 4106 | Type: single-session-u | Q: How many copies of my favori
+  [045/500] [PASS] Acc:  86.7% | Ora: 100.0% | Tok: 4121 | Type: single-session-u | Q: How long did I wait for the 
+  [050/500] [PASS] Acc:  88.0% | Ora: 100.0% | Tok: 4058 | Type: single-session-u | Q: What type of bulb did I repl
+  [055/500] [PASS] Acc:  85.5% | Ora: 100.0% | Tok: 4188 | Type: single-session-u | Q: What time do I usually get h
+  [060/500] [FAIL] Acc:  83.3% | Ora: 100.0% | Tok: 4127 | Type: single-session-u | Q: Who gave me a new stand mixe
+  [065/500] [PASS] Acc:  83.1% | Ora: 100.0% | Tok: 4099 | Type: single-session-u | Q: What is the name of my hamst
+  [070/500] [PASS] Acc:  84.3% | Ora: 100.0% | Tok: 4028 | Type: single-session-u | Q: What did my dad gave me as a
+  [075/500] [PASS] Acc:  85.3% | Ora: 100.0% | Tok: 3973 | Type: multi-session    | Q: How many weeks did it take m
+  [080/500] [PASS] Acc:  85.0% | Ora: 100.0% | Tok: 3895 | Type: multi-session    | Q: What time did I go to bed on
+  [085/500] [PASS] Acc:  83.5% | Ora: 100.0% | Tok: 3817 | Type: multi-session    | Q: What is the total amount I s
+  [090/500] [FAIL] Acc:  82.2% | Ora: 100.0% | Tok: 3858 | Type: multi-session    | Q: How many times did I bake so
+  [095/500] [PASS] Acc:  83.2% | Ora: 100.0% | Tok: 3802 | Type: multi-session    | Q: How many hours of jogging an
+  [100/500] [PASS] Acc:  83.0% | Ora: 100.0% | Tok: 3701 | Type: multi-session    | Q: What is the average age of m
+  [105/500] [PASS] Acc:  83.8% | Ora: 100.0% | Tok: 3708 | Type: multi-session    | Q: How many fitness classes do 
+  [110/500] [PASS] Acc:  84.5% | Ora: 100.0% | Tok: 3669 | Type: multi-session    | Q: How many musical instruments
+  [115/500] [FAIL] Acc:  81.7% | Ora: 100.0% | Tok: 3619 | Type: multi-session    | Q: How many times did I ride ro
+  [120/500] [PASS] Acc:  80.0% | Ora: 100.0% | Tok: 3575 | Type: multi-session    | Q: What is the total amount of 
+  [125/500] [PASS] Acc:  80.8% | Ora: 100.0% | Tok: 3520 | Type: multi-session    | Q: How many total pieces of wri
+  [130/500] [PASS] Acc:  81.5% | Ora: 100.0% | Tok: 3528 | Type: multi-session    | Q: How many days did it take fo
+  [135/500] [FAIL] Acc:  81.5% | Ora:  98.5% | Tok: 3569 | Type: single-session-p | Q: Can you recommend some recen
+  [140/500] [FAIL] Acc:  80.7% | Ora:  97.9% | Tok: 3594 | Type: single-session-p | Q: My kitchen's becoming a bit 
+  [145/500] [PASS] Acc:  80.7% | Ora:  97.2% | Tok: 3613 | Type: single-session-p | Q: I've been thinking about mak
+  [150/500] [PASS] Acc:  81.3% | Ora:  96.7% | Tok: 3585 | Type: single-session-p | Q: I'm getting excited about my
+  [155/500] [PASS] Acc:  81.9% | Ora:  96.8% | Tok: 3574 | Type: single-session-p | Q: I am planning another theme 
+  [160/500] [PASS] Acc:  82.5% | Ora:  96.9% | Tok: 3561 | Type: single-session-p | Q: Can you suggest some useful 
+  [165/500] [PASS] Acc:  83.0% | Ora:  97.0% | Tok: 3527 | Type: multi-session    | Q: For my daily commute, how mu
+  [170/500] [PASS] Acc:  82.9% | Ora:  97.1% | Tok: 3537 | Type: multi-session    | Q: What is the difference in pr
+  [175/500] [PASS] Acc:  83.4% | Ora:  97.1% | Tok: 3535 | Type: multi-session    | Q: What is the total number of 
+  [180/500] [PASS] Acc:  83.9% | Ora:  97.2% | Tok: 3508 | Type: multi-session    | Q: How many Marvel movies did I
+  [185/500] [PASS] Acc:  82.7% | Ora:  97.3% | Tok: 3492 | Type: multi-session    | Q: What are the two hobbies tha
+  [190/500] [PASS] Acc:  82.6% | Ora:  97.4% | Tok: 3497 | Type: multi-session    | Q: What percentage of the count
+  [195/500] [PASS] Acc:  83.1% | Ora:  97.4% | Tok: 3492 | Type: multi-session    | Q: At which university did I pr
+  [200/500] [PASS] Acc:  83.0% | Ora:  97.5% | Tok: 3490 | Type: multi-session    | Q: What is the total time it ta
+  [205/500] [PASS] Acc:  83.4% | Ora:  97.6% | Tok: 3473 | Type: multi-session    | Q: How much faster did I finish
+  [210/500] [PASS] Acc:  83.3% | Ora:  97.6% | Tok: 3493 | Type: multi-session    | Q: What percentage of leadershi
+  [215/500] [PASS] Acc:  83.7% | Ora:  97.2% | Tok: 3476 | Type: multi-session    | Q: What is the total amount I s
+  [220/500] [PASS] Acc:  84.1% | Ora:  97.3% | Tok: 3447 | Type: multi-session    | Q: What is the average GPA of m
+  [225/500] [PASS] Acc:  84.0% | Ora:  97.3% | Tok: 3427 | Type: multi-session    | Q: How much discount will I get
+  [230/500] [PASS] Acc:  84.3% | Ora:  97.4% | Tok: 3406 | Type: multi-session    | Q: What is the total cost of my
+  [235/500] [PASS] Acc:  84.7% | Ora:  97.4% | Tok: 3399 | Type: temporal-reasoni | Q: Which three events happened 
+  [240/500] [PASS] Acc:  85.0% | Ora:  97.5% | Tok: 3384 | Type: temporal-reasoni | Q: How many weeks ago did I att
+  [245/500] [PASS] Acc:  85.3% | Ora:  97.6% | Tok: 3364 | Type: temporal-reasoni | Q: How many weeks ago did I sta
+  [250/500] [PASS] Acc:  85.6% | Ora:  97.6% | Tok: 3343 | Type: temporal-reasoni | Q: How many days ago did I buy 
+  [255/500] [FAIL] Acc:  85.1% | Ora:  97.6% | Tok: 3342 | Type: temporal-reasoni | Q: How many days ago did I meet
+  [260/500] [PASS] Acc:  85.4% | Ora:  97.7% | Tok: 3343 | Type: temporal-reasoni | Q: How many weeks passed betwee
+  [265/500] [PASS] Acc:  85.3% | Ora:  97.7% | Tok: 3354 | Type: temporal-reasoni | Q: What is the order of the con
+  [270/500] [PASS] Acc:  85.2% | Ora:  97.8% | Tok: 3337 | Type: temporal-reasoni | Q: What is the order of airline
+  [275/500] [PASS] Acc:  85.5% | Ora:  97.8% | Tok: 3315 | Type: temporal-reasoni | Q: How many months ago did I at
+  [280/500] [PASS] Acc:  85.7% | Ora:  97.9% | Tok: 3303 | Type: temporal-reasoni | Q: How many days ago did I harv
+  [285/500] [PASS] Acc:  86.0% | Ora:  97.9% | Tok: 3300 | Type: temporal-reasoni | Q: Who graduated first, second 
+  [290/500] [PASS] Acc:  85.9% | Ora:  97.9% | Tok: 3331 | Type: temporal-reasoni | Q: What charity event did I par
+  [295/500] [PASS] Acc:  85.4% | Ora:  97.6% | Tok: 3382 | Type: temporal-reasoni | Q: Which bike did I fixed or se
+  [300/500] [FAIL] Acc:  84.0% | Ora:  97.3% | Tok: 3431 | Type: temporal-reasoni | Q: What was the significant bui
+  [305/500] [PASS] Acc:  83.9% | Ora:  97.0% | Tok: 3489 | Type: temporal-reasoni | Q: Where did I attend the relig
+  [310/500] [FAIL] Acc:  83.5% | Ora:  97.1% | Tok: 3488 | Type: temporal-reasoni | Q: Which device did I got first
+  [315/500] [PASS] Acc:  83.2% | Ora:  97.1% | Tok: 3463 | Type: temporal-reasoni | Q: How many days had passed bet
+  [320/500] [PASS] Acc:  83.4% | Ora:  97.2% | Tok: 3437 | Type: temporal-reasoni | Q: Which item did I purchase fi
+  [325/500] [PASS] Acc:  83.1% | Ora:  97.2% | Tok: 3439 | Type: temporal-reasoni | Q: Which device did I set up fi
+  [330/500] [FAIL] Acc:  82.7% | Ora:  97.3% | Tok: 3434 | Type: temporal-reasoni | Q: Which show did I start watch
+  [335/500] [PASS] Acc:  82.7% | Ora:  97.3% | Tok: 3422 | Type: temporal-reasoni | Q: Which event happened first, 
+  [340/500] [FAIL] Acc:  82.6% | Ora:  97.4% | Tok: 3405 | Type: temporal-reasoni | Q: Which health issue did I dea
+  [345/500] [PASS] Acc:  82.6% | Ora:  97.4% | Tok: 3398 | Type: temporal-reasoni | Q: How long did I use my new bi
+  [350/500] [PASS] Acc:  82.3% | Ora:  97.4% | Tok: 3401 | Type: temporal-reasoni | Q: Which streaming service did 
+  [355/500] [PASS] Acc:  81.7% | Ora:  97.5% | Tok: 3401 | Type: temporal-reasoni | Q: Which gift did I buy first, 
+  [360/500] [PASS] Acc:  81.7% | Ora:  97.5% | Tok: 3384 | Type: temporal-reasoni | Q: How many days had passed bet
+  [365/500] [PASS] Acc:  81.9% | Ora:  97.5% | Tok: 3376 | Type: temporal-reasoni | Q: Which project did I start fi
+  [370/500] [PASS] Acc:  82.2% | Ora:  97.6% | Tok: 3410 | Type: knowledge-update | Q: What was the amount I was pr
+  [375/500] [PASS] Acc:  82.1% | Ora:  97.6% | Tok: 3417 | Type: knowledge-update | Q: What day of the week do I ta
+  [380/500] [PASS] Acc:  82.1% | Ora:  97.6% | Tok: 3407 | Type: knowledge-update | Q: How many engineers do I lead
+  [385/500] [PASS] Acc:  82.1% | Ora:  97.7% | Tok: 3407 | Type: knowledge-update | Q: What type of camera lens did
+  [390/500] [PASS] Acc:  81.8% | Ora:  97.7% | Tok: 3425 | Type: knowledge-update | Q: For the coffee-to-water rati
+  [395/500] [PASS] Acc:  81.5% | Ora:  97.7% | Tok: 3425 | Type: knowledge-update | Q: How many new postcards have 
+  [400/500] [PASS] Acc:  81.5% | Ora:  97.8% | Tok: 3426 | Type: knowledge-update | Q: How long have I been stickin
+  [405/500] [FAIL] Acc:  81.5% | Ora:  97.8% | Tok: 3410 | Type: knowledge-update | Q: Did I finish reading 'The Ni
+  [410/500] [PASS] Acc:  81.7% | Ora:  97.8% | Tok: 3408 | Type: knowledge-update | Q: How many times have I tried 
+  [415/500] [FAIL] Acc:  81.7% | Ora:  97.8% | Tok: 3406 | Type: knowledge-update | Q: What was my previous frequen
+  [420/500] [PASS] Acc:  81.9% | Ora:  97.9% | Tok: 3406 | Type: knowledge-update | Q: What day of the week did I m
+  [425/500] [PASS] Acc:  82.1% | Ora:  97.9% | Tok: 3396 | Type: knowledge-update | Q: What is my current record in
+  [430/500] [PASS] Acc:  81.6% | Ora:  97.9% | Tok: 3415 | Type: knowledge-update | Q: What time do I wake up on Sa
+  [435/500] [PASS] Acc:  81.4% | Ora:  97.9% | Tok: 3417 | Type: knowledge-update | Q: How many trips have I taken 
+  [440/500] [PASS] Acc:  81.6% | Ora:  98.0% | Tok: 3406 | Type: knowledge-update | Q: How long have I been living 
+  [445/500] [PASS] Acc:  81.8% | Ora:  98.0% | Tok: 3410 | Type: single-session-a | Q: I'm checking our previous ch
+  [450/500] [PASS] Acc:  81.6% | Ora:  98.0% | Tok: 3424 | Type: single-session-a | Q: I remember you told me about
+  [455/500] [PASS] Acc:  81.3% | Ora:  98.0% | Tok: 3458 | Type: single-session-a | Q: I wanted to follow up on our
+  [460/500] [PASS] Acc:  81.5% | Ora:  98.0% | Tok: 3464 | Type: single-session-a | Q: I'm planning to go back to t
+  [465/500] [PASS] Acc:  81.7% | Ora:  98.1% | Tok: 3487 | Type: single-session-a | Q: I'm going back to our previo
+  [470/500] [FAIL] Acc:  81.5% | Ora:  98.1% | Tok: 3511 | Type: single-session-a | Q: I'm looking back at our prev
+  [475/500] [PASS] Acc:  81.7% | Ora:  98.1% | Tok: 3526 | Type: single-session-a | Q: I'm planning another trip to
+  [480/500] [PASS] Acc:  81.5% | Ora:  98.1% | Tok: 3542 | Type: single-session-a | Q: Can you remind me what was t
+  [485/500] [FAIL] Acc:  81.4% | Ora:  98.1% | Tok: 3577 | Type: single-session-a | Q: I'm looking back at our prev
+  [490/500] [FAIL] Acc:  81.4% | Ora:  98.2% | Tok: 3615 | Type: single-session-a | Q: I was looking back at our pr
+  [495/500] [FAIL] Acc:  81.4% | Ora:  98.2% | Tok: 3636 | Type: single-session-a | Q: I'm looking back at our prev
+  [500/500] [PASS] Acc:  81.6% | Ora:  98.2% | Tok: 3653 | Type: single-session-a | Q: I was looking back at our pr
+
+=====================================================================================
+        AM APEX: LONGMEMEVAL FULL BENCHMARK FINAL REPORT
+=====================================================================================
+Total Questions Evaluated:      500
+Overall Accuracy:               81.6% (408/500)
+Memory Oracle Recall:           98.2% (491/500)
+Mean Context Tokens/Q:          3652.6 tokens/Q
+Mean Latency:                   4203.1 ms
+Write LLM Calls:                0 calls (100% Free Deterministic Ingestion)
+Total Benchmark Suite Time:     2102.2 s (35.0 min)
+-------------------------------------------------------------------------------------
+QUESTION TYPE BREAKDOWN:
+  * knowledge-update          : Acc  80.8% | Oracle 100.0% | ConvRate  80.8% (63/78)
+  * multi-session             : Acc  84.2% | Oracle  99.2% | ConvRate  84.8% (112/133)
+  * single-session-assistant  : Acc  80.4% | Oracle 100.0% | ConvRate  80.4% (45/56)
+  * single-session-preference : Acc  86.7% | Oracle  83.3% | ConvRate 104.0% (26/30)
+  * single-session-user       : Acc  84.3% | Oracle 100.0% | ConvRate  84.3% (59/70)
+  * temporal-reasoning        : Acc  77.4% | Oracle  97.7% | ConvRate  79.2% (103/133)
+=====================================================================================
+
+=====================================================================================
+        FAILURE TAXONOMY v2 BREAKDOWN (8 Causal Categories)
+=====================================================================================
+  * TEMPORAL_FAILURE        :  29 ( 31.5%)
+  * COMPOSITION_FAILURE     :  17 ( 18.5%)
+  * ABSTENTION_FAILURE      :  15 ( 16.3%)
+  * VERIFICATION_FAILURE    :  13 ( 14.1%)
+  * STATE_FAILURE           :  11 ( 12.0%)
+  * ENTITY_FAILURE          :   6 (  6.5%)
+  * RETRIEVAL_FAILURE       :   1 (  1.1%)
+=====================================================================================
+
+[Saved full comprehensive report to benchmark_results\longmemeval\grand_longmemeval_report_fixed_v1.json]

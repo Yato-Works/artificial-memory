@@ -1,0 +1,25 @@
+cache rows: 500  selected: 152
+fixes: global_ef=True ss_user=True multi=True temporal=True ku=False ss_assist=False
+reader: qwen2.5-coder:7b num_ctx=8192
+
+  25/152  acc= 56.0%  (104s)
+  50/152  acc= 50.0%  (126s)
+  75/152  acc= 53.3%  (180s)
+  100/152  acc= 50.0%  (281s)
+  125/152  acc= 48.0%  (365s)
+  150/152  acc= 49.3%  (483s)
+
+=== ARM RESULT (n=152) ===
+  ALL               48.7%  (74/152)
+  single-session-user          56.5%  (13/23)
+  multi-session                48.6%  (18/37)
+  temporal-reasoning           38.5%  (15/39)
+  knowledge-update             53.8%  (14/26)
+  single-session-assistant     47.1%  (8/17)
+  single-session-preference    60.0%  (6/10)
+
+  refusals in arm : 25
+  fixed vs baseline : +17
+  broken vs baseline: -11
+  elapsed          : 491s (3.23s/Q)
+  saved: benchmark_results\ab_lme_coder7b_remaining.json

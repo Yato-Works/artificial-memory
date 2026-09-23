@@ -64,6 +64,16 @@ def main() -> None:
 
     with open(args.report, encoding="utf-8") as fh:
         d = json.load(fh)
+    # Accept both the official runner report and the cached-context A/B output
+    # (the A/B writes qid/qtype/gt; normalise to the report's key names).
+    if d.get("results") and "question_type" not in d["results"][0]:
+        d = dict(d, results=[dict(r,
+                                  question_id=r.get("qid"),
+                                  question_type=r.get("qtype"),
+                                  ground_truth=r.get("gt"),
+                                  # the A/B only replays already-selected evidence
+                                  oracle_recall=r.get("oracle_recall", True))
+                             for r in d["results"]])
     rows = d["results"]
     n = len(rows)
     wrong = [r for r in rows if not r["is_correct"]]

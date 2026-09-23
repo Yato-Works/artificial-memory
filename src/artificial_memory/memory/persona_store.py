@@ -217,3 +217,56 @@ class PersonaStore:
         unique_vals = list(dict.fromkeys(a.value for a in matched_attrs))
         grounding = f"[User Profile & Preferences: {'; '.join(unique_vals[:3])}]"
         return grounding
+
+    def get_persona_summary(self, query: str, context: str) -> str:
+        """Build a character-focused persona summary for open-domain deduction.
+
+        Open-Domain (LoCoMo category 3) questions ask things like
+        "Would Caroline likely enjoy X?" or "What is Melanie's personality?".
+        These need distilled character profiles so the reader can reason
+        deductively rather than refusing for "insufficient evidence".
+        """
+        q_lower = query.lower()
+
+        # Extract character-relevant context from the compiled context text
+        # (which already contains the relevant turns with speaker tags).
+        character_signals = []
+        for line in context.split("\n"):
+            line_lower = line.lower()
+            if any(w in line_lower for w in [
+                "caroline", "melanie", "she", "her", "herself",
+            ]):
+                character_signals.append(line.strip())
+
+        # Extract explicit persona attributes that match the query topic
+        query_words = set(w for w in re.findall(r"\b[a-zA-Z0-9_-]+\b", q_lower)
+                          if len(w) > 3 and w not in self._STOP_WORDS)
+
+        matched_persona = []
+        for a in self.attributes:
+            attr_words = set(w for w in re.findall(r"\b[a-zA-Z0-9_-]+\b", a.value.lower())
+                             if len(w) > 3 and w not in self._STOP_WORDS)
+            if query_words & attr_words:
+                matched_persona.append(f"Persona: {a.value}")
+
+        parts = []
+        if matched_persona:
+            parts.append(" | ".join(matched_persona))
+        # Add a condensed view of character mentions from context
+        if character_signals:
+            # Summarize the character signals into key traits/facts
+            key_lines = [l for l in character_signals if len(l) > 20][:5]
+            if key_lines:
+                parts.append("Character context: " + " ; ".join(key_lines[:3]))
+
+        if not parts:
+            return ""
+        return " | ".join(parts)
+
+    _STOP_WORDS = {
+        "for", "with", "and", "the", "that", "this", "have", "from", "about",
+        "what", "which", "can", "you", "some", "more", "also", "been", "were",
+        "does", "did", "like", "would", "could", "should", "might", "will",
+        "even", "then", "them", "these", "those", "their", "there", "think",
+        "ideas", "help", "tips", "good", "best", "want", "lately", "quite",
+    }

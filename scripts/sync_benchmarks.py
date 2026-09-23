@@ -6,7 +6,7 @@ Usage:
     
 Requires:
     - SSH access to target host
-    - rsync available on both sides
+    - scp available (standard with OpenSSH on Windows 10+)
 """
 
 from __future__ import annotations
@@ -28,55 +28,40 @@ def run_cmd(cmd: list[str], cwd: Path | None = None) -> subprocess.CompletedProc
     return result
 
 
+def sync_directory(local_dir: Path, host: str, remote_path: str, dry_run: bool = False) -> bool:
+    """Sync a directory to remote using scp."""
+    if not local_dir.exists():
+        print(f"Local directory not found: {local_dir}")
+        return False
+    
+    remote_dir = f"{host}:{remote_path}/{local_dir.relative_to(local_dir.anchor).as_posix()}"
+    # Use scp -r for recursive copy
+    cmd = ["scp", "-r"]
+    if dry_run:
+        print(f"[DRY RUN] Would copy {local_dir} to {remote_dir}")
+        return True
+    cmd.extend([str(local_dir), remote_dir])
+    
+    result = run_cmd(cmd)
+    return result.returncode == 0
+
+
 def sync_datasets(local_root: Path, host: str, remote_path: str, dry_run: bool = False) -> bool:
     """Sync datasets/external to remote."""
     local_datasets = local_root / "datasets" / "external"
-    if not local_datasets.exists():
-        print(f"Local datasets not found: {local_datasets}")
-        return False
-    
-    remote_datasets = f"{host}:{remote_path}/datasets/external"
-    cmd = ["rsync", "-avz", "--progress"]
-    if dry_run:
-        cmd.append("--dry-run")
-    cmd.extend([str(local_datasets) + "/", remote_datasets + "/"])
-    
-    result = run_cmd(cmd, cwd=local_root)
-    return result.returncode == 0
+    return sync_directory(local_datasets, host, remote_path, dry_run)
 
 
 def sync_third_party(local_root: Path, host: str, remote_path: str, dry_run: bool = False) -> bool:
     """Sync third_party/benchmarks to remote."""
     local_tp = local_root / "third_party" / "benchmarks"
-    if not local_tp.exists():
-        print(f"Local third_party not found: {local_tp}")
-        return False
-    
-    remote_tp = f"{host}:{remote_path}/third_party/benchmarks"
-    cmd = ["rsync", "-avz", "--progress"]
-    if dry_run:
-        cmd.append("--dry-run")
-    cmd.extend([str(local_tp) + "/", remote_tp + "/"])
-    
-    result = run_cmd(cmd, cwd=local_root)
-    return result.returncode == 0
+    return sync_directory(local_tp, host, remote_path, dry_run)
 
 
 def sync_configs(local_root: Path, host: str, remote_path: str, dry_run: bool = False) -> bool:
     """Sync benchmark_config to remote."""
     local_config = local_root / "benchmark_config"
-    if not local_config.exists():
-        print(f"Local benchmark_config not found: {local_config}")
-        return False
-    
-    remote_config = f"{host}:{remote_path}/benchmark_config"
-    cmd = ["rsync", "-avz", "--progress"]
-    if dry_run:
-        cmd.append("--dry-run")
-    cmd.extend([str(local_config) + "/", remote_config + "/"])
-    
-    result = run_cmd(cmd, cwd=local_root)
-    return result.returncode == 0
+    return sync_directory(local_config, host, remote_path, dry_run)
 
 
 def verify_remote(host: str, remote_path: str) -> bool:
